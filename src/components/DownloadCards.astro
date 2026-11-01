@@ -1,0 +1,38 @@
+---
+import Icon from './Icon.astro';
+import { downloads, site } from '../data/site';
+
+interface Props {
+  /** Heading level of the system names, so the page outline stays in order. */
+  level?: 'h2' | 'h3';
+}
+
+const { level: H = 'h3' } = Astro.props;
+---
+
+<div class="dl">
+  <div class="os glass">
+    <div class="os-head">
+      <Icon name="windows" />
+      <H>Windows</H>
+    </div>
+    <p class="sub">Installer or portable build for Windows 10 and 11, 64-bit.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href={downloads.windowsInstaller}>Installer <small>.exe</small></a>
+      <a class="btn btn-ghost" href={downloads.windowsPortable}>Portable <small>.zip</small></a>
+    </div>
+    <p class="warn"><b>Not code-signed yet.</b> If SmartScreen appears, choose <b>More info</b> &rarr; <b>Run anyway</b>.</p>
+  </div>
+  <div class="os glass">
+    <div class="os-head">
+      <Icon name="linux" />
+      <H>Linux</H>
+    </div>
+    <p class="sub">The AppImage runs on most distributions, including SteamOS.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href={downloads.appImage}>AppImage</a>
+      <a class="btn btn-ghost" href={site.releases}>.deb, .rpm and Arch</a>
+    </div>
+    <p class="fine">Packages for Debian, Ubuntu, Fedora, openSUSE and Arch are on the <a href={site.releases}>releases page</a>. See <a href="/docs/installation/">how to install</a>.</p>
+  </div>
+</div>

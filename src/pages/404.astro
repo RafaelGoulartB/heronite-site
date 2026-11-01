@@ -1,0 +1,25 @@
+---
+import '../styles/content.css';
+import Base from '../layouts/Base.astro';
+import { backdrop } from '../lib/shots';
+
+const art = await backdrop('console-library');
+---
+
+<Base title="Page not found · Heronite" description="This page does not exist. Find Heronite's features, guides, docs and downloads from here." noindex>
+  <main id="main">
+    <header class="index-hero scene" style={`--art:url(${art});--bright:.6;min-height:70vh;display:flex;align-items:center`}>
+      <div class="wrap">
+        <p class="eyebrow">Error 404</p>
+        <h1 class="h1">Game <em>not found.</em></h1>
+        <p class="lead">This page does not exist, or it moved. Try one of these instead.</p>
+        <div class="actions" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+          <a class="btn btn-primary" href="/">Home</a>
+          <a class="btn btn-ghost" href="/features/">Features</a>
+          <a class="btn btn-ghost" href="/docs/">Docs</a>
+          <a class="btn btn-ghost" href="/download/">Download</a>
+        </div>
+      </div>
+    </header>
+  </main>
+</Base>

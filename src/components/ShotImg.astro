@@ -1,0 +1,21 @@
+---
+// A full-size screenshot as AVIF with the WebP original as fallback. Used where CSS crops
+// and zooms into one part of the picture, so the browser needs the whole frame.
+import { getImage } from 'astro:assets';
+import { shot } from '../lib/shots';
+
+interface Props {
+  name: string;
+  alt: string;
+  eager?: boolean;
+}
+
+const { name, alt, eager = false } = Astro.props;
+const image = shot(name);
+const avif = await getImage({ src: image, format: 'avif', quality: 60, width: image.width });
+---
+
+<picture>
+  <source type="image/avif" srcset={avif.src} />
+  <img src={image.src} alt={alt} width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+</picture>

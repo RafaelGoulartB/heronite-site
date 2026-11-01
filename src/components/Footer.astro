@@ -1,0 +1,58 @@
+---
+import { articles, articleUrl } from '../lib/content';
+import { site } from '../data/site';
+
+const [features, guides, compare] = await Promise.all([articles('features'), articles('guides'), articles('compare')]);
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div class="about">
+        <a class="brand" href="/"><img src="/icon.png" alt="" width="26" height="26" loading="lazy"><span>HERONITE</span></a>
+        <p>A free, open source game launcher for Linux and Windows. In English, Portuguese (Brazil), Spanish and German.</p>
+      </div>
+      <nav aria-labelledby="f-features">
+        <h2 id="f-features">Features</h2>
+        <ul>
+          {features.map((f) => <li><a href={articleUrl('features', f.id)}>{f.data.navLabel}</a></li>)}
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-guides">
+        <h2 id="f-guides">Guides</h2>
+        <ul>
+          {guides.map((g) => <li><a href={articleUrl('guides', g.id)}>{g.data.navLabel}</a></li>)}
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-compare">
+        <h2 id="f-compare">Compare</h2>
+        <ul>
+          {compare.map((c) => <li><a href={articleUrl('compare', c.id)}>{c.data.navLabel}</a></li>)}
+        </ul>
+        <h2 id="f-docs" style="margin-top:28px">Docs</h2>
+        <ul>
+          <li><a href="/docs/installation/">Installation</a></li>
+          <li><a href="/docs/getting-started/">Getting started</a></li>
+          <li><a href="/docs/troubleshooting/">Troubleshooting</a></li>
+          <li><a href="/docs/faq/">FAQ</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-project">
+        <h2 id="f-project">Project</h2>
+        <ul>
+          <li><a href="/download/">Download</a></li>
+          <li><a href={site.repo}>Source code</a></li>
+          <li><a href={site.releases}>Releases</a></li>
+          <li><a href={site.discussions}>Discussions</a></li>
+          <li><a href={site.issues}>Report a bug</a></li>
+          <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="legal">
+      <p>© {year} {site.author}. Heronite is free software under the <a href={site.license}>GPL-3.0</a>.</p>
+      <p>Store names and logos belong to their owners. Heronite is not affiliated with them.</p>
+    </div>
+  </div>
+</footer>

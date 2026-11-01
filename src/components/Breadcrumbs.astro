@@ -1,0 +1,29 @@
+---
+import { site } from '../data/site';
+
+interface Props {
+  /** From the section down to the current page; Home is added in front. */
+  items: { label: string; href: string }[];
+}
+
+const trail = [{ label: 'Home', href: '/' }, ...Astro.props.items];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: trail.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.label,
+    item: new URL(item.href, site.url).toString(),
+  })),
+};
+---
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <ol>
+    {trail.map((item, i) => (
+      <li>{i === trail.length - 1 ? <span aria-current="page">{item.label}</span> : <a href={item.href}>{item.label}</a>}</li>
+    ))}
+  </ol>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+</nav>

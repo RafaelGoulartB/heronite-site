@@ -1,0 +1,28 @@
+---
+import { site } from '../data/site';
+
+interface Props {
+  title?: string;
+  text?: string;
+}
+
+const {
+  title = 'Get Heronite. <em>It’s free.</em>',
+  text = 'Open source under GPL-3.0. No account, no ads, no telemetry. For Linux and Windows.',
+} = Astro.props;
+---
+
+<aside class="cta glass" aria-label="Download Heronite">
+  <div>
+    <p class="eyebrow">Download</p>
+    <p class="h2" set:html={title} />
+    <p class="lead">{text}</p>
+  </div>
+  <div class="actions">
+    <a class="btn btn-primary" href="/download/">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+      Download Heronite
+    </a>
+    <a class="btn btn-ghost" href={site.repo}>View on GitHub</a>
+  </div>
+</aside>

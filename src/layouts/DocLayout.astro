@@ -1,0 +1,95 @@
+---
+import type { MarkdownHeading } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import '../styles/content.css';
+import Base from './Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { docs, docUrl } from '../lib/content';
+import { isoDate, longDate } from '../lib/text';
+import { site } from '../data/site';
+
+interface Props {
+  entry: CollectionEntry<'docs'>;
+  headings: MarkdownHeading[];
+}
+
+const { entry, headings } = Astro.props;
+const d = entry.data;
+const groups = await docs();
+const flat = groups.flatMap((g) => g.pages);
+const i = flat.findIndex((p) => p.id === entry.id);
+const prev = flat[i - 1];
+const next = flat[i + 1];
+const toc = headings.filter((h) => h.depth === 2);
+const here = Astro.url.pathname;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: d.title,
+    description: d.description,
+    url: new URL(here, Astro.site).toString(),
+    dateModified: isoDate(d.updated),
+    inLanguage: 'en',
+    author: { '@type': 'Person', name: site.author },
+    publisher: { '@id': `${site.url}/#org` },
+    isPartOf: { '@type': 'WebPage', name: 'Heronite documentation', url: `${site.url}/docs/` },
+  },
+];
+---
+
+<Base title={`${d.title} · Heronite Docs`} description={d.description} image="/og/docs.jpg" type="article" modified={d.updated} jsonLd={jsonLd}>
+  <main id="main" class="wrap">
+    <div class:list={['docs', { 'no-toc': toc.length < 2 }]}>
+      <details class="sidebar glass" open>
+        <summary>Documentation</summary>
+        <nav aria-label="Documentation">
+          {groups.map((g) => (
+            <>
+              <h2>{g.section}</h2>
+              <ul>
+                {g.pages.map((p) => (
+                  <li><a href={docUrl(p.id)} aria-current={docUrl(p.id) === here ? 'page' : undefined}>{p.data.navLabel ?? p.data.title}</a></li>
+                ))}
+              </ul>
+            </>
+          ))}
+        </nav>
+      </details>
+      <script is:inline>
+        // Fold the docs menu on phones; it starts open so it still works without JavaScript.
+        if (matchMedia('(max-width: 860px)').matches) document.currentScript.previousElementSibling.open = false;
+      </script>
+
+      <div>
+        <header class="doc-head">
+          <Breadcrumbs items={[{ label: 'Docs', href: '/docs/' }, { label: d.navLabel ?? d.title, href: here }]} />
+          <p class="eyebrow">{d.section}</p>
+          <h1 class="h1">{d.title}</h1>
+          <p class="lead">{d.description}</p>
+        </header>
+        <article class="prose">
+          <slot />
+        </article>
+        <nav class="pager" aria-label="More docs">
+          {prev && <a class="glass" href={docUrl(prev.id)}><small>Previous</small><span>{prev.data.navLabel ?? prev.data.title}</span></a>}
+          {next && <a class="glass next" href={docUrl(next.id)}><small>Next</small><span>{next.data.navLabel ?? next.data.title}</span></a>}
+        </nav>
+        <div class="doc-foot">
+          <span>Updated <time datetime={isoDate(d.updated)}>{longDate(d.updated)}</time></span>
+          <span>Something wrong or missing? <a href={site.issues}>Tell us on GitHub</a>.</span>
+        </div>
+      </div>
+
+      {toc.length >= 2 && (
+        <nav class="toc" aria-label="On this page">
+          <p>On this page</p>
+          <ol>
+            {toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
+          </ol>
+        </nav>
+      )}
+    </div>
+  </main>
+</Base>
