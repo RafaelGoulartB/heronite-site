@@ -1,4 +1,13 @@
 ---
+import '@fontsource/rubik/400.css';
+import '@fontsource/rubik/500.css';
+import '@fontsource/rubik/600.css';
+import '@fontsource/rubik/700.css';
+import '@fontsource/cabin/400.css';
+import '@fontsource/cabin/500.css';
+import '@fontsource/cabin/600.css';
+import '../styles/site.css';
+
 interface Props {
   title: string;
   description: string;
@@ -35,7 +44,7 @@ const softwareApplication = {
     <link rel="icon" type="image/png" href="/icon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="theme-color" content="#0e1116" />
+    <meta name="theme-color" content="#0a0d11" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Heronite" />
@@ -56,42 +65,3 @@ const softwareApplication = {
     <slot />
   </body>
 </html>
-
-<style is:global>
-  :root {
-    --bg: #0e1116;
-    --panel: #161b22;
-    --line: #262d38;
-    --text: #e6edf3;
-    --muted: #9aa6b2;
-    --accent: #2b8ca8;
-    --accent-strong: #3aa9c8;
-    color-scheme: dark;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, sans-serif;
-    line-height: 1.6;
-  }
-
-  a {
-    color: var(--accent-strong);
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-</style>
