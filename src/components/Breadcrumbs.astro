@@ -1,12 +1,14 @@
 ---
 import { site } from '../data/site';
+import { localeOf, localize, useText } from '../i18n';
 
 interface Props {
   /** From the section down to the current page; Home is added in front. */
   items: { label: string; href: string }[];
 }
 
-const trail = [{ label: 'Home', href: '/' }, ...Astro.props.items];
+const lang = localeOf(Astro.url.pathname);
+const trail = [{ label: useText(lang).nav.home, href: localize(lang, '/') }, ...Astro.props.items];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',

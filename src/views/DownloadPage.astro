@@ -1,0 +1,102 @@
+---
+import '../styles/content.css';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import DownloadCards from '../components/DownloadCards.astro';
+import Faq from '../components/Faq.astro';
+import { backdrop } from '../lib/shots';
+import { latest, version } from '../lib/releases';
+import { downloads, site } from '../data/site';
+import { fill, formatDate, localeInfo, localize, useText, type Locale } from '../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const text = useText(lang);
+const t = text.download;
+const to = (path: string) => localize(lang, path);
+const art = await backdrop('console-game');
+const release = await latest();
+
+const softwareApplication = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Heronite',
+  url: new URL(to('/'), site.url).toString(),
+  inLanguage: localeInfo[lang].htmlLang,
+  applicationCategory: 'GameApplication',
+  operatingSystem: 'Windows 10, Windows 11, Linux',
+  downloadUrl: [downloads.windowsInstaller, downloads.windowsPortable, downloads.appImage],
+  installUrl: new URL(to('/download/'), site.url).toString(),
+  ...(release ? { softwareVersion: version(release), datePublished: release.date.slice(0, 10) } : {}),
+  releaseNotes: `${site.url}/changelog/`,
+  license: 'https://www.gnu.org/licenses/gpl-3.0.html',
+  isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+};
+---
+
+<Base title={t.title} description={t.description} jsonLd={[softwareApplication]}>
+  <main id="main">
+    <header class="index-hero scene" style={`--art:url(${art});--pos:60% 30%;--bright:.8`}>
+      <div class="wrap">
+        <Breadcrumbs items={[{ label: text.nav.download, href: to('/download/') }]} />
+        <p class="eyebrow">{text.nav.download}</p>
+        <h1 class="h1" set:html={t.headlineHtml} />
+        <p class="lead">{t.lead}</p>
+        {release && (
+          <p class="meta">
+            <span>{fill(t.latest, { version: version(release), date: formatDate(lang, new Date(release.date)) })}</span>
+            <span><a class="link" href="/changelog/">{t.notes} &rarr;</a></span>
+          </p>
+        )}
+      </div>
+    </header>
+
+    <div class="wrap index-body">
+      <DownloadCards level="h2" />
+
+      <div class="article" style="margin-top:72px">
+        <nav class="toc" aria-label={text.article.onThisPage}>
+          <p>{text.article.onThisPage}</p>
+          <ol>
+            <li><a href="#linux">{t.toc.linux}</a></li>
+            <li><a href="#windows">{t.toc.windows}</a></li>
+            <li><a href="#next">{t.toc.next}</a></li>
+          </ol>
+        </nav>
+        <div class="prose">
+          <h2 id="linux">{t.toc.linux}</h2>
+          <p>{t.linuxIntro}</p>
+          <div class="table">
+            <table>
+              <thead><tr><th>{t.table.system}</th><th>{t.table.file}</th><th>{t.table.install}</th></tr></thead>
+              <tbody>
+                <tr><td set:html={t.rows.any} /><td><code>Heronite-x86_64.AppImage</code></td><td><code>chmod +x Heronite-x86_64.AppImage && ./Heronite-x86_64.AppImage</code></td></tr>
+                <tr><td>{t.rows.debian}</td><td><code>heronite_&lt;version&gt;-1_amd64.deb</code></td><td><code>sudo apt install ./heronite_*_amd64.deb</code></td></tr>
+                <tr><td>{t.rows.fedora}</td><td><code>heronite-&lt;version&gt;-1.x86_64.rpm</code></td><td><code>sudo dnf install ./heronite-*.x86_64.rpm</code></td></tr>
+                <tr><td>{t.rows.arch}</td><td><code>heronite-&lt;version&gt;-1-x86_64.pkg.tar.zst</code></td><td><code>sudo pacman -U heronite-*-x86_64.pkg.tar.zst</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p set:html={fill(t.appImageNoteHtml, { deck: to('/guides/steam-deck/') })} />
+
+          <h2 id="windows">{t.toc.windows}</h2>
+          <p set:html={t.windowsIntroHtml} />
+          <blockquote><p set:html={t.smartScreenHtml} /></blockquote>
+          <p set:html={t.webViewHtml} />
+
+          <h2 id="next">{t.toc.next}</h2>
+          <p set:html={fill(t.nextHtml, { start: to('/docs/getting-started/'), install: to('/docs/installation/') })} />
+          <p set:html={fill(t.sourceHtml, { repo: site.repo, releases: site.releases })} />
+        </div>
+      </div>
+
+      <div style="margin-top:56px">
+        <Faq items={t.faq} title={t.faqTitle} />
+      </div>
+    </div>
+  </main>
+</Base>

@@ -28,22 +28,22 @@ const articleSchema = ({ image }: SchemaContext) =>
   });
 
 const features = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/features' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/features' }),
   schema: articleSchema,
 });
 const guides = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/guides' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
   schema: articleSchema,
 });
 const compare = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/compare' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/compare' }),
   schema: articleSchema,
 });
 
 export const docSections = ['Start', 'Guides', 'Reference', 'Contribute'] as const;
 
 const docs = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/docs' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/docs' }),
   schema: z.object({
     title: z.string(),
     // Shorter name for the sidebar, when the title is long.

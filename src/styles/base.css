@@ -81,6 +81,15 @@ img{display:block}
 .nav .gh:hover{color:var(--text)}
 .nav .gh svg{width:18px;height:18px}
 .nav .btn{height:38px;padding:0 18px;font-size:14px}
+.lang{position:relative}
+.lang summary{list-style:none;display:flex;align-items:center;gap:6px;height:38px;padding:0 10px;border-radius:999px;cursor:pointer;color:var(--muted);font:600 13px/1 var(--head);letter-spacing:.04em}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary svg{width:17px;height:17px}
+.lang summary:hover,.lang[open] summary{color:var(--text);background:rgba(255,255,255,.07)}
+.lang ul{position:absolute;right:0;top:calc(100% + 12px);min-width:200px;margin:0;padding:8px;list-style:none;background:rgba(14,18,24,.96)}
+.lang li a{display:block;padding:10px 12px;border-radius:9px;text-decoration:none;font:500 15px/1.2 var(--head);color:var(--soft)}
+.lang li a:hover{background:rgba(255,255,255,.07);color:var(--text)}
+.lang li a[aria-current]{color:var(--accent)}
 .menu{display:none;position:relative}
 .menu summary{list-style:none;display:grid;place-items:center;width:40px;height:40px;border-radius:999px;cursor:pointer;color:var(--soft);border:1px solid var(--line)}
 .menu summary::-webkit-details-marker{display:none}
@@ -181,3 +190,5 @@ footer .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px
   html{scroll-behavior:auto}
   .btn,.card{transition:none}
 }
+.dl-version{margin-top:16px;text-align:center;font-size:14.5px;color:var(--muted)}
+.dl-version a{color:var(--soft)}

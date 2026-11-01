@@ -1,27 +1,35 @@
 ---
 import type { MarkdownHeading } from 'astro';
-import type { CollectionEntry } from 'astro:content';
 import '../styles/content.css';
 import Base from './Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import { docs, docUrl } from '../lib/content';
-import { isoDate, longDate } from '../lib/text';
+import Search from '../components/Search.astro';
+import { docs, docUrl, langOf, languagesWith, slugOf, type Doc } from '../lib/content';
+import { isoDate } from '../lib/text';
+import { alternatesFor, fill, formatDate, localeInfo, localize, ogImage, useText } from '../i18n';
 import { site } from '../data/site';
 
 interface Props {
-  entry: CollectionEntry<'docs'>;
+  entry: Doc;
   headings: MarkdownHeading[];
 }
 
 const { entry, headings } = Astro.props;
 const d = entry.data;
-const groups = await docs();
+const lang = langOf(entry);
+const slug = slugOf(entry);
+const text = useText(lang);
+const t = text.docs;
+const groups = await docs(lang);
 const flat = groups.flatMap((g) => g.pages);
 const i = flat.findIndex((p) => p.id === entry.id);
 const prev = flat[i - 1];
 const next = flat[i + 1];
 const toc = headings.filter((h) => h.depth === 2);
-const here = Astro.url.pathname;
+const here = docUrl(slug, lang);
+// The docs suffix only when the title still fits in a search result (about 60 characters).
+const pageTitle = d.title.length + t.titleSuffix.length + 3 <= 62 ? `${d.title} · ${t.titleSuffix}` : d.title;
+const alternates = alternatesFor(`/docs/${slug}/`, await languagesWith('docs', slug));
 
 const jsonLd = [
   {
@@ -31,60 +39,63 @@ const jsonLd = [
     description: d.description,
     url: new URL(here, Astro.site).toString(),
     dateModified: isoDate(d.updated),
-    inLanguage: 'en',
+    inLanguage: localeInfo[lang].htmlLang,
     author: { '@type': 'Person', name: site.author },
     publisher: { '@id': `${site.url}/#org` },
-    isPartOf: { '@type': 'WebPage', name: 'Heronite documentation', url: `${site.url}/docs/` },
+    isPartOf: { '@type': 'WebPage', name: t.documentation, url: new URL(localize(lang, '/docs/'), site.url).toString() },
   },
 ];
 ---
 
-<Base title={`${d.title} · Heronite Docs`} description={d.description} image="/og/docs.jpg" type="article" modified={d.updated} jsonLd={jsonLd}>
+<Base title={pageTitle} description={d.description} image={ogImage(lang, 'docs')} type="article" modified={d.updated} jsonLd={jsonLd} alternates={alternates}>
   <main id="main" class="wrap">
     <div class:list={['docs', { 'no-toc': toc.length < 2 }]}>
-      <details class="sidebar glass" open>
-        <summary>Documentation</summary>
-        <nav aria-label="Documentation">
-          {groups.map((g) => (
-            <>
-              <h2>{g.section}</h2>
-              <ul>
-                {g.pages.map((p) => (
-                  <li><a href={docUrl(p.id)} aria-current={docUrl(p.id) === here ? 'page' : undefined}>{p.data.navLabel ?? p.data.title}</a></li>
-                ))}
-              </ul>
-            </>
-          ))}
-        </nav>
-      </details>
-      <script is:inline>
-        // Fold the docs menu on phones; it starts open so it still works without JavaScript.
-        if (matchMedia('(max-width: 860px)').matches) document.currentScript.previousElementSibling.open = false;
-      </script>
+      <div class="side">
+        <Search />
+        <details class="sidebar glass" open>
+          <summary>{t.documentation}</summary>
+          <nav aria-label={t.documentation}>
+            {groups.map((g) => (
+              <>
+                <h2>{t.sections[g.section]}</h2>
+                <ul>
+                  {g.pages.map((p) => (
+                    <li><a href={docUrl(slugOf(p), lang)} aria-current={docUrl(slugOf(p), lang) === here ? 'page' : undefined}>{p.data.navLabel ?? p.data.title}</a></li>
+                  ))}
+                </ul>
+              </>
+            ))}
+          </nav>
+        </details>
+        <script is:inline>
+          // Fold the docs menu on phones; it starts open so it still works without JavaScript.
+          if (matchMedia('(max-width: 860px)').matches) document.currentScript.previousElementSibling.open = false;
+        </script>
+      </div>
 
       <div>
         <header class="doc-head">
-          <Breadcrumbs items={[{ label: 'Docs', href: '/docs/' }, { label: d.navLabel ?? d.title, href: here }]} />
-          <p class="eyebrow">{d.section}</p>
+          <Breadcrumbs items={[{ label: t.docs, href: localize(lang, '/docs/') }, { label: d.navLabel ?? d.title, href: here }]} />
+          <p class="eyebrow">{t.sections[d.section]}</p>
           <h1 class="h1">{d.title}</h1>
           <p class="lead">{d.description}</p>
         </header>
-        <article class="prose">
+        <article class="prose" data-pagefind-body>
           <slot />
         </article>
-        <nav class="pager" aria-label="More docs">
-          {prev && <a class="glass" href={docUrl(prev.id)}><small>Previous</small><span>{prev.data.navLabel ?? prev.data.title}</span></a>}
-          {next && <a class="glass next" href={docUrl(next.id)}><small>Next</small><span>{next.data.navLabel ?? next.data.title}</span></a>}
+        <nav class="pager" aria-label={t.more}>
+          {prev && <a class="glass" href={docUrl(slugOf(prev), lang)}><small>{t.previous}</small><span>{prev.data.navLabel ?? prev.data.title}</span></a>}
+          {next && <a class="glass next" href={docUrl(slugOf(next), lang)}><small>{t.next}</small><span>{next.data.navLabel ?? next.data.title}</span></a>}
         </nav>
         <div class="doc-foot">
-          <span>Updated <time datetime={isoDate(d.updated)}>{longDate(d.updated)}</time></span>
-          <span>Something wrong or missing? <a href={site.issues}>Tell us on GitHub</a>.</span>
+          <span>{fill(text.article.updated, { date: formatDate(lang, d.updated) })}</span>
+          <span>{t.wrong} <a href={site.issues}>{t.tellUs}</a>.</span>
         </div>
       </div>
 
       {toc.length >= 2 && (
-        <nav class="toc" aria-label="On this page">
-          <p>On this page</p>
+        <nav class="toc" aria-label={text.article.onThisPage}>
+          <p>{text.article.onThisPage}</p>
           <ol>
             {toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}
           </ol>

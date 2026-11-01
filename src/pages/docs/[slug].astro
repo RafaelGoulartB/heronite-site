@@ -1,19 +1,14 @@
 ---
-import { getCollection, render, type CollectionEntry } from 'astro:content';
-import DocLayout from '../../layouts/DocLayout.astro';
+import DocPage from '../../views/DocPage.astro';
+import { getCollection } from 'astro:content';
+import { langOf, slugOf } from '../../lib/content';
 
 export async function getStaticPaths() {
-  return (await getCollection('docs')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
-}
-
-interface Props {
-  entry: CollectionEntry<'docs'>;
+  const entries = await getCollection('docs', (e) => langOf(e) === 'en');
+  return entries.map((entry) => ({ params: { slug: slugOf(entry) }, props: { entry } }));
 }
 
 const { entry } = Astro.props;
-const { Content, headings } = await render(entry);
 ---
 
-<DocLayout entry={entry} headings={headings}>
-  <Content />
-</DocLayout>
+<DocPage entry={entry} />

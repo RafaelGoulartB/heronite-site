@@ -1,0 +1,8 @@
+---
+import DocsIndex from '../../../views/DocsIndex.astro';
+import { otherLocales, type Locale } from '../../../i18n';
+
+export const getStaticPaths = () => otherLocales.map((lang) => ({ params: { lang } }));
+---
+
+<DocsIndex lang={Astro.params.lang as Locale} />

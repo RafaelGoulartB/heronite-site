@@ -19,6 +19,10 @@ export default defineConfig({
     shikiConfig: { theme: 'github-dark-dimmed', wrap: true },
   },
   integrations: [
-    sitemap({ filter: (page) => !page.endsWith('/404/') }),
+    sitemap({
+      filter: (page) => !page.endsWith('/404/'),
+      // Lists every language version of a page next to it, as Google suggests for multilingual sites.
+      i18n: { defaultLocale: 'en', locales: { en: 'en', 'pt-br': 'pt-BR', es: 'es' } },
+    }),
   ],
 });

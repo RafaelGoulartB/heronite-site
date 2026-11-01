@@ -1,5 +1,6 @@
 ---
 import { inlineMarkdown, stripMarkdown } from '../lib/text';
+import { localeOf, useText } from '../i18n';
 
 interface Props {
   items: { q: string; a: string }[];
@@ -7,7 +8,8 @@ interface Props {
   title?: string;
 }
 
-const { items, id = 'faq', title = 'Questions' } = Astro.props;
+const lang = localeOf(Astro.url.pathname);
+const { items, id = 'faq', title = useText(lang).article.questions } = Astro.props;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -26,7 +28,7 @@ const jsonLd = {
       {items.map((item, i) => (
         <details class="glass" open={i === 0}>
           <summary><h3>{item.q}</h3></summary>
-          <p set:html={inlineMarkdown(item.a)} />
+          <p set:html={inlineMarkdown(item.a, lang)} />
         </details>
       ))}
     </div>

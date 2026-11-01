@@ -1,28 +1,22 @@
 ---
 import { site } from '../data/site';
+import { localeOf, localize, useText } from '../i18n';
 
-interface Props {
-  title?: string;
-  text?: string;
-}
-
-const {
-  title = 'Get Heronite. <em>It’s free.</em>',
-  text = 'Open source under GPL-3.0. No account, no ads, no telemetry. For Linux and Windows.',
-} = Astro.props;
+const lang = localeOf(Astro.url.pathname);
+const t = useText(lang).cta;
 ---
 
-<aside class="cta glass" aria-label="Download Heronite">
+<aside class="cta glass" aria-label={t.label}>
   <div>
-    <p class="eyebrow">Download</p>
-    <p class="h2" set:html={title} />
-    <p class="lead">{text}</p>
+    <p class="eyebrow">{t.eyebrow}</p>
+    <p class="h2" set:html={t.titleHtml} />
+    <p class="lead">{t.text}</p>
   </div>
   <div class="actions">
-    <a class="btn btn-primary" href="/download/">
+    <a class="btn btn-primary" href={localize(lang, '/download/')}>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
-      Download Heronite
+      {t.button}
     </a>
-    <a class="btn btn-ghost" href={site.repo}>View on GitHub</a>
+    <a class="btn btn-ghost" href={site.repo}>{t.github}</a>
   </div>
 </aside>

@@ -1,0 +1,45 @@
+---
+import '../styles/content.css';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import Search from '../components/Search.astro';
+import { docs, docUrl, slugOf } from '../lib/content';
+import { site } from '../data/site';
+import { fill, localize, ogImage, useText, type Locale } from '../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const text = useText(lang);
+const t = text.docs;
+const groups = await docs(lang);
+---
+
+<Base title={t.index.title} description={t.index.description} image={ogImage(lang, 'docs')}>
+  <main id="main">
+    <header class="index-hero">
+      <div class="wrap">
+        <Breadcrumbs items={[{ label: t.docs, href: localize(lang, '/docs/') }]} />
+        <p class="eyebrow">{t.documentation}</p>
+        <h1 class="h1" set:html={t.index.headlineHtml} />
+        <p class="lead" set:html={fill(t.index.leadHtml, { discussions: site.discussions })} />
+        <Search />
+      </div>
+    </header>
+    <div class="wrap index-body">
+      {groups.map((g) => (
+        <section class="index-group" aria-labelledby={`g-${g.section}`}>
+          <h2 id={`g-${g.section}`}>{t.sections[g.section]} <span class="fine">· {t.intros[g.section]}</span></h2>
+          <ul class="cards">
+            {g.pages.map((p) => (
+              <ArticleCard href={docUrl(slugOf(p), lang)} title={p.data.navLabel ?? p.data.title} summary={p.data.description} cta={text.article.read} />
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </main>
+</Base>

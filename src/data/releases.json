@@ -1,0 +1,1275 @@
+[
+ {
+  "tag_name": "v1.0.0",
+  "name": "Heronite v1.0.0",
+  "published_at": "2026-10-31T20:07:54Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v1.0.0",
+  "body": "**Linux:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS).\r\n\r\n**Windows 10 and 11:** `Heronite-Setup-x86_64.exe` installs Heronite for your user, no administrator rights needed (recommended). `Heronite-Portable-x86_64.zip` runs from any folder you extract it to and keeps its library and settings in that folder. They are not code-signed yet, so Windows SmartScreen may say \"Windows protected your PC\": choose **More info**, then **Run anyway**.\r\n\r\nThe `.minisig` and `.zsync` files are for the updaters; you do not need them.\r\n\r\n\r\n# 🪟 Heronite is now on Windows!\r\n\r\nHeronite now runs natively on Windows, with the same library, stores, emulators and features you know from Linux. Download the installer or the portable zip. Both update themselves.\r\n\r\n## What works on Windows\r\n\r\n- **Stores:** Steam, Epic, GOG and Amazon Games run natively, with cloud saves. Games already installed by the Steam, Epic Games Launcher, GOG Galaxy and Amazon Games apps are imported automatically\r\n- **Emulation:** emulators, ROM folders and save states, found on every drive\r\n- **Backups:** save backups through Ludusavi, and your Linux backups restore on Windows\r\n- **Everyday features:** screenshots, tray icon, start with Windows, Desktop and Start menu shortcuts, and heronite:// links\r\n- **Storage manager:** Windows drives, folder sizes and the Recycle Bin\r\n- **Clean interface:** only the options that work on Windows are shown\r\n\r\n## ✨ Also new\r\n\r\n- Custom window controls on Windows and Linux\r\n- Add all games found in a folder at once\r\n- More view options in the header, with \"Reset to defaults\"\r\n- Simpler Actions tab in game settings\r\n- Default screenshots folder until you choose one\r\n- Steam listed first among stores\r\n- Refresh the Collection from the ☰ menu\r\n\r\n## 📥 Download\r\n\r\n| Platform | Package | Download |\r\n|---|---|---|\r\n| 🪟 Windows | Installer | [Heronite-Setup-x86_64.exe](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.0.0/Heronite-Setup-x86_64.exe) |\r\n| 🪟 Windows | Portable | [Heronite-Portable-x86_64.zip](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.0.0/Heronite-Portable-x86_64.zip) |\r\n| 🐧 Linux | AppImage (any distro) | [Heronite-x86_64.AppImage](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.0.0/Heronite-x86_64.AppImage) |\r\n| 🐧 Arch / CachyOS | .pkg.tar.zst | [heronite-1.0.0-1-x86_64.pkg.tar.zst](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.0.0/heronite-1.0.0-1-x86_64.pkg.tar.zst) |\r\n| 🐧 Debian / Ubuntu | .deb | [heronite_1.0.0-1_amd64.deb](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.0.0/heronite_1.0.0-1_amd64.deb) |\r\n| 🐧 Fedora / openSUSE | .rpm | [heronite-1.0.0-1.x86_64.rpm](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.0.0/heronite-1.0.0-1.x86_64.rpm) |\r\n\r\n**Enjoying Heronite?** [Star it on GitHub](https://github.com/RafaelGoulartB/Heronite) and share your feedback and ideas in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions).\r\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-1.0.0-1-x86_64.pkg.tar.zst",
+    "size": 28962478,
+    "download_count": 21
+   },
+   {
+    "name": "heronite-1.0.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 12
+   },
+   {
+    "name": "heronite-1.0.0-1.x86_64.rpm",
+    "size": 27019272,
+    "download_count": 13
+   },
+   {
+    "name": "heronite-1.0.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 7
+   },
+   {
+    "name": "Heronite-Portable-x86_64.zip",
+    "size": 23157727,
+    "download_count": 8
+   },
+   {
+    "name": "Heronite-Portable-x86_64.zip.minisig",
+    "size": 309,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-Setup-x86_64.exe",
+    "size": 16947448,
+    "download_count": 16
+   },
+   {
+    "name": "Heronite-Setup-x86_64.exe.minisig",
+    "size": 306,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 28289528,
+    "download_count": 51
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 23
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 96917,
+    "download_count": 20
+   },
+   {
+    "name": "heronite_1.0.0-1_amd64.deb",
+    "size": 27018176,
+    "download_count": 17
+   },
+   {
+    "name": "heronite_1.0.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 7
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.18.0",
+  "name": "Heronite v0.18.0",
+  "published_at": "2026-10-29T03:43:17Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.18.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\r\n\r\n\r\n## ✨ Highlights\r\n\r\n- **Drag and drop:** drop a file or folder onto the window to add a game\r\n- **Keyboard-first navigation:** search and move through the list with the keyboard. Enter plays or installs the game, Esc closes one layer at a time, and ? shows all shortcuts\r\n- **Settings search:** find any section or setting, including launchers and log groups\r\n- **Download queue:** see the running download at the top, drag to reorder the queue, and follow progress from a pill in the header\r\n- **Smoother updates:** an update pill in the header replaces the corner card, and \"What's new\" opens once after updating\r\n\r\n## 🛠 Improvements\r\n\r\n- The Details tab in game settings saves automatically, with Undo\r\n- Add game names the game from its executable\r\n- Wine Manager recommends one build and folds the other versions; the default prefix stays at the top\r\n- Simpler settings: plainer labels, dependent options grouped under their switch, \"Show path\" and \"Copy path\" links, and a confirmation before bulk clears\r\n- Context menu shortcuts and help moved into submenus\r\n- Help and feedback links in About\r\n\r\n**Enjoying Heronite?** [Star it on GitHub](https://github.com/RafaelGoulartB/Heronite) and share your feedback and ideas in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions).\r\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.18.0-1-x86_64.pkg.tar.zst",
+    "size": 28738411,
+    "download_count": 50
+   },
+   {
+    "name": "heronite-0.18.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 318,
+    "download_count": 25
+   },
+   {
+    "name": "heronite-0.18.0-1.x86_64.rpm",
+    "size": 26838098,
+    "download_count": 18
+   },
+   {
+    "name": "heronite-0.18.0-1.x86_64.rpm.minisig",
+    "size": 310,
+    "download_count": 11
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 28084728,
+    "download_count": 102
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 306,
+    "download_count": 53
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 96217,
+    "download_count": 47
+   },
+   {
+    "name": "heronite_0.18.0-1_amd64.deb",
+    "size": 26841868,
+    "download_count": 30
+   },
+   {
+    "name": "heronite_0.18.0-1_amd64.deb.minisig",
+    "size": 309,
+    "download_count": 11
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.17.0",
+  "name": "Heronite v0.17.0",
+  "published_at": "2026-10-27T22:35:15Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.17.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\r\n\r\n\r\n## ✨ Highlights\r\n\r\n- **New stores:** Battle.net, EA app, Ubisoft Connect and Rockstar Games Launcher, running under Wine\r\n  - Set up, open and close each client from Heronite\r\n  - Installed games appear in your Collection with their store\r\n  - Games launch through their client, and Heronite tracks the game rather than the launcher\r\n- **Console theme studio:** a full theme editor with undo, per-option changes and ready-made colour sets. Shared themes now include their own preview picture\r\n- **New built-in console themes:** Arcade, Hub and Living room\r\n- **Focus list rows:** switch the Focus list between covers and one game per row\r\n\r\n## 🛠 Improvements\r\n\r\n- Redesigned Stores and Emulators pages, with a sidebar list, real store logos and emulator icons\r\n- Compact, swipeable console theme gallery\r\n- Settings regrouped into six smaller groups\r\n- Grid drawer can be made slightly narrower than the default\r\n\r\n## 🐛 Fixes\r\n\r\n- Safer console theme imports, plus fixes to save as, rename, reset and undo\r\n- Proton's Xalia is no longer mistaken for the game\r\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.17.0-1-x86_64.pkg.tar.zst",
+    "size": 28567559,
+    "download_count": 40
+   },
+   {
+    "name": "heronite-0.17.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 318,
+    "download_count": 26
+   },
+   {
+    "name": "heronite-0.17.0-1.x86_64.rpm",
+    "size": 26672537,
+    "download_count": 15
+   },
+   {
+    "name": "heronite-0.17.0-1.x86_64.rpm.minisig",
+    "size": 310,
+    "download_count": 13
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 27945464,
+    "download_count": 87
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 306,
+    "download_count": 50
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 95741,
+    "download_count": 33
+   },
+   {
+    "name": "heronite_0.17.0-1_amd64.deb",
+    "size": 26669082,
+    "download_count": 23
+   },
+   {
+    "name": "heronite_0.17.0-1_amd64.deb.minisig",
+    "size": 309,
+    "download_count": 12
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.16.0",
+  "name": "Heronite v0.16.0",
+  "published_at": "2026-10-26T16:19:18Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.16.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\r\n\r\n## ✨ Highlights\r\n\r\n- **Achievements:** see your achievements from Steam, GOG, Epic and RetroAchievements in one place\r\n  - New Achievements section in the focus panel, with an All achievements dialog\r\n  - Unlocked achievements appear by day on the Timeline\r\n  - Steam games never played on this PC show their list from Steam Community\r\n  - RetroAchievements sign-in also signs in your emulators\r\n  - Optional desktop notifications for new unlocks (off by default)\r\n- **Launch troubleshooting:** when a game closes right after starting, Heronite explains why and offers a one-click fix. Troubleshoot also shows how the last session ended\r\n- **German** interface language, including localized achievements from GOG, Epic and Steam\r\n\r\n## 🛠 Improvements\r\n\r\n- Wider game drawer in Grid view\r\n- Better launch logs for Proton games\r\n- Long notifications wrap instead of overflowing\r\n\r\n## 🐛 Fixes\r\n\r\n- Fixes to the launch problem dialog, Winetricks cancel and German labels in tight layouts\r\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.16.0-1-x86_64.pkg.tar.zst",
+    "size": 28063662,
+    "download_count": 49
+   },
+   {
+    "name": "heronite-0.16.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 318,
+    "download_count": 26
+   },
+   {
+    "name": "heronite-0.16.0-1.x86_64.rpm",
+    "size": 26192198,
+    "download_count": 19
+   },
+   {
+    "name": "heronite-0.16.0-1.x86_64.rpm.minisig",
+    "size": 310,
+    "download_count": 12
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 27388408,
+    "download_count": 82
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 306,
+    "download_count": 34
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 93837,
+    "download_count": 43
+   },
+   {
+    "name": "heronite_0.16.0-1_amd64.deb",
+    "size": 26186896,
+    "download_count": 29
+   },
+   {
+    "name": "heronite_0.16.0-1_amd64.deb.minisig",
+    "size": 309,
+    "download_count": 13
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.15.0",
+  "name": "Heronite v0.15.0",
+  "published_at": "2026-10-25T02:58:14Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.15.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\r\n\r\n## ✨ Highlights\r\n\r\n- **Console mode themes:** fully customizable console mode with four built-in themes (Minimal, Classic, Cinema and Pulse). Create your own, save it, and share it via JSON export/import\r\n  - Layouts include Carousel, Cinema, Spotlight, Wheel, Grid and Dashboard, with a live Customize panel\r\n  - Button glyphs for Xbox, PlayStation, Nintendo, Steam Deck and keyboard, plus an A/B swap option\r\n  - Filters panel on Y, UI sounds, an idle screen, and auto-start when a controller connects\r\n- **Light theme and custom themes:** choose Light, Dark or System, build your own six-colour theme, or use your desktop's accent colour\r\n- **Automatic Proton:** downloads the latest GE-Proton when none is installed and keeps the -latest builds up to date\r\n- **Spanish** interface language\r\n\r\n## 🛠 Improvements\r\n\r\n- Keyboard shortcut to save a replay\r\n- Fetch metadata from the Game tab\r\n- Tooltips on icon-only buttons and a loading pulse on covers\r\n- Other launchers appear in Getting started\r\n\r\n## ⚡ Performance\r\n\r\n- Faster startup, with the library loading while the window opens\r\n- Less memory use in the tray, plus fixed thread leaks\r\n- Lower GPU usage from capped animation frame rates and freed textures",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.15.0-1-x86_64.pkg.tar.zst",
+    "size": 27438417,
+    "download_count": 67
+   },
+   {
+    "name": "heronite-0.15.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 318,
+    "download_count": 18
+   },
+   {
+    "name": "heronite-0.15.0-1.x86_64.rpm",
+    "size": 25580888,
+    "download_count": 24
+   },
+   {
+    "name": "heronite-0.15.0-1.x86_64.rpm.minisig",
+    "size": 310,
+    "download_count": 9
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 26802680,
+    "download_count": 126
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 306,
+    "download_count": 33
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 91835,
+    "download_count": 53
+   },
+   {
+    "name": "heronite_0.15.0-1_amd64.deb",
+    "size": 25584600,
+    "download_count": 39
+   },
+   {
+    "name": "heronite_0.15.0-1_amd64.deb.minisig",
+    "size": 309,
+    "download_count": 10
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.14.0",
+  "name": "Heronite v0.14.0",
+  "published_at": "2026-10-22T15:13:07Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.14.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\r\n\r\n\r\n## ✨ Highlights\r\n\r\n- **Import from other launchers:** bring in your games from Heroic, Lutris, Faugus and Bottles. Heronite can launch them through the original launcher and still track your playtime\r\n- **Replay buffer:** press Guide + X to save the last moments of gameplay as a replay in the game's journal. Powered by gpu-screen-recorder, with a memory estimate and per-game on/off switch\r\n- **Sandbox:** run games and their Wine programs isolated with bubblewrap, each with its own private home folder. Configurable per game in a new Sandbox tab\r\n- **Merge duplicates:** combine games that appear twice, carrying over playtime, status and notes\r\n\r\n## 🛠 Improvements\r\n\r\n- Simpler Add game dialog, with install scripts and sandbox options built in\r\n- Install scripts can run inside the sandbox\r\n- Sandbox homes are left out of backups and removed with the game\r\n- The Collection opens in Grid until you pick another view\r\n- Fewer disk writes and lighter replay defaults\r\n\r\n## 🐛 Fixes\r\n\r\n- Several fixes to replay recording, sandbox permissions and launcher imports\r\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.14.0-1-x86_64.pkg.tar.zst",
+    "size": 25928056,
+    "download_count": 50
+   },
+   {
+    "name": "heronite-0.14.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 318,
+    "download_count": 6
+   },
+   {
+    "name": "heronite-0.14.0-1.x86_64.rpm",
+    "size": 24149608,
+    "download_count": 20
+   },
+   {
+    "name": "heronite-0.14.0-1.x86_64.rpm.minisig",
+    "size": 310,
+    "download_count": 5
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 25418232,
+    "download_count": 140
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 306,
+    "download_count": 20
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 87103,
+    "download_count": 60
+   },
+   {
+    "name": "heronite_0.14.0-1_amd64.deb",
+    "size": 24145934,
+    "download_count": 41
+   },
+   {
+    "name": "heronite_0.14.0-1_amd64.deb.minisig",
+    "size": 309,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.13.0",
+  "name": "Heronite v0.13.0",
+  "published_at": "2026-10-20T22:43:18Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.13.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\r\n\r\n\r\n## ✨ Highlights\r\n\r\n- **New Statistics page:** tabs for Overview, Journeys, Backlog, Discoveries and Album, with a sheet for each game\r\n  - **Journeys:** every game as a lane on a timeline\r\n  - **Backlog:** yearly goal with pace, beaten games, and planning games into open slots\r\n  - **Discoveries:** your period described in sentences, plus milestones and memories\r\n  - **Album:** moments, most photographed games and a photo of the month\r\n- **Appearance customization:** profiles, accent colour, high contrast, fonts, motion, cover style, background slideshow and layout\r\n- **Backups:** incremental backup and restore from Settings → Backups\r\n- **Easier setup:** new \"Getting started\" cards, automatic emulator and ROM folder detection, and Steam library read without restarting Steam\r\n\r\n## 🛠 Improvements\r\n\r\n- Image cache limit, with the least recently used images removed first\r\n- Resizable Focus list and grid drawer\r\n- Automatic switch between Grid and Focus based on window width\r\n- The empty Collection shows the games found on your PC\r\n- Faster Statistics with heavy work moved off the UI thread\r\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.13.0-1-x86_64.pkg.tar.zst",
+    "size": 24433328,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.13.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 318,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.13.0-1.x86_64.rpm",
+    "size": 22688416,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.13.0-1.x86_64.rpm.minisig",
+    "size": 310,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 24033784,
+    "download_count": 19
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 306,
+    "download_count": 8
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 82371,
+    "download_count": 3
+   },
+   {
+    "name": "heronite_0.13.0-1_amd64.deb",
+    "size": 22693490,
+    "download_count": 5
+   },
+   {
+    "name": "heronite_0.13.0-1_amd64.deb.minisig",
+    "size": 309,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.12.0",
+  "name": "Heronite v0.12.0",
+  "published_at": "2026-10-19T04:02:50Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.12.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\r\n\r\n\r\n## ✨ Highlights\r\n\r\n- **In-game overlay (beta):** open with the Guide button or a keyboard shortcut. Change the FPS limit, mix audio from other apps, pick your microphone, take notes and mark moments with Guide + Y\r\n- **Game journal:** notes per game, plus \"Where I left off\" in the focus panel\r\n- **Storage manager:** see what your games take on disk and free up space\r\n- **Install scripts:** install games from YAML scripts\r\n\r\n## 🛠 Improvements\r\n\r\n- Launch shows its steps and can be cancelled\r\n- Running games are tracked again after the app restarts\r\n- Add, edit and delete play sessions; Epic and GOG playtime imported\r\n- Option to reopen the window and close Steam when a game ends\r\n- Failed downloads show the reason and can be retried\r\n- Expired store sign-ins ask you to log in again\r\n- Per-game switch for the after-play save backup\r\n- Related games, cleaner Details and a calmer default background\r\n\r\n## 🐛 Fixes\r\n\r\n- Many fixes to launching, downloads, backups, metadata and batch editing",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.12.0-1-x86_64.pkg.tar.zst",
+    "size": 23586061,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.12.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 318,
+    "download_count": 5
+   },
+   {
+    "name": "heronite-0.12.0-1.x86_64.rpm",
+    "size": 21902864,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.12.0-1.x86_64.rpm.minisig",
+    "size": 310,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 23210488,
+    "download_count": 19
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 306,
+    "download_count": 9
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 79557,
+    "download_count": 6
+   },
+   {
+    "name": "heronite_0.12.0-1_amd64.deb",
+    "size": 21905208,
+    "download_count": 4
+   },
+   {
+    "name": "heronite_0.12.0-1_amd64.deb.minisig",
+    "size": 309,
+    "download_count": 3
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.11.0",
+  "name": "Heronite v0.11.0",
+  "published_at": "2026-10-17T22:03:27Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.11.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\r\n\r\n\r\n## ✨ Highlights\r\n\r\n- **Multi-select:** edit several games at once (statuses, favourites, categories, series, tags)\r\n- **New View menu:** search-first, saved presets, store/theme/feature filters and a compact mode\r\n- **Library fields manager:** rename, merge and remove field names\r\n- **Launch at startup** option\r\n\r\n## 🛠 Improvements\r\n\r\n- Group and sort by more fields\r\n- Edit time played in the Game tab\r\n- Install size measured from the folder when the store has none\r\n- Cleaner game context menu and focus panel\r\n- SteamGridDB key moved to Metadata; new startup update toggle\r\n- Reset icon on changed technical settings\r\n- Emulators can be opened without a game\r\n- Uninstall keeps Wine prefixes shared with other games\r\n\r\n## 🔧 Maintenance\r\n\r\n- CI formatting and test fixes",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.11.0-1-x86_64.pkg.tar.zst",
+    "size": 22242703,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.11.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 318,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.11.0-1.x86_64.rpm",
+    "size": 20611565,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.11.0-1.x86_64.rpm.minisig",
+    "size": 310,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 21953016,
+    "download_count": 23
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 306,
+    "download_count": 6
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 75259,
+    "download_count": 8
+   },
+   {
+    "name": "heronite_0.11.0-1_amd64.deb",
+    "size": 20612322,
+    "download_count": 1
+   },
+   {
+    "name": "heronite_0.11.0-1_amd64.deb.minisig",
+    "size": 309,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.10.0",
+  "name": "Heronite v0.10.0",
+  "published_at": "2026-10-16T05:48:46Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.10.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### ✨ Features\n\n- **settings:** One FPS limit per game, with the limiter picked for it ([cfa5a78](https://github.com/RafaelGoulartB/Heronite/commit/cfa5a787ac0a3647894db263fa3eb10ce855fdbf))\n- **launch:** Actions users add to any game, next to Play ([377131a](https://github.com/RafaelGoulartB/Heronite/commit/377131a5eadf998b76078c0438df8f97a3540a11))\n- **settings:** Game settings tabs by what the user wants to change ([dd9c0c3](https://github.com/RafaelGoulartB/Heronite/commit/dd9c0c3f063e8a3757575ce2c19e603e6313abc6))\n- **settings:** GPU tab, changed settings marks and how the game starts ([fb814ef](https://github.com/RafaelGoulartB/Heronite/commit/fb814ef2942d692fefc96f82baadfd53627d5907))\n- **collection:** Grid view with the selected game in a side drawer ([31920ac](https://github.com/RafaelGoulartB/Heronite/commit/31920ac1cd655cdf79bbfe8fd55d6412c74e25b9))\n\n### 🐛 Bug fixes\n\n- **launch:** Retry the downloaded tool's version check while the file is busy ([97da0f8](https://github.com/RafaelGoulartB/Heronite/commit/97da0f844e18794c727fa7c08b31986121eb3d96))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.10.0-1-x86_64.pkg.tar.zst",
+    "size": 21895754,
+    "download_count": 5
+   },
+   {
+    "name": "heronite-0.10.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 318,
+    "download_count": 5
+   },
+   {
+    "name": "heronite-0.10.0-1.x86_64.rpm",
+    "size": 20254886,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.10.0-1.x86_64.rpm.minisig",
+    "size": 310,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 21633528,
+    "download_count": 19
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 306,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 74167,
+    "download_count": 16
+   },
+   {
+    "name": "heronite_0.10.0-1_amd64.deb",
+    "size": 20253788,
+    "download_count": 3
+   },
+   {
+    "name": "heronite_0.10.0-1_amd64.deb.minisig",
+    "size": 309,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.9.0",
+  "name": "Heronite v0.9.0",
+  "published_at": "2026-10-16T01:42:55Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.9.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### ✨ Features\n\n- **launch:** Lossless Scaling frame generation through lsfg-vk ([2ad4925](https://github.com/RafaelGoulartB/Heronite/commit/2ad492536f6f849c8bb864db7124c54ae802b441))\n- **console:** A Power menu to suspend, restart or shut down ([7b33b23](https://github.com/RafaelGoulartB/Heronite/commit/7b33b23cf1d05bc757089441acbdfbe9975f178b))\n- **launch:** Umu ids for protonfixes, launch presets, keep awake and SDL ([dcbef85](https://github.com/RafaelGoulartB/Heronite/commit/dcbef856507ed012170900e87b216c12a7c4f736))\n- **cli:** --console and --fullscreen, as in Heroic ([f63da6d](https://github.com/RafaelGoulartB/Heronite/commit/f63da6daeaac0d7a1e74d915e41a0083b317d8fe))\n- **downloads:** Pause the queue while offline and resume when back ([4ac9562](https://github.com/RafaelGoulartB/Heronite/commit/4ac9562a1a3e3aeaa54c17ea3c70a26ec9af0233))\n- **launch:** Keep the anti-cheat list current ([39b6dcb](https://github.com/RafaelGoulartB/Heronite/commit/39b6dcb59b5ace8534ee05da4007ba30173ff090))\n- **collection:** Forgiving search, sort direction, Only filters and categories ([f23872d](https://github.com/RafaelGoulartB/Heronite/commit/f23872d8bb39319e5b246d9bc6e8321833b24232))\n- **settings:** A Winetricks page instead of only its window ([5c4ddb6](https://github.com/RafaelGoulartB/Heronite/commit/5c4ddb62de633225292a87416d4b60d49b3816e9))\n- **stores:** Handle an install folder deleted or moved by hand ([aa45f1d](https://github.com/RafaelGoulartB/Heronite/commit/aa45f1d2ebb7ce2b47bf3305c32c771249127306))\n- **local:** Linux games started by a command, and emulated games as PC games ([6497c70](https://github.com/RafaelGoulartB/Heronite/commit/6497c70e9a66744f6337991b8998798abd2371eb))\n- **launch:** Keep the computer awake while playing by default ([19f3c8b](https://github.com/RafaelGoulartB/Heronite/commit/19f3c8b33dc783f27d3978df2241628544fea84d))\n- **epic:** Pick how a game starts (its launch options and playable DLCs) ([c4fa67b](https://github.com/RafaelGoulartB/Heronite/commit/c4fa67b5f67777360a2d05ba8e0b9b6f75ca2057))\n- **settings:** Edit environment variables as text ([f4a4cd9](https://github.com/RafaelGoulartB/Heronite/commit/f4a4cd92ed7f3b3c84850b77471bda9faf5ced20))\n\n### 🐛 Bug fixes\n\n- **collection:** Keep canRunOffline when the library loads ([c76b7aa](https://github.com/RafaelGoulartB/Heronite/commit/c76b7aafacb91d467882ce048e2b7d59f8ff3fe1))\n\n### 📖 Documentation\n\n- Reword the comments of the CLI flags and the offline pause ([9eef5a6](https://github.com/RafaelGoulartB/Heronite/commit/9eef5a6d951df6923b2f197db98136be85ba8f02))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.9.0-1-x86_64.pkg.tar.zst",
+    "size": 21694343,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.9.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.9.0-1.x86_64.rpm",
+    "size": 20064286,
+    "download_count": 5
+   },
+   {
+    "name": "heronite-0.9.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 4
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 21428728,
+    "download_count": 8
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 6
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 73467,
+    "download_count": 3
+   },
+   {
+    "name": "heronite_0.9.0-1_amd64.deb",
+    "size": 20062882,
+    "download_count": 4
+   },
+   {
+    "name": "heronite_0.9.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 3
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.8.0",
+  "name": "Heronite v0.8.0",
+  "published_at": "2026-10-15T02:02:11Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.8.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### ✨ Features\n\n- **ludusavi:** Settings for backup retention and restore folders ([2ef7e85](https://github.com/RafaelGoulartB/Heronite/commit/2ef7e859e33612c72f929734c48177966105e31b))\n- **session:** Know which launched games are still running ([cc4e08b](https://github.com/RafaelGoulartB/Heronite/commit/cc4e08b4b702bb6d701bf1438a2b09d565aa63e3))\n- **ludusavi:** Restore a backup into the game's current prefix ([d647c88](https://github.com/RafaelGoulartB/Heronite/commit/d647c88b4c3cc60c0d1ca13fb1dc74a18cfb41eb))\n- **settings:** Restore folders, retention and Ludusavi's game list ([eb01d94](https://github.com/RafaelGoulartB/Heronite/commit/eb01d9437e9fa721b73cf99e3069baba5f724a58))\n- **game-settings:** Backups tab to see, lock and restore save backups ([ae9c380](https://github.com/RafaelGoulartB/Heronite/commit/ae9c380277b6accddefd95d2199bad35dc078261))\n- **ludusavi:** Name, size and delete a backup ([af696cb](https://github.com/RafaelGoulartB/Heronite/commit/af696cbeb0eeee30c28cbb2690e70acae9ff8551))\n- **game-settings:** Name, delete and see the size of save backups ([2e19dde](https://github.com/RafaelGoulartB/Heronite/commit/2e19dde03e3b4399fcb3df5ed39aa02771067324))\n- **ui:** Tabs that do not fit wrap to another row ([df9b06c](https://github.com/RafaelGoulartB/Heronite/commit/df9b06c2ef60f9884a41d71f36425e6bbc8bc2b6))\n- **game-settings:** Call the backups tab Saves, next to Cloud saves ([9387d63](https://github.com/RafaelGoulartB/Heronite/commit/9387d63bad9385a9f0c684d686f7a7abdfe5586e))\n- **settings:** Restore from the backup folder and only the folders added ([fca2b59](https://github.com/RafaelGoulartB/Heronite/commit/fca2b59d826416e2bf5e296e1d4ba1f11d27c902))\n- **settings:** A Saves section for Ludusavi, apart from Backups ([bc6e2e9](https://github.com/RafaelGoulartB/Heronite/commit/bc6e2e9d83c8339aa7060207f5e6f8a01932cb03))\n- **saves:** Say where to get Ludusavi when it is not installed ([395ce52](https://github.com/RafaelGoulartB/Heronite/commit/395ce52ae276869eff16d2b95a21b909902ce4fd))\n\n### 🐛 Bug fixes\n\n- **ludusavi:** Keep the undo copy when a restore stops part-way ([7d50c8e](https://github.com/RafaelGoulartB/Heronite/commit/7d50c8eca799fcbbdfa966048cf67125ae0634f3))\n- **ludusavi:** Lock, name and delete a backup safely ([88a0416](https://github.com/RafaelGoulartB/Heronite/commit/88a0416eeb390da30df2f3177ed1a22b6060caf7))\n- **game-settings:** Act on a save backup by key, not by its row ([f827d2a](https://github.com/RafaelGoulartB/Heronite/commit/f827d2a72a8d424cb12a548fd7aec4e71a9a48d1))\n- **settings:** Keep a retention value set by hand ([95936d7](https://github.com/RafaelGoulartB/Heronite/commit/95936d7772778509be0791a14607e94d3f3d0072))\n\n### ⚡ Performance\n\n- **ludusavi:** Read each backup folder's mappings once ([a62c320](https://github.com/RafaelGoulartB/Heronite/commit/a62c32043acae459202428c3d34a8a1f51dcf9be))\n- **game-settings:** Sum up the restore preview once, and undo after a failure ([f23d564](https://github.com/RafaelGoulartB/Heronite/commit/f23d56469e2bc4eb10baad1e5891336b8592c3b8))\n\n### 📖 Documentation\n\n- **readme:** Mention restoring save backups ([53b6747](https://github.com/RafaelGoulartB/Heronite/commit/53b67474e6ff3b25cfdc826ce0ed05a1e86e4cd3))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.8.0-1-x86_64.pkg.tar.zst",
+    "size": 21303791,
+    "download_count": 7
+   },
+   {
+    "name": "heronite-0.8.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 5
+   },
+   {
+    "name": "heronite-0.8.0-1.x86_64.rpm",
+    "size": 19726076,
+    "download_count": 5
+   },
+   {
+    "name": "heronite-0.8.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 21072376,
+    "download_count": 18
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 8
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 72249,
+    "download_count": 7
+   },
+   {
+    "name": "heronite_0.8.0-1_amd64.deb",
+    "size": 19731508,
+    "download_count": 7
+   },
+   {
+    "name": "heronite_0.8.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 3
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.7.0",
+  "name": "Heronite v0.7.0",
+  "published_at": "2026-10-14T05:30:05Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.7.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### ✨ Features\n\n- **settings:** A clearer Proton picker, ProtonDB advice, Steam restart ([e1f1245](https://github.com/RafaelGoulartB/Heronite/commit/e1f1245658ac1078538d26794ea9ef761c8a10be))\n- **settings:** Give the Wine tab the Steam Proton tab's layout ([a21468e](https://github.com/RafaelGoulartB/Heronite/commit/a21468ef514224b6ff9d5d382d3b277fd41cc632))\n\n### 🐛 Bug fixes\n\n- **steam:** List every Proton for Steam games, Wine Manager builds too ([c86278c](https://github.com/RafaelGoulartB/Heronite/commit/c86278cba003b8babf302b60382f60f4a7f93341))\n- **steam:** Safer restart, and no re-read over a change in flight ([769f4b5](https://github.com/RafaelGoulartB/Heronite/commit/769f4b5e9df1f6bb96eadd032c681855b163c894))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.7.0-1-x86_64.pkg.tar.zst",
+    "size": 21128568,
+    "download_count": 11
+   },
+   {
+    "name": "heronite-0.7.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.7.0-1.x86_64.rpm",
+    "size": 19550213,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.7.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 20945400,
+    "download_count": 21
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 71815,
+    "download_count": 5
+   },
+   {
+    "name": "heronite_0.7.0-1_amd64.deb",
+    "size": 19543888,
+    "download_count": 5
+   },
+   {
+    "name": "heronite_0.7.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.6.1",
+  "name": "Heronite v0.6.1",
+  "published_at": "2026-10-14T01:44:57Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.6.1",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### 🐛 Bug fixes\n\n- **appimage:** Bundle xkbcommon and udev, ship the AppStream data ([c43490b](https://github.com/RafaelGoulartB/Heronite/commit/c43490b94a545022dbdb81fd7bfc9dc9a06c0f07))\n- **appimage:** Bundle libxkbcommon 1.13.2 instead of Ubuntu 22.04's 1.4.0 ([75c4431](https://github.com/RafaelGoulartB/Heronite/commit/75c443195a45a2167223f876becd3482cec6e24f))\n\n### 📖 Documentation\n\n- **notices:** List the libraries the AppImage bundles ([fd9a5d5](https://github.com/RafaelGoulartB/Heronite/commit/fd9a5d5274201b3737c8e87f8d39d19d200eea10))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.6.1-1-x86_64.pkg.tar.zst",
+    "size": 20956859,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.6.1-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.6.1-1.x86_64.rpm",
+    "size": 19438251,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.6.1-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 4
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 20781560,
+    "download_count": 6
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 4
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 71255,
+    "download_count": 3
+   },
+   {
+    "name": "heronite_0.6.1-1_amd64.deb",
+    "size": 19436122,
+    "download_count": 2
+   },
+   {
+    "name": "heronite_0.6.1-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 3
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.6.0",
+  "name": "Heronite v0.6.0",
+  "published_at": "2026-10-13T23:59:04Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.6.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### ✨ Features\n\n- **collection:** Clearer welcome copy; the Steam tile says Steam must be open ([63c4940](https://github.com/RafaelGoulartB/Heronite/commit/63c494084fdfe6c9123a831d875cc356d10fd584))\n- **onboarding:** Unblock the first run (default Proton, live Steam tile, empty states) ([84f6124](https://github.com/RafaelGoulartB/Heronite/commit/84f6124dbc2a6befc1cc58c59cf295a448cd702a))\n- **data:** Getting-started checklist state ([e8cbf9a](https://github.com/RafaelGoulartB/Heronite/commit/e8cbf9af12335f743acecf2711accdb9bb34efab))\n- **icons:** Lightbulb, palette, photo camera, inbox and cursor ([c736cb8](https://github.com/RafaelGoulartB/Heronite/commit/c736cb8b50258ad248367661dd8ae87696e5ddc2))\n- **onboarding:** Getting-started checklist dialog ([dc5a3da](https://github.com/RafaelGoulartB/Heronite/commit/dc5a3da63085ca5cf5ae998180a5200c11ae0be8))\n- **collection:** Open the getting-started checklist once and from a bulb in the header ([d1a0ef7](https://github.com/RafaelGoulartB/Heronite/commit/d1a0ef725646a646707248bc3ae6a52e0cdf541b))\n- **onboarding:** Make it yours opens the Discover Heronite group ([e5c6614](https://github.com/RafaelGoulartB/Heronite/commit/e5c6614cabcc55c516fa01e4bc5c8c27a907c532))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.6.0-1-x86_64.pkg.tar.zst",
+    "size": 20961890,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.6.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.6.0-1.x86_64.rpm",
+    "size": 19429362,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.6.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 1
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 20482552,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 70233,
+    "download_count": 2
+   },
+   {
+    "name": "heronite_0.6.0-1_amd64.deb",
+    "size": 19426408,
+    "download_count": 2
+   },
+   {
+    "name": "heronite_0.6.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.5.0",
+  "name": "Heronite v0.5.0",
+  "published_at": "2026-10-13T15:35:40Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.5.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### ✨ Features\n\n- **steam:** Read and change the settings of Steam games ([9856af2](https://github.com/RafaelGoulartB/Heronite/commit/9856af2aef2b1d7e749179d689115b20d5094880))\n- **settings:** Game settings tabs for Steam games ([fe4f0a3](https://github.com/RafaelGoulartB/Heronite/commit/fe4f0a3f2a9d0a774d5b83c45352463d169658b9))\n- **data:** Join games owned on Steam to the Collection's other entries ([8b179a7](https://github.com/RafaelGoulartB/Heronite/commit/8b179a7eb58717beb2c59c50046d4083157b5c7a))\n- **launch:** No Steam entry for a game the Collection already has ([4e78c54](https://github.com/RafaelGoulartB/Heronite/commit/4e78c544c90199dc200705195f44499038cee2d2))\n- **steam:** Read the account's Steam library from the client ([1aa83dd](https://github.com/RafaelGoulartB/Heronite/commit/1aa83ddccaf8a4406e2a8e03fae4e7db7f49c0a0))\n- **collection:** Play, install and uninstall a game's Steam copy ([2ac635c](https://github.com/RafaelGoulartB/Heronite/commit/2ac635c04e1ea5a56d577bfb7292e8fcec4c5d60))\n- **stores:** Steam tab and automatic import of the Steam library ([56180ee](https://github.com/RafaelGoulartB/Heronite/commit/56180eea06586d708aeeef71104d389b5c5d5d10))\n- **collection:** Filter the Collection by store ([50cab52](https://github.com/RafaelGoulartB/Heronite/commit/50cab52b686d9595c89486f75fa085ae28d402cd))\n\n### 🐛 Bug fixes\n\n- **shortcuts:** Reach the debugging interface of current Steam clients ([00b18c3](https://github.com/RafaelGoulartB/Heronite/commit/00b18c3e69df005de39368da8d1507b3a3cf7fe6))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.5.0-1-x86_64.pkg.tar.zst",
+    "size": 20843868,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.5.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.5.0-1.x86_64.rpm",
+    "size": 19319486,
+    "download_count": 1
+   },
+   {
+    "name": "heronite-0.5.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 20384248,
+    "download_count": 9
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 4
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 69897,
+    "download_count": 3
+   },
+   {
+    "name": "heronite_0.5.0-1_amd64.deb",
+    "size": 19320662,
+    "download_count": 3
+   },
+   {
+    "name": "heronite_0.5.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.4.0",
+  "name": "Heronite v0.4.0",
+  "published_at": "2026-10-13T04:24:38Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.4.0",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### ✨ Features\n\n- **launch:** Run programs alongside the game ([ea6a624](https://github.com/RafaelGoulartB/Heronite/commit/ea6a624bc6a58f661316d60cdc8fdf8ba9fa489e))\n- **wine:** Manage Wine prefixes and pick a game's prefix from a menu ([fb8b065](https://github.com/RafaelGoulartB/Heronite/commit/fb8b065b03b3748701d68a7929088aeba1aa2d84))\n- **launch:** Launch GOG and Amazon Games games ([312d07e](https://github.com/RafaelGoulartB/Heronite/commit/312d07ecb2fc4ae7d70b161b808d1cfe6bdc4f94))\n- **stores:** Add the GOG and Amazon Games backends ([82de89b](https://github.com/RafaelGoulartB/Heronite/commit/82de89be686ca46fcc2f57a7905fc04f3f6bd18e))\n- **login:** Log in to GOG and Amazon Games in the login window ([6c66e81](https://github.com/RafaelGoulartB/Heronite/commit/6c66e81b6bc7b50159b21ef720e5f2efea6ddee0))\n- **stores:** Install and manage GOG and Amazon Games games ([02dd992](https://github.com/RafaelGoulartB/Heronite/commit/02dd992c53ebb8cd17206a886b628be3aacd07cf))\n- **pages:** GOG and Amazon Games pages ([36f3fa5](https://github.com/RafaelGoulartB/Heronite/commit/36f3fa5820281d083d9e07cbec0a6a9185e45743))\n- **pages:** Group the stores under one Stores entry ([780b3d2](https://github.com/RafaelGoulartB/Heronite/commit/780b3d20496b7843346c98ab3b575c1d90d06bf4))\n\n### ⚡ Performance\n\n- **launch:** Stop checking the anti-cheat runtimes online before every launch ([e1235a6](https://github.com/RafaelGoulartB/Heronite/commit/e1235a64d274882c3395bf1359a1e8f11a30c7b9))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.4.0-1-x86_64.pkg.tar.zst",
+    "size": 20675614,
+    "download_count": 6
+   },
+   {
+    "name": "heronite-0.4.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.4.0-1.x86_64.rpm",
+    "size": 19169505,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.4.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 5
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 20220408,
+    "download_count": 7
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 4
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 69337,
+    "download_count": 4
+   },
+   {
+    "name": "heronite_0.4.0-1_amd64.deb",
+    "size": 19170194,
+    "download_count": 4
+   },
+   {
+    "name": "heronite_0.4.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 3
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.3.2",
+  "name": "Heronite v0.3.2",
+  "published_at": "2026-10-13T01:02:33Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.3.2",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### ✨ Features\n\n- **wine:** Add six Proton sources and check them on demand ([9414cc8](https://github.com/RafaelGoulartB/Heronite/commit/9414cc883085b9ee4aab3e070a74c5c6592f11e2))\n- **launch:** Run the before-launch and after-exit scripts ([e8cbc24](https://github.com/RafaelGoulartB/Heronite/commit/e8cbc2488fb25da30615374bf6677e4126800568))\n- **settings:** Add a MangoHud FPS limit ([8b08706](https://github.com/RafaelGoulartB/Heronite/commit/8b08706912ca03e3aea2d4e0b7678e277b094d68))\n\n### 🐛 Bug fixes\n\n- **proc:** Retry starting a program that is still open for writing ([782c9a4](https://github.com/RafaelGoulartB/Heronite/commit/782c9a407aec52ab26c43bf7c842741add03d4b8))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.3.2-1-x86_64.pkg.tar.zst",
+    "size": 20223107,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.3.2-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.3.2-1.x86_64.rpm",
+    "size": 18724055,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-0.3.2-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 1
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 19773944,
+    "download_count": 6
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 67811,
+    "download_count": 6
+   },
+   {
+    "name": "heronite_0.3.2-1_amd64.deb",
+    "size": 18722282,
+    "download_count": 1
+   },
+   {
+    "name": "heronite_0.3.2-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.3.1",
+  "name": "Heronite v0.3.1",
+  "published_at": "2026-10-12T23:33:14Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.3.1",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### ✨ Features\n\n- **i18n:** Add heronite-i18n crate for interface translations ([5054822](https://github.com/RafaelGoulartB/Heronite/commit/50548225e93d1544a540be73bb1c66e631121f04))\n- **settings:** Add an interface language setting with live switching ([7917972](https://github.com/RafaelGoulartB/Heronite/commit/7917972b8568f4bae6f57cf1378d8a1c83132a18))\n- **i18n:** Translate the data layer and the Stats page ([4924fbe](https://github.com/RafaelGoulartB/Heronite/commit/4924fbe7f576fd2c8071800424d370e4c6ad47b0))\n- **i18n:** Translate the Collection screen and console mode ([97df119](https://github.com/RafaelGoulartB/Heronite/commit/97df119ad3cc725981d5ddf5372eb63a5c539a88))\n- **i18n:** Translate the command palette, tray and background services ([e3e2cf0](https://github.com/RafaelGoulartB/Heronite/commit/e3e2cf06c8b9e313cb65eb693ad06ee702a31f9a))\n- **i18n:** Translate Settings and the game settings panel ([01f0711](https://github.com/RafaelGoulartB/Heronite/commit/01f0711166f086e1ec044c703f71e2e239688682))\n- **i18n:** Translate emulators, ROM scanning and Add game ([c75f1eb](https://github.com/RafaelGoulartB/Heronite/commit/c75f1eb123fce27794eb04d7b2471cd0c6883ccc))\n- **i18n:** Translate Epic, Downloads and the Wine Manager ([5a02e68](https://github.com/RafaelGoulartB/Heronite/commit/5a02e68240726e75952b59b6f7c6c4f44fdb586a))\n- **i18n:** Translate game dialogs and launch messages ([0fa77bb](https://github.com/RafaelGoulartB/Heronite/commit/0fa77bbd66c2a3f4a400c7b281cf14ea87cf3d26))\n- **metadata:** Fetch Steam store texts in the interface language ([27c0e1f](https://github.com/RafaelGoulartB/Heronite/commit/27c0e1f48a260d27d1235d45c98a7a53427510d3))\n\n### 🐛 Bug fixes\n\n- **release:** Bump heronite-i18n in version script ([417502c](https://github.com/RafaelGoulartB/Heronite/commit/417502c642b2b216ea75fc9ce7b76cfd4c31fb31))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.3.1-1-x86_64.pkg.tar.zst",
+    "size": 20197084,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.3.1-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 1
+   },
+   {
+    "name": "heronite-0.3.1-1.x86_64.rpm",
+    "size": 18717165,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.3.1-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 19745272,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 67713,
+    "download_count": 2
+   },
+   {
+    "name": "heronite_0.3.1-1_amd64.deb",
+    "size": 18707430,
+    "download_count": 2
+   },
+   {
+    "name": "heronite_0.3.1-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.2.1",
+  "name": "Heronite v0.2.1",
+  "published_at": "2026-10-12T18:48:55Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.2.1",
+  "body": "**Download:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS). The `.minisig` and `.zsync` files are for the updaters; you do not need them.\n\n\n### 📖 Documentation\n\n- **readme:** Mark AppImage as recommended and drop install notes ([3d559ca](https://github.com/RafaelGoulartB/Heronite/commit/3d559ca83ed468722782458d6a1f308ebc510e7e))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.2.1-1-x86_64.pkg.tar.zst",
+    "size": 19986678,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.2.1-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.2.1-1.x86_64.rpm",
+    "size": 18516347,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.2.1-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 19556856,
+    "download_count": 9
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 67069,
+    "download_count": 5
+   },
+   {
+    "name": "heronite_0.2.1-1_amd64.deb",
+    "size": 18498478,
+    "download_count": 2
+   },
+   {
+    "name": "heronite_0.2.1-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 2
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.2.0",
+  "name": "Heronite v0.2.0",
+  "published_at": "2026-10-12T03:12:35Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.2.0",
+  "body": "\n### ✨ Features\n\n- **update:** Add signed in-app AppImage updates ([e26740c](https://github.com/RafaelGoulartB/Heronite/commit/e26740c9ae16b887c08b30529e92fe8009e48bc1))\n- **packaging:** Add .deb, .rpm and Arch packages with in-app updates ([3ac891e](https://github.com/RafaelGoulartB/Heronite/commit/3ac891e744096c6d21b182e88c5ca1fdd03900b6))\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-0.2.0-1-x86_64.pkg.tar.zst",
+    "size": 19987905,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-0.2.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.2.0-1-x86_64.pkg.tar.zst.sha256",
+    "size": 102,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.2.0-1.x86_64.rpm",
+    "size": 18496299,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.2.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 2
+   },
+   {
+    "name": "heronite-0.2.0-1.x86_64.rpm.sha256",
+    "size": 94,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-0.2.0-x86_64.AppImage",
+    "size": 19544568,
+    "download_count": 6
+   },
+   {
+    "name": "Heronite-0.2.0-x86_64.AppImage.minisig",
+    "size": 311,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-0.2.0-x86_64.AppImage.sha256",
+    "size": 97,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 19544568,
+    "download_count": 1
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.sha256",
+    "size": 91,
+    "download_count": 1
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 67027,
+    "download_count": 3
+   },
+   {
+    "name": "heronite_0.2.0-1_amd64.deb",
+    "size": 18489668,
+    "download_count": 3
+   },
+   {
+    "name": "heronite_0.2.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 1
+   },
+   {
+    "name": "heronite_0.2.0-1_amd64.deb.sha256",
+    "size": 93,
+    "download_count": 1
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.1.3",
+  "name": "Heronite v0.1.3",
+  "published_at": "2026-10-12T01:30:49Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.1.3",
+  "body": null,
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "Heronite-0.1.3-x86_64.AppImage",
+    "size": 19446264,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-0.1.3-x86_64.AppImage.sha256",
+    "size": 97,
+    "download_count": 1
+   }
+  ]
+ },
+ {
+  "tag_name": "v0.1.0",
+  "name": "Heronite v0.1.0",
+  "published_at": "2026-10-12T01:18:19Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v0.1.0",
+  "body": "First public release of Heronite. See the [README](https://github.com/RafaelGoulartB/Heronite#readme) for what it can do.\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "Heronite-0.1.0-x86_64.AppImage",
+    "size": 19454456,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-0.1.0-x86_64.AppImage.sha256",
+    "size": 97,
+    "download_count": 1
+   }
+  ]
+ }
+]

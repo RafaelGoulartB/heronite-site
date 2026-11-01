@@ -12,6 +12,7 @@ import '../styles/base.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { site } from '../data/site';
+import { alternatesFor, basePath, localeInfo, localeOf, useText, type Locale } from '../i18n';
 
 interface Props {
   title: string;
@@ -25,19 +26,26 @@ interface Props {
   /** Extra schema.org objects for this page. */
   jsonLd?: object[];
   noindex?: boolean;
+  /** The language versions of this page; every language by default. */
+  alternates?: Partial<Record<Locale, string>>;
 }
 
+const lang = localeOf(Astro.url.pathname);
+const text = useText(lang);
 const {
   title,
   description,
   image = '/og.png',
-  imageAlt = 'Heronite, a game launcher for Linux and Windows, showing a library of game covers',
+  imageAlt = text.meta.ogImageAlt,
   type = 'website',
   published,
   modified,
   jsonLd = [],
   noindex = false,
+  alternates = alternatesFor(basePath(Astro.url.pathname)),
 } = Astro.props;
+const info = localeInfo[lang];
+const otherLangs = (Object.keys(alternates) as Locale[]).filter((l) => l !== lang);
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const ogImage = new URL(image, Astro.site);
@@ -50,7 +58,7 @@ const graph = [
     '@id': `${site.url}/#website`,
     name: 'Heronite',
     url: `${site.url}/`,
-    inLanguage: 'en',
+    inLanguage: ['en', 'pt-BR', 'es'],
     publisher: { '@id': `${site.url}/#org` },
   },
   {
@@ -68,7 +76,7 @@ const graph = [
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={info.htmlLang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -76,6 +84,14 @@ const graph = [
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex" />}
+    {!noindex && Object.keys(alternates).length > 1 && (
+      <>
+        {(Object.entries(alternates) as [Locale, string][]).map(([l, href]) => (
+          <link rel="alternate" hreflang={localeInfo[l].htmlLang} href={new URL(href, Astro.site)} />
+        ))}
+        {alternates.en && <link rel="alternate" hreflang="x-default" href={new URL(alternates.en, Astro.site)} />}
+      </>
+    )}
     <link rel="preload" href={rubikBold} as="font" type="font/woff2" crossorigin />
     <link rel="preload" href={cabinRegular} as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -88,7 +104,8 @@ const graph = [
 
     <meta property="og:type" content={type} />
     <meta property="og:site_name" content="Heronite" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={info.og} />
+    {otherLangs.map((l) => <meta property="og:locale:alternate" content={localeInfo[l].og} />)}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -108,8 +125,8 @@ const graph = [
     <slot name="head" />
   </head>
   <body>
-    <a class="skip" href="#main">Skip to content</a>
-    <Header />
+    <a class="skip" href="#main">{text.nav.skip}</a>
+    <Header alternates={alternates} />
     <slot />
     <Footer />
   </body>

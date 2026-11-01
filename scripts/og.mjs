@@ -1,4 +1,4 @@
-// Draws the 1200x630 social cards in public/og/ from each page's headline and screenshot.
+// Draws the 1200x630 social cards in public/og/ (and public/og/<lang>/) from each page's headline and screenshot.
 // Needs Chromium and ImageMagick: `npm run og`. Commit the results; the build does not run this.
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
@@ -13,29 +13,38 @@ const chromium = process.env.CHROMIUM ?? 'chromium';
 
 const field = (text, name) => text.match(new RegExp(`^${name}:\\s*"?(.*?)"?\\s*$`, 'm'))?.[1];
 
-// Feature pages, guides and comparisons, plus the index pages that share a card.
+// One card per feature page, guide and comparison, and per index page, in every language.
+const langs = { en: '', 'pt-br': 'pt-br/', es: 'es/' };
+const footers = {
+  en: 'Free game launcher for Linux and Windows',
+  'pt-br': 'Launcher de jogos grátis para Linux e Windows',
+  es: 'Lanzador de juegos gratis para Linux y Windows',
+};
+const unHtml = (html) => html.replace(/<em>(.*?)<\/em>/g, '*$1*').replace(/<[^>]+>/g, '');
 const cards = [];
-for (const kind of ['features', 'guides', 'compare']) {
-  const dir = join(root, 'src/content', kind);
-  for (const file of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
-    const text = readFileSync(join(dir, file), 'utf8');
-    cards.push({
-      slug: file.replace('.md', ''),
-      eyebrow: field(text, 'eyebrow'),
-      headline: field(text, 'headline'),
-      shot: field(text, 'hero')?.split('/').pop() ?? 'collection.webp',
-    });
+for (const [lang, prefix] of Object.entries(langs)) {
+  const dict = (await import(join(root, 'src/i18n', `${lang}.ts`))).default;
+  for (const kind of ['features', 'guides', 'compare']) {
+    const dir = join(root, 'src/content', kind, lang);
+    for (const file of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
+      const text = readFileSync(join(dir, file), 'utf8');
+      cards.push({
+        out: `${prefix}${file.replace('.md', '')}`,
+        lang,
+        eyebrow: field(text, 'eyebrow'),
+        headline: field(text, 'headline'),
+        shot: field(text, 'hero')?.split('/').pop() ?? 'collection.webp',
+      });
+    }
+    const index = dict.indexes[kind];
+    const shot = { features: 'collection.webp', guides: 'game-settings.webp', compare: 'console-home.webp' }[kind];
+    cards.push({ out: `${prefix}${kind}`, lang, eyebrow: index.eyebrow, headline: index.headline, shot });
   }
+  cards.push({ out: `${prefix}docs`, lang, eyebrow: dict.docs.documentation, headline: unHtml(dict.docs.index.headlineHtml), shot: 'wine-manager.webp' });
 }
-cards.push(
-  { slug: 'features', eyebrow: 'Features', headline: 'Everything Heronite *does*', shot: 'collection.webp' },
-  { slug: 'guides', eyebrow: 'Guides', headline: 'Play every store on *Linux*', shot: 'game-settings.webp' },
-  { slug: 'compare', eyebrow: 'Compare', headline: 'Heronite vs *other launchers*', shot: 'console-home.webp' },
-  { slug: 'docs', eyebrow: 'Documentation', headline: 'Heronite *docs*', shot: 'wine-manager.webp' },
-);
 
 const escape = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
-const page = ({ eyebrow, headline, shot }) => `<!doctype html><html><head><meta charset="utf-8"><style>
+const page = ({ lang, eyebrow, headline, shot }) => `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:Rubik;font-weight:700;src:url(${font('rubik', 'rubik-latin-700-normal.woff2')})}
 @font-face{font-family:Rubik;font-weight:600;src:url(${font('rubik', 'rubik-latin-600-normal.woff2')})}
 @font-face{font-family:Cabin;font-weight:500;src:url(${font('cabin', 'cabin-latin-500-normal.woff2')})}
@@ -52,7 +61,7 @@ body{width:1200px;height:630px;overflow:hidden;background:#0a0d11;color:#eef2f6;
 .eyebrow::before{content:"";width:34px;height:2px;background:currentColor;opacity:.7}
 h1{margin-top:22px;font:700 ${headline.length > 55 ? 54 : 66}px/1.04 Rubik;letter-spacing:-.025em;text-wrap:balance}
 h1 em{font-style:normal;color:#8fd3ea}
-.foot{margin-top:auto;padding-top:34px;font:500 22px/1.3 Cabin;color:#a7b2be}
+.foot{margin-top:auto;padding-top:34px;font:500 ${lang === "en" ? 22 : 19}px/1.3 Cabin;color:#a7b2be;white-space:nowrap}
 .foot b{color:#8fd3ea;font-weight:500}
 </style></head><body>
 <div class="bg"></div><div class="shade"></div>
@@ -61,21 +70,23 @@ h1 em{font-style:normal;color:#8fd3ea}
   <div class="brand"><img src="file://${root}public/icon.png">HERONITE</div>
   <p class="eyebrow">${escape(eyebrow)}</p>
   <h1>${escape(headline).replace(/\*(.+?)\*/g, '<em>$1</em>')}</h1>
-  <p class="foot"><b>heronite.app</b> · Free game launcher for Linux and Windows</p>
+  <p class="foot"><b>heronite.app</b> · ${footers[lang]}</p>
 </div>
 </body></html>`;
 
 mkdirSync(out, { recursive: true });
 const tmp = mkdtempSync(join(tmpdir(), 'heronite-og-'));
 for (const card of cards) {
-  const html = join(tmp, `${card.slug}.html`);
-  const png = join(tmp, `${card.slug}.png`);
+  const name = card.out.replace('/', '-');
+  const html = join(tmp, `${name}.html`);
+  const png = join(tmp, `${name}.png`);
+  mkdirSync(join(out, card.out, '..'), { recursive: true });
   writeFileSync(html, page(card));
   execFileSync(chromium, [
     '--headless=new', '--disable-gpu', '--hide-scrollbars', '--allow-file-access-from-files',
     '--window-size=1200,630', '--virtual-time-budget=3000', `--screenshot=${png}`, `file://${html}`,
   ], { stdio: 'ignore' });
-  execFileSync('magick', [png, '-strip', '-quality', '84', '-sampling-factor', '4:2:0', join(out, `${card.slug}.jpg`)]);
-  console.log(`og/${card.slug}.jpg`);
+  execFileSync('magick', [png, '-strip', '-quality', '84', '-sampling-factor', '4:2:0', join(out, `${card.out}.jpg`)]);
+  console.log(`og/${card.out}.jpg`);
 }
 rmSync(tmp, { recursive: true });

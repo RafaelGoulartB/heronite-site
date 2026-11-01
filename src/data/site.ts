@@ -33,8 +33,8 @@ export const stores = [
 ] as const;
 
 export const mainNav = [
-  { href: '/features/', label: 'Features' },
-  { href: '/guides/', label: 'Guides' },
-  { href: '/compare/', label: 'Compare' },
-  { href: '/docs/', label: 'Docs' },
-];
+  { href: '/features/', key: 'features' },
+  { href: '/guides/', key: 'guides' },
+  { href: '/compare/', key: 'compare' },
+  { href: '/docs/', key: 'docs' },
+] as const;
