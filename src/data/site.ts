@@ -15,6 +15,10 @@ export const site = {
   contributing: `${repo}/blob/main/CONTRIBUTING.md`,
 };
 
+// Cloudflare Web Analytics: counts visits without cookies or tracking people. The token only
+// names the site to Cloudflare, so it is public by design.
+export const analyticsToken = '4ab1ac1c02ff42f8ba3476a55ce16a63';
+
 export const downloads = {
   windowsInstaller: `${latest}/download/Heronite-Setup-x86_64.exe`,
   windowsPortable: `${latest}/download/Heronite-Portable-x86_64.zip`,
