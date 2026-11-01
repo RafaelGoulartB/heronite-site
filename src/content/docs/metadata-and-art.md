@@ -11,7 +11,7 @@ Heronite fills in covers, art, descriptions, and details by itself. Most sources
 ## Sources that need no setup
 
 - **Steam and the stores:** covers, art, and details for their own games.
-- **Lutris and Playnite** metadata.
+- **Lutris** metadata.
 - **[How Long To Beat](https://howlongtobeat.com):** how long a game takes to finish.
 - **[ProtonDB](https://www.protondb.com)** (Linux): how well a Windows game runs on Linux. Non-Steam games are matched by title.
 - **[Are We Anti-Cheat Yet?](https://areweanticheatyet.com)** (Linux): the anti-cheat status.

@@ -22,7 +22,12 @@ export const docUrl = (id: string) => `/docs/${id}/`;
 
 /** Every article and doc by URL, so `related` lists can name any page on the site. */
 export const pagesByUrl = async () => {
-  const map = new Map<string, { title: string; summary: string; kind: ArticleKind | 'docs'; entry?: Article }>();
+  const map = new Map<string, { title: string; summary: string; kind: ArticleKind | 'docs' | 'page'; entry?: Article }>();
+  map.set('/download/', {
+    title: 'Download Heronite',
+    summary: 'The installer and portable zip for Windows, and the AppImage, .deb, .rpm and Arch packages for Linux.',
+    kind: 'page',
+  });
   for (const kind of ['features', 'guides', 'compare'] as const) {
     for (const entry of await getCollection(kind)) {
       map.set(articleUrl(kind, entry.id), { title: entry.data.navLabel, summary: entry.data.summary, kind, entry });

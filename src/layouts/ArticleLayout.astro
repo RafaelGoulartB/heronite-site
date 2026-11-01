@@ -32,7 +32,7 @@ const related = d.related
     if (!r.page) throw new Error(`${kind}/${entry.id}: related page ${r.href} does not exist`);
     return true;
   });
-const kindLabel = { features: 'Feature', guides: 'Guide', compare: 'Compare', docs: 'Docs' };
+const kindLabel = { features: 'Feature', guides: 'Guide', compare: 'Compare', docs: 'Docs', page: 'Download' };
 
 const jsonLd = [
   {

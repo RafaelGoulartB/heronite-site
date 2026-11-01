@@ -26,10 +26,12 @@ faq:
   - q: Can I add games that are not from a store?
     a: Yes. Press `Ctrl+N` to add a Windows program, a native Linux program or AppImage, a start script, a browser game or a ROM. You can also point at a folder and add every game found in it at once.
   - q: Where does the cover art come from?
-    a: From the stores themselves, Steam, Lutris and Playnite metadata, and optionally SteamGridDB and IGDB. You can also pick any picture file or search the web for one. See [Metadata and art](/docs/metadata-and-art/).
+    a: From the stores themselves, Steam and Lutris metadata, and optionally SteamGridDB and IGDB. You can also pick any picture file or search the web for one. See [Metadata and art](/docs/metadata-and-art/).
   - q: Can I edit many games at once?
     a: Yes. Select games with `Space`, `Shift` + arrows or `Ctrl+A`, then press `F3` to change them all. `Ctrl+Z` undoes the last change.
 related:
+  - /features/stores/
+  - /features/play-time-tracking/
   - /docs/getting-started/
 ---
 
@@ -90,7 +92,7 @@ Genres, companies and series can also be renamed and merged across the whole Col
 
 ## Art and details filled in for you
 
-Covers, backgrounds, logos, descriptions and release dates are filled in automatically from the stores, Steam, Lutris and Playnite metadata. Two optional free keys make it even better: [SteamGridDB](https://www.steamgriddb.com) for community covers (great for emulated and DRM-free games) and [IGDB](https://www.igdb.com) for descriptions, genres and series. Each game also shows:
+Covers, backgrounds, logos, descriptions and release dates are filled in automatically from the stores, Steam and Lutris metadata. Two optional free keys make it even better: [SteamGridDB](https://www.steamgriddb.com) for community covers (great for emulated and DRM-free games) and [IGDB](https://www.igdb.com) for descriptions, genres and series. Each game also shows:
 
 - **How Long To Beat** times,
 - **ProtonDB** ratings on Linux, so you know how well a Windows game runs,
