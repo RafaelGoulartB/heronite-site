@@ -1,0 +1,55 @@
+---
+// The index page of features, guides or comparisons: a header and a card per page.
+import '../styles/content.css';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import Cta from '../components/Cta.astro';
+import { articles, articleUrl, slugOf, type ArticleKind } from '../lib/content';
+import { accent } from '../lib/text';
+import { localeInfo, localize, ogImage, useText, type Locale } from '../i18n';
+
+interface Props {
+  kind: ArticleKind;
+  lang: Locale;
+}
+
+const { kind, lang } = Astro.props;
+const text = useText(lang);
+const t = text.indexes[kind];
+const entries = await articles(kind, lang);
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: t.title,
+    description: t.description,
+    inLanguage: localeInfo[lang].htmlLang,
+    url: new URL(Astro.url.pathname, Astro.site).toString(),
+    hasPart: entries.map((e) => ({ '@type': 'WebPage', name: e.data.title, url: new URL(articleUrl(kind, slugOf(e), lang), Astro.site).toString() })),
+  },
+];
+---
+
+<Base title={t.title} description={t.description} image={ogImage(lang, kind)} jsonLd={jsonLd}>
+  <main id="main">
+    <header class="index-hero">
+      <div class="wrap">
+        <Breadcrumbs items={[{ label: text.article.sections[kind], href: localize(lang, `/${kind}/`) }]} />
+        <p class="eyebrow">{t.eyebrow}</p>
+        <h1 class="h1" set:html={accent(t.headline)} />
+        <p class="lead">{t.lead}</p>
+      </div>
+    </header>
+    <div class="wrap index-body">
+      <ul class="cards">
+        {entries.map((e) => (
+          <ArticleCard href={articleUrl(kind, slugOf(e), lang)} title={e.data.navLabel} summary={e.data.summary} image={e.data.hero} label={e.data.eyebrow} level="h2" cta={text.article.readMore} />
+        ))}
+      </ul>
+    </div>
+    <div class="wrap end-cta">
+      <Cta />
+    </div>
+  </main>
+</Base>

@@ -1,0 +1,129 @@
+---
+import type { MarkdownHeading } from 'astro';
+import { Picture, getImage } from 'astro:assets';
+import '../styles/content.css';
+import Base from './Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Faq from '../components/Faq.astro';
+import Cta from '../components/Cta.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { articleUrl, langOf, languagesWith, pagesByPath, slugOf, type Article, type ArticleKind } from '../lib/content';
+import { accent, plain, isoDate } from '../lib/text';
+import { alternatesFor, fill, formatDate, localeInfo, localize, ogImage, useText } from '../i18n';
+import { site } from '../data/site';
+
+interface Props {
+  entry: Article;
+  kind: ArticleKind;
+  headings: MarkdownHeading[];
+}
+
+const { entry, kind, headings } = Astro.props;
+const d = entry.data;
+const lang = langOf(entry);
+const slug = slugOf(entry);
+const text = useText(lang);
+const t = text.article;
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+const minutes = Math.max(1, Math.round((entry.body ?? '').split(/\s+/).length / 230));
+const og = d.og ? ogImage(lang, slug) : undefined;
+const alternates = alternatesFor(`/${kind}/${slug}/`, await languagesWith(kind, slug));
+
+const art = d.hero ? await getImage({ src: d.hero, width: 480, quality: 45, format: 'webp' }) : undefined;
+
+const pages = await pagesByPath(lang);
+const related = d.related.map((path) => {
+  const page = pages.get(path);
+  if (!page) throw new Error(`${kind}/${entry.id}: related page ${path} does not exist in ${lang}`);
+  return page;
+});
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': kind === 'features' ? 'WebPage' : 'TechArticle',
+    headline: plain(d.headline),
+    name: d.title,
+    description: d.description,
+    url: new URL(Astro.url.pathname, Astro.site).toString(),
+    dateModified: isoDate(d.updated),
+    inLanguage: localeInfo[lang].htmlLang,
+    image: new URL(og ?? '/og.png', site.url).toString(),
+    author: { '@type': 'Person', name: site.author },
+    publisher: { '@id': `${site.url}/#org` },
+    about: { '@type': 'SoftwareApplication', name: 'Heronite', applicationCategory: 'GameApplication', operatingSystem: 'Windows, Linux' },
+  },
+];
+---
+
+<Base title={d.title} description={d.description} image={og} type="article" modified={d.updated} jsonLd={jsonLd} alternates={alternates}>
+  <main id="main">
+    <header class="page-hero scene" style={art ? `--art:url(${art.src});--bright:.7;--blur:70px` : undefined}>
+      <div class="wrap">
+        <Breadcrumbs items={[{ label: t.sections[kind], href: localize(lang, `/${kind}/`) }, { label: d.navLabel, href: articleUrl(kind, slug, lang) }]} />
+        <div class:list={['ph-grid', { solo: !d.hero }]}>
+          <div class="ph-copy">
+            <p class="eyebrow">{d.eyebrow}</p>
+            <h1 class="h1" set:html={accent(d.headline)} />
+            <p class="lead">{d.lead}</p>
+            <div class="actions">
+              <a class="btn btn-primary" href={localize(lang, '/download/')}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+                {t.downloadFree}
+              </a>
+              {toc[0] && <a class="link" href={`#${toc[0].slug}`}>{kind === 'features' ? t.readDetails : t.readGuide} &darr;</a>}
+            </div>
+            <p class="meta">
+              <span>{fill(t.updated, { date: formatDate(lang, d.updated) })}</span>
+              <span>{fill(t.minutes, { n: minutes })}</span>
+            </p>
+          </div>
+          {d.hero && (
+            <figure class="ph-shot">
+              <Picture src={d.hero} alt={d.heroAlt ?? ''} formats={['avif']} fallbackFormat="webp" widths={[640, 960, 1280, 1920]} sizes="(max-width: 1100px) calc(100vw - 32px), 740px" quality={60} loading="eager" fetchpriority="high" />
+            </figure>
+          )}
+        </div>
+      </div>
+    </header>
+
+    {d.highlights.length > 0 && (
+      <ul class="wrap highlights" aria-label={t.atAGlance}>
+        {d.highlights.map((h) => (
+          <li class="glass"><h2>{h.title}</h2><p>{h.text}</p></li>
+        ))}
+      </ul>
+    )}
+
+    <div class="wrap article">
+      <nav class="toc" aria-label={t.onThisPage}>
+        {toc.length > 0 && <p>{t.onThisPage}</p>}
+        <ol>
+          {toc.map((h) => <li class={`d${h.depth}`}><a href={`#${h.slug}`}>{h.text}</a></li>)}
+        </ol>
+      </nav>
+      <article class="prose" data-pagefind-body>
+        <slot />
+      </article>
+    </div>
+
+    <div class="wrap">
+      <Faq items={d.faq} />
+    </div>
+
+    {related.length > 0 && (
+      <section class="wrap related" aria-labelledby="h-related">
+        <h2 class="h2" id="h-related">{t.keepReading}</h2>
+        <ul class="cards">
+          {related.map((page) => (
+            <ArticleCard href={page.href} title={page.title} summary={page.summary} label={t.labels[page.kind]} image={page.entry?.data.hero} cta={t.readMore} />
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <div class="wrap end-cta">
+      <Cta />
+    </div>
+  </main>
+</Base>

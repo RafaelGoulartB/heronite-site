@@ -20,6 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: withastro/action@v6
+        env:
+          # Lets the build read the release list without hitting GitHub's anonymous rate limit.
+          # Without it the build still works, from the saved copy in src/data/releases.json.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy:
     needs: build

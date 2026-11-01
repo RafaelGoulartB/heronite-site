@@ -1,0 +1,18 @@
+---
+import ArticlePage from '../../../views/ArticlePage.astro';
+import { articles, slugOf } from '../../../lib/content';
+import { otherLocales } from '../../../i18n';
+
+export async function getStaticPaths() {
+  const pages = await Promise.all(
+    otherLocales.map(async (lang) =>
+      (await articles('features', lang)).map((entry) => ({ params: { lang, slug: slugOf(entry) }, props: { entry } })),
+    ),
+  );
+  return pages.flat();
+}
+
+const { entry } = Astro.props;
+---
+
+<ArticlePage entry={entry} kind="features" />

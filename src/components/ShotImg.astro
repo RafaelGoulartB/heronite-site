@@ -1,0 +1,25 @@
+---
+// A screenshot as AVIF with the WebP original as fallback. Without `sizes` the browser gets the
+// whole frame, which CSS crops and zooms into; with `sizes` the picture is shown whole, so smaller
+// screens get a smaller file.
+import { getImage } from 'astro:assets';
+import { shot } from '../lib/shots';
+
+interface Props {
+  name: string;
+  alt: string;
+  eager?: boolean;
+  sizes?: string;
+}
+
+const { name, alt, eager = false, sizes } = Astro.props;
+const image = shot(name);
+const widths = sizes ? [640, 960, 1280, image.width] : [image.width];
+const avif = await Promise.all(widths.map((width) => getImage({ src: image, format: 'avif', quality: 60, width })));
+const srcset = sizes ? avif.map((a, i) => `${a.src} ${widths[i]}w`).join(', ') : avif[0].src;
+---
+
+<picture>
+  <source type="image/avif" srcset={srcset} sizes={sizes} />
+  <img src={image.src} alt={alt} width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+</picture>

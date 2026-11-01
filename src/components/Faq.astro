@@ -1,0 +1,37 @@
+---
+import { inlineMarkdown, stripMarkdown } from '../lib/text';
+import { localeOf, useText } from '../i18n';
+
+interface Props {
+  items: { q: string; a: string }[];
+  id?: string;
+  title?: string;
+}
+
+const lang = localeOf(Astro.url.pathname);
+const { items, id = 'faq', title = useText(lang).article.questions } = Astro.props;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: stripMarkdown(item.a) },
+  })),
+};
+---
+
+{items.length > 0 && (
+  <section class="faq" aria-labelledby={id}>
+    <h2 id={id} class="faq-title">{title}</h2>
+    <div class="faq-list">
+      {items.map((item, i) => (
+        <details class="glass" open={i === 0}>
+          <summary><h3>{item.q}</h3></summary>
+          <p set:html={inlineMarkdown(item.a, lang)} />
+        </details>
+      ))}
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </section>
+)}

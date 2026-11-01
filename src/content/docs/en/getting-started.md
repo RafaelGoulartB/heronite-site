@@ -1,0 +1,61 @@
+---
+title: "Getting started with Heronite"
+navLabel: "Getting started"
+description: "Your first run with Heronite: log in to your stores, add other games, find your way around the Collection and start playing."
+section: Start
+order: 2
+updated: 2026-11-01
+---
+
+## The first run
+
+On the first start, with an empty Collection, Heronite looks around by itself:
+
+- **Steam:** your installed Steam games come in, no login needed.
+- **Emulators and ROMs:** installed emulators are detected, and common ROM folders (like `~/ROMs` or `~/Emulation/roms`) are scanned. See [Emulation](/docs/emulation/).
+
+## Add your stores
+
+Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>) and log in to Epic Games, GOG, or Amazon Games. A small login window opens with the store's own page. If it cannot open, use the browser method on the same page: log in in your browser and paste the address or code it gives you.
+
+More in [Stores and Launchers](/docs/stores-and-launchers/).
+
+## Add other games
+
+Press <kbd>Ctrl</kbd> <kbd>N</kbd> (or **Add a game**) to add:
+
+- a Windows program (`.exe`), which on Linux runs through Wine or Proton,
+- a native Linux program, AppImage, or start script,
+- a browser game (a web address),
+- a ROM, or a whole ROM folder.
+
+You can also point at a folder and add every game found in it at once.
+
+## Find your way around
+
+| Page | Shortcut |
+|---|---|
+| Collection | <kbd>Ctrl</kbd> <kbd>1</kbd> |
+| Downloads | <kbd>Ctrl</kbd> <kbd>2</kbd> |
+| Wine Manager (Linux) | <kbd>Ctrl</kbd> <kbd>3</kbd> |
+| Stores | <kbd>Ctrl</kbd> <kbd>4</kbd> |
+| Emulators | <kbd>Ctrl</kbd> <kbd>5</kbd> |
+| Statistics | <kbd>Ctrl</kbd> <kbd>6</kbd> |
+| Settings | <kbd>Ctrl</kbd> <kbd>,</kbd> |
+
+The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any action, or plays a game by typing part of its name. Press <kbd>?</kbd> to see every shortcut. See [Keyboard Shortcuts](/docs/keyboard-shortcuts/).
+
+## Organize the Collection
+
+- Switch between **Focus** (a list with a details panel) and a **grid** of covers.
+- **Group** by status, store, genre, series, year, and more.
+- Save **views** with your filters and sorting (Playing now, Backlog, Finished, Favourites).
+- Select several games (<kbd>Space</kbd>, <kbd>Shift</kbd> + arrows, <kbd>Ctrl</kbd> <kbd>A</kbd>) and press <kbd>F3</kbd> to change them all at once. <kbd>Ctrl</kbd> <kbd>Z</kbd> undoes it.
+
+## Play
+
+Press <kbd>Enter</kbd> on a game to play it (or install it). Heronite records each session, matches screenshots to the game, and shows it all in **Statistics**. Take a screenshot while playing with <kbd>F10</kbd>.
+
+## On the couch
+
+Turn on [Console Mode](/docs/console-mode/) from the palette, the ☰ menu, or with `--console`. It can also open by itself at startup or when a controller connects.

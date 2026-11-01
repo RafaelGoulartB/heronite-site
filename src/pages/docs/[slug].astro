@@ -1,0 +1,14 @@
+---
+import DocPage from '../../views/DocPage.astro';
+import { getCollection } from 'astro:content';
+import { langOf, slugOf } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('docs', (e) => langOf(e) === 'en');
+  return entries.map((entry) => ({ params: { slug: slugOf(entry) }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+---
+
+<DocPage entry={entry} />

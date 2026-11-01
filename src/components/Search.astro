@@ -1,0 +1,61 @@
+---
+// A search button and dialog over the Pagefind index that `npm run build` writes to dist/pagefind/.
+// The search script loads on the first open, and Pagefind searches the page's own language.
+import { localeOf, useText } from '../i18n';
+
+const t = useText(localeOf(Astro.url.pathname)).search;
+---
+
+<button class="search-btn" type="button" data-search-open>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+  <span>{t.placeholder}</span>
+  <kbd>/</kbd>
+</button>
+
+<dialog class="search glass" aria-label={t.label} data-unavailable={t.unavailable}>
+  <div class="search-body" data-search-ui></div>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('dialog.search');
+  const target = document.querySelector<HTMLElement>('[data-search-ui]');
+  let loaded: Promise<void> | undefined;
+
+  const load = () =>
+    (loaded ??= new Promise<void>((resolve, reject) => {
+      const css = document.createElement('link');
+      css.rel = 'stylesheet';
+      css.href = '/pagefind/pagefind-ui.css';
+      document.head.append(css);
+      const script = document.createElement('script');
+      script.src = '/pagefind/pagefind-ui.js';
+      script.onload = () => {
+        // @ts-expect-error PagefindUI is a global from the script above.
+        new PagefindUI({ element: target, showSubResults: true, showImages: false, resetStyles: false, autofocus: true });
+        resolve();
+      };
+      script.onerror = () => {
+        if (target) target.textContent = dialog?.dataset.unavailable ?? '';
+        reject();
+      };
+      document.head.append(script);
+    }));
+
+  const open = () => {
+    if (!dialog) return;
+    dialog.showModal();
+    load().then(() => dialog.querySelector<HTMLInputElement>('input')?.focus(), () => {});
+  };
+
+  document.querySelectorAll('[data-search-open]').forEach((button) => button.addEventListener('click', open));
+  dialog?.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  document.addEventListener('keydown', (event) => {
+    const typing = (event.target as HTMLElement).closest('input, textarea, [contenteditable]');
+    if (event.key === '/' && !typing && !dialog?.open) {
+      event.preventDefault();
+      open();
+    }
+  });
+</script>

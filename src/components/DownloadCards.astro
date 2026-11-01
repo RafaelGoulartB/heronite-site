@@ -1,0 +1,53 @@
+---
+import Icon from './Icon.astro';
+import { downloads, site } from '../data/site';
+import { fill, formatDate, localeOf, localize, useText } from '../i18n';
+import { latest, version } from '../lib/releases';
+
+interface Props {
+  /** Heading level of the system names, so the page outline stays in order. */
+  level?: 'h2' | 'h3';
+}
+
+const { level: H = 'h3' } = Astro.props;
+const lang = localeOf(Astro.url.pathname);
+const t = useText(lang).downloadCards;
+const release = await latest();
+const size = (name: string) => {
+  const asset = release?.assets.find((a) => a.name === name);
+  return asset ? ` · ${Math.round(asset.size / 1e6)} MB` : '';
+};
+---
+
+<div class="dl">
+  <div class="os glass">
+    <div class="os-head">
+      <Icon name="windows" />
+      <H>Windows</H>
+    </div>
+    <p class="sub">{t.windowsSub}</p>
+    <div class="btns">
+      <a class="btn btn-primary" href={downloads.windowsInstaller}>{t.installer} <small>.exe{size('Heronite-Setup-x86_64.exe')}</small></a>
+      <a class="btn btn-ghost" href={downloads.windowsPortable}>{t.portable} <small>.zip{size('Heronite-Portable-x86_64.zip')}</small></a>
+    </div>
+    <p class="warn" set:html={t.warnHtml} />
+  </div>
+  <div class="os glass">
+    <div class="os-head">
+      <Icon name="linux" />
+      <H>Linux</H>
+    </div>
+    <p class="sub">{t.linuxSub}</p>
+    <div class="btns">
+      <a class="btn btn-primary" href={downloads.appImage}>{t.appImage} <small>{size('Heronite-x86_64.AppImage').slice(3)}</small></a>
+      <a class="btn btn-ghost" href={site.releases}>{t.packages}</a>
+    </div>
+    <p class="fine" set:html={fill(t.linuxFineHtml, { releases: site.releases, install: localize(lang, '/docs/installation/') })} />
+  </div>
+</div>
+{release && (
+  <p class="dl-version">
+    {fill(t.version, { version: version(release), date: formatDate(lang, new Date(release.date)) })}
+    · <a href="/changelog/">{useText(lang).nav.changelog}</a>
+  </p>
+)}

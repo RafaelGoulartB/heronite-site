@@ -1,0 +1,306 @@
+---
+import '../styles/home.css';
+import '../styles/content.css';
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import ShotImg from '../components/ShotImg.astro';
+import DownloadCards from '../components/DownloadCards.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import Faq from '../components/Faq.astro';
+import { backdrop, medium } from '../lib/shots';
+import { articles, articleUrl, slugOf } from '../lib/content';
+import { latest, totalDownloads, version } from '../lib/releases';
+import { downloads, site, stores } from '../data/site';
+import { fill, localeInfo, localize, useText, type Locale } from '../i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const text = useText(lang);
+const t = text.home;
+const to = (path: string) => localize(lang, path);
+
+const bg = Object.fromEntries(
+  await Promise.all(
+    ['statistics', 'console-library', 'year-in-review', 'console-home', 'stats-backlog', 'console-game'].map(
+      async (name) => [name, await backdrop(name)],
+    ),
+  ),
+);
+const [lib, home, col, yir] = await Promise.all(
+  ['console-library', 'console-home', 'collection', 'year-in-review'].map(medium),
+);
+const wallStyle = `--img-lib:${lib};--img-home:${home};--img-col:${col};--img-yir:${yir}`;
+
+const [features, guides, compare, release, downloadCount] = await Promise.all([
+  articles('features', lang),
+  articles('guides', lang),
+  articles('compare', lang),
+  latest(),
+  totalDownloads(),
+]);
+const reads = [
+  ...guides.slice(0, 5).map((g) => ({ href: articleUrl('guides', slugOf(g), lang), title: g.data.navLabel, summary: g.data.summary, label: text.article.labels.guides, cta: text.article.readMore })),
+  ...compare.map((c) => ({ href: articleUrl('compare', slugOf(c), lang), title: c.data.navLabel, summary: c.data.summary, label: text.article.labels.compare, cta: text.article.readMore })),
+];
+
+// A line icon per feature page, for the home grid.
+const featureIcons: Record<string, string> = {
+  'game-library':
+    '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+  'stores':
+    '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>',
+  'emulation':
+    '<path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-4 3.6C2.6 9.4 2 14.5 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.4-1.4A2 2 0 0 1 9.8 16h4.4a2 2 0 0 1 1.4.6L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.5-.6-6.6-.7-7.3A4 4 0 0 0 17.3 5Z"/>',
+  'wine-and-proton':
+    '<path d="M8 22h8M12 15v7M7 10h10"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/>',
+  'console-mode':
+    '<rect x="2" y="7" width="20" height="15" rx="2"/><path d="m17 2-5 5-5-5"/>',
+  'play-time-tracking':
+    '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+  'saves-and-backups':
+    '<path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7M7 3v4a1 1 0 0 0 1 1h7"/>',
+  'performance':
+    '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/>',
+};
+
+const softwareApplication = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Heronite',
+  description: t.appDescription,
+  url: new URL(to('/'), site.url).toString(),
+  image: `${site.url}/og.png`,
+  inLanguage: localeInfo[lang].htmlLang,
+  applicationCategory: 'GameApplication',
+  applicationSubCategory: 'Game launcher',
+  operatingSystem: 'Windows 10, Windows 11, Linux',
+  license: 'https://www.gnu.org/licenses/gpl-3.0.html',
+  isAccessibleForFree: true,
+  downloadUrl: site.releases,
+  installUrl: new URL(to('/download/'), site.url).toString(),
+  ...(release ? { softwareVersion: version(release), datePublished: release.date.slice(0, 10) } : {}),
+  releaseNotes: `${site.url}/changelog/`,
+  author: { '@type': 'Person', name: site.author },
+  publisher: { '@id': `${site.url}/#org` },
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  featureList: t.featureList,
+};
+---
+
+<Base title={t.title} description={t.description} jsonLd={[softwareApplication]}>
+  <header class="hero">
+    <div class="wall" id="wall" style={wallStyle} role="img" aria-label={t.wallLabel}>
+  <div class="row r1"><div class="track"><i class="cv s-lib" style="--x:41.5;--y:164.5;--w:135;--h:209"></i><i class="cv s-home" style="--x:347.2;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:347.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:903.2;--y:108.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:949.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:1100.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:648.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:11.8;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-lib" style="--x:1100.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:1073.8;--y:442.5;--w:151;--h:202"></i><i class="cv s-home" style="--x:41.5;--y:325.5;--w:134;--h:207"></i><i class="cv s-lib" style="--x:799.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:41.5;--y:164.5;--w:135;--h:209"></i><i class="cv s-home" style="--x:347.2;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:347.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:903.2;--y:108.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:949.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:1100.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:648.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:11.8;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-lib" style="--x:1100.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:1073.8;--y:442.5;--w:151;--h:202"></i><i class="cv s-home" style="--x:41.5;--y:325.5;--w:134;--h:207"></i><i class="cv s-lib" style="--x:799.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:41.5;--y:164.5;--w:135;--h:209"></i><i class="cv s-home" style="--x:347.2;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:347.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:903.2;--y:108.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:949.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:1100.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:648.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:11.8;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-lib" style="--x:1100.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:1073.8;--y:442.5;--w:151;--h:202"></i><i class="cv s-home" style="--x:41.5;--y:325.5;--w:134;--h:207"></i><i class="cv s-lib" style="--x:799.2;--y:171;--w:125.7;--h:194.5"></i></div></div>
+  <div class="row r2"><div class="track"><i class="cv s-lib" style="--x:196.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:648.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:347.2;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:194.5;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-home" style="--x:196.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:732.5;--y:237.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:949.8;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:799.2;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:497.8;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:13.5;--y:207.5;--w:75;--h:116"></i><i class="cv s-yir" style="--x:1073.8;--y:216.5;--w:151;--h:202"></i><i class="cv s-home" style="--x:497.8;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:196.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:648.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:347.2;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:194.5;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-home" style="--x:196.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:732.5;--y:237.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:949.8;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:799.2;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:497.8;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:13.5;--y:207.5;--w:75;--h:116"></i><i class="cv s-yir" style="--x:1073.8;--y:216.5;--w:151;--h:202"></i><i class="cv s-home" style="--x:497.8;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:196.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:648.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:347.2;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:194.5;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-home" style="--x:196.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:732.5;--y:237.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:949.8;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:799.2;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:497.8;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:13.5;--y:207.5;--w:75;--h:116"></i><i class="cv s-yir" style="--x:1073.8;--y:216.5;--w:151;--h:202"></i><i class="cv s-home" style="--x:497.8;--y:332.5;--w:125.7;--h:194.5"></i></div></div>
+  <div class="row r3"><div class="track"><i class="cv s-lib" style="--x:45.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:196.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:799.2;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:949.8;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:1100.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:194.5;--y:533.8;--w:78.3;--h:119.5"></i><i class="cv s-yir" style="--x:903.2;--y:333.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:648.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:103.5;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-yir" style="--x:732.5;--y:462.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:497.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:45.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:196.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:799.2;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:949.8;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:1100.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:194.5;--y:533.8;--w:78.3;--h:119.5"></i><i class="cv s-yir" style="--x:903.2;--y:333.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:648.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:103.5;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-yir" style="--x:732.5;--y:462.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:497.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:45.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:196.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:799.2;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:949.8;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:1100.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:194.5;--y:533.8;--w:78.3;--h:119.5"></i><i class="cv s-yir" style="--x:903.2;--y:333.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:648.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:103.5;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-yir" style="--x:732.5;--y:462.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:497.8;--y:390.5;--w:125.7;--h:194.5"></i></div></div>
+  <div class="row r4"><div class="track"><i class="cv s-yir" style="--x:1073.8;--y:442.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:799.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:11.8;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-lib" style="--x:41.5;--y:164.5;--w:135;--h:209"></i><i class="cv s-yir" style="--x:903.2;--y:108.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:1100.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:949.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:41.5;--y:325.5;--w:134;--h:207"></i><i class="cv s-lib" style="--x:347.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:648.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:347.2;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:1100.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:1073.8;--y:442.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:799.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:11.8;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-lib" style="--x:41.5;--y:164.5;--w:135;--h:209"></i><i class="cv s-yir" style="--x:903.2;--y:108.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:1100.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:949.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:41.5;--y:325.5;--w:134;--h:207"></i><i class="cv s-lib" style="--x:347.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:648.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:347.2;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:1100.5;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-yir" style="--x:1073.8;--y:442.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:799.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-col" style="--x:11.8;--y:55.5;--w:78.3;--h:119.5"></i><i class="cv s-lib" style="--x:41.5;--y:164.5;--w:135;--h:209"></i><i class="cv s-yir" style="--x:903.2;--y:108.5;--w:151;--h:202"></i><i class="cv s-lib" style="--x:1100.5;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:949.8;--y:390.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:41.5;--y:325.5;--w:134;--h:207"></i><i class="cv s-lib" style="--x:347.2;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-lib" style="--x:648.5;--y:171;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:347.2;--y:332.5;--w:125.7;--h:194.5"></i><i class="cv s-home" style="--x:1100.5;--y:332.5;--w:125.7;--h:194.5"></i></div></div>
+    </div>
+
+    <div class="hero-copy" id="top">
+      <div class="hero-panel">
+        {release && <a class="news" href="/changelog/"><b>{fill(t.news, { version: version(release) })}</b><span>{t.newsLink} &rarr;</span></a>}
+        <p class="eyebrow">{t.eyebrow}</p>
+        <h1 class="h1" set:html={t.headlineHtml} />
+        <p class="lead">{t.lead}</p>
+        <div class="actions">
+          <a class="btn btn-primary" id="dl-main" href={to('/download/')}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+            <span id="dl-label">{t.download}</span></a>
+          <a class="link" href={to('/features/')}>{t.allFeatures} &rarr;</a>
+        </div>
+        <ul class="facts">
+          {t.facts.map((fact) => <li>{fact}</li>)}
+          {downloadCount >= 1000 && <li>{fill(t.downloads, { count: downloadCount.toLocaleString(localeInfo[lang].date) })}</li>}
+        </ul>
+      </div>
+    </div>
+    <button class="motion" id="motion" type="button" aria-controls="wall" aria-pressed="false" data-pause={t.pauseMotion} data-play={t.playMotion}>{t.pauseMotion}</button>
+  </header>
+
+  <main id="main">
+
+  <!-- ============ SOURCES + ANNOTATED COLLECTION ============ -->
+  <section class="scene sc-col" style={`--art:url(${bg["statistics"]});--pos:50% 14%;--size:200%;--bright:.95`} id="collection" aria-labelledby="h-col">
+    <div class="wrap">
+      <div class="sources glass" role="region" aria-labelledby="h-src">
+        <h2 id="h-src" class="eyebrow">{t.sources}</h2>
+        <ul class="src-logos">
+          {stores.map((s) => <li title={s.name}><Icon name={s.icon} /><span class="sr">{s.name}</span></li>)}
+          <li class="more"><a href={to('/features/stores/')}>{t.sourcesMore}</a></li>
+        </ul>
+      </div>
+
+      <div class="head">
+        <div>
+          <p class="eyebrow">{t.collection.eyebrow}</p>
+          <h2 class="h2" id="h-col" set:html={t.collection.headlineHtml} />
+        </div>
+        <div class="lead"><p>{t.collection.lead}</p><a class="more-link" href={to('/features/game-library/')}>{t.collection.link} &rarr;</a></div>
+      </div>
+
+      <figure class="anno">
+        <div class="pins">
+          <div class="frame">
+            <ShotImg name="collection" sizes="(max-width: 760px) calc(100vw - 32px), min(1312px, calc(100vw - 48px))" alt={t.collection.alt} />
+          </div>
+          <div class="callout to-right" style="--x:5.95%;--y:5.3%;--len:18px" aria-hidden="true"><span class="dot">1</span><span class="tip">{t.collection.callouts[0]}</span></div>
+          <div class="callout to-right" style="--x:5.75%;--y:46.9%;--len:22px" aria-hidden="true"><span class="dot">2</span><span class="tip">{t.collection.callouts[1]}</span></div>
+          <div class="callout to-down" style="--x:34.1%;--y:81.6%;--len:22px;--tx:-3.3cqw" aria-hidden="true"><span class="dot">3</span><span class="tip">{t.collection.callouts[2]}</span></div>
+          <div class="callout to-right" style="--x:45.5%;--y:60.8%;--len:10px" aria-hidden="true"><span class="dot">4</span><span class="tip">{t.collection.callouts[3]}</span></div>
+          <div class="callout to-down-end" style="--x:91.2%;--y:4.9%;--len:24px" aria-hidden="true"><span class="dot">5</span><span class="tip">{t.collection.callouts[4]}</span></div>
+        </div>
+        <figcaption class="sr-only">{t.collection.caption}</figcaption>
+        <ol class="legend glass" aria-label={t.collection.legendLabel}>
+          {t.collection.callouts.map((c) => <li>{c}</li>)}
+        </ol>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="scene sc-feat" style={`--art:url(${bg["console-library"]});--pos:50% 40%;--bright:.55;--blur:80px`} id="features" aria-labelledby="h-feat">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">{t.features.eyebrow}</p>
+          <h2 class="h2" id="h-feat" set:html={t.features.headlineHtml} />
+        </div>
+        <div class="lead"><p>{t.features.lead}</p><a class="more-link" href={to('/features/')}>{t.features.link} &rarr;</a></div>
+      </div>
+      <ul class="feats">
+        {features.map((f) => {
+          const slug = slugOf(f);
+          const card = t.features.cards[slug];
+          return (
+            <li class="feat glass">
+              <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={featureIcons[slug]} /></span>
+              <h3><a href={articleUrl('features', slug, lang)}>{f.data.navLabel}</a></h3>
+              <p>{card.text}</p>
+              <ul class="chips">{card.chips.map((c) => <li>{c}</li>)}</ul>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ HISTORY ============ -->
+  <section class="scene sc-hist" style={`--art:url(${bg["year-in-review"]});--pos:85% 50%;--size:200%;--bright:.9`} id="history" aria-labelledby="h-hist">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">{t.history.eyebrow}</p>
+          <h2 class="h2" id="h-hist" set:html={t.history.headlineHtml} />
+        </div>
+        <div class="lead"><p>{t.history.lead}</p><a class="more-link" href={to('/features/play-time-tracking/')}>{t.history.link} &rarr;</a></div>
+      </div>
+      <div class="hist">
+  <figure class="tile glass t-num"><div class="crop" style="--x:20;--y:128;--w:360;--h:150;--ax:0.1"><ShotImg name="statistics" alt={t.history.tiles.num.alt} /></div><figcaption><span class="lbl">{t.history.tiles.num.label}</span>{t.history.tiles.num.caption}</figcaption></figure>
+
+  <figure class="tile glass t-goal"><div class="crop" style="--x:990;--y:140;--w:262;--h:122"><ShotImg name="stats-backlog" alt={t.history.tiles.goal.alt} /></div><figcaption><span class="lbl">{t.history.tiles.goal.label}</span>{t.history.tiles.goal.caption}</figcaption></figure>
+
+  <figure class="tile glass t-chart"><div class="crop" style="--x:30;--y:352;--w:800;--h:236;--mx:30;--my:352;--mw:430;--mh:236;--ax:0"><ShotImg name="statistics" alt={t.history.tiles.chart.alt} /></div><figcaption><span class="lbl">{t.history.tiles.chart.label}</span>{t.history.tiles.chart.caption}</figcaption></figure>
+
+  <figure class="tile glass t-yir"><div class="crop" style="--x:851;--y:211;--w:262;--h:422"><ShotImg name="year-in-review-wrap" alt={t.history.tiles.yir.alt} /></div><figcaption><span class="lbl">{t.history.tiles.yir.label}</span>{t.history.tiles.yir.caption}</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONSOLE MODE ============ -->
+  <section class="scene sc-console" style={`--art:url(${bg["console-home"]});--pos:60% 60%;--bright:.8`} id="console" aria-labelledby="h-console">
+    <div class="wrap">
+      <div class="cons">
+        <div class="cons-panel glass">
+          <p class="eyebrow">{t.console.eyebrow}</p>
+          <h2 class="h2" id="h-console" set:html={t.console.headlineHtml} />
+          <p class="lead">{t.console.lead}</p>
+          <a class="more-link" href={to('/features/console-mode/')}>{t.console.link} &rarr;</a>
+          <ul class="bignums">
+            <li><b>8</b>{t.console.layouts}</li>
+            <li><b>7</b>{t.console.themes}</li>
+            <li class="wide" set:html={t.console.shareHtml} />
+          </ul>
+        </div>
+        <div class="cons-shots">
+          <figure class="shot">
+            <ShotImg name="console-home" sizes="(max-width: 1100px) calc(100vw - 32px), 860px" alt={t.console.homeAlt} />
+          </figure>
+          <figure class="shot small">
+            <div class="crop" style="--x:36;--y:56;--w:520;--h:262;--ax:0"><ShotImg name="console-game" alt={t.console.gameAlt} /></div>
+            <figcaption>{t.console.gameCaption}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIGHT ============ -->
+  <section class="scene sc-light" style={`--art:url(${bg["stats-backlog"]});--pos:50% 10%;--size:200%;--bright:.8`} id="light" aria-labelledby="h-light">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">{t.light.eyebrow}</p>
+          <h2 class="h2" id="h-light" set:html={t.light.headlineHtml} />
+        </div>
+        <div class="lead"><p>{t.light.lead}</p><a class="more-link" href={to('/features/performance/')}>{t.light.link} &rarr;</a></div>
+      </div>
+      <ul class="meter glass">
+        <li><p class="num"><i>~</i>215<small>ms</small></p><p class="cap">{t.light.launch}</p></li>
+        <li><p class="num"><i>~</i>190<small>MB</small></p><p class="cap">{t.light.memory}</p></li>
+        <li><p class="num"><i>~</i>0.1<small>%</small></p><p class="cap">{t.light.cpu}</p></li>
+        <li><p class="num">64<small>MB</small></p><p class="cap">{t.light.install}</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ DOWNLOAD ============ -->
+  <section class="scene sc-dl" id="download" aria-labelledby="h-dl" style={`--art:url(${bg['console-game']});--pos:60% 30%;--bright:.85`}>
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">{t.download.eyebrow}</p>
+          <h2 class="h2" id="h-dl" set:html={t.download.headlineHtml} />
+        </div>
+        <p class="lead">{t.download.lead}</p>
+      </div>
+      <DownloadCards />
+    </div>
+  </section>
+
+  <!-- ============ GUIDES AND QUESTIONS ============ -->
+  <section class="scene sc-faq" aria-labelledby="h-guides">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow">{t.guides.eyebrow}</p>
+          <h2 class="h2" id="h-guides" set:html={t.guides.headlineHtml} />
+        </div>
+        <div class="lead"><p>{t.guides.lead}</p><a class="more-link" href={to('/guides/')}>{t.guides.link} &rarr;</a></div>
+      </div>
+      <ul class="cards">
+        {reads.map((r) => <ArticleCard {...r} />)}
+      </ul>
+      <div style="margin-top:72px">
+        <Faq items={t.faq} title={t.faqTitle} />
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <script is:inline define:vars={{ installer: downloads.windowsInstaller, appImage: downloads.appImage, labelWindows: t.downloadWindows, labelLinux: t.downloadLinux }}>
+    document.documentElement.classList.add('js');
+    var ua = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent || '';
+    var a = document.getElementById('dl-main'), l = document.getElementById('dl-label');
+    if (/win/i.test(ua)) { a.href = installer; l.textContent = labelWindows; }
+    else if (/linux|x11/i.test(ua) && !/android/i.test(navigator.userAgent)) { a.href = appImage; l.textContent = labelLinux; }
+    var b = document.getElementById('motion'), w = document.getElementById('wall');
+    b.addEventListener('click', function () {
+      var p = w.classList.toggle('paused');
+      b.setAttribute('aria-pressed', p);
+      b.textContent = p ? b.dataset.play : b.dataset.pause;
+    });
+  </script>
+</Base>

@@ -1,0 +1,17 @@
+---
+import { render } from 'astro:content';
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import type { Article, ArticleKind } from '../lib/content';
+
+interface Props {
+  entry: Article;
+  kind: ArticleKind;
+}
+
+const { entry, kind } = Astro.props;
+const { Content, headings } = await render(entry);
+---
+
+<ArticleLayout entry={entry} kind={kind} headings={headings}>
+  <Content />
+</ArticleLayout>

@@ -1,0 +1,31 @@
+---
+import '../styles/content.css';
+import Base from '../layouts/Base.astro';
+import { backdrop } from '../lib/shots';
+import { locales, localeInfo, localize, useText } from '../i18n';
+
+// GitHub Pages serves this one file for every missing URL, so it links to each language.
+const t = useText('en').notFound;
+const art = await backdrop('console-library');
+---
+
+<Base title={t.title} description={t.description} noindex alternates={{ en: '/' }}>
+  <main id="main">
+    <header class="index-hero scene" style={`--art:url(${art});--bright:.6;min-height:70vh;display:flex;align-items:center`}>
+      <div class="wrap">
+        <p class="eyebrow">{t.eyebrow}</p>
+        <h1 class="h1" set:html={t.headlineHtml} />
+        <p class="lead">{t.lead}</p>
+        <div class="actions" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+          <a class="btn btn-primary" href="/">Home</a>
+          <a class="btn btn-ghost" href="/features/">Features</a>
+          <a class="btn btn-ghost" href="/docs/">Docs</a>
+          <a class="btn btn-ghost" href="/download/">Download</a>
+        </div>
+        <p class="meta">
+          {locales.filter((l) => l !== 'en').map((l) => <span><a class="link" href={localize(l, '/')} lang={localeInfo[l].htmlLang}>{localeInfo[l].name}</a></span>)}
+        </p>
+      </div>
+    </header>
+  </main>
+</Base>

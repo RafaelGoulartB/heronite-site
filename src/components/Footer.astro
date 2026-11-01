@@ -1,0 +1,67 @@
+---
+import { articles, articleUrl, slugOf } from '../lib/content';
+import { site } from '../data/site';
+import { fill, localeOf, localize, useText } from '../i18n';
+
+const lang = localeOf(Astro.url.pathname);
+const text = useText(lang);
+const t = text.footer;
+const to = (path: string) => localize(lang, path);
+const [features, guides, compare] = await Promise.all([
+  articles('features', lang),
+  articles('guides', lang),
+  articles('compare', lang),
+]);
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div class="about">
+        <a class="brand" href={to('/')}><img src="/icon.png" alt="" width="26" height="26" loading="lazy"><span>HERONITE</span></a>
+        <p>{t.about}</p>
+      </div>
+      <nav aria-labelledby="f-features">
+        <h2 id="f-features">{t.features}</h2>
+        <ul>
+          {features.map((f) => <li><a href={articleUrl('features', slugOf(f), lang)}>{f.data.navLabel}</a></li>)}
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-guides">
+        <h2 id="f-guides">{t.guides}</h2>
+        <ul>
+          {guides.map((g) => <li><a href={articleUrl('guides', slugOf(g), lang)}>{g.data.navLabel}</a></li>)}
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-compare">
+        <h2 id="f-compare">{t.compare}</h2>
+        <ul>
+          {compare.map((c) => <li><a href={articleUrl('compare', slugOf(c), lang)}>{c.data.navLabel}</a></li>)}
+        </ul>
+        <h2 id="f-docs" style="margin-top:28px">{t.docs}</h2>
+        <ul>
+          <li><a href={to('/docs/installation/')}>{t.installation}</a></li>
+          <li><a href={to('/docs/getting-started/')}>{t.gettingStarted}</a></li>
+          <li><a href={to('/docs/troubleshooting/')}>{t.troubleshooting}</a></li>
+          <li><a href={to('/docs/faq/')}>{t.faq}</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-project">
+        <h2 id="f-project">{t.project}</h2>
+        <ul>
+          <li><a href={to('/download/')}>{t.download}</a></li>
+          <li><a href="/changelog/">{t.changelog}</a></li>
+          <li><a href={site.repo}>{t.source}</a></li>
+          <li><a href={site.discussions}>{t.discussions}</a></li>
+          <li><a href={site.issues}>{t.bug}</a></li>
+          <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="legal">
+      <p>© {year} {site.author}. <Fragment set:html={fill(t.licenseHtml, { license: site.license })} /></p>
+      <p>{t.trademarks}</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,61 @@
+---
+import Icon from './Icon.astro';
+import { mainNav, site } from '../data/site';
+import { locales, localeInfo, localeOf, localize, useText, type Locale } from '../i18n';
+
+interface Props {
+  /** The language versions of this page; a language without one links to its home page. */
+  alternates: Partial<Record<Locale, string>>;
+}
+
+const path = Astro.url.pathname;
+const lang = localeOf(path);
+const text = useText(lang);
+const current = (href: string) => (path.startsWith(href) ? 'page' : undefined);
+const home = localize(lang, '/');
+const isHome = path === home;
+const nav = mainNav.map((item) => ({ href: localize(lang, item.href), label: text.nav[item.key] }));
+const languages = locales.map((l) => ({ lang: l, href: Astro.props.alternates[l] ?? localize(l, '/') }));
+---
+
+<div class="nav">
+  <div class="wrap">
+    <div class="bar glass">
+      <a class="brand" href={home} aria-label={isHome ? text.nav.topLabel : text.nav.homeLabel}>
+        <img src="/icon.png" alt="" width="26" height="26">
+        <span>HERONITE</span>
+      </a>
+      <nav class="tabs" aria-label={text.nav.main}>
+        {nav.map((item) => <a href={item.href} aria-current={current(item.href)}>{item.label}</a>)}
+      </nav>
+      <details class="lang">
+        <summary aria-label={text.nav.language}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+          <span>{localeInfo[lang].short}</span>
+        </summary>
+        <ul class="glass">
+          {languages.map((l) => (
+            <li><a href={l.href} hreflang={localeInfo[l.lang].htmlLang} lang={localeInfo[l.lang].htmlLang} aria-current={l.lang === lang ? 'true' : undefined}>{localeInfo[l.lang].name}</a></li>
+          ))}
+        </ul>
+      </details>
+      <a class="gh" href={site.repo}>
+        <Icon name="github" />
+        <span>{text.nav.github}</span>
+      </a>
+      <a class="btn btn-primary" href={localize(lang, '/download/')}>{text.nav.download}</a>
+      <details class="menu">
+        <summary aria-label={text.nav.menu}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </summary>
+        <ul class="glass">
+          <li><a href={home}>{text.nav.home}</a></li>
+          {nav.map((item) => <li><a href={item.href} aria-current={current(item.href)}>{item.label}</a></li>)}
+          <li><a href={localize(lang, '/download/')} aria-current={current(localize(lang, '/download/'))}>{text.nav.download}</a></li>
+          <li><a href="/changelog/">{text.nav.changelog}</a></li>
+          <li><a href={site.repo}>{text.nav.github}</a></li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+---
+// Every release's notes from GitHub. Release notes are written in English only, so this page
+// has no other language versions.
+import { marked } from 'marked';
+import '../styles/content.css';
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Cta from '../components/Cta.astro';
+import { releases, notes, version } from '../lib/releases';
+import { backdrop } from '../lib/shots';
+import { fill, formatDate, useText } from '../i18n';
+import { site } from '../data/site';
+
+const text = useText('en');
+const t = text.changelog;
+const art = await backdrop('year-in-review');
+const all = await releases();
+const entries = await Promise.all(
+  all.map(async (release) => ({
+    release,
+    id: release.tag.replace(/[^a-z0-9.-]/gi, ''),
+    // GitHub headings start at #; inside a release they sit below its own <h2>.
+    html: await marked.parse(notes(release).replace(/^(#{1,4}) /gm, '$1## ')),
+  })),
+);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t.title,
+    description: t.description,
+    url: `${site.url}/changelog/`,
+    inLanguage: 'en',
+    ...(all[0] ? { dateModified: all[0].date.slice(0, 10) } : {}),
+  },
+];
+---
+
+<Base title={t.title} description={t.description} jsonLd={jsonLd} alternates={{ en: '/changelog/' }}>
+  <main id="main">
+    <header class="index-hero scene" style={`--art:url(${art});--pos:85% 50%;--size:200%;--bright:.75`}>
+      <div class="wrap">
+        <Breadcrumbs items={[{ label: t.eyebrow, href: '/changelog/' }]} />
+        <p class="eyebrow">{t.eyebrow}</p>
+        <h1 class="h1" set:html={t.headlineHtml} />
+        <p class="lead">{t.lead}</p>
+      </div>
+    </header>
+
+    <div class="wrap article changelog">
+      <nav class="toc" aria-label={text.article.onThisPage}>
+        <p>{text.article.onThisPage}</p>
+        <ol>
+          {entries.map(({ release, id }) => <li><a href={`#${id}`}>{version(release)}</a></li>)}
+        </ol>
+      </nav>
+      <div>
+        {entries.map(({ release, id, html }, i) => (
+          <article class="release" id={id} aria-labelledby={`h-${id}`}>
+            <header class="release-head">
+              <h2 id={`h-${id}`}>{release.name.includes(version(release)) ? release.name : `${release.tag} · ${release.name}`}</h2>
+              {i === 0 && <span class="badge">{t.latest}</span>}
+              <p class="fine">
+                <time datetime={release.date}>{fill(t.released, { date: formatDate('en', new Date(release.date)) })}</time>
+                · <a href={release.url}>{t.onGitHub}</a>
+              </p>
+            </header>
+            <div class="prose" set:html={html} />
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div class="wrap end-cta">
+      <Cta />
+    </div>
+  </main>
+</Base>
