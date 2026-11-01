@@ -1,0 +1,445 @@
+---
+import Base from '../layouts/Base.astro';
+
+const repo = 'https://github.com/RafaelGoulartB/Heronite';
+const latest = `${repo}/releases/latest`;
+const asset = (file: string) => `${latest}/download/${file}`;
+
+const stores = [
+  'Steam',
+  'Epic Games',
+  'GOG',
+  'Amazon Games',
+  'Battle.net',
+  'EA app',
+  'Ubisoft Connect',
+  'Rockstar Games',
+  'Emulators',
+  'Linux and Windows games',
+];
+
+const features = [
+  {
+    title: 'Your library, organized',
+    text: 'A list with a details panel or a grid of covers. Group by status, store, genre, series or year, save your views, and edit many games at once with undo.',
+    image: 'collection',
+    alt: 'The Collection in Focus view with ELDEN RING selected, showing screenshots, details, and the play timeline',
+  },
+  {
+    title: 'Every store in one place',
+    text: 'Log in to Epic Games, GOG, and Amazon Games and install, update, repair, and move games from one download queue. Your Steam library comes in by itself.',
+    image: 'command-palette',
+    alt: 'The command palette listing matching games and their actions',
+  },
+  {
+    title: 'Wine and Proton, handled (Linux)',
+    text: 'Download Proton-CachyOS, GE-Proton and more, with per-game prefixes, DXVK, gamescope, FPS limits, DLSS/FSR upgrades, and a sandbox for games you do not trust.',
+    image: 'game-settings',
+    alt: 'Game settings on the Compatibility tab with the Proton version and prefix',
+  },
+  {
+    title: 'Emulation built in',
+    text: 'Detects RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, Ryujinx and more, scans your ROM folders, and continues from save states.',
+    image: 'emulators',
+    alt: 'The Emulators page with detected emulators and ROM folders',
+  },
+  {
+    title: 'Look back at what you played',
+    text: 'Every session recorded. Play time by week, month and year, a yearly backlog goal, a journal, and your year in review as full-screen stories.',
+    image: 'statistics',
+    alt: 'Statistics overview with total time played and a day-by-day chart per game',
+  },
+  {
+    title: 'Console mode for the couch',
+    text: 'A controller-first layout with an on-screen keyboard and themes you can change, export, and share. Nothing of it loads while it is off.',
+    image: 'console-home',
+    alt: 'Console mode home with a Continue playing shelf of covers',
+  },
+];
+
+const numbers = [
+  { value: '~190 MB', label: 'memory while idle' },
+  { value: '~0.1%', label: 'CPU while idle' },
+  { value: '~215 ms', label: 'from start to library' },
+  { value: '64 MB', label: 'install size' },
+];
+
+const downloads = [
+  { system: 'Windows 10 and 11', name: 'Installer', file: 'Heronite-Setup-x86_64.exe', href: asset('Heronite-Setup-x86_64.exe') },
+  { system: 'Windows 10 and 11', name: 'Portable zip', file: 'Heronite-Portable-x86_64.zip', href: asset('Heronite-Portable-x86_64.zip') },
+  { system: 'Any Linux distribution', name: 'AppImage', file: 'Heronite-x86_64.AppImage', href: asset('Heronite-x86_64.AppImage') },
+  { system: 'Debian, Ubuntu, Mint', name: '.deb', file: 'heronite_<version>_amd64.deb', href: latest },
+  { system: 'Fedora, openSUSE', name: '.rpm', file: 'heronite-<version>.x86_64.rpm', href: latest },
+  { system: 'Arch, CachyOS', name: '.pkg.tar.zst', file: 'heronite-<version>-x86_64.pkg.tar.zst', href: latest },
+];
+---
+
+<Base
+  title="Heronite: every game you own, in one fast native launcher"
+  description="Heronite is a free, open source game launcher for Linux and Windows. Steam, Epic Games, GOG, Amazon Games, emulators and more in one library, with play time stats and a console mode."
+>
+  <header class="nav">
+    <a class="brand" href="/">
+      <img src="/icon.png" alt="" width="28" height="28" />
+      Heronite
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+      <a href={`${repo}/wiki`}>Wiki</a>
+      <a href={repo}>GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Every game you own,<br />in one fast native launcher.</h1>
+      <p class="lead">
+        Heronite brings Steam, Epic Games, GOG, Amazon Games, emulated, Linux and Windows games into one library.
+        Free and open source, for Linux and Windows.
+      </p>
+      <div class="actions">
+        <a class="button primary" href={asset('Heronite-Setup-x86_64.exe')}>Download for Windows</a>
+        <a class="button primary" href={asset('Heronite-x86_64.AppImage')}>Download for Linux</a>
+        <a class="button" href={repo}>★ Star on GitHub</a>
+      </div>
+      <p class="small">GPL-3.0 · No account, no ads · <a href="#download">All downloads</a></p>
+      <img
+        class="shot hero-shot"
+        src="/screenshots/collection.webp"
+        alt="Heronite's Collection with ELDEN RING selected, showing screenshots, details, and the play timeline"
+        width="1920"
+        height="1080"
+      />
+    </section>
+
+    <section class="stores" aria-label="Supported stores and games">
+      {stores.map((store) => <span>{store}</span>)}
+    </section>
+
+    <section id="features" class="features">
+      {
+        features.map((feature, i) => (
+          <article class:list={['feature', { reverse: i % 2 === 1 }]}>
+            <div class="feature-text">
+              <h2>{feature.title}</h2>
+              <p>{feature.text}</p>
+            </div>
+            <img
+              class="shot"
+              src={`/screenshots/${feature.image}.webp`}
+              alt={feature.alt}
+              width="1920"
+              height="1080"
+              loading="lazy"
+            />
+          </article>
+        ))
+      }
+    </section>
+
+    <section class="light">
+      <h2>Light on your PC</h2>
+      <p>A single native Rust process that draws its interface on the GPU, with no bundled browser engine.</p>
+      <div class="numbers">
+        {
+          numbers.map((n) => (
+            <div>
+              <strong>{n.value}</strong>
+              <span>{n.label}</span>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="download" class="download">
+      <h2>Download</h2>
+      <p>Heronite updates itself, and every download is checked against its signing key.</p>
+      <div class="table">
+        {
+          downloads.map((d) => (
+            <a class="row" href={d.href}>
+              <span class="system">{d.system}</span>
+              <span class="name">{d.name}</span>
+              <code>{d.file}</code>
+            </a>
+          ))
+        }
+      </div>
+      <p class="small">
+        The Windows files are not code-signed yet, so SmartScreen may warn about them: choose <b>More info</b>, then
+        <b>Run anyway</b>. Install steps are in the <a href={`${repo}/wiki/Installation`}>wiki</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <a href={repo}>GitHub</a> · <a href={`${repo}/releases`}>Releases</a> · <a href={`${repo}/wiki`}>Wiki</a> ·
+      <a href={`${repo}/discussions`}>Discussions</a> · <a href={`${repo}/issues`}>Issues</a>
+    </p>
+    <p class="small">© 2026 Rafael Goulart · Licensed under the GPL-3.0</p>
+  </footer>
+</Base>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem clamp(1rem, 4vw, 3rem);
+    background: rgb(14 17 22 / 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+
+  .nav nav {
+    display: flex;
+    gap: 1.4rem;
+  }
+
+  .nav nav a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+
+  .nav nav a:hover {
+    color: var(--text);
+  }
+
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+  }
+
+  section {
+    padding: 4.5rem 0;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+    line-height: 1.1;
+    margin: 0 0 1.2rem;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    margin: 0 0 0.8rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero {
+    text-align: center;
+    padding-top: 5rem;
+  }
+
+  .lead {
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    color: var(--muted);
+    font-size: 1.2rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .button {
+    padding: 0.8rem 1.4rem;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    color: var(--text);
+    background: var(--panel);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .button:hover {
+    border-color: var(--accent);
+  }
+
+  .button.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .button.primary:hover {
+    background: var(--accent-strong);
+  }
+
+  .small {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .shot {
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    box-shadow: 0 20px 60px rgb(0 0 0 / 0.45);
+  }
+
+  .hero-shot {
+    margin-top: 3rem;
+  }
+
+  .stores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0 0 2rem;
+  }
+
+  .stores span {
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  .features {
+    display: grid;
+    gap: 5rem;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .feature.reverse .feature-text {
+    order: 2;
+  }
+
+  .feature p {
+    color: var(--muted);
+    font-size: 1.08rem;
+  }
+
+  .light {
+    text-align: center;
+  }
+
+  .light > p {
+    color: var(--muted);
+  }
+
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .numbers div {
+    padding: 1.5rem 1rem;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  .numbers strong {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--accent-strong);
+  }
+
+  .numbers span {
+    color: var(--muted);
+  }
+
+  .download > p {
+    color: var(--muted);
+  }
+
+  .table {
+    display: grid;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1.6fr;
+    gap: 1rem;
+    padding: 0.9rem 1.2rem;
+    color: var(--text);
+    text-decoration: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .row:first-child {
+    border-top: none;
+  }
+
+  .row:hover {
+    background: var(--panel);
+  }
+
+  .row .name {
+    font-weight: 600;
+  }
+
+  .row code {
+    color: var(--muted);
+    overflow-wrap: anywhere;
+  }
+
+  footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: 1px solid var(--line);
+  }
+
+  footer a {
+    color: var(--muted);
+  }
+
+  @media (max-width: 800px) {
+    .nav nav a:not(:last-child) {
+      display: none;
+    }
+
+    .feature {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .feature.reverse .feature-text {
+      order: 0;
+    }
+
+    .numbers {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .row {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+  }
+</style>
