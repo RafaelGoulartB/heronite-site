@@ -1,0 +1,21 @@
+# Heronite
+
+> Heronite is a free, open source (GPL-3.0) game launcher for Linux and Windows, written in Rust. It brings Steam, Epic Games, GOG, Amazon Games, Battle.net, EA app, Ubisoft Connect, Rockstar Games, emulated and DRM-free games into one library, records every play session, and has a controller-first console mode.
+
+## Start
+- [Download](https://heronite.app/download/): Windows installer and portable zip, Linux AppImage, .deb, .rpm and Arch packages
+- [Features](https://heronite.app/features/): every part of the app
+- [Documentation](https://heronite.app/docs/): installation, setup, reference and troubleshooting
+- [FAQ](https://heronite.app/docs/faq/)
+
+## Guides
+- [Guides](https://heronite.app/guides/): Epic Games, GOG, Amazon, Battle.net, EA app, Ubisoft Connect and Rockstar on Linux; Steam Deck; installing GE-Proton
+
+## Comparisons
+- [Heronite vs Playnite](https://heronite.app/compare/playnite/)
+- [Heronite vs Heroic Games Launcher](https://heronite.app/compare/heroic/)
+- [Heronite vs Lutris](https://heronite.app/compare/lutris/)
+
+## Project
+- [Source code](https://github.com/RafaelGoulartB/Heronite)
+- [Releases](https://github.com/RafaelGoulartB/Heronite/releases/latest)
