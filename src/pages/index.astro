@@ -25,8 +25,8 @@ const wallStyle = `--img-lib:url(${lib});--img-home:url(${home});--img-col:url($
 
 const [features, guides, compare] = await Promise.all([articles('features'), articles('guides'), articles('compare')]);
 const reads = [
-  ...guides.slice(0, 4).map((g) => ({ href: articleUrl('guides', g.id), title: g.data.navLabel, summary: g.data.summary, label: 'Guide' })),
-  ...compare.slice(0, 2).map((c) => ({ href: articleUrl('compare', c.id), title: c.data.navLabel, summary: c.data.summary, label: 'Compare' })),
+  ...guides.slice(0, 5).map((g) => ({ href: articleUrl('guides', g.id), title: g.data.navLabel, summary: g.data.summary, label: 'Guide' })),
+  ...compare.map((c) => ({ href: articleUrl('compare', c.id), title: c.data.navLabel, summary: c.data.summary, label: 'Compare' })),
 ];
 
 const faq = [

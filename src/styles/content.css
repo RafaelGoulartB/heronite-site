@@ -9,7 +9,7 @@
 .crumbs [aria-current]{color:var(--muted)}
 
 /* ---------- page hero ---------- */
-.page-hero{padding:128px 0 56px}
+.page-hero,.page-hero.scene{padding:128px 0 56px}
 .page-hero .scene-fade{display:none}
 .ph-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px 48px;align-items:center}
 .ph-grid.solo{grid-template-columns:minmax(0,1fr)}
@@ -55,7 +55,7 @@
 .prose li + li{margin-top:.4em}
 .prose li::marker{color:var(--accent)}
 .prose hr{border:0;border-top:1px solid var(--line);margin:2.4em 0}
-.prose code{font:500 .86em/1.4 var(--mono);padding:.15em .4em;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid var(--line);color:#e6edf3;overflow-wrap:anywhere}
+.prose code{font:500 .86em/1.4 var(--mono);padding:.15em .4em;border-radius:6px;background:rgba(255,255,255,.07);border:1px solid var(--line);color:#e6edf3;overflow-wrap:break-word}
 .prose pre{padding:18px 20px;border-radius:12px;border:1px solid var(--line);background:rgba(10,13,17,.85)!important;overflow-x:auto;font-size:14.5px;line-height:1.6}
 .prose pre code{padding:0;border:0;background:none;font-size:inherit;overflow-wrap:normal}
 .prose kbd,.faq kbd{display:inline-block;min-width:1.7em;padding:.1em .45em;border-radius:6px;border:1px solid var(--line-2);border-bottom-width:2px;background:rgba(255,255,255,.06);font:600 .8em/1.4 var(--head);text-align:center;color:var(--text)}
@@ -94,7 +94,7 @@
 .end-cta{margin-bottom:80px}
 
 /* ---------- section index pages ---------- */
-.index-hero{padding:124px 0 40px}
+.index-hero,.index-hero.scene{padding:124px 0 40px}
 .index-hero .h1{font-size:clamp(40px,5vw,64px);line-height:1.02;font-weight:700;letter-spacing:-.025em}
 .index-hero .lead{margin-top:20px;max-width:46em;font-size:19px;color:var(--soft)}
 .index-body{padding:24px 0 72px}
@@ -145,14 +145,14 @@
   .sidebar nav{padding:0 10px 14px}
 }
 @media (max-width:760px){
-  .page-hero{padding:108px 0 40px}
+  .page-hero,.page-hero.scene{padding:108px 0 40px}
   .highlights{gap:10px}
   .highlights li{padding:16px 18px 18px}
   .highlights h2{font-size:17px;margin-bottom:4px}
   .highlights h2::before{display:none}
   .highlights p{font-size:15px}
   .page-hero .lead,.index-hero .lead{font-size:17px}
-  .index-hero{padding:108px 0 28px}
+  .index-hero,.index-hero.scene{padding:108px 0 28px}
   .prose{font-size:16.5px}
   .highlights{margin-bottom:44px}
   .faq summary{padding:16px 18px}
@@ -162,4 +162,6 @@
 }
 @media (max-width:760px){
   .prose table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .prose td{min-width:9em}
+  .prose td code{white-space:nowrap;overflow-wrap:normal}
 }

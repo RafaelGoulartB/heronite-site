@@ -116,9 +116,9 @@ img{display:block}
 .card .thumb{aspect-ratio:16 / 8.4;background:#0c1015;border-bottom:1px solid var(--line);overflow:hidden}
 .card .thumb img{width:100%;height:100%;object-fit:cover;object-position:var(--op,left top)}
 .card .body{display:flex;flex-direction:column;gap:8px;padding:20px 22px 22px;flex:1}
-.card h3{font-size:20px;font-weight:600;line-height:1.2}
-.card h3 a{text-decoration:none}
-.card h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.card :is(h2,h3){font-size:20px;font-weight:600;line-height:1.2}
+.card :is(h2,h3) a{text-decoration:none}
+.card :is(h2,h3) a::after{content:"";position:absolute;inset:0;z-index:1}
 .card p{color:var(--soft);font-size:15.5px;line-height:1.5}
 .card .go{margin-top:auto;padding-top:8px;color:var(--accent);font:600 14px/1 var(--head)}
 

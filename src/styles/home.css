@@ -41,6 +41,8 @@
 .src-logos li{display:flex;color:rgba(238,242,246,.62);transition:color .15s}
 .src-logos li:hover{color:var(--text)}
 .src-logos svg{width:28px;height:28px}
+.src-logos .more a{text-decoration:none}
+.src-logos .more a:hover{color:var(--text)}
 .src-logos .more{font:500 15px/1.2 var(--head);color:var(--muted);padding-left:34px;border-left:1px solid var(--line)}
 /* ---------- annotated collection ---------- */
 .anno{margin:0}
