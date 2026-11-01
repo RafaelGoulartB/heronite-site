@@ -18,6 +18,11 @@ export const shot = (name: string) => {
 export const backdrop = async (name: string) =>
   (await getImage({ src: shot(name), width: 400, quality: 45, format: 'webp' })).src;
 
-/** A 1280px copy, enough for covers cropped out of it at their shown size. */
-export const medium = async (name: string) =>
-  (await getImage({ src: shot(name), width: 1280, quality: 70, format: 'webp' })).src;
+/** A 1280px copy, enough for covers cropped out of it at their shown size, as a CSS image-set. */
+export const medium = async (name: string) => {
+  const [avif, webp] = await Promise.all([
+    getImage({ src: shot(name), width: 1280, quality: 60, format: 'avif' }),
+    getImage({ src: shot(name), width: 1280, quality: 70, format: 'webp' }),
+  ]);
+  return `image-set(url(${avif.src}) type("image/avif"), url(${webp.src}) type("image/webp"))`;
+};

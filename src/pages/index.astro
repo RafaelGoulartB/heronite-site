@@ -21,7 +21,7 @@ const bg = Object.fromEntries(
 const [lib, home, col, yir] = await Promise.all(
   ['console-library', 'console-home', 'collection', 'year-in-review'].map(medium),
 );
-const wallStyle = `--img-lib:url(${lib});--img-home:url(${home});--img-col:url(${col});--img-yir:url(${yir})`;
+const wallStyle = `--img-lib:${lib};--img-home:${home};--img-col:${col};--img-yir:${yir}`;
 
 const [features, guides, compare] = await Promise.all([articles('features'), articles('guides'), articles('compare')]);
 const reads = [
@@ -143,7 +143,7 @@ const softwareApplication = {
       <figure class="anno">
         <div class="pins">
           <div class="frame">
-            <ShotImg name="collection" alt="Heronite's Collection: game covers grouped into Playing and On Going, with play time under each, and ELDEN RING open with its cover, Play button, score, Linux rating and a timeline of play sessions." />
+            <ShotImg name="collection" sizes="(max-width: 760px) calc(100vw - 32px), min(1312px, calc(100vw - 48px))" alt="Heronite's Collection: game covers grouped into Playing and On Going, with play time under each, and ELDEN RING open with its cover, Play button, score, Linux rating and a timeline of play sessions." />
           </div>
           <div class="callout to-right" style="--x:5.95%;--y:5.3%;--len:18px" aria-hidden="true"><span class="dot">1</span><span class="tip">Group by status</span></div>
           <div class="callout to-right" style="--x:5.75%;--y:46.9%;--len:22px" aria-hidden="true"><span class="dot">2</span><span class="tip">Play time per game</span></div>
@@ -239,7 +239,7 @@ const softwareApplication = {
         </div>
         <div class="cons-shots">
           <figure class="shot">
-            <ShotImg name="console-home" alt="Console mode home: SP Football Life 2026 in focus above a Continue playing shelf of covers, controller hints along the bottom" />
+            <ShotImg name="console-home" sizes="(max-width: 1100px) calc(100vw - 32px), 860px" alt="Console mode home: SP Football Life 2026 in focus above a Continue playing shelf of covers, controller hints along the bottom" />
           </figure>
           <figure class="shot small">
             <div class="crop" style="--x:36;--y:56;--w:520;--h:262;--ax:0"><ShotImg name="console-game" alt="Console game page for Elden Ring with a large Play button" /></div>
