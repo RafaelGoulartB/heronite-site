@@ -122,16 +122,14 @@ html{scroll-padding-top:88px}
 .motion:hover{color:var(--text)}
 
 /* ---------- sources strip ---------- */
-.sources{display:grid;grid-template-columns:1.6fr 1fr;gap:28px 56px;align-items:start;padding:28px 32px 26px;margin-bottom:72px}
-.sources .eyebrow{margin-bottom:16px}
-.src-list{display:flex;flex-wrap:wrap;gap:6px 0;margin:0;padding:0;list-style:none;font:600 clamp(19px,1.8vw,24px)/1.35 var(--head);letter-spacing:-.01em}
-.src-list li{display:flex;align-items:center}
-.src-list li:not(:last-child)::after{content:"";width:5px;height:5px;margin:0 14px;border-radius:50%;background:rgba(255,255,255,.28)}
-.src-list sup{font-size:.55em;color:var(--accent);margin-left:2px}
-.fine{margin-top:12px;font-size:14.5px;color:var(--muted)}
-.src-side{padding-left:32px;border-left:1px solid var(--line)}
-.src-side p{color:var(--soft);font-size:16px}
-.src-side p + p{margin-top:10px}
+.sources{display:flex;align-items:center;gap:20px 40px;padding:22px 32px;margin-bottom:72px}
+.sources .eyebrow{margin:0;flex:none}
+.src-logos{display:flex;flex-wrap:wrap;align-items:center;gap:18px 34px;margin:0;padding:0;list-style:none}
+.src-logos li{display:flex;color:rgba(238,242,246,.62);transition:color .15s}
+.src-logos li:hover{color:var(--text)}
+.src-logos svg{width:28px;height:28px}
+.src-logos .more{font:500 15px/1.2 var(--head);color:var(--muted);padding-left:34px;border-left:1px solid var(--line)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* ---------- annotated collection ---------- */
 .anno{margin:0}
@@ -244,8 +242,7 @@ footer p{margin-top:10px}
   .hist{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-template-areas:"num goal" "chart chart" "yir yir"}
   .tile .crop{flex:none;aspect-ratio:var(--W) / var(--CH);min-height:220px}
   .t-yir .crop{aspect-ratio:auto;height:480px}
-  .sources{grid-template-columns:1fr}
-  .src-side{padding-left:0;border-left:0;padding-top:20px;border-top:1px solid var(--line)}
+  .sources{flex-direction:column;align-items:flex-start}
   .cons{grid-template-columns:1fr}
   .sc-console{padding-bottom:68px}
   .shot.small{position:relative;width:auto;right:auto;bottom:auto;margin-top:14px}
@@ -259,9 +256,10 @@ footer p{margin-top:10px}
   .head .lead{justify-self:start;font-size:16px}
   .scene{padding:52px 0}
   .sc-col{padding-top:24px}
-  .sources{padding:22px 20px;margin-bottom:52px}
-  .src-list{font-size:18px}
-  .src-list li:not(:last-child)::after{margin:0 10px}
+  .sources{padding:20px;margin-bottom:52px}
+  .src-logos{gap:16px 24px}
+  .src-logos svg{width:24px;height:24px}
+  .src-logos .more{flex-basis:100%;padding-left:0;border-left:0}
   .bento,.hist{grid-template-columns:1fr;grid-template-areas:none}
   .bento > *,.hist > *{grid-area:auto}
   .crop{--X:var(--mx,var(--x));--Y:var(--my,var(--y));--W:var(--mw,var(--w));--CH:var(--mh,var(--h))}
