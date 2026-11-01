@@ -60,16 +60,6 @@
 .to-down-end::before{left:-.5px;top:11px;width:1px;height:var(--len)}
 .to-down-end .tip{top:calc(11px + var(--len));right:-18px}
 .legend{display:none}
-.bento{display:grid;gap:14px;grid-template-columns:repeat(12,minmax(0,1fr));
-  grid-template-rows:370px 320px 290px minmax(280px,auto) auto;
-  grid-template-areas:
-    "pal pal pal pal pal pal look look look look look look"
-    "proton proton proton proton wine wine wine wine wine wine wine wine"
-    "store store store store store store keep keep keep keep keep keep"
-    "emu emu emu emu emu emu emus emus emus emus emus emus"
-    "lib lib lib lib lib lib linux linux linux linux linux linux"}
-.t-pal{grid-area:pal}.t-look{grid-area:look}.t-proton{grid-area:proton}.t-wine{grid-area:wine}.t-store{grid-area:store}.t-emu{grid-area:emu}
-.t-lib{grid-area:lib}.t-linux{grid-area:linux}.t-emus{grid-area:emus}.t-keep{grid-area:keep}
 
 /* ---------- history ---------- */
 .hist{display:grid;gap:14px;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:290px 300px;
@@ -105,8 +95,20 @@
 .meter .num i{font-style:normal;font-weight:500;font-size:.6em;color:var(--muted);margin-right:2px;align-self:center}
 .meter .cap{color:var(--soft);margin-top:12px;font-size:15.5px}
 
-/* ---------- feature index and questions ---------- */
-.sc-more{padding-top:20px}
+/* ---------- features: one compact card per feature page ---------- */
+.feats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.feat{position:relative;display:flex;flex-direction:column;gap:10px;padding:22px 22px 24px;transition:border-color .15s,transform .15s}
+.feat:hover{border-color:rgba(143,211,234,.45);transform:translateY(-2px)}
+.feat .ico{display:grid;place-items:center;width:42px;height:42px;margin-bottom:4px;border-radius:12px;background:rgba(143,211,234,.12);border:1px solid rgba(143,211,234,.25);color:var(--accent)}
+.feat .ico svg{width:22px;height:22px}
+.feat h3{font-size:19px;font-weight:600;line-height:1.2}
+.feat h3 a{text-decoration:none}
+.feat h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.feat p{color:var(--soft);font-size:15px;line-height:1.5}
+.feat .chips{margin-top:auto;padding-top:6px;gap:6px}
+.feat .chips li{padding:4px 8px;font-size:12.5px}
+
+/* ---------- questions ---------- */
 .sc-faq .faq{max-width:900px}
 
 /* ---------- responsive ---------- */
@@ -116,8 +118,7 @@
   .legend{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px 20px;list-style:none;margin:16px 0 0;padding:16px 20px;counter-reset:l}
   .legend li{display:flex;align-items:center;gap:10px;color:var(--text);font-size:15px;counter-increment:l}
   .legend li::before{content:counter(l);display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:700 11px/1 var(--head);flex:none}
-  .bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-template-areas:
-    "pal look" "proton wine" "store keep" "emu emus" "lib linux"}
+  .feats{grid-template-columns:repeat(2,minmax(0,1fr))}
   .hist{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-template-areas:"num goal" "chart chart" "yir yir"}
   .tile .crop{flex:none;aspect-ratio:var(--W) / var(--CH);min-height:220px}
   .t-yir .crop{aspect-ratio:auto;height:480px}
@@ -136,8 +137,9 @@
   .src-logos{gap:16px 24px}
   .src-logos svg{width:24px;height:24px}
   .src-logos .more{flex-basis:100%;padding-left:0;border-left:0}
-  .bento,.hist{grid-template-columns:1fr;grid-template-areas:none}
-  .bento > *,.hist > *{grid-area:auto}
+  .hist{grid-template-columns:1fr;grid-template-areas:none}
+  .hist > *{grid-area:auto}
+  .feat{padding:18px 18px 20px}
   .crop{--X:var(--mx,var(--x));--Y:var(--my,var(--y));--W:var(--mw,var(--w));--CH:var(--mh,var(--h))}
   .tile .crop{min-height:0}
   .t-yir .crop{aspect-ratio:var(--W) / var(--CH);height:auto;max-height:440px}
@@ -153,10 +155,17 @@
   .bignums b{font-size:48px}
   .meter li{padding:22px 20px}
 }
+@media (max-width:560px){
+  .feats{grid-template-columns:1fr}
+  .feat{display:grid;grid-template-columns:42px minmax(0,1fr);column-gap:14px;row-gap:4px}
+  .feat .ico{grid-row:span 2;margin:0}
+  .feat .chips{display:none}
+}
 @media (max-width:460px){
   .meter .num{font-size:40px}
 }
 @media (prefers-reduced-motion:reduce){
   .track{animation:none}
+  .feat{transition:none}
   .js .motion{display:none}
 }

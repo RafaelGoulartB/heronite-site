@@ -24,6 +24,50 @@ const [lib, home, col, yir] = await Promise.all(
 const wallStyle = `--img-lib:${lib};--img-home:${home};--img-col:${col};--img-yir:${yir}`;
 
 const [features, guides, compare] = await Promise.all([articles('features'), articles('guides'), articles('compare')]);
+// The short version of each feature page for the home grid: a line icon, one line and a few keywords.
+const featureCards: Record<string, { icon: string; text: string; chips: string[] }> = {
+  'game-library': {
+    icon: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+    text: 'Every game in one Collection, sorted and grouped your way.',
+    chips: ['Saved views', 'Bulk edits', 'Ctrl+K palette', 'Journal'],
+  },
+  stores: {
+    icon: '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>',
+    text: 'Log in once and every store library joins the same list.',
+    chips: ['Steam', 'Epic', 'GOG', 'Amazon', 'Battle.net'],
+  },
+  emulation: {
+    icon: '<path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-4 3.6C2.6 9.4 2 14.5 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.4-1.4A2 2 0 0 1 9.8 16h4.4a2 2 0 0 1 1.4.6L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.5-.6-6.6-.7-7.3A4 4 0 0 0 17.3 5Z"/>',
+    text: 'Finds your emulators and turns ROM folders into games.',
+    chips: ['RetroArch', 'PCSX2', 'Dolphin', 'RPCS3', '+13 more'],
+  },
+  'wine-and-proton': {
+    icon: '<path d="M8 22h8M12 15v7M7 10h10"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/>',
+    text: 'Windows games on Linux, tuned per game.',
+    chips: ['GE-Proton', 'DXVK', 'gamescope', 'Sandbox'],
+  },
+  'console-mode': {
+    icon: '<rect x="2" y="7" width="20" height="15" rx="2"/><path d="m17 2-5 5-5-5"/>',
+    text: 'A controller-first layout for the couch and the TV.',
+    chips: ['8 layouts', '7 themes', 'Steam Deck'],
+  },
+  'play-time-tracking': {
+    icon: '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+    text: 'Every session recorded, with stats and a year in review.',
+    chips: ['Statistics', 'Backlog goal', 'Year in review'],
+  },
+  'saves-and-backups': {
+    icon: '<path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7M7 3v4a1 1 0 0 0 1 1h7"/>',
+    text: 'Game saves backed up after each session, the library on a schedule.',
+    chips: ['Ludusavi', 'Scheduled backups', 'Storage map'],
+  },
+  performance: {
+    icon: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/>',
+    text: 'A native Rust app drawn on the GPU, with no bundled browser.',
+    chips: ['~215 ms start', '~190 MB idle', 'No Electron'],
+  },
+};
+
 const reads = [
   ...guides.slice(0, 5).map((g) => ({ href: articleUrl('guides', g.id), title: g.data.navLabel, summary: g.data.summary, label: 'Guide' })),
   ...compare.map((c) => ({ href: articleUrl('compare', c.id), title: c.data.navLabel, summary: c.data.summary, label: 'Compare' })),
@@ -163,40 +207,29 @@ const softwareApplication = {
     </div>
   </section>
 
-  <!-- ============ BENTO OF DETAILS ============ -->
-  <section class="scene sc-inside" style={`--art:url(${bg["console-library"]});--pos:50% 40%;--bright:.6;--blur:80px`} id="inside" aria-labelledby="h-inside">
+  <!-- ============ FEATURES ============ -->
+  <section class="scene sc-feat" style={`--art:url(${bg["console-library"]});--pos:50% 40%;--bright:.55;--blur:80px`} id="features" aria-labelledby="h-feat">
     <div class="wrap">
       <div class="head">
         <div>
-          <p class="eyebrow">Inside the app</p>
-          <h2 class="h2" id="h-inside">Real screens, <em>up close.</em></h2>
+          <p class="eyebrow">Features</p>
+          <h2 class="h2" id="h-feat">Everything it does, <em>in one app.</em></h2>
         </div>
-        <p class="lead">Every tile is cropped from an actual Heronite screenshot.</p>
+        <div class="lead"><p>Each feature has its own page, with screenshots and the details.</p><a class="more-link" href="/features/">All features &rarr;</a></div>
       </div>
-      <div class="bento">
-  <figure class="tile glass t-pal"><div class="crop" style="--x:434;--y:60;--w:414;--h:318"><ShotImg name="command-palette" alt="Command palette searching “contr”, listing games and actions for Control" /></div><figcaption><span class="lbl">Command palette</span>Ctrl+K finds any game, page or action.</figcaption></figure>
-
-  <figure class="tile glass t-look"><div class="crop" style="--x:424;--y:100;--w:588;--h:232;--mx:424;--my:118;--mw:440;--mh:130"><ShotImg name="appearance" alt="Appearance settings: Standard, Cinema, Minimal and High contrast profiles, and accent colour swatches" /></div><figcaption><span class="lbl">Appearance</span>Profiles, accent colours, fonts and density.</figcaption></figure>
-
-  <figure class="tile glass t-proton"><div class="crop" style="--x:898;--y:150;--w:370;--h:250;--ax:0;--ay:0"><ShotImg name="game-settings" alt="Game settings for Control: GE-Proton-latest version, ProtonDB Platinum, prefix selection" /></div><figcaption><span class="lbl">Per-game compatibility</span>Wine or Proton, prefix and fixes for each game.</figcaption></figure>
-
-  <figure class="tile glass t-wine"><div class="crop" style="--x:146;--y:94;--w:760;--h:250;--mx:146;--my:94;--mw:300;--mh:250;--ax:0;--ay:0"><ShotImg name="wine-manager" alt="Wine Manager listing Proton-CachyOS, GE-Proton and DW-Proton with installable versions" /></div><figcaption><span class="lbl">Wine Manager</span>Download Proton-CachyOS, GE-Proton and other builds.</figcaption></figure>
-
-  <figure class="tile glass t-store"><div class="crop" style="--x:366;--y:456;--w:698;--h:252;--mx:366;--my:456;--mw:420;--mh:252;--ax:0;--ay:0"><ShotImg name="storage" alt="Storage treemap of installed games sized by disk space" /></div><figcaption><span class="lbl">Storage</span>See what each game takes, and clean up leftovers.</figcaption></figure>
-
-  <figure class="tile glass t-keep"><div class="crop" style="--x:423;--y:143;--w:588;--h:190;--mx:423;--my:143;--mw:340;--mh:190;--ax:0"><ShotImg name="backups" alt="Backups settings: backup folder, once a week, keep the last 5 backups, and a Back up now button" /></div><figcaption><span class="lbl">Backups</span>Scheduled Collection backups, and saves with Ludusavi.</figcaption></figure>
-
-  <figure class="tile glass t-emu"><div class="crop" style="--x:93;--y:127;--w:544;--h:176;--mx:93;--my:127;--mw:320;--mh:176;--ax:0"><ShotImg name="emulators" alt="PCSX2 emulator card with its ROM folder and Scan now button" /></div><figcaption><span class="lbl">Emulators</span>Add a ROM folder and its games join the library.</figcaption></figure>
-
-  <section class="tile glass txt t-emus" aria-labelledby="h-emus"><span class="lbl">Emulation</span><h3 id="h-emus">Retro games too</h3>
-  <ul class="chips"><li>RetroArch</li><li>Dolphin</li><li>PCSX2</li><li>DuckStation</li><li>PPSSPP</li><li>RPCS3</li><li>Cemu</li><li>Ryujinx</li><li>Xemu</li><li>melonDS</li><li>mGBA</li><li>and more</li></ul><p class="fine">ROM folder scanning, save states and RetroAchievements.</p><a class="more-link" href="/features/emulation/">Emulation in Heronite &rarr;</a></section>
-
-  <section class="tile glass txt t-lib" aria-labelledby="h-lib"><span class="lbl">Library</span><h3 id="h-lib">Your library, your way</h3>
-  <ul class="chips"><li>Group by store, genre, series or year</li><li>Saved views</li><li>Bulk edits with undo</li><li>Journal</li><li>Add by hand, from a folder or by drag and drop</li></ul><a class="more-link" href="/features/game-library/">More about the library &rarr;</a></section>
-
-  <section class="tile glass txt t-linux" aria-labelledby="h-linux"><span class="lbl">On Linux</span><h3 id="h-linux">Tuned per game</h3>
-  <ul class="chips"><li>DXVK</li><li>gamescope</li><li>FPS limit</li><li>DLSS / FSR upgrades</li><li>Lossless Scaling frame generation</li><li>Sandbox</li><li>In-game overlay (beta)</li><li>Replay</li></ul><a class="more-link" href="/features/wine-and-proton/">Wine and Proton on Linux &rarr;</a></section>
-      </div>
+      <ul class="feats">
+        {features.map((f) => {
+          const extra = featureCards[f.id];
+          return (
+            <li class="feat glass">
+              <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" set:html={extra.icon} /></span>
+              <h3><a href={articleUrl('features', f.id)}>{f.data.navLabel}</a></h3>
+              <p>{extra.text}</p>
+              <ul class="chips">{extra.chips.map((c) => <li>{c}</li>)}</ul>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   </section>
 
@@ -265,24 +298,6 @@ const softwareApplication = {
         <li><p class="num"><i>~</i>190<small>MB</small></p><p class="cap">memory while idle</p></li>
         <li><p class="num"><i>~</i>0.1<small>%</small></p><p class="cap">CPU while idle</p></li>
         <li><p class="num">64<small>MB</small></p><p class="cap">to install</p></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ EVERYTHING IT DOES ============ -->
-  <section class="scene sc-more" id="features" aria-labelledby="h-more">
-    <div class="wrap">
-      <div class="head">
-        <div>
-          <p class="eyebrow">Features</p>
-          <h2 class="h2" id="h-more">Everything it does, <em>in depth.</em></h2>
-        </div>
-        <div class="lead"><p>A page for each part of Heronite, with screenshots and the details.</p><a class="more-link" href="/features/">All features &rarr;</a></div>
-      </div>
-      <ul class="cards">
-        {features.map((f) => (
-          <ArticleCard href={articleUrl('features', f.id)} title={f.data.navLabel} summary={f.data.summary} image={f.data.hero} cta="Learn more" />
-        ))}
       </ul>
     </div>
   </section>
