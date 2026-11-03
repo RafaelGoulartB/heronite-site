@@ -77,9 +77,12 @@ img{display:block}
 .tabs a{padding:7px 14px;border-radius:999px;text-decoration:none;font:500 14px/1 var(--head);color:var(--muted)}
 .tabs a:hover{color:var(--text);background:rgba(255,255,255,.08)}
 .tabs a[aria-current]{color:var(--text);background:rgba(143,211,234,.14)}
-.nav .gh{display:flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font:500 14px/1 var(--head);padding:8px 10px;border-radius:999px}
-.nav .gh:hover{color:var(--text)}
-.nav .gh svg{width:18px;height:18px}
+.nav .gh{display:flex;align-items:center;height:38px;border:1px solid var(--line-2);border-radius:999px;background:rgba(255,255,255,.04);color:var(--soft);text-decoration:none;font:500 14px/1 var(--head)}
+.nav .gh:hover{color:var(--text);background:rgba(255,255,255,.09)}
+.nav .gh svg{width:17px;height:17px;flex:none}
+.gh-star,.gh-count{display:flex;align-items:center;gap:7px;height:100%;padding:0 12px}
+.gh-count{border-left:1px solid var(--line-2);color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+.gh-count svg{color:#f2c45a}
 .nav .btn{height:38px;padding:0 18px;font-size:14px}
 .lang{position:relative}
 .lang summary{list-style:none;display:flex;align-items:center;gap:6px;height:38px;padding:0 10px;border-radius:999px;cursor:pointer;color:var(--muted);font:600 13px/1 var(--head);letter-spacing:.04em}
@@ -167,7 +170,7 @@ footer .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px
   footer .about{grid-column:1 / -1}
 }
 @media (max-width:960px){
-  .tabs,.nav .gh span{display:none}
+  .tabs,.gh-star span{display:none}
   .menu{display:block}
 }
 @media (max-width:760px){
@@ -184,7 +187,18 @@ footer .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px
 }
 @media (max-width:460px){
   .os .btns .btn{flex:1 1 auto}
-  .nav .gh{display:none}
+  /* Room for the star count on a phone: tighter gaps, the language as just the globe */
+  .nav .bar{gap:6px;padding:0 8px 0 12px}
+  .lang summary{padding:0 7px}
+  .lang summary span{display:none}
+  .nav .btn{padding:0 14px}
+  .gh-star{padding:0 3px 0 10px}
+  .gh-count{border-left:0;padding:0 11px 0 3px}
+}
+@media (max-width:359px){
+  .gh-star{display:none}
+  .gh-count{padding:0 11px}
+  .nav .btn{padding:0 11px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}

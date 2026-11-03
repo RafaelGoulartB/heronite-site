@@ -14,6 +14,8 @@ const en = {
     download: 'Download',
     home: 'Home',
     github: 'GitHub',
+    star: 'Star',
+    starLabel: 'Star Heronite on GitHub: {count} stars',
     changelog: 'Changelog',
     menu: 'Menu',
     main: 'Main',

@@ -1,6 +1,7 @@
 ---
 import Icon from './Icon.astro';
 import { mainNav, site } from '../data/site';
+import { formatStars, stars } from '../lib/stars';
 import { locales, localeInfo, localeOf, localize, useText, type Locale } from '../i18n';
 
 interface Props {
@@ -16,6 +17,8 @@ const home = localize(lang, '/');
 const isHome = path === home;
 const nav = mainNav.map((item) => ({ href: localize(lang, item.href), label: text.nav[item.key] }));
 const languages = locales.map((l) => ({ lang: l, href: Astro.props.alternates[l] ?? localize(l, '/') }));
+const starCount = formatStars(await stars(), localeInfo[lang].htmlLang);
+const starLabel = (count: string) => text.nav.starLabel.replace('{count}', count);
 ---
 
 <div class="nav">
@@ -39,9 +42,9 @@ const languages = locales.map((l) => ({ lang: l, href: Astro.props.alternates[l]
           ))}
         </ul>
       </details>
-      <a class="gh" href={site.repo}>
-        <Icon name="github" />
-        <span>{text.nav.github}</span>
+      <a class="gh" href={site.repo} aria-label={starLabel(starCount)} data-stars-label={text.nav.starLabel}>
+        <span class="gh-star"><Icon name="github" /><span>{text.nav.star}</span></span>
+        <span class="gh-count"><Icon name="star" /><span data-stars>{starCount}</span></span>
       </a>
       <a class="btn btn-primary" href={localize(lang, '/download/')}>{text.nav.download}</a>
       <details class="menu">
@@ -59,3 +62,36 @@ const languages = locales.map((l) => ({ lang: l, href: Astro.props.alternates[l]
     </div>
   </div>
 </div>
+
+<script>
+  // The count in the page is from the last build. Ask GitHub for the current one, at most once an
+  // hour per visitor (the API allows 60 requests an hour without a token).
+  const key = 'heronite:stars';
+  const show = (count: number) => {
+    const lang = document.documentElement.lang || 'en';
+    const text = new Intl.NumberFormat(lang, { notation: 'compact', maximumFractionDigits: 1 }).format(count);
+    document.querySelectorAll<HTMLAnchorElement>('a[data-stars-label]').forEach((link) => {
+      link.querySelector('[data-stars]')!.textContent = text;
+      link.setAttribute('aria-label', link.dataset.starsLabel!.replace('{count}', text));
+    });
+  };
+  const saved = (() => {
+    try {
+      const value = JSON.parse(localStorage.getItem(key) ?? 'null');
+      return value && Date.now() - value.at < 3_600_000 ? (value.stars as number) : undefined;
+    } catch {
+      return undefined;
+    }
+  })();
+  if (saved !== undefined) show(saved);
+  else
+    fetch('https://api.github.com/repos/RafaelGoulartB/Heronite', { headers: { Accept: 'application/vnd.github+json' } })
+      .then((response) => (response.ok ? response.json() : Promise.reject()))
+      .then(({ stargazers_count: stars }: { stargazers_count: number }) => {
+        show(stars);
+        try {
+          localStorage.setItem(key, JSON.stringify({ stars, at: Date.now() }));
+        } catch {}
+      })
+      .catch(() => {});
+</script>

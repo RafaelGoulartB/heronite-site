@@ -12,6 +12,8 @@ const ptBr: Dict = {
     download: 'Baixar',
     home: 'Início',
     github: 'GitHub',
+    star: 'Dar estrela',
+    starLabel: 'Dar estrela ao Heronite no GitHub: {count} estrelas',
     changelog: 'Changelog',
     menu: 'Menu',
     main: 'Principal',
