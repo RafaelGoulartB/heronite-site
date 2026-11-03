@@ -1,8 +1,9 @@
 // Checks every internal link and #anchor in the built site. Run after `npm run build`.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const dist = new URL('../dist/', import.meta.url).pathname;
+const dist = fileURLToPath(new URL('../dist/', import.meta.url));
 const pages = [];
 const walk = (dir) => {
   for (const name of readdirSync(dir)) {
