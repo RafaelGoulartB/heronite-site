@@ -12,6 +12,8 @@ const es: Dict = {
     download: 'Descargar',
     home: 'Inicio',
     github: 'GitHub',
+    star: 'Dar estrella',
+    starLabel: 'Dar una estrella a Heronite en GitHub: {count} estrellas',
     changelog: 'Changelog',
     menu: 'Menú',
     main: 'Principal',
