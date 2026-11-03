@@ -149,7 +149,7 @@ const ptBr: Dict = {
     eyebrow: 'Launcher de jogos para Linux e Windows',
     headlineHtml: 'Todos os<br> seus jogos.<br> <em>Um só launcher.</em>',
     lead: 'Steam, Epic, GOG, Amazon, Battle.net, emuladores e mais, em um app nativo e rápido. Grátis e open source.',
-    download: 'Baixar grátis',
+    downloadFree: 'Baixar grátis',
     downloadWindows: 'Baixar para Windows',
     downloadLinux: 'Baixar para Linux',
     allFeatures: 'Ver todos os recursos',

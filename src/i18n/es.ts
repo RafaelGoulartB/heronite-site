@@ -149,7 +149,7 @@ const es: Dict = {
     eyebrow: 'Lanzador de juegos para Linux y Windows',
     headlineHtml: 'Todos<br> tus juegos.<br> <em>Un solo lanzador.</em>',
     lead: 'Steam, Epic, GOG, Amazon, Battle.net, emuladores y más, en una app nativa y rápida. Gratis y de código abierto.',
-    download: 'Descargar gratis',
+    downloadFree: 'Descargar gratis',
     downloadWindows: 'Descargar para Windows',
     downloadLinux: 'Descargar para Linux',
     allFeatures: 'Ver todas las funciones',
