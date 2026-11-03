@@ -151,7 +151,7 @@ const en = {
     eyebrow: 'Game launcher for Linux and Windows',
     headlineHtml: 'Every game<br> you own.<br> <em>One launcher.</em>',
     lead: 'Steam, Epic, GOG, Amazon, Battle.net, emulators and more, in one fast native app. Free and open source.',
-    download: 'Download free',
+    downloadFree: 'Download free',
     downloadWindows: 'Download for Windows',
     downloadLinux: 'Download for Linux',
     allFeatures: 'See all features',
