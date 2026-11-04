@@ -252,8 +252,9 @@ const ptBr: Dict = {
       files: 'Arquivos para Windows e Linux',
     },
     maker: {
-      textHtml: 'O Heronite é feito por um desenvolvedor, {author}, de forma aberta. Ideias, relatos de bugs e traduções são bem-vindos.',
+      textHtml: '<strong>Ajude a decidir o que vem a seguir.</strong> O Heronite é feito de forma aberta: sugira um recurso, relate um bug ou traduza para o seu idioma.',
       activity: '{count} versões · a última em {date}',
+      idea: 'Sugerir uma ideia',
       discussions: 'Participe das Discussões',
       translate: 'Ajude a traduzir',
     },

@@ -252,8 +252,9 @@ const es: Dict = {
       files: 'Archivos para Windows y Linux',
     },
     maker: {
-      textHtml: 'Heronite lo hace un solo desarrollador, {author}, en abierto. Las ideas, los informes de errores y las traducciones son bienvenidos.',
+      textHtml: '<strong>Ayuda a decidir lo que viene.</strong> Heronite se hace en abierto: sugiere una función, informa de un error o tradúcelo a tu idioma.',
       activity: '{count} versiones · la última el {date}',
+      idea: 'Sugerir una idea',
       discussions: 'Únete a las Discusiones',
       translate: 'Ayuda a traducirlo',
     },

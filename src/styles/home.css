@@ -13,13 +13,10 @@
 .r2{margin-left:-90px}.r3{margin-left:-40px}.r4{margin-left:-150px}
 @keyframes slide{to{transform:translateX(-33.3333%)}}
 .cv{flex:none;height:var(--H);width:calc(var(--H) * var(--w) / var(--h));border-radius:10px;background-repeat:no-repeat;
-  background-size:calc(var(--H) * 1280 / var(--h)) auto;
+  background-image:var(--img-wall);
+  background-size:calc(var(--H) * var(--AW) / var(--h)) auto;
   background-position:calc(var(--H) * var(--x) / var(--h) * -1) calc(var(--H) * var(--y) / var(--h) * -1);
   box-shadow:0 0 0 1px rgba(255,255,255,.07),0 10px 30px rgba(0,0,0,.45)}
-.s-lib{background-image:var(--img-lib)}
-.s-home{background-image:var(--img-home)}
-.s-col{background-image:var(--img-col)}
-.s-yir{background-image:var(--img-yir)}
 .wall.paused .track{animation-play-state:paused}
 .hero-top::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:
   linear-gradient(90deg,#07090c 0%,#07090c 44%,rgba(7,9,12,.6) 56%,rgba(7,9,12,.1) 72%,rgba(7,9,12,.35) 100%),

@@ -21,5 +21,5 @@ const srcset = sizes ? avif.map((a, i) => `${a.src} ${widths[i]}w`).join(', ') :
 
 <picture>
   <source type="image/avif" srcset={srcset} sizes={sizes} />
-  <img src={image.src} alt={alt} width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  <img src={image.src} alt={alt} width={image.width} height={image.height} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" />
 </picture>

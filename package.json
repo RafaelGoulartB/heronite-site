@@ -13,6 +13,7 @@
     "check:links": "node scripts/check-links.mjs",
     "check:text": "node scripts/check-text.mjs",
     "og": "node scripts/og.mjs",
+    "wall": "node scripts/wall.mjs",
     "releases": "node scripts/releases.mjs"
   },
   "dependencies": {

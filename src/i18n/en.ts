@@ -254,8 +254,9 @@ const en = {
       files: 'Download files for Windows and Linux',
     },
     maker: {
-      textHtml: 'Heronite is made by one developer, {author}, in the open. Ideas, bug reports and translations are welcome.',
+      textHtml: '<strong>Help shape what comes next.</strong> Heronite is built in the open: suggest a feature, report a bug or translate it into your language.',
       activity: '{count} releases · latest on {date}',
+      idea: 'Suggest an idea',
       discussions: 'Join the Discussions',
       translate: 'Help translate it',
     },

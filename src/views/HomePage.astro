@@ -6,7 +6,10 @@ import Icon from '../components/Icon.astro';
 import ShotImg from '../components/ShotImg.astro';
 import DownloadCards from '../components/DownloadCards.astro';
 import Faq from '../components/Faq.astro';
-import { medium } from '../lib/shots';
+import { getImage } from 'astro:assets';
+import wallImage from '../assets/wall.webp';
+import wall from '../data/wall.json';
+import { wallRows as wallCovers } from '../data/wall';
 import { articles, articleUrl, slugOf } from '../lib/content';
 import { latest, releases, totalDownloads, version } from '../lib/releases';
 import { downloads, site, stores } from '../data/site';
@@ -22,22 +25,17 @@ const text = useText(lang);
 const t = text.home;
 const to = (path: string) => localize(lang, path);
 
-const [lib, home, col, yir] = await Promise.all(
-  ['console-library', 'console-home', 'collection', 'year-in-review'].map(medium),
-);
-const wallStyle = `--img-lib:${lib};--img-home:${home};--img-col:${col};--img-yir:${yir}`;
-
-// The cover wall: each cover is cropped out of a screenshot, as "screenshot x y w h" in its 1280px
-// copy. Each row repeats three times so it can slide by a third and loop.
-const wallRows = [
-  ['lib 41.5 164.5 135 209', 'home 347.2 332.5 125.7 194.5', 'lib 347.2 171 125.7 194.5', 'yir 903.2 108.5 151 202', 'lib 949.8 390.5 125.7 194.5', 'home 1100.5 332.5 125.7 194.5', 'lib 648.5 171 125.7 194.5', 'col 11.8 55.5 78.3 119.5', 'lib 1100.5 390.5 125.7 194.5', 'yir 1073.8 442.5 151 202', 'home 41.5 325.5 134 207', 'lib 799.2 171 125.7 194.5'],
-  ['lib 196.5 171 125.7 194.5', 'home 648.5 332.5 125.7 194.5', 'lib 347.2 390.5 125.7 194.5', 'col 194.5 55.5 78.3 119.5', 'home 196.5 332.5 125.7 194.5', 'yir 732.5 237.5 151 202', 'lib 949.8 171 125.7 194.5', 'home 799.2 332.5 125.7 194.5', 'lib 497.8 171 125.7 194.5', 'col 13.5 207.5 75 116', 'yir 1073.8 216.5 151 202', 'home 497.8 332.5 125.7 194.5'],
-  ['lib 45.8 390.5 125.7 194.5', 'lib 196.5 390.5 125.7 194.5', 'lib 799.2 390.5 125.7 194.5', 'home 949.8 332.5 125.7 194.5', 'lib 1100.5 171 125.7 194.5', 'col 194.5 533.8 78.3 119.5', 'yir 903.2 333.5 151 202', 'lib 648.5 390.5 125.7 194.5', 'col 103.5 55.5 78.3 119.5', 'yir 732.5 462.5 151 202', 'lib 497.8 390.5 125.7 194.5'],
-  ['yir 1073.8 442.5 151 202', 'lib 799.2 171 125.7 194.5', 'col 11.8 55.5 78.3 119.5', 'lib 41.5 164.5 135 209', 'yir 903.2 108.5 151 202', 'lib 1100.5 390.5 125.7 194.5', 'lib 949.8 390.5 125.7 194.5', 'home 41.5 325.5 134 207', 'lib 347.2 171 125.7 194.5', 'lib 648.5 171 125.7 194.5', 'home 347.2 332.5 125.7 194.5', 'home 1100.5 332.5 125.7 194.5'],
-].map((row) =>
+// The cover wall: every cover comes from one image that `npm run wall` packs from the screenshots,
+// placed by its spot in that image. Each row repeats three times so it can slide by a third and loop.
+const [wallAvif, wallWebp] = await Promise.all([
+  getImage({ src: wallImage, format: 'avif', quality: 50 }),
+  getImage({ src: wallImage, format: 'webp', quality: 70 }),
+]);
+const wallStyle = `--img-wall:image-set(url(${wallAvif.src}) type("image/avif"), url(${wallWebp.src}) type("image/webp"));--AW:${wall.width}`;
+const wallRows = wallCovers.map((row) =>
   row.map((cover) => {
-    const [img, x, y, w, h] = cover.split(' ');
-    return { img, style: `--x:${x};--y:${y};--w:${w};--h:${h}` };
+    const [x, y, w, h] = (wall.covers as Record<string, number[]>)[cover];
+    return `--x:${x};--y:${y};--w:${w};--h:${h}`;
   }),
 );
 
@@ -114,7 +112,7 @@ const softwareApplication = {
       <div class="wall" id="wall" style={wallStyle} role="img" aria-label={t.wallLabel}>
         {wallRows.map((row, i) => (
           <div class={`row r${i + 1}`}><div class="track">
-            {[0, 1, 2].map(() => row.map((c) => <i class={`cv s-${c.img}`} style={c.style}></i>))}
+            {[0, 1, 2].map(() => row.map((style) => <i class="cv" style={style}></i>))}
           </div></div>
         ))}
       </div>
@@ -320,9 +318,9 @@ const softwareApplication = {
       <div class="maker">
         <img src="/icon.png" alt="" width="52" height="52" loading="lazy" />
         <div class="maker-text">
-          <p set:html={fill(t.maker.textHtml, { author: site.author })} />
+          <p set:html={t.maker.textHtml} />
           {activity && <p class="maker-meta"><a href="/changelog/">{activity}</a></p>}
-          <p class="maker-links"><a href={site.discussions}>{t.maker.discussions}</a><a href={to('/docs/translating/')}>{t.maker.translate}</a></p>
+          <p class="maker-links"><a href={site.issues}>{t.maker.idea}</a><a href={site.discussions}>{t.maker.discussions}</a><a href={to('/docs/translating/')}>{t.maker.translate}</a></p>
         </div>
       </div>
     </div>
@@ -365,7 +363,7 @@ const softwareApplication = {
   <!-- ============ CLOSING ============ -->
   <section class="closing" id="close" aria-labelledby="h-close" style={wallStyle}>
     <div class="closing-strip" aria-hidden="true">
-      {wallRows[1].concat(wallRows[0]).map((c) => <i class={`cv s-${c.img}`} style={c.style}></i>)}
+      {wallRows[1].concat(wallRows[0]).map((style) => <i class="cv" style={style}></i>)}
     </div>
     <div class="wrap closing-copy">
       <h2 class="h2" id="h-close" set:html={t.closing.headlineHtml} />
