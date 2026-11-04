@@ -7,8 +7,8 @@ lead: "Troque o Heronite para um layout feito para controle, com capas grandes, 
 navLabel: Modo console
 summary: "Um modo feito para controle, para o sofá ou a TV, com oito layouts, sete temas que você pode mudar e compartilhar, e um overlay dentro do jogo."
 order: 5
-hero: ../../../assets/screenshots/console-home.webp
-heroAlt: "Início do modo console do Heronite: SP Football Life 2026 grande sobre a arte do jogo, uma prateleira Continuar jogando com capas, uma prateleira Favoritos e dicas dos botões A, X, Y, LB, RB e Menu na parte de baixo."
+hero: ../../../assets/screenshots/console-carousel.webp
+heroAlt: "O modo console do Heronite: um carrossel dos jogos em andamento com Control em foco entre Brotato e Crash Team Racing, a loja, o tempo de jogo e o status embaixo, e abas Todos, Instalados, Favoritos e Jogando."
 og: /og/console-mode.jpg
 updated: 2026-11-01
 highlights:

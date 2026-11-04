@@ -7,8 +7,8 @@ lead: "Switch Heronite to a controller-first layout with big covers, tabs and an
 navLabel: Console mode
 summary: "A controller-first mode for the couch or a TV, with eight layouts, seven themes you can change and share, and an in-game overlay."
 order: 5
-hero: ../../../assets/screenshots/console-home.webp
-heroAlt: "Heronite console mode home: SP Football Life 2026 large over its art, a Continue playing shelf of game covers, a Favourites shelf and button hints for A, X, Y, LB, RB and Menu along the bottom."
+hero: ../../../assets/screenshots/console-carousel.webp
+heroAlt: "Heronite's console mode: a carousel of the games in progress with Control in focus between Brotato and Crash Team Racing, its store, play time and status underneath, and tabs for All, Installed, Favourites and Playing."
 og: /og/console-mode.jpg
 updated: 2026-11-01
 highlights:

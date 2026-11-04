@@ -7,8 +7,8 @@ lead: "Install Heronite in Desktop Mode, add it to Steam as a non-Steam game, an
 navLabel: Steam Deck
 summary: "Install the AppImage in Desktop Mode, add it to Steam with the --console option, then play your other stores from Gaming Mode."
 order: 2
-hero: ../../../assets/screenshots/console-home.webp
-heroAlt: "Heronite's console mode home screen: a large title over its artwork, a Continue playing shelf of game covers, and controller hints for Details, Play, Search and Menu along the bottom."
+hero: ../../../assets/screenshots/console-game-panel.webp
+heroAlt: "Heronite's console mode with ELDEN RING open: Play, Status, Favourite, Game settings and Full page in a list for the controller, over the carousel of covers."
 og: /og/steam-deck.jpg
 updated: 2026-11-01
 highlights:

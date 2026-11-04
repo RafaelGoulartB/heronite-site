@@ -7,8 +7,8 @@ lead: "Heroic es el launcher de código abierto que muchos jugadores de Linux us
 navLabel: Heronite vs Heroic
 summary: "Heronite y Heroic comparten legendary, gogdl y nile para Epic, GOG y Amazon. Mira en qué se diferencian y cómo cambiar de uno a otro."
 order: 2
-hero: ../../../assets/screenshots/console-home.webp
-heroAlt: "El inicio del Modo consola de Heronite: SP Football Life 2026 en grande sobre su ilustración, con un estante Seguir jugando de portadas y las indicaciones de los botones del mando abajo."
+hero: ../../../assets/screenshots/command-palette.webp
+heroAlt: "La paleta Ctrl+K de Heronite buscando “contr”: Control de Epic y CONTROL Ultimate Edition de Steam en la misma lista, con el tiempo de juego y acciones para jugar, abrir los ajustes o la carpeta del juego."
 og: /og/heroic.jpg
 updated: 2026-11-01
 highlights:

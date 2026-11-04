@@ -7,8 +7,8 @@ lead: "Cambia Heronite a un diseño pensado para mandos, con carátulas grandes,
 navLabel: Modo consola
 summary: "Un modo pensado para mandos, para el sofá o la TV, con ocho diseños, siete temas que puedes cambiar y compartir, y un overlay dentro del juego."
 order: 5
-hero: ../../../assets/screenshots/console-home.webp
-heroAlt: "El Inicio del modo consola de Heronite: SP Football Life 2026 en grande sobre su arte, un estante Seguir jugando con carátulas, un estante Favoritos y las indicaciones de los botones A, X, Y, LB, RB y Menú a lo largo de la parte inferior."
+hero: ../../../assets/screenshots/console-carousel.webp
+heroAlt: "El modo consola de Heronite: un carrusel de los juegos en curso con Control enfocado entre Brotato y Crash Team Racing, su tienda, tiempo de juego y estado debajo, y pestañas Todos, Instalados, Favoritos y Jugando."
 og: /og/console-mode.jpg
 updated: 2026-11-01
 highlights:

@@ -7,8 +7,8 @@ lead: "Instala Heronite en el Modo Escritorio, añádelo a Steam como juego que 
 navLabel: Steam Deck
 summary: "Instala el AppImage en el Modo Escritorio, añádelo a Steam con la opción --console y juega tus otras tiendas desde el Modo Juego."
 order: 2
-hero: ../../../assets/screenshots/console-home.webp
-heroAlt: "La pantalla de inicio del Modo consola de Heronite: un título grande sobre su ilustración, un estante Seguir jugando con portadas de juegos y, abajo, las indicaciones del mando para Detalles, Jugar, Buscar y Menú."
+hero: ../../../assets/screenshots/console-game-panel.webp
+heroAlt: "El modo consola de Heronite con ELDEN RING abierto: Jugar, Estado, Favorito, Ajustes del juego y Página completa en una lista para el mando, sobre el carrusel de portadas."
 og: /og/steam-deck.jpg
 updated: 2026-11-01
 highlights:
