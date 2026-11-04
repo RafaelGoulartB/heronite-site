@@ -11,27 +11,36 @@ Heronite crea tu biblioteca de juegos con Steam, tus emuladores y las tiendas en
 
 ## Qué añade Heronite a tu biblioteca en el primer inicio
 
-Con la biblioteca vacía, Heronite añade esto en el primer inicio:
+Si tu biblioteca está vacía, Heronite añade:
 
-- **Steam:** tus juegos instalados de Steam, sin necesidad de iniciar sesión.
-- **Emuladores y ROMs:** Heronite detecta los emuladores instalados y escanea las carpetas de ROMs habituales, como `~/ROMs` o `~/Emulation/roms`. Consulta [Emulación](/es/docs/emulation/).
+- **Steam:** tus juegos instalados de Steam, sin iniciar sesión.
+- **Emuladores y ROMs:** los emuladores que detecta y las ROMs de carpetas habituales como `~/ROMs` o `~/Emulation/roms`. Consulta [Emulación](/es/docs/emulation/).
+
+En Linux, la biblioteca vacía también muestra **Importar de otro launcher** cuando encuentra juegos en Heroic, Lutris, Bottles o Faugus. Haz clic en un launcher para importar sus juegos y mantenerlos sincronizados.
+
+En Windows, los juegos de Microsoft Store y PC Game Pass que instaló la app de Xbox llegan solos, sin iniciar sesión.
 
 ## Inicia sesión en Epic Games, GOG o Amazon Games
 
-Abre **Tiendas** (<kbd>Ctrl</kbd> <kbd>4</kbd>) e inicia sesión. Se abre una pequeña ventana con la página de la propia tienda. Si no se puede abrir, usa el método del navegador de esa misma página: inicia sesión en tu navegador y pega la dirección o el código que te dé.
+1. Abre **Tiendas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Elige **Epic Games**, **GOG** o **Amazon Games**.
+3. Pulsa **Iniciar sesión**.
+4. Inicia sesión en la página de la tienda, en la ventana que se abre.
 
-Consulta [Tiendas y launchers](/es/docs/stores-and-launchers/).
+Si la ventana no se puede abrir, usa **O inicia sesión con tu navegador** en esa misma página: inicia sesión en tu navegador y pega la dirección o el código que te dé. Consulta [Tiendas y launchers](/es/docs/stores-and-launchers/).
+
+En Windows, Heronite también detecta los juegos instalados con el Epic Games Launcher, GOG Galaxy o la app de Amazon Games, sin volver a descargarlos.
 
 ## Añade otros juegos a tu biblioteca
 
 Pulsa <kbd>Ctrl</kbd> <kbd>N</kbd> (o **Añadir un juego**) para añadir:
 
-- un programa de Windows (`.exe`), que en Linux se ejecuta con Wine o Proton,
-- un programa nativo de Linux, un AppImage o un script de inicio,
-- un juego de navegador (una dirección web),
-- una ROM, o una carpeta entera de ROMs.
+- Un programa de Windows (`.exe`), que en Linux se ejecuta con Wine o Proton
+- Un programa nativo de Linux, un AppImage o un script de inicio
+- Un juego de navegador (una dirección web)
+- Una ROM, o una carpeta entera de ROMs
 
-También puedes indicar una carpeta y añadir de una vez todos los juegos que contenga.
+Para añadir de una vez todos los juegos de una carpeta, indica la carpeta.
 
 ## Abre cualquier página con un atajo
 
@@ -49,14 +58,16 @@ La **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre cualquier página,
 
 ## Organiza tu biblioteca de juegos
 
-- Cambia entre **Foco** (una lista con un panel de detalles) y una **cuadrícula** de portadas.
-- **Agrupa** por estado, tienda, género, serie, año y más.
+- Cambia entre **Foco** (una lista con un panel de detalles) y una **Cuadrícula** de portadas.
+- Usa **Grupo** para agrupar por estado, tienda, género, serie, año y más.
 - Guarda **vistas** con tus filtros y orden (Jugando ahora, Backlog, Finalizado, Favoritos).
 - Selecciona varios juegos (<kbd>Espacio</kbd>, <kbd>Shift</kbd> + flechas, <kbd>Ctrl</kbd> <kbd>A</kbd>) y pulsa <kbd>F3</kbd> para cambiarlos todos a la vez. <kbd>Ctrl</kbd> <kbd>Z</kbd> lo deshace.
 
 ## Juega y haz capturas de pantalla
 
-Pulsa <kbd>Enter</kbd> sobre un juego para jugarlo (o instalarlo). Heronite registra cada sesión, asocia las capturas de pantalla al juego y lo muestra todo en **Estadísticas**. Haz una captura mientras juegas con <kbd>F10</kbd>.
+1. Selecciona un juego y pulsa <kbd>Enter</kbd> para jugarlo, o para instalarlo primero.
+2. Pulsa <kbd>F10</kbd> mientras juegas para hacer una captura.
+3. Abre **Estadísticas** (<kbd>Ctrl</kbd> <kbd>6</kbd>) para ver tus sesiones. Heronite registra cada una y asocia tus capturas al juego.
 
 ## Usa un mando (modo consola)
 

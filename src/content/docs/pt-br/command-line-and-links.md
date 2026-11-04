@@ -13,18 +13,18 @@ Abra o Heronite por scripts com opções como `--launch`. O programa se chama `h
 
 | Opção | O que faz |
 |---|---|
-| `--launch <game>` | Inicia um jogo (veja abaixo) |
+| `--launch <jogo>` | Abre um jogo (veja abaixo) |
 | `--no-gui` | Com `--launch`: sem janela; o Heronite fecha quando o jogo termina |
-| `--console` | Abre no [Modo console](/pt-br/docs/console-mode/) |
+| `--console` | Abre no [modo console](/pt-br/docs/console-mode/) |
 | `--fullscreen` | Abre em tela cheia (<kbd>F11</kbd> volta ao normal) |
-| `--autostart` | Usada por "Iniciar com o sistema"; só com ela vale "Iniciar minimizado" |
+| `--autostart` | Usada por **Iniciar com o sistema** em **Configurações → Geral**; só com ela vale **Iniciar minimizado** |
 | `-h`, `--help` | Mostra as opções |
 
-Só um Heronite roda por vez. Se você abri-lo de novo, o pedido (como o `--launch`) vai para o que já está aberto.
+Só um Heronite roda por vez: se você abrir de novo, o pedido (como o `--launch`) vai para o que já está aberto.
 
-## Inicie um jogo pela linha de comando
+## Abrir um jogo pela linha de comando
 
-O `--launch` recebe o id do jogo na loja, não o nome dele, opcionalmente com a ferramenta da loja na frente:
+O `--launch` recebe o id do jogo na loja, não o nome, e aceita a ferramenta da loja na frente:
 
 ```bash
 heronite-rs --launch gog_1207658930      # GOG game 1207658930
@@ -40,27 +40,25 @@ heronite-rs --launch legendary_Fortnite --no-gui
 | `nile` | Amazon Games |
 | `sideload` | Jogos que você mesmo adicionou |
 
-Os atalhos que o Heronite cria (área de trabalho, menu Iniciar, Steam) já têm o comando certo. Por isso, isto serve mais para scripts.
+Os atalhos que o Heronite cria (área de trabalho, menu Iniciar, Steam) já têm o comando certo, então isso serve mais para scripts.
 
-## Inicie um jogo com um link `heronite://`
+## Abrir um jogo com um link `heronite://`
 
 ```
-heronite://launch/<game>
-heronite://launch/<store>/<game>
-heronite://launch?appName=<game>&runner=<store>
+heronite://launch/<jogo>
+heronite://launch/<loja>/<jogo>
+heronite://launch?appName=<jogo>&runner=<loja>
 ```
 
 A forma com parâmetros também aceita:
 
-- `arg=<value>`: um argumento para o jogo (repita para passar mais de um),
-- `gui=false`: inicia sem mostrar a janela do Heronite.
+- `arg=<valor>`: um argumento para o jogo (repita para passar mais de um)
+- `gui=false`: abre sem mostrar a janela do Heronite
 
-Nomes com espaços são escritos com `%20` (`My%20Game`). A opção "Ocultar a janela em inicializações por heronite://" esconde a janela em todos os links.
+Escreva espaços nos nomes como `%20` (`My%20Game`). Para esconder a janela em todos os links, ligue **Ocultar a janela em inicializações por heronite://**. O esquema antigo `heronite-rs://` continua funcionando.
 
-**Onde os links funcionam:**
+### Onde os links heronite:// funcionam
 
-- **Instalador do Windows:** registrados para o seu usuário a cada inicialização.
-- **Windows portátil:** não são registrados, para que a cópia não deixe rastros no PC.
-- **Linux:** registrados pelo `scripts/install.sh` quando o Heronite é compilado do código-fonte.
-
-O esquema antigo `heronite-rs://` continua funcionando.
+- **Instalador do Windows:** registrados para o seu usuário a cada abertura
+- **Windows portátil:** não são registrados, então a cópia não deixa rastro no PC
+- **Linux:** registrados pelo `scripts/install.sh` quando você compila do código-fonte

@@ -65,7 +65,7 @@ Pulsa <kbd>?</kbd> en Heronite para ver todos los atajos de teclado.
 
 | Teclas | Acción |
 |---|---|
-| <kbd>F10</kbd> | Captura de pantalla (se puede cambiar en Ajustes → Capturas) |
+| <kbd>F10</kbd> | Captura de pantalla (cámbialo en **Ajustes → Capturas**) |
 | <kbd>Super</kbd> <kbd>G</kbd> | Overlay dentro del juego (Linux, beta) |
 | <kbd>Shift</kbd> <kbd>F3</kbd> | El overlay de Epic, en los juegos que lo usan |
 

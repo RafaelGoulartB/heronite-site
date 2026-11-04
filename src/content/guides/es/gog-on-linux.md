@@ -1,34 +1,34 @@
 ---
-title: "Cómo jugar GOG en Linux sin GOG Galaxy"
-description: "Cómo jugar juegos de GOG en Linux sin GOG Galaxy: inicia sesión para traer toda tu biblioteca o añade instaladores offline sin DRM, sin cuenta."
+title: "Juegos de GOG en Linux sin GOG Galaxy"
+description: "Instala juegos de GOG en Linux sin GOG Galaxy: inicia sesión para traer toda tu biblioteca o añade instaladores offline sin DRM, sin cuenta."
 eyebrow: Guía de Linux
 headline: "Cómo jugar juegos de GOG en Linux"
-lead: "Juega tus juegos de GOG en Linux sin GOG Galaxy. Inicia sesión y Heronite los instala con gogdl, o añade a mano instaladores sin DRM."
+lead: "Juega tus juegos de GOG en Linux sin GOG Galaxy. Inicia sesión para instalar tu biblioteca desde Heronite, o añade a mano instaladores sin DRM."
 navLabel: GOG en Linux
-summary: "Inicia sesión en GOG desde Heronite, instala juegos con gogdl, o añade a mano instaladores offline y carpetas de juegos sin DRM."
+summary: "Inicia sesión en GOG desde Heronite para instalar tu biblioteca, o añade a mano instaladores offline y carpetas de juegos sin DRM."
 order: 3
 hero: ../../../assets/screenshots/collection.webp
 heroAlt: "La Colección de Heronite con un juego seleccionado: su portada, un botón Jugar, los detalles y un recuadro En Linux con la valoración de ProtonDB y el estado del anticheat."
 og: /og/gog-on-linux.jpg
 updated: 2026-11-04
 highlights:
-  - title: "Inicia sesión en Tiendas"
-    text: "Toda tu biblioteca de GOG se une a la Colección tras iniciar sesión."
-  - title: "Instala con gogdl"
-    text: "gogdl es la herramienta de código abierto que también usa Heroic."
-  - title: "Sin DRM, a tu manera"
-    text: "Añade instaladores offline o carpetas de juegos sin iniciar sesión."
-  - title: "Necesita python3"
-    text: "gogdl funciona con Python, así que instala python3 primero."
+  - title: "Inicia sesión una vez"
+    text: "Toda tu biblioteca de GOG aparece tras iniciar sesión una sola vez."
+  - title: "Versiones nativas de Linux"
+    text: "Si GOG tiene versión para Linux, Heronite puede instalarla sin Wine."
+  - title: "Actualizaciones automáticas"
+    text: "Heronite busca actualizaciones de tus juegos de GOG cada 3 horas."
+  - title: "Un prefijo por juego"
+    text: "Cada juego de Windows funciona en su propia carpeta, separado de los demás."
 faq:
   - q: "¿Hay un GOG Galaxy para Linux?"
-    a: "No, GOG no hace una versión de Galaxy para Linux. Heronite usa la herramienta de código abierto [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl) para iniciar sesión, descargar, verificar y actualizar tus juegos."
+    a: "No, GOG no hace una versión de Galaxy para Linux. Heronite usa [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl), una herramienta de GOG de código abierto, para iniciar sesión, descargar, verificar y actualizar tus juegos."
   - q: "¿Funcionan los juegos de GOG en Linux?"
-    a: "Muchos sí. La mayoría son juegos de Windows que se ejecutan con Wine o Proton, y algunos tienen versión nativa para Linux. Mira la valoración del juego en [ProtonDB](https://www.protondb.com) antes de instalar."
+    a: "Muchos sí. La mayoría son juegos de Windows que funcionan con Wine o Proton. Mira la valoración del juego en [ProtonDB](https://www.protondb.com) antes de instalar."
   - q: "¿Por qué fallan mis descargas de GOG en Linux?"
-    a: "gogdl necesita `python3`. Instálalo con tu gestor de paquetes y vuelve a intentarlo. Hay otras causas en la [página de solución de problemas](/docs/troubleshooting/)."
-  - q: "¿Puedo jugar juegos de GOG sin iniciar sesión?"
-    a: "Sí. Los juegos de GOG no tienen DRM, así que un instalador offline funciona sin ningún launcher. Mira [Añade a mano juegos de GOG sin DRM](#añade-a-mano-juegos-de-gog-sin-drm)."
+    a: "Comprueba que tienes `python3` instalado, porque gogdl lo necesita. Instálalo con tu gestor de paquetes y vuelve a intentarlo. Hay otras causas en la [página de solución de problemas](/docs/troubleshooting/)."
+  - q: "¿Puedo jugar juegos de GOG en Steam Deck?"
+    a: "Sí. Inicia sesión en GOG en el modo escritorio y luego juega desde el Modo Juego. La [guía de Steam Deck](/guides/steam-deck/) tiene los pasos."
   - q: "¿Puedo usar mis juegos de GOG Galaxy en Windows?"
     a: "Sí, en Windows. Heronite muestra como instalados los juegos que instaló GOG Galaxy, sin descargarlos otra vez. En Linux no hay Galaxy desde donde importar."
 related:
@@ -40,7 +40,7 @@ related:
 ## Qué necesitas
 
 - Un PC con Linux de 64 bits y un controlador de Vulkan que funcione.
-- `python3`, con el que funciona la herramienta gogdl. Compruébalo con `python3 --version` e instálalo con tu gestor de paquetes si el comando no existe.
+- `python3`, que usa gogdl (la herramienta de descargas de GOG). Compruébalo con `python3 --version` e instálalo con tu gestor de paquetes si el comando no existe.
 - Una cuenta de GOG, para iniciar sesión. Añadir juegos a mano no necesita cuenta.
 - Espacio libre en disco. Los juegos se instalan en `~/Games/Heronite`.
 
@@ -61,45 +61,46 @@ Los demás formatos están en la [guía de instalación](/es/docs/installation/)
 2. Elige **GOG** y luego **Iniciar sesión con GOG**.
 3. Inicia sesión en la página de GOG, en la ventana que se abre.
 
-Toda tu biblioteca de GOG aparece ahora en la Colección.
+Toda tu biblioteca de GOG aparece entonces en Heronite. Si la ventana no se abre, usa el **método del navegador** en la misma página. Copia la dirección a la que llegas, que contiene `code=`, y pégala en Heronite ([inicios de sesión en tiendas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda)).
 
-Si la ventana no se abre, usa el **método del navegador** en la misma página. Copia la dirección a la que llegas, que contiene `code=`, y pégala en Heronite. Mira [Solución de problemas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda) para los inicios de sesión en las tiendas.
-
-## Instala un juego de GOG
+## Instala y juega un juego de GOG
 
 Mira primero el recuadro **En Linux** en los detalles del juego para ver la valoración de [ProtonDB](https://www.protondb.com).
 
-1. Busca el juego en la Colección y pulsa <kbd>Enter</kbd>, o elige **Instalar con GOG**.
-2. Elige la **Carpeta de instalación** y, para un juego de Windows, la **Versión de Wine**. La opción por defecto es un buen punto de partida.
+1. Busca el juego en tu biblioteca y pulsa <kbd>Enter</kbd>, o elige **Instalar con GOG**.
+2. Elige la **Carpeta de instalación**. Para un juego de Windows, la **Versión de Wine** está en **Mostrar ajustes de Wine**; la opción por defecto es un buen punto de partida.
 3. Confirma. Sigue la descarga en la página Descargas (<kbd>Ctrl</kbd> <kbd>2</kbd>).
+4. Cuando termine, selecciona el juego y pulsa <kbd>Enter</kbd> para jugar.
 
-Algunos juegos de GOG tienen versión nativa para Linux. Cuando GOG la lista, Heronite puede ofrecerla en lugar de la de Windows, sin Wine.
-
-## Juega
-
-Selecciona el juego instalado y pulsa <kbd>Enter</kbd>.
+Si GOG tiene una versión nativa para Linux, Heronite puede ofrecerla en lugar de la de Windows, sin Wine.
 
 ## Cambia la versión de Proton
 
-Los juegos de Windows se ejecutan con Wine o Proton, cada uno con su prefijo en `~/Games/Heronite/Prefixes`. Si un juego da problemas, prueba otra versión de Proton en **Ajustes del juego → Compatibilidad**. La [guía de GE-Proton](/es/guides/install-ge-proton/) explica cómo conseguir más.
+Si un juego de Windows da problemas, abre **Ajustes del juego → Compatibilidad** y elige otra versión en **Versión**. La [guía de GE-Proton](/es/guides/install-ge-proton/) explica cómo conseguir más.
 
 ![Los Ajustes del juego de Control en la pestaña Compatibilidad, con la versión de Proton, su valoración de ProtonDB y el prefijo de Wine.](../../../assets/screenshots/game-settings.webp)
+
+Cada juego de Windows tiene su propio prefijo de Wine, una carpeta de Windows aparte, en `~/Games/Heronite/Prefixes`.
 
 ## Añade a mano juegos de GOG sin DRM
 
 1. Descarga el instalador offline desde tu cuenta de GOG en la web.
-2. Ejecuta un instalador de Windows con Wine, tú mismo o con el botón **Ejecutar .exe en el prefijo** en **Ajustes del juego → Compatibilidad**. Ejecuta un instalador de Linux como de costumbre.
-3. Pulsa <kbd>Ctrl</kbd> <kbd>N</kbd> y añade el juego instalado. Elige un programa de Windows (`.exe`), un programa nativo de Linux o un script de inicio.
-4. O apunta Heronite a la carpeta donde guardas tus juegos. Añade todos los que encuentre de una vez.
+2. Ejecuta el instalador. Para uno de Windows, usa **Ejecutar .exe en el prefijo** en **Ajustes del juego → Compatibilidad**, o ejecútalo tú mismo con Wine.
+3. Pulsa <kbd>Ctrl</kbd> <kbd>N</kbd> y añade el juego instalado: un programa de Windows (`.exe`), un programa nativo de Linux o un script de inicio.
 
-Heronite busca imágenes y detalles para ellos, pero no están vinculados a tu cuenta de GOG, así que no se actualizan. Si un juego de GOG ya está en este PC, usa **Importar un juego instalado** en la página de GOG en lugar de descargarlo otra vez.
+Para añadir muchos juegos a la vez, indica a Heronite la carpeta donde están. Heronite busca imágenes y detalles para estos juegos, pero no están vinculados a tu cuenta de GOG, así que no se actualizan.
+
+Si un juego de GOG ya está en este PC, usa **Importar un juego instalado** en la página de GOG en lugar de descargarlo otra vez.
 
 ## Actualiza, repara o mueve un juego de GOG
 
-Una sola cola de descargas gestiona actualizaciones, reparaciones, movimientos y desinstalaciones. Heronite busca actualizaciones cada 3 horas, y **Actualizar todo** en la página de GOG instala varias a la vez. La cola se pausa cuando estás sin conexión y reintenta las descargas fallidas.
+- **Actualizar:** Heronite busca actualizaciones cada 3 horas. **Actualizar todo** en la página de GOG instala varias a la vez.
+- **Reparar o mover:** elige **Verificar y reparar** o **Mover instalación** en las acciones del juego.
 
-Los juegos instalados se quedan en el disco si cierras sesión en GOG. Heronite guarda tu sesión en su carpeta de datos, así que mantén esa carpeta privada. Mira [Archivos y carpetas](/es/docs/files-and-folders/).
+Una sola cola de descargas hace estas tareas y las desinstalaciones. Se pausa cuando estás sin conexión y reintenta las descargas fallidas.
 
-## Un juego de GOG no arranca en Linux
+Los juegos instalados se quedan en el disco si cierras sesión en GOG. Heronite guarda tu sesión en su carpeta de datos, así que mantén esa carpeta privada ([Archivos y carpetas](/es/docs/files-and-folders/)).
 
-Abre **Ajustes → Logs** y lee el log de inicio del juego. Heronite muestra una solución cuando conoce alguna. Las correcciones habituales de Wine están en [Solución de problemas](/es/docs/troubleshooting/#un-juego-no-arranca-linux), y las opciones de cada juego en [Wine y Proton](/es/docs/wine-and-proton/#opciones-por-juego).
+## Un juego de GOG no abre en Linux
+
+Abre **Ajustes → Logs** y lee el log de inicio del juego. Heronite muestra una solución cuando conoce alguna. Las soluciones habituales de Wine están en [Solución de problemas](/es/docs/troubleshooting/#un-juego-no-abre-linux), y las opciones de cada juego en [Wine y Proton](/es/docs/wine-and-proton/#opciones-por-juego).

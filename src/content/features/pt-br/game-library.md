@@ -1,32 +1,32 @@
 ---
-title: "Gerenciador de biblioteca de jogos para Linux | Heronite"
-description: "Gerencie todos os jogos de PC numa biblioteca no Linux e no Windows. Agrupe, filtre, pesquise e edite em lote jogos da Steam, Epic, GOG e emuladores."
+title: "Launcher e biblioteca de jogos para Linux | Heronite"
+description: "Gerencie todos os jogos de PC numa biblioteca no Linux e no Windows. Agrupe, filtre e edite em lote jogos da Steam, Epic, GOG, Amazon e emuladores."
 eyebrow: Biblioteca de jogos
 headline: "Um gerenciador de biblioteca de jogos para Linux e Windows"
-lead: "O Heronite é um launcher e gerenciador de biblioteca de jogos para Linux e Windows. A Coleção reúne todas as lojas, emuladores e jogos avulsos em um só lugar."
+lead: "O Heronite é um launcher de jogos e gerenciador de biblioteca para Linux e Windows. A Coleção reúne todas as lojas, emuladores e jogos avulsos em um só lugar."
 navLabel: Biblioteca de jogos
-summary: "Uma Coleção para todas as lojas, emuladores e jogos avulsos, com visões, grupos, edição em lote e paleta de comandos."
+summary: "Uma Coleção para todas as lojas, emuladores e jogos avulsos, com presets, grupos, edição em lote e paleta de comandos."
 order: 1
 hero: ../../../assets/screenshots/collection.webp
 heroAlt: "A Coleção do Heronite: capas de jogos agrupadas em Jogando e Em andamento com o tempo de jogo embaixo de cada uma, e ELDEN RING aberto com capa, botão Jogar, detalhes e uma linha do tempo das sessões de jogo."
 og: /og/game-library.jpg
 updated: 2026-11-04
 highlights:
-  - title: Uma lista, todas as fontes
-    text: Lojas, emuladores e jogos avulsos lado a lado.
   - title: Agrupe do seu jeito
     text: Por status, loja, gênero ou série, em lista ou em grade.
-  - title: Visões salvas
+  - title: Presets salvos
     text: Guarde filtros e ordenações como Jogando agora, Pendentes ou Finalizados.
   - title: Ache tudo rápido
     text: A busca perdoa erros de digitação, e Ctrl+K abre qualquer jogo, página ou ação.
+  - title: Um diário para cada jogo
+    text: Escreva anotações na mesma linha do tempo das suas sessões de jogo.
 faq:
-  - q: Existe um gerenciador de biblioteca para Linux com Steam, Epic e GOG juntas?
-    a: Sim. A Steam não pede login. Entre na Epic Games, na GOG ou na Amazon Games na página **Lojas** e as bibliotecas vão para a Coleção. Veja [a lista](#como-reunir-todos-os-meus-jogos-em-uma-coleção).
+  - q: Posso usar o Heronite no Steam Deck?
+    a: Sim. O Heronite roda no SteamOS como AppImage. O [guia do Steam Deck](/guides/steam-deck/) mostra a configuração.
   - q: Importar do Heroic ou do Lutris altera os arquivos deles?
-    a: Não. O Heronite importa e sincroniza jogos do Heroic, Lutris, Bottles e Faugus, e nunca escreve nos arquivos deles.
+    a: Não. O Heronite só lê os arquivos deles e nunca escreve neles.
   - q: O Heronite acha capas para jogos de emulador?
-    a: Sim. Todo jogo adicionado de uma pasta de ROMs recebe arte. Veja [de onde vêm as capas](#de-onde-vêm-as-capas-e-os-detalhes-dos-jogos).
+    a: Sim. Todo jogo adicionado de uma pasta de ROMs recebe arte. Uma chave gratuita do SteamGridDB acrescenta capas da comunidade.
   - q: Dá para desfazer uma edição em lote?
     a: Sim. Aperte `Ctrl+Z` para desfazer a última mudança.
 related:
@@ -37,20 +37,21 @@ related:
 
 ## Como reunir todos os meus jogos em uma Coleção?
 
-- **Steam:** o Heronite lê suas bibliotecas da [Steam](/pt-br/features/stores/) sem login.
-- **Epic Games, GOG e Amazon Games:** entre na página **Lojas** e a biblioteca inteira entra, instalada ou não.
-- **Battle.net, EA app, Ubisoft Connect e Rockstar Games (Linux):** cada app de loja roda no seu próprio prefixo do Wine, e os jogos que você instala aparecem.
+- **Steam:** o Heronite traz suas bibliotecas da [Steam](/pt-br/features/stores/) sem login.
+- **Epic Games, GOG e Amazon Games:** faça login na página **Lojas** e a biblioteca inteira entra, instalada ou não.
+- **Battle.net, EA app, Ubisoft Connect e Rockstar Games:** os jogos que você instala em cada app da loja aparecem. No Linux, o app da loja roda no seu próprio prefixo Wine (uma pasta separada do Windows).
+- **Microsoft Store e PC Game Pass (Windows):** os jogos que o app Xbox instalou entram sem login.
 - **Emuladores:** o Heronite [detecta](/pt-br/features/emulation/) os emuladores e escaneia suas pastas de ROMs.
-- **Outros launchers (Linux):** os jogos do Heroic, Lutris, Bottles e Faugus entram e ficam sincronizados.
+- **Outros launchers:** os jogos do Heroic, Lutris, Bottles e Faugus no Linux, e os do Playnite no Windows, entram e ficam sincronizados.
 
 ## Como adicionar um jogo que não é de uma loja?
 
 Aperte <kbd>Ctrl</kbd> <kbd>N</kbd> (ou **Adicionar um jogo**) para adicionar:
 
-- um programa do Windows (`.exe`), que no Linux roda com [Wine ou Proton](/pt-br/features/wine-and-proton/),
-- um programa nativo do Linux, um AppImage ou um script de início,
-- um jogo de navegador, pelo endereço dele,
-- uma ROM, ou uma pasta inteira de ROMs.
+- Um programa do Windows (`.exe`), que no Linux roda com [Wine ou Proton](/pt-br/features/wine-and-proton/)
+- Um programa nativo do Linux, um AppImage ou um script de início
+- Um jogo de navegador, pelo endereço dele
+- Uma ROM, ou uma pasta inteira de ROMs
 
 Para adicionar vários jogos de uma vez, aponte o Heronite para uma pasta.
 
@@ -64,13 +65,13 @@ O **Foco** é uma lista com um painel de detalhes: capa, capturas de tela, descr
 
 Nos dois modos, agrupe os jogos por:
 
-- status (Jogando, Em andamento, Planejo jogar, Finalizado e mais),
-- loja,
-- gênero,
-- série,
-- ano de lançamento e outros campos.
+- Status, como Jogando, Em andamento, Planejo jogar ou Finalizado
+- Loja
+- Gênero
+- Série
+- Ano de lançamento ou outro campo
 
-Salve filtros e ordenações como **visões**, como *Jogando agora*, *Pendentes*, *Finalizados* ou *Favoritos*.
+Salve filtros e ordenações como **presets**, como *Jogando agora*, *Pendentes*, *Finalizados* ou *Favoritos*.
 
 ## Como pesquisar na Coleção?
 
@@ -94,10 +95,10 @@ A **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre qualquer página, e
 
 Capas, fundos e logos vêm das lojas e dos metadados da Steam e do Lutris. As descrições e as datas de lançamento também. Duas chaves gratuitas e opcionais acrescentam mais:
 
-- [SteamGridDB](https://www.steamgriddb.com) para capas da comunidade, boas para jogos de emulador e sem DRM,
-- [IGDB](https://www.igdb.com) para descrições, gêneros e séries.
+- [SteamGridDB](https://www.steamgriddb.com) para capas da comunidade, boas para jogos de emulador e sem DRM
+- [IGDB](https://www.igdb.com) para descrições, gêneros e séries
 
-Cada jogo mostra tempos do **How Long To Beat**, notas do **ProtonDB** no Linux, **status do anti-cheat** do Are We Anti-Cheat Yet? e **conquistas** da Steam e do RetroAchievements. Configure as chaves em [Metadados e imagens](/pt-br/docs/metadata-and-art/).
+Cada jogo mostra tempos do **How Long To Beat**, notas do **ProtonDB** no Linux, **status do anti-cheat** do Are We Anti-Cheat Yet? e **conquistas** da Steam e do RetroAchievements. Adicione as chaves em **Configurações → Metadados**; [Metadados e imagens](/pt-br/docs/metadata-and-art/) mostra o passo a passo.
 
 ## Posso fazer anotações sobre um jogo?
 

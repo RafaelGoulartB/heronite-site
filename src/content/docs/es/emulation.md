@@ -77,10 +77,14 @@ En el primer inicio, Heronite escanea estas carpetas si existen:
 
 Añade más carpetas en la página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>). Los escaneos omiten las carpetas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` y `manuals`. Heronite lee los juegos de varios discos a partir de archivos `.m3u`, `.cue` y `.gdi`, así que cada uno aparece una sola vez.
 
-## Continúa desde un estado guardado
+## Continúa una partida desde un estado guardado
 
-Abre la página del juego para continuar desde un estado guardado.
+1. Pulsa **Jugar** en el juego.
+2. En **¿Cómo quieres jugar?**, elige un estado guardado.
+3. Elige **Continuar**.
+
+Heronite solo pregunta cuando el emulador tiene estados guardados de ese juego. Para arrancar de forma normal, elige **Empezar desde el principio**; las partidas guardadas en tarjetas de memoria se conservan.
 
 ## Muestra los logros de RetroAchievements en juegos emulados
 
-Conecta una cuenta de [RetroAchievements](https://retroachievements.org) en Ajustes para ver tus logros de los juegos emulados. Consulta [Metadatos y arte](/es/docs/metadata-and-art/).
+Conecta tu cuenta de [RetroAchievements](https://retroachievements.org) en **Ajustes → Logros** para ver tus logros de los juegos emulados.

@@ -13,20 +13,20 @@ og: /og/emulation.jpg
 updated: 2026-11-04
 highlights:
   - title: 17 emuladores detectados
-    text: Añade cualquier otro emulador con su programa y sus argumentos.
+    text: RetroArch, Dolphin, PCSX2, Ryujinx y más, en el PATH o como Flatpak.
   - title: Escanea ROMs
-    text: Apunta a tus carpetas de ROMs y cada juego recibe su arte.
+    text: Indica tus carpetas de ROMs y cada juego recibe su arte.
   - title: Varios discos, unidos
     text: Los juegos de varios discos aparecen una vez, no una por disco.
   - title: Logros
     text: Conecta una cuenta de RetroAchievements para ver tu progreso en los juegos emulados.
 faq:
   - q: ¿Cuál es el mejor lanzador de ROMs para Linux?
-    a: Depende de lo que necesites. Heronite encaja si quieres tus juegos emulados junto a tus juegos de Steam, Epic y GOG. Es gratuito y de código abierto.
+    a: Depende de lo que necesites. Heronite encaja si quieres tus juegos emulados junto a tus juegos de Steam, Epic y GOG. Es gratis y de código abierto.
   - q: ¿Hay un frontend de RetroArch para Linux y Windows?
-    a: Sí. Heronite elige un núcleo por defecto para cada sistema. Mira los [núcleos por defecto](#qué-núcleo-de-retroarch-usa-heronite-para-cada-sistema).
+    a: Sí. Heronite encuentra RetroArch y sus núcleos, y elige un núcleo por defecto para cada sistema.
   - q: ¿Heronite incluye emuladores o ROMs?
-    a: No. Tú instalas los emuladores y traes tus ROMs.
+    a: No. Tú instalas los emuladores y pones tus ROMs.
   - q: ¿Puedo usar un emulador que no está en la lista?
     a: Sí. Añade un emulador personalizado indicando a Heronite el programa y sus argumentos.
 related:
@@ -35,19 +35,22 @@ related:
   - /features/stores/
 ---
 
-Los juegos emulados se unen a la misma biblioteca que tus juegos de PC, con tiempo de juego y una línea de tiempo de sesiones.
+Los juegos emulados entran en la misma biblioteca que tus juegos de PC, con tiempo de juego y una línea de tiempo de sesiones.
 
 ## ¿Cómo configuro la emulación en Heronite?
 
 1. [Descarga Heronite](/es/download/) para Linux o Windows.
 2. Instala los emuladores que quieras.
 3. Pon tus ROMs en una subcarpeta por sistema.
-4. Abre la página de **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>).
-5. Pulsa detectar para encontrar tus emuladores y luego escanea tus carpetas de ROMs.
+4. Abre la página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>).
+5. Elige **Detectar emuladores…** para encontrar los que tienes instalados.
+6. Pulsa **Añadir carpeta de ROMs** y elige el emulador y la carpeta con sus ROMs.
+
+Heronite escanea la carpeta y añade sus juegos. **Escanear todas las carpetas ahora** encuentra los juegos que añadas después.
 
 ## ¿Qué emuladores son compatibles con Heronite?
 
-Heronite admite los 17 emuladores de abajo y cualquiera personalizado. Instálalos desde tu distribución, Flathub o sus sitios web. Heronite los encuentra en el `PATH`, como Flatpaks y como núcleos de RetroArch.
+Heronite admite los 17 emuladores de abajo y cualquiera personalizado. Instálalos desde tu distribución, Flathub o sus sitios web. Heronite los encuentra en el `PATH`, como Flatpak y como núcleos de RetroArch.
 
 | Emulador | Sistemas |
 |---|---|
@@ -70,11 +73,11 @@ Heronite admite los 17 emuladores de abajo y cualquiera personalizado. Instálal
 | ScummVM | Juegos de aventura |
 | Personalizado | Cualquier otro emulador: indica el programa y sus argumentos |
 
-Si un juego no arranca, consulta la [solución de problemas](/es/docs/troubleshooting/).
+Si un juego no abre, mira la [solución de problemas](/es/docs/troubleshooting/).
 
 ## ¿Qué núcleo de RetroArch usa Heronite para cada sistema?
 
-RetroArch reproduce los sistemas mediante **núcleos** (cores). Heronite usa este núcleo por defecto para cada uno:
+RetroArch emula cada sistema con **núcleos** (cores). Heronite usa este núcleo por defecto para cada uno:
 
 | Sistema | Núcleo por defecto |
 |---|---|
@@ -101,7 +104,7 @@ Instala los núcleos desde el **Online Updater** de RetroArch. Heronite los busc
 
 ## ¿Dónde pongo mis ROMs?
 
-Mantén una subcarpeta por sistema:
+Usa una subcarpeta por sistema:
 
 ```
 ROMs/
@@ -110,17 +113,17 @@ ROMs/
 └── gba/
 ```
 
-En el primer inicio, Heronite escanea los lugares habituales si existen. En Linux incluye `ROMs`, `Emulation/roms` y `Games/ROMs` en tu carpeta personal, además de `retrodeck/roms` para RetroDECK. En Windows revisa carpetas como `ROMs`, `Emulation\roms` y `Games\ROMs` en tu carpeta de usuario y en la raíz de cada unidad. Mira las [carpetas de ROMs](/es/docs/emulation/#carpetas-de-roms).
+En el primer inicio, Heronite escanea las carpetas de ROMs más comunes si existen. En Linux son, entre otras, `ROMs`, `Emulation/roms` y `Games/ROMs` en tu carpeta personal, más `retrodeck/roms` para RetroDECK. En Windows son, entre otras, `ROMs`, `Emulation\roms` y `Games\ROMs` en tu carpeta de usuario y en la raíz de cada unidad.
 
-Para añadir más, añade una carpeta de ROMs en la página de **Emuladores**. Los escaneos omiten las carpetas llamadas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` y `manuals`.
+Las [carpetas de ROMs](/es/docs/emulation/#carpetas-de-roms) tienen la lista completa. Los escaneos se saltan las carpetas llamadas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` y `manuals`.
 
-## ¿Cómo se tratan los juegos de varios discos y los estados guardados?
+## ¿Cómo maneja Heronite los juegos de varios discos y los estados guardados?
 
-Los juegos leídos desde archivos `.m3u`, `.cue` y `.gdi` aparecen una sola vez en tu biblioteca, en lugar de una vez por disco. La página de un juego te permite continuar desde un **estado guardado**, para retomarlo donde lo dejaste.
+Los juegos leídos desde archivos `.m3u`, `.cue` y `.gdi` aparecen una sola vez en tu biblioteca, no una vez por disco. La página de un juego te deja continuar desde un **estado guardado**, para seguir donde lo dejaste.
 
 ## ¿Los juegos emulados tienen carátulas y logros?
 
-Sí. Todo juego añadido desde una carpeta de ROMs recibe arte como cualquier otro. Las carátulas de [SteamGridDB](https://www.steamgriddb.com) van bien con los juegos emulados. Añade su clave gratuita y opcional en Ajustes, como se explica en [Metadatos y arte](/es/docs/metadata-and-art/).
+Sí. Cada juego añadido desde una carpeta de ROMs recibe arte como cualquier otro. Las carátulas de [SteamGridDB](https://www.steamgriddb.com) quedan bien con los juegos emulados. Añade su clave gratuita y opcional en **Ajustes → Metadatos**, como explica [Metadatos y arte](/es/docs/metadata-and-art/).
 
 Para los logros, conecta una cuenta de [RetroAchievements](https://retroachievements.org) en Ajustes.
 

@@ -13,7 +13,7 @@ og: /og/emulation.jpg
 updated: 2026-11-04
 highlights:
   - title: 17 emuladores detectados
-    text: Adicione qualquer outro emulador com o programa e os argumentos dele.
+    text: RetroArch, Dolphin, PCSX2, Ryujinx e outros, achados no PATH ou como Flatpak.
   - title: Escaneia as ROMs
     text: Aponte as pastas de ROMs e cada jogo ganha capa.
   - title: Vários discos, um jogo só
@@ -24,7 +24,7 @@ faq:
   - q: Qual é o melhor launcher de ROMs para Linux?
     a: Depende do que você precisa. O Heronite serve se você quer os jogos de emulador ao lado dos da Steam, Epic e GOG. É grátis e de código aberto.
   - q: Existe um frontend de RetroArch para Linux e Windows?
-    a: Sim. O Heronite escolhe um core padrão para cada sistema. Veja os [cores padrão](#qual-core-do-retroarch-o-heronite-usa-para-cada-sistema).
+    a: Sim. O Heronite acha o RetroArch e os cores dele, e escolhe um core padrão para cada sistema.
   - q: O Heronite inclui emuladores ou ROMs?
     a: Não. Você instala os emuladores e traz as suas ROMs.
   - q: Posso usar um emulador que não está na lista?
@@ -43,7 +43,10 @@ Os jogos de emulador entram na mesma biblioteca dos seus jogos de PC, com tempo 
 2. Instale os emuladores que quiser.
 3. Coloque suas ROMs em uma subpasta por sistema.
 4. Abra a página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>).
-5. Aperte detectar para achar seus emuladores e depois escaneie suas pastas de ROMs.
+5. Escolha **Detectar emuladores…** para achar os que estão instalados no seu PC.
+6. Aperte **Adicionar pasta de ROMs** e escolha o emulador e a pasta com as ROMs dele.
+
+O Heronite escaneia a pasta e adiciona os jogos dela. **Escanear todas as pastas agora** pega os jogos que você adicionar depois.
 
 ## Quais emuladores o Heronite suporta?
 
@@ -70,7 +73,7 @@ O Heronite suporta os 17 emuladores abaixo e qualquer um personalizado. Instale-
 | ScummVM | Jogos de aventura |
 | Personalizado | Qualquer outro emulador: informe o programa e os argumentos dele |
 
-Se um jogo não iniciar, veja [Solução de problemas](/pt-br/docs/troubleshooting/).
+Se um jogo não abrir, veja [Solução de problemas](/pt-br/docs/troubleshooting/).
 
 ## Qual core do RetroArch o Heronite usa para cada sistema?
 
@@ -110,9 +113,9 @@ ROMs/
 └── gba/
 ```
 
-Na primeira execução, o Heronite escaneia os lugares de costume, se existirem. No Linux isso inclui `ROMs`, `Emulation/roms` e `Games/ROMs` na sua pasta pessoal, além de `retrodeck/roms` para o RetroDECK. No Windows ele confere pastas como `ROMs`, `Emulation\roms` e `Games\ROMs` na sua pasta de usuário e na raiz de cada unidade. Veja [pastas de ROMs](/pt-br/docs/emulation/#pastas-de-roms).
+Na primeira abertura, o Heronite escaneia as pastas de ROMs mais comuns, se existirem. No Linux elas incluem `ROMs`, `Emulation/roms` e `Games/ROMs` na sua pasta pessoal, além de `retrodeck/roms` para o RetroDECK. No Windows elas incluem `ROMs`, `Emulation\roms` e `Games\ROMs` na sua pasta de usuário e na raiz de cada unidade.
 
-Para adicionar mais, adicione uma pasta de ROMs na página **Emuladores**. O escaneamento ignora pastas chamadas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` e `manuals`.
+[Pastas de ROMs](/pt-br/docs/emulation/#pastas-de-roms) tem a lista completa. O escaneamento ignora pastas chamadas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` e `manuals`.
 
 ## Como ficam os jogos de vários discos e os save states?
 
@@ -120,7 +123,7 @@ Jogos lidos de arquivos `.m3u`, `.cue` e `.gdi` aparecem uma vez na sua bibliote
 
 ## Os jogos de emulador ganham capa e conquistas?
 
-Sim. Todo jogo adicionado de uma pasta de ROMs recebe arte como qualquer outro. As capas do [SteamGridDB](https://www.steamgriddb.com) combinam bem com jogos de emulador. Adicione a chave gratuita e opcional dele em Configurações, como descrito em [Metadados e imagens](/pt-br/docs/metadata-and-art/).
+Sim. Todo jogo adicionado de uma pasta de ROMs recebe arte como qualquer outro. As capas do [SteamGridDB](https://www.steamgriddb.com) combinam bem com jogos de emulador. Adicione a chave gratuita e opcional dele em **Configurações → Metadados**, como explica [Metadados e imagens](/pt-br/docs/metadata-and-art/).
 
 Para as conquistas, conecte uma conta do [RetroAchievements](https://retroachievements.org) em Configurações.
 

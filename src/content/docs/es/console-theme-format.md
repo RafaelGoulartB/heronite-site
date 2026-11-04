@@ -7,7 +7,7 @@ order: 5
 updated: 2026-11-04
 ---
 
-Un tema del modo consola es un único archivo JSON, `<id>.heronite-theme.json`. La forma más fácil de crear uno es hacerlo en Heronite (**Ajustes → Modo consola**) y luego usar **Exportar**. Esta página es para leer o editar el archivo a mano.
+Un tema del modo consola es un único archivo JSON, `<id>.heronite-theme.json`. La forma más fácil de crear uno es en **Ajustes → Modo consola** y luego **Exportar…**. Publica el tuyo en [Discusiones](https://github.com/RafaelGoulartB/Heronite/discussions) para que otros puedan importarlo.
 
 ## Reglas del archivo
 
@@ -57,17 +57,17 @@ Hasta cuatro pestañas, que se cambian con LB / RB. Cada una es `{ "name", "layo
 
 - **`layout`:** `shelves`, `spotlight`, `cinema`, `dashboard`, `grid`, `wheel`, `carousel` o `xbox` (el diseño Series X).
 - **`source`** (qué juegos muestra la pestaña):
-  - `all`, `installed`, `not-installed`, `favourites`, `pc`, `emulated`,
-  - `status:<id>`, `category:<name>`, `store:<name>`, `platform:<name>`.
+  - `all`, `installed`, `not-installed`, `favourites`, `pc`, `emulated`
+  - `status:<id>`, `category:<name>`, `store:<name>`, `platform:<name>`
 
 ### `shelves`
 
 Las filas del diseño Estanterías. Cada una es `{ "kind", "on", "title" }`.
 
 - **`kind`:**
-  - `recent`, `favourites`, `installed`, `added`, `backlog-short`, `random`, `forgotten`, `statuses`,
-  - o un grupo: `status:<id>`, `store:<name>`, `platform:<name>`, `genre:<name>`, `category:<name>`.
-- **`on`:** `true` o `false`.
+  - `recent`, `favourites`, `installed`, `added`, `backlog-short`, `random`, `forgotten`, `statuses`
+  - Un grupo: `status:<id>`, `store:<name>`, `platform:<name>`, `genre:<name>`, `category:<name>`
+- **`on`:** `true` o `false`
 
 `shelfLimit` define cuántos juegos muestra cada estante.
 
@@ -151,17 +151,14 @@ Las filas del diseño Estanterías. Cada una es `{ "kind", "on", "title" }`.
 
 ### `layouts`
 
-Opciones de cada diseño:
+Opciones de diseños concretos:
 
-- `gridPanel`: `title` o `right`,
-- `wheelItems`: `name` o `logo`,
-- `spotlightActions`: `full` o `play`,
-- también `jumpLetters`, `spotlightCards`, `carouselReflect`, `xboxGroups` y `dashboard` (`week`, `downloads`, `random`, `journal`, `shortcuts`).
+- `gridPanel`: `title` o `right`
+- `wheelItems`: `name` o `logo`
+- `spotlightActions`: `full` o `play`
+- `jumpLetters`, `spotlightCards`, `carouselReflect`, `xboxGroups`
+- `dashboard`: `week`, `downloads`, `random`, `journal`, `shortcuts`
 
 ## Lo que un tema no incluye
 
-Lo que ocurre cuando se conecta un mando, cómo se abre Heronite y qué hace cuando está inactivo son ajustes de tu PC, no del tema, así que no están en el archivo.
-
-## Comparte tu tema
-
-Publica tu tema en [Discusiones](https://github.com/RafaelGoulartB/Heronite/discussions) para que otros puedan importarlo.
+El archivo deja fuera qué pasa cuando se conecta un mando, cómo se abre Heronite y qué hace cuando está inactivo. Son ajustes de tu PC, no del tema.

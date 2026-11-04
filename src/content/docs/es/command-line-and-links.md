@@ -13,14 +13,14 @@ Inicia Heronite desde scripts con opciones como `--launch`. El programa se llama
 
 | Opción | Qué hace |
 |---|---|
-| `--launch <game>` | Inicia un juego (ver más abajo) |
-| `--no-gui` | Junto con `--launch`: sin ventana; Heronite se cierra cuando termina el juego |
-| `--console` | Se abre en el [modo consola](/es/docs/console-mode/) |
-| `--fullscreen` | Se abre en pantalla completa (<kbd>F11</kbd> vuelve atrás) |
-| `--autostart` | Lo usa "Iniciar con el sistema"; solo entonces se aplica "Iniciar minimizado" |
+| `--launch <juego>` | Inicia un juego (ver más abajo) |
+| `--no-gui` | Con `--launch`: sin ventana; Heronite se cierra cuando termina el juego |
+| `--console` | Abre en el [modo consola](/es/docs/console-mode/) |
+| `--fullscreen` | Abre en pantalla completa (<kbd>F11</kbd> vuelve atrás) |
+| `--autostart` | Lo usa **Iniciar con el sistema** en **Ajustes → General**; solo entonces se aplica **Iniciar minimizado** |
 | `-h`, `--help` | Muestra las opciones |
 
-Solo se ejecuta un Heronite a la vez: si lo inicias de nuevo, la petición (como `--launch`) pasa al que ya está en marcha.
+Solo se ejecuta un Heronite a la vez: si lo abres otra vez, la petición (como `--launch`) pasa al que ya está abierto.
 
 ## Inicia un juego desde la línea de comandos
 
@@ -40,27 +40,25 @@ heronite-rs --launch legendary_Fortnite --no-gui
 | `nile` | Amazon Games |
 | `sideload` | Juegos que añadiste tú |
 
-Los accesos directos que crea Heronite (escritorio, menú de inicio, Steam) ya llevan el comando correcto, así que esto sirve sobre todo para scripts.
+Los accesos directos que crea Heronite (escritorio, menú Inicio, Steam) ya llevan el comando correcto, así que esto sirve sobre todo para scripts.
 
 ## Inicia un juego con un enlace `heronite://`
 
 ```
-heronite://launch/<game>
-heronite://launch/<store>/<game>
-heronite://launch?appName=<game>&runner=<store>
+heronite://launch/<juego>
+heronite://launch/<tienda>/<juego>
+heronite://launch?appName=<juego>&runner=<tienda>
 ```
 
 La forma con parámetros también acepta:
 
-- `arg=<value>`: un argumento para el juego (repítelo para añadir más),
-- `gui=false`: inicia el juego sin mostrar la ventana de Heronite.
+- `arg=<valor>`: un argumento para el juego (repítelo para añadir más)
+- `gui=false`: inicia sin mostrar la ventana de Heronite
 
-Los nombres con espacios se escriben con `%20` (`My%20Game`). El ajuste "Ocultar la ventana en inicios con heronite://" oculta la ventana en todos los enlaces.
+Escribe los espacios de los nombres como `%20` (`My%20Game`). Para ocultar la ventana en todos los enlaces, activa **Ocultar la ventana en inicios con heronite://**. El esquema antiguo `heronite-rs://` sigue funcionando.
 
-**Dónde funcionan los enlaces:**
+### Dónde funcionan los enlaces heronite://
 
-- **Instalador de Windows:** se registran para tu usuario en cada inicio.
-- **Windows portable:** no se registran, así que la copia no deja rastro en el PC.
-- **Linux:** los registra `scripts/install.sh` cuando compilas desde el código fuente.
-
-El esquema antiguo `heronite-rs://` sigue funcionando.
+- **Instalador de Windows:** se registran para tu usuario en cada inicio
+- **Windows portable:** no se registran, así que la copia no deja rastro en el PC
+- **Linux:** los registra `scripts/install.sh` cuando compilas desde el código fuente

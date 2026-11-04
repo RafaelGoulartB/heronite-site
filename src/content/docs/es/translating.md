@@ -7,7 +7,7 @@ order: 1
 updated: 2026-11-04
 ---
 
-Heronite está disponible en inglés, portugués (Brasil), español y alemán. Se agradecen las correcciones y los idiomas nuevos: solo editas archivos JSON.
+Heronite está en inglés, portugués (Brasil), español y alemán. Las correcciones y los idiomas nuevos son bienvenidos: solo editas archivos JSON.
 
 ## ¿Cómo funcionan los archivos de idioma?
 
@@ -39,20 +39,16 @@ Cada archivo es un objeto plano que va del texto en inglés a la traducción:
 
 ## Corrige una traducción
 
-Edita el archivo JSON y abre un pull request. No hace falta saber programar.
+1. Busca el texto en inglés en los archivos JSON de tu idioma y edita la traducción.
+2. Ejecuta la comprobación. Muestra las claves que faltan o sobran y los marcadores que no coinciden:
 
-## Comprueba tu traducción
+   ```bash
+   HERONITE_I18N_MISSING=1 cargo test -p heronite-i18n --test coverage -- --nocapture
+   ```
 
-```bash
-HERONITE_I18N_MISSING=1 cargo test -p heronite-i18n --test coverage -- --nocapture
-```
-
-Esto muestra las claves que faltan o sobran y los marcadores que no coinciden.
-
-Para ver tu idioma en la app, elígelo en **Ajustes → General → Idioma**.
+3. Para verlo en la app, [compila Heronite](https://github.com/RafaelGoulartB/Heronite/blob/main/CONTRIBUTING.md) y elige tu idioma en **Ajustes → General → Idioma**.
+4. Abre un pull request.
 
 ## Añade un idioma nuevo
 
 Copia una de las carpetas a una nueva con el código del idioma (como `fr` o `it`) y traduce sus archivos. Un idioma nuevo también necesita unas pocas líneas de código en `crates/i18n/src/lib.rs` (su nombre y su código). Si no te sientes cómodo con Rust, abre el pull request con la traducción y pide ayuda ahí.
-
-Consulta [CONTRIBUTING.md](https://github.com/RafaelGoulartB/Heronite/blob/main/CONTRIBUTING.md) para compilar Heronite.

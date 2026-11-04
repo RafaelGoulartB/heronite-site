@@ -1,13 +1,13 @@
 ---
 title: "Wine y Proton en Linux: juegos de Windows"
 navLabel: "Wine y Proton"
-description: "Juega a juegos de Windows en Linux con Heronite: Gestor de Wine, versiones de Proton, prefijos, opciones por juego como DXVK y gamescope, sandbox y anticheat."
+description: "Wine y Proton en Linux con Heronite para juegos de Windows: Gestor de Wine, versiones de Proton, prefijos, DXVK y gamescope por juego, sandbox y anticheat."
 section: Guides
 order: 3
 updated: 2026-11-04
 ---
 
-Heronite ejecuta los juegos de Windows en Linux con Wine o Proton. Cambia cualquier opción de abajo por juego en **Ajustes del juego → Compatibilidad**, o para todos los juegos en Ajustes.
+Heronite ejecuta los juegos de Windows en Linux con Wine o Proton. Cambia cualquier opción de abajo por juego en **Ajustes del juego → Compatibilidad**, o para todos los juegos en Ajustes. Cuando un juego no abre, Heronite sugiere una solución: consulta [Solución de problemas](/es/docs/troubleshooting/#un-juego-no-abre-linux).
 
 ## Descarga versiones de Proton en el Gestor de Wine
 
@@ -24,13 +24,13 @@ Las versiones van a la carpeta de datos de Heronite (`~/.local/share/heronite/to
 
 ## Dónde se guardan los juegos y los prefijos de Wine
 
-Un prefijo es la carpeta de Windows simulada en la que se ejecuta un juego. Por defecto:
+Un prefijo de Wine es la unidad de Windows propia de un juego, con sus ajustes, sus partidas y lo que instala Winetricks. Por defecto:
 
-- los juegos se instalan en `~/Games/Heronite`,
-- cada juego tiene su propio prefijo en `~/Games/Heronite/Prefixes`,
-- o varios juegos pueden compartir `~/Games/Heronite/Prefixes/shared`.
+- Los juegos se instalan en `~/Games/Heronite`
+- Cada juego tiene su propio prefijo en `~/Games/Heronite/Prefixes`
+- Varios juegos pueden compartir `~/Games/Heronite/Prefixes/shared`, pero entonces pueden romper las dependencias de los otros
 
-El Gestor de Wine lista tus prefijos. **Ajustes del juego → Compatibilidad** tiene botones de Winecfg y Winetricks para el prefijo del juego.
+El Gestor de Wine lista tus prefijos. En **Ajustes del juego → Compatibilidad**, el menú **Prefijo** elige el prefijo del juego o crea un **Nuevo prefijo para este juego**. Los botones **Winecfg** y **Winetricks** de ahí actúan sobre ese prefijo.
 
 ## Opciones por juego
 
@@ -39,23 +39,19 @@ El Gestor de Wine lista tus prefijos. **Ajustes del juego → Compatibilidad** t
 - Esync y Fsync
 - gamescope (necesita `gamescope` instalado)
 - Límite de FPS
-- Elección de GPU en PCs con más de una
+- Elección de GPU en PC con más de una
 - Mejoras con DLSS, FSR y XeSS
 - Winetricks
 - umu y sus protonfixes (correcciones de juegos de la base de datos de umu)
-- Generación de fotogramas de Lossless Scaling mediante [lsfg-vk](https://github.com/PancakeTAS/lsfg-vk) (necesita Lossless Scaling de Steam; funciona con juegos de Vulkan, DXVK y VKD3D, no con OpenGL)
-- Wayland en lugar de X11 (necesita una versión de Wine con compatibilidad con Wayland)
+- Generación de fotogramas de Lossless Scaling con [lsfg-vk](https://github.com/PancakeTAS/lsfg-vk) (necesita Lossless Scaling de Steam; funciona con juegos de Vulkan, DXVK y VKD3D, no con OpenGL)
+- Wayland en lugar de X11 (necesita una versión de Wine compatible con Wayland)
 - Scripts que se ejecutan antes y después del juego, y programas que se ejecutan junto a él (como trainers)
 - Presets de inicio para reutilizar en otros juegos
 
 ## Sandbox
 
-Ejecuta un juego en el que no confías con [bubblewrap](https://github.com/containers/bubblewrap): sin red y sin acceso a tu carpeta personal. Permite una carpeta o la red cuando el juego lo necesite. Necesita `bwrap` instalado.
-
-## Un juego de Windows no arranca
-
-Heronite lee el log de inicio y sugiere una solución cuando reconoce el problema. Consulta las [causas y soluciones en Solución de problemas](/es/docs/troubleshooting/#un-juego-no-arranca-linux).
+Para ejecutar un juego en el que no confías, activa **Ejecutar en un sandbox** en **Ajustes del juego → Sandbox**. El juego se ejecuta entonces con [bubblewrap](https://github.com/containers/bubblewrap) (`bwrap`, del paquete `bubblewrap`), sin red y sin acceso a tu carpeta personal. Permite la red o una carpeta en **Excepciones** cuando el juego lo necesite.
 
 ## Anticheat
 
-Heronite muestra en los detalles de cada juego su estado de anticheat, tomado de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com). Heronite puede proporcionar los runtimes de EAC y BattlEye, pero un juego cuyo desarrollador no permite Linux no funcionará.
+Heronite muestra en los detalles de cada juego su estado de anticheat, tomado de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com). Si el juego funciona en Linux, activa **BattlEye** o **Easy Anti-Cheat** en **Runtimes de anti-cheat**, en **Ajustes del juego → Compatibilidad**; Heronite lo descarga antes de la próxima vez que abras el juego. Un juego cuyo desarrollador no permite Linux no funcionará, con ningún ajuste.

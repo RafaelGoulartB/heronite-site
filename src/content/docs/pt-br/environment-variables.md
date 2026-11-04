@@ -1,23 +1,24 @@
 ---
 title: "Variáveis de ambiente HERONITE_* do Heronite"
 navLabel: "Variáveis de ambiente"
-description: "Variáveis de ambiente HERONITE_*: use outra pasta de dados, indique a Steam e desligue atualizações, bandeja, controle ou animações."
+description: "As variáveis de ambiente HERONITE_*: use outra pasta de dados, indique onde está a Steam e desligue atualizações, bandeja, controle ou animações."
 section: Reference
 order: 4
 updated: 2026-11-04
 ---
 
-As opções `HERONITE_*` ficam ligadas quando definidas com qualquer valor, exceto vazio ou `0`.
+Defina estas variáveis de ambiente antes de abrir o Heronite. Uma opção `HERONITE_*` fica ligada quando tem qualquer valor, menos vazio ou `0`.
 
-## Mude as pastas de dados, de logs e da Steam
+## Mudar pastas e detalhes do log
 
 | Variável | O que faz |
 |---|---|
-| `HERONITE_DATA_DIR=<folder>` | Usa outra pasta de dados. A configuração e o cache ficam ao lado dela, em `<folder>.heronite/`. Útil para uma segunda Coleção, separada. |
-| `HERONITE_LOG_DIR=<folder>` | Grava os logs em outra pasta |
-| `HERONITE_STEAM_DIR=<folder>` | Onde a Steam está, quando o Heronite não a encontra |
+| `HERONITE_DATA_DIR=<pasta>` | Usa outra pasta de dados, para uma segunda Coleção, separada. A configuração e o cache ficam ao lado dela, em `<pasta>.heronite/`. |
+| `HERONITE_LOG_DIR=<pasta>` | Grava os logs em outra pasta |
+| `HERONITE_STEAM_DIR=<pasta>` | Onde a Steam está, quando o Heronite não encontra |
+| `RUST_LOG=debug` | Mais detalhes no log (`trace` para tudo) |
 
-## Desligue recursos
+## Desligar recursos
 
 | Variável | O que faz |
 |---|---|
@@ -26,24 +27,20 @@ As opções `HERONITE_*` ficam ligadas quando definidas com qualquer valor, exce
 | `HERONITE_NO_GAMEPAD` | Sem entrada de controle no modo console |
 | `HERONITE_NO_ANIMATIONS` | Sem animações |
 | `HERONITE_NO_SINGLE_INSTANCE` | Permite mais de um Heronite ao mesmo tempo |
-| `HERONITE_NO_ONBOARDING` | Pula a configuração inicial |
-| `HERONITE_DISABLE_IDLE_JOBS` | Sem trabalho em segundo plano quando ocioso |
+| `HERONITE_NO_ONBOARDING` | Pula a configuração da primeira abertura |
+| `HERONITE_DISABLE_IDLE_JOBS` | Sem trabalho em segundo plano quando o PC está parado |
 | `HERONITE_DISABLE_TOOLS_UPDATE` | Não atualiza DXVK, Winetricks e umu em segundo plano |
 | `HERONITE_WINE_OFFLINE` | Sem rede para o Gerenciador do Wine (Linux) |
 
-## Use seu próprio legendary, gogdl ou nile
+## Usar seu próprio legendary, gogdl ou nile
+
+O Heronite baixa essas ferramentas das lojas. Para usar a sua cópia, defina:
 
 | Variável | O que faz |
 |---|---|
-| `HERONITE_LEGENDARY_BIN=<path>` | Usa este legendary em vez do baixado |
-| `HERONITE_GOGDL_BIN=<path>` | Usa este gogdl |
-| `HERONITE_NILE_BIN=<path>` | Usa este nile |
-
-## Veja mais detalhes no log
-
-| Variável | O que faz |
-|---|---|
-| `RUST_LOG=debug` | Mais detalhes no log (`trace` para tudo) |
+| `HERONITE_LEGENDARY_BIN=<caminho>` | Usa este legendary (a ferramenta da Epic) |
+| `HERONITE_GOGDL_BIN=<caminho>` | Usa este gogdl (a ferramenta da GOG) |
+| `HERONITE_NILE_BIN=<caminho>` | Usa este nile (a ferramenta da Amazon Games) |
 
 ## Variáveis que o Heronite define para scripts de jogo
 
@@ -59,6 +56,4 @@ Scripts que rodam antes ou depois de um jogo, e programas que rodam junto com el
 | `HERONITE_GAME_PREFIX` | O prefixo Wine dele (Linux) |
 | `HERONITE_GAME_SCRIPT_TYPE` | Qual é este script (antes ou depois) |
 
-Os mesmos valores também são definidos como `HEROIC_GAME_*`, então scripts escritos para o Heroic continuam funcionando.
-
-Dentro do [sandbox](/pt-br/docs/wine-and-proton/#sandbox), a variável `HERONITE_SANDBOX` é definida.
+O Heronite define os mesmos valores como `HEROIC_GAME_*`, então scripts feitos para o Heroic continuam funcionando. Dentro do [sandbox](/pt-br/docs/wine-and-proton/#sandbox), ele também define `HERONITE_SANDBOX`.
