@@ -1,5 +1,6 @@
 ---
 title: "Heronite keyboard shortcuts"
+navLabel: "Keyboard shortcuts"
 description: "Every Heronite keyboard shortcut: switching pages, the command palette, the Collection, search, settings, screenshots and the in-game overlay."
 section: Reference
 order: 1

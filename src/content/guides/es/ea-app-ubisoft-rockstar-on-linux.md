@@ -1,54 +1,50 @@
 ---
-title: "EA app, Ubisoft Connect y Rockstar en Linux (Wine)"
-description: "Instala la EA app, Ubisoft Connect y el Rockstar Games Launcher en Linux con Heronite. Cada uno usa su prefijo de Wine y sus juegos se unen a tu Colección."
+title: "EA app, Ubisoft Connect y Rockstar en Linux"
+description: "Cómo instalar la EA app, Ubisoft Connect y el Rockstar Games Launcher en Linux con Wine y Proton, y qué juegos bloquea el anticheat."
 eyebrow: Guía de Linux
-headline: "*EA app*, *Ubisoft Connect* y *Rockstar* en Linux"
-lead: "Heronite instala cada uno de estos launchers en su propio prefijo de Wine y muestra en tu Colección los juegos que instales. Así se configuran y esto es lo que bloquea el anticheat."
+headline: "EA app, Ubisoft Connect y Rockstar en Linux"
+lead: "La EA app, Ubisoft Connect y Rockstar no tienen versión para Linux, pero los tres funcionan con Wine. Heronite instala cada uno desde la página Tiendas, en su propio prefijo de Wine."
 navLabel: EA, Ubisoft y Rockstar en Linux
 summary: "Instala cada launcher desde la página Tiendas, inicia sesión en él, instala juegos y juégalos desde la Colección."
 order: 6
 hero: ../../../assets/screenshots/game-settings.webp
 heroAlt: "Los Ajustes del juego de Heronite en la pestaña Compatibilidad: la versión de Proton, su valoración de ProtonDB, la carpeta del prefijo de Wine y los botones Winecfg y Winetricks."
 og: /og/ea-app-ubisoft-rockstar-on-linux.jpg
-updated: 2026-11-01
+updated: 2026-11-04
 highlights:
   - title: "Un botón para cada uno"
-    text: "En la página Tiendas, elige el launcher e Instalar. Heronite lo instala con Wine y tu Proton por defecto."
+    text: "Elige un launcher en la página Tiendas y Heronite lo instala con Wine y tu Proton por defecto."
   - title: "Un prefijo para cada uno"
-    text: "Cada launcher tiene su propia carpeta en ~/Games/Heronite/Prefixes, así que no se rompen entre sí."
+    text: "Cada launcher tiene su propia carpeta en ~/Games/Heronite/Prefixes."
   - title: "Inicia sesión dentro de la app"
-    text: "Inicias sesión en el propio launcher. Heronite nunca ve tu contraseña."
+    text: "Heronite nunca ve tu contraseña."
   - title: "Conoce los límites del anticheat"
-    text: "Algunos juegos, como Apex Legends, Rainbow Six Siege y GTA Online, están bloqueados en Linux."
+    text: "Apex Legends, Rainbow Six Siege y GTA Online están bloqueados en Linux."
 faq:
   - q: "¿Puedo usar la EA app en Linux?"
-    a: "Sí, con Wine o Proton. Heronite descarga el instalador oficial e instala la EA app en un prefijo de Wine propio. Muchos juegos de EA funcionan, pero Battlefield 6, Battlefield 2042, Apex Legends y EA SPORTS FC usan anticheats que bloquean Linux."
+    a: "Sí, con Wine o Proton, pero el anticheat bloquea varios juegos de EA. Mira [¿Qué juegos bloquea el anticheat?](#qué-juegos-bloquea-el-anticheat)"
   - q: "¿Funciona Ubisoft Connect en Linux?"
-    a: "Sí, como app de Windows con Wine. Los juegos de Ubisoft varían mucho, así que revisa cada uno en [ProtonDB](https://www.protondb.com). Rainbow Six Siege bloquea Linux, y algunos juegos necesitan otra versión de Proton, que cambias en los ajustes de Wine del juego."
+    a: "Sí, como app de Windows con Wine. Revisa cada juego en [ProtonDB](https://www.protondb.com). Rainbow Six Siege bloquea Linux."
   - q: "¿Puedo jugar a GTA V o Red Dead Redemption 2 en Linux?"
-    a: "GTA Online y Red Dead Online están bloqueados por BattlEye en Linux. Los modos historia funcionan con el Rockstar Games Launcher. Mira la página de ProtonDB del juego para saber qué tan bien funciona cada uno."
+    a: "Los modos historia funcionan con el Rockstar Games Launcher. BattlEye bloquea GTA Online y Red Dead Online en Linux."
   - q: "¿Funciona esto en Windows?"
-    a: "No. Las páginas de la EA app, Ubisoft Connect y Rockstar son solo para Linux en Heronite. En Windows, usa las apps de las propias tiendas."
+    a: "No. Estas páginas son solo para Linux en Heronite. En Windows, usa las apps de las propias tiendas."
   - q: "¿Puedo usar un launcher que ya instalé en Wine?"
-    a: "Sí. Elige **Usar una instalación existente** en la página del launcher y apunta Heronite al prefijo de Wine que ya tienes."
+    a: "Sí. Elige **Usar una instalación existente** en la página del launcher y apunta Heronite a tu prefijo de Wine."
 related:
   - /guides/battle-net-on-linux/
   - /guides/install-ge-proton/
   - /features/stores/
 ---
 
-La EA app, Ubisoft Connect y el Rockstar Games Launcher son programas de Windows y ninguno tiene versión para Linux. Sí funcionan con Wine, y Heronite se encarga de la configuración. Cada uno tiene su propio prefijo de Wine, y los juegos que instalas en él aparecen en tu Colección junto a todo lo demás.
-
-Esta guía cubre los tres, porque los pasos son los mismos. También lista lo que bloquea el anticheat, para que no instales un juego que no puede funcionar.
-
 ## Qué necesitas
 
 - Un PC con Linux de 64 bits y un controlador de Vulkan que funcione, además del controlador de Vulkan de 32 bits para los juegos antiguos.
 - Una cuenta de cada launcher que quieras usar.
-- Conexión a internet. Heronite descarga una versión de Proton si no tienes ninguna, y luego el instalador del launcher.
-- Espacio libre en disco. Cada launcher y sus juegos ocupan bastante.
+- Conexión a internet. Heronite descarga un Proton si no tienes ninguno, y luego el instalador del launcher.
+- Espacio libre en disco para cada launcher y sus juegos.
 
-## Paso 1: Instala Heronite
+## Instala Heronite
 
 Descarga el AppImage desde la [página de descarga](/es/download/):
 
@@ -57,17 +53,17 @@ chmod +x Heronite-x86_64.AppImage
 ./Heronite-x86_64.AppImage
 ```
 
-Hay otros formatos en la [guía de instalación](/es/docs/installation/). Comprueba que `vulkaninfo --summary` muestra tu GPU. Si no, instala primero el controlador de Vulkan de tu distribución.
+Los demás formatos están en la [guía de instalación](/es/docs/installation/). En Steam Deck, sigue la [guía de Steam Deck](/es/guides/steam-deck/).
 
-## Paso 2: Instala el launcher
+## Instala el launcher
+
+Los pasos son los mismos para los tres.
 
 1. Pulsa <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Tiendas**.
 2. En la lista de la izquierda, bajo **Apps de las tiendas**, elige **EA app**, **Ubisoft Connect** o **Rockstar Games Launcher**.
-3. Elige **Instalar** seguido de su nombre, como **Instalar EA app** («Descargar su instalador e instalarlo con Wine»).
+3. Elige **Instalar** seguido de su nombre, como **Instalar EA app**.
 
-Heronite busca o descarga un Proton, descarga el instalador oficial, crea el prefijo de Wine e instala el launcher. La página muestra el progreso. Puede tardar unos minutos. Cuando termina, la página dice **Listo**.
-
-Cada launcher vive en su propio prefijo:
+Heronite busca o descarga un Proton, descarga el instalador oficial, crea el prefijo de Wine e instala el launcher. Cuando termina, la página dice **Listo**.
 
 | Launcher | Prefijo |
 |---|---|
@@ -77,65 +73,44 @@ Cada launcher vive en su propio prefijo:
 
 > **Nota.** Si ya usas uno de estos launchers en un prefijo de Wine, elige en su lugar **Usar una instalación existente** y apunta Heronite a ese prefijo.
 
-## Paso 3: Inicia sesión e instala juegos
+## Inicia sesión e instala juegos
 
-1. Elige **Abrir** seguido de su nombre, como **Abrir Ubisoft Connect** («Inicia sesión e instala juegos»).
-2. Inicia sesión en la ventana del propio launcher. Heronite nunca ve tu contraseña.
+1. Elige **Abrir** seguido de su nombre, como **Abrir Ubisoft Connect**.
+2. Inicia sesión en la ventana del launcher. Heronite nunca ve tu contraseña.
 3. Instala un juego en el launcher, como lo harías en Windows.
 
-Heronite muestra **Conectado** en su página cuando ya has iniciado sesión. Los juegos que tienes pero no has instalado aparecen en la Colección con un botón de instalar que abre el launcher, como **Instalar con EA app**, **Instalar con Ubisoft Connect** o **Instalar con Rockstar Games Launcher**.
+Heronite muestra **Conectado** en su página cuando ya has iniciado sesión. Un juego que no has instalado muestra **Instalar con EA app**, **Instalar con Ubisoft Connect** o **Instalar con Rockstar Games Launcher** en la Colección. Eso abre el launcher.
 
-## Paso 4: Juega desde la Colección
+## Juega desde la Colección
 
-Los juegos instalados entran solos en la Colección. Si falta alguno, usa el botón de actualizar en la página del launcher para traer sus juegos instalados. Pulsa <kbd>Enter</kbd> sobre un juego para iniciarlo. Heronite registra el tiempo de juego como con cualquier juego.
+Los juegos instalados entran en la Colección. Si falta alguno, usa el botón de actualizar en la página del launcher. Pulsa <kbd>Enter</kbd> sobre un juego para iniciarlo.
 
-Antes de instalar un juego grande, revisa el recuadro **En Linux** en sus detalles. Muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado del anticheat de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com).
+Antes de instalar un juego grande, mira el recuadro **En Linux** en sus detalles: muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado del anticheat. Gold y Platinum son las más seguras. Si dudas, instala primero un juego pequeño para probar tu configuración.
 
-## Qué bloquea el anticheat
+## ¿Qué juegos bloquea el anticheat?
 
-Este es el límite real con estos launchers. Las propias páginas de Heronite para ellos avisan de los casos más conocidos:
+Los juegos para un jugador y los multijugador antiguos sin anticheat a nivel de kernel son los que más probablemente funcionen. En los demás, el anticheat es el límite real. Los casos más conocidos:
 
 - **EA app.** Battlefield 6, Battlefield 2042, Apex Legends y EA SPORTS FC usan anticheats que bloquean Linux.
 - **Ubisoft Connect.** Rainbow Six Siege bloquea Linux. Algunos otros juegos necesitan una versión de Proton distinta.
-- **Rockstar Games Launcher.** GTA Online y Red Dead Online están bloqueados por BattlEye en Linux. Los modos historia funcionan.
+- **Rockstar Games Launcher.** BattlEye bloquea GTA Online y Red Dead Online en Linux. Los modos historia funcionan.
 
-Un juego que el desarrollador no permite en Linux no se ejecutará, pruebes el Proton que pruebes. Los juegos para un jugador son la apuesta segura. El estado del anticheat puede cambiar, así que consulta el estado actual en [Are We Anti-Cheat Yet?](https://areweanticheatyet.com).
+Un juego que su desarrollador no permite en Linux no se ejecutará. El estado cambia, así que consulta [Are We Anti-Cheat Yet?](https://areweanticheatyet.com). Mira [Anticheat](/es/docs/wine-and-proton/#anticheat) para saber más.
 
-## Cambiar Wine o Proton de un launcher
+## Cambia la versión de Proton de un launcher
 
-Heronite usa tu Proton por defecto. Si un launcher o un juego da problemas, abre **Ajustes de Wine** en la página del launcher y elige otra versión. [GE-Proton y Proton-CachyOS](/es/guides/install-ge-proton/) son las que se suelen probar. Puedes abrir la carpeta del prefijo de Wine desde la misma página.
+Heronite usa tu Proton por defecto. Si un launcher o un juego da problemas, abre **Ajustes de Wine** en la página del launcher y elige otra versión de Proton. [GE-Proton y Proton-CachyOS](/es/guides/install-ge-proton/) son las que se suelen probar. **Abrir carpeta** en la misma página abre el prefijo.
 
-Elige **Cerrar** seguido del nombre del launcher para detenerlo y lo que se ejecuta en su prefijo. Si hay un juego en ejecución, ciérralo primero.
+Para detener un launcher y todo lo que se ejecuta en su prefijo, cierra cualquier juego en ejecución y elige **Cerrar** seguido del nombre del launcher.
 
-## Qué juegos probar primero
+## Quita un launcher
 
-Empieza por los juegos para un jugador y los multijugador antiguos sin anticheat a nivel de kernel. Son los que más probablemente funcionen bien. Mira tres cosas antes de instalar:
+Elige **Quitar de Heronite** en su página. El prefijo de Wine y sus juegos se quedan en el disco, así que puedes volver a añadirlo más tarde con **Usar una instalación existente**. Borra la carpeta del prefijo para liberar el espacio.
 
-1. La valoración de ProtonDB en los detalles. Gold y Platinum son las más seguras.
-2. El estado del anticheat. No vale la pena descargar un juego que el desarrollador no permite en Linux.
-3. El espacio en disco. Estos juegos suelen ser grandes, y Wine necesita espacio además.
-
-Si dudas, instala primero un juego pequeño. Así compruebas que el launcher, el prefijo de Wine y tus controladores funcionan, antes de comprometerte con una descarga de 100 GB.
-
-## Quitar un launcher
-
-Si dejas de usar uno, elige **Quitar de Heronite** en su página. Su prefijo de Wine y los juegos instalados en él se quedan en el disco, así que puedes volver a añadirlo más tarde con **Usar una instalación existente**. Borra tú mismo la carpeta del prefijo para liberar el espacio.
-
-## Solución de problemas
+## Un launcher no deja iniciar sesión o un juego se cierra al arrancar
 
 - **La instalación falla.** Comprueba tu conexión y vuelve a intentarlo. Los logs están en **Ajustes → Logs**.
-- **El launcher se abre pero no deja iniciar sesión o se cierra con un error.** Prueba otra versión de Proton en **Ajustes de Wine**, o un prefijo nuevo.
-- **«Vulkan no pudo iniciarse».** Suele faltar el controlador de Vulkan de 32 bits. Instálalo para tu GPU, por ejemplo `lib32-vulkan-radeon` o `mesa-vulkan-drivers:i386`.
-- **Hay otro `wineserver` en ejecución.** Cierra el otro juego o ejecuta `wineserver -k` en ese prefijo.
-- **Falta una DLL o .NET.** Instálalo con Winetricks. Heronite indica cuál.
-- **Un juego no aparece.** Usa el botón de actualizar en la página del launcher.
+- **El launcher no deja iniciar sesión o se cierra con un error.** Prueba otra versión de Proton en **Ajustes de Wine**, o un prefijo nuevo.
 - **Un juego se cierra al arrancar.** Lee su log de inicio en **Ajustes → Logs** y revisa ProtonDB.
 
-Hay más ayuda en [Solución de problemas](/es/docs/troubleshooting/).
-
-## Qué leer a continuación
-
-- [Battle.net en Linux](/es/guides/battle-net-on-linux/), que funciona igual.
-- [Cómo instalar GE-Proton](/es/guides/install-ge-proton/), las versiones que arreglan más juegos.
-- [Cómo funcionan las tiendas en Heronite](/es/features/stores/).
-- [Tiendas y launchers](/es/docs/stores-and-launchers/) en la documentación.
+Para DLL que faltan, errores de Vulkan y otras correcciones habituales, mira [Solución de problemas](/es/docs/troubleshooting/#un-juego-no-arranca-linux).

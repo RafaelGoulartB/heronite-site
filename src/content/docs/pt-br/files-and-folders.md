@@ -1,13 +1,15 @@
 ---
-title: "Onde o Heronite guarda dados, configurações e logs"
+title: "Pasta de dados do Heronite: onde ficam os arquivos"
 navLabel: "Arquivos e pastas"
 description: "Onde o Heronite guarda dados, configurações, cache, capturas de tela e logs no Linux e no Windows, o que há dentro e como funciona a cópia portátil."
 section: Reference
 order: 3
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## Onde o Heronite guarda seus dados
+O Heronite guarda tudo como arquivos JSON simples, não em um banco de dados.
+
+## Onde fica a pasta de dados?
 
 | | Linux | Windows | Windows portátil |
 |---|---|---|---|
@@ -16,11 +18,9 @@ updated: 2026-11-01
 | Cache (pode ser apagado) | `~/.cache/heronite` | `%LOCALAPPDATA%\heronite\cache` | `<folder>\cache` |
 | Capturas de tela | `~/Pictures/Heronite` | `Pictures\Heronite` | `<folder>\Screenshots` |
 
-A pasta de capturas de tela pode ser mudada em **Configurações → Capturas de tela**. Para usar outra pasta de dados, defina `HERONITE_DATA_DIR` (veja [Variáveis de ambiente](/pt-br/docs/environment-variables/)).
+Você muda a pasta de capturas de tela em **Configurações → Capturas de tela**. Para usar outra pasta de dados, defina `HERONITE_DATA_DIR` (veja [Variáveis de ambiente](/pt-br/docs/environment-variables/)).
 
-Tudo é guardado como arquivos JSON simples, não em um banco de dados.
-
-## Dentro da pasta de dados
+## O que há dentro da pasta de dados?
 
 | Caminho | O que guarda |
 |---|---|
@@ -36,14 +36,14 @@ Tudo é guardado como arquivos JSON simples, não em um banco de dados.
 
 Estas pastas guardam seus logins das lojas. Lembre-se disso ao copiar ou compartilhar a pasta de dados.
 
-## Jogos e prefixos do Wine (Linux)
+## Onde ficam os jogos e os prefixos do Wine? (Linux)
 
 | Caminho | O que guarda |
 |---|---|
 | `~/Games/Heronite` | Jogos instalados pelo Heronite (o padrão; cada loja pode usar outra pasta) |
 | `~/Games/Heronite/Prefixes/<game>` | O prefixo Wine de cada jogo |
 | `~/Games/Heronite/Prefixes/shared` | O prefixo compartilhado |
-| `~/Games/Heronite/Prefixes/Battle.net` (e `EA app`, `Ubisoft Connect`, `Rockstar Games Launcher`) | Os prefixos dos clientes das lojas |
+| `~/Games/Heronite/Prefixes/Battle.net` (e `EA app`, `Ubisoft Connect`, `Rockstar Games Launcher`) | Os prefixos dos apps das lojas |
 
 ## A cópia portátil (Windows)
 
@@ -63,6 +63,6 @@ Heronite\
 
 Apague o `portable.txt` para que a cópia passe a usar as pastas normais do usuário. Uma cópia portátil não grava no registro e não registra links `heronite://`.
 
-## Vindo do Heroic (Linux)
+## Mude do Heroic para o Heronite (Linux)
 
-Na primeira inicialização, se `~/.config/heroic` existir, os dados dele são copiados uma única vez para a pasta de dados do Heronite, e seus logins, jogos e configurações são aproveitados. Os arquivos do Heroic são apenas lidos.
+Na primeira inicialização, se `~/.config/heroic` existir, o Heronite copia os dados dele uma única vez para a pasta de dados do Heronite. Seus logins, jogos e configurações vêm junto. Os arquivos do Heroic são apenas lidos.

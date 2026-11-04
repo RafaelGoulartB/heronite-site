@@ -4,12 +4,12 @@ navLabel: "Variables de entorno"
 description: "Las variables de entorno HERONITE_*: usa otra carpeta de datos, indica dónde está Steam y desactiva actualizaciones, bandeja, mando o animaciones."
 section: Reference
 order: 4
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
 Los interruptores `HERONITE_*` están activados cuando tienen cualquier valor salvo vacío o `0`.
 
-## Carpetas
+## Cambia las carpetas de datos, logs y Steam
 
 | Variable | Qué hace |
 |---|---|
@@ -17,7 +17,7 @@ Los interruptores `HERONITE_*` están activados cuando tienen cualquier valor sa
 | `HERONITE_LOG_DIR=<folder>` | Escribe los logs en otra carpeta |
 | `HERONITE_STEAM_DIR=<folder>` | Dónde está Steam, cuando Heronite no lo encuentra |
 
-## Desactivar funciones
+## Desactiva funciones
 
 | Variable | Qué hace |
 |---|---|
@@ -31,7 +31,7 @@ Los interruptores `HERONITE_*` están activados cuando tienen cualquier valor sa
 | `HERONITE_DISABLE_TOOLS_UPDATE` | No actualiza DXVK, Winetricks ni umu en segundo plano |
 | `HERONITE_WINE_OFFLINE` | Sin red para el Gestor de Wine (Linux) |
 
-## Herramientas de las tiendas
+## Usa tu propio legendary, gogdl o nile
 
 | Variable | Qué hace |
 |---|---|
@@ -39,13 +39,13 @@ Los interruptores `HERONITE_*` están activados cuando tienen cualquier valor sa
 | `HERONITE_GOGDL_BIN=<path>` | Usa este gogdl |
 | `HERONITE_NILE_BIN=<path>` | Usa este nile |
 
-## Logs
+## Consigue más detalle en el log
 
 | Variable | Qué hace |
 |---|---|
 | `RUST_LOG=debug` | Más detalle en el log (`trace` para verlo todo) |
 
-## Variables que define Heronite
+## Variables que Heronite define para los scripts de un juego
 
 Los scripts que se ejecutan antes o después de un juego, y los programas que se ejecutan junto a él, reciben estas:
 
@@ -61,4 +61,4 @@ Los scripts que se ejecutan antes o después de un juego, y los programas que se
 
 Los mismos valores también se definen como `HEROIC_GAME_*`, así que los scripts escritos para Heroic siguen funcionando.
 
-Dentro del [sandbox](/es/docs/wine-and-proton/), se define `HERONITE_SANDBOX`.
+Dentro del [sandbox](/es/docs/wine-and-proton/#sandbox), se define `HERONITE_SANDBOX`.

@@ -1,5 +1,6 @@
 ---
 title: "Heronite environment variables (HERONITE_*)"
+navLabel: "Environment variables"
 description: "The HERONITE_* environment variables: use another data folder, point at Steam, and turn off update checks, the tray, controller input or animations."
 section: Reference
 order: 4

@@ -1,26 +1,28 @@
 ---
-title: "Steam, Epic, GOG e Amazon no Heronite: lojas e launchers"
+title: "Steam, Epic, GOG e Amazon: lojas e launchers"
 navLabel: "Lojas e launchers"
-description: "Como o Heronite funciona com Steam, Epic Games, GOG, Amazon Games, Battle.net, EA app, Ubisoft Connect, Rockstar Games, Heroic, Lutris, Bottles e Faugus."
+description: "Como o Heronite lida com Steam, Epic Games, GOG, Amazon Games, Battle.net, EA app, Ubisoft Connect, Rockstar, Heroic, Lutris, Bottles e Faugus."
 section: Guides
 order: 1
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## Steam
+O Heronite reúne seus jogos da Steam, Epic Games, GOG, Amazon Games e de outros launchers em uma só biblioteca.
+
+## Adicione seus jogos da Steam
 
 Não precisa de login. O Heronite lê suas bibliotecas da Steam e as mantém sincronizadas.
 
 - **Linux:** ele encontra a Steam em `~/.steam/steam`, `~/.local/share/Steam`, no Flatpak (`~/.var/app/com.valvesoftware.Steam/.local/share/Steam`) e no Snap (`~/snap/steam/common/.local/share/Steam`).
 - **Windows:** ele encontra a Steam pelo registro, ou em `C:\Program Files (x86)\Steam`.
 
-A Steam continua iniciando os próprios jogos. No Windows, o Heronite também pode rodar seus scripts e programas (como trainers) em volta de um jogo da Steam.
+A Steam inicia os próprios jogos. No Windows, o Heronite pode rodar scripts e programas, como trainers, em volta de um jogo da Steam.
 
-## Epic Games, GOG e Amazon Games
+## Entre na Epic Games, GOG e Amazon Games
 
-Entre pela página **Lojas**. O Heronite passa a cuidar de toda a biblioteca: uma única fila de downloads instala, atualiza, repara, move, importa e desinstala jogos. Os downloads pausam quando você está offline e os que falham são tentados de novo.
+Entre pela página **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>). Uma única fila de downloads instala, atualiza e repara jogos, e também os move, importa ou desinstala. Os downloads pausam quando você está offline, e o Heronite tenta de novo os que falham.
 
-Por baixo dos panos, o Heronite usa as mesmas ferramentas de código aberto do Heroic e as baixa sozinho:
+O Heronite baixa as mesmas ferramentas de código aberto do Heroic:
 
 | Loja | Ferramenta |
 |---|---|
@@ -28,21 +30,21 @@ Por baixo dos panos, o Heronite usa as mesmas ferramentas de código aberto do H
 | GOG | [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl) |
 | Amazon Games | [nile](https://github.com/imLinguin/nile) |
 
-**Janela de login.** Entrar abre uma pequena janela com a página da própria loja (WebKitGTK no Linux, WebView2 no Windows). Se ela não abrir, a página de login tem o **login pelo navegador**: entre no seu navegador normal e cole o endereço ou o código mostrado no final.
+**Janela de login.** Entrar abre uma pequena janela com a página da própria loja (WebKitGTK no Linux, WebView2 no Windows). Se ela não abrir, use o **login pelo navegador** na página de login: entre no seu navegador e cole o endereço ou o código mostrado no final.
 
-**Jogos que você já instalou (Windows).** Os jogos instalados pelo Epic Games Launcher, pela GOG Galaxy ou pelo app da Amazon Games entram no Heronite sem precisar baixá-los de novo.
+**Jogos que você já instalou (Windows).** O Heronite importa os jogos instalados pelo Epic Games Launcher, pela GOG Galaxy ou pelo app da Amazon Games, sem baixá-los de novo.
 
-As atualizações dos jogos são verificadas a cada 3 horas.
+O Heronite verifica atualizações dos jogos a cada 3 horas.
 
-## Battle.net, EA app, Ubisoft Connect, Rockstar Games (Linux)
+## Use Battle.net, EA app, Ubisoft Connect e Rockstar Games (Linux)
 
-O Heronite instala o app de cada loja em um prefixo Wine próprio (em `~/Games/Heronite/Prefixes/<store>`). Entre e instale jogos nesse app como de costume; eles aparecem na sua Coleção e iniciam por ela.
+O Heronite instala o app de cada loja em um prefixo Wine próprio, `~/Games/Heronite/Prefixes/<store>`. Entre e instale jogos nesse app. Eles aparecem na sua biblioteca e iniciam por ela.
 
 No Windows, use por enquanto os apps das próprias lojas.
 
-## Outros launchers (Linux)
+## Importe jogos do Heroic, Lutris, Bottles e Faugus (Linux)
 
-O Heronite pode trazer os jogos de outros launchers e mantê-los sincronizados. Cada fonte pode ser a instalação normal ou o Flatpak:
+O Heronite importa os jogos desses launchers e os mantém sincronizados. Cada um pode ser a instalação normal ou o Flatpak:
 
 | Launcher | O que entra |
 |---|---|
@@ -51,8 +53,8 @@ O Heronite pode trazer os jogos de outros launchers e mantê-los sincronizados. 
 | Bottles | Programas de cada bottle |
 | Faugus | Jogos da lista dele |
 
-Os jogos da Steam que esses launchers listam ficam por conta da importação da Steam, então nada aparece duas vezes. O Heronite só lê os arquivos dos outros launchers.
+O Heronite ignora os jogos da Steam desses launchers, que entram pela importação da Steam, então nada aparece duas vezes. Ele só lê os arquivos dos outros launchers.
 
-## Jogos que você já tem
+## Adicione jogos que você já tem
 
-Adicione um programa à mão (<kbd>Ctrl</kbd> <kbd>N</kbd>) ou aponte para uma pasta e adicione de uma vez todos os jogos encontrados nela: programas do Windows e, no Linux, também AppImages, scripts de inicialização e programas do Linux.
+Pressione <kbd>Ctrl</kbd> <kbd>N</kbd> para adicionar um programa, ou aponte para uma pasta e adicione todos os jogos dela: programas do Windows e, no Linux, AppImages, scripts de inicialização e programas do Linux.

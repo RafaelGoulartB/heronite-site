@@ -1,134 +1,98 @@
 ---
-title: "Heronite vs Heroic Games Launcher: qual usar no Linux?"
-description: "Heronite e Heroic usam legendary, gogdl e nile para Epic, GOG e Amazon. Veja as diferenças em Steam, emuladores e uso de memória, e como importar o Heroic."
+title: "Alternativa ao Heroic: Heronite vs Heroic Games Launcher"
+description: "Alternativa ao Heroic para Linux e Windows: compare Steam, emuladores e uso de memória, veja quando o Heroic vence e importe seus jogos do Heroic."
 eyebrow: Comparação
-headline: "Heronite vs Heroic Games Launcher: *as mesmas ferramentas*, outro launcher"
-lead: "O Heroic é o launcher de código aberto que muita gente no Linux usa para Epic, GOG e Amazon. O Heronite usa as mesmas ferramentas de loja, soma Steam e emuladores numa biblioteca só e pode importar os seus jogos do Heroic."
+headline: "Heronite vs Heroic: uma alternativa ao Heroic com Steam e emuladores"
+lead: "O Heronite cobre Epic, GOG e Amazon como o Heroic e soma Steam, emuladores e os seus próprios jogos."
 navLabel: Heronite vs Heroic
-summary: "Heronite e Heroic usam legendary, gogdl e nile para Epic, GOG e Amazon. Veja onde eles diferem e como trocar."
+summary: "Heronite vs Heroic: onde eles diferem, quando o Heroic é melhor e como importar seus jogos do Heroic no Linux."
 order: 2
 hero: ../../../assets/screenshots/command-palette.webp
 heroAlt: "A paleta Ctrl+K do Heronite buscando “contr”: Control da Epic e CONTROL Ultimate Edition da Steam na mesma lista, com o tempo de jogo e ações para jogar, abrir as configurações ou a pasta do jogo."
 og: /og/heroic.jpg
-updated: 2026-11-01
+updated: 2026-11-04
 highlights:
   - title: As mesmas ferramentas de loja
-    text: O Heronite usa legendary, gogdl e nile para Epic, GOG e Amazon, as mesmas ferramentas de código aberto do Heroic.
+    text: Os dois usam legendary, gogdl e nile.
   - title: Steam e emuladores também
-    text: Steam, clientes de loja no Linux, jogos emulados e seus próprios jogos dividem uma só Coleção.
+    text: Steam, jogos emulados e seus próprios jogos dividem uma biblioteca.
   - title: Importa a sua configuração do Heroic
-    text: O Heronite copia os dados do Heroic uma vez e só lê, então o Heroic continua funcionando como antes.
+    text: No Linux, seus logins das lojas e jogos adicionados passam para o Heronite.
   - title: Sem navegador embutido
-    text: Um app nativo em Rust com cerca de 190 MB de memória em repouso, em vez de um app Electron.
+    text: Um app nativo em Rust, com cerca de 190 MB de memória em repouso.
 faq:
   - q: O Heronite importa a minha biblioteca do Heroic?
-    a: Sim, no Linux. Na primeira vez que abre, se a pasta do Heroic existir, o Heronite copia os dados dela uma vez, e seus logins, jogos adicionados e configurações passam para ele. Ele também adiciona os jogos da Epic, GOG e Amazon que o Heroic instalou. Ele só lê os arquivos do Heroic e nunca grava neles.
+    a: "Sim, no Linux: seus logins, jogos adicionados e configurações passam para ele. [Veja os passos](#como-migrar-do-heroic-para-o-heronite)."
   - q: Qual a diferença entre o Heronite e o Heroic?
-    a: Os dois usam legendary, gogdl e nile para Epic, GOG e Amazon. O Heronite é um app nativo em Rust que também lê suas bibliotecas da Steam, roda emuladores e mantém um histórico de jogo detalhado. O Heroic é um app Electron que também roda no macOS e existe há mais tempo.
-  - q: O Heronite é uma alternativa ao Heroic?
-    a: É, se você quer Steam, Epic, GOG, Amazon e jogos emulados numa biblioteca só, no Linux ou no Windows. Se você usa macOS, ou só precisa dos recursos de loja do Heroic, o Heroic continua sendo uma boa escolha.
-  - q: Vou perder a minha configuração do Heroic se eu testar o Heronite?
-    a: Não. O Heronite copia os dados do Heroic uma vez e só lê. O Heroic continua funcionando como antes, então você pode usar os dois enquanto decide.
+    a: O Heronite é um app nativo em Rust com Steam, emuladores e um histórico de jogo detalhado. O Heroic é um app Electron que roda no macOS e existe há mais tempo.
+  - q: Devo usar o Heronite ou o Heroic no Linux?
+    a: Use o Heroic se quer saves na nuvem ou joga só Epic, GOG e Amazon. Use o Heronite para Steam, emuladores e um launcher só no Linux e no Windows.
 related:
   - /features/stores/
   - /features/wine-and-proton/
   - /compare/lutris/
 ---
 
-Heroic e Heronite são parentes próximos. Os dois são gratuitos, de código aberto (GPL-3.0) e construídos em torno das mesmas três ferramentas de loja: legendary para a Epic Games, gogdl para a GOG e nile para a Amazon Games. Se você gosta de como o Heroic instala jogos, a parte de lojas do Heronite vai parecer familiar.
-
-**Resumindo:** escolha o Heroic se você usa macOS, ou quer o que ele acrescenta além das lojas. Escolha o Heronite se você quer Steam, emuladores e seus próprios jogos na mesma biblioteca, um app mais leve, ou o mesmo launcher no Linux e no Windows. Esta página está atualizada até novembro de 2026.
+**Resumindo:** escolha o Heroic se você usa macOS, ou quer saves na nuvem e um launcher focado em Epic, GOG e Amazon. Escolha o Heronite se você quer Steam, emuladores e seus próprios jogos numa biblioteca só, um app mais leve, ou o mesmo launcher no Linux e no Windows.
 
 ## Comparação rápida
 
 | | Heronite | Heroic |
 |---|---|---|
-| Plataformas | Linux e Windows 10/11 | Linux, Windows 10/11 e macOS 14 ou mais novo |
-| Licença | GPL-3.0 | GPL-3.0 |
+| Plataformas | Linux e Windows 10/11 | Linux, Windows 10/11, macOS 14 ou mais novo |
 | Feito com | Rust, renderizado pela GPU, sem navegador embutido | Electron, TypeScript e React |
 | Epic, GOG, Amazon | Sim | Sim |
-| Ferramentas de loja | legendary, gogdl, nile | legendary, gogdl, nile |
-| Biblioteca da Steam | Sim, sem login | Não está entre as lojas que o README lista |
-| Battle.net, EA app, Ubisoft Connect, Rockstar | Só no Linux, o app de cada loja roda num prefixo Wine | Não estão entre as lojas que o README lista |
-| Emulação | Sim, emuladores detectados e pastas de ROMs escaneadas | Não consta no README |
-| Wine e Proton | Sim, com um Gerenciador do Wine | Sim, com um Gerenciador do Wine |
-| Tempo de jogo | Sim, com estatísticas, diário e retrospectiva do ano | Tempo jogado na página de cada jogo |
-| Modo controle / sofá | Sim, modo console com temas | Sim, um modo em tela cheia parecido com console desde abril de 2026 |
-| Backups de saves | Backups com o Ludusavi depois de cada sessão | Sincronização de saves na nuvem |
+| Biblioteca da Steam | Sim, sem login | Não consta |
+| Battle.net, EA app, Ubisoft Connect, Rockstar | Só no Linux, num prefixo Wine | Não consta |
+| Emulação | Sim | Não consta |
+| Tempo de jogo | Estatísticas, diário, retrospectiva do ano | Tempo jogado na página de cada jogo |
+| Modo console | Sim, com temas | Sim, desde a versão 2.21 (abril de 2026) |
+| Backups de saves | Ludusavi, depois de cada sessão | Sincronização de saves na nuvem |
 | Importar do outro launcher | Sim, no Linux | Não se aplica |
 
-A coluna do Heroic vem do [README](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher), do [site](https://heroicgameslauncher.com) e das [notas de versão](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases) dele.
+A coluna do Heroic vem do [README](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher), do [site](https://heroicgameslauncher.com) e das [notas de versão](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases) dele, atualizados até novembro de 2026. "Não consta" quer dizer que o README não lista o recurso.
 
-## O que eles têm em comum
+## O que o Heronite e o Heroic têm em comum?
 
-As ferramentas de loja são o coração dos dois. Como o Heronite usa os mesmos legendary, gogdl e nile, instalar, atualizar e reparar jogos da Epic, GOG e Amazon funciona de forma parecida, e seu login vai só para as lojas. Os dois também rodam jogos de Windows no Linux pelo Wine ou pelo Proton, com versões que você baixa e gerencia no app.
+Os dois usam as mesmas ferramentas de código aberto das lojas: legendary para a Epic Games, gogdl para a GOG e nile para a Amazon Games. Seu login vai só para as lojas.
 
-Os dois têm fila de downloads, arte de capa do SteamGridDB e um lugar para adicionar jogos que não vêm de uma loja.
+Os dois são GPL-3.0 e rodam jogos do Windows no Linux pelo Wine ou pelo Proton, com um Gerenciador do Wine. Os dois têm fila de downloads, arte de capa do SteamGridDB e um lugar para jogos que não são de lojas.
 
-## Onde o Heronite é diferente
+## Qual escolher?
 
-### Uma biblioteca para todas as fontes
+### Escolha o Heroic se…
 
-O README do Heroic lista Epic, GOG e Amazon Games como lojas dele. O Heronite começa por aí e vai além. Ele lê suas bibliotecas da Steam sem login e as mantém sincronizadas. Ele detecta emuladores e escaneia suas pastas de ROMs. No Linux, ele também roda os clientes da Battle.net, EA app, Ubisoft Connect e Rockstar Games em prefixos Wine próprios, e esses jogos entram na mesma [Coleção](/pt-br/features/game-library/).
+- **Você usa macOS.** O Heroic roda no macOS 14 ou mais novo, e roda jogos do Windows por lá com o Crossover. O Heronite não tem versão para macOS.
+- **Você quer saves na nuvem.** O Heroic lista a sincronização de saves na nuvem. O Heronite faz backup dos saves localmente com o Ludusavi, uma ferramenta opcional.
+- **Você quer extras de loja.** As versões recentes do Heroic acrescentaram telas de ofertas e as conquistas da GOG na página do jogo, além de uma integração experimental com a ZOOM Platform (Linux, desde janeiro de 2026).
+- **Você quer uma configuração de Wine e Steam Deck já testada.** O site do Heroic destaca configurações automáticas do Wine e suporte ao Steam Deck. O Heronite é o projeto mais novo; veja o [guia do Steam Deck](/pt-br/guides/steam-deck/).
+- **Você precisa de outro idioma.** O README do Heroic diz que ele está traduzido em quase 40 idiomas. O Heronite fala inglês, português (Brasil), espanhol e alemão.
+- **Você quer lançamentos frequentes.** O Heroic lançou uma versão quase todo mês em 2026, o que ajuda quando uma loja muda alguma coisa.
+- **O Heroic já atende você.** Você joga só Epic, GOG e Amazon e tudo funciona.
 
-### Um app nativo, não um navegador
+### Escolha o Heronite se…
 
-O Heroic é feito em Electron, que embute um navegador Chromium no app. O Heronite é um processo nativo único em Rust, desenhado pela GPU. Ele usa cerca de 190 MB de memória em repouso (cerca de 95 MB quando fechado na bandeja), em torno de 0,1% de CPU, e mostra a biblioteca em cerca de 215 ms. A instalação tem 64 MB. Leia mais na página de [desempenho](/pt-br/features/performance/).
+- **Você quer todas as fontes numa biblioteca só.** O Heronite lê a Steam sem login, detecta emuladores e escaneia suas pastas de ROMs.
+- **Você joga Battle.net, EA app, Ubisoft Connect ou Rockstar no Linux.** Cada cliente roda no seu próprio prefixo Wine, e os jogos entram na mesma lista.
+- **Você quer um app mais leve.** O Heroic embute um navegador Chromium. O Heronite é um processo nativo em Rust, que usa cerca de 190 MB de memória em repouso e mostra a biblioteca em cerca de 215 ms ([desempenho](/pt-br/features/performance/)).
+- **Você quer um histórico de jogo mais profundo.** O Heronite registra cada sessão: [estatísticas](/pt-br/features/play-time-tracking/) por semana, mês e ano, uma meta anual de backlog, um diário ao lado das capturas de tela e uma retrospectiva do ano.
+- **Você quer um modo console que dá para redesenhar.** O [modo console](/pt-br/features/console-mode/) do Heronite tem oito layouts e sete temas que você pode editar e compartilhar como arquivo.
+- **Você tem uma biblioteca grande.** Agrupe por status, loja, gênero, série ou ano e salve filtros como visões, como Jogando agora ou Pendentes; o Heroic oferece categorias personalizadas. Veja a [biblioteca de jogos](/pt-br/features/game-library/).
+- **Você quer um launcher só no Linux e no Windows.** No Windows ele cuida de Steam, Epic, GOG e Amazon, e traz os jogos instalados pela Epic Games Launcher, pelo GOG Galaxy ou pelo app da Amazon Games. O Heroic também roda no Windows.
 
-### Um histórico de jogo mais profundo
+## Como migrar do Heroic para o Heronite?
 
-O Heronite registra cada sessão e transforma tudo em [estatísticas](/pt-br/features/play-time-tracking/): tempo por semana, mês e ano, uma meta anual de backlog, um diário para anotações ao lado das suas capturas de tela e uma retrospectiva do ano. O Heroic mostra o tempo jogado na página de cada jogo.
+No Linux, o Heronite importa a sua configuração do Heroic. Ele só lê os arquivos do Heroic e nunca grava neles, então o Heroic continua funcionando e você pode usar os dois.
 
-### Modo console que você pode redesenhar
+1. **Abra o Heronite.** Se `~/.config/heroic` existir, o Heronite copia os dados dele uma vez. Seus logins das lojas, os jogos que você adicionou à mão com as configurações deles e as suas configurações passam para o Heronite.
+2. **Confira seus jogos de loja instalados.** O Heronite lê os registros do Heroic dos jogos da Epic, GOG e Amazon que ele instalou. Eles aparecem como instalados, nas mesmas pastas, assim que você entra na loja.
 
-Os dois launchers têm um modo de tela cheia pensado para controle. O do Heroic chegou na versão 2.21, em abril de 2026, e vem crescendo desde então. O [modo console](/pt-br/features/console-mode/) do Heronite tem oito layouts e sete temas embutidos, e você pode mudar cores, fontes, menus e páginas de jogo e depois compartilhar um tema como arquivo.
+Depois da primeira abertura, o Heronite mantém a lista de jogos adicionados e instalados sincronizada com o Heroic. Funciona com a instalação normal do Heroic e com o Flatpak dele.
 
-### Como organizar uma biblioteca grande
+Se o Heroic lista um jogo da Steam, o Heronite deixa a cargo da própria importação da Steam, então nada aparece duas vezes.
 
-O Heroic deixa você adicionar apps que não são de lojas e separar jogos em categorias personalizadas. O Heronite dá mais peso à Coleção em si. Você pode agrupar por status, loja, gênero, série ou ano, salvar filtros como visões, como Jogando agora ou Pendentes, e editar muitos jogos de uma vez, com desfazer. Gêneros, empresas e séries podem ser renomeados e unificados na biblioteca inteira. A busca perdoa erros de digitação, e `Ctrl+K` abre uma paleta de comandos para qualquer jogo, página ou ação. Se você tem centenas de jogos, essas ferramentas poupam tempo.
-
-### O mesmo launcher no Windows
-
-O Heronite roda no Windows com Steam, Epic, GOG e Amazon, e traz os jogos já instalados pela Epic Games Launcher, pelo GOG Galaxy ou pelo app da Amazon Games. O Heroic também roda no Windows.
-
-## Onde o Heroic é mais forte
-
-- **macOS.** O Heroic roda no macOS 14 ou mais novo, e roda jogos de Windows por lá com o Crossover. O Heronite não tem versão para macOS.
-- **Wine, Proton e Steam Deck.** O site do Heroic destaca configurações automáticas do Wine e suporte ao Steam Deck, e ele tem um longo histórico de correções para rodar jogos da Epic e da GOG no Linux. O Heronite é o projeto mais novo.
-- **Traduções.** O README do Heroic diz que ele está traduzido em quase 40 idiomas. O Heronite fala inglês, português (Brasil), espanhol e alemão.
-- **Saves na nuvem.** O Heroic lista a sincronização de saves na nuvem como recurso. O Heronite faz backup dos saves localmente com o Ludusavi, uma ferramenta opcional.
-- **Extras de loja.** As versões recentes do Heroic acrescentaram telas de ofertas e as conquistas da GOG na página do jogo. Ele também tem uma integração experimental com a ZOOM Platform, só para Linux quando foi adicionada, em janeiro de 2026.
-- **Lançamentos regulares.** O Heroic lançou uma versão quase todo mês em 2026, o que ajuda quando uma loja muda alguma coisa.
-
-## Quando escolher o Heroic
-
-- Você usa macOS.
-- Você quer principalmente Epic, GOG e Amazon, e um launcher focado nelas.
-- Você quer sincronização de saves na nuvem ou a integração com a ZOOM Platform.
-- Você precisa de um idioma que o Heronite ainda não tem.
-- Sua configuração já funciona e você não precisa de Steam nem de emuladores no mesmo app.
-
-## Quando escolher o Heronite
-
-- Você quer Steam, Epic, GOG, Amazon, emuladores e seus próprios jogos numa biblioteca só.
-- Você quer jogos da Battle.net, EA app, Ubisoft Connect e Rockstar na mesma lista, no Linux.
-- Você prefere um app nativo, sem navegador embutido.
-- Você gosta de estatísticas de jogo, diário e meta de backlog.
-- Você quer o mesmo launcher no Linux e no Windows.
-
-## Como migrar do Heroic
-
-Você não precisa escolher antes de testar. No Linux, o Heronite leva a sua configuração do Heroic junto:
-
-1. **Primeira vez que abre.** Se a pasta de dados do Heroic existir, o Heronite a copia uma vez. Seus logins das lojas, os jogos que você adicionou à mão com as configurações deles e as suas configurações passam para o Heronite.
-2. **Jogos de loja instalados.** Os registros do Heroic dos jogos da Epic, GOG e Amazon que ele instalou são somados aos do Heronite, então esses jogos aparecem como instalados, nas mesmas pastas, assim que você entra na loja.
-3. **Mantendo em dia.** O Heronite mantém a importação sincronizada e pega os jogos que você adicionar depois no Heroic. Funciona com a instalação normal do Heroic e com o Flatpak dele.
-4. **Jogos da Steam.** Se o Heroic lista um jogo da Steam, o Heronite deixa a cargo da própria importação da Steam, então nada aparece duas vezes.
-
-O Heronite só lê os arquivos do Heroic. Ele nunca grava neles, então o Heroic continua funcionando como antes e você pode voltar quando quiser. A importação existe só na versão para Linux.
+> **Nota.** Você pode continuar adicionando jogos no Heroic. O Heronite os pega.
 
 > **Nota.** Uma chave do SteamGridDB importada do Heroic pode ter sido criptografada por ele. Se as capas não carregarem, cole a chave de novo em Configurações.
 
-## Experimente
-
-O Heronite é gratuito, sem conta, sem anúncios e sem telemetria. [Baixe](/pt-br/download/) e leia como funcionam [lojas e launchers](/pt-br/docs/stores-and-launchers/), ou siga os guias da [Epic](/pt-br/guides/epic-games-on-linux/), da [GOG](/pt-br/guides/gog-on-linux/) e da [Amazon](/pt-br/guides/amazon-games-on-linux/) no Linux.
+**Próximo:** [baixe o Heronite](/pt-br/download/) e leia [Lojas e launchers](/pt-br/docs/stores-and-launchers/).

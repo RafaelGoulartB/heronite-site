@@ -1,15 +1,15 @@
 ---
 title: "Variáveis de ambiente HERONITE_* do Heronite"
 navLabel: "Variáveis de ambiente"
-description: "As variáveis de ambiente HERONITE_*: use outra pasta de dados, indique onde está a Steam e desligue verificação de atualizações, bandeja, controle ou animações."
+description: "Variáveis de ambiente HERONITE_*: use outra pasta de dados, indique a Steam e desligue atualizações, bandeja, controle ou animações."
 section: Reference
 order: 4
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
 As opções `HERONITE_*` ficam ligadas quando definidas com qualquer valor, exceto vazio ou `0`.
 
-## Pastas
+## Mude as pastas de dados, de logs e da Steam
 
 | Variável | O que faz |
 |---|---|
@@ -17,7 +17,7 @@ As opções `HERONITE_*` ficam ligadas quando definidas com qualquer valor, exce
 | `HERONITE_LOG_DIR=<folder>` | Grava os logs em outra pasta |
 | `HERONITE_STEAM_DIR=<folder>` | Onde a Steam está, quando o Heronite não a encontra |
 
-## Desligar recursos
+## Desligue recursos
 
 | Variável | O que faz |
 |---|---|
@@ -31,7 +31,7 @@ As opções `HERONITE_*` ficam ligadas quando definidas com qualquer valor, exce
 | `HERONITE_DISABLE_TOOLS_UPDATE` | Não atualiza DXVK, Winetricks e umu em segundo plano |
 | `HERONITE_WINE_OFFLINE` | Sem rede para o Gerenciador do Wine (Linux) |
 
-## Ferramentas das lojas
+## Use seu próprio legendary, gogdl ou nile
 
 | Variável | O que faz |
 |---|---|
@@ -39,13 +39,13 @@ As opções `HERONITE_*` ficam ligadas quando definidas com qualquer valor, exce
 | `HERONITE_GOGDL_BIN=<path>` | Usa este gogdl |
 | `HERONITE_NILE_BIN=<path>` | Usa este nile |
 
-## Logs
+## Veja mais detalhes no log
 
 | Variável | O que faz |
 |---|---|
 | `RUST_LOG=debug` | Mais detalhes no log (`trace` para tudo) |
 
-## Variáveis que o Heronite define
+## Variáveis que o Heronite define para scripts de jogo
 
 Scripts que rodam antes ou depois de um jogo, e programas que rodam junto com ele, recebem estas:
 
@@ -61,4 +61,4 @@ Scripts que rodam antes ou depois de um jogo, e programas que rodam junto com el
 
 Os mesmos valores também são definidos como `HEROIC_GAME_*`, então scripts escritos para o Heroic continuam funcionando.
 
-Dentro do [sandbox](/pt-br/docs/wine-and-proton/), a variável `HERONITE_SANDBOX` é definida.
+Dentro do [sandbox](/pt-br/docs/wine-and-proton/#sandbox), a variável `HERONITE_SANDBOX` é definida.

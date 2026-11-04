@@ -1,28 +1,28 @@
 ---
 title: "Línea de comandos y enlaces heronite://"
 navLabel: "Línea de comandos y enlaces"
-description: "Inicia Heronite desde scripts: opciones de línea de comandos como --launch, --console y --no-gui, los ids de juego de cada tienda y los enlaces heronite://."
+description: "Inicia Heronite desde scripts: opciones de línea de comandos como --launch, --console y --no-gui, los ids de juego de cada tienda y enlaces heronite://."
 section: Reference
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-El programa se llama `heronite-rs` en Linux y con el instalador de Windows (`heronite-rs.exe`), y `heronite.exe` en la copia portable de Windows.
+Inicia Heronite desde scripts con opciones como `--launch`. El programa se llama `heronite-rs` en Linux y con el instalador de Windows (`heronite-rs.exe`), y `heronite.exe` en la copia portable de Windows.
 
-## Opciones
+## Opciones de la línea de comandos
 
 | Opción | Qué hace |
 |---|---|
 | `--launch <game>` | Inicia un juego (ver más abajo) |
 | `--no-gui` | Junto con `--launch`: sin ventana; Heronite se cierra cuando termina el juego |
-| `--console` | Se abre en el [Modo consola](/es/docs/console-mode/) |
+| `--console` | Se abre en el [modo consola](/es/docs/console-mode/) |
 | `--fullscreen` | Se abre en pantalla completa (<kbd>F11</kbd> vuelve atrás) |
 | `--autostart` | Lo usa "Iniciar con el sistema"; solo entonces se aplica "Iniciar minimizado" |
 | `-h`, `--help` | Muestra las opciones |
 
 Solo se ejecuta un Heronite a la vez: si lo inicias de nuevo, la petición (como `--launch`) pasa al que ya está en marcha.
 
-## Iniciar un juego
+## Inicia un juego desde la línea de comandos
 
 `--launch` recibe el id del juego en su tienda, no su nombre, y opcionalmente la herramienta de la tienda delante:
 
@@ -42,7 +42,7 @@ heronite-rs --launch legendary_Fortnite --no-gui
 
 Los accesos directos que crea Heronite (escritorio, menú de inicio, Steam) ya llevan el comando correcto, así que esto sirve sobre todo para scripts.
 
-## Enlaces `heronite://`
+## Inicia un juego con un enlace `heronite://`
 
 ```
 heronite://launch/<game>

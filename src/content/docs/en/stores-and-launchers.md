@@ -1,5 +1,6 @@
 ---
 title: "Stores and launchers: Steam, Epic, GOG and more"
+navLabel: "Stores and launchers"
 description: "How Heronite handles Steam, Epic Games, GOG, Amazon Games, Battle.net, EA app, Ubisoft Connect, Rockstar, Heroic, Lutris, Bottles and Faugus."
 section: Guides
 order: 1

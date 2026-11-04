@@ -1,26 +1,28 @@
 ---
-title: "Primeiros passos com o Heronite"
+title: "Primeiros passos: monte sua biblioteca de jogos no Heronite"
 navLabel: "Primeiros passos"
-description: "Sua primeira execução do Heronite: entre nas suas lojas, adicione outros jogos, conheça as páginas e a Coleção e comece a jogar no Linux ou no Windows."
+description: "Monte sua biblioteca de jogos no Linux ou no Windows: entre na Epic, GOG e Amazon, adicione outros jogos, aprenda os atalhos, organize e jogue."
 section: Start
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## A primeira execução
+O Heronite monta sua biblioteca de jogos com a Steam, seus emuladores e as lojas em que você entra. Primeiro, [instale o Heronite](/pt-br/docs/installation/) no Linux ou no Windows.
 
-Na primeira inicialização, com a Coleção vazia, o Heronite procura por conta própria:
+## O que o Heronite adiciona à biblioteca na primeira execução
 
-- **Steam:** seus jogos instalados da Steam entram, sem precisar de login.
-- **Emuladores e ROMs:** os emuladores instalados são detectados, e as pastas de ROMs comuns (como `~/ROMs` ou `~/Emulation/roms`) são varridas. Veja [Emuladores e ROMs](/pt-br/docs/emulation/).
+Com a biblioteca vazia, o Heronite adiciona estes itens na primeira inicialização:
 
-## Adicione suas lojas
+- **Steam:** seus jogos instalados da Steam, sem precisar de login.
+- **Emuladores e ROMs:** o Heronite detecta os emuladores instalados e varre as pastas de ROMs comuns, como `~/ROMs` ou `~/Emulation/roms`. Veja [Emuladores e ROMs](/pt-br/docs/emulation/).
 
-Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>) e entre na Epic Games, na GOG ou na Amazon Games. Uma pequena janela de login abre com a página da própria loja. Se ela não abrir, use o login pelo navegador na mesma página: entre no seu navegador e cole o endereço ou o código que ele mostrar.
+## Entre na Epic Games, GOG ou Amazon Games
 
-Mais em [Lojas e launchers](/pt-br/docs/stores-and-launchers/).
+Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>) e entre. Uma pequena janela de login abre com a página da própria loja. Se ela não abrir, use o login pelo navegador na mesma página: entre no seu navegador e cole o endereço ou o código que ele mostrar.
 
-## Adicione outros jogos
+Veja [Lojas e launchers](/pt-br/docs/stores-and-launchers/).
+
+## Adicione outros jogos à biblioteca
 
 Pressione <kbd>Ctrl</kbd> <kbd>N</kbd> (ou **Adicionar um jogo**) para adicionar:
 
@@ -31,7 +33,7 @@ Pressione <kbd>Ctrl</kbd> <kbd>N</kbd> (ou **Adicionar um jogo**) para adicionar
 
 Você também pode apontar para uma pasta e adicionar de uma vez todos os jogos encontrados nela.
 
-## Conheça as páginas
+## Abra qualquer página com um atalho
 
 | Página | Atalho |
 |---|---|
@@ -43,19 +45,19 @@ Você também pode apontar para uma pasta e adicionar de uma vez todos os jogos 
 | Estatísticas | <kbd>Ctrl</kbd> <kbd>6</kbd> |
 | Configurações | <kbd>Ctrl</kbd> <kbd>,</kbd> |
 
-A **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre qualquer página, executa qualquer ação ou inicia um jogo quando você digita parte do nome. Pressione <kbd>?</kbd> para ver todos os atalhos. Veja [Atalhos de teclado](/pt-br/docs/keyboard-shortcuts/).
+A **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre qualquer página, executa qualquer ação ou inicia um jogo quando você digita parte do nome. Pressione <kbd>?</kbd> para ver todos os atalhos ou leia [Atalhos de teclado](/pt-br/docs/keyboard-shortcuts/).
 
-## Organize a Coleção
+## Organize sua biblioteca de jogos
 
 - Alterne entre **Foco** (uma lista com painel de detalhes) e uma **grade** de capas.
 - **Agrupe** por status, loja, gênero, série, ano e mais.
 - Salve **presets** com seus filtros e ordenação (Jogando agora, Pendentes, Finalizado, Favoritos).
 - Selecione vários jogos (<kbd>Space</kbd>, <kbd>Shift</kbd> + setas, <kbd>Ctrl</kbd> <kbd>A</kbd>) e pressione <kbd>F3</kbd> para alterar todos de uma vez. <kbd>Ctrl</kbd> <kbd>Z</kbd> desfaz.
 
-## Jogue
+## Jogue e tire capturas de tela
 
 Pressione <kbd>Enter</kbd> em um jogo para jogá-lo (ou instalá-lo). O Heronite registra cada sessão, associa as capturas de tela ao jogo e mostra tudo em **Estatísticas**. Tire uma captura de tela durante o jogo com <kbd>F10</kbd>.
 
-## No sofá
+## Use um controle (modo console)
 
-Ligue o [Modo console](/pt-br/docs/console-mode/) pela paleta, pelo menu ☰ ou com `--console`. Ele também pode abrir sozinho na inicialização ou quando um controle for conectado.
+Ligue o [modo console](/pt-br/docs/console-mode/) pela paleta de comandos ou pelo menu ☰, ou abra o Heronite com `--console`. Para abri-lo na inicialização ou quando um controle for conectado, use **Configurações → Modo console**.

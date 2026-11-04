@@ -1,22 +1,23 @@
 ---
 title: "Formato de tema do modo console (.heronite-theme.json)"
+navLabel: "Formato de tema do console"
 description: "O formato do arquivo .heronite-theme.json dos temas do modo console: regras, um exemplo completo e todos os campos que você pode definir à mão."
 section: Reference
 order: 5
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-Um tema do modo console é um único arquivo JSON, `<id>.heronite-theme.json`. O jeito mais fácil de criar um é no próprio Heronite (**Configurações → Modo console**) e depois **Exportar**; esta página serve para ler ou editar o arquivo à mão.
+Um tema do modo console é um único arquivo JSON, `<id>.heronite-theme.json`. O jeito mais fácil de criar um é no próprio Heronite (**Configurações → Modo console**) e depois **Exportar**. Esta página serve para ler ou editar o arquivo à mão.
 
-## Regras
+## Regras do arquivo
 
 - As chaves usam camelCase.
 - **Todos os campos são opcionais.** Um campo ausente assume o valor do tema Clássico.
-- Um valor desconhecido volta ao padrão daquele campo, e chaves desconhecidas são mantidas, então um tema criado por um Heronite mais novo ainda abre.
+- Um valor desconhecido volta ao padrão daquele campo, e chaves desconhecidas são mantidas. Assim, um tema criado por um Heronite mais novo ainda abre.
 - `format` é a versão do formato do arquivo, atualmente `1`. Um tema com `format` maior é recusado na importação.
 - A imagem de fundo vai embutida no arquivo (PNG, JPEG ou WebP, no máximo 16 MiB), então um único arquivo é tudo o que você compartilha.
 
-## Exemplo
+## Exemplo de arquivo de tema
 
 ```json
 {
@@ -40,7 +41,7 @@ Um tema do modo console é um único arquivo JSON, `<id>.heronite-theme.json`. O
 }
 ```
 
-## Campos
+## Campos que você pode definir
 
 ### Sobre o tema
 
@@ -157,10 +158,10 @@ Opções de cada layout:
 - `spotlightActions`: `full` ou `play`,
 - e também `jumpLetters`, `spotlightCards`, `carouselReflect`, `xboxGroups` e `dashboard` (`week`, `downloads`, `random`, `journal`, `shortcuts`).
 
-## O que não faz parte de um tema
+## O que um tema não inclui
 
-O que acontece quando um controle é conectado, como o Heronite abre e o que ele faz quando está ocioso são configurações do seu PC, não do tema, por isso não estão no arquivo.
+O que acontece quando um controle é conectado, como o Heronite abre e o que ele faz quando está ocioso são configurações do seu PC, não do tema. Por isso, não estão no arquivo.
 
-## Compartilhe o seu
+## Compartilhe o seu tema
 
 Publique seu tema nas [Discussões](https://github.com/RafaelGoulartB/Heronite/discussions) para que outras pessoas possam importá-lo.

@@ -1,15 +1,15 @@
 ---
 title: "Atajos de teclado de Heronite"
 navLabel: "Atajos de teclado"
-description: "Todos los atajos de teclado de Heronite: cambiar de página, paleta de comandos, Colección, búsqueda, ajustes y los atajos que puedes usar mientras juegas."
+description: "Todos los atajos de teclado de Heronite: cambiar de página, paleta de comandos, Colección, búsqueda, ajustes, capturas y el overlay dentro del juego."
 section: Reference
 order: 1
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-Pulsa <kbd>?</kbd> en Heronite para ver esta lista.
+Pulsa <kbd>?</kbd> en Heronite para ver todos los atajos de teclado.
 
-## En cualquier sitio
+## Atajos que funcionan en cualquier sitio
 
 | Teclas | Acción |
 |---|---|
@@ -22,7 +22,7 @@ Pulsa <kbd>?</kbd> en Heronite para ver esta lista.
 | <kbd>?</kbd> | Esta lista |
 | <kbd>Esc</kbd> | Cerrar o volver |
 
-## Colección
+## Atajos de la Colección
 
 | Teclas | Acción |
 |---|---|
@@ -36,7 +36,7 @@ Pulsa <kbd>?</kbd> en Heronite para ver esta lista.
 | <kbd>F3</kbd> | Editar el juego o la selección |
 | <kbd>Ctrl</kbd> <kbd>Z</kbd> | Deshacer el último cambio en los juegos seleccionados |
 
-## Campo de búsqueda
+## Atajos del campo de búsqueda
 
 | Teclas | Acción |
 |---|---|
@@ -44,7 +44,7 @@ Pulsa <kbd>?</kbd> en Heronite para ver esta lista.
 | <kbd>Enter</kbd> | Jugar o instalar el juego |
 | <kbd>Esc</kbd> | Borrar la búsqueda y luego salir de ella |
 
-## Paleta de comandos
+## Atajos de la paleta de comandos
 
 | Teclas | Acción |
 |---|---|
@@ -53,7 +53,7 @@ Pulsa <kbd>?</kbd> en Heronite para ver esta lista.
 | <kbd>→</kbd> | Las acciones de un juego |
 | <kbd>Tab</kbd> | Solo páginas, solo acciones o solo juegos |
 
-## Ajustes
+## Atajos de los ajustes
 
 | Teclas | Acción |
 |---|---|
@@ -61,7 +61,7 @@ Pulsa <kbd>?</kbd> en Heronite para ver esta lista.
 | <kbd>↑</kbd> <kbd>↓</kbd>, <kbd>Inicio</kbd>, <kbd>Fin</kbd> | Moverse |
 | <kbd>Enter</kbd> o <kbd>Espacio</kbd> | Cambiar |
 
-## Mientras juegas
+## Atajos mientras juegas
 
 | Teclas | Acción |
 |---|---|

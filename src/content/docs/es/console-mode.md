@@ -1,23 +1,23 @@
 ---
-title: "Modo consola: Heronite con mando en el salón"
+title: "Modo consola: usa Heronite con mando en la tele"
 navLabel: "Modo consola"
 description: "El modo consola de Heronite: cómo activarlo, botones del mando y del teclado, diseños y temas, cómo compartir temas y el overlay dentro del juego en Linux."
 section: Guides
 order: 4
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-Un diseño pensado para el mando, para el sofá o la tele, con teclado en pantalla y un menú de Energía.
+El modo consola es un diseño pensado para el mando, para el sofá o la tele, con teclado en pantalla y un menú de Energía.
 
-## Cómo activarlo
+## Activa el modo consola
 
-- Desde la paleta de comandos (<kbd>Ctrl</kbd> <kbd>K</kbd>) o el menú ☰.
+- Usa la paleta de comandos (<kbd>Ctrl</kbd> <kbd>K</kbd>) o el menú ☰.
 - Inicia Heronite con `--console` (por ejemplo, en un acceso directo de Steam o en una sesión de juego).
 - En **Ajustes → Modo consola**, haz que se abra al iniciar o cuando se conecte un mando (desactivado, preguntar o activado).
 
-Mientras está desactivado, no se carga nada del modo consola.
+Mientras está desactivado, el modo consola no carga nada. En la Steam Deck, consulta la [guía de Steam Deck](/es/guides/steam-deck/).
 
-## Mando
+## Botones del mando
 
 | Botón | Acción |
 |---|---|
@@ -44,7 +44,7 @@ Si prefieres la disposición de Nintendo, intercambia A y B en los controles del
 | <kbd>M</kbd> o <kbd>F1</kbd> | Start (menú) |
 | <kbd>Tab</kbd> | Select |
 
-## Temas
+## Cambia los diseños y los temas
 
 Cambia cada parte del modo consola, en directo desde el sofá o en **Ajustes → Modo consola**:
 
@@ -54,13 +54,13 @@ Cambia cada parte del modo consola, en directo desde el sofá o en **Ajustes →
 
 Vienen siete temas incluidos: Mínima, Clásico, Cine, Pulse, Arcade, Central y Salón.
 
-### Compartir temas
+### Comparte un tema
 
 Exporta un tema a un archivo `.heronite-theme.json` e impórtalo en cualquier PC. La imagen de fondo va dentro del archivo. Comparte los tuyos en [Discusiones](https://github.com/RafaelGoulartB/Heronite/discussions).
 
-El formato del archivo se describe en [Formato de temas del modo consola](/es/docs/console-theme-format/).
+Para editar el archivo a mano, consulta el [formato de temas del modo consola](/es/docs/console-theme-format/).
 
-## Overlay dentro del juego (beta, Linux)
+## Abre el overlay dentro del juego (beta, Linux)
 
 Con el overlay activado, el botón Guide del mando abre un panel sobre el juego con volumen, micrófono, límite de FPS, capturas de pantalla y notas del diario.
 
@@ -72,6 +72,6 @@ Con el overlay activado, el botón Guide del mando abre un panel sobre el juego 
 | Guide + Y | Marcar un momento |
 | Guide + X | Guardar el replay |
 
-El overlay necesita una sesión de Wayland cuyo compositor admita layer-shell (KDE Plasma, Hyprland, Sway y otros). No funciona en GNOME ni en X11. Si Steam se queda con el botón Guide, desactiva "Guide Button Focuses Steam" en los ajustes del mando de Steam.
+Si el overlay no funciona o Steam se queda con el botón Guide, consulta [Solución de problemas](/es/docs/troubleshooting/#el-overlay-dentro-del-juego-no-funciona-linux). Necesita una sesión de Wayland cuyo compositor admita layer-shell, así que no funciona en GNOME ni en X11.
 
 **Replay** (desactivado por defecto) guarda los últimos segundos de juego, grabados en la GPU con [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/).

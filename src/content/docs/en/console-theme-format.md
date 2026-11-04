@@ -1,5 +1,6 @@
 ---
 title: "Console mode theme file format (.heronite-theme.json)"
+navLabel: "Console theme format"
 description: "The .heronite-theme.json file format for console mode themes: the rules, a full example, and every field you can set by hand in the file."
 section: Reference
 order: 5

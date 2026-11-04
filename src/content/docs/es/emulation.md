@@ -1,13 +1,13 @@
 ---
-title: "Emuladores y ROMs en Heronite"
+title: "Emuladores y ROMs: sistemas compatibles y carpetas"
 navLabel: "Emulación"
-description: "Emuladores compatibles, núcleos de RetroArch por defecto, cómo organizar tus carpetas de ROMs, juegos de varios discos, estados guardados y RetroAchievements."
+description: "Emuladores y ROMs en Heronite: emuladores compatibles, núcleos de RetroArch por defecto, carpetas de ROMs, juegos de varios discos y RetroAchievements."
 section: Guides
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-Heronite detecta los emuladores que tienes instalados, escanea tus carpetas de ROMs y añade cada juego a la Colección con su arte. Instala los emuladores tú mismo (desde tu distribución, Flathub o sus webs); Heronite los encuentra en `PATH`, como Flatpaks y como núcleos de RetroArch.
+Heronite añade tus ROMs a la biblioteca con su arte: detecta los emuladores instalados y escanea tus carpetas de ROMs. Instala antes los emuladores, desde tu distribución, Flathub o sus webs. Heronite los encuentra en `PATH`, como Flatpaks y como núcleos de RetroArch.
 
 ## Emuladores compatibles
 
@@ -75,12 +75,12 @@ En el primer inicio, Heronite escanea estas carpetas si existen:
 - **Linux** (en tu carpeta personal): `ROMs`, `Roms`, `roms`, `Emulation/roms`, `Games/ROMs`, `Games/Emulation/roms`, `retrodeck/roms`, `RetroDECK/roms`; y `Emulation/roms`, `roms`, `retrodeck/roms` en otros discos.
 - **Windows:** `ROMs`, `Emulation\roms`, `Games\ROMs`, `Documents\ROMs` en tu carpeta de usuario; y `Emulation\roms`, `ROMs`, `Games\ROMs`, `RetroArch-Win64\roms` en la raíz de cada unidad.
 
-Añade más carpetas en la página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>). Los escaneos omiten las carpetas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` y `manuals`. Los juegos de varios discos se leen a partir de archivos `.m3u`, `.cue` y `.gdi`, así que cada uno aparece una sola vez.
+Añade más carpetas en la página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>). Los escaneos omiten las carpetas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` y `manuals`. Heronite lee los juegos de varios discos a partir de archivos `.m3u`, `.cue` y `.gdi`, así que cada uno aparece una sola vez.
 
-## Estados guardados
+## Continúa desde un estado guardado
 
-La página de un juego te permite continuar desde un estado guardado.
+Abre la página del juego para continuar desde un estado guardado.
 
-## Logros
+## Muestra los logros de RetroAchievements en juegos emulados
 
 Conecta una cuenta de [RetroAchievements](https://retroachievements.org) en Ajustes para ver tus logros de los juegos emulados. Consulta [Metadatos y arte](/es/docs/metadata-and-art/).

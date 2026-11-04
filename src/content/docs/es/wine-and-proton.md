@@ -1,15 +1,15 @@
 ---
 title: "Wine y Proton en Linux: juegos de Windows"
 navLabel: "Wine y Proton"
-description: "Juega a juegos de Windows en Linux con Heronite: el Gestor de Wine, versiones de Proton, prefijos, opciones por juego como DXVK y gamescope, sandbox y anticheat."
+description: "Juega a juegos de Windows en Linux con Heronite: Gestor de Wine, versiones de Proton, prefijos, opciones por juego como DXVK y gamescope, sandbox y anticheat."
 section: Guides
 order: 3
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-En Linux, los juegos de Windows se ejecutan con Wine o Proton. Heronite elige valores razonables por defecto; todas las opciones de abajo se pueden cambiar por juego en **Ajustes del juego → Compatibilidad**, o para todos los juegos en Ajustes.
+Heronite ejecuta los juegos de Windows en Linux con Wine o Proton. Cambia cualquier opción de abajo por juego en **Ajustes del juego → Compatibilidad**, o para todos los juegos en Ajustes.
 
-## Gestor de Wine
+## Descarga versiones de Proton en el Gestor de Wine
 
 El Gestor de Wine (<kbd>Ctrl</kbd> <kbd>3</kbd>) descarga y actualiza estas versiones:
 
@@ -20,9 +20,9 @@ El Gestor de Wine (<kbd>Ctrl</kbd> <kbd>3</kbd>) descarga y actualiza estas vers
 - Proton-EM
 - Proton-Sarek
 
-Las versiones van a la carpeta de datos de Heronite (`~/.local/share/heronite/tools/proton` y `tools/wine`), o al `compatibilitytools.d` de Steam si lo activas, para que Steam también pueda usarlas. Heronite también encuentra las versiones de Proton que ya tienes en tus bibliotecas de Steam y los runners de Wine de Lutris.
+Las versiones van a la carpeta de datos de Heronite (`~/.local/share/heronite/tools/proton` y `tools/wine`), o al `compatibilitytools.d` de Steam si lo activas, para que Steam también pueda usarlas. Heronite encuentra las versiones de Proton que ya tienes en tus bibliotecas de Steam y los runners de Wine de Lutris.
 
-## Prefijos
+## Dónde se guardan los juegos y los prefijos de Wine
 
 Un prefijo es la carpeta de Windows simulada en la que se ejecuta un juego. Por defecto:
 
@@ -30,7 +30,7 @@ Un prefijo es la carpeta de Windows simulada en la que se ejecuta un juego. Por 
 - cada juego tiene su propio prefijo en `~/Games/Heronite/Prefixes`,
 - o varios juegos pueden compartir `~/Games/Heronite/Prefixes/shared`.
 
-El Gestor de Wine lista tus prefijos, y los ajustes de un juego tienen botones para Winecfg y Winetricks en su prefijo.
+El Gestor de Wine lista tus prefijos. **Ajustes del juego → Compatibilidad** tiene botones de Winecfg y Winetricks para el prefijo del juego.
 
 ## Opciones por juego
 
@@ -50,12 +50,12 @@ El Gestor de Wine lista tus prefijos, y los ajustes de un juego tienen botones p
 
 ## Sandbox
 
-Ejecuta un juego en el que no confías con [bubblewrap](https://github.com/containers/bubblewrap): sin red y sin acceso a tu carpeta personal. Deja pasar una sola cosa (como una carpeta o la red) cuando el juego la necesite. Necesita `bwrap` instalado.
+Ejecuta un juego en el que no confías con [bubblewrap](https://github.com/containers/bubblewrap): sin red y sin acceso a tu carpeta personal. Permite una carpeta o la red cuando el juego lo necesite. Necesita `bwrap` instalado.
 
-## Cuando un juego no arranca
+## Un juego de Windows no arranca
 
-Heronite lee el log de inicio y sugiere una solución cuando reconoce el problema: falta una DLL o .NET, un juego con DirectX 12 sin VKD3D-Proton, falta el controlador de Vulkan de 32 bits, un `vm.max_map_count` bajo, otro `wineserver` que sigue en ejecución o un anticheat no compatible. Consulta [Solución de problemas](/es/docs/troubleshooting/).
+Heronite lee el log de inicio y sugiere una solución cuando reconoce el problema. Consulta las [causas y soluciones en Solución de problemas](/es/docs/troubleshooting/#un-juego-no-arranca-linux).
 
 ## Anticheat
 
-El estado del anticheat de un juego procede de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) y se muestra en sus detalles. Heronite puede proporcionar los runtimes de EAC y BattlEye, pero un juego cuyo desarrollador no permite Linux no funcionará.
+Heronite muestra en los detalles de cada juego su estado de anticheat, tomado de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com). Heronite puede proporcionar los runtimes de EAC y BattlEye, pero un juego cuyo desarrollador no permite Linux no funcionará.

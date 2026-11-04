@@ -1,5 +1,6 @@
 ---
 title: "Heronite data folder and file locations"
+navLabel: "Files and folders"
 description: "Where Heronite keeps its data, settings, cache, screenshots and logs on Linux and Windows, what is inside, and how the portable copy works."
 section: Reference
 order: 3

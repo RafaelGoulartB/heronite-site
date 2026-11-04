@@ -1,5 +1,6 @@
 ---
 title: "Back up your Collection and game saves (Ludusavi)"
+navLabel: "Backups and saves"
 description: "Back up your Heronite Collection on a schedule and your game saves after every session with Ludusavi, and restore them when you need to."
 section: Guides
 order: 6

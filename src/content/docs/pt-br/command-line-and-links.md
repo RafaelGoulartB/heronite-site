@@ -4,12 +4,12 @@ navLabel: "Linha de comando e links"
 description: "Abra o Heronite por scripts: opções de linha de comando como --launch, --console e --no-gui, ids de jogos de cada loja e links heronite://."
 section: Reference
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-O programa se chama `heronite-rs` no Linux e no instalador do Windows (`heronite-rs.exe`), e `heronite.exe` na cópia portátil do Windows.
+Abra o Heronite por scripts com opções como `--launch`. O programa se chama `heronite-rs` no Linux e no instalador do Windows (`heronite-rs.exe`), e `heronite.exe` na cópia portátil do Windows.
 
-## Opções
+## Opções de linha de comando
 
 | Opção | O que faz |
 |---|---|
@@ -20,9 +20,9 @@ O programa se chama `heronite-rs` no Linux e no instalador do Windows (`heronite
 | `--autostart` | Usada por "Iniciar com o sistema"; só com ela vale "Iniciar minimizado" |
 | `-h`, `--help` | Mostra as opções |
 
-Só um Heronite roda por vez: ao abri-lo de novo, o pedido (como o `--launch`) é passado para o que já está aberto.
+Só um Heronite roda por vez. Se você abri-lo de novo, o pedido (como o `--launch`) vai para o que já está aberto.
 
-## Como iniciar um jogo
+## Inicie um jogo pela linha de comando
 
 O `--launch` recebe o id do jogo na loja, não o nome dele, opcionalmente com a ferramenta da loja na frente:
 
@@ -40,9 +40,9 @@ heronite-rs --launch legendary_Fortnite --no-gui
 | `nile` | Amazon Games |
 | `sideload` | Jogos que você mesmo adicionou |
 
-Os atalhos que o Heronite cria (área de trabalho, menu Iniciar, Steam) já têm o comando certo, então isto serve mais para scripts.
+Os atalhos que o Heronite cria (área de trabalho, menu Iniciar, Steam) já têm o comando certo. Por isso, isto serve mais para scripts.
 
-## Links `heronite://`
+## Inicie um jogo com um link `heronite://`
 
 ```
 heronite://launch/<game>

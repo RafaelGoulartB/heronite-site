@@ -1,5 +1,6 @@
 ---
 title: "Game covers and metadata: SteamGridDB and IGDB keys"
+navLabel: "Metadata and art"
 description: "Where Heronite gets game covers, art and details, how to add SteamGridDB and IGDB keys, and how to show Steam and RetroAchievements achievements."
 section: Guides
 order: 5

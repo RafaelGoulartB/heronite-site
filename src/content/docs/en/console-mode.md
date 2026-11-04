@@ -1,5 +1,6 @@
 ---
 title: "Console mode: use Heronite with a controller on a TV"
+navLabel: "Console mode"
 description: "Heronite console mode: turn it on, controller and keyboard buttons, layouts and themes, sharing themes and the in-game overlay on Linux."
 section: Guides
 order: 4

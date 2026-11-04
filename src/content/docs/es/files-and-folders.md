@@ -1,12 +1,15 @@
 ---
-title: "Archivos y carpetas de Heronite"
+title: "Carpeta de datos y archivos de Heronite"
+navLabel: "Archivos y carpetas"
 description: "Dónde guarda Heronite sus datos, ajustes, caché, capturas y logs en Linux y Windows, qué hay dentro de cada carpeta y cómo funciona la copia portable."
 section: Reference
 order: 3
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## Dónde guarda Heronite sus datos
+Heronite guarda todo como archivos JSON sencillos, no en una base de datos.
+
+## ¿Dónde está la carpeta de datos?
 
 | | Linux | Windows | Windows portable |
 |---|---|---|---|
@@ -17,9 +20,7 @@ updated: 2026-11-01
 
 La carpeta de capturas se puede cambiar en **Ajustes → Capturas**. Para usar otra carpeta de datos, define `HERONITE_DATA_DIR` (consulta [Variables de entorno](/es/docs/environment-variables/)).
 
-Todo se guarda como archivos JSON sencillos, no en una base de datos.
-
-## Dentro de la carpeta de datos
+## ¿Qué hay dentro de la carpeta de datos?
 
 | Ruta | Qué contiene |
 |---|---|
@@ -35,7 +36,7 @@ Todo se guarda como archivos JSON sencillos, no en una base de datos.
 
 Estas carpetas contienen tus inicios de sesión en las tiendas. Tenlo en cuenta cuando copies o compartas la carpeta de datos.
 
-## Juegos y prefijos de Wine (Linux)
+## ¿Dónde se guardan los juegos y los prefijos de Wine? (Linux)
 
 | Ruta | Qué contiene |
 |---|---|
@@ -62,6 +63,6 @@ Heronite\
 
 Borra `portable.txt` para que la copia use las carpetas de usuario normales. Una copia portable no escribe en el registro ni registra los enlaces `heronite://`.
 
-## Si vienes de Heroic (Linux)
+## Pasa de Heroic a Heronite (Linux)
 
-En el primer inicio, si existe `~/.config/heroic`, sus datos se copian una sola vez a la carpeta de datos de Heronite, así que tus inicios de sesión, juegos y ajustes se mantienen. Los archivos de Heroic solo se leen.
+En el primer inicio, si existe `~/.config/heroic`, Heronite copia sus datos una sola vez a su carpeta de datos, así que tus inicios de sesión, juegos y ajustes se mantienen. Heronite solo lee los archivos de Heroic.

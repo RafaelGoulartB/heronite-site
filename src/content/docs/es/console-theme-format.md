@@ -1,22 +1,23 @@
 ---
-title: "Formato de los temas del modo consola"
-description: "El formato del archivo .heronite-theme.json para los temas del modo consola: reglas, un ejemplo y todos los campos que puedes definir a mano."
+title: "Formato de temas del modo consola (.heronite-theme.json)"
+navLabel: "Formato de temas"
+description: "El formato del archivo .heronite-theme.json para temas del modo consola: las reglas, un ejemplo completo y todos los campos que puedes editar a mano."
 section: Reference
 order: 5
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-Un tema del modo consola es un único archivo JSON, `<id>.heronite-theme.json`. La forma más fácil de crear uno es hacerlo en Heronite (**Ajustes → Modo consola**) y luego usar **Exportar**; esta página es para leer o editar el archivo a mano.
+Un tema del modo consola es un único archivo JSON, `<id>.heronite-theme.json`. La forma más fácil de crear uno es hacerlo en Heronite (**Ajustes → Modo consola**) y luego usar **Exportar**. Esta página es para leer o editar el archivo a mano.
 
-## Reglas
+## Reglas del archivo
 
 - Las claves van en camelCase.
 - **Todos los campos son opcionales.** Un campo que falta toma el valor del tema Clásico.
 - Un valor desconocido vuelve al valor por defecto de ese campo, y las claves desconocidas se conservan, así que un tema creado con un Heronite más nuevo se abre igualmente.
-- `format` es la versión del formato del archivo, actualmente `1`. Un tema con un `format` mayor se rechaza al importarlo.
+- `format` es la versión del formato del archivo, actualmente `1`. Heronite rechaza al importar un tema con un `format` mayor.
 - La imagen de fondo va incrustada en el archivo (PNG, JPEG o WebP, de hasta 16 MiB), así que basta con un solo archivo para compartirlo.
 
-## Ejemplo
+## Ejemplo de archivo de tema
 
 ```json
 {
@@ -40,7 +41,7 @@ Un tema del modo consola es un único archivo JSON, `<id>.heronite-theme.json`. 
 }
 ```
 
-## Campos
+## Campos que puedes definir
 
 ### Sobre el tema
 
@@ -157,10 +158,10 @@ Opciones de cada diseño:
 - `spotlightActions`: `full` o `play`,
 - también `jumpLetters`, `spotlightCards`, `carouselReflect`, `xboxGroups` y `dashboard` (`week`, `downloads`, `random`, `journal`, `shortcuts`).
 
-## Lo que no forma parte de un tema
+## Lo que un tema no incluye
 
 Lo que ocurre cuando se conecta un mando, cómo se abre Heronite y qué hace cuando está inactivo son ajustes de tu PC, no del tema, así que no están en el archivo.
 
-## Comparte el tuyo
+## Comparte tu tema
 
 Publica tu tema en [Discusiones](https://github.com/RafaelGoulartB/Heronite/discussions) para que otros puedan importarlo.

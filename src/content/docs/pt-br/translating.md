@@ -1,15 +1,15 @@
 ---
-title: "Como traduzir o Heronite para o seu idioma"
+title: "Traduzir o Heronite: corrija ou adicione um idioma"
 navLabel: "Tradução"
-description: "Ajude a traduzir o Heronite: veja como funcionam os arquivos de idioma, como corrigir uma tradução existente e como adicionar um idioma novo."
+description: "Traduzir o Heronite: como funcionam os arquivos de idioma JSON, como corrigir uma tradução, conferir seu trabalho e adicionar um idioma por pull request."
 section: Contribute
 order: 1
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-O Heronite está em inglês, português (Brasil), espanhol e alemão. Correções nesses idiomas e novos idiomas são bem-vindos.
+O Heronite está em inglês, português (Brasil), espanhol e alemão. Correções e novos idiomas são bem-vindos: você só edita arquivos JSON.
 
-## Como as traduções funcionam
+## Como funcionam os arquivos de idioma?
 
 O texto em inglês no código é a chave. Cada idioma tem uma pasta com arquivos JSON, um para cada parte do app:
 
@@ -37,11 +37,11 @@ Cada arquivo é um objeto simples que liga o texto em inglês à tradução:
 - Marcadores como `{n}` devem ficar iguais na tradução.
 - Os plurais têm uma chave separada para o singular e para o plural.
 
-## Como corrigir uma tradução
+## Corrija uma tradução
 
 Edite o arquivo JSON e abra um pull request. Não precisa de código.
 
-## Como conferir seu trabalho
+## Confira sua tradução
 
 ```bash
 HERONITE_I18N_MISSING=1 cargo test -p heronite-i18n --test coverage -- --nocapture
@@ -51,7 +51,7 @@ Isso lista as chaves que faltam ou sobram e os marcadores que não combinam.
 
 Para ver seu idioma no app, escolha-o em **Configurações → Geral → Idioma**.
 
-## Como adicionar um novo idioma
+## Adicione um novo idioma
 
 Copie uma das pastas para uma nova, com o nome do código do idioma (como `fr` ou `it`), e traduza os arquivos dela. Um novo idioma também precisa de algumas linhas de código em `crates/i18n/src/lib.rs` (o nome e o código dele). Se você não se sente à vontade com Rust, abra o pull request com a tradução e peça ajuda por lá.
 
