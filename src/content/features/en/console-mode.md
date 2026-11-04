@@ -104,7 +104,7 @@ A tab shows all games, only installed ones or only favourites, or filters by one
 
 ## How do I change the look of console mode?
 
-Pick one of seven themes (**Minimal**, **Classic**, **Cinema**, **Pulse**, **Arcade**, **Hub**, **Living room**). Then change any of these live or in **Settings → Console mode**:
+Choose one of seven themes (**Minimal**, **Classic**, **Cinema**, **Pulse**, **Arcade**, **Hub**, **Living room**). Then change any of these live or in **Settings → Console mode**:
 
 - Covers, tile shape and size
 - Background: the game's art, a blurred cover, screenshots or a picture of your own

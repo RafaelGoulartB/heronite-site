@@ -55,7 +55,7 @@ Each tool turns on one feature. Heronite works without them.
 | [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/) | Replay (the system package or the Flathub app) |
 | [Ludusavi](https://github.com/mtkennerly/ludusavi) | Save backups after each session |
 | `python3` | GOG downloads (gogdl, the GOG download tool, runs on Python) |
-| WebKitGTK 4.1 | The store login window. Without it, use the browser method on the login page. |
+| WebKitGTK 4.1 | The store login window. Without it, log in with your browser instead. |
 
 ## Update Heronite
 

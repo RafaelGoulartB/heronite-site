@@ -56,11 +56,12 @@ Other formats are in the [installation guide](/docs/installation/). On Steam Dec
 
 ## Log in to Amazon Games
 
-1. Press <kbd>Ctrl</kbd> <kbd>4</kbd> to open **Stores**.
-2. Choose **Amazon Games**, then **Log in with Amazon Games**.
-3. Log in on Amazon's page in the window that opens.
+1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Choose **Amazon Games**.
+3. Press **Log in**.
+4. Log in on Amazon's page in the window that opens.
 
-Your Amazon games then appear in your library, claimed Prime Gaming games included. If the login window does not open, choose **Open in browser** on the same page. Log in, then paste the address of the amazon.com page you land on ([store logins](/docs/troubleshooting/#a-store-login-or-download-fails)).
+Your Amazon games then appear in your library, claimed Prime Gaming games included. If the login window does not open, use **Or log in with your browser** on the same page: press **Open in browser**. Log in, then paste the address of the amazon.com page you land on ([store logins](/docs/troubleshooting/#a-store-login-or-download-fails)).
 
 ## Claim your Prime Gaming games
 
@@ -77,13 +78,13 @@ The new games then appear in your library. Amazon decides what Prime Gaming offe
 Check the **On Linux** box in the game's details first. It shows the [ProtonDB](https://www.protondb.com) rating and the anti-cheat status. Gold or Platinum usually runs with no changes.
 
 1. Select the game and press <kbd>Enter</kbd>, or choose **Install with Amazon Games**.
-2. Check the **Install folder**. The **Wine version** is under **Show Wine settings**; the default is fine to start.
+2. Check the folder under **Select install path**. The **Wine version** is under **Show Wine settings**; the default is fine to start.
 3. Confirm. Follow the download on the Downloads page (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 4. When it finishes, select the game and press <kbd>Enter</kbd> to play.
 
 ## Change the Proton version
 
-If a game does not start, open **Game settings → Compatibility** and pick another build in **Version**. GE-Proton and Proton-CachyOS often have fixes first, and the [GE-Proton guide](/guides/install-ge-proton/) shows how to install them. The game's page on [ProtonDB](https://www.protondb.com) often has the fix too.
+If a game does not start, open **Game settings → Compatibility** and choose another build in **Version**. GE-Proton and Proton-CachyOS often have fixes first, and the [GE-Proton guide](/guides/install-ge-proton/) shows how to install them. The game's page on [ProtonDB](https://www.protondb.com) often has the fix too.
 
 ## Update, repair or move an Amazon game
 

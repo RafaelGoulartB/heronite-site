@@ -321,7 +321,7 @@ const en = {
     windowsIntroHtml: 'Windows 10 and 11 are supported. The <strong>installer</strong> installs Heronite for your user into <code>%LOCALAPPDATA%\\Programs\\Heronite</code>, with no administrator rights needed. The <strong>portable zip</strong> runs from any folder or USB drive and keeps your library, settings and screenshots in that folder.',
     smartScreenHtml: '<strong>SmartScreen.</strong> The files are not code-signed yet, so Windows may say it protected your PC. Choose <strong>More info</strong>, then <strong>Run anyway</strong>.',
     webViewHtml: 'Logging in to Epic Games, GOG or Amazon uses the Microsoft Edge WebView2 Runtime. Windows 11 has it; on Windows 10, <a href="https://developer.microsoft.com/microsoft-edge/webview2/">install it from Microsoft</a> if the login window asks for it.',
-    nextHtml: 'On the first start Heronite finds your Steam games, your emulators and your ROM folders by itself. Then log in to your other stores on the <strong>Stores</strong> page. The <a href="{start}">getting started guide</a> walks through the rest, and the full <a href="{install}">installation docs</a> cover updates and removal.',
+    nextHtml: 'On the first start Heronite finds your Steam games, your emulators and your ROM folders automatically. Then log in to your other stores on the <strong>Stores</strong> page. The <a href="{start}">getting started guide</a> walks through the rest, and the full <a href="{install}">installation docs</a> cover updates and removal.',
     sourceHtml: 'Prefer to build it yourself? The <a href="{repo}">source code is on GitHub</a>, with every <a href="{releases}">release</a> and its notes.',
     faqTitle: 'Download questions',
     faq: [

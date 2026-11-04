@@ -28,9 +28,9 @@ faq:
   - q: "Can I play GTA V or Red Dead Redemption 2 on Linux?"
     a: "Yes, the story modes, through the Rockstar Games Launcher. BattlEye blocks GTA Online and Red Dead Online on Linux."
   - q: "Does this work on Windows?"
-    a: "Yes. On Windows, Heronite runs each store app without Wine and uses it as it is if already installed. Their games join your library and start through the store app."
+    a: "Yes. On Windows, Heronite runs each store app directly, without Wine, and uses your existing install if you have one. Their games appear in your library and launch through the store app."
   - q: "Can I use a store app I already set up in Wine?"
-    a: "Yes. Choose **Use an existing install** on the store app's page and point Heronite at your Wine prefix."
+    a: "Yes. Press **Use an existing install** on the store app's page and select your Wine prefix."
 related:
   - /guides/battle-net-on-linux/
   - /guides/install-ge-proton/
@@ -61,10 +61,10 @@ The steps are the same for all three.
 
 1. Press <kbd>Ctrl</kbd> <kbd>4</kbd> to open **Stores**.
 2. In the list on the left, under **Store apps**, choose **EA app**, **Ubisoft Connect** or **Rockstar Games Launcher**.
-3. Choose **Set up** followed by its name, such as **Set up EA app**.
+3. Press **Set up** followed by its name, such as **Set up EA app**.
 4. Wait until the page says **Ready**.
 
-Heronite finds or downloads a Proton, then the official installer. It creates a Wine prefix (a separate Windows folder) and installs the store app there:
+Heronite finds or downloads a Proton, then the official installer. It creates a Wine prefix (a separate Windows folder for that app) and installs the store app there:
 
 | Store app | Wine prefix |
 |---|---|
@@ -72,18 +72,18 @@ Heronite finds or downloads a Proton, then the official installer. It creates a 
 | Ubisoft Connect | `~/Games/Heronite/Prefixes/Ubisoft Connect` |
 | Rockstar Games Launcher | `~/Games/Heronite/Prefixes/Rockstar Games Launcher` |
 
-If you already run one of these store apps in a Wine prefix, choose **Use an existing install** instead of step 3 and point Heronite at that prefix.
+If you already run one of these store apps in a Wine prefix, press **Use an existing install** instead of step 3 and select that prefix.
 
 ## Log in, install and play games
 
-1. Choose **Open** followed by its name, such as **Open Ubisoft Connect**.
+1. Press **Open** followed by its name, such as **Open Ubisoft Connect**.
 2. Log in in the store app's window. Heronite never sees your password, and its page then shows **Signed in**.
 3. Install a game in the store app, as you would on Windows.
 4. Press <kbd>Enter</kbd> on the game in your Heronite library to start it.
 
 Before you install a big game, check the **On Linux** box in its details for the [ProtonDB](https://www.protondb.com) rating and anti-cheat status. Gold and Platinum are the safest. If unsure, install a small game first to test your setup.
 
-If an installed game is missing from your library, choose **Refresh** under **Installed games** on the store app's page. A game you have not installed shows **Install with the EA app**, **Install with Ubisoft Connect** or **Install with the Rockstar Games Launcher**, which opens the store app.
+If an installed game is missing from your library, press **Refresh** under **Installed games** on the store app's page. A game you have not installed shows **Install with the EA app**, **Install with Ubisoft Connect** or **Install with the Rockstar Games Launcher**, which opens the store app.
 
 ## Which games does anti-cheat block?
 
@@ -97,13 +97,13 @@ A game whose developer does not allow Linux will not run. Statuses change, so ch
 
 ## Change the Proton version for a store app
 
-Open **Wine settings** on the store app's page and pick another build in **Version** on the **Compatibility** tab. Until you change it, Heronite uses your default Proton. [GE-Proton and Proton-CachyOS](/guides/install-ge-proton/) are the usual ones to try.
+Open **Wine settings** on the store app's page and choose another build in **Version** on the **Compatibility** tab. Until you change it, Heronite uses your default Proton. [GE-Proton and Proton-CachyOS](/guides/install-ge-proton/) are the usual ones to try.
 
-To open the prefix, choose **Open folder** next to **Wine prefix** on the same page. To stop a store app and everything in its prefix, close any running game, then choose **Close** followed by the store app's name.
+To open the prefix, press **Open folder** next to **Wine prefix** on the same page. To stop a store app and everything in its prefix, close any running game, then press **Close** followed by the store app's name.
 
 ## Remove a store app
 
-Choose **Remove from Heronite** on its page. The Wine prefix and its games stay on disk, so you can add it back later with **Use an existing install**. Delete the prefix folder to free the space.
+Press **Remove from Heronite** on its page. The Wine prefix and its games stay on disk, so you can add it back later with **Use an existing install**. Delete the prefix folder to free the space.
 
 ## A store app won't log in or a game closes on start
 

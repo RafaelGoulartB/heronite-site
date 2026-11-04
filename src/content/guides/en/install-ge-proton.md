@@ -13,7 +13,7 @@ og: /og/install-ge-proton.jpg
 updated: 2026-11-04
 highlights:
   - title: "Open the Wine Manager"
-    text: "Press Ctrl+3, choose a source such as GE-Proton, and click Install on a build."
+    text: "Press Ctrl+3, choose a source such as GE-Proton, and press Install on a build."
   - title: "Six sources"
     text: "Pick from six Proton sources in one list."
   - title: "Share with Steam"
@@ -48,7 +48,7 @@ GE-Proton and Proton-CachyOS often get fixes for new releases first, so try them
 1. Press <kbd>Ctrl</kbd> <kbd>3</kbd> to open the Wine Manager, or open it from the command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>).
 2. Choose **GE-Proton** in the list on the left. Its builds appear on the right, newest first, with release date and size.
 3. Find the build you want, or type a version in the search box. **GE-Proton-latest** follows the newest release. A numbered build stays fixed, which helps when a game works on one release only.
-4. Click **Install**. The row changes to **Installed**.
+4. Press **Install**. The row changes to **Installed**.
 
 ![Heronite's Wine Manager with Proton-CachyOS selected: a list of builds with release dates, sizes and Install buttons.](../../../assets/screenshots/wine-manager.webp)
 
@@ -57,7 +57,7 @@ Builds go to `~/.local/share/heronite/tools/proton`. To keep the **-latest** ent
 ## Install Proton-CachyOS
 
 1. In the Wine Manager, choose **Proton-CachyOS** in the list on the left.
-2. Click **Install** on a build.
+2. Press **Install** on a build.
 
 Builds install side by side, so you can keep GE-Proton and Proton-CachyOS and switch per game.
 
@@ -77,12 +77,12 @@ Builds install side by side, so you can keep GE-Proton and Proton-CachyOS and sw
 ## Pick a build in Game settings
 
 1. Select the game in your library and open its **Game settings**.
-2. Go to the **Compatibility** tab.
+2. Open the **Compatibility** tab.
 3. In **Version**, choose the build you installed.
 
 ![Heronite's Game settings on the Compatibility tab: the Version menu set to GE-Proton-latest, with its ProtonDB rating and the Wine prefix below.](../../../assets/screenshots/game-settings.webp)
 
-The same tab shows the game's ProtonDB rating and a **Recommended** build. Your choice applies to that game only. To set the build for new games, use **Version** in **Settings → Game defaults → Compatibility**. More in [Wine and Proton](/docs/wine-and-proton/).
+The same tab shows the game's ProtonDB rating and a **Recommended** build. Your choice applies to that game only. To set the build for new games, choose a build in **Version** in **Settings → Game defaults → Compatibility**. More in [Wine and Proton](/docs/wine-and-proton/).
 
 ## Share the builds with Steam (optional)
 
@@ -96,12 +96,12 @@ Heronite can put builds in Steam's `compatibilitytools.d` folder, where Steam ca
 
 ## Update and remove builds
 
-In the Wine Manager, click **Update** next to an installed build when a new release exists. Click **Remove** to delete a build. Games set to a removed build fall back to the default.
+In the Wine Manager, press **Update** next to an installed build when a new release exists. Press **Remove** to delete a build. Games set to a removed build fall back to the default.
 
 ## A build won't install, show up or fix the game
 
-- **The list is empty.** Click the refresh icon. If it says GitHub's limit was reached, try again after the time it shows.
-- **A download fails.** Check your connection and click **Install** again.
+- **The list is empty.** Press the refresh icon. If it says GitHub's limit was reached, try again after the time it shows.
+- **A download fails.** Check your connection and press **Install** again.
 - **Steam does not show the build.** Make sure **Install Proton into Steam** was on when you installed it, then restart Steam.
 - **A game still crashes.** Try another source, such as Proton-CachyOS or DW-Proton, or a fresh prefix.
 

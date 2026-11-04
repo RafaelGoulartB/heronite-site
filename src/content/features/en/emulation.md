@@ -44,7 +44,7 @@ Emulated games join the same library as your PC games, with play time and a time
 3. Put your ROMs in one subfolder per system.
 4. Open the **Emulators** page (<kbd>Ctrl</kbd> <kbd>5</kbd>).
 5. Choose **Detect emulators…** to find the ones installed on your PC.
-6. Press **Add ROM folder**, then pick the emulator and the folder with its ROMs.
+6. Press **Add ROM folder**, then choose the emulator and the folder with its ROMs.
 
 Heronite scans the folder and adds its games. **Scan all folders now** picks up games you add later.
 

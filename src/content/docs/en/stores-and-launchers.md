@@ -21,7 +21,7 @@ Steam starts its games. On Windows, Heronite can run scripts and programs, like 
 ## Log in to Epic Games, GOG, and Amazon Games
 
 1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
-2. Pick **Epic Games**, **GOG** or **Amazon Games**.
+2. Choose **Epic Games**, **GOG** or **Amazon Games**.
 3. Press **Log in**. A small window opens with the store's own page (WebKitGTK on Linux, WebView2 on Windows).
 4. Log in there.
 
@@ -45,18 +45,18 @@ If the window does not open, use **Or log in with your browser** on the same pag
 
 ## Use Battle.net, EA app, Ubisoft Connect, and Rockstar Games
 
-On Linux, Heronite installs each store app in its own Wine prefix (a separate Windows folder), `~/Games/Heronite/Prefixes/<store>`. On Windows, the store app runs as it is, with no Wine.
+On Linux, Heronite installs each store app in its own Wine prefix (a separate Windows folder for that app), `~/Games/Heronite/Prefixes/<store>`. On Windows, the store app runs directly, without Wine.
 
-1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>) and pick the store app.
+1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>) and choose the store app.
 2. Press **Set up** with the app's name, like **Set up Battle.net**. Heronite downloads the official installer and runs it. On Linux it installs the app with your default Proton, which takes about 5 minutes. On Windows, Windows may ask you to allow it.
 3. Press **Open** with the app's name, and log in there.
 4. Install games in the store app. They appear in your library and start from there.
 
-On Windows, Heronite uses a store app that is already installed as it is.
+On Windows, Heronite uses a store app that is already installed.
 
 ## Add Microsoft Store and PC Game Pass games (Windows)
 
-Heronite finds the games the Xbox app and the Microsoft Store installed, bought or from PC Game Pass, and adds them by itself. There is no login: install and update them in the Xbox app, and Heronite starts them and counts their play time.
+Heronite finds the games the Xbox app and the Microsoft Store installed, bought or from PC Game Pass. Heronite adds them to your library. There is no login: install and update them in the Xbox app, and Heronite starts them and counts their play time.
 
 Heronite reads them a few seconds after it starts and every ten minutes. To read them now, press **Read games now** on **Stores → Xbox**, or the Collection's refresh button. Uninstall these games in the Xbox app.
 
@@ -64,7 +64,7 @@ Heronite reads them a few seconds after it starts and every ten minutes. To read
 
 Turn on a launcher in **Settings → Other launchers** with **Bring its games in**. Heronite then keeps its games in sync. On Linux, each launcher can be a normal install or a Flatpak:
 
-| Launcher | What comes in |
+| Launcher | What Heronite imports |
 |---|---|
 | Heroic (Linux) | Games you added by hand, and your installed Epic, GOG, and Amazon games |
 | Lutris (Linux) | Games from its library (`pga.db`) |
@@ -72,9 +72,9 @@ Turn on a launcher in **Settings → Other launchers** with **Bring its games in
 | Faugus (Linux) | Games from its list |
 | Playnite (Windows) | Installed games that are not hidden, with covers and play time |
 
-Close Playnite before you turn its import on: while it runs, it holds its library open and Heronite reads nothing. Playnite keeps starting its games.
+Close Playnite before you turn its import on: while it runs, it holds its library open and Heronite reads nothing. Playnite games still launch through Playnite.
 
-Heronite skips their Steam games, which come in through the Steam import, so nothing shows up twice. It only reads the other launchers' files, so they keep working.
+Heronite skips their Steam games, since the Steam import already adds them, so nothing shows up twice. It only reads the other launchers' files, so they keep working.
 
 ## Add games you already have
 

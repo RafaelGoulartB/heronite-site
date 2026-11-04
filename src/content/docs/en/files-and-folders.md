@@ -38,7 +38,7 @@ Take care when you copy or share the data folder: these three folders hold your 
 
 ## Where are games and Wine prefixes stored? (Linux)
 
-A Wine prefix is a game's own Windows drive, with its settings and saves.
+A Wine prefix is a separate Windows folder for a game, with its settings and saves.
 
 | Path | What it holds |
 |---|---|

@@ -57,18 +57,19 @@ Other formats are in the [installation guide](/docs/installation/). On Steam Dec
 
 ## Log in to GOG
 
-1. Press <kbd>Ctrl</kbd> <kbd>4</kbd> to open **Stores**.
-2. Choose **GOG**, then **Log in with GOG**.
-3. Log in on GOG's page in the window that opens.
+1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Choose **GOG**.
+3. Press **Log in**.
+4. Log in on GOG's page in the window that opens.
 
-All your GOG games then appear in your library. If the login window does not open, use the **browser method** on the same page. Copy the address you land on, which contains `code=`, and paste it into Heronite ([store logins](/docs/troubleshooting/#a-store-login-or-download-fails)).
+All your GOG games then appear in your library. If the login window does not open, use **Or log in with your browser** on the same page. Copy the address you land on, which contains `code=`, and paste it into Heronite ([store logins](/docs/troubleshooting/#a-store-login-or-download-fails)).
 
 ## Install and play a GOG game
 
 Check the **On Linux** box in the game's details first for the [ProtonDB](https://www.protondb.com) rating.
 
 1. Find the game in your library and press <kbd>Enter</kbd>, or choose **Install with GOG**.
-2. Pick the **Install folder**. For a Windows game, the **Wine version** is under **Show Wine settings**; the default is a good start.
+2. Check the folder under **Select install path**. For a Windows game, the **Wine version** is under **Show Wine settings**; the default is a good start.
 3. Confirm. Follow the download on the Downloads page (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 4. When it finishes, select the game and press <kbd>Enter</kbd> to play.
 
@@ -76,21 +77,21 @@ When GOG lists a native Linux version, Heronite can offer it in place of the Win
 
 ## Change the Proton version
 
-If a Windows game misbehaves, open **Game settings → Compatibility** and pick another build in **Version**. The [GE-Proton guide](/guides/install-ge-proton/) shows how to get more builds.
+If a Windows game misbehaves, open **Game settings → Compatibility** and choose another build in **Version**. The [GE-Proton guide](/guides/install-ge-proton/) shows how to get more builds.
 
 ![Heronite's Game settings for Control on the Compatibility tab, with the Proton version, its ProtonDB rating and the Wine prefix.](../../../assets/screenshots/game-settings.webp)
 
-Each Windows game has its own Wine prefix, a separate Windows folder, in `~/Games/Heronite/Prefixes`.
+Each Windows game has its own Wine prefix (a separate Windows folder for that game) in `~/Games/Heronite/Prefixes`.
 
 ## Add DRM-free GOG games by hand
 
 1. Download the offline installer from your GOG account on the website.
-2. Run the installer. For a Windows installer, use **Run .exe in prefix** in **Game settings → Compatibility**, or run it through Wine yourself.
+2. Run the installer. For a Windows installer, press **Run .exe in prefix** in **Game settings → Compatibility**, or run it through Wine yourself.
 3. Press <kbd>Ctrl</kbd> <kbd>N</kbd> and add the installed game: a Windows program (`.exe`), a native Linux program or a start script.
 
-To add many games at once, point Heronite at the folder that holds them. Heronite fetches art and details for these games, but they are not tied to your GOG account, so they do not update.
+To add many games at once, choose **Add from folder** in the ☰ menu. Heronite fetches art and details for these games, but they are not tied to your GOG account, so they do not update.
 
-If a GOG game is already on this PC, use **Import an installed game** on the GOG page instead of downloading it again.
+If a GOG game is already on this PC, press **Import game** under **Import an installed game** on the GOG page instead of downloading it again.
 
 ## Update, repair or move a GOG game
 

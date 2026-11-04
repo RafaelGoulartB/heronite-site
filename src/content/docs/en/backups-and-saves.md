@@ -26,7 +26,7 @@ Heronite leaves out Wine and Proton builds, caches, and logs, since they can be 
 
 ## Restore a backup
 
-1. In **Settings → Backups**, pick a backup to see what it holds.
+1. In **Settings → Backups**, choose a backup to see what it holds.
 2. Choose all of it or only some parts.
 3. Choose **Restore and restart**.
 
@@ -42,7 +42,7 @@ Install Ludusavi from [its releases](https://github.com/mtkennerly/ludusavi/rele
 
 1. Open the game's **Game settings**, then the **Cloud saves** tab.
 2. Check the folder under **Location**. Heronite finds it in most games.
-3. Under **Sync now**, pick **Sync (download and upload)**, **Force Download** or **Force Upload**, then press **Sync**.
+3. Under **Sync now**, choose **Sync (download and upload)**, **Force Download** or **Force Upload**, then press **Sync**.
 4. Turn on **Sync automatically** to sync when the game starts and after it exits.
 
 Cloud saves are in beta: back up your saves before syncing. They work on Linux and Windows.
@@ -52,7 +52,7 @@ Cloud saves are in beta: back up your saves before syncing. They work on Linux a
 **Settings → Cloud** keeps statuses, favourites, notes, play time and sessions the same on every PC, such as a dual boot's Linux and Windows. Each PC writes only its own files, so nothing is overwritten.
 
 1. Open **Settings → Cloud**.
-2. Under **Service**, pick a cloud account (Google Drive, Dropbox, OneDrive or Box), a server (FTP, SMB or WebDAV) or **A shared folder**.
+2. Under **Service**, choose a cloud account (Google Drive, Dropbox, OneDrive or Box), a server (FTP, SMB or WebDAV) or **A shared folder**.
 3. For an account or a server, press **Connect**. Heronite downloads rclone first if it is not installed, and your browser opens to sign in to an account.
 4. For a shared folder, choose the **Sync folder**. On a dual boot, use an NTFS or exFAT drive and turn off Fast Startup in Windows.
 5. Under **Choose what goes, and when**, set **Library between PCs** to **Automatic** or **Manual**.

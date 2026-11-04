@@ -60,7 +60,7 @@ For a step-by-step install, see [install GE-Proton](/guides/install-ge-proton/).
 
 ## What is a Wine prefix?
 
-A prefix is the fake Windows folder a game runs in. Games install to `~/Games/Heronite` by default, and each game gets its own prefix in `~/Games/Heronite/Prefixes`, though several games can share one. The Wine Manager lists your prefixes, and **Game settings → Compatibility** has **Winecfg** and **Winetricks** buttons.
+A Wine prefix is a separate Windows folder for a game. Games install to `~/Games/Heronite` by default, and each game gets its own prefix in `~/Games/Heronite/Prefixes`, though several games can share one. The Wine Manager lists your prefixes, and **Game settings → Compatibility** has **Winecfg** and **Winetricks** buttons.
 
 ## Which options can I set per game?
 
@@ -103,7 +103,7 @@ Heronite reads the launch log and suggests a fix when it recognises one of these
 - Another `wineserver` still running
 - Anti-cheat that is not supported
 
-If no fix appears, pick another Proton version in **Game settings → Compatibility**, such as GE-Proton or Proton-CachyOS, or try a fresh prefix. Then check the game's page on [ProtonDB](https://www.protondb.com). Logs are in **Settings → Logs**. The [troubleshooting page](/docs/troubleshooting/) has the full table.
+If no fix appears, choose another Proton version in **Game settings → Compatibility**, such as GE-Proton or Proton-CachyOS, or try a fresh prefix. Then check the game's page on [ProtonDB](https://www.protondb.com). Logs are in **Settings → Logs**. The [troubleshooting page](/docs/troubleshooting/) has the full table.
 
 ## How do I check a game's anti-cheat status?
 

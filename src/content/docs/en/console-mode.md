@@ -62,7 +62,7 @@ In **Settings → Console mode**, choose **Export…** to save a theme as a `.he
 
 ## Open the in-game overlay (beta, Linux)
 
-1. In **Settings → Overlay**, switch on **Turn on the overlay**. It is off by default.
+1. In **Settings → Overlay**, turn on **Turn on the overlay**. It is off by default.
 2. During a game opened by Heronite, press the controller's Guide button.
 
 The panel over the game has volume, microphone, FPS limit, screenshots, and journal notes.

@@ -65,10 +65,11 @@ On the first start, Heronite adds the Steam games it finds, with no login, and l
 ## Log in to Epic, GOG and Amazon Games
 
 1. Press <kbd>Ctrl</kbd> <kbd>4</kbd> to open **Stores**.
-2. Choose **Epic Games**, **GOG** or **Amazon Games**, then its **Log in with** button, such as **Log in with GOG**.
-3. Log in on the store's page in the window that opens. Use a keyboard to type your password.
+2. Choose **Epic Games**, **GOG** or **Amazon Games**.
+3. Press **Log in**.
+4. Log in on the store's page in the window that opens. Use a keyboard to type your password.
 
-The store's games then appear in your library. Install a game or two now, while you have the desktop. You can pick the install folder, so the SD card works too.
+The store's games then appear in your library. Install a game or two now, while you have the desktop. You can choose the install folder, so the SD card works too.
 
 Each store has a guide: [Epic Games](/guides/epic-games-on-linux/), [GOG](/guides/gog-on-linux/) and [Amazon Games](/guides/amazon-games-on-linux/).
 
@@ -76,7 +77,7 @@ Each store has a guide: [Epic Games](/guides/epic-games-on-linux/), [GOG](/guide
 
 1. Open Steam in Desktop Mode.
 2. Choose **Add a Game** at the bottom left of the library, then **Add a Non-Steam Game**.
-3. Click **Browse**, set the file filter to all files, and select `Heronite-x86_64.AppImage`.
+3. Press **Browse**, set the file filter to all files, and select `Heronite-x86_64.AppImage`.
 4. Add it, then find **Heronite** in your library, right-click it and open **Properties**.
 5. In **Launch Options**, type:
 

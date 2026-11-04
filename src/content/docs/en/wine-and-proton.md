@@ -24,7 +24,7 @@ Builds go to Heronite's data folder (`~/.local/share/heronite/tools/proton` and 
 
 ## Where games and Wine prefixes are stored
 
-A Wine prefix is a game's own Windows drive, with its settings, saves and what Winetricks installs. By default:
+A Wine prefix is a separate Windows folder for a game, with its settings, saves and what Winetricks installs. By default:
 
 - Games install to `~/Games/Heronite`
 - Each game gets its own prefix in `~/Games/Heronite/Prefixes`

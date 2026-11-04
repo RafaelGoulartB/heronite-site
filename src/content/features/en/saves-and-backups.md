@@ -33,7 +33,7 @@ related:
   - /features/wine-and-proton/
 ---
 
-[Ludusavi](https://github.com/mtkennerly/ludusavi) is a free program that knows where thousands of games keep their saves, in a Windows folder, a Steam folder or a Wine prefix (the Windows folder a game runs in on Linux). Install it once, and Heronite backs up a game's saves after each session.
+[Ludusavi](https://github.com/mtkennerly/ludusavi) is a free program that knows where thousands of games keep their saves, in a Windows folder, a Steam folder or the game's Wine prefix (a separate Windows folder for that game). Install it once, and Heronite backs up a game's saves after each session.
 
 ## How do I install Ludusavi for Heronite?
 
@@ -46,7 +46,7 @@ On Linux, Heronite looks for Ludusavi on `PATH`, `/usr/bin`, `/usr/local/bin` an
 
 1. Close the game.
 2. Open the game's page and its **Saves** tab, which lists the game's backups.
-3. Pick a backup and press **Restore…**.
+3. Choose a backup and press **Restore…**.
 4. Choose the files to put back under **Files to restore**, then confirm.
 
 In **console mode** this is one row on the game's page, **Back up saves (Ludusavi)**.
@@ -82,7 +82,7 @@ Installed games, Wine and Proton builds, caches and logs stay out, because you c
 
 ### How do I restore a Collection backup?
 
-1. In **Settings → Backups**, pick a backup to see what it holds.
+1. In **Settings → Backups**, choose a backup to see what it holds.
 2. Choose the parts to put back.
 3. Press **Restore…**, then **Restore and restart**.
 

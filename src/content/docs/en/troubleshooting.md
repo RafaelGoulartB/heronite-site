@@ -7,11 +7,11 @@ order: 4
 updated: 2026-11-04
 ---
 
-## Heronite won't start or shows a black window
-
-### "Windows protected your PC"
+## "Windows protected your PC" when starting Heronite
 
 Choose **More info**, then **Run anyway**. The Windows files are not code-signed yet.
+
+## Heronite won't start or shows a black window
 
 ### The window does not open or is black (Linux)
 
@@ -35,7 +35,7 @@ Check for updates again later. Your network made too many requests to GitHub.
 
 ### The login window does not open
 
-Use the **browser method** on the login page: log in in your browser, then paste the address or code into Heronite.
+Use **Or log in with your browser** on the same store page: log in in your browser, then paste the address or code into Heronite.
 
 To fix the login window itself, install:
 
@@ -75,13 +75,13 @@ sudo sysctl -w vm.max_map_count=1048576
 ### The game still crashes
 
 - Choose another **Version** under **Wine / Proton** in **Game settings → Compatibility**. GE-Proton or Proton-CachyOS often have fixes first.
-- Give the game a new Wine prefix (its own Windows drive, with its settings and saves). In **Game settings → Compatibility**, open **Prefix** and choose **New prefix for this game**.
+- Give the game a new Wine prefix (a separate Windows folder for that game). In **Game settings → Compatibility**, choose **New prefix for this game** from the **Prefix** menu. The new prefix starts empty, so back up your saves first.
 - Read the game's page on [ProtonDB](https://www.protondb.com), where players share what worked.
 
 ## The in-game overlay does not work (Linux)
 
 - Guide button opens Steam: turn off **Guide Button Focuses Steam** in **Steam → Settings → Controller**.
-- Overlay never appears: switch on **Turn on the overlay** in **Settings → Overlay** (it is off by default). It needs Wayland with layer-shell (KDE Plasma, Hyprland, Sway), so it does not work on GNOME or X11.
+- Overlay never appears: turn on **Turn on the overlay** in **Settings → Overlay** (it is off by default). It needs Wayland with layer-shell (KDE Plasma, Hyprland, Sway), so it does not work on GNOME or X11.
 
 ## Find the logs
 
@@ -98,7 +98,7 @@ For more detail:
 - Start Heronite with `RUST_LOG=debug`
 - Turn on **Detailed logs** in **Game settings → Advanced** (on Linux, it adds Wine output too)
 
-If **Turn off logs** is on in **Settings → Advanced**, switch it off before you report a problem.
+If **Turn off logs** is on in **Settings → Advanced**, turn it off before you report a problem.
 
 ## Report a bug
 

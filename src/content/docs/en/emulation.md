@@ -80,10 +80,10 @@ Add more folders on the **Emulators** page (<kbd>Ctrl</kbd> <kbd>5</kbd>). Scans
 ## Continue a game from a save state
 
 1. Press **Play** on the game.
-2. In **How do you want to play?**, pick a save state.
+2. In **How do you want to play?**, choose a save state.
 3. Choose **Continue**.
 
-Heronite asks only when the emulator has save states for the game. To boot normally, pick **Start from the beginning**; in-game saves on memory cards are kept.
+Heronite asks only when the emulator has save states for the game. To boot normally, choose **Start from the beginning**; in-game saves on memory cards are kept.
 
 ## Show RetroAchievements for emulated games
 

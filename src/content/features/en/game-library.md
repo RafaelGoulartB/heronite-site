@@ -38,11 +38,11 @@ related:
 ## How do I get all my games into one Collection?
 
 - **Steam:** Heronite reads your [Steam](/features/stores/) libraries with no login.
-- **Epic Games, GOG and Amazon Games:** log in on the **Stores** page and the whole library comes in, installed or not.
-- **Battle.net, EA app, Ubisoft Connect and Rockstar Games:** the games you install in each store app show up. On Linux, the store app runs in its own Wine prefix (a separate Windows folder).
-- **Microsoft Store and PC Game Pass (Windows):** the games the Xbox app installed come in with no login.
+- **Epic Games, GOG and Amazon Games:** log in on the **Stores** page and Heronite adds the whole library, installed or not.
+- **Battle.net, EA app, Ubisoft Connect and Rockstar Games:** the games you install in each store app show up. On Linux, the store app runs in its own Wine prefix (a separate Windows folder for that app).
+- **Microsoft Store and PC Game Pass (Windows):** Heronite adds the games the Xbox app installed, with no login.
 - **Emulators:** Heronite [detects them](/features/emulation/) and scans your ROM folders.
-- **Other launchers:** Heroic, Lutris, Bottles and Faugus games on Linux, and Playnite games on Windows, come in and stay in sync.
+- **Other launchers:** Heroic, Lutris, Bottles and Faugus games on Linux, and Playnite games on Windows, imported and kept in sync.
 
 ## How do I add a game that is not from a store?
 
@@ -53,7 +53,7 @@ Press <kbd>Ctrl</kbd> <kbd>N</kbd> (or **Add a game**) to add:
 - A browser game, by its web address
 - A ROM, or a whole ROM folder
 
-To add many games at once, point Heronite at a folder.
+To add many games at once, choose **Add from folder** in the ☰ menu.
 
 ![The Add game dialog with fields for the title, square art and background, the platform, the Wine prefix and Proton version, and the program to run.](../../../assets/screenshots/add-game.webp)
 

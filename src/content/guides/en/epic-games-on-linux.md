@@ -56,11 +56,12 @@ Packages for other distributions are in the [installation guide](/docs/installat
 
 ## Log in to Epic Games
 
-1. Press <kbd>Ctrl</kbd> <kbd>4</kbd> to open **Stores**.
-2. Choose **Epic Games**, then **Log in with Epic Games**.
-3. Log in on Epic's page in the window that opens. Your password goes only to Epic.
+1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Choose **Epic Games**.
+3. Press **Log in**.
+4. Log in on Epic's page in the window that opens. Your password goes only to Epic.
 
-Your whole Epic library then appears in Heronite, installed or not. If the login window does not open, use the **browser method** on the same page, as [Troubleshooting](/docs/troubleshooting/#a-store-login-or-download-fails) explains.
+Your whole Epic library then appears in Heronite, installed or not. If the login window does not open, use **Or log in with your browser** on the same page, as [Troubleshooting](/docs/troubleshooting/#a-store-login-or-download-fails) explains.
 
 ## Claim the free weekly games
 
@@ -68,24 +69,23 @@ Heronite does not claim Epic's free games, so claim them on Epic's site:
 
 1. Open Epic's store page in your browser and log in with the same account.
 2. Claim the free game.
-3. In Heronite, choose **Stores → Epic Games → Refresh library**.
+3. In Heronite, open **Stores → Epic Games** and press **Refresh library**.
 
-The game then shows up in your library, along with games from past weeks. If one is missing, check that you used the same Epic account, then refresh again.
+The game then shows up in your library. If it is missing, check that you used the same Epic account, then refresh again.
 
 ## Install and play an Epic game
 
-Check the **On Linux** box in the game's details first. It shows the [ProtonDB](https://www.protondb.com) rating and the anti-cheat status. Gold or Platinum usually runs with no work.
+1. Check the **On Linux** box in the game's details. It shows the [ProtonDB](https://www.protondb.com) rating and the anti-cheat status. Gold or Platinum usually runs with no work.
+2. Select the game and press <kbd>Enter</kbd>, or choose **Install with Epic Games**.
+3. Check the folder under **Select install path**.
+4. Confirm. The download appears on the Downloads page (<kbd>Ctrl</kbd> <kbd>2</kbd>).
+5. When it finishes, select the game and press <kbd>Enter</kbd> to play.
 
-1. Select the game and press <kbd>Enter</kbd>, or choose **Install with Epic Games**.
-2. Check the **Install folder**. The **Wine version** is under **Show Wine settings**; leave it on the default if you are not sure.
-3. Confirm. The download appears on the Downloads page (<kbd>Ctrl</kbd> <kbd>2</kbd>).
-4. When it finishes, select the game and press <kbd>Enter</kbd> to play.
-
-Each game gets its own Wine prefix, a separate Windows folder. Leave **Use the shared Wine prefix** off unless you know why you want it. If the game's files are already on disk, choose **Import an existing install instead** and point Heronite at the folder.
+Each game gets its own Wine prefix (a separate Windows folder for that game). If the game's files are already on disk, choose **Import game** and select the folder.
 
 ## Change the Proton version
 
-If the game does not start or runs badly, open **Game settings → Compatibility** and pick another build in **Version**. The ProtonDB line there often names the best one.
+If the game does not start or runs badly, open **Game settings → Compatibility** and choose another build in **Version**. The ProtonDB line there often names the best one. To choose before you install, open **Show Wine settings** in the install dialog and set the **Wine version**. If you are not sure, keep the default.
 
 ![Heronite's Game settings for Control, an Epic game, on the Compatibility tab: the Proton version GE-Proton-latest, its ProtonDB rating of Platinum, the Wine prefix and the Winecfg and Winetricks buttons.](../../../assets/screenshots/game-settings.webp)
 
@@ -97,7 +97,7 @@ Anti-cheat is the main reason an online Epic game won't run on Linux. Single-pla
 
 - Some games with Easy Anti-Cheat or BattlEye work. Turn on the matching runtime under **Anti-cheat runtimes** in **Game settings → Compatibility**, and Heronite downloads it before the next launch.
 - Games whose developer does not allow Linux will not run.
-- Fortnite is one of them. Easy Anti-Cheat can support Linux, but Epic has not switched it on for Fortnite.
+- Fortnite: does not run. Epic has not turned on Linux support in its anti-cheat.
 
 [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) tracks the status of every game. The docs explain [anti-cheat](/docs/wine-and-proton/#anti-cheat) in more detail.
 

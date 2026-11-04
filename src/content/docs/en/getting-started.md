@@ -9,21 +9,21 @@ updated: 2026-11-04
 
 Heronite builds your game library from Steam, your emulators, and the stores you log in to. [Install Heronite](/docs/installation/) first, on Linux or Windows.
 
-## What Heronite adds to your library on the first start
+## What Heronite finds on first start
 
 If your library is empty, Heronite adds:
 
 - **Steam:** your installed Steam games, no login needed.
 - **Emulators and ROMs:** the emulators it detects, and the ROMs in common folders like `~/ROMs` or `~/Emulation/roms`. See [Emulation](/docs/emulation/).
 
-On Linux, the empty library also shows **Bring in from another launcher** when it finds games in Heroic, Lutris, Bottles or Faugus. Click a launcher there to import its games and keep them in sync.
+On Linux, the empty library also shows **Bring in from another launcher** when it finds games in Heroic, Lutris, Bottles or Faugus. Choose a launcher there to import its games and keep them in sync.
 
-On Windows, the Microsoft Store and PC Game Pass games the Xbox app installed come in by themselves, with no login.
+On Windows, Heronite finds the Microsoft Store and PC Game Pass games the Xbox app installed, with no login.
 
 ## Log in to Epic Games, GOG, or Amazon Games
 
 1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
-2. Pick **Epic Games**, **GOG** or **Amazon Games**.
+2. Choose **Epic Games**, **GOG** or **Amazon Games**.
 3. Press **Log in**.
 4. Log in on the store's page in the window that opens.
 
@@ -40,7 +40,7 @@ Press <kbd>Ctrl</kbd> <kbd>N</kbd> (or **Add a game**) to add:
 - A browser game (a web address)
 - A ROM, or a whole ROM folder
 
-To add every game in a folder at once, point at the folder instead.
+To add every game in a folder at once, choose **Add from folder** in the ☰ menu.
 
 ## Open any page with a shortcut
 
@@ -61,11 +61,11 @@ The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any 
 - Switch between **Focus** (a list with a details panel) and a **grid** of covers.
 - **Group** by status, store, genre, series, year and more.
 - Save **views** with your filters and sorting (Playing now, Backlog, Finished, Favourites).
-- Select several games (<kbd>Space</kbd>, <kbd>Shift</kbd> + arrows, <kbd>Ctrl</kbd> <kbd>A</kbd>) and press <kbd>F3</kbd> to change them all at once. <kbd>Ctrl</kbd> <kbd>Z</kbd> undoes it.
+- Select several games (<kbd>Space</kbd>, <kbd>Shift</kbd> + arrows, <kbd>Ctrl</kbd> <kbd>A</kbd>) and press <kbd>F3</kbd> to edit their series and tags at once. <kbd>Ctrl</kbd> <kbd>Z</kbd> undoes it.
 
 ## Play a game and take screenshots
 
-1. Select a game and press <kbd>Enter</kbd> to play it, or to install it first.
+1. Select a game and press <kbd>Enter</kbd>. If it isn't installed, Heronite installs it first.
 2. Press <kbd>F10</kbd> while playing to take a screenshot.
 3. Open **Statistics** (<kbd>Ctrl</kbd> <kbd>6</kbd>) to see your sessions. Heronite records each one and matches your screenshots to the game.
 

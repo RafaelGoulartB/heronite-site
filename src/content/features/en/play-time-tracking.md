@@ -41,7 +41,7 @@ Heronite saves everything on your PC as plain JSON files, with no telemetry. To 
 
 ## Where do I see my gaming statistics?
 
-Open **Statistics** with <kbd>Ctrl</kbd> <kbd>6</kbd>. Pick **Week**, **Month**, **Year** or **All time** at the top, and use the arrows to change period. The **Overview** tab shows:
+Open **Statistics** with <kbd>Ctrl</kbd> <kbd>6</kbd>. Choose **Week**, **Month**, **Year** or **All time** at the top, and use the arrows to change period. The **Overview** tab shows:
 
 - Total time played, compared with the period before
 - Days played, your play streak and the number of sessions
