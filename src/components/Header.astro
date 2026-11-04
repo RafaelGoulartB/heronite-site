@@ -23,7 +23,7 @@ const starLabel = (count: string) => text.nav.starLabel.replace('{count}', count
 
 <div class="nav">
   <div class="wrap">
-    <div class="bar glass">
+    <div class="bar">
       <a class="brand" href={home} aria-label={isHome ? text.nav.topLabel : text.nav.homeLabel}>
         <img src="/icon.png" alt="" width="26" height="26">
         <span>HERONITE</span>
@@ -36,7 +36,7 @@ const starLabel = (count: string) => text.nav.starLabel.replace('{count}', count
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
           <span>{localeInfo[lang].short}</span>
         </summary>
-        <ul class="glass">
+        <ul>
           {languages.map((l) => (
             <li><a href={l.href} hreflang={localeInfo[l.lang].htmlLang} lang={localeInfo[l.lang].htmlLang} aria-current={l.lang === lang ? 'true' : undefined}>{localeInfo[l.lang].name}</a></li>
           ))}
@@ -51,7 +51,7 @@ const starLabel = (count: string) => text.nav.starLabel.replace('{count}', count
         <summary aria-label={text.nav.menu}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </summary>
-        <ul class="glass">
+        <ul>
           <li><a href={home}>{text.nav.home}</a></li>
           {nav.map((item) => <li><a href={item.href} aria-current={current(item.href)}>{item.label}</a></li>)}
           <li><a href={localize(lang, '/download/')} aria-current={current(localize(lang, '/download/'))}>{text.nav.download}</a></li>

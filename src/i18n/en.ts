@@ -45,11 +45,10 @@ const en = {
     trademarks: 'Store names and logos belong to their owners. Heronite is not affiliated with them.',
   },
   cta: {
-    eyebrow: 'Download',
-    titleHtml: 'Get Heronite. <em>It’s free.</em>',
+    title: 'Get Heronite. It’s free.',
     text: 'Open source under GPL-3.0. No account, no ads, no telemetry. For Linux and Windows.',
     button: 'Download Heronite',
-    github: 'View on GitHub',
+    github: 'Source code',
     label: 'Download Heronite',
   },
   downloadCards: {
@@ -78,9 +77,7 @@ const en = {
     atAGlance: 'At a glance',
     keepReading: 'Keep reading',
     questions: 'Questions',
-    readMore: 'Read more',
     learnMore: 'Learn more',
-    read: 'Read',
     downloadPageTitle: 'Download Heronite',
     downloadPageSummary: 'The installer and portable zip for Windows, and the AppImage, .deb, .rpm and Arch packages for Linux.',
   },
@@ -103,7 +100,7 @@ const en = {
     index: {
       title: 'Heronite Documentation: Install, Set Up and Use the Launcher',
       description: 'The Heronite documentation: installing on Linux and Windows, stores, emulation, Wine and Proton, console mode, backups, keyboard shortcuts and troubleshooting.',
-      headlineHtml: 'Heronite <em>docs</em>',
+      headlineHtml: 'Heronite docs',
       leadHtml: 'Everything about installing, setting up and using Heronite on Linux and Windows. Can’t find something? Ask in <a class="link" href="{discussions}">Discussions</a>.',
     },
   },
@@ -305,7 +302,7 @@ const en = {
   download: {
     title: 'Download Heronite for Windows and Linux (Free)',
     description: 'Download Heronite, the free and open source game launcher: installer and portable zip for Windows 10 and 11, AppImage, .deb, .rpm and Arch packages for Linux.',
-    headlineHtml: 'Download <em>Heronite</em>',
+    headlineHtml: 'Download Heronite',
     lead: 'Free and open source under GPL-3.0. No account, no ads, no telemetry. For Windows 10 and 11 and any 64-bit Linux distribution.',
     latest: 'Latest version: {version}, released {date}.',
     notes: 'Read what’s new',
@@ -352,7 +349,7 @@ const en = {
     title: 'Heronite Changelog: Release Notes for Every Version',
     description: 'What changed in each Heronite release: new features, fixes and downloads for Linux and Windows, from the first version to the latest.',
     eyebrow: 'Changelog',
-    headlineHtml: 'What’s <em>new</em>',
+    headlineHtml: 'What’s new',
     lead: 'Every Heronite release, newest first. Heronite updates itself, so you get these as soon as they are out.',
     latest: 'Latest',
     released: 'Released {date}',
@@ -362,8 +359,7 @@ const en = {
   notFound: {
     title: 'Page not found · Heronite',
     description: 'This page does not exist. Find Heronite’s features, guides, docs and downloads from here.',
-    eyebrow: 'Error 404',
-    headlineHtml: 'Game <em>not found.</em>',
+    headlineHtml: 'Game not found.',
     lead: 'This page does not exist, or it moved. Try one of these instead.',
   },
 };

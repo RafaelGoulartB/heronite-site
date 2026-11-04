@@ -43,11 +43,10 @@ const es: Dict = {
     trademarks: 'Los nombres y logotipos de las tiendas pertenecen a sus dueños. Heronite no está afiliado a ellos.',
   },
   cta: {
-    eyebrow: 'Descargar',
-    titleHtml: 'Descarga Heronite. <em>Es gratis.</em>',
+    title: 'Descarga Heronite. Es gratis.',
     text: 'Código abierto bajo la GPL-3.0. Sin cuenta, sin anuncios, sin telemetría. Para Linux y Windows.',
     button: 'Descargar Heronite',
-    github: 'Ver en GitHub',
+    github: 'Código fuente',
     label: 'Descargar Heronite',
   },
   downloadCards: {
@@ -76,9 +75,7 @@ const es: Dict = {
     atAGlance: 'De un vistazo',
     keepReading: 'Sigue leyendo',
     questions: 'Preguntas',
-    readMore: 'Leer más',
     learnMore: 'Más información',
-    read: 'Leer',
     downloadPageTitle: 'Descargar Heronite',
     downloadPageSummary: 'El instalador y el zip portátil para Windows, y el AppImage y los paquetes .deb, .rpm y Arch para Linux.',
   },
@@ -101,7 +98,7 @@ const es: Dict = {
     index: {
       title: 'Documentación de Heronite: instalar, configurar y usar',
       description: 'Documentación de Heronite: instalar en Linux y Windows, tiendas, emulación, Wine y Proton, modo consola, copias de seguridad, atajos y solución de problemas.',
-      headlineHtml: 'Docs de <em>Heronite</em>',
+      headlineHtml: 'Docs de Heronite',
       leadHtml: 'Todo sobre cómo instalar, configurar y usar Heronite en Linux y Windows. ¿No encuentras algo? Pregunta en las <a class="link" href="{discussions}">Discusiones</a>.',
     },
   },
@@ -303,7 +300,7 @@ const es: Dict = {
   download: {
     title: 'Descargar Heronite para Windows y Linux (gratis)',
     description: 'Descarga Heronite, el lanzador de juegos gratis y de código abierto: instalador y zip portátil para Windows, AppImage y paquetes .deb, .rpm y Arch para Linux.',
-    headlineHtml: 'Descargar <em>Heronite</em>',
+    headlineHtml: 'Descargar Heronite',
     lead: 'Gratis y de código abierto bajo la GPL-3.0. Sin cuenta, sin anuncios, sin telemetría. Para Windows 10 y 11 y cualquier distribución Linux de 64 bits.',
     latest: 'Última versión: {version}, publicada el {date}.',
     notes: 'Ver las novedades',
@@ -350,7 +347,7 @@ const es: Dict = {
     title: 'Changelog de Heronite: notas de cada versión',
     description: 'Qué cambió en cada versión de Heronite: nuevas funciones, correcciones y descargas para Linux y Windows, desde la primera versión hasta la más reciente.',
     eyebrow: 'Changelog',
-    headlineHtml: 'Qué hay de <em>nuevo</em>',
+    headlineHtml: 'Qué hay de nuevo',
     lead: 'Todas las versiones de Heronite, de la más nueva a la más antigua. Heronite se actualiza solo, así que recibes todo en cuanto sale.',
     latest: 'Última',
     released: 'Publicada el {date}',
@@ -360,8 +357,7 @@ const es: Dict = {
   notFound: {
     title: 'Página no encontrada · Heronite',
     description: 'Esta página no existe. Desde aquí puedes llegar a las funciones, guías, docs y descargas de Heronite.',
-    eyebrow: 'Error 404',
-    headlineHtml: 'Juego <em>no encontrado.</em>',
+    headlineHtml: 'Juego no encontrado.',
     lead: 'Esta página no existe o se movió. Prueba con una de estas.',
   },
 };

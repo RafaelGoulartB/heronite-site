@@ -1,5 +1,4 @@
 import type { ImageMetadata } from 'astro';
-import { getImage } from 'astro:assets';
 
 const files = import.meta.glob<{ default: ImageMetadata }>('../assets/screenshots/*.webp', { eager: true });
 
@@ -13,7 +12,3 @@ export const shot = (name: string) => {
   if (!image) throw new Error(`No screenshot named ${name}`);
   return image;
 };
-
-/** A small, soft copy for the blurred art behind a section. */
-export const backdrop = async (name: string) =>
-  (await getImage({ src: shot(name), width: 400, quality: 45, format: 'webp' })).src;

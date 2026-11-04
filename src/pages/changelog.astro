@@ -7,13 +7,11 @@ import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import Cta from '../components/Cta.astro';
 import { releases, notes, version } from '../lib/releases';
-import { backdrop } from '../lib/shots';
 import { fill, formatDate, useText } from '../i18n';
 import { site } from '../data/site';
 
 const text = useText('en');
 const t = text.changelog;
-const art = await backdrop('year-in-review');
 const all = await releases();
 const entries = await Promise.all(
   all.map(async (release) => ({
@@ -39,10 +37,9 @@ const jsonLd = [
 
 <Base title={t.title} description={t.description} jsonLd={jsonLd} alternates={{ en: '/changelog/' }}>
   <main id="main">
-    <header class="index-hero scene" style={`--art:url(${art});--pos:85% 50%;--size:200%;--bright:.75`}>
+    <header class="index-hero">
       <div class="wrap">
         <Breadcrumbs items={[{ label: t.eyebrow, href: '/changelog/' }]} />
-        <p class="eyebrow">{t.eyebrow}</p>
         <h1 class="h1" set:html={t.headlineHtml} />
         <p class="lead">{t.lead}</p>
       </div>

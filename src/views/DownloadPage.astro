@@ -4,7 +4,6 @@ import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import DownloadCards from '../components/DownloadCards.astro';
 import Faq from '../components/Faq.astro';
-import { backdrop } from '../lib/shots';
 import { latest, version } from '../lib/releases';
 import { downloads, site } from '../data/site';
 import { fill, formatDate, localeInfo, localize, useText, type Locale } from '../i18n';
@@ -17,7 +16,6 @@ const { lang } = Astro.props;
 const text = useText(lang);
 const t = text.download;
 const to = (path: string) => localize(lang, path);
-const art = await backdrop('console-game');
 const release = await latest();
 
 const softwareApplication = {
@@ -40,16 +38,15 @@ const softwareApplication = {
 
 <Base title={t.title} description={t.description} jsonLd={[softwareApplication]}>
   <main id="main">
-    <header class="index-hero scene" style={`--art:url(${art});--pos:60% 30%;--bright:.8`}>
+    <header class="index-hero">
       <div class="wrap">
         <Breadcrumbs items={[{ label: text.nav.download, href: to('/download/') }]} />
-        <p class="eyebrow">{text.nav.download}</p>
         <h1 class="h1" set:html={t.headlineHtml} />
         <p class="lead">{t.lead}</p>
         {release && (
           <p class="meta">
             <span>{fill(t.latest, { version: version(release), date: formatDate(lang, new Date(release.date)) })}</span>
-            <span><a class="link" href="/changelog/">{t.notes} &rarr;</a></span>
+            <a href="/changelog/">{t.notes}</a>
           </p>
         )}
       </div>

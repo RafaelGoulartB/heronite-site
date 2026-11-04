@@ -1,6 +1,6 @@
 ---
 import type { MarkdownHeading } from 'astro';
-import { Picture, getImage } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import '../styles/content.css';
 import Base from './Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
@@ -8,7 +8,7 @@ import Faq from '../components/Faq.astro';
 import Cta from '../components/Cta.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { articleUrl, langOf, languagesWith, pagesByPath, slugOf, type Article, type ArticleKind } from '../lib/content';
-import { accent, plain, isoDate } from '../lib/text';
+import { plain, isoDate } from '../lib/text';
 import { alternatesFor, fill, formatDate, localeInfo, localize, ogImage, useText } from '../i18n';
 import { site } from '../data/site';
 
@@ -29,7 +29,6 @@ const minutes = Math.max(1, Math.round((entry.body ?? '').split(/\s+/).length / 
 const og = d.og ? ogImage(lang, slug) : undefined;
 const alternates = alternatesFor(`/${kind}/${slug}/`, await languagesWith(kind, slug));
 
-const art = d.hero ? await getImage({ src: d.hero, width: 480, quality: 45, format: 'webp' }) : undefined;
 
 const pages = await pagesByPath(lang);
 const related = d.related.map((path) => {
@@ -58,20 +57,19 @@ const jsonLd = [
 
 <Base title={d.title} description={d.description} image={og} type="article" modified={d.updated} jsonLd={jsonLd} alternates={alternates}>
   <main id="main">
-    <header class="page-hero scene" style={art ? `--art:url(${art.src});--bright:.7;--blur:70px` : undefined}>
+    <header class="page-hero">
       <div class="wrap">
         <Breadcrumbs items={[{ label: t.sections[kind], href: localize(lang, `/${kind}/`) }, { label: d.navLabel, href: articleUrl(kind, slug, lang) }]} />
         <div class:list={['ph-grid', { solo: !d.hero }]}>
           <div class="ph-copy">
-            <p class="eyebrow">{d.eyebrow}</p>
-            <h1 class="h1" set:html={accent(d.headline)} />
+            <h1 class="h1">{plain(d.headline)}</h1>
             <p class="lead">{d.lead}</p>
             <div class="actions">
               <a class="btn btn-primary" href={localize(lang, '/download/')}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
                 {t.downloadFree}
               </a>
-              {toc[0] && <a class="link" href={`#${toc[0].slug}`}>{kind === 'features' ? t.readDetails : t.readGuide} &darr;</a>}
+              {toc[0] && <a class="btn btn-ghost" href={`#${toc[0].slug}`}>{kind === 'features' ? t.readDetails : t.readGuide} &darr;</a>}
             </div>
             <p class="meta">
               <span>{fill(t.updated, { date: formatDate(lang, d.updated) })}</span>
@@ -90,7 +88,7 @@ const jsonLd = [
     {d.highlights.length > 0 && (
       <ul class="wrap highlights" aria-label={t.atAGlance}>
         {d.highlights.map((h) => (
-          <li class="glass"><h2>{h.title}</h2><p>{h.text}</p></li>
+          <li class="panel"><h2>{h.title}</h2><p>{h.text}</p></li>
         ))}
       </ul>
     )}
@@ -116,7 +114,7 @@ const jsonLd = [
         <h2 class="h2" id="h-related">{t.keepReading}</h2>
         <ul class="cards">
           {related.map((page) => (
-            <ArticleCard href={page.href} title={page.title} summary={page.summary} label={t.labels[page.kind]} image={page.entry?.data.hero} cta={t.readMore} />
+            <ArticleCard href={page.href} title={page.title} summary={page.summary} label={t.labels[page.kind]} image={page.entry?.data.hero} />
           ))}
         </ul>
       </section>

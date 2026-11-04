@@ -23,7 +23,6 @@ const groups = await docs(lang);
     <header class="index-hero">
       <div class="wrap">
         <Breadcrumbs items={[{ label: t.docs, href: localize(lang, '/docs/') }]} />
-        <p class="eyebrow">{t.documentation}</p>
         <h1 class="h1" set:html={t.index.headlineHtml} />
         <p class="lead" set:html={fill(t.index.leadHtml, { discussions: site.discussions })} />
         <Search />
@@ -35,7 +34,7 @@ const groups = await docs(lang);
           <h2 id={`g-${g.section}`}>{t.sections[g.section]} <span class="fine">· {t.intros[g.section]}</span></h2>
           <ul class="cards">
             {g.pages.map((p) => (
-              <ArticleCard href={docUrl(slugOf(p), lang)} title={p.data.navLabel ?? p.data.title} summary={p.data.description} cta={text.article.read} />
+              <ArticleCard href={docUrl(slugOf(p), lang)} title={p.data.navLabel ?? p.data.title} summary={p.data.description} />
             ))}
           </ul>
         </section>

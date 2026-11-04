@@ -52,7 +52,7 @@ const jsonLd = [
     <div class:list={['docs', { 'no-toc': toc.length < 2 }]}>
       <div class="side">
         <Search />
-        <details class="sidebar glass" open>
+        <details class="sidebar panel" open>
           <summary>{t.documentation}</summary>
           <nav aria-label={t.documentation}>
             {groups.map((g) => (
@@ -76,7 +76,6 @@ const jsonLd = [
       <div>
         <header class="doc-head">
           <Breadcrumbs items={[{ label: t.docs, href: localize(lang, '/docs/') }, { label: d.navLabel ?? d.title, href: here }]} />
-          <p class="eyebrow">{t.sections[d.section]}</p>
           <h1 class="h1">{d.title}</h1>
           <p class="lead">{d.description}</p>
         </header>
@@ -84,8 +83,8 @@ const jsonLd = [
           <slot />
         </article>
         <nav class="pager" aria-label={t.more}>
-          {prev && <a class="glass" href={docUrl(slugOf(prev), lang)}><small>{t.previous}</small><span>{prev.data.navLabel ?? prev.data.title}</span></a>}
-          {next && <a class="glass next" href={docUrl(slugOf(next), lang)}><small>{t.next}</small><span>{next.data.navLabel ?? next.data.title}</span></a>}
+          {prev && <a class="panel" href={docUrl(slugOf(prev), lang)}><small>{t.previous}</small><span>{prev.data.navLabel ?? prev.data.title}</span></a>}
+          {next && <a class="panel next" href={docUrl(slugOf(next), lang)}><small>{t.next}</small><span>{next.data.navLabel ?? next.data.title}</span></a>}
         </nav>
         <div class="doc-foot">
           <span>{fill(text.article.updated, { date: formatDate(lang, d.updated) })}</span>

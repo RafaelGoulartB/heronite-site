@@ -4,10 +4,7 @@ const escapes: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;'
 
 export const escapeHtml = (text: string) => text.replace(/[&<>"']/g, (c) => escapes[c]);
 
-/** Turns `One shelf for *everything*` into HTML with the starred words in the accent colour. */
-export const accent = (text: string) => escapeHtml(text).replace(/\*(.+?)\*/g, '<em>$1</em>');
-
-/** The same text with the stars removed, for titles and alt text. */
+/** A headline with the stars that once marked its accent words removed. */
 export const plain = (text: string) => text.replace(/\*/g, '');
 
 /** Inline Markdown for short strings (FAQ answers): links, `code` and **bold**. Site links move to `lang`. */
