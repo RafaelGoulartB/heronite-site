@@ -107,6 +107,8 @@
     "yir yir yir yir yir num num num goal goal goal goal"
     "yir yir yir yir yir chart chart chart chart chart chart chart"}
 .t-num{grid-area:num}.t-goal{grid-area:goal}.t-chart{grid-area:chart}.t-yir{grid-area:yir}
+/* the chart is cut to its first two weeks; fade the cut instead of showing half a bar */
+.t-chart .crop{-webkit-mask:linear-gradient(90deg,#000 88%,transparent);mask:linear-gradient(90deg,#000 88%,transparent)}
 .hist-head{grid-area:head;align-self:end;padding:0 0 20px 24px}
 .sec .tile{border-radius:16px;background:var(--surface);border:1px solid var(--line)}
 .sec .tile figcaption{background:var(--surface);color:var(--soft);font-size:15px}
