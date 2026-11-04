@@ -61,6 +61,10 @@ const size = (name: string) => {
 const ver = release ? version(release) : '';
 const downloadText = new Intl.NumberFormat(numberFormat, { notation: 'compact', maximumFractionDigits: 1 }).format(downloadCount);
 
+// The stores by how they get into the library: read with no login, logged in once, or run in their
+// own Wine prefix on Linux.
+const storeGroups = [stores.slice(0, 1), stores.slice(1, 4), stores.slice(4)];
+
 // A store logo for the guides that are about one store.
 const guideIcons: Record<string, IconName> = {
   'epic-games-on-linux': 'epic',
@@ -127,6 +131,7 @@ const softwareApplication = {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
             <span>{t.sendToPc}</span>
           </button>
+          <p class="send-hint">{t.sendHint}</p>
         </div>
         <p class="hero-meta">
           {ver && <span>v{ver}</span>}
@@ -162,11 +167,17 @@ const softwareApplication = {
 
       <div class="sources" role="region" aria-labelledby="h-src">
         <h2 id="h-src">{t.sources}</h2>
-        <ul class="src-logos">
-          {stores.map((s) => <li title={s.name}><Icon name={s.icon} /><span class="sr">{s.name}</span></li>)}
+        <ul class="src-groups">
+          {storeGroups.map((group, i) => (
+            <li>
+              <ul class="src-logos">
+                {group.map((s) => <li><Icon name={s.icon} /><span>{s.name}</span></li>)}
+              </ul>
+              <p><b>{t.sourceGroups[i].label}</b> {t.sourceGroups[i].note}</p>
+            </li>
+          ))}
         </ul>
-        <a class="src-more" href={to('/features/stores/')}>{t.sourcesMore} &rarr;</a>
-        <ul class="src-how">{t.sourcesHow.map((line) => <li>{line}</li>)}</ul>
+        <p class="src-foot"><span>{t.sourcesFoot}</span><a href={to('/features/stores/')}>{t.sourcesMore} &rarr;</a></p>
       </div>
     </div>
   </header>
@@ -212,7 +223,7 @@ const softwareApplication = {
             <li>
               <a href={articleUrl('compare', slug, lang)}>
                 <span class="sw-name">{c.data.navLabel}</span>
-                <span class="sw-line">{t.switch.lines[slug]}</span>
+                <span class="sw-line"><span><i>{t.switch.keep}</i>{t.switch.lines[slug].keep}</span><span><i>{t.switch.gain}</i>{t.switch.lines[slug].gain}</span></span>
                 <span class="sw-go" aria-hidden="true">&rarr;</span>
               </a>
             </li>
@@ -352,7 +363,7 @@ const softwareApplication = {
       {wallRows[1].concat(wallRows[0]).map((c) => <i class={`cv s-${c.img}`} style={c.style}></i>)}
     </div>
     <div class="wrap closing-copy">
-      <h2 class="h2" id="h-close">{t.closing.headline}</h2>
+      <h2 class="h2" id="h-close" set:html={t.closing.headlineHtml} />
       <div class="actions">
         <a class="btn btn-primary dl-btn" id="dl-close" href={to('/download/')}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
