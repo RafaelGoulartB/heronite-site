@@ -161,11 +161,12 @@ const es: Dict = {
     platforms: 'Windows y Linux',
     otherDownloads: 'Todas las descargas',
     downloads: '{count} descargas',
+    releases: '{count} versiones',
     pauseMotion: 'Pausar animación',
     playMotion: 'Reanudar animación',
     sources: 'Ejecuta juegos de',
     sourcesMore: 'y emuladores, y tus propios juegos',
-    sourcesHow: 'Steam se lee sin iniciar sesión. Epic, GOG y Amazon se instalan desde Heronite al iniciar sesión. En Linux, Battle.net, EA, Ubisoft y Rockstar se ejecutan cada uno en su propio prefijo de Wine.',
+    sourcesHow: 'Steam se lee sin iniciar sesión. Epic, GOG y Amazon se instalan desde Heronite al iniciar sesión. En Linux, Battle.net, EA, Ubisoft y Rockstar se ejecutan cada uno en su propio prefijo de Wine. Inicias sesión en la página de cada tienda, y tus datos de acceso se quedan en tu PC.',
     collection: {
       alt: 'La Colección de Heronite: portadas de juegos agrupadas en Jugando y En curso, con el tiempo de juego bajo cada una, y ELDEN RING abierto con su portada, el botón Jugar, la nota, la valoración en Linux y una línea de tiempo de sesiones.',
       callouts: ['Agrupar por estado', 'Tiempo de juego por juego', 'Valoración en Linux y anti-cheat', 'Tu línea de tiempo', 'Lista o cuadrícula de portadas'],
@@ -177,11 +178,6 @@ const es: Dict = {
       lead: 'Inicios de sesión en tiendas, emuladores, versiones de Proton y copias de partidas, sin otras cinco apps abiertas.',
       link: 'Las ocho funciones',
       tiles: {
-        linux: {
-          title: 'Sabe cómo funciona antes de instalar',
-          text: 'Cada juego muestra su nota en ProtonDB y el estado del anti-cheat en Linux, junto a tu tiempo de juego y la última copia de la partida.',
-          alt: 'Página de ELDEN RING: botón Jugar, valoración, nota 97 en IGDB, biblioteca de Steam, copia de partida hace 9 días, y En Linux: Gold, EAC ok',
-        },
         stores: {
           title: 'Epic, Steam y GOG en una sola búsqueda',
           text: 'Inicia sesión una vez y tus juegos de Epic, GOG y Amazon se unen a los de Steam. Ctrl+K encuentra cualquiera.',
@@ -254,6 +250,8 @@ const es: Dict = {
       textHtml: 'Heronite lo hace un solo desarrollador, {author}, en abierto. <strong>Una estrella en GitHub es como otros jugadores lo encuentran.</strong>',
       goal: '{count} estrellas · próxima meta: {goal}',
       activity: '{count} versiones · la última el {date}',
+      discussions: 'Únete a las Discusiones',
+      translate: 'Ayuda a traducirlo',
     },
     guides: {
       headline: 'Guías para Linux y la Steam Deck',

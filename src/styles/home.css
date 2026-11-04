@@ -3,7 +3,7 @@
 
 /* ---------- hero: drifting wall of covers ---------- */
 .hero{position:relative;background:linear-gradient(#07090c,#07090c 60%,var(--bg))}
-.hero-top{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(560px,74vh,680px);display:flex;align-items:center;padding:112px 0 150px}
+.hero-top{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(540px,68vh,640px);display:flex;align-items:center;padding:104px 0 140px}
 .wall{--H:206px;--g:16px;position:absolute;left:40%;right:-16%;top:46%;transform:translateY(-50%) rotate(-5deg);display:flex;flex-direction:column;gap:var(--g);z-index:-2}
 .track{display:flex;gap:var(--g);padding-right:var(--g);width:max-content;animation:slide 140s linear infinite;will-change:transform}
 .r1 .track{animation-duration:150s}
@@ -86,8 +86,7 @@
 
 /* ---------- the rest of the setup: one panel of the app per feature, on its own stage ---------- */
 .extras{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;margin:0 0 4px;padding:0;list-style:none}
-.extra{position:relative;grid-column:span 5;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:var(--surface);border:1px solid var(--line);transition:border-color .15s}
-.x-stores,.x-emulation{grid-column:span 7}
+.extra{position:relative;grid-column:span 6;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:var(--surface);border:1px solid var(--line);transition:border-color .15s}
 .extra:hover{border-color:rgba(143,211,234,.4)}
 .stage{--SH:300px;--pad:30px;flex:none;display:grid;place-items:center;height:var(--SH);padding:var(--pad);
   background:radial-gradient(70% 90% at 50% 0%,rgba(143,211,234,.07),transparent 70%),linear-gradient(180deg,#121720,var(--surface))}
@@ -98,12 +97,8 @@
 .extra h3{font-size:21px;font-weight:600;line-height:1.2}
 .extra h3 a{text-decoration:none}
 .extra h3 a::after{content:"";position:absolute;inset:0;z-index:1}
-.extra p{color:var(--soft);font-size:15.5px;line-height:1.5;max-width:52ch}
+.extra p{color:var(--soft);font-size:15.5px;line-height:1.5;max-width:52ch;text-wrap:pretty}
 /* the last one lies on its side: the screen on the left, the words on the right */
-.x-saves-and-backups{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
-.x-saves-and-backups .stage{--SH:320px;height:100%;min-height:var(--SH)}
-.x-saves-and-backups .extra-text{justify-content:center;padding:32px 40px;border-top:0;border-left:1px solid var(--line)}
-.x-saves-and-backups h3{font-size:26px}
 
 /* ---------- history: the year in review leads, the heading sits beside it ---------- */
 .hist{display:grid;gap:16px;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto 250px 270px;
@@ -120,7 +115,7 @@
 
 /* ---------- console mode, on a handheld, at full width ---------- */
 .sec-console{margin-top:40px;padding:80px 0 40px;background:linear-gradient(180deg,var(--bg),#0d1117 16%,#0d1117 84%,var(--bg))}
-.cons-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 64px;align-items:start;margin-top:56px}
+.cons-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 64px;align-items:start;margin-bottom:48px}
 .cons-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;padding:0;list-style:none}
 .cons-facts li{display:flex;flex-direction:column;gap:6px;padding:4px 22px;border-left:1px solid var(--line);color:var(--soft);font-size:15.5px;line-height:1.45}
 .cons-facts .cf-key{margin-bottom:8px}
@@ -129,7 +124,7 @@
 .cf-key .glyph{width:28px;height:28px;font-size:13px}
 .cf-key svg{width:28px;height:28px;color:var(--text)}
 .cons-facts code{white-space:nowrap;font:500 .9em var(--mono);padding:.1em .4em;border-radius:5px;background:rgba(255,255,255,.07);color:var(--text)}
-.handheld{max-width:1120px;margin:0 auto}
+.handheld{max-width:980px;margin:0 auto}
 .hh-body{position:relative;container-type:inline-size;display:grid;grid-template-columns:15.5% minmax(0,1fr) 15.5%;align-items:center;padding:3.4% 0;border-radius:clamp(28px,7.5cqw,90px);
   background:linear-gradient(180deg,#2b2f35,#1d2025 45%,#16181c);
   box-shadow:inset 0 1.5px 0 rgba(255,255,255,.09),inset 0 -8px 24px rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.6),0 60px 120px -40px rgba(0,0,0,.95),0 30px 80px -30px rgba(143,211,234,.14)}
@@ -193,6 +188,9 @@
 .maker strong{color:var(--text);font-weight:600}
 .goal{height:6px;margin-top:12px;max-width:420px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
 .goal span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#d9a531,var(--star))}
+.maker-links{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:10px;font:600 14px/1.4 var(--head)}
+.maker-links a{color:var(--accent);text-decoration:none}
+.maker-links a:hover{text-decoration:underline;text-underline-offset:3px}
 .maker .goal-text{display:flex;flex-wrap:wrap;gap:2px 0;margin-top:8px;font:500 12.5px/1.5 var(--mono);color:var(--muted)}
 .goal-text span + span::before{content:"·";display:inline-block;margin:0 9px;opacity:.6}
 .btn-star{background:var(--star);color:#2b1f05}
@@ -291,10 +289,9 @@
   /* the whole window is too small to read on a phone: show the shelf and the game page, big */
   .anno{margin-top:40px}
   /* the game page: Play, the Linux rating and anti-cheat, the timeline */
-  .frame{aspect-ratio:330 / 350;-webkit-mask:linear-gradient(90deg,#000 82%,transparent);mask:linear-gradient(90deg,#000 82%,transparent)}
-  .frame picture{width:387.9%;margin:calc(-250 / 330 * 100%) 0 0 calc(-296 / 330 * 100%)}
-  .legend li:not(:nth-child(3)):not(:nth-child(4)){display:none}
-  .x-linux{display:none}
+  .frame{aspect-ratio:250 / 222}
+  .frame picture{width:512%;margin:calc(-376 / 250 * 100%) 0 0 calc(-282 / 250 * 100%)}
+  .legend{display:none}
   .callout{display:none}
   .legend{grid-template-columns:1fr;gap:8px}
   .legend li::before{content:"";width:14px;height:14px;border-radius:0;background:var(--accent);
@@ -311,14 +308,14 @@
   /* on a phone each panel is shown whole, as wide as the card */
   .stage,.x-saves-and-backups .stage{height:auto;min-height:0;padding:20px 16px}
   .wrap .crop.panel{width:100%}
-  .x-linux .crop.panel{width:min(100%,280px)}
+  .x-stores .crop.panel,.x-emulation .crop.panel,.x-saves-and-backups .crop.panel{-webkit-mask:linear-gradient(90deg,#000 85%,transparent);mask:linear-gradient(90deg,#000 85%,transparent);border-radius:12px 0 0 12px}
   .extra-text,.x-saves-and-backups .extra-text{padding:18px 20px 22px;border-left:0;border-top:1px solid var(--line)}
   .x-saves-and-backups h3{font-size:21px}
   .hist{grid-template-columns:1fr;grid-template-areas:none}
   .hist > *{grid-area:auto}
   .hist .t-chart{display:none}
   .hist-head{order:-1}
-  .cons-head{margin-top:32px}
+  .cons-head{margin-bottom:28px}
   .hh-side{display:none}
   .hh-body{display:block;padding:0;background:none;box-shadow:none;border-radius:0}
   .hh-screen{border-radius:12px;box-shadow:0 0 0 6px #16181c,0 0 0 7px rgba(255,255,255,.08),0 30px 60px -20px rgba(0,0,0,.8)}
@@ -346,7 +343,10 @@
   .maker img{display:none}
   .maker .btn{grid-column:1 / -1;width:100%}
   .guide-list{grid-template-columns:1fr}
-  .guide-list li:nth-child(n+4){display:none}
+  .guide-list li:nth-child(n+5){display:none}
+  .src-how{text-align:left;margin:0}
+  .sec-dl .send-btn{width:100%;height:52px}
+  .meta-rel{display:none}
   .closing{margin-top:80px;padding-bottom:80px}
   .closing-strip{--H:110px}
   .closing .actions .btn{flex:1 1 auto}

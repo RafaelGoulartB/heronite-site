@@ -77,13 +77,12 @@ const guideIcons: Record<string, IconName> = {
 };
 
 // The features without a section of their own. Each shows one panel of the app, cut on its own
-// edges and sized to read; `crop` is the panel in the 1280px frame.
+// edges and sized to read; `crop` is the panel in the 1280px frame, `--m*` a closer cut for phones.
 const extras = [
-  { key: 'stores', slug: 'stores', shot: 'command-palette', crop: '--x:432;--y:58;--w:416;--h:166', fade: true },
-  { key: 'linux', slug: 'wine-and-proton', shot: 'collection', crop: '--x:304;--y:472;--w:194;--h:120', fade: false },
-  { key: 'emulation', slug: 'emulation', shot: 'emulators', crop: '--x:92;--y:125;--w:545;--h:177', fade: false },
+  { key: 'stores', slug: 'stores', shot: 'command-palette', crop: '--x:432;--y:58;--w:416;--h:166;--mx:432;--my:58;--mw:300;--mh:166', fade: true },
+  { key: 'emulation', slug: 'emulation', shot: 'emulators', crop: '--x:92;--y:125;--w:545;--h:177;--mx:92;--my:125;--mw:330;--mh:118', fade: false },
   { key: 'wine-and-proton', slug: 'wine-and-proton', shot: 'game-settings', crop: '--x:898;--y:152;--w:362;--h:160', fade: false },
-  { key: 'saves-and-backups', slug: 'saves-and-backups', shot: 'backups', crop: '--x:421;--y:305;--w:591;--h:227', fade: false },
+  { key: 'saves-and-backups', slug: 'saves-and-backups', shot: 'backups', crop: '--x:421;--y:305;--w:591;--h:227;--mx:421;--my:305;--mw:320;--mh:227', fade: false },
 ] as const;
 
 const softwareApplication = {
@@ -141,6 +140,7 @@ const softwareApplication = {
         <p class="hero-meta">
           {ver && <span>v{ver}</span>}
           <span id="dl-format" data-linux={`AppImage · ${size('Heronite-x86_64.AppImage')}`} data-windows={`${t.installer} · ${size('Heronite-Setup-x86_64.exe')}`}>{t.platforms}</span>
+          <a class="meta-rel" href="/changelog/">{fill(t.releases, { count: allReleases.length })}</a>
           {downloadCount >= 1000 && <span>{fill(t.downloads, { count: downloadText })}</span>}
           <a href={to('/download/')}>{t.otherDownloads}</a>
         </p>
@@ -204,6 +204,30 @@ const softwareApplication = {
     </div>
   </section>
 
+  <!-- ============ SWITCHING ============ -->
+  <section class="sec sec-switch" id="switch" aria-labelledby="h-switch">
+    <div class="wrap switch">
+      <div class="switch-copy">
+        <h2 class="h2" id="h-switch">{t.switch.headline}</h2>
+        <p class="lead">{t.switch.lead}</p>
+      </div>
+      <ul class="switch-list">
+        {compare.map((c) => {
+          const slug = slugOf(c);
+          return (
+            <li>
+              <a href={articleUrl('compare', slug, lang)}>
+                <span class="sw-name">{c.data.navLabel}</span>
+                <span class="sw-line">{t.switch.lines[slug]}</span>
+                <span class="sw-go" aria-hidden="true">&rarr;</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </section>
+
   <!-- ============ HISTORY ============ -->
   <section class="sec sec-hist" id="history" aria-labelledby="h-hist">
     <div class="wrap hist">
@@ -222,13 +246,6 @@ const softwareApplication = {
   <!-- ============ CONSOLE MODE ============ -->
   <section class="sec sec-console" id="console" aria-labelledby="h-console">
     <div class="wrap">
-      <figure class="handheld">
-        <div class="hh-body">
-          <span class="hh-side hh-l" aria-hidden="true"><i class="hh-stick"></i><i class="hh-dpad"></i><i class="hh-pad"></i></span>
-          <div class="hh-screen"><ShotImg name="console-home" sizes="(max-width: 1100px) calc(100vw - 32px), 1000px" alt={t.console.homeAlt} /></div>
-          <span class="hh-side hh-r" aria-hidden="true"><i class="hh-abxy"><b></b><b></b><b></b><b></b></i><i class="hh-stick"></i><i class="hh-pad"></i></span>
-        </div>
-      </figure>
       <div class="cons-head">
         <div>
           <h2 class="h2" id="h-console">{t.console.headline}</h2>
@@ -241,6 +258,13 @@ const softwareApplication = {
           <li><span class="cf-key" aria-hidden="true"><Icon name="steam" /></span><b>{t.console.deckTitle}</b><span set:html={t.console.deckHtml} /></li>
         </ul>
       </div>
+      <figure class="handheld">
+        <div class="hh-body">
+          <span class="hh-side hh-l" aria-hidden="true"><i class="hh-stick"></i><i class="hh-dpad"></i><i class="hh-pad"></i></span>
+          <div class="hh-screen"><ShotImg name="console-home" sizes="(max-width: 1100px) calc(100vw - 32px), 1000px" alt={t.console.homeAlt} /></div>
+          <span class="hh-side hh-r" aria-hidden="true"><i class="hh-abxy"><b></b><b></b><b></b><b></b></i><i class="hh-stick"></i><i class="hh-pad"></i></span>
+        </div>
+      </figure>
     </div>
   </section>
 
@@ -267,30 +291,6 @@ const softwareApplication = {
     </div>
   </section>
 
-  <!-- ============ SWITCHING ============ -->
-  <section class="sec sec-switch" id="switch" aria-labelledby="h-switch">
-    <div class="wrap switch">
-      <div class="switch-copy">
-        <h2 class="h2" id="h-switch">{t.switch.headline}</h2>
-        <p class="lead">{t.switch.lead}</p>
-      </div>
-      <ul class="switch-list">
-        {compare.map((c) => {
-          const slug = slugOf(c);
-          return (
-            <li>
-              <a href={articleUrl('compare', slug, lang)}>
-                <span class="sw-name">{c.data.navLabel}</span>
-                <span class="sw-line">{t.switch.lines[slug]}</span>
-                <span class="sw-go" aria-hidden="true">&rarr;</span>
-              </a>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  </section>
-
   <!-- ============ DOWNLOAD ============ -->
   <section class="sec sec-dl" id="download" aria-labelledby="h-dl">
     <div class="wrap">
@@ -312,6 +312,7 @@ const softwareApplication = {
           <p set:html={fill(t.maker.textHtml, { author: site.author })} />
           <div class="goal" aria-hidden="true"><span style={`width:${Math.min(100, (starCount / goal) * 100).toFixed(1)}%`}></span></div>
           <p class="goal-text"><span>{fill(t.maker.goal, { count: starText, goal })}</span>{activity && <span>{activity}</span>}</p>
+          <p class="maker-links"><a href={site.discussions}>{t.maker.discussions}</a><a href={to('/docs/translating/')}>{t.maker.translate}</a></p>
         </div>
         <a class="btn btn-star" href={site.repo}>
           <Icon name="star" />

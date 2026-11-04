@@ -163,11 +163,12 @@ const en = {
     platforms: 'Windows and Linux',
     otherDownloads: 'All downloads',
     downloads: '{count} downloads',
+    releases: '{count} releases',
     pauseMotion: 'Pause motion',
     playMotion: 'Play motion',
     sources: 'Plays games from',
     sourcesMore: 'and emulators, and your own games',
-    sourcesHow: 'Steam is read with no login. Epic, GOG and Amazon install from Heronite once you log in. On Linux, Battle.net, EA, Ubisoft and Rockstar each run in their own Wine prefix.',
+    sourcesHow: 'Steam is read with no login. Epic, GOG and Amazon install from Heronite once you log in. On Linux, Battle.net, EA, Ubisoft and Rockstar each run in their own Wine prefix. You sign in on each store’s own page, and your logins stay on your PC.',
     collection: {
       alt: 'Heronite’s Collection: game covers grouped into Playing and On Going, with play time under each, and ELDEN RING open with its cover, Play button, score, Linux rating and a timeline of play sessions.',
       callouts: ['Group by status', 'Play time per game', 'Linux rating and anti-cheat', 'Your timeline', 'List or grid of covers'],
@@ -179,11 +180,6 @@ const en = {
       lead: 'Store logins, emulators, Proton builds and save backups, without five other apps open.',
       link: 'All eight features',
       tiles: {
-        linux: {
-          title: 'Know how it runs before you install',
-          text: 'Each game shows its ProtonDB rating and anti-cheat status on Linux, next to your play time and last save backup.',
-          alt: 'ELDEN RING’s game page: Play button, rating, IGDB score 97, Steam library, save backup 9 days ago, and On Linux: Gold, EAC ok',
-        },
         stores: {
           title: 'Epic, Steam and GOG in one search',
           text: 'Log in once and Epic, GOG and Amazon join your Steam games. Ctrl+K finds any of them.',
@@ -256,6 +252,8 @@ const en = {
       textHtml: 'Heronite is made by one developer, {author}, in the open. <strong>A star on GitHub is how other players find it.</strong>',
       goal: '{count} stars · next goal: {goal}',
       activity: '{count} releases · latest on {date}',
+      discussions: 'Join the Discussions',
+      translate: 'Help translate it',
     },
     guides: {
       headline: 'Guides for Linux and the Steam Deck',

@@ -161,11 +161,12 @@ const ptBr: Dict = {
     platforms: 'Windows e Linux',
     otherDownloads: 'Todos os downloads',
     downloads: '{count} downloads',
+    releases: '{count} versões',
     pauseMotion: 'Pausar animação',
     playMotion: 'Retomar animação',
     sources: 'Roda jogos de',
     sourcesMore: 'e emuladores, e seus próprios jogos',
-    sourcesHow: 'A Steam é lida sem login. Epic, GOG e Amazon instalam pelo Heronite depois que você entra. No Linux, Battle.net, EA, Ubisoft e Rockstar rodam cada um no seu próprio prefixo do Wine.',
+    sourcesHow: 'A Steam é lida sem login. Epic, GOG e Amazon instalam pelo Heronite depois que você entra. No Linux, Battle.net, EA, Ubisoft e Rockstar rodam cada um no seu próprio prefixo do Wine. Você entra na página da própria loja, e seus logins ficam no seu PC.',
     collection: {
       alt: 'A Coleção do Heronite: capas de jogos agrupadas em Jogando e Em andamento, com o tempo de jogo embaixo de cada uma, e ELDEN RING aberto com a capa, o botão Jogar, a nota, a avaliação no Linux e uma linha do tempo das sessões.',
       callouts: ['Agrupar por status', 'Tempo de jogo por jogo', 'Avaliação no Linux e anti-cheat', 'Sua linha do tempo', 'Lista ou grade de capas'],
@@ -177,11 +178,6 @@ const ptBr: Dict = {
       lead: 'Login nas lojas, emuladores, versões do Proton e backup de saves, sem outros cinco apps abertos.',
       link: 'Todos os oito recursos',
       tiles: {
-        linux: {
-          title: 'Saiba como roda antes de instalar',
-          text: 'Cada jogo mostra a nota no ProtonDB e o status do anti-cheat no Linux, ao lado do seu tempo de jogo e do último backup do save.',
-          alt: 'Página de ELDEN RING: botão Jogar, avaliação, nota 97 no IGDB, biblioteca Steam, backup do save há 9 dias, e No Linux: Gold, EAC ok',
-        },
         stores: {
           title: 'Epic, Steam e GOG em uma só busca',
           text: 'Entre uma vez e seus jogos da Epic, GOG e Amazon se juntam aos da Steam. O Ctrl+K encontra qualquer um.',
@@ -254,6 +250,8 @@ const ptBr: Dict = {
       textHtml: 'O Heronite é feito por um desenvolvedor, {author}, de forma aberta. <strong>Uma estrela no GitHub é como outros jogadores o encontram.</strong>',
       goal: '{count} estrelas · próxima meta: {goal}',
       activity: '{count} versões · a última em {date}',
+      discussions: 'Participe das Discussões',
+      translate: 'Ajude a traduzir',
     },
     guides: {
       headline: 'Guias para Linux e Steam Deck',
