@@ -22,9 +22,9 @@ highlights:
     text: "Pick the version for each game in Game settings → Compatibility."
 faq:
   - q: "What is the difference between GE-Proton and Proton-CachyOS?"
-    a: "They come from different teams: Glorious Eggroll makes GE-Proton, the CachyOS team makes Proton-CachyOS. Both often get fixes before Valve's Proton. See [the sources table](#what-are-the-other-proton-builds-for)."
-  - q: "Can Steam use the builds I install in Heronite?"
-    a: "Yes. Turn on **Install Proton into Steam** in the Wine Manager and restart Steam. See [Share the builds with Steam](#share-the-builds-with-steam-optional)."
+    a: "They come from different teams: Glorious Eggroll makes GE-Proton, and the CachyOS team makes Proton-CachyOS. Both often get fixes before Valve's Proton."
+  - q: "Does Heronite use Proton builds I already have?"
+    a: "Yes. Heronite finds Proton builds in your Steam libraries and Lutris's Wine runners, so you do not download them twice."
   - q: "Where does Heronite install Proton builds?"
     a: "In `~/.local/share/heronite/tools/proton`. With **Install Proton into Steam** on, new builds go to Steam's `compatibilitytools.d` folder."
   - q: "Does the Wine Manager work on Windows?"
@@ -39,29 +39,27 @@ GE-Proton and Proton-CachyOS often get fixes for new releases first, so try them
 
 ## What you need
 
-- Heronite on Linux ([installation guide](/docs/installation/)). The Wine Manager is not on Windows. On Steam Deck, set Heronite up with the [Steam Deck guide](/guides/steam-deck/) first.
+- Heronite on Linux ([installation guide](/docs/installation/)). On Steam Deck, set Heronite up with the [Steam Deck guide](/guides/steam-deck/) first.
 - An internet connection. Builds download from GitHub.
 - Disk space. A Proton build takes from a few hundred megabytes to over a gigabyte.
 
-## Open the Wine Manager
+## Install GE-Proton in the Wine Manager
 
-Press <kbd>Ctrl</kbd> <kbd>3</kbd>, or open it from the command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>). Pick one of the six sources on the left and its builds appear on the right, newest first, with release date and size.
+1. Press <kbd>Ctrl</kbd> <kbd>3</kbd> to open the Wine Manager, or open it from the command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>).
+2. Choose **GE-Proton** in the list on the left. Its builds appear on the right, newest first, with release date and size.
+3. Find the build you want, or type a version in the search box. **GE-Proton-latest** follows the newest release. A numbered build stays fixed, which helps when a game works on one release only.
+4. Click **Install**. The row changes to **Installed**.
 
 ![Heronite's Wine Manager with Proton-CachyOS selected: a list of builds with release dates, sizes and Install buttons.](../../../assets/screenshots/wine-manager.webp)
 
-## Install GE-Proton in the Wine Manager
-
-1. Choose **GE-Proton** in the list on the left.
-2. Find the build you want. **GE-Proton-latest** follows the newest release. A numbered build stays fixed, which helps when a game works on one release only.
-3. Click **Install**.
-
-The row changes to **Installed**. Builds go to `~/.local/share/heronite/tools/proton`. Use the search box to find a version quickly.
-
-> **Tip.** Turn on **Keep the -latest builds up to date**. Heronite then updates the **-latest** entries in the background, never while a game runs.
+Builds go to `~/.local/share/heronite/tools/proton`. To keep the **-latest** entries current, turn on **Keep the -latest builds up to date**. Heronite then updates them in the background, never while a game runs.
 
 ## Install Proton-CachyOS
 
-Choose **Proton-CachyOS** in the list and click **Install** on a build. Builds install side by side, so you can keep both and switch per game.
+1. In the Wine Manager, choose **Proton-CachyOS** in the list on the left.
+2. Click **Install** on a build.
+
+Builds install side by side, so you can keep GE-Proton and Proton-CachyOS and switch per game.
 
 ## What are the other Proton builds for?
 
@@ -78,28 +76,27 @@ Choose **Proton-CachyOS** in the list and click **Install** on a build. Builds i
 
 ## Pick a build in Game settings
 
-1. Select the game in your Collection and open its **Game settings**.
+1. Select the game in your library and open its **Game settings**.
 2. Go to the **Compatibility** tab.
 3. In **Version**, choose the build you installed.
 
 ![Heronite's Game settings on the Compatibility tab: the Version menu set to GE-Proton-latest, with its ProtonDB rating and the Wine prefix below.](../../../assets/screenshots/game-settings.webp)
 
-The same tab shows the game's ProtonDB rating and a **Recommended** build. Your choice applies to that game only. Set a default for new games in Settings. See [Wine and Proton](/docs/wine-and-proton/).
+The same tab shows the game's ProtonDB rating and a **Recommended** build. Your choice applies to that game only. To set the build for new games, use **Version** in **Settings → Game defaults → Compatibility**. More in [Wine and Proton](/docs/wine-and-proton/).
 
 ## Share the builds with Steam (optional)
 
 Heronite can put builds in Steam's `compatibilitytools.d` folder, where Steam can use them:
 
 1. In the Wine Manager, turn on **Install Proton into Steam**.
-2. Install builds as above. New ones download into `compatibilitytools.d`, and the ones you already have are registered there.
+2. Install builds as above. New ones download into `compatibilitytools.d`, and Heronite registers the ones you already have there.
 3. Restart Steam so it sees them.
-4. In Steam, right-click a game and choose **Properties**, then **Compatibility**. Turn on the option to force a compatibility tool and pick your build.
-
-Heronite also finds Proton builds already in your Steam libraries and Lutris's Wine runners, so you do not download them twice.
+4. In Steam, right-click a game and choose **Properties**, then **Compatibility**.
+5. Turn on the option to force a compatibility tool and pick your build.
 
 ## Update and remove builds
 
-Next to an installed build, **Update** appears when a new release exists, and **Remove** deletes it. Games set to a removed build fall back to the default.
+In the Wine Manager, click **Update** next to an installed build when a new release exists. Click **Remove** to delete a build. Games set to a removed build fall back to the default.
 
 ## A build won't install, show up or fix the game
 

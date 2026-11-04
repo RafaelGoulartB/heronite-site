@@ -15,9 +15,9 @@ Start Heronite from scripts with options such as `--launch`. The program is `her
 |---|---|
 | `--launch <game>` | Starts a game (see below) |
 | `--no-gui` | With `--launch`: no window; Heronite quits when the game ends |
-| `--console` | Opens in [Console Mode](/docs/console-mode/) |
+| `--console` | Opens in [console mode](/docs/console-mode/) |
 | `--fullscreen` | Opens fullscreen (<kbd>F11</kbd> switches back) |
-| `--autostart` | Used by "Start with the system"; only then does "Start minimized" apply |
+| `--autostart` | Used by **Start with the system** in **Settings → General**; only then does **Start minimized** apply |
 | `-h`, `--help` | Shows the options |
 
 Only one Heronite runs at a time: starting it again hands the request (like `--launch`) to the one already running.
@@ -52,15 +52,13 @@ heronite://launch?appName=<game>&runner=<store>
 
 The query form also takes:
 
-- `arg=<value>`: an argument for the game (repeat it for more),
-- `gui=false`: start without showing Heronite's window.
+- `arg=<value>`: an argument for the game (repeat it for more)
+- `gui=false`: start without showing Heronite's window
 
-Names with spaces are written with `%20` (`My%20Game`). The setting "Hide the window for heronite:// launches" hides the window for every link.
+Write spaces in names as `%20` (`My%20Game`). To hide the window for every link, turn on **Hide the window for heronite:// launches**. The old `heronite-rs://` scheme still works.
 
-**Where links work:**
+### Where heronite:// links work
 
-- **Windows installer:** registered for your user at every start.
-- **Windows portable:** not registered, so the copy leaves no trace on the PC.
-- **Linux:** registered by `scripts/install.sh` when built from source.
-
-The old `heronite-rs://` scheme still works.
+- **Windows installer:** registered for your user at every start
+- **Windows portable:** not registered, so the copy leaves no trace on the PC
+- **Linux:** registered by `scripts/install.sh` when built from source

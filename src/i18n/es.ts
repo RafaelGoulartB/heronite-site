@@ -137,11 +137,13 @@ const es: Dict = {
     appDescription: 'Un lanzador de juegos gratis y de código abierto para Linux y Windows que reúne Steam, Epic Games, GOG, Amazon Games, Battle.net, EA app, Ubisoft Connect, Rockstar Games y emuladores en una sola biblioteca.',
     featureList: [
       'Una biblioteca para Steam, Epic Games, GOG, Amazon Games, Battle.net, EA app, Ubisoft Connect y Rockstar Games',
+      'Juegos de Microsoft Store y PC Game Pass en Windows',
       'Interfaz para emuladores con búsqueda de ROMs en carpetas',
       'Gestor de Wine y Proton para Linux',
       'Registro de tiempo de juego, estadísticas y resumen del año',
       'Modo consola para mando, con temas',
-      'Copias de partidas con Ludusavi',
+      'Copias de partidas con Ludusavi y guardados en la nube de Epic y GOG',
+      'La misma biblioteca en varios PC, con una carpeta compartida o una cuenta en la nube',
     ],
     wallLabel: 'Un mural de portadas de juegos de una biblioteca de Heronite, recortado de las capturas de la propia app',
     headlineHtml: 'Todos<br> tus juegos.<br> Un solo lanzador.',
@@ -234,11 +236,11 @@ const es: Dict = {
     },
     switch: {
       headline: '¿Vienes de Heroic, Lutris o Playnite?',
-      lead: 'Heronite importa tus juegos de Heroic, Lutris, Bottles y Faugus y solo lee sus archivos, así que siguen funcionando como antes.',
+      lead: 'Heronite importa tus juegos de Heroic, Lutris, Bottles, Faugus y Playnite y solo lee sus archivos, así que siguen funcionando como antes.',
       keep: 'Mantienes',
       gain: 'Ganas',
       lines: {
-        playnite: { keep: 'Tus bibliotecas de Steam, Epic y GOG, de vuelta en cuanto inicias sesión.', gain: 'Linux, una versión de Proton por juego y el mismo lanzador en los dos sistemas.' },
+        playnite: { keep: 'Tus juegos instalados de Playnite, importados con su tiempo de juego.', gain: 'Linux, una versión de Proton por juego y el mismo lanzador en los dos sistemas.' },
         heroic: { keep: 'Tus juegos de Heroic, importados. Heroic sigue funcionando como antes.', gain: 'Steam y emuladores en la misma lista, un historial de juego y un modo consola.' },
         lutris: { keep: 'Tus juegos de Lutris, importados. Lutris sigue funcionando como antes.', gain: 'Inicio de sesión en Epic, GOG y Amazon, un historial de juego y copias de partidas.' },
       },
@@ -273,7 +275,7 @@ const es: Dict = {
       },
       {
         q: '¿Qué juegos y tiendas admite?',
-        a: 'Steam, Epic Games, GOG y Amazon Games en Linux y Windows; Battle.net, EA app, Ubisoft Connect y Rockstar Games en Linux; juegos emulados de RetroArch, PCSX2, Dolphin, RPCS3 y muchos otros emuladores; y cualquier juego que añadas tú mismo. Mira [tiendas y lanzadores](/features/stores/).',
+        a: 'Steam, Epic Games, GOG, Amazon Games, Battle.net, EA app, Ubisoft Connect y Rockstar Games en Linux y Windows; juegos de Microsoft Store y PC Game Pass en Windows; juegos emulados de RetroArch, PCSX2, Dolphin, RPCS3 y muchos otros emuladores; y cualquier juego que añadas tú mismo. Mira [tiendas y lanzadores](/features/stores/).',
       },
       {
         q: '¿Puedo jugar juegos de Epic Games y GOG en Linux con Heronite?',

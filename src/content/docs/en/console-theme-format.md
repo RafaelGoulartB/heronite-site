@@ -7,7 +7,7 @@ order: 5
 updated: 2026-11-04
 ---
 
-A console mode theme is one JSON file, `<id>.heronite-theme.json`. The easiest way to make one is in Heronite (**Settings → Console mode**) and then **Export**. This page is for reading or editing the file by hand.
+A console mode theme is one JSON file, `<id>.heronite-theme.json`. The easiest way to make one is in **Settings → Console mode**, then **Export…**. Post yours in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions) so others can import it.
 
 ## File rules
 
@@ -57,17 +57,17 @@ Up to four tabs, switched with LB / RB. Each one is `{ "name", "layout", "source
 
 - **`layout`:** `shelves`, `spotlight`, `cinema`, `dashboard`, `grid`, `wheel`, `carousel`, or `xbox` (the Series X layout).
 - **`source`** (which games the tab shows):
-  - `all`, `installed`, `not-installed`, `favourites`, `pc`, `emulated`,
-  - `status:<id>`, `category:<name>`, `store:<name>`, `platform:<name>`.
+  - `all`, `installed`, `not-installed`, `favourites`, `pc`, `emulated`
+  - `status:<id>`, `category:<name>`, `store:<name>`, `platform:<name>`
 
 ### `shelves`
 
 The rows of the Shelves layout. Each one is `{ "kind", "on", "title" }`.
 
 - **`kind`:**
-  - `recent`, `favourites`, `installed`, `added`, `backlog-short`, `random`, `forgotten`, `statuses`,
-  - or a group: `status:<id>`, `store:<name>`, `platform:<name>`, `genre:<name>`, `category:<name>`.
-- **`on`:** `true` or `false`.
+  - `recent`, `favourites`, `installed`, `added`, `backlog-short`, `random`, `forgotten`, `statuses`
+  - A group: `status:<id>`, `store:<name>`, `platform:<name>`, `genre:<name>`, `category:<name>`
+- **`on`:** `true` or `false`
 
 `shelfLimit` sets how many games a shelf shows.
 
@@ -153,15 +153,12 @@ The rows of the Shelves layout. Each one is `{ "kind", "on", "title" }`.
 
 Options of single layouts:
 
-- `gridPanel`: `title` or `right`,
-- `wheelItems`: `name` or `logo`,
-- `spotlightActions`: `full` or `play`,
-- also `jumpLetters`, `spotlightCards`, `carouselReflect`, `xboxGroups`, and `dashboard` (`week`, `downloads`, `random`, `journal`, `shortcuts`).
+- `gridPanel`: `title` or `right`
+- `wheelItems`: `name` or `logo`
+- `spotlightActions`: `full` or `play`
+- `jumpLetters`, `spotlightCards`, `carouselReflect`, `xboxGroups`
+- `dashboard`: `week`, `downloads`, `random`, `journal`, `shortcuts`
 
 ## What a theme does not include
 
-What happens when a controller connects, how Heronite opens, and what it does when idle are settings of your PC, not of the theme, so they are not in the file.
-
-## Share your theme
-
-Post your theme in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions) so others can import it.
+The file leaves out what happens when a controller connects, how Heronite opens, and what it does when idle. These are settings of your PC, not of the theme.

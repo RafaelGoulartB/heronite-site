@@ -70,17 +70,21 @@ ROMs/
 └── gba/
 ```
 
-On the first run, Heronite scans these folders if they exist:
+On the first start, Heronite scans these folders if they exist:
 
 - **Linux** (in your home folder): `ROMs`, `Roms`, `roms`, `Emulation/roms`, `Games/ROMs`, `Games/Emulation/roms`, `retrodeck/roms`, `RetroDECK/roms`; and `Emulation/roms`, `roms`, `retrodeck/roms` on other disks.
 - **Windows:** `ROMs`, `Emulation\roms`, `Games\ROMs`, `Documents\ROMs` in your user folder; and `Emulation\roms`, `ROMs`, `Games\ROMs`, `RetroArch-Win64\roms` at the top of each drive.
 
 Add more folders on the **Emulators** page (<kbd>Ctrl</kbd> <kbd>5</kbd>). Scans skip `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media`, and `manuals` folders. Heronite reads multi-disc games from `.m3u`, `.cue`, and `.gdi` files, so each one shows up once.
 
-## Continue from a save state
+## Continue a game from a save state
 
-Open the game's page to continue from a save state.
+1. Press **Play** on the game.
+2. In **How do you want to play?**, pick a save state.
+3. Choose **Continue**.
+
+Heronite asks only when the emulator has save states for the game. To boot normally, pick **Start from the beginning**; in-game saves on memory cards are kept.
 
 ## Show RetroAchievements for emulated games
 
-Connect a [RetroAchievements](https://retroachievements.org) account in Settings to see your achievements for emulated games. See [Metadata and art](/docs/metadata-and-art/).
+Connect your [RetroAchievements](https://retroachievements.org) account in **Settings → Achievements** to see your achievements for emulated games.

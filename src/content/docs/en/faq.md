@@ -24,11 +24,15 @@ Yes. Heronite runs as an AppImage in SteamOS desktop mode. For Gaming Mode, add 
 ## How is it different from Heroic, Lutris, or Playnite?
 
 - **Everything in one place:** Steam, Epic, GOG, Amazon, store apps, emulators, and your own games.
-- **Light:** a native Rust app drawn on the GPU, with no bundled browser engine. It uses about 190 MB of memory when idle and shows the library in about 0.2 s.
+- **Light:** a native Rust app drawn on the GPU, with no bundled browser engine. It uses about 190 MB of memory when idle and shows the library in about 215 ms.
 - **Your play history:** every session, statistics, a journal, a backlog goal, and a year in review.
 - **Console mode** with themes you can change and share.
 
-On Linux it can import your games from Heroic, Lutris, Bottles, and Faugus.
+It can import your games from Heroic, Lutris, Bottles, and Faugus on Linux, and from Playnite on Windows. See [Heronite vs Heroic](/compare/heroic/), [vs Lutris](/compare/lutris/) and [vs Playnite](/compare/playnite/).
+
+## Can I use the same library on two PCs?
+
+Yes. **Settings → Cloud** keeps your statuses, favourites, notes, play time and sessions the same on every PC, such as the Linux and Windows of a dual boot. It syncs through a shared folder or a cloud account; see [Backups and saves](/docs/backups-and-saves/).
 
 ## Will I lose my Heroic setup?
 
@@ -40,7 +44,7 @@ On Windows, yes, as with any launcher. On Linux it depends on the game. Heronite
 
 ## Is my store login safe?
 
-Yes. Heronite uses the same open source tools as Heroic (legendary, gogdl, nile). Your logins stay on your PC and go only to the stores, and you type your password on the store's own login page.
+Yes. Heronite uses the same open source tools as Heroic: legendary for Epic, gogdl for GOG and nile for Amazon. Your logins stay on your PC and go only to the stores, and you type your password on the store's own login page.
 
 ## Why does Windows show a SmartScreen warning?
 
@@ -48,7 +52,7 @@ The Windows files are not code-signed yet. Choose **More info**, then **Run anyw
 
 ## Can I keep everything on a USB drive?
 
-Yes, with the Windows portable copy. See [Files and Folders](/docs/files-and-folders/#the-portable-copy-windows).
+Yes, with the Windows portable copy. See [Files and folders](/docs/files-and-folders/#the-portable-copy-windows).
 
 ## Which languages does Heronite support?
 

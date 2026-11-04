@@ -3,7 +3,7 @@ title: "Couch, TV and Steam Deck Game Launcher | Heronite"
 description: "Play your library from the couch with a controller. Console mode has eight layouts, seven themes and an on-screen keyboard. Free on Linux and Windows."
 eyebrow: Console mode
 headline: "A game launcher for the couch, TV and Steam Deck"
-lead: "Console mode turns Heronite into a game launcher for the couch, a TV or a Steam Deck. Play your whole library with a controller and no mouse."
+lead: "Console mode plays your whole library with a controller and no mouse, on Linux and Windows. It has an on-screen keyboard and, on Linux, an in-game overlay."
 navLabel: Console mode
 summary: "A controller-first mode for the couch or a TV, with eight layouts, seven themes you can change and share, and an in-game overlay."
 order: 5
@@ -23,10 +23,10 @@ highlights:
 faq:
   - q: Is Heronite a Steam Big Picture mode alternative?
     a: Yes. It puts games from every store, emulators and your own programs in one controller-friendly interface, on Linux and Windows.
-  - q: Can I use Heronite on the Steam Deck?
-    a: Yes. Add the AppImage to Steam as a non-Steam game with the `--console` option. The [Steam Deck guide](/guides/steam-deck/) has the steps.
+  - q: Does console mode work with PlayStation and Nintendo controllers?
+    a: Yes. The button hints show Xbox, PlayStation, Nintendo or Steam Deck pictures to match your controller.
   - q: Does console mode work with a keyboard?
-    a: Yes. Arrow keys move, `Enter` confirms and `Esc` goes back. See [the key table](#what-do-the-controller-buttons-do) or [Console mode](/docs/console-mode/#keyboard).
+    a: Yes. Arrow keys move, `Enter` confirms and `Esc` goes back. See [Console mode](/docs/console-mode/#keyboard).
   - q: Does console mode make Heronite heavier?
     a: No. It is part of the same native Rust app and loads only when you turn it on.
 related:
@@ -37,15 +37,13 @@ related:
 
 ## How do I turn on console mode?
 
-Start it in one of three ways:
-
-- The command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>) or the ☰ menu.
-- The `--console` option, for example in a Steam shortcut or a gaming session.
-- **Settings → Console mode**, where you choose off, ask or on to open it at startup or when a controller connects.
+- Open it from the command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>) or the ☰ menu.
+- Start Heronite with the `--console` option, for example in a Steam shortcut or a gaming session.
+- In **Settings → Console mode**, choose off, ask or on to open it at startup or when a controller connects.
 
 ## What do the controller buttons do?
 
-The hints at the bottom of each page match your controller, with Xbox, PlayStation, Nintendo or Steam Deck button pictures.
+The hints at the bottom of each page match your controller, with Xbox, PlayStation, Nintendo or Steam Deck button pictures. For the Nintendo layout, swap A and B in the theme's controls.
 
 | Controller | Action |
 |---|---|
@@ -57,7 +55,7 @@ The hints at the bottom of each page match your controller, with Xbox, PlayStati
 | Right stick | Scroll |
 | Start or Guide | Menu |
 
-For the Nintendo layout, swap A and B in the theme's controls. With no gamepad, the keyboard acts as one:
+With no gamepad, the keyboard acts as one:
 
 | Key | Acts as |
 |---|---|
@@ -87,11 +85,11 @@ Details such as score, developer and last played sit to the right.
 
 ![Heronite console game page for ELDEN RING with a list of Play, Status, Favourite, Game settings, Playtime and Back up saves (Ludusavi), and a details panel with score, developer, last played and features.](../../../assets/screenshots/console-game.webp)
 
-*A game page in console mode, with a details panel on the right.*
+*ELDEN RING's game page in console mode.*
 
 ## Which layouts and tabs does console mode have?
 
-Console mode has up to **four tabs**, and each tab has its own layout and its own games. The layouts are:
+Console mode has up to **four tabs**, each with its own layout and its own games. The layouts are:
 
 - Shelves
 - Spotlight
@@ -102,21 +100,21 @@ Console mode has up to **four tabs**, and each tab has its own layout and its ow
 - Carousel
 - Series X
 
-A tab can show all games, only installed ones or only favourites. It can also filter by one status, store or platform.
+A tab shows all games, only installed ones or only favourites, or filters by one status, store or platform.
 
 ## How do I change the look of console mode?
 
-Pick one of seven themes (**Minimal**, **Classic**, **Cinema**, **Pulse**, **Arcade**, **Hub**, **Living room**), then change it live or in **Settings → Console mode**:
+Pick one of seven themes (**Minimal**, **Classic**, **Cinema**, **Pulse**, **Arcade**, **Hub**, **Living room**). Then change any of these live or in **Settings → Console mode**:
 
-- covers, tile shape and size,
-- background, with the game's art, a blurred cover, screenshots or a picture of your own,
-- accent colour, fonts, size of the interface and the clock,
-- button pictures,
-- the menu (sidebar, grid, dock or rail) and the game pages.
+- Covers, tile shape and size
+- Background: the game's art, a blurred cover, screenshots or a picture of your own
+- Accent colour, fonts, interface size and the clock
+- Button pictures
+- The menu (sidebar, grid, dock or rail) and the game pages
 
 ### How do I share a theme?
 
-Export your theme to a `.heronite-theme.json` file and import it on any PC. A background picture goes inside the file. Post yours in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions). The [theme format](/docs/console-theme-format/) lists every field, and all are optional.
+Export your theme to a `.heronite-theme.json` file and import it on any PC. A background picture goes inside the file. Post yours in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions). The [theme format](/docs/console-theme-format/) lists every field; all are optional.
 
 ## Can I type without a keyboard?
 
@@ -124,11 +122,16 @@ Yes. Console mode has an **on-screen keyboard** and a **Power menu**. The Menu b
 
 ## How do I start console mode from Steam Deck Gaming Mode?
 
-Install the AppImage in SteamOS desktop mode, then add it to Steam as a non-Steam game with the `--console` option. The [Steam Deck guide](/guides/steam-deck/) has the steps.
+1. In Desktop Mode, download `Heronite-x86_64.AppImage` and make it executable.
+2. In Steam, choose **Add a Game**, then **Add a Non-Steam Game**, and select the AppImage.
+3. In Heronite's **Properties**, type `--console` in **Launch Options**.
+4. Return to Gaming Mode and start Heronite from your library.
+
+The [Steam Deck guide](/guides/steam-deck/) has every step in detail.
 
 ## How do I use the in-game overlay and Replay (beta, Linux)?
 
-With the overlay on, the Guide button opens a panel over the game. It sets volume, microphone and FPS limit, and takes screenshots and journal notes.
+Turn the overlay on in **Settings → Overlay**. The Guide button then opens a panel over the game. It sets volume, microphone and FPS limit, and takes screenshots and journal notes.
 
 | Buttons | Action |
 |---|---|
@@ -138,8 +141,8 @@ With the overlay on, the Guide button opens a panel over the game. It sets volum
 | Guide + Y | Mark a moment |
 | Guide + X | Save the replay |
 
-**Replay** is off by default. When on, it keeps the last seconds of play, recorded on the GPU by [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/).
+**Replay** is off by default; turn it on in **Settings → Replay**. It keeps the last seconds of play, recorded on the GPU by [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/).
 
-> **Note.** The overlay needs a Wayland session whose compositor supports layer-shell, such as KDE Plasma, Hyprland or Sway. It does not work on GNOME or X11.
+The overlay needs a Wayland session whose compositor supports layer-shell, such as KDE Plasma, Hyprland or Sway. It does not work on GNOME or X11.
 
 Next: [Console mode docs](/docs/console-mode/).

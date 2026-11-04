@@ -11,7 +11,9 @@ Console mode is a controller-first layout for the couch or a TV, with an on-scre
 
 ## Turn on console mode
 
-- Use the command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>) or the ☰ menu.
+Open it in any of these ways:
+
+- Choose **Console mode** in the command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>) or the ☰ menu.
 - Start Heronite with `--console` (for example in a Steam shortcut or a gaming session).
 - In **Settings → Console mode**, make it open at startup or when a controller connects (off, ask, or on).
 
@@ -48,21 +50,22 @@ Swap A and B in the theme's controls if you prefer the Nintendo layout. Button p
 
 Change every part of console mode, live from the couch or in **Settings → Console mode**:
 
-- up to four tabs, each with its own layout (Shelves, Spotlight, Cinema, Dashboard, Grid, Wheel, Carousel, Series X) and its own games (all, installed, favourites, a status, a store, a platform, …),
-- covers, background, colours, fonts, and button glyphs,
-- the menu and the game pages.
+- Up to four tabs, each with its own layout (Shelves, Spotlight, Cinema, Dashboard, Grid, Wheel, Carousel, Series X) and its own games (all, installed, not installed, favourites, PC, emulated, or one status, category, store or platform)
+- Covers, background, colours, fonts, and button glyphs
+- The menu and the game pages
 
 Seven themes come built in: Minimal, Classic, Cinema, Pulse, Arcade, Hub, and Living room.
 
 ### Share a theme
 
-Export a theme to a `.heronite-theme.json` file and import it on any PC. The background picture goes inside the file. Share yours in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions).
-
-To edit the file by hand, see [Console theme format](/docs/console-theme-format/).
+In **Settings → Console mode**, choose **Export…** to save a theme as a `.heronite-theme.json` file, with its background picture inside. On another PC, choose **Import…**. Share yours in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions), or edit the file by hand with the [console theme format](/docs/console-theme-format/).
 
 ## Open the in-game overlay (beta, Linux)
 
-With the overlay turned on, the controller's Guide button opens a panel over the game with volume, microphone, FPS limit, screenshots, and journal notes.
+1. In **Settings → Overlay**, switch on **Turn on the overlay**. It is off by default.
+2. During a game opened by Heronite, press the controller's Guide button.
+
+The panel over the game has volume, microphone, FPS limit, screenshots, and journal notes.
 
 | Buttons | Action |
 |---|---|
@@ -72,6 +75,6 @@ With the overlay turned on, the controller's Guide button opens a panel over the
 | Guide + Y | Mark a moment |
 | Guide + X | Save the replay |
 
-If the overlay does not work or Steam takes the Guide button, see [Troubleshooting](/docs/troubleshooting/#the-in-game-overlay-does-not-work-linux). It needs a Wayland session whose compositor supports layer-shell, so it does not work on GNOME or X11.
+The overlay needs a Wayland session whose compositor supports layer-shell, so it does not work on GNOME or X11. If Steam takes the Guide button, see [Troubleshooting](/docs/troubleshooting/#the-in-game-overlay-does-not-work-linux).
 
-**Replay** (off by default) keeps the last seconds of play, recorded on the GPU by [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/).
+**Replay** keeps the last seconds of play, recorded on the GPU by [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/). It is off by default: turn it on in **Settings → Replay**.

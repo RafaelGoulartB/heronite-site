@@ -16,17 +16,15 @@ highlights:
     text: "Download the AppImage, make it executable and log in once with a keyboard."
   - title: "Add it to Steam"
     text: "Add the AppImage as a non-Steam game with the launch option --console."
-  - title: "Play from Gaming Mode"
-    text: "Open Heronite from your Steam library and use the Deck's buttons."
-  - title: "One controller-friendly library"
-    text: "Your other stores sit next to your Steam games."
+  - title: "Deck button prompts"
+    text: "Heronite shows the Steam Deck's own button pictures."
+  - title: "Install to the SD card"
+    text: "Pick any install folder, the SD card included."
 faq:
   - q: "Does Heronite work on the Steam Deck?"
     a: "Yes. It runs on SteamOS as an AppImage, and its console mode is built for controllers."
-  - q: "What launch option do I use on the Steam Deck?"
-    a: "Use `--console`, which opens the layout for controllers and TVs. Add `--fullscreen` to start fullscreen."
-  - q: "Can I play Epic Games, GOG and Amazon games on the Deck?"
-    a: "Yes. Log in on the **Stores** page and the games join your Collection. Windows games run through Proton. See [Log in to Epic, GOG and Amazon Games](#log-in-to-epic-gog-and-amazon-games)."
+  - q: "Is Heronite free?"
+    a: "Yes. Heronite is free and open source under the GPL-3.0 license, with no accounts, ads or telemetry."
   - q: "Do I have to use Desktop Mode every time?"
     a: "No. You need it to install Heronite, add it to Steam and log in to your stores. After that, stay in Gaming Mode."
   - q: "Can I add one game to Steam instead of the whole launcher?"
@@ -45,15 +43,15 @@ Heronite runs on Steam Deck because SteamOS is Linux. It is not Steam Deck Verif
 - A keyboard and mouse for the setup, or the Deck's touch screen and its on-screen keyboard (<kbd>Steam</kbd> + <kbd>X</kbd>).
 - Accounts for the stores you want to use.
 
-## Switch to Desktop Mode
+## Install Heronite in Desktop Mode
 
-Press the <kbd>Steam</kbd> button, open **Power**, and choose **Switch to Desktop**.
+1. Press the <kbd>Steam</kbd> button, open **Power**, and choose **Switch to Desktop**.
+2. In the desktop's browser, open the [download page](/download/) and get `Heronite-x86_64.AppImage`. It runs on SteamOS with no packages to install.
+3. Move it to a folder you can write to, such as `~/Applications`.
+4. Make it executable: in the file manager, right-click the file, choose **Properties**, open **Permissions** and tick **Is executable**.
+5. Start the AppImage.
 
-## Download and start the AppImage
-
-In the desktop's browser, open the [download page](/download/) and get `Heronite-x86_64.AppImage`. It runs on SteamOS with no packages to install.
-
-Move it to a folder you can write to, such as `~/Applications`, and make it executable. In the file manager, right-click the file, choose **Properties**, open **Permissions** and tick **Is executable**. Or use a terminal:
+Or do steps 3 to 5 in a terminal:
 
 ```bash
 mkdir -p ~/Applications
@@ -62,13 +60,17 @@ chmod +x ~/Applications/Heronite-x86_64.AppImage
 ~/Applications/Heronite-x86_64.AppImage
 ```
 
-On the first start Heronite adds the Steam games it finds, with no login. It also looks for emulators and ROM folders.
+On the first start, Heronite adds the Steam games it finds, with no login, and looks for emulators and ROM folders.
 
 ## Log in to Epic, GOG and Amazon Games
 
-Press <kbd>Ctrl</kbd> <kbd>4</kbd> to open **Stores** and log in to Epic Games, GOG or Amazon Games. Log in on the store's page in the window that opens, and use a keyboard to type your password. Your whole library then appears in the Collection.
+1. Press <kbd>Ctrl</kbd> <kbd>4</kbd> to open **Stores**.
+2. Choose **Epic Games**, **GOG** or **Amazon Games**, then its **Log in with** button, such as **Log in with GOG**.
+3. Log in on the store's page in the window that opens. Use a keyboard to type your password.
 
-Install a game or two now, while you have the desktop. You can pick the install folder, so the SD card works too. Each store has a guide: [Epic Games](/guides/epic-games-on-linux/), [GOG](/guides/gog-on-linux/) and [Amazon Games](/guides/amazon-games-on-linux/).
+The store's games then appear in your library. Install a game or two now, while you have the desktop. You can pick the install folder, so the SD card works too.
+
+Each store has a guide: [Epic Games](/guides/epic-games-on-linux/), [GOG](/guides/gog-on-linux/) and [Amazon Games](/guides/amazon-games-on-linux/).
 
 ## Add Heronite to Steam
 
@@ -82,15 +84,18 @@ Install a game or two now, while you have the desktop. You can pick the install 
 --console
 ```
 
-`--console` opens Heronite in console mode, the controller-first layout. Add `--fullscreen` too for a fullscreen window. Steam's menu names can change between updates. See [Command line and links](/docs/command-line-and-links/) for all the options.
+`--console` opens Heronite in console mode, the controller-first layout. Add `--fullscreen` for a fullscreen window. Steam's menu names can change between updates. See [Command line and links](/docs/command-line-and-links/) for all the options.
 
 ## Start Heronite in Gaming Mode
 
-Double-click the **Return to Gaming Mode** icon on the desktop. Heronite is in your library under non-Steam games. Start it to land on the console home screen, with a **Continue playing** shelf of your recent games. The **Library** tab holds every game.
+1. Double-click the **Return to Gaming Mode** icon on the desktop.
+2. Start Heronite from your Steam library, under non-Steam games.
+
+Heronite opens on the console home screen, with a **Continue playing** shelf of your recent games. The **Library** tab holds every game.
 
 ![Heronite console mode library: a grid of game covers with Show, Sort, Status and Search filters on top and Details, Install and Search hints along the bottom.](../../../assets/screenshots/console-library.webp)
 
-*The console library: one grid for every store, with controller hints along the bottom.*
+*The console library: every store in one grid, with controller hints.*
 
 The controls are the Deck's own buttons:
 
@@ -103,7 +108,7 @@ The controls are the Deck's own buttons:
 | D-pad, left stick | Move |
 | Menu button | Open the menu |
 
-Button pictures follow the controller, and Heronite knows the Steam Deck's. If the buttons do not react, check the controller layout Steam uses for the Heronite entry. The full list is in [Console mode](/docs/console-mode/).
+Button pictures follow the controller, and Heronite knows the Steam Deck's. The full list is in [Console mode](/docs/console-mode/).
 
 ## Install and play a game
 
@@ -111,17 +116,18 @@ Button pictures follow the controller, and Heronite knows the Steam Deck's. If t
 2. Choose a game and press X to install it.
 3. Press A on an installed game to open its page, then choose **Play**.
 
-To keep one game as its own entry in Steam, use **Add to Steam** in the game's actions. To open console mode without the launch option, turn on the startup or controller options in **Settings → Console mode**.
+To keep one game as its own entry in Steam, use **Add to Steam** in the game's actions. To open console mode without the launch option, turn on the startup or controller options in **Settings → Console mode**. The in-game overlay (beta) needs a Wayland session with layer-shell support, so read [Console mode](/docs/console-mode/) before you rely on it.
 
-## Limits on Steam Deck
+## Which games run well on Steam Deck?
 
-- Not every Windows game runs well through Proton. The game's details show its ProtonDB rating and anti-cheat status.
-- Some games need a lower FPS limit for the Deck's battery and screen. Set it per game in **Game settings**.
-- The in-game overlay (beta) needs a Wayland session with layer-shell support. Read [Console mode](/docs/console-mode/) before you rely on it.
+Not every Windows game runs well through Proton. Check the ProtonDB rating and anti-cheat status in the game's details before you install. A game may need another Proton build: see the [GE-Proton guide](/guides/install-ge-proton/).
 
-## Heronite won't start or update on Steam Deck
+Some games need a lower FPS limit for the Deck's battery and screen. Set it per game in **Game settings**.
+
+## Heronite won't start or respond on Steam Deck
 
 - **Heronite does not start.** Make sure the file is executable. Run it from a terminal to see any message.
 - **The AppImage does not update.** It replaces itself, so its folder must be writable. Move it to `~/Applications` or another folder in your home.
+- **The buttons do not react.** Check the controller layout Steam uses for the Heronite entry.
 
-For login and game problems, see [Troubleshooting](/docs/troubleshooting/). A game may need another Proton build: see the [GE-Proton guide](/guides/install-ge-proton/).
+For login and game problems, see [Troubleshooting](/docs/troubleshooting/).

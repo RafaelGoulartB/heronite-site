@@ -3,7 +3,7 @@ title: "Track Play Time and Gaming Statistics | Heronite"
 description: "Track play time on PC with statistics by week, month and year, a yearly backlog goal and a gaming year in review. For Linux and Windows."
 eyebrow: Play time tracking
 headline: "Track play time, gaming statistics and your year in review"
-lead: "Heronite is a game time tracker for Linux and Windows, with statistics by week, month and year, a backlog goal and a year in review."
+lead: "Heronite tracks play time for every game you launch from it, from any store, on Linux and Windows. It needs no setup and no account."
 navLabel: Play time tracking
 summary: "Every session recorded, statistics by week, month and year, a yearly backlog goal and a year in review you can share."
 order: 6
@@ -12,21 +12,19 @@ heroAlt: "Heronite's Statistics Overview for October 2026: 32h 56m time played, 
 og: /og/play-time-tracking.jpg
 updated: 2026-11-04
 highlights:
-  - title: Every session recorded
-    text: Nothing to set up and no account to create.
   - title: Week, month, year
     text: Total time, streaks and a day-by-day chart for each period.
   - title: A yearly backlog goal
     text: Set how many games to beat this year and track your pace.
   - title: Your year in review
     text: Full-screen stories of your year, ending in a card you can share.
+  - title: Screenshots with F10
+    text: Heronite files each capture under the game you are playing.
 faq:
-  - q: How do I track play time for PC games?
-    a: Launch your games from Heronite. Sessions show in **Statistics** (`Ctrl+6`) by week, month, year and all time, for every store.
-  - q: Can I get a gaming year in review, like Wrapped?
-    a: Yes. Type "Year in review" in the command palette (`Ctrl+K`). See [the stories](#how-do-i-open-my-gaming-year-in-review).
+  - q: Does Heronite track play time for emulated games?
+    a: Yes. Heronite records emulated games like any other game you launch from it.
   - q: Does Heronite work as a backlog tracker?
-    a: Yes. Set a yearly goal and mark games Plan to play, Playing, Beaten or Abandoned. See [the Backlog tab](#how-do-i-set-a-yearly-backlog-goal).
+    a: Yes. Mark games Plan to play, Playing, Beaten or Abandoned, and set a yearly goal for games beaten.
   - q: Is my play history sent anywhere?
     a: No. Heronite saves sessions as plain JSON files in its data folder on your PC. See [Files and folders](/docs/files-and-folders/).
   - q: Does Heronite import screenshots from other tools?
@@ -37,7 +35,7 @@ related:
   - /features/console-mode/
 ---
 
-Heronite records a session each time you launch a game from it. Play time shows under each cover, in a game's details and on its timeline, for every game in your [library](/features/game-library/).
+Play time shows under each cover, in a game's details, on its timeline and on its console mode page.
 
 Heronite saves everything on your PC as plain JSON files, with no telemetry. To back it up, see [saves and backups](/features/saves-and-backups/).
 
@@ -45,36 +43,35 @@ Heronite saves everything on your PC as plain JSON files, with no telemetry. To 
 
 Open **Statistics** with <kbd>Ctrl</kbd> <kbd>6</kbd>. Pick **Week**, **Month**, **Year** or **All time** at the top, and use the arrows to change period. The **Overview** tab shows:
 
-- total time played, compared with the period before,
-- days played, your play streak and the number of sessions,
-- your busiest day and your top games,
-- a **day-by-day chart** where each colour is a different game.
+- Total time played, compared with the period before
+- Days played, your play streak and the number of sessions
+- Your busiest day and your top games
+- A **day-by-day chart** where each colour is a different game
 
-Four more tabs sit next to it:
+The other tabs:
 
 - **Journeys** shows your games over time and which ones you played at the same time.
 - **Backlog** follows your goal and the games you beat.
 - **Discoveries** points out things like going back to an old game after months away.
 - **Album** collects the screenshots you took.
 
-Console mode shows play time on each game's page. See [console mode](/features/console-mode/).
-
 ## How do I set a yearly backlog goal?
 
-Open the **Backlog** tab and set a goal for the year with the minus and plus buttons. A progress ring shows how many games you have beaten, whether you are on track and what pace you need.
+1. Open **Statistics** (<kbd>Ctrl</kbd> <kbd>6</kbd>) and its **Backlog** tab.
+2. Set a goal for the year with the minus and plus buttons.
+
+A progress ring shows how many games you have beaten, whether you are on track and what pace you need. Heronite compares your hours with **[How Long To Beat](https://howlongtobeat.com)**.
 
 ![Heronite's Backlog tab for 2026: 9 games beaten, a ring showing 9 of the goal of 12, a timeline of beaten and abandoned games along the months, and a bar of every status in the whole Collection.](../../../assets/screenshots/stats-backlog.webp)
 
-*The Backlog tab: a goal ring, a timeline of beaten games and a bar of every status.*
+*The Backlog tab with its goal ring and timeline of beaten games.*
 
-Beneath the ring you get:
+Beneath the ring:
 
-- a timeline of the year, with beaten games above the line and abandoned ones below,
-- the hours you put into games you beat and into games you abandoned,
-- how many days it takes you to go from first session to beaten (the median),
-- your Plan to play queue and how long it would take at your usual pace.
-
-Heronite compares your hours with **[How Long To Beat](https://howlongtobeat.com)**.
+- A timeline of the year, with beaten games above the line and abandoned ones below
+- The hours you put into games you beat and into games you abandoned
+- How many days you take from first session to beaten (the median)
+- Your Plan to play queue and how long it would take at your usual pace
 
 ## How do I open my gaming year in review?
 
@@ -84,13 +81,11 @@ Open the banner on the **Statistics** page, or press <kbd>Ctrl</kbd> <kbd>K</kbd
 
 *The first story, over a wall of covers.*
 
-The stories cover your busiest month, longest streak, longest break and game of the year. The last ones show when you usually play, then a wrap-up.
+The stories cover your busiest month, longest streak, longest break and game of the year. The last ones show when you usually play, then a wrap-up. **Copy summary** copies a short text of your year to post anywhere.
 
 ![The last year in review story, That is a wrap, with the number of screenshots taken, the list of games beaten and a shareable card with total hours and the top three games.](../../../assets/screenshots/year-in-review-wrap.webp)
 
 *The last story ends with a card for your year, ready to share.*
-
-**Copy summary** copies a short text of your year to post anywhere.
 
 ## How do I add notes and screenshots to my play history?
 

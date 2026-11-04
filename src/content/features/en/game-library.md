@@ -12,21 +12,21 @@ heroAlt: "Heronite's Collection: game covers grouped into Playing and On Going w
 og: /og/game-library.jpg
 updated: 2026-11-04
 highlights:
-  - title: One list, every source
-    text: Stores, emulators and loose games sit side by side.
   - title: Grouped your way
     text: Group by status, store, genre or series, as a list or a grid.
   - title: Saved views
     text: Keep filters and sorting as presets like Playing now, Backlog or Finished.
   - title: Find anything fast
     text: Search forgives typos, and Ctrl+K opens any game, page or action.
+  - title: A journal for each game
+    text: Write notes on the same timeline as your play sessions.
 faq:
-  - q: Is there a Linux library manager for Steam, Epic and GOG together?
-    a: Yes. Steam needs no login. Log in to Epic Games, GOG or Amazon Games on the **Stores** page and their libraries join the Collection. See [the list](#how-do-i-get-all-my-games-into-one-collection).
+  - q: Can I use Heronite on the Steam Deck?
+    a: Yes. Heronite runs on SteamOS as an AppImage. The [Steam Deck guide](/guides/steam-deck/) has the setup.
   - q: Does importing from Heroic or Lutris change their files?
-    a: No. Heronite imports and syncs games from Heroic, Lutris, Bottles and Faugus, and never writes to their files.
+    a: No. Heronite only reads their files and never writes to them.
   - q: Does Heronite find cover art for emulated games?
-    a: Yes. Every game added from a ROM folder gets art. See [where covers come from](#where-do-covers-and-game-details-come-from).
+    a: Yes. Every game added from a ROM folder gets art. A free SteamGridDB key adds community covers.
   - q: Can I undo a bulk edit?
     a: Yes. Press `Ctrl+Z` to undo the last change.
 related:
@@ -39,18 +39,19 @@ related:
 
 - **Steam:** Heronite reads your [Steam](/features/stores/) libraries with no login.
 - **Epic Games, GOG and Amazon Games:** log in on the **Stores** page and the whole library comes in, installed or not.
-- **Battle.net, EA app, Ubisoft Connect and Rockstar Games (Linux):** each store app runs in its own Wine prefix, and the games you install show up.
+- **Battle.net, EA app, Ubisoft Connect and Rockstar Games:** the games you install in each store app show up. On Linux, the store app runs in its own Wine prefix (a separate Windows folder).
+- **Microsoft Store and PC Game Pass (Windows):** the games the Xbox app installed come in with no login.
 - **Emulators:** Heronite [detects them](/features/emulation/) and scans your ROM folders.
-- **Other launchers (Linux):** Heroic, Lutris, Bottles and Faugus games come in and stay in sync.
+- **Other launchers:** Heroic, Lutris, Bottles and Faugus games on Linux, and Playnite games on Windows, come in and stay in sync.
 
 ## How do I add a game that is not from a store?
 
 Press <kbd>Ctrl</kbd> <kbd>N</kbd> (or **Add a game**) to add:
 
-- a Windows program (`.exe`), which on Linux runs through [Wine or Proton](/features/wine-and-proton/),
-- a native Linux program, an AppImage or a start script,
-- a browser game, by its web address,
-- a ROM, or a whole ROM folder.
+- A Windows program (`.exe`), run through [Wine or Proton](/features/wine-and-proton/) on Linux
+- A native Linux program, an AppImage or a start script
+- A browser game, by its web address
+- A ROM, or a whole ROM folder
 
 To add many games at once, point Heronite at a folder.
 
@@ -64,11 +65,11 @@ To add many games at once, point Heronite at a folder.
 
 On either layout, group games by:
 
-- status (Playing, On going, Plan to play, Finished and more),
-- store,
-- genre,
-- series,
-- release year, and other fields.
+- Status, such as Playing, On going, Plan to play or Finished
+- Store
+- Genre
+- Series
+- Release year or another field
 
 Save filters and sorting as **views**, such as *Playing now*, *Backlog*, *Finished* or *Favourites*.
 
@@ -94,10 +95,10 @@ The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any 
 
 Covers, backgrounds and logos come from the stores and from Steam and Lutris metadata. So do descriptions and release dates. Two optional free keys add more:
 
-- [SteamGridDB](https://www.steamgriddb.com) for community covers, good for emulated and DRM-free games,
-- [IGDB](https://www.igdb.com) for descriptions, genres and series.
+- [SteamGridDB](https://www.steamgriddb.com) for community covers, good for emulated and DRM-free games
+- [IGDB](https://www.igdb.com) for descriptions, genres and series
 
-Each game shows **How Long To Beat** times, **ProtonDB** ratings on Linux, **anti-cheat status** from Are We Anti-Cheat Yet? and **achievements** from Steam and RetroAchievements. Set up the keys in [Metadata and art](/docs/metadata-and-art/).
+Each game shows **How Long To Beat** times, **ProtonDB** ratings on Linux, **anti-cheat status** from Are We Anti-Cheat Yet? and **achievements** from Steam and RetroAchievements. Add the keys in **Settings → Metadata**; [Metadata and art](/docs/metadata-and-art/) has the steps.
 
 ## Can I keep notes on a game?
 

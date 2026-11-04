@@ -14,21 +14,19 @@ updated: 2026-11-04
 highlights:
   - title: About 215 ms
     text: Median time from start to your library on screen.
-  - title: About 190 MB idle
-    text: One process, and about 95 MB when closed to the tray.
   - title: About 0.1% CPU
     text: Measured at idle as 0.05 s of CPU time over 60 s.
-  - title: 64 MB install
-    text: The app and the store login helper, with no browser engine.
+  - title: Portable on Windows
+    text: One folder you can carry on a USB drive, with no registry writes.
+  - title: Background work off
+    text: Environment variables turn off the tray, animations and update checks.
 faq:
   - q: What is the lightest game launcher for Linux and Windows?
-    a: Heronite is built to be light. It is a single native process with no bundled browser, and the install is 64 MB.
-  - q: Does Heronite use Electron?
-    a: No. Heronite is written in Rust and drawn on the GPU with GPUI, with no bundled browser engine. See [what "no Electron" means](#what-does-no-electron-mean-for-me).
-  - q: How fast does Heronite start?
-    a: About 215 ms from start to your library on screen (median).
-  - q: How much memory does Heronite use?
-    a: About 190 MB while idle, in a single process, and about 95 MB when closed to the tray. CPU use at idle is about 0.1%.
+    a: Heronite is built to be light. It idles at about 190 MB in one process and installs in 64 MB.
+  - q: Does Heronite run on the Steam Deck?
+    a: Yes. Heronite runs on SteamOS as an AppImage. The [Steam Deck guide](/guides/steam-deck/) has the setup.
+  - q: Does Heronite collect telemetry?
+    a: No. Heronite has no accounts, ads or telemetry. It is free and open source under the GPL-3.0 license.
 related:
   - /features/game-library/
   - /features/console-mode/
@@ -43,7 +41,7 @@ related:
 | Memory while idle | about 190 MB in a single process |
 | Memory closed to the tray | about 95 MB |
 | CPU while idle | about 0.1% (0.05 s of CPU time over 60 s) |
-| Install size | 64 MB (app and store login helper) |
+| Install size | 64 MB |
 
 ## What does "no Electron" mean for me?
 
@@ -61,7 +59,7 @@ Two parts: the app and the store login helper. The helper is a small separate pr
 
 ## Is console mode light too?
 
-Yes. Console mode loads nothing until you turn it on. You can set it to open at startup or when a controller connects. See [console mode](/features/console-mode/).
+Yes. Console mode loads nothing until you turn it on. In **Settings → Console mode**, you can set it to open at startup or when a controller connects. See [console mode](/features/console-mode/).
 
 ## Can I carry Heronite on a USB drive?
 
@@ -84,4 +82,4 @@ Heronite runs on Linux (any distribution, x86_64) and Windows 10 and 11 (x86_64)
 
 If the window does not open or is black, run `vulkaninfo` and check that it lists your GPU. See [Troubleshooting](/docs/troubleshooting/) and [Installation](/docs/installation/).
 
-Heronite is free and open source under the GPL-3.0 license, with no accounts, ads or telemetry. [Download Heronite](/download/) to try it.
+Next: [download Heronite](/download/).

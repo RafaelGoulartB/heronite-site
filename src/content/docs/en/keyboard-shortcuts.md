@@ -65,8 +65,8 @@ Press <kbd>?</kbd> in Heronite to see every keyboard shortcut.
 
 | Keys | Action |
 |---|---|
-| <kbd>F10</kbd> | Screenshot (can be changed in Settings → Screenshots) |
+| <kbd>F10</kbd> | Screenshot (change it in **Settings → Screenshots**) |
 | <kbd>Super</kbd> <kbd>G</kbd> | In-game overlay (Linux, beta) |
 | <kbd>Shift</kbd> <kbd>F3</kbd> | Epic's overlay, in games that use it |
 
-For console mode and controller buttons, see [Console Mode](/docs/console-mode/).
+For console mode and controller buttons, see [Console mode](/docs/console-mode/).

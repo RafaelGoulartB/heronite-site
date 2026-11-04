@@ -1,13 +1,13 @@
 ---
 title: "Stores and launchers: Steam, Epic, GOG and more"
 navLabel: "Stores and launchers"
-description: "How Heronite handles Steam, Epic Games, GOG, Amazon Games, Battle.net, EA app, Ubisoft Connect, Rockstar, Heroic, Lutris, Bottles and Faugus."
+description: "How Heronite handles Steam, Epic Games, GOG, Amazon Games, Battle.net, EA app, Ubisoft, Rockstar, the Microsoft Store, Heroic, Lutris and Playnite."
 section: Guides
 order: 1
 updated: 2026-11-04
 ---
 
-Heronite puts your Steam, Epic Games, GOG, Amazon Games and other launcher games into one library.
+Heronite puts your games from Steam, Epic Games, GOG, Amazon Games, store apps and other launchers into one library.
 
 ## Add your Steam games
 
@@ -20,9 +20,20 @@ Steam starts its games. On Windows, Heronite can run scripts and programs, like 
 
 ## Log in to Epic Games, GOG, and Amazon Games
 
-Log in from the **Stores** page (<kbd>Ctrl</kbd> <kbd>4</kbd>). One download queue installs, updates, and repairs games, and moves, imports, or uninstalls them. Downloads pause when you are offline, and Heronite retries failed ones.
+1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Pick **Epic Games**, **GOG** or **Amazon Games**.
+3. Press **Log in**. A small window opens with the store's own page (WebKitGTK on Linux, WebView2 on Windows).
+4. Log in there.
 
-Heronite downloads the same open source tools as Heroic:
+If the window does not open, use **Or log in with your browser** on the same page:
+
+1. Press **Open in browser** and log in.
+2. Copy the address or code shown at the end.
+3. Paste it under **2. Paste the code** and press **Log in**.
+
+**Downloads.** One download queue installs, updates and repairs games. It can also move, import or uninstall them. Downloads pause when you are offline, Heronite retries failed ones, and it checks for game updates every 3 hours.
+
+**Store tools.** Heronite downloads the same open source tools as Heroic:
 
 | Store | Tool |
 |---|---|
@@ -30,30 +41,40 @@ Heronite downloads the same open source tools as Heroic:
 | GOG | [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl) |
 | Amazon Games | [nile](https://github.com/imLinguin/nile) |
 
-**Login window.** Logging in opens a small window with the store's own page (WebKitGTK on Linux, WebView2 on Windows). If it does not open, use the **browser method** on the login page: log in in your browser and paste the address or code shown at the end.
-
 **Games you already installed (Windows).** Heronite imports games installed by the Epic Games Launcher, GOG Galaxy, or the Amazon Games app, without downloading them again.
 
-Heronite checks for game updates every 3 hours.
+## Use Battle.net, EA app, Ubisoft Connect, and Rockstar Games
 
-## Use Battle.net, EA app, Ubisoft Connect, and Rockstar Games (Linux)
+On Linux, Heronite installs each store app in its own Wine prefix (a separate Windows folder), `~/Games/Heronite/Prefixes/<store>`. On Windows, the store app runs as it is, with no Wine.
 
-Heronite installs each store app in its own Wine prefix, `~/Games/Heronite/Prefixes/<store>`. Log in and install games in that app. They appear in your library and start from there.
+1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>) and pick the store app.
+2. Press **Set up** with the app's name, like **Set up Battle.net**. Heronite downloads the official installer and runs it. On Linux it installs the app with your default Proton, which takes about 5 minutes. On Windows, Windows may ask you to allow it.
+3. Press **Open** with the app's name, and log in there.
+4. Install games in the store app. They appear in your library and start from there.
 
-On Windows, use each store's app for now.
+On Windows, Heronite uses a store app that is already installed as it is.
 
-## Import games from Heroic, Lutris, Bottles, and Faugus (Linux)
+## Add Microsoft Store and PC Game Pass games (Windows)
 
-Heronite imports games from these launchers and keeps them in sync. Each can be a normal install or a Flatpak:
+Heronite finds the games the Xbox app and the Microsoft Store installed, bought or from PC Game Pass, and adds them by itself. There is no login: install and update them in the Xbox app, and Heronite starts them and counts their play time.
+
+Heronite reads them a few seconds after it starts and every ten minutes. To read them now, press **Read games now** on **Stores → Xbox**, or the Collection's refresh button. Uninstall these games in the Xbox app.
+
+## Import games from Heroic, Lutris, Bottles, Faugus, and Playnite
+
+Turn on a launcher in **Settings → Other launchers** with **Bring its games in**. Heronite then keeps its games in sync. On Linux, each launcher can be a normal install or a Flatpak:
 
 | Launcher | What comes in |
 |---|---|
-| Heroic | Games you added by hand, and your installed Epic, GOG, and Amazon games |
-| Lutris | Games from its library (`pga.db`) |
-| Bottles | Programs of each bottle |
-| Faugus | Games from its list |
+| Heroic (Linux) | Games you added by hand, and your installed Epic, GOG, and Amazon games |
+| Lutris (Linux) | Games from its library (`pga.db`) |
+| Bottles (Linux) | Programs of each bottle |
+| Faugus (Linux) | Games from its list |
+| Playnite (Windows) | Installed games that are not hidden, with covers and play time |
 
-Heronite skips their Steam games, which come in through the Steam import, so nothing shows up twice. It only reads the other launchers' files.
+Close Playnite before you turn its import on: while it runs, it holds its library open and Heronite reads nothing. Playnite keeps starting its games.
+
+Heronite skips their Steam games, which come in through the Steam import, so nothing shows up twice. It only reads the other launchers' files, so they keep working.
 
 ## Add games you already have
 

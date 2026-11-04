@@ -13,7 +13,7 @@ og: /og/emulation.jpg
 updated: 2026-11-04
 highlights:
   - title: 17 emulators detected
-    text: Add any other emulator with its program and arguments.
+    text: RetroArch, Dolphin, PCSX2, Ryujinx and more, found on PATH or as Flatpaks.
   - title: Scans for ROMs
     text: Point it at your ROM folders and every game gets art.
   - title: Multi-disc, merged
@@ -22,9 +22,9 @@ highlights:
     text: Connect a RetroAchievements account to see your progress for emulated games.
 faq:
   - q: What is the best ROM launcher for Linux?
-    a: It depends on what you need. Heronite fits if you want emulated games next to your Steam, Epic and GOG games. It is free and open source.
+    a: It depends on your needs. Heronite fits if you want emulated games next to your Steam, Epic and GOG games. It is free and open source.
   - q: Is there a RetroArch frontend for Linux and Windows?
-    a: Yes. Heronite picks a default core for each system. See [default cores](#which-retroarch-core-does-heronite-use-for-each-system).
+    a: Yes. Heronite finds RetroArch and its cores, and picks a default core for each system.
   - q: Does Heronite include emulators or ROMs?
     a: No. You install the emulators and bring your ROMs.
   - q: Can I use an emulator that is not on the list?
@@ -43,7 +43,10 @@ Emulated games join the same library as your PC games, with play time and a time
 2. Install the emulators you want.
 3. Put your ROMs in one subfolder per system.
 4. Open the **Emulators** page (<kbd>Ctrl</kbd> <kbd>5</kbd>).
-5. Press detect to find your emulators, then scan your ROM folders.
+5. Choose **Detect emulators…** to find the ones installed on your PC.
+6. Press **Add ROM folder**, then pick the emulator and the folder with its ROMs.
+
+Heronite scans the folder and adds its games. **Scan all folders now** picks up games you add later.
 
 ## Which emulators does Heronite support?
 
@@ -110,9 +113,9 @@ ROMs/
 └── gba/
 ```
 
-On the first run, Heronite scans the usual places if they exist. On Linux that includes `ROMs`, `Emulation/roms` and `Games/ROMs` in your home folder, plus `retrodeck/roms` for RetroDECK. On Windows it checks folders like `ROMs`, `Emulation\roms` and `Games\ROMs` in your user folder and at the top of each drive. See [ROM folders](/docs/emulation/#rom-folders).
+On the first start, Heronite scans common ROM folders if they exist. On Linux these include `ROMs`, `Emulation/roms` and `Games/ROMs` in your home folder, plus `retrodeck/roms` for RetroDECK. On Windows they include `ROMs`, `Emulation\roms` and `Games\ROMs` in your user folder and at the top of each drive.
 
-To add more, add a ROM folder on the **Emulators** page. Scans skip folders named `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` and `manuals`.
+[ROM folders](/docs/emulation/#rom-folders) has the full list. Scans skip folders named `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` and `manuals`.
 
 ## How are multi-disc games and save states handled?
 
@@ -120,7 +123,7 @@ Games read from `.m3u`, `.cue` and `.gdi` files show up once in your library ins
 
 ## Do emulated games get covers and achievements?
 
-Yes. Every game added from a ROM folder gets art like any other game. [SteamGridDB](https://www.steamgriddb.com) covers suit emulated games well. Add its optional free key in Settings, as described in [Metadata and art](/docs/metadata-and-art/).
+Yes. Every game added from a ROM folder gets art like any other game. [SteamGridDB](https://www.steamgriddb.com) covers suit emulated games well. Add its optional free key in **Settings → Metadata**, as [Metadata and art](/docs/metadata-and-art/) describes.
 
 For achievements, connect a [RetroAchievements](https://retroachievements.org) account in Settings.
 

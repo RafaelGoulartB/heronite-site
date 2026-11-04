@@ -9,29 +9,38 @@ updated: 2026-11-04
 
 Heronite builds your game library from Steam, your emulators, and the stores you log in to. [Install Heronite](/docs/installation/) first, on Linux or Windows.
 
-## What Heronite adds to your library on the first run
+## What Heronite adds to your library on the first start
 
-With an empty library, Heronite adds these at the first start:
+If your library is empty, Heronite adds:
 
 - **Steam:** your installed Steam games, no login needed.
-- **Emulators and ROMs:** Heronite detects installed emulators and scans common ROM folders, like `~/ROMs` or `~/Emulation/roms`. See [Emulation](/docs/emulation/).
+- **Emulators and ROMs:** the emulators it detects, and the ROMs in common folders like `~/ROMs` or `~/Emulation/roms`. See [Emulation](/docs/emulation/).
+
+On Linux, the empty library also shows **Bring in from another launcher** when it finds games in Heroic, Lutris, Bottles or Faugus. Click a launcher there to import its games and keep them in sync.
+
+On Windows, the Microsoft Store and PC Game Pass games the Xbox app installed come in by themselves, with no login.
 
 ## Log in to Epic Games, GOG, or Amazon Games
 
-Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>) and log in. A small login window opens with the store's own page. If it cannot open, use the browser method on the same page: log in in your browser and paste the address or code it gives you.
+1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Pick **Epic Games**, **GOG** or **Amazon Games**.
+3. Press **Log in**.
+4. Log in on the store's page in the window that opens.
 
-See [Stores and launchers](/docs/stores-and-launchers/).
+If the window cannot open, use **Or log in with your browser** on the same page: log in in your browser, then paste the address or code it gives you. See [Stores and launchers](/docs/stores-and-launchers/).
+
+On Windows, Heronite also picks up games installed by the Epic Games Launcher, GOG Galaxy or the Amazon Games app, without downloading them again.
 
 ## Add other games to your library
 
 Press <kbd>Ctrl</kbd> <kbd>N</kbd> (or **Add a game**) to add:
 
-- a Windows program (`.exe`), which on Linux runs through Wine or Proton,
-- a native Linux program, AppImage, or start script,
-- a browser game (a web address),
-- a ROM, or a whole ROM folder.
+- A Windows program (`.exe`), which runs through Wine or Proton on Linux
+- A native Linux program, AppImage or start script
+- A browser game (a web address)
+- A ROM, or a whole ROM folder
 
-You can also point at a folder and add every game found in it at once.
+To add every game in a folder at once, point at the folder instead.
 
 ## Open any page with a shortcut
 
@@ -50,13 +59,15 @@ The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any 
 ## Organize your game library
 
 - Switch between **Focus** (a list with a details panel) and a **grid** of covers.
-- **Group** by status, store, genre, series, year, and more.
+- **Group** by status, store, genre, series, year and more.
 - Save **views** with your filters and sorting (Playing now, Backlog, Finished, Favourites).
 - Select several games (<kbd>Space</kbd>, <kbd>Shift</kbd> + arrows, <kbd>Ctrl</kbd> <kbd>A</kbd>) and press <kbd>F3</kbd> to change them all at once. <kbd>Ctrl</kbd> <kbd>Z</kbd> undoes it.
 
 ## Play a game and take screenshots
 
-Press <kbd>Enter</kbd> on a game to play it (or install it). Heronite records each session, matches screenshots to the game, and shows it all in **Statistics**. Take a screenshot while playing with <kbd>F10</kbd>.
+1. Select a game and press <kbd>Enter</kbd> to play it, or to install it first.
+2. Press <kbd>F10</kbd> while playing to take a screenshot.
+3. Open **Statistics** (<kbd>Ctrl</kbd> <kbd>6</kbd>) to see your sessions. Heronite records each one and matches your screenshots to the game.
 
 ## Use a controller (console mode)
 
