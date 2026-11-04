@@ -70,8 +70,8 @@ const starLabel = (count: string) => text.nav.starLabel.replace('{count}', count
   const show = (count: number) => {
     const lang = document.documentElement.lang || 'en';
     const text = new Intl.NumberFormat(lang, { notation: 'compact', maximumFractionDigits: 1 }).format(count);
+    document.querySelectorAll('[data-stars]').forEach((count) => (count.textContent = text));
     document.querySelectorAll<HTMLAnchorElement>('a[data-stars-label]').forEach((link) => {
-      link.querySelector('[data-stars]')!.textContent = text;
       link.setAttribute('aria-label', link.dataset.starsLabel!.replace('{count}', text));
     });
   };

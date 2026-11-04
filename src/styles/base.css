@@ -14,7 +14,7 @@
   --wrap:1312px;
   --head:"Rubik",system-ui,sans-serif;
   --body:"Cabin",system-ui,sans-serif;
-  --mono:ui-monospace,"JetBrains Mono","Cascadia Code","Fira Code",Menlo,Consolas,monospace;
+  --mono:"JetBrains Mono",ui-monospace,"Cascadia Code","Fira Code",Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip;scroll-padding-top:88px}
@@ -179,7 +179,7 @@ footer .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px
   .head .lead{justify-self:start;font-size:16px}
   .scene{padding:52px 0}
   .dl{grid-template-columns:1fr}
-  .brand span{display:none}
+  .nav .brand span{display:none}
   .os{padding:24px 20px}
   .btn{height:46px;padding:0 20px}
   .cta{grid-template-columns:1fr;padding:28px 22px}
