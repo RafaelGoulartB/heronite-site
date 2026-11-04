@@ -165,7 +165,8 @@ const ptBr: Dict = {
     pauseMotion: 'Pausar animação',
     playMotion: 'Retomar animação',
     sources: 'Roda jogos de',
-    sourcesMore: 'e emuladores, e seus próprios jogos',
+    sourcesMore: 'Todas as lojas e launchers',
+    emulators: { title: 'Emuladores', note: 'RetroArch, PCSX2, Dolphin, RPCS3 e mais 13, além de qualquer jogo que você adicionar.' },
     sourceGroups: [{ label: 'Sem login.', note: 'As bibliotecas da Steam são lidas para você.' }, { label: 'Entre uma vez.', note: 'Instale, atualize e jogue pelo Heronite.' }, { label: 'Prefixo próprio do Wine.', note: 'Cada launcher roda no seu próprio prefixo no Linux.' }],
     sourcesFoot: 'Seus logins ficam no seu PC.',
     collection: {

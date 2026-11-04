@@ -61,7 +61,7 @@
 .sources{padding:44px 0 8px}
 .sources h2{margin-bottom:18px;font:600 12px/1 var(--head);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 /* three groups, one per way a store gets into the library; the widths follow the number of stores */
-.src-groups{display:grid;grid-template-columns:minmax(230px,1.3fr) 3fr 4fr;margin:0;padding:0;list-style:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.src-groups{display:grid;grid-template-columns:minmax(200px,1.1fr) 2.4fr 3.4fr minmax(220px,1.6fr);margin:0;padding:0;list-style:none;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .src-groups > li{display:flex;flex-direction:column;gap:14px;padding:20px 24px 22px;border-left:1px solid var(--line)}
 .src-groups > li:first-child{border-left:0;padding-left:0}
 .src-logos{display:flex;flex-wrap:wrap;gap:14px 22px;margin:0;padding:0;list-style:none}
@@ -101,7 +101,7 @@
 /* the last one lies on its side: the screen on the left, the words on the right */
 
 /* ---------- history: the year in review leads, the heading sits beside it ---------- */
-.hist{display:grid;gap:16px;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto 250px 270px;
+.hist{display:grid;gap:16px;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto 250px 380px;
   grid-template-areas:
     "yir yir yir yir yir head head head head head head head"
     "yir yir yir yir yir num num num goal goal goal goal"
@@ -207,7 +207,7 @@
 /* ---------- guides ---------- */
 .guides{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:40px 64px;align-items:start}
 .guides-head .h2,.sec-switch .h2,.sec-dl .h2{font-size:clamp(28px,2.8vw,38px);line-height:1.1;letter-spacing:-.02em}
-.sec p,.sec figcaption,.cons-facts span{text-wrap:pretty}
+.sec p,.sec figcaption,.cons-facts span,.sw-line span,.src-groups p{text-wrap:pretty}
 .guide-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px;margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
 .guide-list a{display:flex;align-items:center;gap:14px;padding:17px 4px;border-bottom:1px solid var(--line);text-decoration:none;font:500 16.5px/1.3 var(--head);color:var(--text)}
 .g-ico{display:grid;place-items:center;width:34px;height:34px;flex:none;border-radius:9px;background:var(--surface-2);border:1px solid var(--line);color:var(--soft)}

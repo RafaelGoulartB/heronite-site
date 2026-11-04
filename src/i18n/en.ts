@@ -167,7 +167,8 @@ const en = {
     pauseMotion: 'Pause motion',
     playMotion: 'Play motion',
     sources: 'Plays games from',
-    sourcesMore: 'and emulators, and your own games',
+    sourcesMore: 'All stores and launchers',
+    emulators: { title: 'Emulators', note: 'RetroArch, PCSX2, Dolphin, RPCS3 and 13 more, plus any game you add.' },
     sourceGroups: [{ label: 'No login.', note: 'Steam libraries are read for you.' }, { label: 'Log in once.', note: 'Install, update and play from Heronite.' }, { label: 'Own Wine prefix.', note: 'Each launcher runs in its own prefix on Linux.' }],
     sourcesFoot: 'Your logins stay on your PC.',
     collection: {
