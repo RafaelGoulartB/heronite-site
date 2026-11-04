@@ -147,7 +147,7 @@ const ptBr: Dict = {
       'Backup de saves com Ludusavi',
     ],
     wallLabel: 'Um mural de capas de jogos de uma biblioteca do Heronite, recortado das capturas de tela do próprio app',
-    headlineHtml: 'Feche os outros<br> launchers.',
+    headlineHtml: 'Todos os<br> seus jogos.<br> Um só launcher.',
     lead: 'Steam, Epic, GOG, Amazon, Battle.net, emuladores e mais, em um app nativo e rápido para Linux, Steam Deck e Windows. Grátis e open source, sem conta e sem telemetria.',
     downloadFree: 'Baixar grátis',
     downloadWindows: 'Baixar para Windows',

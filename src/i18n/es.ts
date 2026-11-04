@@ -147,7 +147,7 @@ const es: Dict = {
       'Copias de partidas con Ludusavi',
     ],
     wallLabel: 'Un mural de portadas de juegos de una biblioteca de Heronite, recortado de las capturas de la propia app',
-    headlineHtml: 'Cierra los otros<br> lanzadores.',
+    headlineHtml: 'Todos<br> tus juegos.<br> Un solo lanzador.',
     lead: 'Steam, Epic, GOG, Amazon, Battle.net, emuladores y más, en una app nativa y rápida para Linux, Steam Deck y Windows. Gratis y de código abierto, sin cuenta y sin telemetría.',
     downloadFree: 'Descargar gratis',
     downloadWindows: 'Descargar para Windows',
