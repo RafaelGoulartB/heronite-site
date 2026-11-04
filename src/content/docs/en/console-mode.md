@@ -1,22 +1,22 @@
 ---
-title: "Console mode"
-description: "Heronite console mode: how to turn it on, controller and keyboard buttons, layouts and themes, sharing themes, and the in-game overlay on Linux."
+title: "Console mode: use Heronite with a controller on a TV"
+description: "Heronite console mode: turn it on, controller and keyboard buttons, layouts and themes, sharing themes and the in-game overlay on Linux."
 section: Guides
 order: 4
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-A controller-first layout for the couch or a TV, with an on-screen keyboard and a Power menu.
+Console mode is a controller-first layout for the couch or a TV, with an on-screen keyboard and a Power menu.
 
-## Turning it on
+## Turn on console mode
 
 - From the command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>) or the ☰ menu.
 - Start Heronite with `--console` (for example in a Steam shortcut or a gaming session).
 - In **Settings → Console mode**, make it open at startup or when a controller connects (off, ask, or on).
 
-Nothing of console mode loads while it is off.
+Console mode loads nothing while it is off.
 
-## Controller
+## Controller buttons
 
 | Button | Action |
 |---|---|
@@ -43,7 +43,7 @@ Swap A and B in the theme's controls if you prefer the Nintendo layout. Button p
 | <kbd>M</kbd> or <kbd>F1</kbd> | Start (menu) |
 | <kbd>Tab</kbd> | Select |
 
-## Themes
+## Change layouts and themes
 
 Change every part of console mode, live from the couch or in **Settings → Console mode**:
 
@@ -53,13 +53,13 @@ Change every part of console mode, live from the couch or in **Settings → Cons
 
 Seven themes come built in: Minimal, Classic, Cinema, Pulse, Arcade, Hub, and Living room.
 
-### Sharing themes
+### Share a theme
 
 Export a theme to a `.heronite-theme.json` file and import it on any PC. The background picture goes inside the file. Share yours in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions).
 
-The file format is described in [Console Theme Format](/docs/console-theme-format/).
+The file format is described in [Console theme format](/docs/console-theme-format/).
 
-## In-game overlay (beta, Linux)
+## Open the in-game overlay (beta, Linux)
 
 With the overlay turned on, the controller's Guide button opens a panel over the game with volume, microphone, FPS limit, screenshots, and journal notes.
 

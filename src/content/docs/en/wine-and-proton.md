@@ -1,15 +1,15 @@
 ---
-title: "Wine and Proton on Linux"
+title: "Wine and Proton on Linux: run Windows games"
 navLabel: "Wine and Proton"
-description: "Run Windows games on Linux with Heronite: the Wine Manager, Proton builds, prefixes, per-game options like DXVK and gamescope, the sandbox and anti-cheat."
+description: "Run Windows games on Linux with Heronite: Wine Manager, Proton builds, prefixes, per-game options like DXVK and gamescope, sandbox and anti-cheat."
 section: Guides
 order: 3
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
 On Linux, Windows games run through Wine or Proton. Heronite picks sensible defaults; every option below can be changed per game in **Game settings → Compatibility**, or for all games in Settings.
 
-## Wine Manager
+## Download Proton builds in the Wine Manager
 
 The Wine Manager (<kbd>Ctrl</kbd> <kbd>3</kbd>) downloads and updates these builds:
 
@@ -22,7 +22,7 @@ The Wine Manager (<kbd>Ctrl</kbd> <kbd>3</kbd>) downloads and updates these buil
 
 Builds go to Heronite's data folder (`~/.local/share/heronite/tools/proton` and `tools/wine`), or to Steam's `compatibilitytools.d` if you turn that on, so Steam can use them too. Heronite also finds the Proton builds already in your Steam libraries and the Wine runners of Lutris.
 
-## Prefixes
+## Where games and Wine prefixes are stored
 
 A prefix is the fake Windows folder a game runs in. By default:
 
@@ -52,9 +52,9 @@ The Wine Manager lists your prefixes, and a game's settings have buttons for Win
 
 Run a game you do not trust through [bubblewrap](https://github.com/containers/bubblewrap): no network and no access to your home folder. Let one thing through (like a folder or the network) when the game needs it. Needs `bwrap` installed.
 
-## When a game does not start
+## A Windows game won't start
 
-Heronite reads the launch log and suggests a fix when it recognises the problem: a missing DLL or .NET, a DirectX 12 game without VKD3D-Proton, a missing 32-bit Vulkan driver, a low `vm.max_map_count`, another `wineserver` still running, or anti-cheat that is not supported. See [Troubleshooting](/docs/troubleshooting/).
+Heronite reads the launch log and suggests a fix when it recognises the problem. The causes and fixes are listed in [Troubleshooting](/docs/troubleshooting/).
 
 ## Anti-cheat
 

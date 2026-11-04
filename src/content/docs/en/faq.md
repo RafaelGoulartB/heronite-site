@@ -1,11 +1,13 @@
 ---
-title: "Frequently asked questions"
+title: "Heronite FAQ: price, Steam Deck, anti-cheat, safety"
 navLabel: "FAQ"
-description: "Answers about Heronite: price, Steam Deck support, anti-cheat, how it differs from Heroic, Lutris and Playnite, login safety and portable use."
+description: "Is Heronite free? Short answers on Steam Deck support, anti-cheat, how it differs from Heroic, Lutris and Playnite, login safety and portable use."
 section: Start
 order: 3
-updated: 2026-11-01
+updated: 2026-11-04
 ---
+
+Short answers about Heronite, the free open source game launcher for Linux and Windows.
 
 ## Is Heronite free?
 
@@ -17,7 +19,7 @@ Linux (any distribution, x86_64) and Windows 10 and 11 (x86_64). See [Installati
 
 ## Does it work on the Steam Deck?
 
-Heronite runs on Linux as an AppImage, which is how apps are usually installed in SteamOS desktop mode, and [Console Mode](/docs/console-mode/) is built for controllers. To use it from Gaming Mode, add the AppImage to Steam as a non-Steam game with the `--console` option.
+Heronite runs on Linux as an AppImage, which is how apps are usually installed in SteamOS desktop mode, and [console mode](/docs/console-mode/) is built for controllers. To use it from Gaming Mode, add the AppImage to Steam as a non-Steam game with the `--console` option.
 
 ## How is it different from Heroic, Lutris, or Playnite?
 
@@ -26,7 +28,7 @@ Heronite runs on Linux as an AppImage, which is how apps are usually installed i
 - **Your play history:** every session recorded, statistics, a journal, a backlog goal, and a year in review.
 - **Console mode** with themes you can change and share.
 
-On Linux it can import your games from Heroic, Lutris, Bottles, and Faugus, so you can try it without losing anything.
+On Linux it can import your games from Heroic, Lutris, Bottles, and Faugus.
 
 ## Will I lose my Heroic setup?
 
@@ -48,9 +50,9 @@ The Windows files are not code-signed yet. Every release is still signed with mi
 
 Yes, with the Windows portable copy. See [Files and Folders](/docs/files-and-folders/#the-portable-copy-windows).
 
-## Which languages does it speak?
+## Which languages does Heronite support?
 
-English, Portuguese (Brazil), Spanish, and German. Help translate it: see [Translating](/docs/translating/).
+English, Portuguese (Brazil), Spanish, and German. To help translate, see [Translating](/docs/translating/).
 
 ## Where do I ask for help or suggest a feature?
 

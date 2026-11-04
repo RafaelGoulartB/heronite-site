@@ -1,24 +1,26 @@
 ---
-title: "Getting started with Heronite"
+title: "Getting started with Heronite: first run and setup"
 navLabel: "Getting started"
-description: "Your first run with Heronite: log in to your stores, add other games, find your way around the Collection and start playing."
+description: "Set up Heronite after installing it: log in to your stores, add other games, learn the shortcuts, organize the Collection and play."
 section: Start
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## The first run
+[Install Heronite](/docs/installation/) first, then set it up here.
 
-On the first start, with an empty Collection, Heronite looks around by itself:
+## What Heronite finds on the first run
+
+On the first start, with an empty Collection, Heronite finds games on its own:
 
 - **Steam:** your installed Steam games come in, no login needed.
 - **Emulators and ROMs:** installed emulators are detected, and common ROM folders (like `~/ROMs` or `~/Emulation/roms`) are scanned. See [Emulation](/docs/emulation/).
 
-## Add your stores
+## Log in to Epic Games, GOG, or Amazon Games
 
-Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>) and log in to Epic Games, GOG, or Amazon Games. A small login window opens with the store's own page. If it cannot open, use the browser method on the same page: log in in your browser and paste the address or code it gives you.
+Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>) and log in. A small login window opens with the store's own page. If it cannot open, use the browser method on the same page: log in in your browser and paste the address or code it gives you.
 
-More in [Stores and Launchers](/docs/stores-and-launchers/).
+More in [Stores and launchers](/docs/stores-and-launchers/).
 
 ## Add other games
 
@@ -31,7 +33,7 @@ Press <kbd>Ctrl</kbd> <kbd>N</kbd> (or **Add a game**) to add:
 
 You can also point at a folder and add every game found in it at once.
 
-## Find your way around
+## Open any page with a shortcut
 
 | Page | Shortcut |
 |---|---|
@@ -43,7 +45,7 @@ You can also point at a folder and add every game found in it at once.
 | Statistics | <kbd>Ctrl</kbd> <kbd>6</kbd> |
 | Settings | <kbd>Ctrl</kbd> <kbd>,</kbd> |
 
-The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any action, or plays a game by typing part of its name. Press <kbd>?</kbd> to see every shortcut. See [Keyboard Shortcuts](/docs/keyboard-shortcuts/).
+The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any action, or plays a game by typing part of its name. Press <kbd>?</kbd> to see every shortcut, or read [Keyboard shortcuts](/docs/keyboard-shortcuts/).
 
 ## Organize the Collection
 
@@ -52,10 +54,10 @@ The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any 
 - Save **views** with your filters and sorting (Playing now, Backlog, Finished, Favourites).
 - Select several games (<kbd>Space</kbd>, <kbd>Shift</kbd> + arrows, <kbd>Ctrl</kbd> <kbd>A</kbd>) and press <kbd>F3</kbd> to change them all at once. <kbd>Ctrl</kbd> <kbd>Z</kbd> undoes it.
 
-## Play
+## Play a game and take screenshots
 
 Press <kbd>Enter</kbd> on a game to play it (or install it). Heronite records each session, matches screenshots to the game, and shows it all in **Statistics**. Take a screenshot while playing with <kbd>F10</kbd>.
 
-## On the couch
+## Use a controller (console mode)
 
-Turn on [Console Mode](/docs/console-mode/) from the palette, the ☰ menu, or with `--console`. It can also open by itself at startup or when a controller connects.
+Turn on [console mode](/docs/console-mode/) from the palette, the ☰ menu, or with `--console`. It can also open at startup or when a controller connects.

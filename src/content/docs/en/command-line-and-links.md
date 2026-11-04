@@ -1,15 +1,15 @@
 ---
-title: "Command line and heronite:// links"
+title: "Command line options and heronite:// links"
 navLabel: "Command line and links"
 description: "Start Heronite from scripts: command line options like --launch, --console and --no-gui, game ids for each store, and heronite:// links."
 section: Reference
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-The program is called `heronite-rs` on Linux and with the Windows installer (`heronite-rs.exe`), and `heronite.exe` in the Windows portable copy.
+Start Heronite from scripts with options such as `--launch`. The program is `heronite-rs` on Linux and with the Windows installer (`heronite-rs.exe`), and `heronite.exe` in the Windows portable copy.
 
-## Options
+## Command line options
 
 | Option | What it does |
 |---|---|
@@ -22,7 +22,7 @@ The program is called `heronite-rs` on Linux and with the Windows installer (`he
 
 Only one Heronite runs at a time: starting it again hands the request (like `--launch`) to the one already running.
 
-## Launching a game
+## Launch a game from the command line
 
 `--launch` takes the game's store id, not its name, optionally with the store tool in front:
 
@@ -40,9 +40,9 @@ heronite-rs --launch legendary_Fortnite --no-gui
 | `nile` | Amazon Games |
 | `sideload` | Games you added yourself |
 
-Shortcuts Heronite creates (desktop, Start menu, Steam) already have the right command in them, so this is mostly for scripts.
+Shortcuts Heronite creates (desktop, Start menu, Steam) already contain the right command, so this is mostly for scripts.
 
-## `heronite://` links
+## Launch a game with a `heronite://` link
 
 ```
 heronite://launch/<game>

@@ -1,12 +1,14 @@
 ---
-title: "Files and folders"
+title: "Heronite data folder and file locations"
 description: "Where Heronite keeps its data, settings, cache, screenshots and logs on Linux and Windows, what is inside, and how the portable copy works."
 section: Reference
 order: 3
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## Where Heronite keeps its data
+Heronite stores everything as plain JSON files, not in a database.
+
+## Where is the data folder?
 
 | | Linux | Windows | Windows portable |
 |---|---|---|---|
@@ -17,9 +19,7 @@ updated: 2026-11-01
 
 The screenshots folder can be changed in **Settings → Screenshots**. To use another data folder, set `HERONITE_DATA_DIR` (see [Environment Variables](/docs/environment-variables/)).
 
-Everything is stored as plain JSON files, not in a database.
-
-## Inside the data folder
+## What is inside the data folder?
 
 | Path | What it holds |
 |---|---|
@@ -35,7 +35,7 @@ Everything is stored as plain JSON files, not in a database.
 
 These folders hold your store logins. Keep that in mind when you copy or share the data folder.
 
-## Games and Wine prefixes (Linux)
+## Where are games and Wine prefixes stored? (Linux)
 
 | Path | What it holds |
 |---|---|
@@ -62,6 +62,6 @@ Heronite\
 
 Delete `portable.txt` to make the copy use the normal user folders instead. A portable copy does not write to the registry and does not register `heronite://` links.
 
-## Coming from Heroic (Linux)
+## Move from Heroic to Heronite (Linux)
 
 On the first start, if `~/.config/heroic` exists, its data is copied into Heronite's data folder once, so your logins, games, and settings carry over. Heroic's files are only read.

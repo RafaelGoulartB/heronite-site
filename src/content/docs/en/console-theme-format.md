@@ -1,14 +1,14 @@
 ---
-title: "Console theme format"
-description: "The .heronite-theme.json file format for console mode themes: rules, an example, and every field you can set by hand."
+title: "Console mode theme file format (.heronite-theme.json)"
+description: "The .heronite-theme.json file format for console mode themes: the rules, a full example, and every field you can set by hand in the file."
 section: Reference
 order: 5
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-A console mode theme is one JSON file, `<id>.heronite-theme.json`. The easiest way to make one is in Heronite (**Settings → Console mode**) and then **Export**; this page is for reading or editing the file by hand.
+A console mode theme is one JSON file, `<id>.heronite-theme.json`. The easiest way to make one is in Heronite (**Settings → Console mode**) and then **Export**. This page is for reading or editing the file by hand.
 
-## Rules
+## File rules
 
 - Keys are camelCase.
 - **Every field is optional.** A missing field takes the value of the Classic theme.
@@ -16,7 +16,7 @@ A console mode theme is one JSON file, `<id>.heronite-theme.json`. The easiest w
 - `format` is the version of the file format, currently `1`. A theme with a higher `format` is refused on import.
 - The background picture is embedded in the file (PNG, JPEG, or WebP, at most 16 MiB), so one file is all you share.
 
-## Example
+## Example theme file
 
 ```json
 {
@@ -40,7 +40,7 @@ A console mode theme is one JSON file, `<id>.heronite-theme.json`. The easiest w
 }
 ```
 
-## Fields
+## Fields you can set
 
 ### About the theme
 
@@ -157,10 +157,10 @@ Options of single layouts:
 - `spotlightActions`: `full` or `play`,
 - also `jumpLetters`, `spotlightCards`, `carouselReflect`, `xboxGroups`, and `dashboard` (`week`, `downloads`, `random`, `journal`, `shortcuts`).
 
-## Not part of a theme
+## What a theme does not include
 
 What happens when a controller connects, how Heronite opens, and what it does when idle are settings of your PC, not of the theme, so they are not in the file.
 
-## Share yours
+## Share your theme
 
 Post your theme in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions) so others can import it.

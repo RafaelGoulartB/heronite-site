@@ -1,22 +1,22 @@
 ---
-title: "Environment variables"
+title: "Heronite environment variables (HERONITE_*)"
 description: "The HERONITE_* environment variables: use another data folder, point at Steam, and turn off update checks, the tray, controller input or animations."
 section: Reference
 order: 4
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
 The `HERONITE_*` switches are on when set to anything except empty or `0`.
 
-## Folders
+## Change the data, log and Steam folders
 
 | Variable | What it does |
 |---|---|
-| `HERONITE_DATA_DIR=<folder>` | Use another data folder. Config and cache then go next to it, in `<folder>.heronite/`. Handy for a second, separate Collection. |
+| `HERONITE_DATA_DIR=<folder>` | Use another data folder. Config and cache then go next to it, in `<folder>.heronite/`. Useful for a second, separate Collection. |
 | `HERONITE_LOG_DIR=<folder>` | Write logs to another folder |
 | `HERONITE_STEAM_DIR=<folder>` | Where Steam is, when Heronite does not find it |
 
-## Turning things off
+## Turn features off
 
 | Variable | What it does |
 |---|---|
@@ -30,7 +30,7 @@ The `HERONITE_*` switches are on when set to anything except empty or `0`.
 | `HERONITE_DISABLE_TOOLS_UPDATE` | Do not refresh DXVK, Winetricks, and umu in the background |
 | `HERONITE_WINE_OFFLINE` | No network for the Wine Manager (Linux) |
 
-## Store tools
+## Use your own legendary, gogdl or nile
 
 | Variable | What it does |
 |---|---|
@@ -38,13 +38,13 @@ The `HERONITE_*` switches are on when set to anything except empty or `0`.
 | `HERONITE_GOGDL_BIN=<path>` | Use this gogdl |
 | `HERONITE_NILE_BIN=<path>` | Use this nile |
 
-## Logs
+## Get more detail in the log
 
 | Variable | What it does |
 |---|---|
 | `RUST_LOG=debug` | More detail in the log (`trace` for everything) |
 
-## Variables Heronite sets
+## Variables Heronite sets for game scripts
 
 Scripts that run before or after a game, and programs that run alongside it, get these:
 
