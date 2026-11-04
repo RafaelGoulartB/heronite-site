@@ -170,9 +170,9 @@ const ptBr: Dict = {
     sourceGroups: [{ label: 'Sem login.', note: 'As bibliotecas da Steam são lidas para você.' }, { label: 'Entre uma vez.', note: 'Instale, atualize e jogue pelo Heronite.' }, { label: 'Prefixo próprio do Wine.', note: 'Cada launcher roda no seu próprio prefixo no Linux.' }],
     sourcesFoot: 'Seus logins ficam no seu PC.',
     collection: {
-      alt: 'A Coleção do Heronite: capas de jogos agrupadas em Jogando e Em andamento, com o tempo de jogo embaixo de cada uma, e ELDEN RING aberto com a capa, o botão Jogar, a nota, a avaliação no Linux e uma linha do tempo das sessões.',
-      callouts: ['Agrupar por status', 'Tempo de jogo por jogo', 'Avaliação no Linux e anti-cheat', 'Sua linha do tempo', 'Lista ou grade de capas'],
-      caption: 'A tela Coleção do Heronite, com cinco partes destacadas.',
+      alt: 'A Coleção do Heronite: capas de jogos agrupadas em Jogando e Em andamento, com o tempo de jogo embaixo de cada uma, e ELDEN RING aberto com a capa, o botão Jogar, a nota, a avaliação no Linux, uma linha do tempo das sessões e as conquistas da Steam, 2 de 42 desbloqueadas.',
+      callouts: ['Agrupar por status', 'Tempo de jogo por jogo', 'Avaliação no Linux e anti-cheat', 'Sua linha do tempo', 'Lista ou grade de capas', 'Conquistas a desbloquear'],
+      caption: 'A tela Coleção do Heronite, com seis partes destacadas.',
       legendLabel: 'O que os números indicam',
     },
     extras: {
@@ -223,8 +223,8 @@ const ptBr: Dict = {
       themes: 'Ou crie o seu e compartilhe.',
       deckTitle: 'Modo Jogo da Steam',
       deckHtml: 'Adicione à Steam com <code>--console</code>, ou abra quando um controle conectar.',
-      homeAlt: 'Início do modo console: SP Football Life 2026 em destaque acima de uma prateleira Continuar jogando com capas, e dicas do controle na parte de baixo',
-      gameAlt: 'Página de jogo do modo console para Elden Ring, com um botão Jogar grande',
+      homeAlt: 'Modo console: um carrossel dos jogos em andamento, com Control em foco entre Brotato e Crash Team Racing, e a loja, o tempo de jogo e o status embaixo',
+      gameAlt: 'Modo console com ELDEN RING aberto: Jogar, Status, Favorito, Configurações do jogo e Página completa, sobre o carrossel de capas',
     },
     light: {
       headline: 'mediana, da abertura até a sua biblioteca.',

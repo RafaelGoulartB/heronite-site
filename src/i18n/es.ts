@@ -170,9 +170,9 @@ const es: Dict = {
     sourceGroups: [{ label: 'Sin iniciar sesión.', note: 'Las bibliotecas de Steam se leen por ti.' }, { label: 'Inicia sesión una vez.', note: 'Instala, actualiza y juega desde Heronite.' }, { label: 'Prefijo de Wine propio.', note: 'Cada lanzador se ejecuta en su propio prefijo en Linux.' }],
     sourcesFoot: 'Tus datos de acceso se quedan en tu PC.',
     collection: {
-      alt: 'La Colección de Heronite: portadas de juegos agrupadas en Jugando y En curso, con el tiempo de juego bajo cada una, y ELDEN RING abierto con su portada, el botón Jugar, la nota, la valoración en Linux y una línea de tiempo de sesiones.',
-      callouts: ['Agrupar por estado', 'Tiempo de juego por juego', 'Valoración en Linux y anti-cheat', 'Tu línea de tiempo', 'Lista o cuadrícula de portadas'],
-      caption: 'La pantalla Colección de Heronite, con cinco partes resaltadas.',
+      alt: 'La Colección de Heronite: portadas agrupadas en Jugando y En curso, con el tiempo de juego debajo de cada una, y ELDEN RING abierto con su portada, el botón Jugar, la nota, la valoración en Linux, una línea de tiempo de sesiones y sus logros de Steam, 2 de 42 desbloqueados.',
+      callouts: ['Agrupar por estado', 'Tiempo de juego por juego', 'Valoración en Linux y anti-cheat', 'Tu línea de tiempo', 'Lista o cuadrícula de portadas', 'Logros por desbloquear'],
+      caption: 'La pantalla Colección de Heronite, con seis partes destacadas.',
       legendLabel: 'A qué apuntan los números',
     },
     extras: {
@@ -223,8 +223,8 @@ const es: Dict = {
       themes: 'O crea el tuyo y compártelo.',
       deckTitle: 'Modo Juego de Steam',
       deckHtml: 'Añádelo a Steam con <code>--console</code>, o ábrelo al conectar un mando.',
-      homeAlt: 'Inicio del modo consola: SP Football Life 2026 destacado sobre una estantería Seguir jugando con portadas, y pistas del mando en la parte inferior',
-      gameAlt: 'Página de juego del modo consola para Elden Ring, con un gran botón Jugar',
+      homeAlt: 'Modo consola: un carrusel de los juegos en curso, con Control enfocado entre Brotato y Crash Team Racing, y su tienda, tiempo de juego y estado debajo',
+      gameAlt: 'Modo consola con ELDEN RING abierto: Jugar, Estado, Favorito, Ajustes del juego y Página completa, sobre el carrusel de portadas',
     },
     light: {
       headline: 'mediana, desde el arranque hasta tu biblioteca.',

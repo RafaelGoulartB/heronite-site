@@ -172,9 +172,9 @@ const en = {
     sourceGroups: [{ label: 'No login.', note: 'Steam libraries are read for you.' }, { label: 'Log in once.', note: 'Install, update and play from Heronite.' }, { label: 'Own Wine prefix.', note: 'Each launcher runs in its own prefix on Linux.' }],
     sourcesFoot: 'Your logins stay on your PC.',
     collection: {
-      alt: 'Heronite’s Collection: game covers grouped into Playing and On Going, with play time under each, and ELDEN RING open with its cover, Play button, score, Linux rating and a timeline of play sessions.',
-      callouts: ['Group by status', 'Play time per game', 'Linux rating and anti-cheat', 'Your timeline', 'List or grid of covers'],
-      caption: 'The Collection screen in Heronite, with five highlighted parts.',
+      alt: 'Heronite’s Collection: game covers grouped into Playing and On Going, with play time under each, and ELDEN RING open with its cover, Play button, score, Linux rating, a timeline of play sessions and its Steam achievements, 2 of 42 unlocked.',
+      callouts: ['Group by status', 'Play time per game', 'Linux rating and anti-cheat', 'Your timeline', 'List or grid of covers', 'Achievements to unlock next'],
+      caption: 'The Collection screen in Heronite, with six highlighted parts.',
       legendLabel: 'What the numbers point at',
     },
     extras: {
@@ -225,8 +225,8 @@ const en = {
       themes: 'Or make your own and share it.',
       deckTitle: 'Steam Gaming Mode',
       deckHtml: 'Add it to Steam with <code>--console</code>, or open it when a controller connects.',
-      homeAlt: 'Console mode home: SP Football Life 2026 in focus above a Continue playing shelf of covers, controller hints along the bottom',
-      gameAlt: 'Console game page for Elden Ring with a large Play button',
+      homeAlt: 'Console mode: a carousel of the games in progress, with Control in focus between Brotato and Crash Team Racing, its store, play time and status underneath',
+      gameAlt: 'Console mode with ELDEN RING open: Play, Status, Favourite, Game settings and Full page, over the carousel of covers',
     },
     light: {
       headline: 'median, from start to your library.',
