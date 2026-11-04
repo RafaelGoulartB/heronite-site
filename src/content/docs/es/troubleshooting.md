@@ -33,7 +33,7 @@ Vuelve a buscar actualizaciones más tarde. Tu red hizo demasiadas peticiones a 
 
 ### La ventana de inicio de sesión no se abre
 
-Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé.
+Usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé.
 
 Para arreglar la propia ventana de inicio de sesión, instala:
 

@@ -59,7 +59,7 @@ Os pacotes para outras distribuições estão no [guia de instalação](/pt-br/d
 1. Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
 2. Escolha **Epic Games**.
 3. Clique em **Entrar**.
-4. Faça login na página da Epic, na janela que abrir. Sua senha vai só para a Epic.
+4. Faça login na página da Epic, na janela que abrir.
 
 Sua biblioteca inteira da Epic aparece no Heronite, instalada ou não. Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página e cole o código que o navegador mostrar. Mais detalhes em [Solução de problemas](/pt-br/docs/troubleshooting/#o-login-ou-o-download-de-uma-loja-falha).
 
@@ -85,7 +85,7 @@ Cada jogo ganha seu próprio prefixo Wine (uma pasta que funciona como um Window
 
 ## Troque a versão do Proton
 
-Deixe a versão padrão, a menos que o jogo falhe. Se ele não abrir ou rodar mal, vá em **Configurações do jogo → Compatibilidade** e escolha outra versão em **Versão**. A linha do ProtonDB ali costuma dizer qual é a melhor. Para escolher antes de instalar, abra **Mostrar configurações do Wine** na janela de instalação e defina a **Versão do Wine**.
+Se um jogo não abrir ou rodar mal, vá em **Configurações do jogo → Compatibilidade** e escolha outra versão em **Versão**. A linha do ProtonDB ali costuma dizer qual é a melhor. Para escolher antes de instalar, abra **Mostrar configurações do Wine** na janela de instalação e defina a **Versão do Wine**.
 
 ![As Configurações do jogo do Heronite para Control, um jogo da Epic, na aba Compatibilidade: a versão do Proton GE-Proton-latest, a nota Platinum no ProtonDB, o prefixo Wine e os botões Winecfg e Winetricks.](../../../assets/screenshots/game-settings.webp)
 
@@ -96,8 +96,7 @@ O GE-Proton e o Proton-CachyOS costumam ter correções antes das outras versõe
 O anti-cheat é o principal motivo de um jogo online da Epic não rodar no Linux. Jogos single-player raramente têm esse problema.
 
 - Alguns jogos com Easy Anti-Cheat ou BattlEye funcionam. Ligue o runtime certo em **Runtimes de anti-cheat**, em **Configurações do jogo → Compatibilidade**, e o Heronite baixa antes da próxima abertura.
-- Jogos cujo desenvolvedor não permite o Linux não vão rodar.
-- Fortnite: não roda.
+- Jogos cujo desenvolvedor não permite o Linux, como o Fortnite, não rodam.
 
 O [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) acompanha o status de cada jogo. A documentação explica o [anti-cheat](/pt-br/docs/wine-and-proton/#anti-cheat) com mais detalhes.
 

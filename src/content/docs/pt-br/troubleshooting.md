@@ -33,7 +33,7 @@ Procure atualizações de novo mais tarde. Sua rede fez requisições demais ao 
 
 ### A janela de login não abre
 
-Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página e cole o código que o navegador mostrar.
+Use **Ou entre pelo navegador** na mesma página e cole o código que o navegador mostrar.
 
 Para consertar a própria janela de login, instale:
 

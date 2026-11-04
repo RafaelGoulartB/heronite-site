@@ -64,7 +64,7 @@ O Heronite baixa as ferramentas de código aberto, não oficiais, que o Heroic u
 
 ## Como o Heronite baixa e atualiza os jogos?
 
-Clique em **Instalar** num jogo. Uma fila de downloads instala, atualiza, repara e desinstala seus jogos da Epic, GOG e Amazon. A mesma fila move e importa jogos. O Heronite pausa os downloads quando a internet cai, tenta de novo os que falham e procura atualizações a cada 3 horas.
+Clique em **Instalar** num jogo. Uma fila de downloads instala, atualiza, repara, move, importa e desinstala seus jogos da Epic, GOG e Amazon. O Heronite pausa os downloads quando a internet cai, tenta de novo os que falham e procura atualizações a cada 3 horas.
 
 ## Preciso fazer login na Steam?
 

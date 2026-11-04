@@ -59,7 +59,7 @@ Los paquetes para otras distribuciones están en la [guía de instalación](/es/
 1. Abre **Tiendas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
 2. Elige **Epic Games**.
 3. Haz clic en **Iniciar sesión**.
-4. Inicia sesión en la página de Epic, en la ventana que se abre. Tu contraseña solo va a Epic.
+4. Inicia sesión en la página de Epic, en la ventana que se abre.
 
 Toda tu biblioteca de Epic aparece entonces en Heronite, esté instalada o no. Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé. Más información en [Solución de problemas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda).
 
@@ -85,7 +85,7 @@ Cada juego tiene su propio prefijo de Wine (una carpeta que funciona como un Win
 
 ## Cambia la versión de Proton
 
-Deja la versión por defecto salvo que el juego falle. Si no abre o va mal, ve a **Ajustes del juego → Compatibilidad** y elige otra versión en **Versión**. La línea de ProtonDB de esa pestaña suele indicar la mejor. Para elegirla antes de instalar, abre **Mostrar ajustes de Wine** en el diálogo de instalación y cambia la **Versión de Wine**.
+Si un juego no abre o va mal, ve a **Ajustes del juego → Compatibilidad** y elige otra versión en **Versión**. La línea de ProtonDB de esa pestaña suele indicar la mejor. Para elegirla antes de instalar, abre **Mostrar ajustes de Wine** en el diálogo de instalación y cambia la **Versión de Wine**.
 
 ![Los Ajustes del juego de Control, un juego de Epic, en la pestaña Compatibilidad: la versión de Proton GE-Proton-latest, su valoración Platinum de ProtonDB, el prefijo de Wine y los botones Winecfg y Winetricks.](../../../assets/screenshots/game-settings.webp)
 
@@ -96,8 +96,7 @@ GE-Proton y Proton-CachyOS suelen traer correcciones antes que otras versiones. 
 El anti-cheat es la razón principal por la que un juego online de Epic no funciona en Linux. Los juegos para un jugador rara vez tienen este problema.
 
 - Algunos juegos con Easy Anti-Cheat o BattlEye funcionan. Activa el runtime correspondiente en **Runtimes de anti-cheat**, dentro de **Ajustes del juego → Compatibilidad**, y Heronite lo descarga antes del siguiente inicio.
-- Los juegos cuyo desarrollador no permite Linux no funcionan.
-- Fortnite no funciona.
+- Los juegos cuyo desarrollador no permite Linux, como Fortnite, no funcionan.
 
 [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) sigue el estado de cada juego. La documentación explica el [anti-cheat](/es/docs/wine-and-proton/#anticheat) con más detalle.
 

@@ -64,7 +64,7 @@ Heronite descarga las herramientas de código abierto no oficiales que usa Heroi
 
 ## ¿Cómo descarga y actualiza juegos Heronite?
 
-Haz clic en **Instalar** en un juego. Una sola cola de descargas instala, actualiza, repara y desinstala tus juegos de Epic, GOG y Amazon. La misma cola mueve e importa juegos. Heronite pausa las descargas sin conexión, reintenta las que fallan y busca actualizaciones cada 3 horas.
+Haz clic en **Instalar** en un juego. Una sola cola de descargas instala, actualiza, repara, mueve, importa y desinstala tus juegos de Epic, GOG y Amazon. Heronite pausa las descargas sin conexión, reintenta las que fallan y busca actualizaciones cada 3 horas.
 
 ## ¿Necesito iniciar sesión en Steam?
 

@@ -64,7 +64,7 @@ Heronite downloads the open source tools Heroic uses: [legendary](https://github
 
 ## How does Heronite download and update games?
 
-Press **Install** on a game. One download queue installs, updates, repairs and uninstalls your Epic, GOG and Amazon games. The same queue moves and imports games. Heronite pauses downloads offline, retries failed ones and checks for updates every 3 hours.
+Press **Install** on a game. One download queue installs, updates, repairs, moves, imports and uninstalls your Epic, GOG and Amazon games. Heronite pauses downloads offline, retries failed ones and checks for updates every 3 hours.
 
 ## Do I need to log in to Steam?
 

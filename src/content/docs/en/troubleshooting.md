@@ -33,7 +33,7 @@ Check for updates again later. Your network made too many requests to GitHub.
 
 ### The login window does not open
 
-If the login window does not open, use **Or log in with your browser** on the same page and paste the code it gives you.
+Use **Or log in with your browser** on the same page and paste the code it gives you.
 
 To fix the login window itself, install:
 

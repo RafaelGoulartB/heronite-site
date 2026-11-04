@@ -59,7 +59,7 @@ Packages for other distributions are in the [installation guide](/docs/installat
 1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
 2. Choose **Epic Games**.
 3. Press **Log in**.
-4. Log in on Epic's page in the window that opens. Your password goes only to Epic.
+4. Log in on Epic's page in the window that opens.
 
 Your whole Epic library then appears in Heronite, installed or not. If the login window does not open, use **Or log in with your browser** on the same page and paste the code it gives you. More in [Troubleshooting](/docs/troubleshooting/#a-store-login-or-download-fails).
 
@@ -85,7 +85,7 @@ Each game gets its own Wine prefix (a separate Windows folder for that game). If
 
 ## Change the Proton version
 
-Keep the default unless the game fails. If it does not start or runs badly, open **Game settings → Compatibility** and choose another build in **Version**. The ProtonDB line there often names the best one. To choose before you install, open **Show Wine settings** in the install dialog and set the **Wine version**.
+If a game does not start or runs badly, open **Game settings → Compatibility** and choose another build in **Version**. The ProtonDB line there often names the best one. To choose before you install, open **Show Wine settings** in the install dialog and set the **Wine version**.
 
 ![Heronite's Game settings for Control, an Epic game, on the Compatibility tab: the Proton version GE-Proton-latest, its ProtonDB rating of Platinum, the Wine prefix and the Winecfg and Winetricks buttons.](../../../assets/screenshots/game-settings.webp)
 
@@ -96,8 +96,7 @@ GE-Proton and Proton-CachyOS often have fixes before other versions. The [GE-Pro
 Anti-cheat is the main reason an online Epic game won't run on Linux. Single-player games are rarely affected.
 
 - Some games with Easy Anti-Cheat or BattlEye work. Turn on the matching runtime under **Anti-cheat runtimes** in **Game settings → Compatibility**, and Heronite downloads it before the next launch.
-- Games whose developer does not allow Linux will not run.
-- Fortnite: does not run.
+- Games whose developer does not allow Linux, such as Fortnite, will not run.
 
 [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) tracks the status of every game. The docs explain [anti-cheat](/docs/wine-and-proton/#anti-cheat) in more detail.
 
