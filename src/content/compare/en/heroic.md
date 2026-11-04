@@ -14,15 +14,15 @@ updated: 2026-11-04
 highlights:
   - title: Same store tools
     text: Both log in and download through the same open source tools.
-  - title: Your play history
-    text: Every session feeds statistics, a journal and a year in review.
+  - title: Find anything fast
+    text: Ctrl+K opens any game, page or action.
   - title: Imports your Heroic setup
     text: On Linux, your store logins and hand-added games carry over.
-  - title: No bundled browser
-    text: A native Rust app; Heroic is built on Electron.
+  - title: Starts in about 215 ms
+    text: Median time from start to your library on screen.
 faq:
   - q: Can I use Heronite and Heroic at the same time?
-    a: Yes. Heronite only reads Heroic's files, so Heroic keeps working.
+    a: Yes. Heronite only reads Heroic's files.
   - q: Is my store login safe in Heronite?
     a: Yes. Your logins stay on your PC and go only to the stores. You type your password on the store's own login page.
   - q: Does Heronite work on the Steam Deck?
@@ -39,19 +39,20 @@ related:
 |---|---|---|
 | Platforms | Linux and Windows 10/11 | Linux, Windows 10/11, macOS 14 or newer |
 | Built with | Rust, GPU-rendered, no bundled browser | Electron, TypeScript and React |
+| Memory when idle | About 190 MB | — |
 | Epic, GOG, Amazon | Yes | Yes |
-| Steam library | Yes, no login needed | Not listed |
-| Battle.net, EA app, Ubisoft Connect, Rockstar | Yes, through Wine on Linux | Not listed |
-| Microsoft Store and PC Game Pass | Yes, on Windows | Not listed |
-| Emulation | Yes | Not listed |
+| Steam library | Yes, no login needed | — |
+| Battle.net, EA app, Ubisoft Connect, Rockstar | Yes, through Wine on Linux | — |
+| Microsoft Store and PC Game Pass | Yes, on Windows | — |
+| Emulation | Yes | — |
 | Play time | Statistics, journal, year in review | Time played on each game page |
 | Console mode | Yes, with themes | Yes |
 | Cloud saves | Epic and GOG, in beta | Yes |
-| Save backups | Ludusavi, after each session | Not listed |
-| Same library on several PCs | Yes, through a folder or cloud account | Not listed |
+| Save backups | Ludusavi, after each session | — |
+| Same library on several PCs | Yes, through a folder or cloud account | — |
 | Import from the other launcher | Yes, on Linux | Not applicable |
 
-The Heroic column comes from its [README](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher), [website](https://heroicgameslauncher.com) and [release notes](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases), current as of November 2026. "Not listed" means the README does not list it.
+The Heroic column comes from its [README](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher), [website](https://heroicgameslauncher.com) and [release notes](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases), current as of November 2026. — = not in Heroic's README, site or release notes.
 
 ## What do Heronite and Heroic share?
 
@@ -81,7 +82,7 @@ On Linux, Heronite imports your Heroic setup. It only reads Heroic's files, so H
 
 1. **Start Heronite.** If `~/.config/heroic` exists, Heronite copies its data once: your store logins, settings, and the games you added by hand with their settings.
 2. **Turn on the Heroic import.** In **Settings → Other launchers**, turn on **Bring its games in** under Heroic. Heronite then keeps your added and installed games in sync with Heroic's normal install or its Flatpak.
-3. **Check your installed store games.** Heronite reads Heroic's records of the Epic, GOG and Amazon games it installed. They show as installed, in the same folders, once you log in to the store.
+3. **Find your installed store games.** The import also adds Heroic's records of the Epic, GOG and Amazon games it installed. They show as installed, in the same folders.
 
 Heronite skips the Steam games Heroic lists and brings them in through its Steam import, so nothing shows twice.
 

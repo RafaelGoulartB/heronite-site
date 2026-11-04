@@ -19,7 +19,7 @@ highlights:
   - title: Store apps in Wine on Linux
     text: Each store app gets its own Wine prefix; on Windows it runs without Wine.
   - title: Import other launchers
-    text: Heroic, Lutris, Bottles and Faugus on Linux, Playnite on Windows, stay in sync.
+    text: Games from Heroic, Lutris, Bottles, Faugus and Playnite stay in sync.
 faq:
   - q: Can I use Epic Games and GOG in one launcher?
     a: Yes. Log in to each store on the **Stores** page, and one download queue handles both. See [Epic on Linux](/guides/epic-games-on-linux/) and [GOG on Linux](/guides/gog-on-linux/).
@@ -47,7 +47,7 @@ related:
 | Rockstar Games | Yes | Yes | Log in; the store app installs the games |
 | Microsoft Store and PC Game Pass | No | Yes | No login; Heronite reads the Xbox app's games |
 
-Your [emulated games](/features/emulation/) share the same [library](/features/game-library/).
+Your [emulated games](/features/emulation/) share the same [library](/features/game-library/). To add a game that is not from a store, see [Add other games to your library](/docs/getting-started/#add-other-games-to-your-library).
 
 ## How do I log in to Epic, GOG and Amazon?
 
@@ -56,9 +56,9 @@ Your [emulated games](/features/emulation/) share the same [library](/features/g
 3. Press **Log in**.
 4. Log in on the store's page in the window that opens.
 
-If the window does not open, use **Or log in with your browser** on the same page ([Stores and launchers](/docs/stores-and-launchers/)). Step by step: [Epic Games](/guides/epic-games-on-linux/), [GOG](/guides/gog-on-linux/) and [Amazon Games](/guides/amazon-games-on-linux/).
+If the login window does not open, use **Or log in with your browser** on the same page and paste the code it gives you. Step by step: [Epic Games](/guides/epic-games-on-linux/), [GOG](/guides/gog-on-linux/) and [Amazon Games](/guides/amazon-games-on-linux/).
 
-On Windows, Heronite adds the games the Epic Games Launcher, GOG Galaxy or the Amazon Games app installed, without a new download.
+On Windows, Heronite also adds games already installed by the Epic Games Launcher, GOG Galaxy or the Amazon Games app. Nothing downloads again.
 
 Heronite downloads the open source tools Heroic uses: [legendary](https://github.com/derrod/legendary) for Epic, [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl) for GOG and [nile](https://github.com/imLinguin/nile) for Amazon.
 
@@ -68,7 +68,7 @@ Press **Install** on a game. One download queue installs, updates, repairs and u
 
 ## Do I need to log in to Steam?
 
-No. Heronite reads your Steam libraries and keeps them in sync. On Linux, it finds the regular Steam install, the Flatpak and the Snap. On Windows, it reads Steam's location from the registry.
+No. Heronite reads your Steam libraries and keeps them in sync. On Linux, it finds the regular Steam install, the Flatpak and the Snap. On Windows, it reads Steam's location from the registry, and you can [run a trainer with a Steam game](/docs/stores-and-launchers/#run-a-trainer-with-a-steam-game-windows).
 
 ![A game page in Heronite's Collection showing a Library row that says Steam, a Playing status and a Play button next to the cover.](../../../assets/screenshots/collection.webp)
 
@@ -84,13 +84,13 @@ On Windows, the store app runs directly, without Wine. Press the app's **Set up*
 
 ## How do I add Microsoft Store and PC Game Pass games?
 
-On Windows, Heronite finds the games the Xbox app or Microsoft Store installed, including PC Game Pass. No login needed. The Xbox app still installs, updates and uninstalls them.
+On Windows, Heronite finds games installed by the Xbox app or Microsoft Store, including PC Game Pass. No login needed. The Xbox app still installs, updates and uninstalls them.
 
 **Stores → Xbox** shows whether Heronite found the Xbox app, and lists its games. After you install a game, press **Read games now**.
 
 ## Can I import games from Heroic, Lutris, Bottles, Faugus or Playnite?
 
-Yes. Turn on a launcher in **Settings → Other launchers**. Heronite only reads its files and leaves its data untouched. On the first start, Heronite copies Heroic's data once.
+Yes. Turn on a launcher in **Settings → Other launchers**. Heronite never changes another launcher's files. On first start it copies Heroic's logins, settings and games added by hand once.
 
 | Launcher | What Heronite imports |
 |---|---|
@@ -101,21 +101,5 @@ Yes. Turn on a launcher in **Settings → Other launchers**. Heronite only reads
 | Playnite (Windows) | Installed games that are not hidden, with covers and play time |
 
 Each Linux launcher can be the normal install or the Flatpak. Playnite games still launch through Playnite. Heronite skips the launchers' Steam games, because the Steam import already has them. To switch, see the [Heroic](/compare/heroic/), [Lutris](/compare/lutris/) and [Playnite](/compare/playnite/) comparisons.
-
-## How do I add a game that is not from a store?
-
-Press <kbd>Ctrl</kbd> <kbd>N</kbd> to add a program by hand. To add every game in a folder, choose **Add from folder** in the ☰ menu. Both work for Windows programs and, on Linux, AppImages, start scripts and native programs.
-
-![The Add game dialog with fields for the title, cover and background art, the platform set to Windows, the Wine prefix and Proton version, and the executable to run.](../../../assets/screenshots/add-game.webp)
-
-*The Add game dialog for a Windows program.*
-
-## How do I run a trainer with a Steam game on Windows?
-
-1. Open the game's **Game settings → Launch**.
-2. Under **Programs alongside the game**, press **Add program** and choose the trainer.
-3. Play the game from Heronite.
-
-Heronite closes the trainer when the game ends. **Scripts** on the same tab run before the game starts and after it exits. A game started from Steam itself gets neither.
 
 Next: [download Heronite](/download/) and add your first store.

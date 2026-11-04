@@ -16,8 +16,8 @@ highlights:
     text: On Linux, the games in Lutris's library carry over and stay in sync.
   - title: No sign-up
     text: Heronite works without an account of its own.
-  - title: Your play history
-    text: Every session feeds statistics, a journal and a year in review.
+  - title: Sandbox untrusted games
+    text: Run a game with no network and no home folder access.
   - title: Save backups
     text: Ludusavi backs up a game's saves after each session.
 faq:
@@ -46,11 +46,11 @@ related:
 | Emulation | Detected emulators, ROM scan, save states | Runners for many emulators and engines |
 | Wine and Proton | Yes, with a Wine Manager | Yes, GE-Proton through umu by default |
 | Play time | Statistics, journal, year in review | Yes, with a play time editor |
-| Cloud saves | Epic and GOG, in beta | Not listed |
+| Cloud saves | Epic and GOG, in beta | — |
 | Online account | Not needed | Optional lutris.net account |
 | Import from the other launcher | Yes, on Linux | Not applicable |
 
-The Lutris column comes from [lutris.net](https://lutris.net), the [Lutris repository](https://github.com/lutris/lutris) and its [release notes](https://github.com/lutris/lutris/releases), current as of November 2026. "Not listed" means the Lutris README does not list it.
+The Lutris column comes from [lutris.net](https://lutris.net), the [Lutris repository](https://github.com/lutris/lutris) and its [release notes](https://github.com/lutris/lutris/releases), current as of November 2026. — = not in Lutris's README, site or release notes.
 
 ## What do Heronite and Lutris share?
 

@@ -71,7 +71,7 @@ Heronite finds or downloads a Proton, then the official installer. It creates th
 3. Install a game in Battle.net, as you would on Windows.
 4. Press <kbd>Enter</kbd> on the game in your Heronite library to start it. Heronite records the play time.
 
-Before you install a big game, check its **On Linux** box in Heronite. It shows the [ProtonDB](https://www.protondb.com) rating and the anti-cheat status from [Are We Anti-Cheat Yet?](https://areweanticheatyet.com).
+Before you install a big game, look at its **On Linux** row in the game's details. It shows the [ProtonDB](https://www.protondb.com) rating and the anti-cheat status from [Are We Anti-Cheat Yet?](https://areweanticheatyet.com).
 
 If an installed game is missing from your library, press **Refresh** under **Installed games** on the Battle.net page. A game you have not installed shows **Install with Battle.net**, which opens the store app.
 

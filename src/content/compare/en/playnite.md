@@ -16,10 +16,10 @@ highlights:
     text: On Windows, Heronite imports your installed Playnite games with their play time.
   - title: Wine and Proton built in
     text: On Linux, pick a Wine or Proton build per game.
-  - title: Light and native
-    text: Written in Rust, with no browser engine inside.
-  - title: Play history built in
-    text: Every session feeds statistics, a journal and a year in review.
+  - title: Find anything fast
+    text: Ctrl+K opens any game, page or action.
+  - title: Saved views
+    text: Keep filters and sorting as presets like Playing now, Backlog or Finished.
 faq:
   - q: Which launcher can I use instead of Playnite on Linux?
     a: Heronite, which brings your stores, emulators and own games into one library. Heroic and Lutris also run on Linux.
@@ -95,6 +95,6 @@ On Windows, Heronite imports the games Playnite has installed. It only reads Pla
 
 Heronite leaves out Playnite's Steam, Epic, GOG and Amazon games, because it imports those from the stores directly. Tags, completion status and notes stay in Playnite.
 
-On Windows, Heronite adds games the Epic Games Launcher, GOG Galaxy or the Amazon Games app installed, without downloading them again. For Epic games you never played in Heronite, it can take in the play time Epic recorded.
+On Windows, Heronite adds games installed by the Epic Games Launcher, GOG Galaxy or the Amazon Games app, without downloading them again. For Epic games you never played in Heronite, it can take in the play time Epic recorded.
 
 **Next:** [Download Heronite](/download/) for Linux or Windows, then read [Getting started](/docs/getting-started/).

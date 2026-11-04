@@ -18,7 +18,7 @@ If your library is empty, Heronite adds:
 
 On Linux, the empty library also shows **Bring in from another launcher** when it finds games in Heroic, Lutris, Bottles or Faugus. Choose a launcher there to import its games and keep them in sync.
 
-On Windows, Heronite finds the Microsoft Store and PC Game Pass games the Xbox app installed, with no login.
+On Windows, Heronite finds Microsoft Store and PC Game Pass games installed by the Xbox app, with no login.
 
 ## Log in to Epic Games, GOG, or Amazon Games
 
@@ -27,7 +27,7 @@ On Windows, Heronite finds the Microsoft Store and PC Game Pass games the Xbox a
 3. Press **Log in**.
 4. Log in on the store's page in the window that opens.
 
-If the window cannot open, use **Or log in with your browser** on the same page: log in in your browser, then paste the address or code it gives you. See [Stores and launchers](/docs/stores-and-launchers/).
+If the login window does not open, use **Or log in with your browser** on the same page and paste the code it gives you. See [Stores and launchers](/docs/stores-and-launchers/).
 
 On Windows, Heronite also picks up games installed by the Epic Games Launcher, GOG Galaxy or the Amazon Games app, without downloading them again.
 
@@ -61,7 +61,7 @@ The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any 
 - Switch between **Focus** (a list with a details panel) and a **grid** of covers.
 - **Group** by status, store, genre, series, year and more.
 - Save **views** with your filters and sorting (Playing now, Backlog, Finished, Favourites).
-- Select several games (<kbd>Space</kbd>, <kbd>Shift</kbd> + arrows, <kbd>Ctrl</kbd> <kbd>A</kbd>) and press <kbd>F3</kbd> to edit their series and tags at once. <kbd>Ctrl</kbd> <kbd>Z</kbd> undoes it.
+- Select several games (<kbd>Space</kbd>, <kbd>Shift</kbd> with the arrow keys, <kbd>Ctrl</kbd> <kbd>A</kbd>) and press <kbd>F3</kbd> to edit their series and tags at once. <kbd>Ctrl</kbd> <kbd>Z</kbd> undoes it.
 
 ## Play a game and take screenshots
 

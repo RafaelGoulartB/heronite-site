@@ -47,7 +47,7 @@ On Linux, Heronite looks for Ludusavi on `PATH`, `/usr/bin`, `/usr/local/bin` an
 1. Close the game.
 2. Open the game's page and its **Saves** tab, which lists the game's backups.
 3. Choose a backup and press **Restore…**.
-4. Choose the files to put back under **Files to restore**, then confirm.
+4. Choose the files to put back under **Files to restore**, then press **Restore *n* files**.
 
 In **console mode** this is one row on the game's page, **Back up saves (Ludusavi)**.
 

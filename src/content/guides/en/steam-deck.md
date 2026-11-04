@@ -40,7 +40,7 @@ Heronite runs on Steam Deck because SteamOS is Linux. It is not Steam Deck Verif
 ## What you need
 
 - A Steam Deck with its default SteamOS.
-- A keyboard and mouse for the setup, or the Deck's touch screen and its on-screen keyboard (<kbd>Steam</kbd> + <kbd>X</kbd>).
+- A keyboard and mouse for the setup, or the Deck's touch screen and its on-screen keyboard (<kbd>Steam</kbd> <kbd>X</kbd>).
 - Accounts for the stores you want to use.
 
 ## Install Heronite in Desktop Mode

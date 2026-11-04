@@ -25,8 +25,8 @@ faq:
     a: "No. Heronite uses [legendary](https://github.com/derrod/legendary), an open source Epic tool, to log in, install, update and play your games."
   - q: "Can I play Fortnite on Linux?"
     a: "No. Epic has not turned on Linux support in Fortnite's anti-cheat."
-  - q: "Do the free weekly Epic games work on Linux?"
-    a: "Yes, once you claim them on Epic's site. Refresh your library in Heronite and they install like any other game."
+  - q: "Does Heronite sync Epic cloud saves?"
+    a: "Yes, in beta. Open the game's **Game settings → Cloud saves** and press **Sync**. Back up your saves before the first sync."
   - q: "Do I need Wine or Proton installed first?"
     a: "No. Heronite downloads a Proton version when it needs one. You only need a working Vulkan driver. See [Wine and Proton](/docs/wine-and-proton/)."
   - q: "Is it safe to log in to Epic through Heronite?"
@@ -61,7 +61,7 @@ Packages for other distributions are in the [installation guide](/docs/installat
 3. Press **Log in**.
 4. Log in on Epic's page in the window that opens. Your password goes only to Epic.
 
-Your whole Epic library then appears in Heronite, installed or not. If the login window does not open, use **Or log in with your browser** on the same page, as [Troubleshooting](/docs/troubleshooting/#a-store-login-or-download-fails) explains.
+Your whole Epic library then appears in Heronite, installed or not. If the login window does not open, use **Or log in with your browser** on the same page and paste the code it gives you. More in [Troubleshooting](/docs/troubleshooting/#a-store-login-or-download-fails).
 
 ## Claim the free weekly games
 
@@ -75,17 +75,17 @@ The game then shows up in your library. If it is missing, check that you used th
 
 ## Install and play an Epic game
 
-1. Check the **On Linux** box in the game's details. It shows the [ProtonDB](https://www.protondb.com) rating and the anti-cheat status. Gold or Platinum usually runs with no work.
+1. Look at the **On Linux** row in the game's details. It shows the [ProtonDB](https://www.protondb.com) rating and the anti-cheat status. Gold or Platinum usually runs with no work.
 2. Select the game and press <kbd>Enter</kbd>, or choose **Install with Epic Games**.
 3. Check the folder under **Select install path**.
-4. Confirm. The download appears on the Downloads page (<kbd>Ctrl</kbd> <kbd>2</kbd>).
+4. Press **Install**. The download appears on the Downloads page (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 5. When it finishes, select the game and press <kbd>Enter</kbd> to play.
 
 Each game gets its own Wine prefix (a separate Windows folder for that game). If the game's files are already on disk, choose **Import game** and select the folder.
 
 ## Change the Proton version
 
-If the game does not start or runs badly, open **Game settings → Compatibility** and choose another build in **Version**. The ProtonDB line there often names the best one. To choose before you install, open **Show Wine settings** in the install dialog and set the **Wine version**. If you are not sure, keep the default.
+Keep the default unless the game fails. If it does not start or runs badly, open **Game settings → Compatibility** and choose another build in **Version**. The ProtonDB line there often names the best one. To choose before you install, open **Show Wine settings** in the install dialog and set the **Wine version**.
 
 ![Heronite's Game settings for Control, an Epic game, on the Compatibility tab: the Proton version GE-Proton-latest, its ProtonDB rating of Platinum, the Wine prefix and the Winecfg and Winetricks buttons.](../../../assets/screenshots/game-settings.webp)
 
@@ -97,7 +97,7 @@ Anti-cheat is the main reason an online Epic game won't run on Linux. Single-pla
 
 - Some games with Easy Anti-Cheat or BattlEye work. Turn on the matching runtime under **Anti-cheat runtimes** in **Game settings → Compatibility**, and Heronite downloads it before the next launch.
 - Games whose developer does not allow Linux will not run.
-- Fortnite: does not run. Epic has not turned on Linux support in its anti-cheat.
+- Fortnite: does not run.
 
 [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) tracks the status of every game. The docs explain [anti-cheat](/docs/wine-and-proton/#anti-cheat) in more detail.
 

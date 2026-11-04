@@ -36,7 +36,7 @@ Yes. **Settings → Cloud** keeps your statuses, favourites, notes, play time an
 
 ## Will I lose my Heroic setup?
 
-No. At the first start Heronite copies Heroic's data once and only reads it, so Heroic keeps working.
+No. Heronite never changes Heroic's files. On first start it copies Heroic's logins, settings and games added by hand once, and Heroic keeps working.
 
 ## Do games with anti-cheat work?
 

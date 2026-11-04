@@ -67,4 +67,4 @@ Delete `portable.txt` to make the copy use the normal user folders instead. A po
 
 ## Move from Heroic to Heronite (Linux)
 
-On the first start, if `~/.config/heroic` exists, Heronite copies Heroic's data into its own data folder once, so your logins, games, and settings carry over. It only reads Heroic's files.
+On first start, if `~/.config/heroic` exists, Heronite copies Heroic's logins, settings and games added by hand into its own data folder once. Heronite never changes Heroic's files.

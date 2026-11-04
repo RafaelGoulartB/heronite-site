@@ -81,7 +81,7 @@ If you already run one of these store apps in a Wine prefix, press **Use an exis
 3. Install a game in the store app, as you would on Windows.
 4. Press <kbd>Enter</kbd> on the game in your Heronite library to start it.
 
-Before you install a big game, check the **On Linux** box in its details for the [ProtonDB](https://www.protondb.com) rating and anti-cheat status. Gold and Platinum are the safest. If unsure, install a small game first to test your setup.
+Before you install a big game, look at the **On Linux** row in its details for the [ProtonDB](https://www.protondb.com) rating and anti-cheat status. Gold and Platinum are the safest. If unsure, install a small game first to test your setup.
 
 If an installed game is missing from your library, press **Refresh** under **Installed games** on the store app's page. A game you have not installed shows **Install with the EA app**, **Install with Ubisoft Connect** or **Install with the Rockstar Games Launcher**, which opens the store app.
 

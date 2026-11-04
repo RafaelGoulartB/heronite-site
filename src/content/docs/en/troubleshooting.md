@@ -13,9 +13,7 @@ Choose **More info**, then **Run anyway**. The Windows files are not code-signed
 
 ## Heronite won't start or shows a black window
 
-### The window does not open or is black (Linux)
-
-Install the Vulkan driver for your GPU (Mesa's `vulkan-radeon` or `vulkan-intel`, or NVIDIA's driver), then check that `vulkaninfo` lists the GPU. Heronite draws with Vulkan.
+On Linux, install the Vulkan driver for your GPU, then check that `vulkaninfo` lists the GPU. Heronite draws with Vulkan. For AMD or Intel, install `vulkan-radeon` or `vulkan-intel` on Arch, or `mesa-vulkan-drivers` on Debian and Ubuntu; for NVIDIA, its own driver.
 
 ### "Heronite is already running but is not responding"
 
@@ -35,7 +33,7 @@ Check for updates again later. Your network made too many requests to GitHub.
 
 ### The login window does not open
 
-Use **Or log in with your browser** on the same store page: log in in your browser, then paste the address or code into Heronite.
+If the login window does not open, use **Or log in with your browser** on the same page and paste the code it gives you.
 
 To fix the login window itself, install:
 
@@ -58,7 +56,7 @@ When a game closes within 30 seconds of starting and Heronite knows the cause, t
 | "Direct3D failed without DXVK" | **Turn on DXVK and play**, or turn it on in **Game settings → Compatibility** |
 | "Vulkan could not start" | **Copy the command** and run it in a terminal. It installs the Vulkan driver, often missing its 32-bit part (`lib32-vulkan-radeon`, `mesa-vulkan-drivers:i386`, …) |
 | "Wine ran out of open files" | **Use fsync and play**, or choose Fsync instead of Esync in **Game settings → Compatibility** |
-| "The memory map limit is low" | **Raise it and play**, then enter the administrator password (see below) |
+| "The memory map limit is low" | **Raise it and play**, then enter the administrator password ([details](#the-memory-map-limit-is-low-vmmax_map_count)) |
 | "Another Wine still runs on the prefix" | **Stop it and play**, or close the other game |
 | "Easy Anti-Cheat needs its runtime" | **Turn on the anti-cheat runtime and play** |
 | "Easy Anti-Cheat blocks Linux players" | None: the developer does not allow Linux ([Are We Anti-Cheat Yet?](https://areweanticheatyet.com) lists it as denied) |
@@ -81,7 +79,7 @@ sudo sysctl -w vm.max_map_count=1048576
 ## The in-game overlay does not work (Linux)
 
 - Guide button opens Steam: turn off **Guide Button Focuses Steam** in **Steam → Settings → Controller**.
-- Overlay never appears: turn on **Turn on the overlay** in **Settings → Overlay** (it is off by default). It needs Wayland with layer-shell (KDE Plasma, Hyprland, Sway), so it does not work on GNOME or X11.
+- Overlay never appears: switch on **Turn on the overlay** in **Settings → Overlay** (it is off by default). It needs Wayland with layer-shell (KDE Plasma, Hyprland, Sway), so it does not work on GNOME or X11.
 
 ## Find the logs
 
@@ -98,7 +96,7 @@ For more detail:
 - Start Heronite with `RUST_LOG=debug`
 - Turn on **Detailed logs** in **Game settings → Advanced** (on Linux, it adds Wine output too)
 
-If **Turn off logs** is on in **Settings → Advanced**, turn it off before you report a problem.
+If **Turn off logs** is on in **Settings → Advanced**, switch it off before you report a problem.
 
 ## Report a bug
 

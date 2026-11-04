@@ -26,7 +26,7 @@ faq:
   - q: What is the best Proton version for my game?
     a: There is no single best one. **Proton-CachyOS** and **GE-Proton** often get fixes first, so start there. A game's page shows its [ProtonDB](https://www.protondb.com) rating.
   - q: Is there a Proton manager for non-Steam games?
-    a: Yes. The **Wine Manager** (`Ctrl+3`) downloads and updates Proton builds for any game in your Collection.
+    a: Yes. The **Wine Manager** (Ctrl+3) downloads and updates Proton builds for any game in your Collection.
   - q: Do games with anti-cheat work on Linux?
     a: It depends on the game. A game whose developer does not allow Linux will not run. See the [anti-cheat docs](/docs/wine-and-proton/#anti-cheat).
 related:

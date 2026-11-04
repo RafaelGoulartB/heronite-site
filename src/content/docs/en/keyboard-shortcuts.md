@@ -31,7 +31,7 @@ Press <kbd>?</kbd> in Heronite to see every keyboard shortcut.
 | Arrows, <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>PgUp</kbd>, <kbd>PgDn</kbd> | Move |
 | <kbd>Enter</kbd> | Play or install |
 | <kbd>Space</kbd> | Select |
-| <kbd>Shift</kbd> + arrows | Select a range |
+| <kbd>Shift</kbd> with the arrow keys | Select a range |
 | <kbd>Ctrl</kbd> <kbd>A</kbd> | Select every game shown |
 | <kbd>F3</kbd> | Edit the game or the selection |
 | <kbd>Ctrl</kbd> <kbd>Z</kbd> | Undo the last change to selected games |

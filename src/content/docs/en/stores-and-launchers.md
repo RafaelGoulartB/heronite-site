@@ -11,12 +11,18 @@ Heronite puts your games from Steam, Epic Games, GOG, Amazon Games, store apps a
 
 ## Add your Steam games
 
-No login needed. Heronite reads your Steam libraries and keeps them in sync.
+No login needed. Heronite reads your Steam libraries and keeps them in sync, and Steam starts its games.
 
 - **Linux:** it finds Steam in `~/.steam/steam`, `~/.local/share/Steam`, the Flatpak (`~/.var/app/com.valvesoftware.Steam/.local/share/Steam`), and the Snap (`~/snap/steam/common/.local/share/Steam`).
 - **Windows:** it finds Steam from the registry, or in `C:\Program Files (x86)\Steam`.
 
-Steam starts its games. On Windows, Heronite can run scripts and programs, like trainers, around a Steam game.
+### Run a trainer with a Steam game (Windows)
+
+1. Open the game's **Game settings → Launch**.
+2. Under **Programs alongside the game**, press **Add program** and choose the trainer.
+3. Play the game from Heronite.
+
+Heronite closes the trainer when the game ends. **Scripts** on the same tab run before the game starts and after it exits. A game started from Steam itself gets neither.
 
 ## Log in to Epic Games, GOG, and Amazon Games
 
@@ -25,7 +31,7 @@ Steam starts its games. On Windows, Heronite can run scripts and programs, like 
 3. Press **Log in**. A small window opens with the store's own page (WebKitGTK on Linux, WebView2 on Windows).
 4. Log in there.
 
-If the window does not open, use **Or log in with your browser** on the same page:
+If the login window does not open, use **Or log in with your browser** on the same page and paste the code it gives you.
 
 1. Press **Open in browser** and log in.
 2. Copy the address or code shown at the end.
@@ -56,7 +62,7 @@ On Windows, Heronite uses a store app that is already installed.
 
 ## Add Microsoft Store and PC Game Pass games (Windows)
 
-Heronite finds the games the Xbox app and the Microsoft Store installed, bought or from PC Game Pass. Heronite adds them to your library. There is no login: install and update them in the Xbox app, and Heronite starts them and counts their play time.
+Heronite finds games installed by the Xbox app or Microsoft Store, bought or from PC Game Pass. Heronite adds them to your library. There is no login: install and update them in the Xbox app, and Heronite starts them and counts their play time.
 
 Heronite reads them a few seconds after it starts and every ten minutes. To read them now, press **Read games now** on **Stores → Xbox**, or the Collection's refresh button. Uninstall these games in the Xbox app.
 
