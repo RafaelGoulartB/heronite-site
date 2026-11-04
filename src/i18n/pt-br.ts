@@ -147,7 +147,7 @@ const ptBr: Dict = {
       'Backup de saves com Ludusavi',
     ],
     wallLabel: 'Um mural de capas de jogos de uma biblioteca do Heronite, recortado das capturas de tela do próprio app',
-    headlineHtml: 'Todos os<br> seus jogos.<br> <em>Um só launcher.</em>',
+    headlineHtml: 'Todos os<br> seus jogos.<br> Um só launcher.',
     lead: 'Steam, Epic, GOG, Amazon, Battle.net, emuladores e mais, em um app nativo e rápido para Linux, Steam Deck e Windows. Grátis e open source, sem conta e sem telemetria.',
     downloadFree: 'Baixar grátis',
     downloadWindows: 'Baixar para Windows',
@@ -166,7 +166,7 @@ const ptBr: Dict = {
     playMotion: 'Retomar animação',
     sources: 'Roda jogos de',
     sourcesMore: 'e emuladores, e seus próprios jogos',
-    sourcesHow: 'A Steam é lida sem login. Epic, GOG e Amazon instalam pelo Heronite depois que você entra. No Linux, Battle.net, EA, Ubisoft e Rockstar rodam cada um no seu próprio prefixo do Wine. Você entra na página da própria loja, e seus logins ficam no seu PC.',
+    sourcesHow: ['Steam: lida sem login', 'Epic, GOG e Amazon: entre uma vez e instale pelo Heronite', 'Battle.net, EA, Ubisoft e Rockstar: cada um no seu prefixo do Wine no Linux', 'Seus logins ficam no seu PC'],
     collection: {
       alt: 'A Coleção do Heronite: capas de jogos agrupadas em Jogando e Em andamento, com o tempo de jogo embaixo de cada uma, e ELDEN RING aberto com a capa, o botão Jogar, a nota, a avaliação no Linux e uma linha do tempo das sessões.',
       callouts: ['Agrupar por status', 'Tempo de jogo por jogo', 'Avaliação no Linux e anti-cheat', 'Sua linha do tempo', 'Lista ou grade de capas'],
@@ -222,6 +222,7 @@ const ptBr: Dict = {
       deckTitle: 'Modo Jogo da Steam',
       deckHtml: 'Adicione à Steam com <code>--console</code>.',
       homeAlt: 'Início do modo console: SP Football Life 2026 em destaque acima de uma prateleira Continuar jogando com capas, e dicas do controle na parte de baixo',
+      gameAlt: 'Página de jogo do modo console para Elden Ring, com um botão Jogar grande',
     },
     light: {
       headline: 'mediana, da abertura até a sua biblioteca.',

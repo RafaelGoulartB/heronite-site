@@ -74,7 +74,9 @@
 .src-logos svg{width:28px;height:28px}
 .src-more{font:500 15px/1.2 var(--head);color:var(--soft);text-decoration:none}
 .src-more:hover{color:var(--text);text-decoration:underline;text-underline-offset:3px}
-.src-how{flex-basis:100%;max-width:74ch;margin:0 auto;text-align:center;color:var(--muted);font-size:14.5px;line-height:1.55}
+.src-how{flex-basis:100%;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 0;margin:0;padding:0;list-style:none;color:var(--muted);font-size:14.5px;line-height:1.5}
+.src-how li + li::before{content:"·";display:inline-block;margin:0 12px;opacity:.6}
+.frame-phone,.hh-phone{display:none}
 
 /* ---------- sections ---------- */
 .sec{position:relative;padding:120px 0 0}
@@ -88,9 +90,10 @@
 .extras{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;margin:0 0 4px;padding:0;list-style:none}
 .extra{position:relative;grid-column:span 6;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:var(--surface);border:1px solid var(--line);transition:border-color .15s}
 .extra:hover{border-color:rgba(143,211,234,.4)}
-.stage{--SH:300px;--pad:30px;flex:none;display:grid;place-items:center;height:var(--SH);padding:var(--pad);
+.stage{--SH:290px;--pad:28px;flex:none;display:grid;place-items:start center;height:var(--SH);padding:var(--pad) var(--pad) 0;overflow:hidden;
   background:radial-gradient(70% 90% at 50% 0%,rgba(143,211,234,.07),transparent 70%),linear-gradient(180deg,#121720,var(--surface))}
-.wrap .crop.panel{flex:none;width:min(100%,calc((var(--SH) - 2 * var(--pad)) * var(--W) / var(--CH)),calc(var(--W) * 1.4px));aspect-ratio:var(--W) / var(--CH);height:auto;min-height:0;
+.wrap .crop.panel{flex:none;width:min(100%,calc(var(--W) * 1.55px));aspect-ratio:var(--W) / var(--CH);height:auto;min-height:0;
+  -webkit-mask:linear-gradient(#000 calc(100% - 24px),transparent);mask:linear-gradient(#000 calc(100% - 24px),transparent);
   border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 30px 60px -24px rgba(0,0,0,.9)}
 .crop.fade{-webkit-mask:linear-gradient(#000 70%,transparent);mask:linear-gradient(#000 70%,transparent);border-radius:12px 12px 0 0}
 .extra-text{display:flex;flex-direction:column;gap:8px;padding:22px 26px 26px;flex:1;border-top:1px solid var(--line)}
@@ -288,9 +291,8 @@
   .motion{display:none !important}
   /* the whole window is too small to read on a phone: show the shelf and the game page, big */
   .anno{margin-top:40px}
-  /* the game page: Play, the Linux rating and anti-cheat, the timeline */
-  .frame{aspect-ratio:250 / 222}
-  .frame picture{width:512%;margin:calc(-376 / 250 * 100%) 0 0 calc(-282 / 250 * 100%)}
+  .frame{display:none}
+  .frame.frame-phone{display:block}
   .legend{display:none}
   .callout{display:none}
   .legend{grid-template-columns:1fr;gap:8px}
@@ -318,7 +320,8 @@
   .cons-head{margin-bottom:28px}
   .hh-side{display:none}
   .hh-body{display:block;padding:0;background:none;box-shadow:none;border-radius:0}
-  .hh-screen{border-radius:12px;box-shadow:0 0 0 6px #16181c,0 0 0 7px rgba(255,255,255,.08),0 30px 60px -20px rgba(0,0,0,.8)}
+  .hh-screen{display:none}
+  .hh-screen.hh-phone{display:block;border-radius:12px;box-shadow:0 0 0 6px #16181c,0 0 0 7px rgba(255,255,255,.08),0 30px 60px -20px rgba(0,0,0,.8)}
   .cons-facts{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
   .cons-facts li{display:grid;grid-template-columns:64px minmax(0,1fr);align-items:center;gap:2px 12px;padding:14px 0;border-left:0;border-bottom:1px solid var(--line)}
   .cons-facts .cf-key{grid-row:span 2;margin:0}
@@ -344,7 +347,11 @@
   .maker .btn{grid-column:1 / -1;width:100%}
   .guide-list{grid-template-columns:1fr}
   .guide-list li:nth-child(n+5){display:none}
-  .src-how{text-align:left;margin:0}
+  .src-how{flex-direction:column;justify-content:flex-start}
+  .src-how li + li::before{display:none}
+  .src-how li{padding-left:16px;position:relative}
+  .src-how li::after{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--line-2)}
+  .phone .nav .brand span{display:inline}
   .sec-dl .send-btn{width:100%;height:52px}
   .meta-rel{display:none}
   .closing{margin-top:80px;padding-bottom:80px}

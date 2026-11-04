@@ -147,7 +147,7 @@ const es: Dict = {
       'Copias de partidas con Ludusavi',
     ],
     wallLabel: 'Un mural de portadas de juegos de una biblioteca de Heronite, recortado de las capturas de la propia app',
-    headlineHtml: 'Todos<br> tus juegos.<br> <em>Un solo lanzador.</em>',
+    headlineHtml: 'Todos<br> tus juegos.<br> Un solo lanzador.',
     lead: 'Steam, Epic, GOG, Amazon, Battle.net, emuladores y más, en una app nativa y rápida para Linux, Steam Deck y Windows. Gratis y de código abierto, sin cuenta y sin telemetría.',
     downloadFree: 'Descargar gratis',
     downloadWindows: 'Descargar para Windows',
@@ -166,7 +166,7 @@ const es: Dict = {
     playMotion: 'Reanudar animación',
     sources: 'Ejecuta juegos de',
     sourcesMore: 'y emuladores, y tus propios juegos',
-    sourcesHow: 'Steam se lee sin iniciar sesión. Epic, GOG y Amazon se instalan desde Heronite al iniciar sesión. En Linux, Battle.net, EA, Ubisoft y Rockstar se ejecutan cada uno en su propio prefijo de Wine. Inicias sesión en la página de cada tienda, y tus datos de acceso se quedan en tu PC.',
+    sourcesHow: ['Steam: se lee sin iniciar sesión', 'Epic, GOG y Amazon: inicia sesión una vez e instala desde Heronite', 'Battle.net, EA, Ubisoft y Rockstar: cada uno en su prefijo de Wine en Linux', 'Tus datos de acceso se quedan en tu PC'],
     collection: {
       alt: 'La Colección de Heronite: portadas de juegos agrupadas en Jugando y En curso, con el tiempo de juego bajo cada una, y ELDEN RING abierto con su portada, el botón Jugar, la nota, la valoración en Linux y una línea de tiempo de sesiones.',
       callouts: ['Agrupar por estado', 'Tiempo de juego por juego', 'Valoración en Linux y anti-cheat', 'Tu línea de tiempo', 'Lista o cuadrícula de portadas'],
@@ -222,6 +222,7 @@ const es: Dict = {
       deckTitle: 'Modo Juego de Steam',
       deckHtml: 'Añádelo a Steam con <code>--console</code>.',
       homeAlt: 'Inicio del modo consola: SP Football Life 2026 destacado sobre una estantería Seguir jugando con portadas, y pistas del mando en la parte inferior',
+      gameAlt: 'Página de juego del modo consola para Elden Ring, con un gran botón Jugar',
     },
     light: {
       headline: 'mediana, desde el arranque hasta tu biblioteca.',

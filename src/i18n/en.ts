@@ -149,7 +149,7 @@ const en = {
       'Save backups with Ludusavi',
     ],
     wallLabel: 'A wall of game covers from a Heronite library, cropped from the app’s own screenshots',
-    headlineHtml: 'Every game<br> you own.<br> <em>One launcher.</em>',
+    headlineHtml: 'Every game<br> you own.<br> One launcher.',
     lead: 'Steam, Epic, GOG, Amazon, Battle.net, emulators and more, in one fast native app for Linux, Steam Deck and Windows. Free and open source, with no account and no telemetry.',
     downloadFree: 'Download free',
     downloadWindows: 'Download for Windows',
@@ -168,7 +168,7 @@ const en = {
     playMotion: 'Play motion',
     sources: 'Plays games from',
     sourcesMore: 'and emulators, and your own games',
-    sourcesHow: 'Steam is read with no login. Epic, GOG and Amazon install from Heronite once you log in. On Linux, Battle.net, EA, Ubisoft and Rockstar each run in their own Wine prefix. You sign in on each store’s own page, and your logins stay on your PC.',
+    sourcesHow: ['Steam: read with no login', 'Epic, GOG and Amazon: log in once, install from Heronite', 'Battle.net, EA, Ubisoft and Rockstar: each in its own Wine prefix on Linux', 'Your logins stay on your PC'],
     collection: {
       alt: 'Heronite’s Collection: game covers grouped into Playing and On Going, with play time under each, and ELDEN RING open with its cover, Play button, score, Linux rating and a timeline of play sessions.',
       callouts: ['Group by status', 'Play time per game', 'Linux rating and anti-cheat', 'Your timeline', 'List or grid of covers'],
@@ -224,6 +224,7 @@ const en = {
       deckTitle: 'Steam Gaming Mode',
       deckHtml: 'Add it to Steam with <code>--console</code>.',
       homeAlt: 'Console mode home: SP Football Life 2026 in focus above a Continue playing shelf of covers, controller hints along the bottom',
+      gameAlt: 'Console game page for Elden Ring with a large Play button',
     },
     light: {
       headline: 'median, from start to your library.',
