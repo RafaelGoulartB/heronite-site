@@ -183,7 +183,7 @@
 .phone .dl-files[open] > summary{margin-bottom:14px}
 .phone .dl-files[open] > summary::after{content:"×"}
 .maker{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:22px;margin-top:16px;padding:22px 24px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
-.maker img{width:52px;height:52px;border-radius:13px}
+.maker img{width:52px;height:52px;border-radius:22%;outline:1px solid rgba(255,255,255,.09);outline-offset:-1px}
 .maker p{color:var(--soft);font-size:16px;line-height:1.5}
 .maker strong{color:var(--text);font-weight:600}
 .maker-links{display:flex;flex-wrap:wrap;gap:4px 20px;margin-top:10px;font:600 14px/1.4 var(--head)}

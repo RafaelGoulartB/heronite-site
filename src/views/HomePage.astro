@@ -316,7 +316,7 @@ const softwareApplication = {
         <DownloadCards />
       </details>
       <div class="maker">
-        <img src="/icon.png" alt="" width="52" height="52" loading="lazy" />
+        <img src="/icon-small.png" srcset="/icon-small.png 1x, /icon-tile.png 2x" alt="" width="52" height="52" loading="lazy" />
         <div class="maker-text">
           <p set:html={t.maker.textHtml} />
           {activity && <p class="maker-meta"><a href="/changelog/">{activity}</a></p>}
