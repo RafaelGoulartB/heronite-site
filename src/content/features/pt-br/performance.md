@@ -47,7 +47,7 @@ related:
 
 Apps em Electron trazem um motor de navegador completo. O Heronite não. Um programa nativo lê a sua biblioteca e a desenha na GPU com o GPUI, um framework de interface para Rust.
 
-A janela de login das lojas é o único lugar que mostra uma página web. É uma janelinha separada que usa o web view que já existe no seu sistema (WebKitGTK no Linux, WebView2 no Windows). Ela só abre quando você faz login na Epic Games, na GOG ou na Amazon.
+A janela de login das lojas é o único lugar que mostra uma página web. É uma janela separada que usa o web view que já existe no seu sistema (WebKitGTK no Linux, WebView2 no Windows). Ela só abre quando você faz login na Epic Games, na GOG ou na Amazon.
 
 ![A Coleção do Heronite no modo Foco: capas de jogos agrupadas em Jogando e Em andamento com o tempo de jogo embaixo de cada uma, e ELDEN RING aberto com capa, detalhes e uma linha do tempo das sessões de jogo.](../../../assets/screenshots/collection.webp)
 

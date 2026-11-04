@@ -7,11 +7,11 @@ order: 4
 updated: 2026-11-04
 ---
 
-## Heronite no inicia o muestra una ventana negra
-
-### "Windows protegió su PC"
+## "Windows protegió su PC" al iniciar Heronite
 
 Elige **Más información** y luego **Ejecutar de todas formas**. Los archivos de Windows aún no tienen firma de código.
+
+## Heronite no inicia o muestra una ventana negra
 
 ### La ventana no se abre o se ve negra (Linux)
 
@@ -35,7 +35,7 @@ Vuelve a buscar actualizaciones más tarde. Tu red hizo demasiadas peticiones a 
 
 ### La ventana de inicio de sesión no se abre
 
-Usa el **método del navegador** de la página de inicio de sesión: inicia sesión en tu navegador y pega la dirección o el código en Heronite.
+Usa **O inicia sesión con tu navegador** en la misma página de la tienda: inicia sesión en tu navegador y luego pega la dirección o el código en Heronite.
 
 Para arreglar la propia ventana de inicio de sesión, instala:
 
@@ -75,7 +75,7 @@ sudo sysctl -w vm.max_map_count=1048576
 ### El juego sigue cerrándose
 
 - Elige otra **Versión** en **Wine / Proton**, en **Ajustes del juego → Compatibilidad**. GE-Proton o Proton-CachyOS suelen tener las correcciones antes.
-- Dale al juego un prefijo de Wine nuevo (su propia unidad de Windows, con sus ajustes y partidas). En **Ajustes del juego → Compatibilidad**, abre **Prefijo** y elige **Nuevo prefijo para este juego**.
+- Dale al juego un prefijo de Wine nuevo (una carpeta que funciona como un Windows solo para ese juego). En **Ajustes del juego → Compatibilidad**, elige **Nuevo prefijo para este juego** en el menú **Prefijo**. El prefijo nuevo empieza vacío, así que haz antes una copia de seguridad de tus partidas.
 - Lee la página del juego en [ProtonDB](https://www.protondb.com), donde los jugadores comparten lo que les funcionó.
 
 ## El overlay dentro del juego no funciona (Linux)

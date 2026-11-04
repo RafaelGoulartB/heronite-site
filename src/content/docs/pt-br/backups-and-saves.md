@@ -42,7 +42,7 @@ Instale o Ludusavi pelas [versões do projeto](https://github.com/mtkennerly/lud
 
 1. Abra as **Configurações do jogo** e depois a aba **Saves na nuvem**.
 2. Confira a pasta em **Local**. O Heronite encontra ela na maioria dos jogos.
-3. Em **Sincronizar agora**, escolha **Sincronizar (download e upload)**, **Forçar download** ou **Forçar upload** e aperte **Sincronizar**.
+3. Em **Sincronizar agora**, escolha **Sincronizar (download e upload)**, **Forçar download** ou **Forçar upload** e clique em **Sincronizar**.
 4. Ligue **Sincronizar automaticamente** para sincronizar quando o jogo abre e depois que ele fecha.
 
 Os saves na nuvem estão em beta: faça backup dos seus saves antes de sincronizar. Eles funcionam no Linux e no Windows.
@@ -53,11 +53,11 @@ Os saves na nuvem estão em beta: faça backup dos seus saves antes de sincroniz
 
 1. Abra **Configurações → Nuvem**.
 2. Em **Serviço**, escolha uma conta na nuvem (Google Drive, Dropbox, OneDrive ou Box), um servidor (FTP, SMB ou WebDAV) ou **Uma pasta compartilhada**.
-3. Para uma conta ou um servidor, aperte **Conectar**. O Heronite baixa o rclone antes se ele não estiver instalado, e o navegador abre para você fazer login na conta.
+3. Para uma conta ou um servidor, clique em **Conectar**. O Heronite baixa o rclone antes se ele não estiver instalado, e o navegador abre para você fazer login na conta.
 4. Para uma pasta compartilhada, escolha a **Pasta de sincronização**. Em dual boot, use um disco NTFS ou exFAT e desligue a Inicialização Rápida do Windows.
 5. Em **Escolha o que vai, e quando**, coloque **Biblioteca entre PCs** em **Automático** ou **Manual**.
 6. Configure o Heronite nos outros PCs com a mesma conta ou pasta.
 
 A mesma seção pode enviar **Backups do Heronite**, **Saves dos jogos (Ludusavi)** e **Capturas de tela**, cada um em **Automático**, **Manual** ou **Desligado**. O modo automático nunca envia nada durante um jogo. Jogos instalados, prefixos Wine, configurações dos jogos e logins das lojas ficam sempre em cada PC.
 
-Em um PC novo, conecte na mesma conta e aperte **Restaurar tudo** em **Restaurar da nuvem**.
+Em um PC novo, conecte na mesma conta e clique em **Restaurar tudo** em **Restaurar da nuvem**.

@@ -42,7 +42,7 @@ Instala Ludusavi desde [sus versiones](https://github.com/mtkennerly/ludusavi/re
 
 1. Abre los **Ajustes del juego** y luego la pestaña **Guardados en la nube**.
 2. Revisa la carpeta en **Ubicación**. Heronite la encuentra en la mayoría de los juegos.
-3. En **Sincronizar ahora**, elige **Sincronizar (descarga y subida)**, **Forzar descarga** o **Forzar subida** y pulsa **Sincronizar**.
+3. En **Sincronizar ahora**, elige **Sincronizar (descarga y subida)**, **Forzar descarga** o **Forzar subida** y haz clic en **Sincronizar**.
 4. Activa **Sincronizar automáticamente** para sincronizar al abrir el juego y después de cerrarlo.
 
 Los guardados en la nube están en beta: haz una copia de tus partidas antes de sincronizar. Funcionan en Linux y en Windows.
@@ -53,11 +53,11 @@ Los guardados en la nube están en beta: haz una copia de tus partidas antes de 
 
 1. Abre **Ajustes → Nube**.
 2. En **Servicio**, elige una cuenta en la nube (Google Drive, Dropbox, OneDrive o Box), un servidor (FTP, SMB o WebDAV) o **Una carpeta compartida**.
-3. Para una cuenta o un servidor, pulsa **Conectar**. Heronite descarga rclone primero si no está instalado, y tu navegador se abre para iniciar sesión en la cuenta.
+3. Para una cuenta o un servidor, haz clic en **Conectar**. Heronite descarga rclone primero si no está instalado, y tu navegador se abre para iniciar sesión en la cuenta.
 4. Para una carpeta compartida, elige la **Carpeta de sincronización**. En un arranque dual, usa una unidad NTFS o exFAT y desactiva el inicio rápido de Windows.
 5. En **Elige qué va, y cuándo**, pon **Biblioteca entre PC** en **Automático** o **Manual**.
 6. Configura Heronite en tus otros PC con la misma cuenta o carpeta.
 
 La misma sección puede enviar **Copias de Heronite**, **Guardados de los juegos (Ludusavi)** y **Capturas**, cada una en **Automático**, **Manual** o **Desactivado**. En automático, nunca envía nada durante un juego. Los juegos instalados, los prefijos de Wine, los ajustes de los juegos y los inicios de sesión en las tiendas se quedan siempre en cada PC.
 
-En un PC nuevo, conéctate a la misma cuenta y pulsa **Restaurar todo** en **Restaurar desde la nube**.
+En un PC nuevo, inicia sesión en la misma cuenta y haz clic en **Restaurar todo** en **Restaurar desde la nube**.

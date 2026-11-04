@@ -79,7 +79,7 @@ Añade más carpetas en la página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>)
 
 ## Continúa una partida desde un estado guardado
 
-1. Pulsa **Jugar** en el juego.
+1. Haz clic en **Jugar** en el juego.
 2. En **¿Cómo quieres jugar?**, elige un estado guardado.
 3. Elige **Continuar**.
 

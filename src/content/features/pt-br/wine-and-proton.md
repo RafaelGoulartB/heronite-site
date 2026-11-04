@@ -22,13 +22,13 @@ highlights:
     text: Erros de inicialização vêm com uma sugestão de correção.
 faq:
   - q: Como rodar jogos do Windows no Linux?
-    a: Adicione o jogo e aperte Jogar. Se for de uma loja, faça login nela primeiro. Mude os ajustes em **Configurações do jogo → Compatibilidade**.
+    a: Adicione o jogo e clique em **Jogar**. Se for de uma loja, faça login nela primeiro. Mude os ajustes em **Configurações do jogo → Compatibilidade**.
   - q: Qual é a melhor versão do Proton para o meu jogo?
     a: Não existe uma única melhor. **Proton-CachyOS** e **GE-Proton** costumam receber correções primeiro, então comece por elas. A página do jogo mostra a nota dele no [ProtonDB](https://www.protondb.com).
   - q: Existe um gerenciador de Proton para jogos que não são da Steam?
     a: Sim. O **Gerenciador do Wine** (`Ctrl+3`) baixa e atualiza versões do Proton para qualquer jogo da sua Coleção.
   - q: Jogos com anti-cheat funcionam no Linux?
-    a: Depende do jogo. Um jogo cuja desenvolvedora não permite o Linux não vai rodar. Veja a [documentação de anti-cheat](/docs/wine-and-proton/#anti-cheat).
+    a: Depende do jogo. Um jogo cujo desenvolvedor não permite o Linux não vai rodar. Veja a [documentação de anti-cheat](/docs/wine-and-proton/#anti-cheat).
 related:
   - /guides/install-ge-proton/
   - /guides/steam-deck/
@@ -60,7 +60,7 @@ Para instalar passo a passo, veja [instalar o GE-Proton](/pt-br/guides/install-g
 
 ## O que é um prefixo Wine?
 
-Um prefixo é a pasta que imita o Windows onde um jogo roda. Por padrão os jogos são instalados em `~/Games/Heronite`, e cada jogo ganha o seu próprio prefixo em `~/Games/Heronite/Prefixes`, mas vários jogos podem dividir um. O Gerenciador do Wine lista os seus prefixos, e **Configurações do jogo → Compatibilidade** tem os botões **Winecfg** e **Winetricks**.
+Um prefixo Wine é uma pasta que funciona como um Windows só daquele jogo. Por padrão os jogos são instalados em `~/Games/Heronite`, e cada jogo ganha o seu próprio prefixo em `~/Games/Heronite/Prefixes`, mas vários jogos podem dividir um. O Gerenciador do Wine lista os seus prefixos, e **Configurações do jogo → Compatibilidade** tem os botões **Winecfg** e **Winetricks**.
 
 ## Quais opções posso ajustar por jogo?
 
@@ -107,7 +107,7 @@ Se nenhuma correção aparecer, escolha outra versão do Proton em **Configuraç
 
 ## Como verifico o status de anti-cheat de um jogo?
 
-Jogos single-player raramente têm problemas com anti-cheat. Nos outros, os detalhes do jogo mostram o status do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com), para você conferir antes de comprar ou instalar. O Heronite pode fornecer os runtimes do EAC e do BattlEye. Um jogo cuja desenvolvedora não permite o Linux não vai rodar.
+Jogos single-player raramente têm problemas com anti-cheat. Nos outros, os detalhes do jogo mostram o status do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com), para você conferir antes de comprar ou instalar. O Heronite pode fornecer os runtimes do EAC e do BattlEye. Um jogo cujo desenvolvedor não permite o Linux não vai rodar.
 
 ## Funciona no Steam Deck?
 

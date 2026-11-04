@@ -33,7 +33,7 @@ related:
   - /features/wine-and-proton/
 ---
 
-O [Ludusavi](https://github.com/mtkennerly/ludusavi) é um programa gratuito que sabe onde milhares de jogos guardam os saves: numa pasta do Windows, numa pasta da Steam ou num prefixo Wine (a pasta do Windows onde um jogo roda no Linux). Instale uma vez, e o Heronite faz backup dos saves de um jogo após cada sessão.
+O [Ludusavi](https://github.com/mtkennerly/ludusavi) é um programa gratuito que sabe onde milhares de jogos guardam os saves: numa pasta do Windows, numa pasta da Steam ou no prefixo Wine do jogo (uma pasta que funciona como um Windows só daquele jogo). Instale uma vez, e o Heronite faz backup dos saves de um jogo após cada sessão.
 
 ## Como instalo o Ludusavi para o Heronite?
 
@@ -46,7 +46,7 @@ No Linux, o Heronite procura o Ludusavi no `PATH`, em `/usr/bin`, `/usr/local/bi
 
 1. Feche o jogo.
 2. Abra a página do jogo e a aba **Saves**, que lista os backups desse jogo.
-3. Escolha um backup e aperte **Restaurar…**.
+3. Escolha um backup e clique em **Restaurar…**.
 4. Escolha os arquivos a devolver em **Arquivos a restaurar** e confirme.
 
 No **modo console** isso é uma linha na página do jogo, **Fazer backup dos saves (Ludusavi)**.
@@ -57,7 +57,7 @@ No **modo console** isso é uma linha na página do jogo, **Fazer backup dos sav
 
 ## O Heronite sincroniza os saves na nuvem da Epic e da GOG?
 
-Sim, em beta, no Linux e no Windows. Abra **Configurações do jogo → Saves na nuvem** e aperte **Sincronizar**, ou ligue **Sincronizar automaticamente** para sincronizar quando o jogo abre e depois que ele fecha. Faça backup dos seus saves antes da primeira sincronização.
+Sim, em beta, no Linux e no Windows. Abra **Configurações do jogo → Saves na nuvem** e clique em **Sincronizar**, ou ligue **Sincronizar automaticamente** para sincronizar quando o jogo abre e depois que ele fecha. Faça backup dos seus saves antes da primeira sincronização.
 
 ## Como agendar backups da minha Coleção inteira?
 
@@ -84,7 +84,7 @@ Jogos instalados, versões do Wine e do Proton, caches e logs ficam de fora, por
 
 1. Em **Configurações → Backups**, escolha um backup para ver o que ele guarda.
 2. Escolha as partes a devolver.
-3. Aperte **Restaurar…** e depois **Restaurar e reiniciar**.
+3. Clique em **Restaurar…** e depois em **Restaurar e reiniciar**.
 
 O Heronite antes faz backup do que você tem agora, para você poder voltar atrás. Veja [Arquivos e pastas](/pt-br/docs/files-and-folders/).
 

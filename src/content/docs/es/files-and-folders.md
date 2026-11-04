@@ -38,7 +38,7 @@ Ten cuidado al copiar o compartir la carpeta de datos: esas tres carpetas guarda
 
 ## ¿Dónde se guardan los juegos y los prefijos de Wine? (Linux)
 
-Un prefijo de Wine es la unidad de Windows propia de un juego, con sus ajustes y partidas guardadas.
+Un prefijo de Wine es una carpeta que funciona como un Windows solo para un juego, con sus ajustes y partidas guardadas.
 
 | Ruta | Qué contiene |
 |---|---|

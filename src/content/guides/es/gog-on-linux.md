@@ -22,7 +22,7 @@ highlights:
     text: "Cada juego de Windows funciona en su propia carpeta, separado de los demás."
 faq:
   - q: "¿Hay un GOG Galaxy para Linux?"
-    a: "No, GOG no hace una versión de Galaxy para Linux. Heronite usa [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl), una herramienta de GOG de código abierto, para iniciar sesión, descargar, verificar y actualizar tus juegos."
+    a: "No, GOG no hace una versión de Galaxy para Linux. Heronite usa [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl), una herramienta de código abierto no oficial para GOG, para iniciar sesión, descargar, verificar y actualizar tus juegos."
   - q: "¿Funcionan los juegos de GOG en Linux?"
     a: "Muchos sí. La mayoría son juegos de Windows que funcionan con Wine o Proton. Mira la valoración del juego en [ProtonDB](https://www.protondb.com) antes de instalar."
   - q: "¿Por qué fallan mis descargas de GOG en Linux?"
@@ -57,18 +57,19 @@ Los demás formatos están en la [guía de instalación](/es/docs/installation/)
 
 ## Inicia sesión en GOG
 
-1. Pulsa <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Tiendas**.
-2. Elige **GOG** y luego **Iniciar sesión con GOG**.
-3. Inicia sesión en la página de GOG, en la ventana que se abre.
+1. Abre **Tiendas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Elige **GOG**.
+3. Haz clic en **Iniciar sesión**.
+4. Inicia sesión en la página de GOG, en la ventana que se abre.
 
-Toda tu biblioteca de GOG aparece entonces en Heronite. Si la ventana no se abre, usa el **método del navegador** en la misma página. Copia la dirección a la que llegas, que contiene `code=`, y pégala en Heronite ([inicios de sesión en tiendas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda)).
+Toda tu biblioteca de GOG aparece entonces en Heronite. Si la ventana no se abre, usa **O inicia sesión con tu navegador** en la misma página. Copia la dirección a la que llegas, que contiene `code=`, y pégala en Heronite ([inicios de sesión en tiendas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda)).
 
 ## Instala y juega un juego de GOG
 
 Mira primero el recuadro **En Linux** en los detalles del juego para ver la valoración de [ProtonDB](https://www.protondb.com).
 
 1. Busca el juego en tu biblioteca y pulsa <kbd>Enter</kbd>, o elige **Instalar con GOG**.
-2. Elige la **Carpeta de instalación**. Para un juego de Windows, la **Versión de Wine** está en **Mostrar ajustes de Wine**; la opción por defecto es un buen punto de partida.
+2. Revisa la carpeta en **Seleccionar ruta de instalación**. Para un juego de Windows, la **Versión de Wine** está en **Mostrar ajustes de Wine**; la opción por defecto es un buen punto de partida.
 3. Confirma. Sigue la descarga en la página Descargas (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 4. Cuando termine, selecciona el juego y pulsa <kbd>Enter</kbd> para jugar.
 
@@ -80,17 +81,17 @@ Si un juego de Windows da problemas, abre **Ajustes del juego → Compatibilidad
 
 ![Los Ajustes del juego de Control en la pestaña Compatibilidad, con la versión de Proton, su valoración de ProtonDB y el prefijo de Wine.](../../../assets/screenshots/game-settings.webp)
 
-Cada juego de Windows tiene su propio prefijo de Wine, una carpeta de Windows aparte, en `~/Games/Heronite/Prefixes`.
+Cada juego de Windows tiene su propio prefijo de Wine (una carpeta que funciona como un Windows solo para ese juego) en `~/Games/Heronite/Prefixes`.
 
 ## Añade a mano juegos de GOG sin DRM
 
 1. Descarga el instalador offline desde tu cuenta de GOG en la web.
-2. Ejecuta el instalador. Para uno de Windows, usa **Ejecutar .exe en el prefijo** en **Ajustes del juego → Compatibilidad**, o ejecútalo tú mismo con Wine.
+2. Ejecuta el instalador. Para uno de Windows, haz clic en **Ejecutar .exe en el prefijo** en **Ajustes del juego → Compatibilidad**, o ejecútalo tú mismo con Wine.
 3. Pulsa <kbd>Ctrl</kbd> <kbd>N</kbd> y añade el juego instalado: un programa de Windows (`.exe`), un programa nativo de Linux o un script de inicio.
 
-Para añadir muchos juegos a la vez, indica a Heronite la carpeta donde están. Heronite busca imágenes y detalles para estos juegos, pero no están vinculados a tu cuenta de GOG, así que no se actualizan.
+Para añadir muchos juegos a la vez, elige **Añadir desde una carpeta** en el menú ☰. Heronite busca imágenes y detalles para estos juegos, pero no están vinculados a tu cuenta de GOG, así que no se actualizan.
 
-Si un juego de GOG ya está en este PC, usa **Importar un juego instalado** en la página de GOG en lugar de descargarlo otra vez.
+Si un juego de GOG ya está en este PC, haz clic en **Importar juego** bajo **Importar un juego instalado** en la página de GOG en lugar de descargarlo otra vez.
 
 ## Actualiza, repara o mueve un juego de GOG
 

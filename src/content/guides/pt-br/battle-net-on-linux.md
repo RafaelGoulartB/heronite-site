@@ -26,11 +26,11 @@ faq:
   - q: "Quais jogos da Blizzard funcionam no Linux?"
     a: "Muitos, dependendo do jogo. Veja antes a nota dele no ProtonDB. Call of Duty não funciona, porque o anti-cheat Ricochet dele não roda no Linux."
   - q: "Isso funciona no Windows?"
-    a: "Sim. No Windows, o Heronite roda a Battle.net sem Wine e usa a instalação que você já tiver. Os jogos dela entram na sua biblioteca e abrem por ela."
+    a: "Sim. No Windows, o Heronite roda a Battle.net direto, sem Wine, e usa a instalação que você já tem, se houver. Os jogos dela aparecem na sua biblioteca e abrem pela Battle.net."
   - q: "Onde o Heronite coloca a Battle.net?"
     a: "Num prefixo Wine em `~/Games/Heronite/Prefixes/Battle.net`. Remover a Battle.net do Heronite deixa essa pasta e os jogos dela no disco."
   - q: "Já uso a Battle.net no Wine ou no Lutris. Posso manter?"
-    a: "Sim. Escolha **Usar uma instalação existente** na página da Battle.net e aponte o Heronite para o seu prefixo Wine."
+    a: "Sim. Clique em **Usar uma instalação existente** na página da Battle.net e selecione o seu prefixo Wine."
 related:
   - /guides/ea-app-ubisoft-rockstar-on-linux/
   - /guides/install-ge-proton/
@@ -59,31 +59,31 @@ Os outros formatos estão no [guia de instalação](/pt-br/docs/installation/). 
 
 1. Aperte <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Lojas**.
 2. Na lista da esquerda, em **Apps das lojas**, escolha **Battle.net**.
-3. Escolha **Instalar o Battle.net**.
+3. Clique em **Instalar o Battle.net**.
 4. Espere a página mostrar **Pronto**. Pode levar alguns minutos.
 
-O Heronite acha ou baixa um Proton e depois o instalador oficial. Ele cria o prefixo Wine (uma pasta separada do Windows) `~/Games/Heronite/Prefixes/Battle.net` e instala a Battle.net nele. Se você já tem a Battle.net num prefixo Wine, escolha **Usar uma instalação existente** no lugar do passo 3 e selecione esse prefixo.
+O Heronite acha ou baixa um Proton e depois o instalador oficial. Ele cria o prefixo Wine (uma pasta que funciona como um Windows só daquele app) `~/Games/Heronite/Prefixes/Battle.net` e instala a Battle.net nele. Se você já tem a Battle.net num prefixo Wine, clique em **Usar uma instalação existente** no lugar do passo 3 e selecione esse prefixo.
 
 ## Faça login, instale e jogue os jogos da Blizzard
 
-1. Escolha **Abrir o Battle.net**.
+1. Clique em **Abrir o Battle.net**.
 2. Faça login na janela da Battle.net. O Heronite nunca vê a sua senha, e a página dele passa a mostrar **Conectado**.
 3. Instale um jogo na Battle.net, como faria no Windows.
 4. Aperte <kbd>Enter</kbd> no jogo na sua biblioteca do Heronite para abri-lo. O Heronite registra o tempo de jogo.
 
 Antes de instalar um jogo grande, veja a caixa **No Linux** dele no Heronite. Ela mostra a nota do [ProtonDB](https://www.protondb.com) e o status do anti-cheat do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com).
 
-Se um jogo instalado não aparecer na sua biblioteca, escolha **Atualizar** em **Instalados** na página da Battle.net. Um jogo que você não instalou mostra **Instalar pelo Battle.net**, que abre o app da loja.
+Se um jogo instalado não aparecer na sua biblioteca, clique em **Atualizar** em **Instalados** na página da Battle.net. Um jogo que você não instalou mostra **Instalar pelo Battle.net**, que abre o app da loja.
 
 ## Troque a versão do Proton da Battle.net
 
 Abra **Configurações do Wine** na página da Battle.net e escolha outra versão em **Versão**, na aba **Compatibilidade**. Até você mudar, o Heronite usa o seu Proton padrão. [GE-Proton e Proton-CachyOS](/pt-br/guides/install-ge-proton/) são os mais comuns para testar.
 
-Para abrir o prefixo, escolha **Abrir pasta** ao lado de **Prefixo Wine**, na mesma página. Para encerrar o app da loja e tudo o que roda no prefixo dele, feche antes qualquer jogo aberto e escolha **Fechar o Battle.net**.
+Para abrir o prefixo, clique em **Abrir pasta** ao lado de **Prefixo Wine**, na mesma página. Para encerrar o app da loja e tudo o que roda no prefixo dele, feche antes qualquer jogo aberto e clique em **Fechar o Battle.net**.
 
 ## Remova a Battle.net do Heronite
 
-Escolha **Remover do Heronite** na página da Battle.net. O prefixo Wine e os jogos instalados nele continuam no disco. Apague a pasta do prefixo você mesmo para ter o espaço de volta ([Arquivos e pastas](/pt-br/docs/files-and-folders/)).
+Clique em **Remover do Heronite** na página da Battle.net. O prefixo Wine e os jogos instalados nele continuam no disco. Apague a pasta do prefixo você mesmo para ter o espaço de volta ([Arquivos e pastas](/pt-br/docs/files-and-folders/)).
 
 ## O anti-cheat bloqueia algum jogo da Blizzard?
 

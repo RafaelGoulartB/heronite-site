@@ -5,7 +5,7 @@ eyebrow: Guía de Linux
 headline: "Cómo jugar a Amazon Games en Linux"
 lead: "La app de Amazon no funciona en Linux. Heronite inicia sesión en Amazon y ejecuta con Proton tus Amazon Games y los juegos de Prime Gaming que reclamaste."
 navLabel: Amazon Games en Linux
-summary: "Inicia sesión en Amazon desde Heronite y tus juegos de Prime Gaming y de Amazon entran en tu biblioteca, listos para instalar con Proton."
+summary: "Inicia sesión en Amazon desde Heronite y tus juegos de Prime Gaming y de Amazon aparecen en tu biblioteca, listos para instalar con Proton."
 order: 5
 hero: ../../../assets/screenshots/game-settings.webp
 heroAlt: "Los Ajustes del juego de Heronite en la pestaña Compatibilidad: la versión de Proton GE-Proton-latest, su valoración Platinum de ProtonDB, el prefijo de Wine y los botones Winecfg y Winetricks."
@@ -22,7 +22,7 @@ highlights:
     text: "Los juegos instalados siguen en el disco si cierras sesión en Amazon."
 faq:
   - q: "¿Hay una app de Amazon Games para Linux?"
-    a: "No, Amazon no tiene app para Linux. Heronite usa [nile](https://github.com/imLinguin/nile), una herramienta de código abierto para Amazon Games, para iniciar sesión, descargar y actualizar tus juegos."
+    a: "No, Amazon no tiene app para Linux. Heronite usa [nile](https://github.com/imLinguin/nile), una herramienta de código abierto no oficial para Amazon Games, para iniciar sesión, descargar y actualizar tus juegos."
   - q: "¿Funcionan los juegos de Prime Gaming en Linux?"
     a: "Sí, una vez que los reclamas en la web de Amazon. Actualiza tu biblioteca en Heronite y se instalan como cualquier otro juego."
   - q: "¿Necesito tener Wine instalado antes?"
@@ -56,11 +56,12 @@ Los demás formatos están en la [guía de instalación](/es/docs/installation/)
 
 ## Inicia sesión en Amazon Games
 
-1. Pulsa <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Tiendas**.
-2. Elige **Amazon Games** y luego **Iniciar sesión con Amazon Games**.
-3. Inicia sesión en la página de Amazon, en la ventana que se abre.
+1. Abre **Tiendas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Elige **Amazon Games**.
+3. Haz clic en **Iniciar sesión**.
+4. Inicia sesión en la página de Amazon, en la ventana que se abre.
 
-Tus juegos de Amazon aparecen entonces en tu biblioteca, con los de Prime Gaming que reclamaste. Si la ventana de inicio de sesión no se abre, elige **Abrir en el navegador** en la misma página. Inicia sesión y pega la dirección de la página de amazon.com a la que llegas ([inicios de sesión en tiendas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda)).
+Tus juegos de Amazon aparecen entonces en tu biblioteca, con los de Prime Gaming que reclamaste. Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en la misma página: haz clic en **Abrir en el navegador**. Inicia sesión y pega la dirección de la página de amazon.com a la que llegas ([inicios de sesión en tiendas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda)).
 
 ## Reclama tus juegos de Prime Gaming
 
@@ -77,7 +78,7 @@ Los juegos nuevos aparecen entonces en tu biblioteca. Amazon decide qué ofrece 
 Mira primero el recuadro **En Linux** en los detalles del juego. Muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat. Un juego Gold o Platinum suele funcionar sin cambios.
 
 1. Selecciona el juego y pulsa <kbd>Enter</kbd>, o elige **Instalar con Amazon Games**.
-2. Revisa la **Carpeta de instalación**. La **Versión de Wine** está en **Mostrar ajustes de Wine**; la de por defecto sirve para empezar.
+2. Revisa la carpeta en **Seleccionar ruta de instalación**. La **Versión de Wine** está en **Mostrar ajustes de Wine**; la de por defecto sirve para empezar.
 3. Confirma. Sigue la descarga en la página Descargas (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 4. Cuando termine, selecciona el juego y pulsa <kbd>Enter</kbd> para jugar.
 

@@ -78,4 +78,4 @@ Heronite skips their Steam games, since the Steam import already adds them, so n
 
 ## Add games you already have
 
-Press <kbd>Ctrl</kbd> <kbd>N</kbd> to add a program, or point at a folder to add every game in it: Windows programs and, on Linux, AppImages, start scripts, and Linux programs.
+Press <kbd>Ctrl</kbd> <kbd>N</kbd> to add a program, or choose **Add from folder** in the ☰ menu to add every game in a folder: Windows programs and, on Linux, AppImages, start scripts, and Linux programs.

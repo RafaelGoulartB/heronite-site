@@ -70,7 +70,7 @@ ROMs/
 └── gba/
 ```
 
-Na primeira abertura, o Heronite varre estas pastas, se existirem:
+Na primeira vez que você abre o Heronite, ele varre estas pastas, se existirem:
 
 - **Linux** (na sua pasta pessoal): `ROMs`, `Roms`, `roms`, `Emulation/roms`, `Games/ROMs`, `Games/Emulation/roms`, `retrodeck/roms`, `RetroDECK/roms`; e `Emulation/roms`, `roms`, `retrodeck/roms` em outros discos.
 - **Windows:** `ROMs`, `Emulation\roms`, `Games\ROMs`, `Documents\ROMs` na pasta do seu usuário; e `Emulation\roms`, `ROMs`, `Games\ROMs`, `RetroArch-Win64\roms` na raiz de cada unidade.
@@ -79,7 +79,7 @@ Adicione mais pastas na página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>). A
 
 ## Continuar um jogo de um estado salvo
 
-1. Aperte **Jogar** no jogo.
+1. Clique em **Jogar** no jogo.
 2. Em **Como você quer jogar?**, escolha um estado salvo.
 3. Escolha **Continuar**.
 

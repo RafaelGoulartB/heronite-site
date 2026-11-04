@@ -38,11 +38,11 @@ related:
 ## ¿Cómo reúno todos mis juegos en una sola Colección?
 
 - **Steam:** Heronite trae tus bibliotecas de [Steam](/es/features/stores/) sin iniciar sesión.
-- **Epic Games, GOG y Amazon Games:** inicia sesión en la página **Tiendas** y entra toda la biblioteca, instalada o no.
-- **Battle.net, EA app, Ubisoft Connect y Rockstar Games:** aparecen los juegos que instalas en cada app de la tienda. En Linux, la app de la tienda se ejecuta en su propio prefijo de Wine (una carpeta de Windows aparte).
-- **Microsoft Store y PC Game Pass (Windows):** los juegos que instaló la app de Xbox entran sin iniciar sesión.
+- **Epic Games, GOG y Amazon Games:** inicia sesión en la página **Tiendas** y Heronite añade toda la biblioteca, instalada o no.
+- **Battle.net, EA app, Ubisoft Connect y Rockstar Games:** aparecen los juegos que instalas en cada app de la tienda. En Linux, la app de la tienda se ejecuta en su propio prefijo de Wine (una carpeta que funciona como un Windows solo para esa app).
+- **Microsoft Store y PC Game Pass (Windows):** Heronite añade los juegos que instaló la app de Xbox, sin iniciar sesión.
 - **Emuladores:** Heronite [los detecta](/es/features/emulation/) y escanea tus carpetas de ROMs.
-- **Otros launchers:** los juegos de Heroic, Lutris, Bottles y Faugus en Linux, y los de Playnite en Windows, entran y se mantienen sincronizados.
+- **Otros launchers:** los juegos de Heroic, Lutris, Bottles y Faugus en Linux, y los de Playnite en Windows, importados y sincronizados.
 
 ## ¿Cómo añado un juego que no es de una tienda?
 
@@ -53,7 +53,7 @@ Pulsa <kbd>Ctrl</kbd> <kbd>N</kbd> (o **Añadir un juego**) para añadir:
 - Un juego de navegador, por su dirección web
 - Una ROM, o una carpeta entera de ROMs
 
-Para añadir muchos juegos a la vez, indica a Heronite una carpeta.
+Para añadir muchos juegos a la vez, elige **Añadir desde una carpeta** en el menú ☰.
 
 ![El diálogo para añadir un juego con campos para el título, el arte cuadrado y el fondo, la plataforma, el prefijo de Wine y la versión de Proton, y el programa que se ejecuta.](../../../assets/screenshots/add-game.webp)
 

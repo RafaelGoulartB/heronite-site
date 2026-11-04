@@ -55,16 +55,16 @@ Cada ferramenta liga um recurso. O Heronite funciona sem elas.
 | [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/) | Replay (o pacote do sistema ou o app do Flathub) |
 | [Ludusavi](https://github.com/mtkennerly/ludusavi) | Backup dos saves depois de cada sessão |
 | `python3` | Downloads da GOG (o gogdl, a ferramenta de download da GOG, roda em Python) |
-| WebKitGTK 4.1 | A janela de login das lojas. Sem ele, use o login pelo navegador na página de login. |
+| WebKitGTK 4.1 | A janela de login das lojas. Sem ele, faça login pelo navegador. |
 
 ## Atualizar o Heronite
 
 O Heronite procura uma versão nova no GitHub logo depois de abrir e depois a cada 6 horas. Ele confere cada download com a chave de assinatura das versões (minisign) antes de usar.
 
-- **AppImage:** o Heronite baixa a versão nova ao lado da antiga e troca uma pela outra; ela roda a partir da próxima abertura. Deixe o AppImage em uma pasta com permissão de escrita, como `~/Applications`.
+- **AppImage:** o Heronite baixa a versão nova ao lado da antiga e troca uma pela outra; ela passa a valer na próxima vez que você abrir o Heronite. Deixe o AppImage em uma pasta com permissão de escrita, como `~/Applications`.
 - **Pacotes .deb, .rpm e Arch:** o Heronite baixa o pacote assinado e instala pelo `pkexec`, que pede a sua senha.
 - **Instalador do Windows:** o Heronite roda o novo instalador em silêncio quando você fecha o programa.
-- **Windows portátil:** o Heronite troca os arquivos do programa no lugar e guarda os antigos como `.old` até a próxima abertura.
+- **Windows portátil:** o Heronite troca os arquivos do programa no lugar e guarda os antigos como `.old` até você abrir o Heronite de novo.
 
 Em **Configurações → Sobre**, desligue **Verificar atualizações automaticamente** ou ligue **Instalar atualizações automaticamente** (desligado por padrão). A variável de ambiente `HERONITE_NO_UPDATE_CHECK=1` também desliga as verificações.
 

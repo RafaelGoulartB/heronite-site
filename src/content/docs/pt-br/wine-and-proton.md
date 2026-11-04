@@ -24,7 +24,7 @@ As versões vão para a pasta de dados do Heronite (`~/.local/share/heronite/too
 
 ## Onde ficam os jogos e os prefixos Wine
 
-Um prefixo Wine é o drive do Windows de cada jogo, com as configurações, os saves e o que o Winetricks instala. Por padrão:
+Um prefixo Wine é uma pasta que funciona como um Windows só daquele jogo, com as configurações, os saves e o que o Winetricks instala. Por padrão:
 
 - Os jogos são instalados em `~/Games/Heronite`
 - Cada jogo ganha o próprio prefixo em `~/Games/Heronite/Prefixes`
@@ -54,4 +54,4 @@ Para rodar um jogo em que você não confia, ligue **Rodar em um sandbox** em **
 
 ## Anti-cheat
 
-O Heronite mostra nos detalhes de cada jogo o status do anti-cheat, vindo do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com). Se o jogo funciona no Linux, ligue **BattlEye** ou **Easy Anti-Cheat** em **Runtimes de anti-cheat**, em **Configurações do jogo → Compatibilidade**; o Heronite baixa o runtime antes da próxima abertura. Um jogo cujo desenvolvedor não permite Linux não vai rodar, com nenhuma configuração.
+O Heronite mostra nos detalhes de cada jogo o status do anti-cheat, vindo do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com). Se o jogo funciona no Linux, ligue **BattlEye** ou **Easy Anti-Cheat** em **Runtimes de anti-cheat**, em **Configurações do jogo → Compatibilidade**; o Heronite baixa o runtime antes de você abrir o jogo de novo. Um jogo cujo desenvolvedor não permite Linux não abre, com nenhuma configuração.

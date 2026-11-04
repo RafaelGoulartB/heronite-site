@@ -24,7 +24,7 @@ Las versiones van a la carpeta de datos de Heronite (`~/.local/share/heronite/to
 
 ## Dónde se guardan los juegos y los prefijos de Wine
 
-Un prefijo de Wine es la unidad de Windows propia de un juego, con sus ajustes, sus partidas y lo que instala Winetricks. Por defecto:
+Un prefijo de Wine es una carpeta que funciona como un Windows solo para un juego, con sus ajustes, sus partidas y lo que instala Winetricks. Por defecto:
 
 - Los juegos se instalan en `~/Games/Heronite`
 - Cada juego tiene su propio prefijo en `~/Games/Heronite/Prefixes`

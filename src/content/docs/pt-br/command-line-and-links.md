@@ -59,6 +59,6 @@ Escreva espaços nos nomes como `%20` (`My%20Game`). Para esconder a janela em t
 
 ### Onde os links heronite:// funcionam
 
-- **Instalador do Windows:** registrados para o seu usuário a cada abertura
+- **Instalador do Windows:** registrados para o seu usuário sempre que o Heronite abre
 - **Windows portátil:** não são registrados, então a cópia não deixa rastro no PC
 - **Linux:** registrados pelo `scripts/install.sh` quando você compila do código-fonte

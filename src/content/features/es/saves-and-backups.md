@@ -33,7 +33,7 @@ related:
   - /features/wine-and-proton/
 ---
 
-[Ludusavi](https://github.com/mtkennerly/ludusavi) es un programa gratuito que sabe dónde guardan sus partidas miles de juegos: en una carpeta de Windows, en una carpeta de Steam o en un prefijo de Wine (la carpeta de Windows aparte donde corre un juego en Linux). Instálalo una vez y Heronite copia las partidas guardadas de un juego después de cada sesión.
+[Ludusavi](https://github.com/mtkennerly/ludusavi) es un programa gratuito que sabe dónde guardan sus partidas miles de juegos: en una carpeta de Windows, en una carpeta de Steam o en el prefijo de Wine del juego (una carpeta que funciona como un Windows solo para ese juego). Instálalo una vez y Heronite copia las partidas guardadas de un juego después de cada sesión.
 
 ## ¿Cómo instalo Ludusavi para Heronite?
 
@@ -46,7 +46,7 @@ En Linux, Heronite busca Ludusavi en el `PATH`, en `/usr/bin`, `/usr/local/bin` 
 
 1. Cierra el juego.
 2. Abre la página del juego y su pestaña **Guardados**, que lista las copias del juego.
-3. Elige una copia y pulsa **Restaurar…**.
+3. Elige una copia y haz clic en **Restaurar…**.
 4. Elige los archivos que quieres devolver en **Archivos a restaurar** y confirma.
 
 En el **modo consola** es una fila de la página del juego, **Copia de guardados (Ludusavi)**.
@@ -57,13 +57,13 @@ En el **modo consola** es una fila de la página del juego, **Copia de guardados
 
 ## ¿Heronite sincroniza los guardados en la nube de Epic y GOG?
 
-Sí, en beta, en Linux y Windows. Abre **Ajustes del juego → Guardados en la nube** y pulsa **Sincronizar**, o activa **Sincronizar automáticamente** para sincronizar al iniciar el juego y al cerrarlo. Haz una copia de tus partidas antes de la primera sincronización.
+Sí, en beta, en Linux y Windows. Abre **Ajustes del juego → Guardados en la nube** y haz clic en **Sincronizar**, o activa **Sincronizar automáticamente** para sincronizar al iniciar el juego y al cerrarlo. Haz una copia de tus partidas antes de la primera sincronización.
 
 ## ¿Cómo programo copias de toda mi Colección?
 
 1. Abre **Ajustes → Copias**.
 2. Elige una carpeta para las copias.
-3. Elige una frecuencia: **una vez al día**, **una vez a la semana**, **una vez al mes** o solo cuando pulses **Copiar ahora**.
+3. Elige una frecuencia: **una vez al día**, **una vez a la semana**, **una vez al mes** o solo cuando hagas clic en **Copiar ahora**.
 
 Una copia protege tus estados, valoraciones, diario e [historial de juego](/es/features/play-time-tracking/). Heronite conserva por defecto las 10 copias más recientes.
 
@@ -84,7 +84,7 @@ Los juegos instalados, las versiones de Wine y Proton, las cachés y los logs se
 
 1. En **Ajustes → Copias**, elige una copia para ver qué contiene.
 2. Elige las partes que quieres devolver.
-3. Pulsa **Restaurar…** y luego **Restaurar y reiniciar**.
+3. Haz clic en **Restaurar…** y luego en **Restaurar y reiniciar**.
 
 Heronite primero copia lo que tienes ahora, para que puedas volver atrás. Mira [Archivos y carpetas](/es/docs/files-and-folders/).
 

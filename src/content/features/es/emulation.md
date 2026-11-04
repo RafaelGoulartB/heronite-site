@@ -15,7 +15,7 @@ highlights:
   - title: 17 emuladores detectados
     text: RetroArch, Dolphin, PCSX2, Ryujinx y más, en el PATH o como Flatpak.
   - title: Escanea ROMs
-    text: Indica tus carpetas de ROMs y cada juego recibe su arte.
+    text: Añade tus carpetas de ROMs y cada juego recibe su arte.
   - title: Varios discos, unidos
     text: Los juegos de varios discos aparecen una vez, no una por disco.
   - title: Logros
@@ -28,14 +28,14 @@ faq:
   - q: ¿Heronite incluye emuladores o ROMs?
     a: No. Tú instalas los emuladores y pones tus ROMs.
   - q: ¿Puedo usar un emulador que no está en la lista?
-    a: Sí. Añade un emulador personalizado indicando a Heronite el programa y sus argumentos.
+    a: Sí. Añade un emulador personalizado con su programa y sus argumentos.
 related:
   - /features/game-library/
   - /features/console-mode/
   - /features/stores/
 ---
 
-Los juegos emulados entran en la misma biblioteca que tus juegos de PC, con tiempo de juego y una línea de tiempo de sesiones.
+Los juegos emulados se suman a la misma biblioteca que tus juegos de PC, con tiempo de juego y una línea de tiempo de sesiones.
 
 ## ¿Cómo configuro la emulación en Heronite?
 
@@ -44,7 +44,7 @@ Los juegos emulados entran en la misma biblioteca que tus juegos de PC, con tiem
 3. Pon tus ROMs en una subcarpeta por sistema.
 4. Abre la página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>).
 5. Elige **Detectar emuladores…** para encontrar los que tienes instalados.
-6. Pulsa **Añadir carpeta de ROMs** y elige el emulador y la carpeta con sus ROMs.
+6. Haz clic en **Añadir carpeta de ROMs** y elige el emulador y la carpeta con sus ROMs.
 
 Heronite escanea la carpeta y añade sus juegos. **Escanear todas las carpetas ahora** encuentra los juegos que añadas después.
 
@@ -71,7 +71,7 @@ Heronite admite los 17 emuladores de abajo y cualquiera personalizado. Instálal
 | Flycast | Dreamcast |
 | MAME | Arcade |
 | ScummVM | Juegos de aventura |
-| Personalizado | Cualquier otro emulador: indica el programa y sus argumentos |
+| Personalizado | Cualquier otro emulador, con su programa y sus argumentos |
 
 Si un juego no abre, mira la [solución de problemas](/es/docs/troubleshooting/).
 

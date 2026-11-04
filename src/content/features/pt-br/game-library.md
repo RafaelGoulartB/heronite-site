@@ -38,11 +38,11 @@ related:
 ## Como reunir todos os meus jogos em uma Coleção?
 
 - **Steam:** o Heronite traz suas bibliotecas da [Steam](/pt-br/features/stores/) sem login.
-- **Epic Games, GOG e Amazon Games:** faça login na página **Lojas** e a biblioteca inteira entra, instalada ou não.
-- **Battle.net, EA app, Ubisoft Connect e Rockstar Games:** os jogos que você instala em cada app da loja aparecem. No Linux, o app da loja roda no seu próprio prefixo Wine (uma pasta separada do Windows).
-- **Microsoft Store e PC Game Pass (Windows):** os jogos que o app Xbox instalou entram sem login.
+- **Epic Games, GOG e Amazon Games:** faça login na página **Lojas** e o Heronite adiciona a biblioteca inteira, instalada ou não.
+- **Battle.net, EA app, Ubisoft Connect e Rockstar Games:** os jogos que você instala em cada app da loja aparecem. No Linux, o app da loja roda no seu próprio prefixo Wine (uma pasta que funciona como um Windows só daquele app).
+- **Microsoft Store e PC Game Pass (Windows):** o Heronite adiciona os jogos que o app Xbox instalou, sem login.
 - **Emuladores:** o Heronite [detecta](/pt-br/features/emulation/) os emuladores e escaneia suas pastas de ROMs.
-- **Outros launchers:** os jogos do Heroic, Lutris, Bottles e Faugus no Linux, e os do Playnite no Windows, entram e ficam sincronizados.
+- **Outros launchers:** os jogos do Heroic, Lutris, Bottles e Faugus no Linux, e os do Playnite no Windows, são importados e ficam sincronizados.
 
 ## Como adicionar um jogo que não é de uma loja?
 
@@ -53,7 +53,7 @@ Aperte <kbd>Ctrl</kbd> <kbd>N</kbd> (ou **Adicionar um jogo**) para adicionar:
 - Um jogo de navegador, pelo endereço dele
 - Uma ROM, ou uma pasta inteira de ROMs
 
-Para adicionar vários jogos de uma vez, aponte o Heronite para uma pasta.
+Para adicionar vários jogos de uma vez, escolha **Adicionar de uma pasta** no menu ☰.
 
 ![A janela de adicionar jogo com campos para o título, a arte quadrada e o fundo, a plataforma, o prefixo Wine e a versão do Proton, e o programa a executar.](../../../assets/screenshots/add-game.webp)
 

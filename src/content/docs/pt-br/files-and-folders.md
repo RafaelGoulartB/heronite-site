@@ -38,7 +38,7 @@ Cuidado ao copiar ou compartilhar a pasta de dados: essas três pastas guardam s
 
 ## Onde ficam os jogos e os prefixos Wine? (Linux)
 
-Um prefixo Wine é o drive do Windows de cada jogo, com as configurações e os saves dele.
+Um prefixo Wine é uma pasta que funciona como um Windows só daquele jogo, com as configurações e os saves dele.
 
 | Caminho | O que guarda |
 |---|---|
@@ -67,4 +67,4 @@ Apague o `portable.txt` para a cópia usar as pastas normais do usuário. Uma c�
 
 ## Mudar do Heroic para o Heronite (Linux)
 
-Na primeira abertura, se `~/.config/heroic` existir, o Heronite copia os dados do Heroic uma vez para a pasta de dados dele, então seus logins, jogos e configurações vêm junto. Ele só lê os arquivos do Heroic.
+Na primeira vez que você abre o Heronite, se `~/.config/heroic` existir, ele copia os dados do Heroic uma vez para a pasta de dados dele, então seus logins, jogos e configurações vêm junto. Ele só lê os arquivos do Heroic.

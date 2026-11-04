@@ -37,7 +37,7 @@ O [IGDB](https://www.igdb.com) traz descrições, gêneros, empresas, séries e 
 1. Abra o [console de desenvolvedor da Twitch](https://dev.twitch.tv/console) e registre um aplicativo (qualquer nome; OAuth redirect `http://localhost`; categoria "Application Integration").
 2. Copie o **Client ID** dele e crie um **Client Secret**.
 3. Em **Configurações → Metadados**, cole os dois em **Client ID Twitch / IGDB** e **Client Secret Twitch / IGDB**.
-4. Aperte **Testar IGDB**.
+4. Clique em **Testar IGDB**.
 
 ## Ver conquistas da Steam e do RetroAchievements
 

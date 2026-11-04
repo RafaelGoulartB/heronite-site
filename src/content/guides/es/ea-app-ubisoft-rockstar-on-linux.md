@@ -28,9 +28,9 @@ faq:
   - q: "¿Puedo jugar a GTA V o Red Dead Redemption 2 en Linux?"
     a: "Sí, a los modos historia, con el Rockstar Games Launcher. BattlEye bloquea GTA Online y Red Dead Online en Linux."
   - q: "¿Funciona esto en Windows?"
-    a: "Sí. En Windows, Heronite ejecuta cada app de la tienda sin Wine y la usa tal cual si ya está instalada. Sus juegos entran en tu biblioteca y se inician a través de la app de la tienda."
+    a: "Sí. En Windows, Heronite ejecuta cada app de la tienda directamente, sin Wine, y usa tu instalación si ya tienes una. Sus juegos aparecen en tu biblioteca y se inician a través de la app de la tienda."
   - q: "¿Puedo usar una app de la tienda que ya instalé en Wine?"
-    a: "Sí. Elige **Usar una instalación existente** en la página de esa app e indica a Heronite tu prefijo de Wine."
+    a: "Sí. Haz clic en **Usar una instalación existente** en la página de esa app y selecciona tu prefijo de Wine."
 related:
   - /guides/battle-net-on-linux/
   - /guides/install-ge-proton/
@@ -61,10 +61,10 @@ Los pasos son los mismos para las tres.
 
 1. Pulsa <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Tiendas**.
 2. En la lista de la izquierda, bajo **Apps de las tiendas**, elige **EA app**, **Ubisoft Connect** o **Rockstar Games Launcher**.
-3. Elige **Instalar** seguido de su nombre, como **Instalar EA app**.
+3. Haz clic en **Instalar** seguido de su nombre, como **Instalar EA app**.
 4. Espera a que la página diga **Listo**.
 
-Heronite busca o descarga un Proton y luego el instalador oficial. Crea un prefijo de Wine (una carpeta de Windows aparte) e instala ahí la app de la tienda:
+Heronite busca o descarga un Proton y luego el instalador oficial. Crea un prefijo de Wine (una carpeta que funciona como un Windows solo para esa app) e instala ahí la app de la tienda:
 
 | App de la tienda | Prefijo de Wine |
 |---|---|
@@ -72,18 +72,18 @@ Heronite busca o descarga un Proton y luego el instalador oficial. Crea un prefi
 | Ubisoft Connect | `~/Games/Heronite/Prefixes/Ubisoft Connect` |
 | Rockstar Games Launcher | `~/Games/Heronite/Prefixes/Rockstar Games Launcher` |
 
-Si ya usas una de estas apps en un prefijo de Wine, elige **Usar una instalación existente** en lugar del paso 3 e indica a Heronite ese prefijo.
+Si ya usas una de estas apps en un prefijo de Wine, haz clic en **Usar una instalación existente** en lugar del paso 3 y selecciona ese prefijo.
 
 ## Inicia sesión, instala y juega
 
-1. Elige **Abrir** seguido de su nombre, como **Abrir Ubisoft Connect**.
+1. Haz clic en **Abrir** seguido de su nombre, como **Abrir Ubisoft Connect**.
 2. Inicia sesión en la ventana de la app de la tienda. Heronite nunca ve tu contraseña, y su página muestra luego **Conectado**.
 3. Instala un juego en la app de la tienda, como lo harías en Windows.
 4. Pulsa <kbd>Enter</kbd> sobre el juego en tu biblioteca de Heronite para iniciarlo.
 
 Antes de instalar un juego grande, mira el recuadro **En Linux** en sus detalles: muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat. Gold y Platinum son las más seguras. Si dudas, instala primero un juego pequeño para probar tu configuración.
 
-Si falta un juego instalado en tu biblioteca, elige **Actualizar** bajo **Instalados** en la página de la app de la tienda. Un juego que no has instalado muestra **Instalar con EA app**, **Instalar con Ubisoft Connect** o **Instalar con Rockstar Games Launcher**, que abre la app de la tienda.
+Si falta un juego instalado en tu biblioteca, haz clic en **Actualizar** bajo **Instalados** en la página de la app de la tienda. Un juego que no has instalado muestra **Instalar con EA app**, **Instalar con Ubisoft Connect** o **Instalar con Rockstar Games Launcher**, que abre la app de la tienda.
 
 ## ¿Qué juegos bloquea el anti-cheat?
 
@@ -99,11 +99,11 @@ Un juego cuyo desarrollador no permite Linux no funciona. El estado cambia, así
 
 Abre **Ajustes de Wine** en la página de la app de la tienda y elige otra versión en **Versión**, en la pestaña **Compatibilidad**. Hasta que la cambies, Heronite usa tu Proton por defecto. [GE-Proton y Proton-CachyOS](/es/guides/install-ge-proton/) son los que se suelen probar.
 
-Para abrir el prefijo, elige **Abrir carpeta** junto a **Prefijo de Wine** en la misma página. Para detener una app de la tienda y todo lo que corre en su prefijo, cierra cualquier juego abierto y elige **Cerrar** seguido del nombre de la app.
+Para abrir el prefijo, haz clic en **Abrir carpeta** junto a **Prefijo de Wine** en la misma página. Para detener una app de la tienda y todo lo que corre en su prefijo, cierra cualquier juego abierto y haz clic en **Cerrar** seguido del nombre de la app.
 
 ## Quita una app de la tienda
 
-Elige **Quitar de Heronite** en su página. El prefijo de Wine y sus juegos se quedan en el disco, así que puedes volver a añadirla con **Usar una instalación existente**. Borra la carpeta del prefijo para liberar el espacio.
+Haz clic en **Quitar de Heronite** en su página. El prefijo de Wine y sus juegos se quedan en el disco, así que puedes volver a añadirla con **Usar una instalación existente**. Borra la carpeta del prefijo para liberar el espacio.
 
 ## Una app de la tienda no inicia sesión o un juego se cierra al abrir
 

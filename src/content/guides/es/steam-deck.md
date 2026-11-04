@@ -65,8 +65,9 @@ En el primer inicio, Heronite añade los juegos de Steam que encuentra, sin inic
 ## Inicia sesión en Epic, GOG y Amazon Games
 
 1. Pulsa <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Tiendas**.
-2. Elige **Epic Games**, **GOG** o **Amazon Games** y luego su botón **Iniciar sesión con**, como **Iniciar sesión con GOG**.
-3. Inicia sesión en la página de la tienda, en la ventana que se abre. Usa un teclado para escribir tu contraseña.
+2. Elige **Epic Games**, **GOG** o **Amazon Games**.
+3. Haz clic en **Iniciar sesión**.
+4. Inicia sesión en la página de la tienda, en la ventana que se abre. Usa un teclado para escribir tu contraseña.
 
 Los juegos de la tienda aparecen entonces en tu biblioteca. Instala uno o dos juegos ahora, mientras tienes el escritorio. Puedes elegir la carpeta de instalación, así que la tarjeta SD también sirve.
 
@@ -116,7 +117,7 @@ Las imágenes de los botones siguen al mando, y Heronite conoce las de la Steam 
 2. Elige un juego y pulsa X para instalarlo.
 3. Pulsa A en un juego instalado para abrir su página y elige **Jugar**.
 
-Para tener un juego como entrada propia en Steam, usa **Añadir a Steam** en las acciones del juego. Para abrir el modo consola sin la opción de lanzamiento, activa las opciones de inicio o de mando en **Ajustes → Modo consola**. El overlay dentro del juego (beta) necesita una sesión Wayland con soporte de layer-shell, así que lee [Modo consola](/es/docs/console-mode/) antes de depender de él.
+Para tener un juego como entrada propia en Steam, elige **Añadir a Steam** en las acciones del juego. Para abrir el modo consola sin la opción de lanzamiento, activa las opciones de inicio o de mando en **Ajustes → Modo consola**. El overlay dentro del juego (beta) necesita una sesión Wayland con soporte de layer-shell, así que lee [Modo consola](/es/docs/console-mode/) antes de depender de él.
 
 ## ¿Qué juegos funcionan bien en Steam Deck?
 

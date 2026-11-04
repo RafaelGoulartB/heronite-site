@@ -1,6 +1,6 @@
 ---
 title: "Battle.net en Linux: instálalo con Wine y Proton"
-description: "Instala Battle.net en Linux con un solo botón: Heronite prepara Wine, inicias sesión y los juegos de Blizzard que instales entran en tu biblioteca."
+description: "Instala Battle.net en Linux con un solo botón: Heronite prepara Wine, inicias sesión y los juegos de Blizzard que instales aparecen en tu biblioteca."
 eyebrow: Guía de Linux
 headline: "Cómo instalar Battle.net en Linux"
 lead: "Blizzard no tiene versión para Linux, así que Heronite instala el Battle.net de Windows con Wine desde su página Tiendas, sin configurar nada a mano."
@@ -26,11 +26,11 @@ faq:
   - q: "¿Qué juegos de Blizzard funcionan en Linux?"
     a: "Muchos, según el juego. Mira antes su valoración de ProtonDB. Call of Duty no funciona, porque su anti-cheat Ricochet no funciona en Linux."
   - q: "¿Funciona esto en Windows?"
-    a: "Sí. En Windows, Heronite ejecuta Battle.net sin Wine y lo usa tal cual si ya está instalado. Sus juegos entran en tu biblioteca y se inician a través de él."
+    a: "Sí. En Windows, Heronite ejecuta Battle.net directamente, sin Wine, y usa tu instalación si ya tienes una. Sus juegos aparecen en tu biblioteca y se inician a través de Battle.net."
   - q: "¿Dónde pone Heronite Battle.net?"
     a: "En un prefijo de Wine en `~/Games/Heronite/Prefixes/Battle.net`. Si quitas Battle.net de Heronite, esa carpeta y sus juegos se quedan en el disco."
   - q: "Ya uso Battle.net con Wine o Lutris. ¿Puedo conservarlo?"
-    a: "Sí. Elige **Usar una instalación existente** en la página de Battle.net e indica a Heronite tu prefijo de Wine."
+    a: "Sí. Haz clic en **Usar una instalación existente** en la página de Battle.net y selecciona tu prefijo de Wine."
 related:
   - /guides/ea-app-ubisoft-rockstar-on-linux/
   - /guides/install-ge-proton/
@@ -59,31 +59,31 @@ Los demás formatos están en la [guía de instalación](/es/docs/installation/)
 
 1. Pulsa <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Tiendas**.
 2. En la lista de la izquierda, bajo **Apps de las tiendas**, elige **Battle.net**.
-3. Elige **Instalar Battle.net**.
+3. Haz clic en **Instalar Battle.net**.
 4. Espera a que la página diga **Listo**. Puede tardar unos minutos.
 
-Heronite busca o descarga un Proton y luego el instalador oficial. Crea el prefijo de Wine (una carpeta de Windows aparte) `~/Games/Heronite/Prefixes/Battle.net` e instala Battle.net ahí. Si ya tienes Battle.net en un prefijo de Wine, elige **Usar una instalación existente** en lugar del paso 3 y selecciona ese prefijo.
+Heronite busca o descarga un Proton y luego el instalador oficial. Crea el prefijo de Wine (una carpeta que funciona como un Windows solo para esa app) `~/Games/Heronite/Prefixes/Battle.net` e instala Battle.net ahí. Si ya tienes Battle.net en un prefijo de Wine, haz clic en **Usar una instalación existente** en lugar del paso 3 y selecciona ese prefijo.
 
 ## Inicia sesión, instala y juega a juegos de Blizzard
 
-1. Elige **Abrir Battle.net**.
+1. Haz clic en **Abrir Battle.net**.
 2. Inicia sesión en la ventana de Battle.net. Heronite nunca ve tu contraseña, y su página muestra luego **Conectado**.
 3. Instala un juego en Battle.net, como lo harías en Windows.
 4. Pulsa <kbd>Enter</kbd> sobre el juego en tu biblioteca de Heronite para iniciarlo. Heronite registra el tiempo de juego.
 
 Antes de instalar un juego grande, mira su recuadro **En Linux** en Heronite. Muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com).
 
-Si falta un juego instalado en tu biblioteca, elige **Actualizar** bajo **Instalados** en la página de Battle.net. Un juego que no has instalado muestra **Instalar con Battle.net**, que abre la app de la tienda.
+Si falta un juego instalado en tu biblioteca, haz clic en **Actualizar** bajo **Instalados** en la página de Battle.net. Un juego que no has instalado muestra **Instalar con Battle.net**, que abre la app de la tienda.
 
 ## Cambia la versión de Proton de Battle.net
 
 Abre **Ajustes de Wine** en la página de Battle.net y elige otra versión en **Versión**, en la pestaña **Compatibilidad**. Hasta que la cambies, Heronite usa tu Proton por defecto. [GE-Proton y Proton-CachyOS](/es/guides/install-ge-proton/) son los que se suelen probar.
 
-Para abrir el prefijo, elige **Abrir carpeta** junto a **Prefijo de Wine** en la misma página. Para detener la app de la tienda y todo lo que corre en su prefijo, cierra antes cualquier juego abierto y elige **Cerrar Battle.net**.
+Para abrir el prefijo, haz clic en **Abrir carpeta** junto a **Prefijo de Wine** en la misma página. Para detener la app de la tienda y todo lo que corre en su prefijo, cierra antes cualquier juego abierto y haz clic en **Cerrar Battle.net**.
 
 ## Quita Battle.net de Heronite
 
-Elige **Quitar de Heronite** en la página de Battle.net. El prefijo de Wine y los juegos instalados en él se quedan en el disco. Borra tú la carpeta del prefijo para recuperar el espacio ([Archivos y carpetas](/es/docs/files-and-folders/)).
+Haz clic en **Quitar de Heronite** en la página de Battle.net. El prefijo de Wine y los juegos instalados en él se quedan en el disco. Borra tú la carpeta del prefijo para recuperar el espacio ([Archivos y carpetas](/es/docs/files-and-folders/)).
 
 ## ¿El anti-cheat bloquea algún juego de Blizzard?
 

@@ -15,7 +15,7 @@ highlights:
   - title: 17 emuladores detectados
     text: RetroArch, Dolphin, PCSX2, Ryujinx e outros, achados no PATH ou como Flatpak.
   - title: Escaneia as ROMs
-    text: Aponte as pastas de ROMs e cada jogo ganha capa.
+    text: Escolha as pastas de ROMs e cada jogo ganha capa.
   - title: Vários discos, um jogo só
     text: Jogos de vários discos aparecem uma vez, e não uma por disco.
   - title: Conquistas
@@ -44,7 +44,7 @@ Os jogos de emulador entram na mesma biblioteca dos seus jogos de PC, com tempo 
 3. Coloque suas ROMs em uma subpasta por sistema.
 4. Abra a página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>).
 5. Escolha **Detectar emuladores…** para achar os que estão instalados no seu PC.
-6. Aperte **Adicionar pasta de ROMs** e escolha o emulador e a pasta com as ROMs dele.
+6. Clique em **Adicionar pasta de ROMs** e escolha o emulador e a pasta com as ROMs dele.
 
 O Heronite escaneia a pasta e adiciona os jogos dela. **Escanear todas as pastas agora** pega os jogos que você adicionar depois.
 
@@ -113,7 +113,7 @@ ROMs/
 └── gba/
 ```
 
-Na primeira abertura, o Heronite escaneia as pastas de ROMs mais comuns, se existirem. No Linux elas incluem `ROMs`, `Emulation/roms` e `Games/ROMs` na sua pasta pessoal, além de `retrodeck/roms` para o RetroDECK. No Windows elas incluem `ROMs`, `Emulation\roms` e `Games\ROMs` na sua pasta de usuário e na raiz de cada unidade.
+Na primeira vez que você abre o Heronite, ele escaneia as pastas de ROMs mais comuns, se existirem. No Linux elas incluem `ROMs`, `Emulation/roms` e `Games/ROMs` na sua pasta pessoal, além de `retrodeck/roms` para o RetroDECK. No Windows elas incluem `ROMs`, `Emulation\roms` e `Games\ROMs` na sua pasta de usuário e na raiz de cada unidade.
 
 [Pastas de ROMs](/pt-br/docs/emulation/#pastas-de-roms) tem a lista completa. O escaneamento ignora pastas chamadas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` e `manuals`.
 

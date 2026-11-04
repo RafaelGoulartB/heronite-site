@@ -27,7 +27,7 @@ Defina estas variáveis de ambiente antes de abrir o Heronite. Uma opção `HERO
 | `HERONITE_NO_GAMEPAD` | Sem entrada de controle no modo console |
 | `HERONITE_NO_ANIMATIONS` | Sem animações |
 | `HERONITE_NO_SINGLE_INSTANCE` | Permite mais de um Heronite ao mesmo tempo |
-| `HERONITE_NO_ONBOARDING` | Pula a configuração da primeira abertura |
+| `HERONITE_NO_ONBOARDING` | Pula a configuração inicial |
 | `HERONITE_DISABLE_IDLE_JOBS` | Sem trabalho em segundo plano quando o PC está parado |
 | `HERONITE_DISABLE_TOOLS_UPDATE` | Não atualiza DXVK, Winetricks e umu em segundo plano |
 | `HERONITE_WINE_OFFLINE` | Sem rede para o Gerenciador do Wine (Linux) |

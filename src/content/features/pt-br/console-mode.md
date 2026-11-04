@@ -81,9 +81,9 @@ A página de um jogo tem estas linhas:
 - **Jogar**, **Status**, **Favorito**, **Configurações do jogo** e **Tempo de jogo**
 - **Fazer backup dos saves**, com o [Ludusavi](/pt-br/features/saves-and-backups/) instalado
 
-Detalhes como nota, desenvolvedora e último jogo ficam à direita.
+Detalhes como nota, desenvolvedor e último jogo ficam à direita.
 
-![A página do jogo ELDEN RING no modo console do Heronite com uma lista de Jogar, Status, Favorito, Configurações do jogo, Tempo de jogo e Fazer backup dos saves (Ludusavi), e um painel de detalhes com nota, desenvolvedora, último jogo e recursos.](../../../assets/screenshots/console-game.webp)
+![A página do jogo ELDEN RING no modo console do Heronite com uma lista de Jogar, Status, Favorito, Configurações do jogo, Tempo de jogo e Fazer backup dos saves (Ludusavi), e um painel de detalhes com nota, desenvolvedor, último jogo e recursos.](../../../assets/screenshots/console-game.webp)
 
 *A página de ELDEN RING no modo console.*
 

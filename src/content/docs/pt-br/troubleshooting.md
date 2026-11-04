@@ -1,17 +1,17 @@
 ---
 title: "Solução de problemas do Heronite: app, login e jogos"
 navLabel: "Solução de problemas"
-description: "Solução de problemas: Heronite que não abre, login nas lojas que falha, erros de atualização e jogo que não abre no Linux, logs e como relatar um bug."
+description: "Heronite não abre, login da Epic ou da GOG falha, erro de Vulkan, jogo não abre no Linux: veja como resolver, onde ficam os logs e como reportar um bug."
 section: Start
 order: 4
 updated: 2026-11-04
 ---
 
+## "O Windows protegeu o computador" ao abrir o Heronite
+
+Escolha **Mais informações** e depois **Executar assim mesmo**. O instalador do Heronite para Windows ainda não tem assinatura digital.
+
 ## O Heronite não abre ou mostra uma janela preta
-
-### "O Windows protegeu o computador"
-
-Escolha **Mais informações** e depois **Executar assim mesmo**. Os arquivos do Windows ainda não são assinados.
 
 ### A janela não abre ou fica preta (Linux)
 
@@ -35,7 +35,7 @@ Procure atualizações de novo mais tarde. Sua rede fez requisições demais ao 
 
 ### A janela de login não abre
 
-Use o **login pelo navegador** na página de login: faça login no navegador e cole o endereço ou o código no Heronite.
+Use **Ou entre pelo navegador** na mesma página da loja: faça login no navegador e cole o endereço ou o código no Heronite.
 
 Para consertar a própria janela de login, instale:
 
@@ -48,7 +48,7 @@ Instale o `python3`. O gogdl, a ferramenta de download da GOG, precisa dele.
 
 ## Um jogo não inicia (Linux)
 
-Quando um jogo não abre e fecha nos primeiros 30 segundos, e o Heronite conhece a causa, a janela **Problema ao abrir** aparece. O primeiro botão dela aplica a correção e abre o jogo de novo. Para qualquer outro travamento, clique com o botão direito no jogo e escolha **Solucionar problemas**.
+Quando um jogo fecha sozinho nos primeiros 30 segundos e o Heronite conhece a causa, a janela **Problema ao abrir** aparece. O primeiro botão dela aplica a correção e abre o jogo de novo. Para qualquer outro travamento, clique com o botão direito no jogo e escolha **Solucionar problemas**.
 
 | O Heronite diz | Correção |
 |---|---|
@@ -75,7 +75,7 @@ sudo sysctl -w vm.max_map_count=1048576
 ### O jogo continua travando
 
 - Escolha outra **Versão** em **Wine / Proton**, em **Configurações do jogo → Compatibilidade**. GE-Proton ou Proton-CachyOS costumam ter correções primeiro.
-- Dê ao jogo um prefixo Wine novo (o drive do Windows do jogo, com as configurações e os saves dele). Em **Configurações do jogo → Compatibilidade**, abra **Prefixo** e escolha **Novo prefixo para este jogo**.
+- Dê ao jogo um prefixo Wine novo (uma pasta que funciona como um Windows só daquele jogo). Em **Configurações do jogo → Compatibilidade**, escolha **Novo prefixo para este jogo** no menu **Prefixo**. O prefixo novo começa vazio, então faça backup dos seus saves antes.
 - Leia a página do jogo no [ProtonDB](https://www.protondb.com), onde os jogadores contam o que funcionou.
 
 ## O overlay dentro do jogo não funciona (Linux)
@@ -98,9 +98,9 @@ Para mais detalhes:
 - Abra o Heronite com `RUST_LOG=debug`
 - Ligue **Logs detalhados** em **Configurações do jogo → Avançado** (no Linux, isso também adiciona a saída do Wine)
 
-Se **Desligar logs** estiver ligado em **Configurações → Avançado**, desligue antes de relatar um problema.
+Em **Configurações → Avançado**, deixe **Desligar logs** desmarcado antes de reportar um bug.
 
-## Relatar um bug
+## Reportar um bug
 
 [Abra uma issue](https://github.com/RafaelGoulartB/Heronite/issues/new/choose) com:
 

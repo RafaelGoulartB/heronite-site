@@ -22,7 +22,7 @@ highlights:
     text: Los errores de inicio vienen con una solución sugerida.
 faq:
   - q: ¿Cómo juego a juegos de Windows en Linux?
-    a: Añade el juego y pulsa Jugar. Si es de una tienda, inicia sesión primero en ella. Cambia los ajustes en **Ajustes del juego → Compatibilidad**.
+    a: Añade el juego y haz clic en Jugar. Si es de una tienda, inicia sesión primero en ella. Cambia los ajustes en **Ajustes del juego → Compatibilidad**.
   - q: ¿Cuál es la mejor versión de Proton para mi juego?
     a: No hay una única mejor. **Proton-CachyOS** y **GE-Proton** suelen recibir las correcciones primero, así que empieza por ahí. La página de un juego muestra su valoración de [ProtonDB](https://www.protondb.com).
   - q: ¿Hay un gestor de Proton para juegos que no son de Steam?
@@ -60,7 +60,7 @@ Para instalarla paso a paso, mira [instalar GE-Proton](/es/guides/install-ge-pro
 
 ## ¿Qué es un prefijo de Wine?
 
-Un prefijo es la carpeta que imita Windows en la que corre un juego. Los juegos se instalan por defecto en `~/Games/Heronite`, y cada juego tiene su propio prefijo en `~/Games/Heronite/Prefixes`, aunque varios juegos pueden compartir uno. El Gestor de Wine lista tus prefijos, y **Ajustes del juego → Compatibilidad** tiene los botones **Winecfg** y **Winetricks**.
+Un prefijo de Wine es una carpeta que funciona como un Windows solo para ese juego. Los juegos se instalan por defecto en `~/Games/Heronite`, y cada juego tiene su propio prefijo en `~/Games/Heronite/Prefixes`, aunque varios juegos pueden compartir uno. El Gestor de Wine lista tus prefijos, y **Ajustes del juego → Compatibilidad** tiene los botones **Winecfg** y **Winetricks**.
 
 ## ¿Qué opciones puedo ajustar por juego?
 

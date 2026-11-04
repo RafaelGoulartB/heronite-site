@@ -55,7 +55,7 @@ Cada herramienta activa una función. Heronite funciona sin ellas.
 | [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/) | Replay (el paquete del sistema o la app de Flathub) |
 | [Ludusavi](https://github.com/mtkennerly/ludusavi) | Copias de las partidas guardadas después de cada sesión |
 | `python3` | Descargas de GOG (gogdl, la herramienta de descarga de GOG, funciona con Python) |
-| WebKitGTK 4.1 | La ventana de inicio de sesión de las tiendas. Sin ella, usa el método del navegador en la página de inicio de sesión. |
+| WebKitGTK 4.1 | La ventana de inicio de sesión de las tiendas. Sin ella, inicia sesión con tu navegador. |
 
 ## Actualizar Heronite
 

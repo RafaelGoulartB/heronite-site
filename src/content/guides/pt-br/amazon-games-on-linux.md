@@ -22,7 +22,7 @@ highlights:
     text: "Os jogos instalados continuam no disco depois que você sai da conta da Amazon."
 faq:
   - q: "Existe um app da Amazon Games para Linux?"
-    a: "Não, a Amazon não faz app para Linux. O Heronite usa o [nile](https://github.com/imLinguin/nile), uma ferramenta de código aberto da Amazon Games, para fazer login, baixar e atualizar seus jogos."
+    a: "Não, a Amazon não faz app para Linux. O Heronite usa o [nile](https://github.com/imLinguin/nile) para fazer login, baixar e atualizar seus jogos. Ele é uma ferramenta de código aberto, não oficial, para a Amazon Games."
   - q: "Os jogos do Prime Gaming funcionam no Linux?"
     a: "Sim, depois que você os resgata no site da Amazon. Atualize a biblioteca no Heronite e eles instalam como qualquer outro jogo."
   - q: "Preciso instalar o Wine antes?"
@@ -56,11 +56,12 @@ Os outros formatos estão no [guia de instalação](/pt-br/docs/installation/). 
 
 ## Faça login na Amazon Games
 
-1. Aperte <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Lojas**.
-2. Escolha **Amazon Games** e depois **Entrar com a Amazon Games**.
-3. Faça login na página da Amazon, na janela que abrir.
+1. Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Escolha **Amazon Games**.
+3. Clique em **Entrar**.
+4. Faça login na página da Amazon, na janela que abrir.
 
-Aí seus jogos da Amazon aparecem na sua biblioteca, com os jogos do Prime Gaming que você resgatou. Se a janela de login não abrir, escolha **Abrir no navegador** na mesma página. Faça login e cole o endereço da página do amazon.com em que você cair ([logins das lojas](/pt-br/docs/troubleshooting/#o-login-ou-o-download-de-uma-loja-falha)).
+Aí seus jogos da Amazon aparecem na sua biblioteca, com os jogos do Prime Gaming que você resgatou. Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página: clique em **Abrir no navegador**. Faça login e cole o endereço da página do amazon.com em que você cair ([logins das lojas](/pt-br/docs/troubleshooting/#o-login-ou-o-download-de-uma-loja-falha)).
 
 ## Resgate seus jogos do Prime Gaming
 
@@ -77,7 +78,7 @@ Aí os jogos novos aparecem na sua biblioteca. A Amazon decide o que o Prime Gam
 Antes, veja a caixa **No Linux** nos detalhes do jogo. Ela mostra a nota no [ProtonDB](https://www.protondb.com) e o status do anti-cheat. Um jogo Gold ou Platinum costuma rodar sem mudar nada.
 
 1. Selecione o jogo e aperte <kbd>Enter</kbd>, ou escolha **Instalar pela Amazon Games**.
-2. Confira a **Pasta de instalação**. A **Versão do Wine** fica em **Mostrar configurações do Wine**; o padrão serve para começar.
+2. Confira a pasta em **Selecionar local de instalação**. A **Versão do Wine** fica em **Mostrar configurações do Wine**; o padrão serve para começar.
 3. Confirme. Acompanhe o download na página Downloads (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 4. Quando terminar, selecione o jogo e aperte <kbd>Enter</kbd> para jogar.
 

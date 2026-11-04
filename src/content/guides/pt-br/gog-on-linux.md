@@ -22,7 +22,7 @@ highlights:
     text: "Cada jogo de Windows roda na sua própria pasta, separado dos outros."
 faq:
   - q: "Existe um GOG Galaxy para Linux?"
-    a: "Não, a GOG não faz versão do Galaxy para Linux. O Heronite usa o [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl), uma ferramenta de código aberto da GOG, para fazer login, baixar, verificar e atualizar seus jogos."
+    a: "Não, a GOG não faz versão do Galaxy para Linux. O Heronite usa o [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl) para fazer login, baixar, verificar e atualizar seus jogos. Ele é uma ferramenta de código aberto, não oficial, para a GOG."
   - q: "Os jogos da GOG rodam no Linux?"
     a: "Muitos rodam. A maioria é de jogos de Windows que rodam pelo Wine ou pelo Proton. Veja a nota do jogo no [ProtonDB](https://www.protondb.com) antes de instalar."
   - q: "Por que meus downloads da GOG falham no Linux?"
@@ -40,7 +40,7 @@ related:
 ## O que você precisa
 
 - Um PC com Linux de 64 bits e um driver Vulkan funcionando.
-- O `python3`, no qual o gogdl (a ferramenta de download da GOG) roda. Teste com `python3 --version` e instale pelo gerenciador de pacotes se o comando não existir.
+- O `python3`, no qual o gogdl (a ferramenta que baixa os jogos da GOG) roda. Teste com `python3 --version` e instale pelo gerenciador de pacotes se o comando não existir.
 - Uma conta da GOG, para fazer login. Adicionar jogos à mão não precisa de conta.
 - Espaço livre em disco. Os jogos são instalados em `~/Games/Heronite`.
 
@@ -57,18 +57,19 @@ Os outros formatos estão no [guia de instalação](/pt-br/docs/installation/). 
 
 ## Faça login na GOG
 
-1. Aperte <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Lojas**.
-2. Escolha **GOG** e depois **Entrar com a GOG**.
-3. Faça login na página da GOG, na janela que abrir.
+1. Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Escolha **GOG**.
+3. Clique em **Entrar**.
+4. Faça login na página da GOG, na janela que abrir.
 
-Aí todos os seus jogos da GOG aparecem na sua biblioteca. Se a janela de login não abrir, use o **login pelo navegador** na mesma página. Copie o endereço da página em que você cair, que contém `code=`, e cole no Heronite ([logins das lojas](/pt-br/docs/troubleshooting/#o-login-ou-o-download-de-uma-loja-falha)).
+Aí todos os seus jogos da GOG aparecem na sua biblioteca. Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página. Copie o endereço da página em que você cair, que contém `code=`, e cole no Heronite ([logins das lojas](/pt-br/docs/troubleshooting/#o-login-ou-o-download-de-uma-loja-falha)).
 
 ## Instale e jogue um jogo da GOG
 
 Antes, veja a caixa **No Linux** nos detalhes do jogo, com a nota do [ProtonDB](https://www.protondb.com).
 
 1. Encontre o jogo na sua biblioteca e aperte <kbd>Enter</kbd>, ou escolha **Instalar pela GOG**.
-2. Escolha a **Pasta de instalação**. Para um jogo de Windows, a **Versão do Wine** fica em **Mostrar configurações do Wine**; o padrão é um bom começo.
+2. Confira a pasta em **Selecionar local de instalação**. Para um jogo de Windows, a **Versão do Wine** fica em **Mostrar configurações do Wine**; o padrão é um bom começo.
 3. Confirme. Acompanhe o download na página Downloads (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 4. Quando terminar, selecione o jogo e aperte <kbd>Enter</kbd> para jogar.
 
@@ -80,17 +81,17 @@ Se um jogo de Windows der problema, abra **Configurações do jogo → Compatibi
 
 ![As Configurações do jogo do Heronite para Control, na aba Compatibilidade, com a versão do Proton, a nota do ProtonDB e o prefixo Wine.](../../../assets/screenshots/game-settings.webp)
 
-Cada jogo de Windows tem o seu próprio prefixo Wine, uma pasta separada do Windows, em `~/Games/Heronite/Prefixes`.
+Cada jogo de Windows tem o seu próprio prefixo Wine (uma pasta que funciona como um Windows só daquele jogo) em `~/Games/Heronite/Prefixes`.
 
 ## Adicione jogos da GOG sem DRM à mão
 
 1. Baixe o instalador offline na sua conta, no site da GOG.
-2. Rode o instalador. Para um instalador de Windows, use **Executar .exe no prefixo** em **Configurações do jogo → Compatibilidade**, ou rode pelo Wine você mesmo.
+2. Abra o instalador. Para um instalador de Windows, clique em **Executar .exe no prefixo** em **Configurações do jogo → Compatibilidade**, ou rode pelo Wine você mesmo.
 3. Aperte <kbd>Ctrl</kbd> <kbd>N</kbd> e adicione o jogo instalado: um programa de Windows (`.exe`), um programa nativo de Linux ou um script de início.
 
-Para adicionar vários jogos de uma vez, aponte o Heronite para a pasta onde eles estão. O Heronite busca arte e detalhes para esses jogos, mas eles não ficam ligados à sua conta da GOG, então não se atualizam.
+Para adicionar vários jogos de uma vez, escolha **Adicionar de uma pasta** no menu ☰. O Heronite busca arte e detalhes para esses jogos, mas eles não ficam ligados à sua conta da GOG, então não se atualizam.
 
-Se um jogo da GOG já está neste PC, use **Importar um jogo instalado** na página da GOG em vez de baixar de novo.
+Se um jogo da GOG já está neste PC, clique em **Importar jogo**, na seção **Importar um jogo instalado** da página da GOG, em vez de baixar de novo.
 
 ## Atualize, repare ou mova um jogo da GOG
 

@@ -36,7 +36,7 @@ Sim. **Configurações → Nuvem** deixa seus status, favoritos, notas, tempo de
 
 ## Vou perder minha configuração do Heroic?
 
-Não. Na primeira abertura, o Heronite copia os dados do Heroic uma vez e só lê esses dados, então o Heroic continua funcionando.
+Não. Na primeira vez que você abre o Heronite, ele copia os dados do Heroic uma vez e só lê esses dados, então o Heroic continua funcionando.
 
 ## Jogos com anti-cheat funcionam?
 

@@ -22,14 +22,14 @@ A Steam abre os próprios jogos. No Windows, o Heronite pode rodar scripts e pro
 
 1. Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
 2. Escolha **Epic Games**, **GOG** ou **Amazon Games**.
-3. Aperte **Entrar**. Uma janela pequena abre com a página da própria loja (WebKitGTK no Linux, WebView2 no Windows).
+3. Clique em **Entrar**. Uma janela pequena abre com a página da própria loja (WebKitGTK no Linux, WebView2 no Windows).
 4. Faça login nela.
 
 Se a janela não abrir, use **Ou entre pelo navegador** na mesma página:
 
-1. Aperte **Abrir no navegador** e faça login.
+1. Clique em **Abrir no navegador** e faça login.
 2. Copie o endereço ou o código mostrado no final.
-3. Cole em **2. Cole o código** e aperte **Entrar**.
+3. Cole em **2. Cole o código** e clique em **Entrar**.
 
 **Downloads.** Uma fila de downloads instala, atualiza e repara jogos. Ela também move, importa ou desinstala. Os downloads pausam quando você fica offline, o Heronite tenta de novo os que falham e procura atualizações dos jogos a cada 3 horas.
 
@@ -45,26 +45,26 @@ Se a janela não abrir, use **Ou entre pelo navegador** na mesma página:
 
 ## Usar Battle.net, EA app, Ubisoft Connect e Rockstar Games
 
-No Linux, o Heronite instala cada app de loja em um prefixo Wine próprio (uma pasta do Windows separada), `~/Games/Heronite/Prefixes/<loja>`. No Windows, o app de loja roda normalmente, sem Wine.
+No Linux, o Heronite instala cada app de loja em um prefixo Wine próprio (uma pasta que funciona como um Windows só daquele app), `~/Games/Heronite/Prefixes/<loja>`. No Windows, o app de loja abre direto, sem Wine.
 
 1. Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>) e escolha o app de loja.
-2. Aperte o botão de instalar com o nome do app, como **Instalar o Battle.net**. O Heronite baixa o instalador oficial e roda. No Linux, ele instala o app com o seu Proton padrão, o que leva uns 5 minutos. No Windows, o sistema pode pedir sua permissão.
-3. Aperte o botão de abrir com o nome do app, como **Abrir o Battle.net**, e faça login nele.
+2. Clique no botão de instalar com o nome do app, como **Instalar o Battle.net**. O Heronite baixa o instalador oficial e abre. No Linux, ele instala o app com o seu Proton padrão, o que leva uns 5 minutos. No Windows, o sistema pode pedir sua permissão.
+3. Clique no botão de abrir com o nome do app, como **Abrir o Battle.net**, e faça login nele.
 4. Instale os jogos no app de loja. Eles aparecem na sua biblioteca e abrem por ela.
 
-No Windows, se o app de loja já estiver instalado, o Heronite usa ele do jeito que está.
+No Windows, se o app de loja já estiver instalado, o Heronite usa esse app.
 
 ## Adicionar jogos da Microsoft Store e do PC Game Pass (Windows)
 
-O Heronite encontra os jogos que o app Xbox e a Microsoft Store instalaram, comprados ou do PC Game Pass, e adiciona sozinho. Não tem login: instale e atualize os jogos no app Xbox, e o Heronite abre eles e conta o tempo de jogo.
+O Heronite encontra os jogos que o app Xbox e a Microsoft Store instalaram, comprados ou do PC Game Pass. O Heronite adiciona esses jogos à sua biblioteca. Não tem login: instale e atualize os jogos no app Xbox, e o Heronite abre eles e conta o tempo de jogo.
 
-O Heronite busca esses jogos alguns segundos depois de abrir e a cada dez minutos. Para buscar na hora, aperte **Ler jogos agora** em **Lojas → Xbox**, ou o botão de atualizar da Coleção. Desinstale esses jogos pelo app Xbox.
+O Heronite busca esses jogos alguns segundos depois de abrir e a cada dez minutos. Para buscar na hora, clique em **Ler jogos agora** em **Lojas → Xbox** ou no botão de atualizar da Coleção. Desinstale esses jogos pelo app Xbox.
 
 ## Importar jogos do Heroic, Lutris, Bottles, Faugus e Playnite
 
 Ligue um launcher em **Configurações → Outros launchers** com **Trazer os jogos dele**. Depois, o Heronite mantém os jogos dele sincronizados. No Linux, cada launcher pode ser a instalação normal ou o Flatpak:
 
-| Launcher | O que entra |
+| Launcher | O que o Heronite importa |
 |---|---|
 | Heroic (Linux) | Jogos que você adicionou à mão e seus jogos instalados da Epic, GOG e Amazon |
 | Lutris (Linux) | Jogos da biblioteca dele (`pga.db`) |
@@ -72,9 +72,9 @@ Ligue um launcher em **Configurações → Outros launchers** com **Trazer os jo
 | Faugus (Linux) | Jogos da lista dele |
 | Playnite (Windows) | Jogos instalados que não estão ocultos, com capas e tempo de jogo |
 
-Feche o Playnite antes de ligar a importação dele: enquanto roda, ele deixa a biblioteca aberta e o Heronite não consegue ler nada. O Playnite continua abrindo os jogos dele.
+Feche o Playnite antes de ligar a importação dele: enquanto roda, ele deixa a biblioteca aberta e o Heronite não consegue ler nada. Os jogos do Playnite continuam abrindo pelo Playnite.
 
-O Heronite pula os jogos da Steam desses launchers, que já entram pela importação da Steam, então nada aparece duas vezes. Ele só lê os arquivos dos outros launchers, então eles continuam funcionando.
+O Heronite pula os jogos da Steam desses launchers, porque a importação da Steam já adiciona eles, então nada aparece duas vezes. Ele só lê os arquivos dos outros launchers, então eles continuam funcionando.
 
 ## Adicionar jogos que você já tem
 

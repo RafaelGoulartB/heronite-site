@@ -77,12 +77,12 @@ O [ProtonDB](https://www.protondb.com) muitas vezes diz qual versão funciona co
 ## Escolha a versão em Configurações do jogo
 
 1. Selecione o jogo na sua biblioteca e abra as **Configurações do jogo**.
-2. Vá na aba **Compatibilidade**.
+2. Abra a aba **Compatibilidade**.
 3. Em **Versão**, escolha a versão que você instalou.
 
 ![As Configurações do jogo do Heronite na aba Compatibilidade: o menu Versão em GE-Proton-latest, com a nota do ProtonDB e o prefixo Wine embaixo.](../../../assets/screenshots/game-settings.webp)
 
-A mesma aba mostra a nota do ProtonDB do jogo e uma versão **Recomendado**. Sua escolha vale só para aquele jogo. Para definir a versão dos jogos novos, use **Versão** em **Configurações → Padrões dos jogos → Compatibilidade**. Mais em [Wine e Proton](/pt-br/docs/wine-and-proton/).
+A mesma aba mostra a nota do ProtonDB do jogo e uma versão **Recomendado**. Sua escolha vale só para aquele jogo. Para definir a versão dos jogos novos, escolha uma versão em **Versão**, dentro de **Configurações → Padrões dos jogos → Compatibilidade**. Mais em [Wine e Proton](/pt-br/docs/wine-and-proton/).
 
 ## Compartilhe as versões com a Steam (opcional)
 

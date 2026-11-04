@@ -60,13 +60,14 @@ chmod +x ~/Applications/Heronite-x86_64.AppImage
 ~/Applications/Heronite-x86_64.AppImage
 ```
 
-Na primeira abertura, o Heronite traz os jogos da Steam que encontra, sem login, e procura emuladores e pastas de ROMs.
+Na primeira vez que você abre o Heronite, ele traz os jogos da Steam que encontra, sem login, e procura emuladores e pastas de ROMs.
 
 ## Faça login na Epic, GOG e Amazon Games
 
 1. Aperte <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Lojas**.
-2. Escolha **Epic Games**, **GOG** ou **Amazon Games** e depois o botão **Entrar com** da loja, como **Entrar com a GOG**.
-3. Faça login na página da loja, na janela que abrir. Use um teclado para digitar a senha.
+2. Escolha **Epic Games**, **GOG** ou **Amazon Games**.
+3. Clique em **Entrar**.
+4. Faça login na página da loja, na janela que abrir. Use um teclado para digitar a senha.
 
 Aí os jogos da loja aparecem na sua biblioteca. Instale um jogo ou dois agora, enquanto está no desktop. Dá para escolher a pasta de instalação, então o cartão SD também serve.
 
