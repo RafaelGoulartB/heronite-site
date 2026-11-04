@@ -8,7 +8,7 @@
   --text:#eef2f6;
   --soft:#c6cfd8;
   --muted:#a7b2be;
-  --accent:#8fd3ea;
+  --accent:#5fcbf1;
   --accent-ink:#07202a;
   --r:14px;
   --wrap:1312px;
@@ -60,7 +60,7 @@ img{display:block}
 .btn svg{width:18px;height:18px;flex:none}
 .btn small{font:500 12.5px/1 var(--body);opacity:.8}
 .btn-primary{background:var(--accent);color:var(--accent-ink)}
-.btn-primary:hover{background:#b3e4f3}
+.btn-primary:hover{background:#8fdbf6}
 .btn-ghost{border:1px solid var(--line-2);color:var(--text);background:rgba(255,255,255,.06)}
 .btn-ghost:hover{background:rgba(255,255,255,.12)}
 .btn:hover{transform:translateY(-1px)}
@@ -146,6 +146,9 @@ img{display:block}
 .warn b{color:#fff3d6;font-weight:600}
 .os .fine{margin-top:0}
 .os .fine a{color:var(--accent);text-underline-offset:3px}
+.deck-line{display:flex;align-items:center;gap:10px;margin-top:-4px;padding-top:14px;border-top:1px solid var(--line);color:var(--soft);font-size:15px}
+.deck-line svg{width:18px;height:18px;flex:none;color:var(--text)}
+.deck-line a{color:var(--accent);text-underline-offset:3px}
 
 /* ---------- call to action band ---------- */
 .cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 40px;align-items:center;padding:38px 40px;border-radius:22px}
@@ -180,8 +183,6 @@ footer .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px
   .scene{padding:52px 0}
   .dl{grid-template-columns:1fr}
   .nav .brand span{display:none}
-  .dl-version{flex-direction:column;align-items:center}
-  .dl-version > * + *::before{display:none}
   .nav .btn-primary{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px var(--line-2)}
   .os{padding:24px 20px}
   .btn{height:46px;padding:0 20px}
@@ -211,3 +212,7 @@ footer .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px
 .dl-version > * + *::before{content:"·";display:inline-block;margin:0 9px;opacity:.6}
 .dl-version a{color:var(--soft)}
 .btn-pkg{padding:0 18px}
+@media (max-width:760px){
+  .dl-version{flex-direction:column;align-items:center}
+  .dl-version > * + *::before{display:none}
+}

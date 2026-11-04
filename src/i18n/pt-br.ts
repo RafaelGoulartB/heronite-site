@@ -59,6 +59,7 @@ const ptBr: Dict = {
     appImage: 'AppImage',
     packages: '.deb, .rpm e Arch',
     linuxFineHtml: 'Pacotes para Debian, Ubuntu, Fedora, openSUSE e Arch estão na <a href="{releases}">página de versões</a>. Veja <a href="{install}">como instalar</a>.',
+    deckHtml: 'Em um Steam Deck? Siga o <a href="{guide}">guia do Steam Deck</a>.',
     version: 'Versão {version} · {date}',
     signed: 'Assinado com minisign',
   },
@@ -191,10 +192,10 @@ const ptBr: Dict = {
           alt: 'A página Emuladores: PCSX2 pronto, com a pasta de ROMs verificada a cada atualização e 9 jogos usando ele',
         },
         'wine-and-proton': {
-          title: 'Versões do Proton a um clique',
-          text: 'Instale o GE-Proton ou o Proton-CachyOS e escolha a versão de cada jogo no Linux.',
+          title: 'Escolha a versão do Proton por jogo',
+          text: 'Escolha o GE-Proton, o Proton-CachyOS ou outra versão para cada jogo, com a nota no ProtonDB e a versão recomendada ali mesmo.',
           tags: 'GE-Proton · Proton-CachyOS · DXVK · gamescope',
-          alt: 'O Gerenciador de Wine: Proton-CachyOS, GE-Proton, DW-Proton e UMU-Proton, com versões para instalar',
+          alt: 'Configurações do jogo Control: versão de Wine / Proton GE-Proton-latest, ProtonDB: Platinum, roda bem no Proton, recomendado GE-Proton-latest, em uso',
         },
         'saves-and-backups': {
           title: 'Saves com backup depois que você joga',
@@ -219,10 +220,9 @@ const ptBr: Dict = {
       headline: 'Da mesa para o sofá.',
       lead: 'Um layout para controle, pensado para a TV e o Steam Deck, com a mesma biblioteca por trás.',
       link: 'Conheça o modo console',
-      layouts: 'layouts',
-      themes: 'temas, ou crie o seu',
+      pad: 'Direcional, A e B. Sem mouse.',
+      themes: 'layouts e temas, ou crie o seu',
       deckHtml: 'Adicione à Steam com <code>--console</code> e jogue pelo Modo Jogo',
-      caption: 'O modo console em um portátil: a mesma Coleção, feita para controle.',
       homeAlt: 'Início do modo console: SP Football Life 2026 em destaque acima de uma prateleira Continuar jogando com capas, e dicas do controle na parte de baixo',
     },
     light: {
@@ -250,6 +250,7 @@ const ptBr: Dict = {
     maker: {
       textHtml: 'O Heronite é feito por um desenvolvedor, {author}, de forma aberta. <strong>Uma estrela no GitHub é como outros jogadores o encontram.</strong>',
       goal: '{count} estrelas · próxima meta: {goal}',
+      activity: '{count} versões desde {date}',
     },
     guides: {
       headline: 'Guias para Linux e Steam Deck',
@@ -260,6 +261,13 @@ const ptBr: Dict = {
       headline: 'Sua biblioteca inteira, aberta em 215 ms.',
     },
     stuckHtml: 'Outra dúvida? Pergunte nas <a href="{discussions}">Discussões</a> ou escreva para <a href="mailto:{email}">{email}</a>.',
+    faqOpen: 3,
+    afterDownload: {
+      title: 'Seu download começou',
+      text: 'Enquanto termina: o Heronite é feito por um desenvolvedor, e uma estrela no GitHub é como outros jogadores o encontram.',
+      install: 'Como instalar',
+      close: 'Fechar',
+    },
     faqTitle: 'Perguntas frequentes',
     faq: [
       {

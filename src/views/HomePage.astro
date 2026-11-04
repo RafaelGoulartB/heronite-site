@@ -8,11 +8,11 @@ import DownloadCards from '../components/DownloadCards.astro';
 import Faq from '../components/Faq.astro';
 import { medium } from '../lib/shots';
 import { articles, articleUrl, slugOf } from '../lib/content';
-import { latest, totalDownloads, version } from '../lib/releases';
+import { latest, releases, totalDownloads, version } from '../lib/releases';
 import { formatStars, stars } from '../lib/stars';
 import { downloads, site, stores } from '../data/site';
 import type { IconName } from '../data/icons';
-import { fill, localeInfo, localize, useText, type Locale } from '../i18n';
+import { fill, formatDate, localeInfo, localize, useText, type Locale } from '../i18n';
 
 interface Props {
   lang: Locale;
@@ -42,13 +42,20 @@ const wallRows = [
   }),
 );
 
-const [guides, compare, release, starCount, downloadCount] = await Promise.all([
+const [guides, compare, release, starCount, downloadCount, allReleases] = await Promise.all([
   articles('guides', lang),
   articles('compare', lang),
   latest(),
   stars(),
   totalDownloads(),
+  releases(),
 ]);
+// How busy the project is: the number of releases since the first one.
+const firstRelease = allReleases.at(-1);
+const activity = firstRelease && fill(t.maker.activity, {
+  count: allReleases.length,
+  date: formatDate(lang, new Date(firstRelease.date)),
+});
 const numberFormat = localeInfo[lang].htmlLang;
 const starText = formatStars(starCount, numberFormat);
 // The next round number of stars, for the progress bar under the maker's note.
@@ -70,14 +77,14 @@ const guideIcons: Record<string, IconName> = {
   'steam-deck': 'steam',
 };
 
-// The features without a section of their own, each shown by a crop of its screen that is big enough
-// to read. `crop` is the desktop region and `--m*` the phone one, in the 1280px frame.
+// The features without a section of their own. Each shows one panel of the app, cut on its own
+// edges and sized to read: `crop` is the panel in the 1280px frame, `--m*` a narrower cut for phones.
 const extras = [
-  { key: 'linux', slug: 'wine-and-proton', shot: 'collection', crop: '--x:296;--y:392;--w:336;--h:205;--mx:296;--my:468;--mw:210;--mh:128;--max:.5' },
-  { key: 'stores', slug: 'stores', shot: 'command-palette', crop: '--x:410;--y:55;--w:490;--h:194;--mx:440;--my:58;--mw:280;--mh:172;--max:0' },
-  { key: 'emulation', slug: 'emulation', shot: 'emulators', crop: '--x:85;--y:122;--w:560;--h:205;--mx:93;--my:126;--mw:330;--mh:196;--max:0' },
-  { key: 'wine-and-proton', slug: 'wine-and-proton', shot: 'wine-manager', crop: '--x:147;--y:92;--w:400;--h:223;--mx:147;--my:92;--mw:260;--mh:155;--max:0' },
-  { key: 'saves-and-backups', slug: 'saves-and-backups', shot: 'backups', crop: '--x:423;--y:300;--w:590;--h:232;--mx:423;--my:300;--mw:330;--mh:196;--max:0' },
+  { key: 'stores', slug: 'stores', shot: 'command-palette', crop: '--x:432;--y:58;--w:416;--h:166;--mx:432;--my:58;--mw:318;--mh:166', fade: true },
+  { key: 'linux', slug: 'wine-and-proton', shot: 'collection', crop: '--x:304;--y:472;--w:194;--h:120;--mx:304;--my:472;--mw:194;--mh:120', fade: false },
+  { key: 'emulation', slug: 'emulation', shot: 'emulators', crop: '--x:92;--y:125;--w:545;--h:177;--mx:92;--my:125;--mw:300;--mh:112', fade: false },
+  { key: 'wine-and-proton', slug: 'wine-and-proton', shot: 'game-settings', crop: '--x:898;--y:152;--w:362;--h:160;--mx:898;--my:152;--mw:300;--mh:160', fade: false },
+  { key: 'saves-and-backups', slug: 'saves-and-backups', shot: 'backups', crop: '--x:421;--y:305;--w:591;--h:227;--mx:421;--my:305;--mw:330;--mh:160', fade: false },
 ] as const;
 
 const softwareApplication = {
@@ -183,7 +190,7 @@ const softwareApplication = {
           const tile = t.extras.tiles[e.key];
           return (
             <li class={`extra x-${e.key}`}>
-              <div class="crop" style={e.crop}><ShotImg name={e.shot} alt={tile.alt} /></div>
+              <div class="stage"><div class={e.fade ? 'crop panel fade' : 'crop panel'} style={e.crop}><ShotImg name={e.shot} alt={tile.alt} /></div></div>
               <div class="extra-text">
                 <h3><a href={articleUrl('features', e.slug, lang)}>{tile.title}</a></h3>
                 <p>{tile.text}</p>
@@ -199,44 +206,40 @@ const softwareApplication = {
 
   <!-- ============ HISTORY ============ -->
   <section class="sec sec-hist" id="history" aria-labelledby="h-hist">
-    <div class="wrap">
-      <div class="sec-head">
+    <div class="wrap hist">
+      <figure class="tile t-yir"><div class="crop" style="--x:851;--y:211;--w:262;--h:422"><ShotImg name="year-in-review-wrap" alt={t.history.tiles.yir.alt} /></div><figcaption>{t.history.tiles.yir.caption}</figcaption></figure>
+      <div class="hist-head">
         <h2 class="h2" id="h-hist">{t.history.headline}</h2>
         <p class="lead">{t.history.lead}</p>
         <a class="more-link" href={to('/features/play-time-tracking/')}>{t.history.link} &rarr;</a>
       </div>
-      <div class="hist">
-  <figure class="tile t-num"><div class="crop" style="--x:20;--y:128;--w:360;--h:150;--ax:0.1"><ShotImg name="statistics" alt={t.history.tiles.num.alt} /></div><figcaption><span class="lbl">{t.history.tiles.num.label}</span>{t.history.tiles.num.caption}</figcaption></figure>
-
-  <figure class="tile t-goal"><div class="crop" style="--x:990;--y:140;--w:262;--h:122"><ShotImg name="stats-backlog" alt={t.history.tiles.goal.alt} /></div><figcaption><span class="lbl">{t.history.tiles.goal.label}</span>{t.history.tiles.goal.caption}</figcaption></figure>
-
-  <figure class="tile t-chart"><div class="crop" style="--x:30;--y:352;--w:800;--h:236;--mx:30;--my:352;--mw:430;--mh:236;--ax:0"><ShotImg name="statistics" alt={t.history.tiles.chart.alt} /></div><figcaption><span class="lbl">{t.history.tiles.chart.label}</span>{t.history.tiles.chart.caption}</figcaption></figure>
-
-  <figure class="tile t-yir"><div class="crop" style="--x:851;--y:211;--w:262;--h:422"><ShotImg name="year-in-review-wrap" alt={t.history.tiles.yir.alt} /></div><figcaption><span class="lbl">{t.history.tiles.yir.label}</span>{t.history.tiles.yir.caption}</figcaption></figure>
-      </div>
+      <figure class="tile t-num"><div class="crop" style="--x:20;--y:128;--w:360;--h:150;--ax:0.1"><ShotImg name="statistics" alt={t.history.tiles.num.alt} /></div><figcaption>{t.history.tiles.num.caption}</figcaption></figure>
+      <figure class="tile t-goal"><div class="crop" style="--x:990;--y:140;--w:262;--h:122"><ShotImg name="stats-backlog" alt={t.history.tiles.goal.alt} /></div><figcaption>{t.history.tiles.goal.caption}</figcaption></figure>
+      <figure class="tile t-chart"><div class="crop" style="--x:30;--y:352;--w:800;--h:236;--mx:30;--my:352;--mw:430;--mh:236;--ax:0"><ShotImg name="statistics" alt={t.history.tiles.chart.alt} /></div><figcaption>{t.history.tiles.chart.caption}</figcaption></figure>
     </div>
   </section>
 
   <!-- ============ CONSOLE MODE ============ -->
   <section class="sec sec-console" id="console" aria-labelledby="h-console">
-    <div class="wrap cons">
-      <div class="cons-copy">
-        <h2 class="h2" id="h-console">{t.console.headline}</h2>
-        <p class="lead">{t.console.lead}</p>
+    <div class="wrap">
+      <div class="cons-head">
+        <div>
+          <h2 class="h2" id="h-console">{t.console.headline}</h2>
+          <p class="lead">{t.console.lead}</p>
+          <a class="more-link" href={to('/features/console-mode/')}>{t.console.link} &rarr;</a>
+        </div>
         <ul class="cons-facts">
-          <li><b>8</b><span>{t.console.layouts}</span></li>
-          <li><b>7</b><span>{t.console.themes}</span></li>
-          <li><b><Icon name="steam" /></b><span set:html={t.console.deckHtml} /></li>
+          <li><span class="cf-key" aria-hidden="true"><i>A</i><i>B</i></span><span>{t.console.pad}</span></li>
+          <li><b>8 · 7</b><span>{t.console.themes}</span></li>
+          <li><span class="cf-key" aria-hidden="true"><Icon name="steam" /></span><span set:html={t.console.deckHtml} /></li>
         </ul>
-        <a class="more-link" href={to('/features/console-mode/')}>{t.console.link} &rarr;</a>
       </div>
       <figure class="handheld">
         <div class="hh-body">
           <span class="hh-side hh-l" aria-hidden="true"><i class="hh-stick"></i><i class="hh-dpad"></i><i class="hh-pad"></i></span>
-          <div class="hh-screen"><ShotImg name="console-home" sizes="(max-width: 1100px) calc(100vw - 32px), 760px" alt={t.console.homeAlt} /></div>
+          <div class="hh-screen"><ShotImg name="console-home" sizes="(max-width: 1100px) calc(100vw - 32px), 1000px" alt={t.console.homeAlt} /></div>
           <span class="hh-side hh-r" aria-hidden="true"><i class="hh-abxy"><b></b><b></b><b></b><b></b></i><i class="hh-stick"></i><i class="hh-pad"></i></span>
         </div>
-        <figcaption>{t.console.caption}</figcaption>
       </figure>
     </div>
   </section>
@@ -299,21 +302,13 @@ const softwareApplication = {
         <div class="maker-text">
           <p set:html={fill(t.maker.textHtml, { author: site.author })} />
           <div class="goal" aria-hidden="true"><span style={`width:${Math.min(100, (starCount / goal) * 100).toFixed(1)}%`}></span></div>
-          <p class="goal-text">{fill(t.maker.goal, { count: starText, goal })}</p>
+          <p class="goal-text"><span>{fill(t.maker.goal, { count: starText, goal })}</span>{activity && <span>{activity}</span>}</p>
         </div>
         <a class="btn btn-star" href={site.repo}>
           <Icon name="star" />
           <span>{t.star}</span>
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ QUESTIONS ============ -->
-  <section class="sec sec-faq" aria-label={t.faqTitle}>
-    <div class="wrap faq-wrap">
-      <Faq items={t.faq} title={t.faqTitle} />
-      <p class="faq-stuck" set:html={fill(t.stuckHtml, { discussions: site.discussions, email: site.email })} />
     </div>
   </section>
 
@@ -343,6 +338,14 @@ const softwareApplication = {
     </div>
   </section>
 
+  <!-- ============ QUESTIONS ============ -->
+  <section class="sec sec-faq" aria-label={t.faqTitle}>
+    <div class="wrap faq-grid">
+      <Faq items={t.faq} title={t.faqTitle} open={t.faqOpen} />
+      <p class="faq-stuck" set:html={fill(t.stuckHtml, { discussions: site.discussions, email: site.email })} />
+    </div>
+  </section>
+
   <!-- ============ CLOSING ============ -->
   <section class="closing" aria-labelledby="h-close" style={wallStyle}>
     <div class="closing-strip" aria-hidden="true">
@@ -367,6 +370,16 @@ const softwareApplication = {
     </div>
   </section>
   </main>
+
+  <aside class="after-dl" id="after-dl" hidden aria-live="polite">
+    <button class="after-close" type="button" aria-label={t.afterDownload.close}>&times;</button>
+    <p class="after-title">{t.afterDownload.title}</p>
+    <p>{t.afterDownload.text}</p>
+    <div class="actions">
+      <a class="btn btn-star" href={site.repo}><Icon name="star" /><span>{t.star}</span></a>
+      <a class="link" href={to('/docs/installation/')}>{t.afterDownload.install} &rarr;</a>
+    </div>
+  </aside>
 
   <script is:inline define:vars={{ installer: downloads.windowsInstaller, appImage: downloads.appImage, labelWindows: t.downloadWindows, labelLinux: t.downloadLinux }}>
     var root = document.documentElement;
@@ -395,6 +408,13 @@ const softwareApplication = {
       });
     } else if (/win/i.test(ua)) set(installer, labelWindows, fmt.dataset.windows);
     else if (/linux|x11/i.test(ua)) set(appImage, labelLinux, fmt.dataset.linux);
+    // Once a download starts, suggest a star while it finishes.
+    var after = document.getElementById('after-dl');
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="/releases/"]');
+      if (a && /\/download\//.test(a.href)) after.hidden = false;
+    });
+    after.querySelector('.after-close').addEventListener('click', function () { after.hidden = true; });
     var b = document.getElementById('motion'), w = document.getElementById('wall');
     b.addEventListener('click', function () {
       var p = w.classList.toggle('paused');

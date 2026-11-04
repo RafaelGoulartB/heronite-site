@@ -55,6 +55,7 @@ const packages = [
         : <a class="btn btn-ghost" href={site.releases}>{t.packages}</a>}
     </div>
     <p class="fine" set:html={fill(t.linuxFineHtml, { releases: site.releases, install: localize(lang, '/docs/installation/') })} />
+    <p class="deck-line"><Icon name="steam" /><span set:html={fill(t.deckHtml, { guide: localize(lang, '/guides/steam-deck/') })} /></p>
   </div>
 </div>
 {release && (

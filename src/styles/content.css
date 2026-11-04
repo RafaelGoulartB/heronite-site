@@ -86,7 +86,7 @@
 .faq summary h3{font-size:17.5px;font-weight:600;line-height:1.35}
 .faq details p{padding:0 22px 20px;color:var(--soft);font-size:16px;line-height:1.65;max-width:75ch}
 .faq details a{color:var(--accent);text-underline-offset:3px}
-.faq code{font:500 .86em/1.4 var(--mono);padding:.1em .35em;border-radius:5px;background:rgba(255,255,255,.07)}
+.faq code{white-space:nowrap;font:500 .86em/1.4 var(--mono);padding:.1em .35em;border-radius:5px;background:rgba(255,255,255,.07)}
 
 /* ---------- related pages and the closing band ---------- */
 .related{margin:0 auto 72px}

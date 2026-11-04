@@ -61,6 +61,7 @@ const en = {
     appImage: 'AppImage',
     packages: '.deb, .rpm and Arch',
     linuxFineHtml: 'Packages for Debian, Ubuntu, Fedora, openSUSE and Arch are on the <a href="{releases}">releases page</a>. See <a href="{install}">how to install</a>.',
+    deckHtml: 'On a Steam Deck? Follow the <a href="{guide}">Steam Deck guide</a>.',
     version: 'Version {version} · {date}',
     signed: 'Signed with minisign',
   },
@@ -193,10 +194,10 @@ const en = {
           alt: 'The Emulators page: PCSX2 ready, with its ROM folder scanned on refresh and 9 games using it',
         },
         'wine-and-proton': {
-          title: 'Proton builds, one click away',
-          text: 'Install GE-Proton or Proton-CachyOS and pick the build for each game on Linux.',
+          title: 'Pick the Proton build per game',
+          text: 'Choose GE-Proton, Proton-CachyOS or another build for each game, with its ProtonDB rating and the recommended build right there.',
           tags: 'GE-Proton · Proton-CachyOS · DXVK · gamescope',
-          alt: 'The Wine Manager: Proton-CachyOS, GE-Proton, DW-Proton and UMU-Proton, with versions to install',
+          alt: 'Game settings for Control: Wine / Proton version GE-Proton-latest, ProtonDB: Platinum, runs well on Proton, recommended GE-Proton-latest, in use',
         },
         'saves-and-backups': {
           title: 'Saves backed up after you play',
@@ -221,10 +222,9 @@ const en = {
       headline: 'From desk to couch.',
       lead: 'A controller-first layout for the TV and the Steam Deck, with the same library behind it.',
       link: 'Explore console mode',
-      layouts: 'layouts',
-      themes: 'themes, or make your own',
+      pad: 'D-pad, A and B. No mouse needed.',
+      themes: 'layouts and themes, or make your own',
       deckHtml: 'Add it to Steam with <code>--console</code> and play from Gaming Mode',
-      caption: 'Console mode on a handheld: the same Collection, built for a controller.',
       homeAlt: 'Console mode home: SP Football Life 2026 in focus above a Continue playing shelf of covers, controller hints along the bottom',
     },
     light: {
@@ -252,6 +252,7 @@ const en = {
     maker: {
       textHtml: 'Heronite is made by one developer, {author}, in the open. <strong>A star on GitHub is how other players find it.</strong>',
       goal: '{count} stars · next goal: {goal}',
+      activity: '{count} releases since {date}',
     },
     guides: {
       headline: 'Guides for Linux and the Steam Deck',
@@ -262,6 +263,13 @@ const en = {
       headline: 'Your whole library, open in 215 ms.',
     },
     stuckHtml: 'Something else? Ask in <a href="{discussions}">Discussions</a> or write to <a href="mailto:{email}">{email}</a>.',
+    faqOpen: 3,
+    afterDownload: {
+      title: 'Your download has started',
+      text: 'While it finishes: Heronite is made by one developer, and a star on GitHub is how other players find it.',
+      install: 'How to install',
+      close: 'Close',
+    },
     faqTitle: 'Common questions',
     faq: [
       {
