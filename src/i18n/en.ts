@@ -182,24 +182,24 @@ const en = {
       link: 'All eight features',
       tiles: {
         stores: {
-          title: 'Epic, Steam and GOG in one search',
-          text: 'Log in once and Epic, GOG and Amazon join your Steam games. Ctrl+K finds any of them.',
-          alt: 'The Ctrl+K palette searching “contr”: Control from Epic and CONTROL Ultimate Edition from Steam in the same list, with play time',
+          title: 'Epic, GOG and Amazon, next to Steam',
+          text: 'Log in once and every store’s games land in one library. Own a game twice? Ctrl+K finds both.',
+          alt: 'The Collection grouped by store: Control and Civilization VI under Epic Games, POSTAL 2 under GOG, Battlefield 6 and Beat Saber under Steam, and a search for “control” finding Control on Epic and CONTROL Ultimate Edition on Steam',
         },
         emulation: {
           title: 'ROM folders become games',
           text: 'Heronite finds your emulators and turns ROM folders into games with covers.',
-          alt: 'The Emulators page: PCSX2 ready, with its ROM folder scanned on refresh and 9 games using it',
+          alt: 'PCSX2 with 10 games from 1 ROM folder, and the emulated games in the Collection: Burnout 3, Castlevania, God of War II, Gran Turismo 4, Shadow of the Colossus and more, with God of War II open as a PlayStation 2 game',
         },
         'wine-and-proton': {
-          title: 'Pick the Proton build per game',
-          text: 'Choose GE-Proton, Proton-CachyOS or another build for each game, with its ProtonDB rating and the recommended build right there.',
-          alt: 'Game settings for Control: Wine / Proton version GE-Proton-latest, ProtonDB: Platinum, runs well on Proton, recommended GE-Proton-latest, in use',
+          title: 'Know it runs, then pick the Proton',
+          text: 'See the ProtonDB rating and anti-cheat status, then pick GE-Proton or Proton-CachyOS, installed and updated in the app.',
+          alt: 'Elden Ring in Heronite: On Linux Gold, EAC ok, its Proton versions with GE-Proton-latest, and GE-Proton-latest recommended and installed, updating by itself',
         },
         'saves-and-backups': {
           title: 'Saves backed up after you play',
-          text: 'Game saves go to a backup after each session, and the library on a schedule.',
-          alt: 'Backup settings: what goes in a backup, with Collection, app settings, artwork and store sign-ins',
+          text: 'Ludusavi backs up a game’s saves after each session, and Restore brings any backup back.',
+          alt: 'Elden Ring’s timeline, played 1 h 49 min on Oct 11, above its save backup made on Linux that same day, with Restore and Back up now',
         },
       } as Record<string, { title: string; text: string; alt: string }>,
     },

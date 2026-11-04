@@ -180,24 +180,24 @@ const es: Dict = {
       link: 'Las ocho funciones',
       tiles: {
         stores: {
-          title: 'Epic, Steam y GOG en una sola búsqueda',
-          text: 'Inicia sesión una vez y tus juegos de Epic, GOG y Amazon se unen a los de Steam. Ctrl+K encuentra cualquiera.',
-          alt: 'La paleta Ctrl+K buscando “contr”: Control de Epic y CONTROL Ultimate Edition de Steam en la misma lista, con el tiempo de juego',
+          title: 'Epic, GOG y Amazon, junto a Steam',
+          text: 'Inicia sesión una vez y los juegos de todas las tiendas quedan en una sola biblioteca. ¿Tienes un juego en dos tiendas? Ctrl+K encuentra los dos.',
+          alt: 'La Colección agrupada por tienda: Control y Civilization VI en Epic Games, POSTAL 2 en GOG, Battlefield 6 y Beat Saber en Steam, y una búsqueda de “control” que encuentra Control en Epic y CONTROL Ultimate Edition en Steam',
         },
         emulation: {
           title: 'Las carpetas de ROMs se vuelven juegos',
           text: 'Heronite encuentra tus emuladores y convierte las carpetas de ROMs en juegos con portada.',
-          alt: 'La página Emuladores: PCSX2 listo, con su carpeta de ROMs revisada en cada actualización y 9 juegos que lo usan',
+          alt: 'PCSX2 con 10 juegos de 1 carpeta de ROMs, y los juegos emulados en la Colección: Burnout 3, Castlevania, God of War II, Gran Turismo 4, Shadow of the Colossus y más, con God of War II abierto como juego de PlayStation 2',
         },
         'wine-and-proton': {
-          title: 'Elige la versión de Proton por juego',
-          text: 'Elige GE-Proton, Proton-CachyOS u otra versión para cada juego, con su nota en ProtonDB y la versión recomendada ahí mismo.',
-          alt: 'Ajustes del juego Control: versión de Wine / Proton GE-Proton-latest, ProtonDB: Platinum, funciona bien con Proton, recomendado GE-Proton-latest, en uso',
+          title: 'Sabe si funciona y elige el Proton',
+          text: 'Mira la nota en ProtonDB y el estado del anti-cheat, y elige GE-Proton o Proton-CachyOS, instalados y actualizados en la app.',
+          alt: 'Elden Ring en Heronite: en Linux Gold, EAC ok, sus versiones de Proton con GE-Proton-latest, y GE-Proton-latest recomendado e instalado, que se actualiza solo',
         },
         'saves-and-backups': {
           title: 'Partidas guardadas después de jugar',
-          text: 'Tus partidas se copian después de cada sesión, y la biblioteca de forma programada.',
-          alt: 'Ajustes de copias: qué entra en una copia, con la Colección, los ajustes de la app, las imágenes y los inicios de sesión de las tiendas',
+          text: 'Ludusavi copia las partidas de cada juego después de cada sesión, y Restaurar recupera cualquier copia.',
+          alt: 'La línea de tiempo de Elden Ring, jugado 1 h 49 min el 11 de octubre, sobre su copia de partidas hecha en Linux ese mismo día, con Restaurar y Copiar ahora',
         },
       },
     },

@@ -14,7 +14,8 @@ interface Props {
 
 const { name, alt, eager = false, sizes } = Astro.props;
 const image = shot(name);
-const widths = sizes ? [640, 960, 1280, image.width] : [image.width];
+// Never wider than the picture itself: a larger width would be the same file under a wrong `w`.
+const widths = sizes ? [...[640, 960, 1280].filter((w) => w < image.width), image.width] : [image.width];
 const avif = await Promise.all(widths.map((width) => getImage({ src: image, format: 'avif', quality: 60, width })));
 const srcset = sizes ? avif.map((a, i) => `${a.src} ${widths[i]}w`).join(', ') : avif[0].src;
 ---
