@@ -31,7 +31,7 @@ Aperte <kbd>?</kbd> no Heronite para ver todos os atalhos de teclado.
 | Setas, <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>PgUp</kbd>, <kbd>PgDn</kbd> | Mover |
 | <kbd>Enter</kbd> | Jogar ou instalar |
 | <kbd>Espaço</kbd> | Selecionar |
-| <kbd>Shift</kbd> + setas | Selecionar um intervalo |
+| <kbd>Shift</kbd> com as setas | Selecionar um intervalo |
 | <kbd>Ctrl</kbd> <kbd>A</kbd> | Selecionar todos os jogos visíveis |
 | <kbd>F3</kbd> | Editar o jogo ou a seleção |
 | <kbd>Ctrl</kbd> <kbd>Z</kbd> | Desfazer a última alteração nos jogos selecionados |

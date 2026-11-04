@@ -45,7 +45,7 @@ related:
 
 ## O que "sem Electron" significa para mim?
 
-Apps em Electron trazem um motor de navegador completo. O Heronite não. Um programa nativo lê a sua biblioteca e a desenha na GPU com o GPUI, um framework de interface para Rust.
+Apps em Electron trazem um motor de navegador completo. O Heronite não. Um programa nativo lê sua biblioteca e a desenha na GPU com o GPUI, um framework de interface para Rust.
 
 A janela de login das lojas é o único lugar que mostra uma página web. É uma janela separada que usa o web view que já existe no seu sistema (WebKitGTK no Linux, WebView2 no Windows). Ela só abre quando você faz login na Epic Games, na GOG ou na Amazon.
 
@@ -63,7 +63,7 @@ Sim. O modo console não carrega nada até você ligá-lo. Em **Configurações 
 
 ## Dá para levar o Heronite em um pendrive?
 
-No Windows, dá. A cópia portátil é uma pasta com o programa, a sua Coleção, configurações, caches e capturas de tela. Extraia onde quiser ou mova para um pendrive. Ela não escreve no registro. Veja [a cópia portátil](/pt-br/docs/files-and-folders/#a-cópia-portátil-windows).
+No Windows, dá. A cópia portátil é uma pasta com o programa, sua Coleção, configurações, caches e capturas de tela. Extraia onde quiser ou mova para um pendrive. Ela não escreve no registro. Veja [a cópia portátil](/pt-br/docs/files-and-folders/#a-cópia-portátil-windows).
 
 ## Dá para desligar o trabalho em segundo plano?
 
@@ -80,6 +80,6 @@ Sim. Defina estas [variáveis de ambiente](/pt-br/docs/environment-variables/):
 
 O Heronite roda em Linux (qualquer distribuição, x86_64) e Windows 10 e 11 (x86_64). No Linux ele usa Vulkan para mostrar a tela, então você precisa de um driver Vulkan funcionando: Mesa para AMD e Intel, ou o driver proprietário para NVIDIA.
 
-Se a janela não abrir ou ficar preta, rode `vulkaninfo` e confira se ele lista a sua GPU. Veja [Solução de problemas](/pt-br/docs/troubleshooting/) e [Instalação](/pt-br/docs/installation/).
+Se a janela não abrir ou ficar preta, rode `vulkaninfo` e confira se ele lista sua GPU. Veja [Solução de problemas](/pt-br/docs/troubleshooting/#o-heronite-não-abre-ou-mostra-uma-janela-preta) e [Instalação](/pt-br/docs/installation/).
 
 Próximo: [baixe o Heronite](/pt-br/download/).

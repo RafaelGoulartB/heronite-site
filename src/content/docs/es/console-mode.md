@@ -62,7 +62,7 @@ En **Ajustes → Modo consola**, elige **Exportar…** para guardar un tema como
 
 ## Abre el overlay dentro del juego (beta, Linux)
 
-1. En **Ajustes → Overlay**, activa **Activar el overlay**. Viene desactivado por defecto.
+1. En **Ajustes → Overlay**, marca **Activar el overlay**. Viene desactivado por defecto.
 2. Durante un juego abierto por Heronite, pulsa el botón Guide del mando.
 
 El panel sobre el juego tiene volumen, micrófono, límite de FPS, capturas de pantalla y notas del diario.

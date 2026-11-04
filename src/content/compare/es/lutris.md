@@ -16,8 +16,8 @@ highlights:
     text: "En Linux, los juegos de la biblioteca de Lutris pasan y se mantienen sincronizados."
   - title: "Sin registro"
     text: "Heronite funciona sin una cuenta propia."
-  - title: "Tu historial de juego"
-    text: "Cada sesión alimenta estadísticas, un diario y un resumen del año."
+  - title: "Sandbox para juegos dudosos"
+    text: "Ejecuta un juego sin red y sin acceso a tu carpeta personal."
   - title: "Copias de partidas"
     text: "Ludusavi hace una copia de las partidas guardadas después de cada sesión."
 faq:
@@ -46,11 +46,11 @@ related:
 | Emulación | Emuladores detectados, escaneo de ROMs, estados guardados | Runners para muchos emuladores y motores |
 | Wine y Proton | Sí, con un gestor de Wine | Sí, GE-Proton con umu por defecto |
 | Tiempo de juego | Estadísticas, diario, resumen del año | Sí, con un editor de tiempo de juego |
-| Guardados en la nube | Epic y GOG, en beta | No aparece |
+| Guardados en la nube | Epic y GOG, en beta | — |
 | Cuenta en línea | No hace falta | Cuenta opcional de lutris.net |
 | Importar desde el otro lanzador | Sí, en Linux | No aplica |
 
-La columna de Lutris sale de [lutris.net](https://lutris.net), el [repositorio de Lutris](https://github.com/lutris/lutris) y sus [notas de versión](https://github.com/lutris/lutris/releases), actualizados a noviembre de 2026. "No aparece" significa que el README de Lutris no lo menciona.
+La columna de Lutris sale de [lutris.net](https://lutris.net), el [repositorio de Lutris](https://github.com/lutris/lutris) y sus [notas de versión](https://github.com/lutris/lutris/releases), actualizados a noviembre de 2026. — = no aparece en el README, el sitio web ni las notas de versión de Lutris.
 
 ## ¿Qué tienen en común Heronite y Lutris?
 

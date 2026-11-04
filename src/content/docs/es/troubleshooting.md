@@ -13,9 +13,7 @@ Elige **Más información** y luego **Ejecutar de todas formas**. Los archivos d
 
 ## Heronite no inicia o muestra una ventana negra
 
-### La ventana no se abre o se ve negra (Linux)
-
-Instala el controlador de Vulkan de tu GPU (`vulkan-radeon` o `vulkan-intel` de Mesa, o el controlador de NVIDIA) y comprueba que `vulkaninfo` muestra la GPU. Heronite usa Vulkan para mostrar la pantalla.
+En Linux, instala el controlador de Vulkan de tu GPU y comprueba que `vulkaninfo` muestra la GPU. Heronite usa Vulkan para mostrar la pantalla. Para AMD o Intel, instala `vulkan-radeon` o `vulkan-intel` en Arch, o `mesa-vulkan-drivers` en Debian y Ubuntu; para NVIDIA, el controlador de NVIDIA.
 
 ### "Heronite ya está en ejecución pero no responde"
 
@@ -35,7 +33,7 @@ Vuelve a buscar actualizaciones más tarde. Tu red hizo demasiadas peticiones a 
 
 ### La ventana de inicio de sesión no se abre
 
-Usa **O inicia sesión con tu navegador** en la misma página de la tienda: inicia sesión en tu navegador y luego pega la dirección o el código en Heronite.
+Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé.
 
 Para arreglar la propia ventana de inicio de sesión, instala:
 
@@ -52,15 +50,15 @@ Cuando un juego se cierra en los 30 segundos siguientes a abrirse y Heronite con
 
 | Heronite dice | Solución |
 |---|---|
-| "Falta Visual C++ 2015-2022" (u otro runtime) | **Instalar … y jugar**: Heronite lo instala con Winetricks, solo en el prefijo de este juego |
-| "Falta .NET Framework" | **Instalar .NET Framework 4.8 y jugar** (tarda unos minutos) |
-| "DirectX 12 necesita VKD3D-Proton" | **Activar VKD3D-Proton y jugar**, o actívalo en **Ajustes del juego → Compatibilidad** |
-| "Direct3D falló sin DXVK" | **Activar DXVK y jugar**, o actívalo en **Ajustes del juego → Compatibilidad** |
-| "Vulkan no pudo iniciarse" | **Copiar el comando** y ejecútalo en una terminal. Instala el controlador de Vulkan, al que a menudo le falta la parte de 32 bits (`lib32-vulkan-radeon`, `mesa-vulkan-drivers:i386`, …) |
-| "Wine se quedó sin archivos abiertos" | **Usar fsync y jugar**, o elige Fsync en lugar de Esync en **Ajustes del juego → Compatibilidad** |
-| "El límite de mapas de memoria es bajo" | **Subirlo y jugar**, y luego escribe la contraseña de administrador (ver más abajo) |
-| "Otro Wine sigue en marcha en el prefijo" | **Cerrarlo y jugar**, o cierra el otro juego |
-| "Easy Anti-Cheat necesita su runtime" | **Activar el runtime anti-cheat y jugar** |
+| "Falta Visual C++ 2015-2022" (u otro runtime) | Haz clic en **Instalar … y jugar**: Heronite lo instala con Winetricks, solo en el prefijo de este juego |
+| "Falta .NET Framework" | Haz clic en **Instalar .NET Framework 4.8 y jugar** (tarda unos minutos) |
+| "DirectX 12 necesita VKD3D-Proton" | Haz clic en **Activar VKD3D-Proton y jugar**, o actívalo en **Ajustes del juego → Compatibilidad** |
+| "Direct3D falló sin DXVK" | Haz clic en **Activar DXVK y jugar**, o actívalo en **Ajustes del juego → Compatibilidad** |
+| "Vulkan no pudo iniciarse" | Haz clic en **Copiar el comando** y ejecútalo en una terminal. Instala el controlador de Vulkan, al que a menudo le falta la parte de 32 bits (`lib32-vulkan-radeon`, `mesa-vulkan-drivers:i386`, …) |
+| "Wine se quedó sin archivos abiertos" | Haz clic en **Usar fsync y jugar**, o elige Fsync en lugar de Esync en **Ajustes del juego → Compatibilidad** |
+| "El límite de mapas de memoria es bajo" | Haz clic en **Subirlo y jugar** y luego escribe la contraseña de administrador ([detalles](#el-límite-de-mapas-de-memoria-es-bajo-vmmax_map_count)) |
+| "Otro Wine sigue en marcha en el prefijo" | Haz clic en **Cerrarlo y jugar**, o cierra el otro juego |
+| "Easy Anti-Cheat necesita su runtime" | Haz clic en **Activar el runtime anti-cheat y jugar** |
 | "Easy Anti-Cheat bloquea a los jugadores de Linux" | Ninguna: el desarrollador no permite Linux ([Are We Anti-Cheat Yet?](https://areweanticheatyet.com) lo marca como denegado) |
 
 ### El límite de mapas de memoria es bajo (vm.max_map_count)
@@ -81,7 +79,7 @@ sudo sysctl -w vm.max_map_count=1048576
 ## El overlay dentro del juego no funciona (Linux)
 
 - El botón Guide abre Steam: desactiva **Guide Button Focuses Steam** en **Steam → Configuración → Mando**.
-- El overlay nunca aparece: activa **Activar el overlay** en **Ajustes → Overlay** (viene desactivado por defecto). Necesita Wayland con layer-shell (KDE Plasma, Hyprland, Sway), así que no funciona en GNOME ni en X11.
+- El overlay nunca aparece: marca **Activar el overlay** en **Ajustes → Overlay** (viene desactivado por defecto). Necesita Wayland con layer-shell (KDE Plasma, Hyprland, Sway), así que no funciona en GNOME ni en X11.
 
 ## Busca los logs
 
@@ -98,7 +96,7 @@ Para obtener más detalle:
 - Inicia Heronite con `RUST_LOG=debug`
 - Activa **Logs detallados** en **Ajustes del juego → Avanzado** (en Linux, también añade la salida de Wine)
 
-Si **Desactivar logs** está activado en **Ajustes → Avanzado**, desactívalo antes de reportar un problema.
+Si **Desactivar logs** está marcado en **Ajustes → Avanzado**, desmárcalo antes de reportar un problema.
 
 ## Reporta un error
 

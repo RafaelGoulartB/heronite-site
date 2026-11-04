@@ -18,7 +18,7 @@ Si tu biblioteca está vacía, Heronite añade:
 
 En Linux, la biblioteca vacía también muestra **Importar de otro launcher** cuando encuentra juegos en Heroic, Lutris, Bottles o Faugus. Elige ahí un launcher para importar sus juegos y mantenerlos sincronizados.
 
-En Windows, Heronite encuentra los juegos de Microsoft Store y PC Game Pass que instaló la app de Xbox, sin iniciar sesión.
+En Windows, Heronite encuentra los juegos de Microsoft Store y PC Game Pass instalados con la app de Xbox, sin iniciar sesión.
 
 ## Inicia sesión en Epic Games, GOG o Amazon Games
 
@@ -27,7 +27,7 @@ En Windows, Heronite encuentra los juegos de Microsoft Store y PC Game Pass que 
 3. Haz clic en **Iniciar sesión**.
 4. Inicia sesión en la página de la tienda, en la ventana que se abre.
 
-Si la ventana no se puede abrir, usa **O inicia sesión con tu navegador** en esa misma página: inicia sesión en tu navegador y pega la dirección o el código que te dé. Consulta [Tiendas y launchers](/es/docs/stores-and-launchers/).
+Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé. Consulta [Tiendas y launchers](/es/docs/stores-and-launchers/).
 
 En Windows, Heronite también detecta los juegos instalados con el Epic Games Launcher, GOG Galaxy o la app de Amazon Games, sin volver a descargarlos.
 
@@ -61,7 +61,7 @@ La **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre cualquier página,
 - Cambia entre **Foco** (una lista con un panel de detalles) y una **Cuadrícula** de portadas.
 - Usa **Grupo** para agrupar por estado, tienda, género, serie, año y más.
 - Guarda **vistas** con tus filtros y orden (Jugando ahora, Backlog, Finalizado, Favoritos).
-- Selecciona varios juegos (<kbd>Espacio</kbd>, <kbd>Shift</kbd> + flechas, <kbd>Ctrl</kbd> <kbd>A</kbd>) y pulsa <kbd>F3</kbd> para editar a la vez su serie y sus etiquetas. <kbd>Ctrl</kbd> <kbd>Z</kbd> lo deshace.
+- Selecciona varios juegos (<kbd>Espacio</kbd>, <kbd>Shift</kbd> con las flechas, <kbd>Ctrl</kbd> <kbd>A</kbd>) y pulsa <kbd>F3</kbd> para editar a la vez su serie y sus etiquetas. <kbd>Ctrl</kbd> <kbd>Z</kbd> lo deshace.
 
 ## Juega y haz capturas de pantalla
 

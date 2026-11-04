@@ -11,12 +11,18 @@ Heronite reúne en una sola biblioteca tus juegos de Steam, Epic Games, GOG, Ama
 
 ## Añade tus juegos de Steam
 
-No hace falta iniciar sesión. Heronite lee tus bibliotecas de Steam y las mantiene sincronizadas.
+No hace falta iniciar sesión. Heronite lee tus bibliotecas de Steam y las mantiene sincronizadas, y Steam inicia sus propios juegos.
 
 - **Linux:** encuentra Steam en `~/.steam/steam`, `~/.local/share/Steam`, el Flatpak (`~/.var/app/com.valvesoftware.Steam/.local/share/Steam`) y el Snap (`~/snap/steam/common/.local/share/Steam`).
 - **Windows:** encuentra Steam en el registro, o en `C:\Program Files (x86)\Steam`.
 
-Steam inicia sus juegos. En Windows, Heronite puede ejecutar scripts y programas, como trainers, alrededor de un juego de Steam.
+### Ejecuta un trainer con un juego de Steam (Windows)
+
+1. Abre **Ajustes del juego → Inicio** en ese juego.
+2. En **Programas junto al juego**, haz clic en **Añadir programa** y elige el trainer.
+3. Juega desde Heronite.
+
+Heronite cierra el trainer cuando el juego termina. Los **Scripts** de la misma pestaña se ejecutan antes de que empiece el juego y después de que se cierre. Un juego iniciado desde el propio Steam no ejecuta ninguna de las dos cosas.
 
 ## Inicia sesión en Epic Games, GOG y Amazon Games
 
@@ -25,7 +31,7 @@ Steam inicia sus juegos. En Windows, Heronite puede ejecutar scripts y programas
 3. Haz clic en **Iniciar sesión**. Se abre una pequeña ventana con la página de la propia tienda (WebKitGTK en Linux, WebView2 en Windows).
 4. Inicia sesión ahí.
 
-Si la ventana no se abre, usa **O inicia sesión con tu navegador** en esa misma página:
+Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé.
 
 1. Haz clic en **Abrir en el navegador** e inicia sesión.
 2. Copia la dirección o el código que aparece al final.
@@ -56,7 +62,7 @@ En Windows, Heronite usa la app de la tienda si ya está instalada.
 
 ## Añade juegos de Microsoft Store y PC Game Pass (Windows)
 
-Heronite encuentra los juegos que instalaron la app de Xbox y Microsoft Store, comprados o de PC Game Pass. Heronite los añade a tu biblioteca. No hay inicio de sesión: instálalos y actualízalos en la app de Xbox, y Heronite los inicia y cuenta su tiempo de juego.
+Heronite encuentra los juegos instalados con la app de Xbox o Microsoft Store, comprados o de PC Game Pass. Heronite los añade a tu biblioteca. No hay inicio de sesión: instálalos y actualízalos en la app de Xbox, y Heronite los inicia y cuenta su tiempo de juego.
 
 Heronite los lee unos segundos después de abrirse y cada diez minutos. Para leerlos ahora, haz clic en **Leer juegos ahora** en **Tiendas → Xbox**, o en el botón de actualizar de la Colección. Desinstala estos juegos en la app de Xbox.
 

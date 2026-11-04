@@ -19,7 +19,7 @@ highlights:
   - title: Apps de tienda con Wine en Linux
     text: Cada app de tienda tiene su propio prefijo de Wine; en Windows funciona sin Wine.
   - title: Importa otros lanzadores
-    text: Heroic, Lutris, Bottles y Faugus en Linux y Playnite en Windows se mantienen sincronizados.
+    text: Los juegos de Heroic, Lutris, Bottles, Faugus y Playnite se mantienen sincronizados.
 faq:
   - q: ¿Puedo usar Epic Games y GOG en un solo lanzador?
     a: Sí. Inicia sesión en cada tienda en la página **Tiendas** y una sola cola de descargas se encarga de ambas. Mira [Epic en Linux](/guides/epic-games-on-linux/) y [GOG en Linux](/guides/gog-on-linux/).
@@ -47,7 +47,7 @@ related:
 | Rockstar Games | Sí | Sí | Inicias sesión; la app de la tienda instala los juegos |
 | Microsoft Store y PC Game Pass | No | Sí | Sin iniciar sesión; Heronite trae los juegos de la app de Xbox |
 
-Tus [juegos emulados](/es/features/emulation/) están en la misma [biblioteca](/es/features/game-library/).
+Tus [juegos emulados](/es/features/emulation/) están en la misma [biblioteca](/es/features/game-library/). Para añadir un juego que no es de una tienda, mira [Añade otros juegos a tu biblioteca](/es/docs/getting-started/#añade-otros-juegos-a-tu-biblioteca).
 
 ## ¿Cómo inicio sesión en Epic, GOG y Amazon?
 
@@ -56,9 +56,9 @@ Tus [juegos emulados](/es/features/emulation/) están en la misma [biblioteca](/
 3. Haz clic en **Iniciar sesión**.
 4. Inicia sesión en la página de la tienda, en la ventana que se abre.
 
-Si la ventana no se abre, usa **O inicia sesión con tu navegador** en la misma página ([Tiendas y launchers](/es/docs/stores-and-launchers/)). Paso a paso: [Epic Games](/es/guides/epic-games-on-linux/), [GOG](/es/guides/gog-on-linux/) y [Amazon Games](/es/guides/amazon-games-on-linux/).
+Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé. Paso a paso: [Epic Games](/es/guides/epic-games-on-linux/), [GOG](/es/guides/gog-on-linux/) y [Amazon Games](/es/guides/amazon-games-on-linux/).
 
-En Windows, Heronite añade los juegos que instalaron el Epic Games Launcher, GOG Galaxy o la app de Amazon Games, sin volver a descargarlos.
+En Windows, Heronite también añade los juegos ya instalados con el Epic Games Launcher, GOG Galaxy o la app de Amazon Games. No se vuelve a descargar nada.
 
 Heronite descarga las herramientas de código abierto no oficiales que usa Heroic: [legendary](https://github.com/derrod/legendary) para Epic, [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl) para GOG y [nile](https://github.com/imLinguin/nile) para Amazon.
 
@@ -68,7 +68,7 @@ Haz clic en **Instalar** en un juego. Una sola cola de descargas instala, actual
 
 ## ¿Necesito iniciar sesión en Steam?
 
-No. Heronite trae tus bibliotecas de Steam y las mantiene sincronizadas. En Linux, encuentra la instalación normal de Steam, el Flatpak y el Snap. En Windows, lee en el registro dónde está instalado Steam.
+No. Heronite trae tus bibliotecas de Steam y las mantiene sincronizadas. En Linux, encuentra la instalación normal de Steam, el Flatpak y el Snap. En Windows, lee en el registro dónde está instalado Steam, y puedes [ejecutar un trainer con un juego de Steam](/es/docs/stores-and-launchers/#ejecuta-un-trainer-con-un-juego-de-steam-windows).
 
 ![La página de un juego en la Colección de Heronite, con una fila Biblioteca que dice Steam, el estado Jugando y un botón Jugar junto a la carátula.](../../../assets/screenshots/collection.webp)
 
@@ -84,13 +84,13 @@ En Windows, la app de la tienda funciona directamente, sin Wine. Haz clic en el 
 
 ## ¿Cómo añado juegos de Microsoft Store y PC Game Pass?
 
-En Windows, Heronite encuentra los juegos que instaló la app de Xbox o Microsoft Store, también los de PC Game Pass (el Xbox Game Pass para PC). No hace falta iniciar sesión. La app de Xbox sigue instalándolos, actualizándolos y desinstalándolos.
+En Windows, Heronite encuentra los juegos instalados con la app de Xbox o Microsoft Store, también los de PC Game Pass (el Xbox Game Pass para PC). No hace falta iniciar sesión. La app de Xbox sigue instalándolos, actualizándolos y desinstalándolos.
 
 **Tiendas → Xbox** muestra si Heronite encontró la app de Xbox y lista sus juegos. Después de instalar un juego, haz clic en **Leer juegos ahora**.
 
 ## ¿Puedo importar juegos de Heroic, Lutris, Bottles, Faugus o Playnite?
 
-Sí. Activa un lanzador en **Ajustes → Otros launchers**. Heronite solo lee sus archivos y no toca sus datos. En el primer inicio, Heronite copia una vez los datos de Heroic.
+Sí. Activa un lanzador en **Ajustes → Otros launchers**. Heronite nunca cambia los archivos de otro lanzador. En el primer inicio copia una sola vez los inicios de sesión, los ajustes y los juegos añadidos a mano de Heroic.
 
 | Lanzador | Qué importa Heronite |
 |---|---|
@@ -101,21 +101,5 @@ Sí. Activa un lanzador en **Ajustes → Otros launchers**. Heronite solo lee su
 | Playnite (Windows) | Los juegos instalados que no están ocultos, con carátulas y tiempo de juego |
 
 Cada lanzador de Linux puede ser la instalación normal o el Flatpak. Los juegos de Playnite se siguen iniciando con Playnite. Heronite se salta los juegos de Steam de esos lanzadores, porque la importación de Steam ya los tiene. Si quieres cambiarte, mira las comparativas con [Heroic](/es/compare/heroic/), [Lutris](/es/compare/lutris/) y [Playnite](/es/compare/playnite/).
-
-## ¿Cómo añado un juego que no es de una tienda?
-
-Pulsa <kbd>Ctrl</kbd> <kbd>N</kbd> para añadir un programa a mano. Para añadir todos los juegos de una carpeta, elige **Añadir desde una carpeta** en el menú ☰. Las dos opciones sirven para programas de Windows y, en Linux, para AppImage, scripts de inicio y programas nativos.
-
-![El diálogo para añadir un juego con campos para el título, la carátula y el arte de fondo, la plataforma Windows, el prefijo de Wine y la versión de Proton, y el ejecutable que se lanza.](../../../assets/screenshots/add-game.webp)
-
-*El diálogo Añadir un juego para un programa de Windows.*
-
-## ¿Cómo ejecuto un trainer con un juego de Steam en Windows?
-
-1. Abre **Ajustes del juego → Inicio** en ese juego.
-2. En **Programas junto al juego**, haz clic en **Añadir programa** y elige el trainer.
-3. Juega desde Heronite.
-
-Heronite cierra el trainer cuando el juego termina. Los **Scripts** de la misma pestaña se ejecutan antes de que empiece el juego y después de que se cierre. Un juego iniciado desde el propio Steam no ejecuta ninguna de las dos cosas.
 
 Siguiente: [descarga Heronite](/es/download/) y añade tu primera tienda.

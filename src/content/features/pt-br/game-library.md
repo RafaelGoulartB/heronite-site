@@ -16,7 +16,7 @@ highlights:
     text: Por status, loja, gênero ou série, em lista ou em grade.
   - title: Presets salvos
     text: Guarde filtros e ordenações como Jogando agora, Pendentes ou Finalizados.
-  - title: Ache tudo rápido
+  - title: Encontre tudo rápido
     text: A busca perdoa erros de digitação, e Ctrl+K abre qualquer jogo, página ou ação.
   - title: Um diário para cada jogo
     text: Escreva anotações na mesma linha do tempo das suas sessões de jogo.
@@ -24,11 +24,11 @@ faq:
   - q: Posso usar o Heronite no Steam Deck?
     a: Sim. O Heronite roda no SteamOS como AppImage. O [guia do Steam Deck](/guides/steam-deck/) mostra a configuração.
   - q: Importar do Heroic ou do Lutris altera os arquivos deles?
-    a: Não. O Heronite só lê os arquivos deles e nunca escreve neles.
-  - q: O Heronite acha capas para jogos de emulador?
+    a: Não. O Heronite só lê os arquivos do outro launcher e não altera nada.
+  - q: O Heronite encontra capas para jogos de emulador?
     a: Sim. Todo jogo adicionado de uma pasta de ROMs recebe arte. Uma chave gratuita do SteamGridDB acrescenta capas da comunidade.
   - q: Dá para desfazer uma edição em lote?
-    a: Sim. Aperte `Ctrl+Z` para desfazer a última mudança.
+    a: Sim. Aperte Ctrl+Z para desfazer a última mudança.
 related:
   - /features/stores/
   - /features/play-time-tracking/
@@ -40,7 +40,7 @@ related:
 - **Steam:** o Heronite traz suas bibliotecas da [Steam](/pt-br/features/stores/) sem login.
 - **Epic Games, GOG e Amazon Games:** faça login na página **Lojas** e o Heronite adiciona a biblioteca inteira, instalada ou não.
 - **Battle.net, EA app, Ubisoft Connect e Rockstar Games:** os jogos que você instala em cada app da loja aparecem. No Linux, o app da loja roda no seu próprio prefixo Wine (uma pasta que funciona como um Windows só daquele app).
-- **Microsoft Store e PC Game Pass (Windows):** o Heronite adiciona os jogos que o app Xbox instalou, sem login.
+- **Microsoft Store e PC Game Pass (Windows):** o Heronite adiciona os jogos instalados pelo app Xbox, sem login.
 - **Emuladores:** o Heronite [detecta](/pt-br/features/emulation/) os emuladores e escaneia suas pastas de ROMs.
 - **Outros launchers:** os jogos do Heroic, Lutris, Bottles e Faugus no Linux, e os do Playnite no Windows, são importados e ficam sincronizados.
 
@@ -49,7 +49,7 @@ related:
 Aperte <kbd>Ctrl</kbd> <kbd>N</kbd> (ou **Adicionar um jogo**) para adicionar:
 
 - Um programa do Windows (`.exe`), que no Linux roda com [Wine ou Proton](/pt-br/features/wine-and-proton/)
-- Um programa nativo do Linux, um AppImage ou um script de início
+- Um programa nativo do Linux, um AppImage ou um script de inicialização
 - Um jogo de navegador, pelo endereço dele
 - Uma ROM, ou uma pasta inteira de ROMs
 
@@ -85,7 +85,7 @@ A **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre qualquer página, e
 
 ## Como editar vários jogos de uma vez?
 
-1. Selecione os jogos com <kbd>Espaço</kbd>, <kbd>Shift</kbd> + setas ou <kbd>Ctrl</kbd> <kbd>A</kbd>.
+1. Selecione os jogos com <kbd>Espaço</kbd>, <kbd>Shift</kbd> com as setas ou <kbd>Ctrl</kbd> <kbd>A</kbd>.
 2. Aperte <kbd>F3</kbd>.
 3. Mude o status, os gêneros, as séries, as empresas e mais.
 

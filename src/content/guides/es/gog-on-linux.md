@@ -30,7 +30,7 @@ faq:
   - q: "¿Puedo jugar juegos de GOG en Steam Deck?"
     a: "Sí. Inicia sesión en GOG en el modo escritorio y luego juega desde el Modo Juego. La [guía de Steam Deck](/guides/steam-deck/) tiene los pasos."
   - q: "¿Puedo usar mis juegos de GOG Galaxy en Windows?"
-    a: "Sí, en Windows. Heronite muestra como instalados los juegos que instaló GOG Galaxy, sin descargarlos otra vez. En Linux no hay Galaxy desde donde importar."
+    a: "Sí, en Windows. Heronite muestra como instalados los juegos instalados con GOG Galaxy, sin descargarlos otra vez. En Linux no hay Galaxy desde donde importar."
 related:
   - /guides/epic-games-on-linux/
   - /guides/amazon-games-on-linux/
@@ -62,15 +62,15 @@ Los demás formatos están en la [guía de instalación](/es/docs/installation/)
 3. Haz clic en **Iniciar sesión**.
 4. Inicia sesión en la página de GOG, en la ventana que se abre.
 
-Toda tu biblioteca de GOG aparece entonces en Heronite. Si la ventana no se abre, usa **O inicia sesión con tu navegador** en la misma página. Copia la dirección a la que llegas, que contiene `code=`, y pégala en Heronite ([inicios de sesión en tiendas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda)).
+Toda tu biblioteca de GOG aparece entonces en Heronite. Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé. En GOG, el código es la dirección a la que llegas, que contiene `code=` ([inicios de sesión en tiendas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda)).
 
 ## Instala y juega un juego de GOG
 
-Mira primero el recuadro **En Linux** en los detalles del juego para ver la valoración de [ProtonDB](https://www.protondb.com).
+Mira primero la fila **En Linux** en los detalles del juego para ver la valoración de [ProtonDB](https://www.protondb.com).
 
 1. Busca el juego en tu biblioteca y pulsa <kbd>Enter</kbd>, o elige **Instalar con GOG**.
 2. Revisa la carpeta en **Seleccionar ruta de instalación**. Para un juego de Windows, la **Versión de Wine** está en **Mostrar ajustes de Wine**; la opción por defecto es un buen punto de partida.
-3. Confirma. Sigue la descarga en la página Descargas (<kbd>Ctrl</kbd> <kbd>2</kbd>).
+3. Haz clic en **Instalar**. Sigue la descarga en la página Descargas (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 4. Cuando termine, selecciona el juego y pulsa <kbd>Enter</kbd> para jugar.
 
 Si GOG tiene una versión nativa para Linux, Heronite puede ofrecerla en lugar de la de Windows, sin Wine.

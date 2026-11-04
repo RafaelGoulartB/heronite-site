@@ -47,7 +47,7 @@ No Linux, o Heronite procura o Ludusavi no `PATH`, em `/usr/bin`, `/usr/local/bi
 1. Feche o jogo.
 2. Abra a página do jogo e a aba **Saves**, que lista os backups desse jogo.
 3. Escolha um backup e clique em **Restaurar…**.
-4. Escolha os arquivos a devolver em **Arquivos a restaurar** e confirme.
+4. Escolha os arquivos a devolver em **Arquivos a restaurar** e clique em **Restaurar *n* arquivos**.
 
 No **modo console** isso é uma linha na página do jogo, **Fazer backup dos saves (Ludusavi)**.
 
@@ -57,7 +57,7 @@ No **modo console** isso é uma linha na página do jogo, **Fazer backup dos sav
 
 ## O Heronite sincroniza os saves na nuvem da Epic e da GOG?
 
-Sim, em beta, no Linux e no Windows. Abra **Configurações do jogo → Saves na nuvem** e clique em **Sincronizar**, ou ligue **Sincronizar automaticamente** para sincronizar quando o jogo abre e depois que ele fecha. Faça backup dos seus saves antes da primeira sincronização.
+Sim, em beta, no Linux e no Windows. Abra **Configurações do jogo → Saves na nuvem** e clique em **Sincronizar**, ou marque **Sincronizar automaticamente** para sincronizar quando o jogo abre e depois que ele fecha. Faça backup dos seus saves antes da primeira sincronização.
 
 ## Como agendar backups da minha Coleção inteira?
 
@@ -94,7 +94,7 @@ Sim. **Configurações → Nuvem** mantém status, favoritos, anotações, tempo
 
 O mesmo lugar pode guardar seus backups do Heronite, os backups de saves do Ludusavi e as capturas de tela. Configure em [Backups e saves](/pt-br/docs/backups-and-saves/#sincronizar-a-biblioteca-entre-pcs).
 
-## Para onde foi o meu espaço em disco?
+## Para onde foi meu espaço em disco?
 
 **Configurações → Armazenamento** mostra o que seus jogos ocupam em cada disco, com barras para os jogos, prefixos Wine, Proton e runtimes, e caches. Um **treemap** desenha cada jogo instalado como um bloco do tamanho do espaço que ele usa. Ordene por tamanho ou por quando você jogou pela última vez.
 
@@ -102,7 +102,7 @@ O mesmo lugar pode guardar seus backups do Heronite, os backups de saves do Ludu
 
 *Configurações de Armazenamento, com um cartão Liberar espaço.*
 
-**Liberar espaço** lista o que pode sair, como caches e shaders compilados. No Linux ele acha prefixos Wine sem uso, versões do Proton sem uso e sobras da Steam de jogos que não estão mais instalados. O Heronite move prefixos e pastas de sobras para a lixeira e se recusa a remover pastas que outro jogo ainda usa.
+**Liberar espaço** lista o que pode sair, como caches e shaders compilados. No Linux ele encontra prefixos Wine sem uso, versões do Proton sem uso e sobras da Steam de jogos que não estão mais instalados. O Heronite move prefixos e pastas de sobras para a lixeira e se recusa a remover pastas que outro jogo ainda usa.
 
 ## Como gerenciar as capturas de tela e o espaço que ocupam?
 

@@ -7,7 +7,7 @@ order: 3
 updated: 2026-11-04
 ---
 
-O Heronite roda jogos do Windows no Linux pelo Wine ou pelo Proton. Mude qualquer opção abaixo por jogo em **Configurações do jogo → Compatibilidade**, ou para todos os jogos em Configurações. Quando um jogo não abre, o Heronite sugere uma correção: veja [Solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-inicia-linux).
+O Heronite roda jogos do Windows no Linux pelo Wine ou pelo Proton. Mude qualquer opção abaixo por jogo em **Configurações do jogo → Compatibilidade**, ou para todos os jogos em Configurações. Quando um jogo não abre, o Heronite sugere uma correção: veja [Solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-abre-linux).
 
 ## Baixar versões do Proton no Gerenciador do Wine
 

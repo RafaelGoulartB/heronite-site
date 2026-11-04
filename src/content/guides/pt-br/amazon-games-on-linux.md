@@ -30,7 +30,7 @@ faq:
   - q: "Dá para jogar jogos da Amazon no Steam Deck?"
     a: "Sim. Faça login na Amazon Games no Modo Desktop e depois jogue no Modo Jogo. O [guia do Steam Deck](/guides/steam-deck/) mostra os passos."
   - q: "Posso usar a Amazon Games no Windows com o Heronite?"
-    a: "Sim. No Windows, o Heronite mostra os jogos que o app da Amazon Games instalou, sem baixar de novo. O login e a instalação funcionam do mesmo jeito."
+    a: "Sim. No Windows, o Heronite mostra os jogos instalados pelo app da Amazon Games, sem baixar de novo. O login e a instalação funcionam do mesmo jeito."
 related:
   - /guides/epic-games-on-linux/
   - /guides/gog-on-linux/
@@ -61,7 +61,7 @@ Os outros formatos estão no [guia de instalação](/pt-br/docs/installation/). 
 3. Clique em **Entrar**.
 4. Faça login na página da Amazon, na janela que abrir.
 
-Aí seus jogos da Amazon aparecem na sua biblioteca, com os jogos do Prime Gaming que você resgatou. Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página: clique em **Abrir no navegador**. Faça login e cole o endereço da página do amazon.com em que você cair ([logins das lojas](/pt-br/docs/troubleshooting/#o-login-ou-o-download-de-uma-loja-falha)).
+Seus jogos da Amazon aparecem na sua biblioteca, com os jogos do Prime Gaming que você resgatou. Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página e cole o código que o navegador mostrar. Na Amazon, o código é o endereço da página do amazon.com em que você cair ([logins das lojas](/pt-br/docs/troubleshooting/#o-login-ou-o-download-de-uma-loja-falha)).
 
 ## Resgate seus jogos do Prime Gaming
 
@@ -71,15 +71,15 @@ O Heronite não resgata jogos, então faça isso no site da Amazon:
 2. Resgate os jogos que quiser.
 3. No Heronite, escolha **Lojas → Amazon Games → Atualizar biblioteca**.
 
-Aí os jogos novos aparecem na sua biblioteca. A Amazon decide o que o Prime Gaming oferece e troca as ofertas, então resgate o jogo enquanto ele estiver disponível. Se um jogo resgatado não aparecer, confira se usou a mesma conta da Amazon e atualize de novo.
+Os jogos novos aparecem na sua biblioteca. A Amazon decide o que o Prime Gaming oferece e troca as ofertas, então resgate o jogo enquanto ele estiver disponível. Se um jogo resgatado não aparecer, confira se usou a mesma conta da Amazon e atualize de novo.
 
 ## Instale e jogue um jogo da Amazon
 
-Antes, veja a caixa **No Linux** nos detalhes do jogo. Ela mostra a nota no [ProtonDB](https://www.protondb.com) e o status do anti-cheat. Um jogo Gold ou Platinum costuma rodar sem mudar nada.
+Antes, veja a linha **No Linux** nos detalhes do jogo. Ela mostra a nota no [ProtonDB](https://www.protondb.com) e o status do anti-cheat. Um jogo Gold ou Platinum costuma rodar sem mudar nada.
 
 1. Selecione o jogo e aperte <kbd>Enter</kbd>, ou escolha **Instalar pela Amazon Games**.
 2. Confira a pasta em **Selecionar local de instalação**. A **Versão do Wine** fica em **Mostrar configurações do Wine**; o padrão serve para começar.
-3. Confirme. Acompanhe o download na página Downloads (<kbd>Ctrl</kbd> <kbd>2</kbd>).
+3. Clique em **Instalar**. Acompanhe o download na página Downloads (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 4. Quando terminar, selecione o jogo e aperte <kbd>Enter</kbd> para jogar.
 
 ## Troque a versão do Proton
@@ -91,12 +91,12 @@ Se um jogo não abre, vá em **Configurações do jogo → Compatibilidade** e e
 - **Atualizar:** o Heronite procura atualizações de jogos a cada 3 horas. **Atualizar tudo** na página da Amazon Games instala todas de uma vez.
 - **Reparar ou mover:** escolha **Verificar e reparar** ou **Mover instalação** nas ações do jogo.
 
-Uma única fila de downloads faz essas tarefas e as desinstalações, e pausa quando você fica offline. Os jogos instalados continuam no disco se você sair da conta da Amazon. O Heronite guarda o seu login na pasta de dados dele, então mantenha essa pasta privada ([Arquivos e pastas](/pt-br/docs/files-and-folders/)).
+Uma única fila de downloads faz essas tarefas e as desinstalações, e pausa quando a internet cai. Os jogos instalados continuam no disco se você sair da conta da Amazon. O Heronite guarda seu login na própria pasta de dados, então mantenha essa pasta privada ([Arquivos e pastas](/pt-br/docs/files-and-folders/)).
 
 ## Quais jogos da Amazon não rodam no Linux?
 
-Jogos single-player raramente têm problemas com anti-cheat. Jogos com anti-cheat que bloqueia o Linux não vão rodar. O status do anti-cheat na caixa **No Linux** vem do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com), e a documentação explica o [anti-cheat](/pt-br/docs/wine-and-proton/#anti-cheat) com mais detalhes.
+Jogos single-player raramente têm problemas com anti-cheat. Jogos com anti-cheat que bloqueia o Linux não vão rodar. O status do anti-cheat na linha **No Linux** vem do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com), e a documentação explica o [anti-cheat](/pt-br/docs/wine-and-proton/#anti-cheat) com mais detalhes.
 
 ## Um jogo da Amazon não abre no Linux
 
-Leia o log de inicialização dele em **Configurações → Logs**. A [página de solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-inicia-linux) traz as correções mais comuns do Wine.
+Leia o log de inicialização dele em **Configurações → Logs**. A [página de solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-abre-linux) traz as correções mais comuns do Wine.

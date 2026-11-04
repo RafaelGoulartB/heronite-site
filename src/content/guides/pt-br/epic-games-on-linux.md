@@ -1,5 +1,5 @@
 ---
-title: "Jogos da Epic no Linux: biblioteca e jogos grátis"
+title: "Epic Games no Linux: como jogar sem o launcher oficial"
 description: "Jogue os jogos da Epic no Linux sem o launcher oficial: faça login, resgate os grátis da semana, instale com o Proton e veja o anti-cheat antes."
 eyebrow: Guia para Linux
 headline: "Como jogar Epic Games no Linux"
@@ -25,8 +25,8 @@ faq:
     a: "Não. O Heronite usa o [legendary](https://github.com/derrod/legendary) para fazer login, instalar, atualizar e abrir seus jogos. Ele é uma ferramenta de código aberto, não oficial, para a Epic."
   - q: "Dá para jogar Fortnite no Linux?"
     a: "Não. A Epic não ativou o suporte a Linux no anti-cheat do Fortnite."
-  - q: "Os jogos grátis da semana da Epic funcionam no Linux?"
-    a: "Sim, depois que você os resgata no site da Epic. Atualize a biblioteca no Heronite e eles instalam como qualquer outro jogo."
+  - q: "O Heronite sincroniza os saves na nuvem da Epic?"
+    a: "Sim, em beta. Abra **Configurações do jogo → Saves na nuvem** e clique em **Sincronizar**. Faça backup dos seus saves antes da primeira sincronização."
   - q: "Preciso instalar o Wine ou o Proton antes?"
     a: "Não. O Heronite baixa uma versão do Proton quando precisa. Você só precisa de um driver Vulkan funcionando. Veja [Wine e Proton](/docs/wine-and-proton/)."
   - q: "É seguro fazer login na Epic pelo Heronite?"
@@ -39,7 +39,7 @@ related:
 
 ## O que você precisa
 
-- Um PC com Linux de 64 bits e um driver Vulkan funcionando. Rode `vulkaninfo --summary` para ver se ele lista a sua GPU. Jogos antigos de 32 bits também precisam do driver Vulkan de 32 bits.
+- Um PC com Linux de 64 bits e um driver Vulkan funcionando. Rode `vulkaninfo --summary` para ver se ele lista sua GPU. Jogos antigos de 32 bits também precisam do driver Vulkan de 32 bits.
 - Uma conta da Epic Games.
 - Espaço livre em disco. Os jogos são instalados em `~/Games/Heronite` por padrão.
 
@@ -61,7 +61,7 @@ Os pacotes para outras distribuições estão no [guia de instalação](/pt-br/d
 3. Clique em **Entrar**.
 4. Faça login na página da Epic, na janela que abrir. Sua senha vai só para a Epic.
 
-Aí sua biblioteca inteira da Epic aparece no Heronite, instalada ou não. Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página, como explica a [Solução de problemas](/pt-br/docs/troubleshooting/#o-login-ou-o-download-de-uma-loja-falha).
+Sua biblioteca inteira da Epic aparece no Heronite, instalada ou não. Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página e cole o código que o navegador mostrar. Mais detalhes em [Solução de problemas](/pt-br/docs/troubleshooting/#o-login-ou-o-download-de-uma-loja-falha).
 
 ## Resgate os jogos grátis da semana
 
@@ -71,21 +71,21 @@ O Heronite não resgata os jogos grátis da Epic, então faça isso no site dela
 2. Resgate o jogo grátis.
 3. No Heronite, abra **Lojas → Epic Games** e clique em **Atualizar biblioteca**.
 
-Aí o jogo aparece na sua biblioteca. Se ele não aparecer, confira se usou a mesma conta da Epic e atualize de novo.
+O jogo aparece na sua biblioteca. Se ele não aparecer, confira se usou a mesma conta da Epic e atualize de novo.
 
 ## Instale e jogue um jogo da Epic
 
-1. Veja a caixa **No Linux** nos detalhes do jogo. Ela mostra a nota no [ProtonDB](https://www.protondb.com) e o status do anti-cheat. Um jogo Gold ou Platinum costuma rodar sem trabalho nenhum.
+1. Veja a linha **No Linux** nos detalhes do jogo. Ela mostra a nota no [ProtonDB](https://www.protondb.com) e o status do anti-cheat. Um jogo Gold ou Platinum costuma rodar sem trabalho nenhum.
 2. Selecione o jogo e aperte <kbd>Enter</kbd>, ou escolha **Instalar pela Epic Games**.
 3. Confira a pasta em **Selecionar local de instalação**.
-4. Confirme. O download aparece na página Downloads (<kbd>Ctrl</kbd> <kbd>2</kbd>).
+4. Clique em **Instalar**. O download aparece na página Downloads (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 5. Quando terminar, selecione o jogo e aperte <kbd>Enter</kbd> para jogar.
 
-Cada jogo ganha o seu próprio prefixo Wine (uma pasta que funciona como um Windows só daquele jogo). Se os arquivos do jogo já estão no disco, escolha **Importar jogo** e selecione a pasta.
+Cada jogo ganha seu próprio prefixo Wine (uma pasta que funciona como um Windows só daquele jogo). Se os arquivos do jogo já estão no disco, escolha **Importar jogo** e selecione a pasta.
 
 ## Troque a versão do Proton
 
-Se o jogo não abre ou roda mal, vá em **Configurações do jogo → Compatibilidade** e escolha outra versão em **Versão**. A linha do ProtonDB ali costuma dizer qual é a melhor. Para escolher antes de instalar, abra **Mostrar configurações do Wine** na janela de instalação e defina a **Versão do Wine**. Se estiver em dúvida, deixe a padrão.
+Deixe a versão padrão, a menos que o jogo falhe. Se ele não abrir ou rodar mal, vá em **Configurações do jogo → Compatibilidade** e escolha outra versão em **Versão**. A linha do ProtonDB ali costuma dizer qual é a melhor. Para escolher antes de instalar, abra **Mostrar configurações do Wine** na janela de instalação e defina a **Versão do Wine**.
 
 ![As Configurações do jogo do Heronite para Control, um jogo da Epic, na aba Compatibilidade: a versão do Proton GE-Proton-latest, a nota Platinum no ProtonDB, o prefixo Wine e os botões Winecfg e Winetricks.](../../../assets/screenshots/game-settings.webp)
 
@@ -97,10 +97,10 @@ O anti-cheat é o principal motivo de um jogo online da Epic não rodar no Linux
 
 - Alguns jogos com Easy Anti-Cheat ou BattlEye funcionam. Ligue o runtime certo em **Runtimes de anti-cheat**, em **Configurações do jogo → Compatibilidade**, e o Heronite baixa antes da próxima abertura.
 - Jogos cujo desenvolvedor não permite o Linux não vão rodar.
-- Fortnite: não roda. A Epic não ativou o suporte a Linux no anti-cheat dele.
+- Fortnite: não roda.
 
 O [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) acompanha o status de cada jogo. A documentação explica o [anti-cheat](/pt-br/docs/wine-and-proton/#anti-cheat) com mais detalhes.
 
 ## Um jogo da Epic não abre no Linux
 
-Leia o log de inicialização dele em **Configurações → Logs**. A [Solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-inicia-linux) cobre DLLs faltando, DirectX 12 e erros do Vulkan.
+Leia o log de inicialização dele em **Configurações → Logs**. A [Solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-abre-linux) cobre DLLs faltando, DirectX 12 e erros do Vulkan.

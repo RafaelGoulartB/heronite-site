@@ -3,7 +3,7 @@ title: "Gerenciador de Wine e Proton no Linux, GE-Proton | Heronite"
 description: "Gerenciador de Wine e Proton e launcher de jogos para Linux. Baixe GE-Proton e Proton-CachyOS e ajuste prefixo, DXVK, gamescope e FPS por jogo."
 eyebrow: Wine e Proton
 headline: "Gerenciador de Wine e Proton para jogos do Windows no Linux"
-lead: "O Heronite baixa GE-Proton, Proton-CachyOS e outras versões do Proton, e dá a cada jogo o seu próprio prefixo. Aí a maioria dos jogos do Windows abre com um clique."
+lead: "O Heronite baixa GE-Proton, Proton-CachyOS e outras versões do Proton, e dá a cada jogo seu próprio prefixo. Assim, a maioria dos jogos do Windows abre com um clique."
 navLabel: Wine e Proton
 summary: "Um Gerenciador do Wine embutido, prefixos e opções por jogo, sandbox e dicas de erro de inicialização para jogos do Windows no Linux."
 order: 4
@@ -23,10 +23,10 @@ highlights:
 faq:
   - q: Como rodar jogos do Windows no Linux?
     a: Adicione o jogo e clique em **Jogar**. Se for de uma loja, faça login nela primeiro. Mude os ajustes em **Configurações do jogo → Compatibilidade**.
-  - q: Qual é a melhor versão do Proton para o meu jogo?
+  - q: Qual é a melhor versão do Proton para meu jogo?
     a: Não existe uma única melhor. **Proton-CachyOS** e **GE-Proton** costumam receber correções primeiro, então comece por elas. A página do jogo mostra a nota dele no [ProtonDB](https://www.protondb.com).
   - q: Existe um gerenciador de Proton para jogos que não são da Steam?
-    a: Sim. O **Gerenciador do Wine** (`Ctrl+3`) baixa e atualiza versões do Proton para qualquer jogo da sua Coleção.
+    a: Sim. O **Gerenciador do Wine** (Ctrl+3) baixa e atualiza versões do Proton para qualquer jogo da sua Coleção.
   - q: Jogos com anti-cheat funcionam no Linux?
     a: Depende do jogo. Um jogo cujo desenvolvedor não permite o Linux não vai rodar. Veja a [documentação de anti-cheat](/docs/wine-and-proton/#anti-cheat).
 related:
@@ -50,7 +50,7 @@ O Gerenciador do Wine (<kbd>Ctrl</kbd> <kbd>3</kbd>) baixa e atualiza estas vers
 - Proton-EM
 - Proton-Sarek
 
-As versões vão para a pasta de dados do Heronite, ou para a `compatibilitytools.d` da Steam se você ligar essa opção, para a Steam também poder usá-las. O Heronite acha versões do Proton nas suas bibliotecas da Steam e nos runners do Wine do Lutris, então você não baixa nada duas vezes.
+As versões vão para a pasta de dados do Heronite, ou para a `compatibilitytools.d` da Steam se você ligar essa opção, para a Steam também poder usá-las. O Heronite encontra versões do Proton nas suas bibliotecas da Steam e nos runners do Wine do Lutris, então você não baixa nada duas vezes.
 
 ![O Gerenciador do Wine com uma lista de versões do Proton à esquerda, Proton-CachyOS selecionado, e as versões dele à direita com datas de lançamento, tamanhos e botões Instalar.](../../../assets/screenshots/wine-manager.webp)
 
@@ -60,7 +60,7 @@ Para instalar passo a passo, veja [instalar o GE-Proton](/pt-br/guides/install-g
 
 ## O que é um prefixo Wine?
 
-Um prefixo Wine é uma pasta que funciona como um Windows só daquele jogo. Por padrão os jogos são instalados em `~/Games/Heronite`, e cada jogo ganha o seu próprio prefixo em `~/Games/Heronite/Prefixes`, mas vários jogos podem dividir um. O Gerenciador do Wine lista os seus prefixos, e **Configurações do jogo → Compatibilidade** tem os botões **Winecfg** e **Winetricks**.
+Um prefixo Wine é uma pasta que funciona como um Windows só daquele jogo. Por padrão os jogos são instalados em `~/Games/Heronite`, e cada jogo ganha seu próprio prefixo em `~/Games/Heronite/Prefixes`, mas vários jogos podem dividir um. O Gerenciador do Wine lista seus prefixos, e **Configurações do jogo → Compatibilidade** tem os botões **Winecfg** e **Winetricks**.
 
 ## Quais opções posso ajustar por jogo?
 

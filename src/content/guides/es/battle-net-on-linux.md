@@ -71,7 +71,7 @@ Heronite busca o descarga un Proton y luego el instalador oficial. Crea el prefi
 3. Instala un juego en Battle.net, como lo harías en Windows.
 4. Pulsa <kbd>Enter</kbd> sobre el juego en tu biblioteca de Heronite para iniciarlo. Heronite registra el tiempo de juego.
 
-Antes de instalar un juego grande, mira su recuadro **En Linux** en Heronite. Muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com).
+Antes de instalar un juego grande, mira la fila **En Linux** en los detalles del juego. Muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com).
 
 Si falta un juego instalado en tu biblioteca, haz clic en **Actualizar** bajo **Instalados** en la página de Battle.net. Un juego que no has instalado muestra **Instalar con Battle.net**, que abre la app de la tienda.
 

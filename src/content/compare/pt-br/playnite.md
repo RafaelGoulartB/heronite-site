@@ -16,10 +16,10 @@ highlights:
     text: No Windows, o Heronite importa seus jogos instalados do Playnite com o tempo de jogo.
   - title: Wine e Proton embutidos
     text: No Linux, escolha uma versão do Wine ou do Proton para cada jogo.
-  - title: Leve e nativo
-    text: Escrito em Rust, sem motor de navegador dentro.
-  - title: Histórico de jogo embutido
-    text: Cada sessão alimenta estatísticas, diário e retrospectiva do ano.
+  - title: Encontre tudo rápido
+    text: Ctrl+K abre qualquer jogo, página ou ação.
+  - title: Presets salvos
+    text: Guarde filtros e ordenação como presets, como Jogando agora, Pendentes ou Finalizado.
 faq:
   - q: Qual launcher posso usar no lugar do Playnite no Linux?
     a: O Heronite, que reúne suas lojas, emuladores e seus próprios jogos numa biblioteca só. O Heroic e o Lutris também rodam no Linux.
@@ -68,7 +68,7 @@ Os dois são gratuitos e de código aberto. Os dois reúnem jogos de várias loj
 ### Escolha o Playnite se…
 
 - **Você depende de plugins, scripts ou de um tema da comunidade.** O Playnite aceita plugins, scripts em PowerShell e temas.
-- **Você tem uma configuração de emuladores já ajustada.** O site do Playnite descreve uma variedade de emuladores de console, então compare antes de migrar a sua.
+- **Você tem uma configuração de emuladores já ajustada.** O site do Playnite descreve uma variedade de emuladores de console, então compare antes de trocar de launcher.
 - **Você quer um projeto com longo histórico.** O Playnite é o projeto mais antigo.
 
 ### Escolha o Heronite se…
@@ -89,12 +89,12 @@ Os dois são gratuitos e de código aberto. Os dois reúnem jogos de várias loj
 No Windows, o Heronite importa os jogos que o Playnite instalou. Ele só lê os arquivos do Playnite, então o Playnite continua funcionando.
 
 1. **Faça login nas suas lojas.** Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>) e faça login na Epic Games, GOG e Amazon Games. A Steam não pede login.
-2. **Importe os jogos do Playnite.** Feche o Playnite e, em **Configurações → Outros launchers**, ligue **Trazer os jogos dele** embaixo do Playnite. Os jogos instalados dele aparecem com capas e tempo de jogo, e continuam abrindo pelo Playnite.
+2. **Importe os jogos do Playnite.** Feche o Playnite e, em **Configurações → Outros launchers**, marque **Trazer os jogos dele** embaixo do Playnite. Os jogos instalados no Playnite aparecem com capas e tempo de jogo, e continuam abrindo pelo Playnite.
 3. **Adicione os outros jogos.** Aperte <kbd>Ctrl</kbd> <kbd>N</kbd> para adicionar um programa, ou escolha **Adicionar de uma pasta** no menu ☰ para adicionar todos os jogos de uma pasta.
 4. **Detecte seus emuladores e escaneie suas pastas de ROMs.** Na página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>), clique em **Detectar emuladores** e depois em **Escanear agora**.
 
 O Heronite deixa de fora os jogos da Steam, Epic, GOG e Amazon do Playnite, porque ele importa esses jogos direto das lojas. Tags, status de conclusão e anotações ficam no Playnite.
 
-No Windows, o Heronite adiciona os jogos que o Epic Games Launcher, o GOG Galaxy ou o app da Amazon Games instalaram, sem baixar de novo. Para jogos da Epic que você nunca jogou no Heronite, ele pode trazer o tempo de jogo que a Epic registrou.
+No Windows, o Heronite adiciona os jogos instalados pelo Epic Games Launcher, pelo GOG Galaxy ou pelo app da Amazon Games, sem baixar de novo. Para jogos da Epic que você nunca jogou no Heronite, ele pode trazer o tempo de jogo que a Epic registrou.
 
 **Próximo:** [baixe o Heronite](/pt-br/download/) para Linux ou Windows e leia [Primeiros passos](/pt-br/docs/getting-started/).

@@ -30,7 +30,7 @@ faq:
   - q: "¿Puedo jugar a juegos de Amazon en la Steam Deck?"
     a: "Sí. Inicia sesión en Amazon Games en el modo escritorio y luego juega desde el Modo Juego. La [guía de Steam Deck](/guides/steam-deck/) tiene los pasos."
   - q: "¿Puedo usar Amazon Games en Windows con Heronite?"
-    a: "Sí. En Windows, Heronite muestra los juegos que instaló la app de Amazon Games, sin descargarlos otra vez. Iniciar sesión e instalar funciona igual."
+    a: "Sí. En Windows, Heronite muestra los juegos instalados con la app de Amazon Games, sin descargarlos otra vez. Iniciar sesión e instalar funciona igual."
 related:
   - /guides/epic-games-on-linux/
   - /guides/gog-on-linux/
@@ -61,7 +61,7 @@ Los demás formatos están en la [guía de instalación](/es/docs/installation/)
 3. Haz clic en **Iniciar sesión**.
 4. Inicia sesión en la página de Amazon, en la ventana que se abre.
 
-Tus juegos de Amazon aparecen entonces en tu biblioteca, con los de Prime Gaming que reclamaste. Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en la misma página: haz clic en **Abrir en el navegador**. Inicia sesión y pega la dirección de la página de amazon.com a la que llegas ([inicios de sesión en tiendas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda)).
+Tus juegos de Amazon aparecen entonces en tu biblioteca, con los de Prime Gaming que reclamaste. Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé. En Amazon, el código es la dirección de la página de amazon.com a la que llegas ([inicios de sesión en tiendas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda)).
 
 ## Reclama tus juegos de Prime Gaming
 
@@ -75,11 +75,11 @@ Los juegos nuevos aparecen entonces en tu biblioteca. Amazon decide qué ofrece 
 
 ## Instala y juega a un juego de Amazon
 
-Mira primero el recuadro **En Linux** en los detalles del juego. Muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat. Un juego Gold o Platinum suele funcionar sin cambios.
+Mira primero la fila **En Linux** en los detalles del juego. Muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat. Un juego Gold o Platinum suele funcionar sin cambios.
 
 1. Selecciona el juego y pulsa <kbd>Enter</kbd>, o elige **Instalar con Amazon Games**.
 2. Revisa la carpeta en **Seleccionar ruta de instalación**. La **Versión de Wine** está en **Mostrar ajustes de Wine**; la de por defecto sirve para empezar.
-3. Confirma. Sigue la descarga en la página Descargas (<kbd>Ctrl</kbd> <kbd>2</kbd>).
+3. Haz clic en **Instalar**. Sigue la descarga en la página Descargas (<kbd>Ctrl</kbd> <kbd>2</kbd>).
 4. Cuando termine, selecciona el juego y pulsa <kbd>Enter</kbd> para jugar.
 
 ## Cambia la versión de Proton
@@ -95,7 +95,7 @@ Una sola cola de descargas hace estas tareas y las desinstalaciones, y se pausa 
 
 ## ¿Qué juegos de Amazon no funcionan en Linux?
 
-Los juegos para un jugador rara vez tienen problemas de anti-cheat. Los juegos cuyo anti-cheat bloquea Linux no funcionan. El estado de anti-cheat del recuadro **En Linux** viene de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com), y la documentación explica el [anti-cheat](/es/docs/wine-and-proton/#anticheat) con más detalle.
+Los juegos para un jugador rara vez tienen problemas de anti-cheat. Los juegos cuyo anti-cheat bloquea Linux no funcionan. El estado de anti-cheat de la fila **En Linux** viene de [Are We Anti-Cheat Yet?](https://areweanticheatyet.com), y la documentación explica el [anti-cheat](/es/docs/wine-and-proton/#anticheat) con más detalle.
 
 ## Un juego de Amazon no abre en Linux
 

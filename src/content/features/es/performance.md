@@ -80,6 +80,6 @@ Sí. Usa estas [variables de entorno](/es/docs/environment-variables/):
 
 Heronite funciona en Linux (cualquier distribución, x86_64) y en Windows 10 y 11 (x86_64). En Linux usa Vulkan para mostrar la imagen, así que necesitas un driver de Vulkan que funcione: Mesa para AMD e Intel, o el driver propietario para NVIDIA.
 
-Si la ventana no se abre o se ve negra, ejecuta `vulkaninfo` y comprueba que muestra tu GPU. Mira la [solución de problemas](/es/docs/troubleshooting/) y la [instalación](/es/docs/installation/).
+Si la ventana no se abre o se ve negra, ejecuta `vulkaninfo` y comprueba que muestra tu GPU. Mira la [solución de problemas](/es/docs/troubleshooting/#heronite-no-inicia-o-muestra-una-ventana-negra) y la [instalación](/es/docs/installation/).
 
 Siguiente: [descarga Heronite](/es/download/).

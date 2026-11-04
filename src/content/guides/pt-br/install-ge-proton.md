@@ -105,4 +105,4 @@ No Gerenciador do Wine, clique em **Atualizar** ao lado de uma versão instalada
 - **A Steam não mostra a versão.** Confira se **Instalar o Proton no Steam** estava ligado quando você instalou e reinicie a Steam.
 - **Um jogo continua travando.** Teste outra fonte, como Proton-CachyOS ou DW-Proton, ou um prefixo novo.
 
-Para erros do Vulkan e outras correções comuns, veja [Solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-inicia-linux). Se o jogo tem anti-cheat que bloqueia o Linux, nenhuma versão do Proton ajuda: veja [Anti-cheat](/pt-br/docs/wine-and-proton/#anti-cheat).
+Para erros do Vulkan e outras correções comuns, veja [Solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-abre-linux). Se o jogo tem anti-cheat que bloqueia o Linux, nenhuma versão do Proton ajuda: veja [Anti-cheat](/pt-br/docs/wine-and-proton/#anti-cheat).

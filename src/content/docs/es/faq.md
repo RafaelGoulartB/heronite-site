@@ -36,7 +36,7 @@ Sí. **Ajustes → Nube** mantiene iguales en cada PC tus estados, favoritos, no
 
 ## ¿Perderé mi configuración de Heroic?
 
-No. En el primer inicio, Heronite copia una sola vez los datos de Heroic y solo los lee, así que Heroic sigue funcionando.
+No. Heronite nunca cambia los archivos de Heroic. En el primer inicio copia una sola vez los inicios de sesión, los ajustes y los juegos añadidos a mano de Heroic, y Heroic sigue funcionando.
 
 ## ¿Funcionan los juegos con anticheat?
 

@@ -67,4 +67,4 @@ Borra `portable.txt` para que la copia use las carpetas de usuario normales. Una
 
 ## Pasa de Heroic a Heronite (Linux)
 
-En el primer inicio, si existe `~/.config/heroic`, Heronite copia una sola vez los datos de Heroic a su carpeta de datos, así que tus inicios de sesión, juegos y ajustes se mantienen. Solo lee los archivos de Heroic.
+En el primer inicio, si existe `~/.config/heroic`, Heronite copia una sola vez a su propia carpeta de datos los inicios de sesión, los ajustes y los juegos añadidos a mano de Heroic. Heronite nunca cambia los archivos de Heroic.

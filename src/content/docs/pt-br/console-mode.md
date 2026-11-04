@@ -58,11 +58,11 @@ Sete temas já vêm prontos: Minimal, Clássico, Cinema, Pulse, Fliperama, Centr
 
 ### Compartilhar um tema
 
-Em **Configurações → Modo console**, escolha **Exportar…** para salvar um tema como arquivo `.heronite-theme.json`, com a imagem de fundo dentro. Em outro PC, escolha **Importar…**. Compartilhe o seu nas [Discussões](https://github.com/RafaelGoulartB/Heronite/discussions) ou edite o arquivo à mão com o [formato de tema do modo console](/pt-br/docs/console-theme-format/).
+Em **Configurações → Modo console**, escolha **Exportar…** para salvar um tema como arquivo `.heronite-theme.json`, com a imagem de fundo dentro. Em outro PC, escolha **Importar…**. Compartilhe seus temas nas [Discussões](https://github.com/RafaelGoulartB/Heronite/discussions) ou edite o arquivo à mão com o [formato de tema do modo console](/pt-br/docs/console-theme-format/).
 
 ## Abrir o overlay dentro do jogo (beta, Linux)
 
-1. Em **Configurações → Overlay**, ligue **Ligar o overlay**. Ele vem desligado por padrão.
+1. Em **Configurações → Overlay**, marque **Ligar o overlay**. Ele vem desligado por padrão.
 2. Durante um jogo aberto pelo Heronite, aperte o botão Guide do controle.
 
 O painel sobre o jogo tem volume, microfone, limite de FPS, capturas de tela e notas do diário.

@@ -40,7 +40,7 @@ Heronite funciona en la Steam Deck porque SteamOS es Linux. No está verificado 
 ## Qué necesitas
 
 - Una Steam Deck con su SteamOS por defecto.
-- Un teclado y un ratón para la configuración, o la pantalla táctil de la Deck y su teclado en pantalla (<kbd>Steam</kbd> + <kbd>X</kbd>).
+- Un teclado y un ratón para la configuración, o la pantalla táctil de la Deck y su teclado en pantalla (<kbd>Steam</kbd> <kbd>X</kbd>).
 - Cuentas de las tiendas que quieras usar.
 
 ## Instala Heronite en el modo escritorio

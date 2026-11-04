@@ -47,7 +47,7 @@ En Linux, Heronite busca Ludusavi en el `PATH`, en `/usr/bin`, `/usr/local/bin` 
 1. Cierra el juego.
 2. Abre la página del juego y su pestaña **Guardados**, que lista las copias del juego.
 3. Elige una copia y haz clic en **Restaurar…**.
-4. Elige los archivos que quieres devolver en **Archivos a restaurar** y confirma.
+4. Elige los archivos que quieres devolver en **Archivos a restaurar** y haz clic en **Restaurar *n* archivos**.
 
 En el **modo consola** es una fila de la página del juego, **Copia de guardados (Ludusavi)**.
 

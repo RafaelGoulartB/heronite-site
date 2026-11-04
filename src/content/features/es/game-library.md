@@ -28,7 +28,7 @@ faq:
   - q: ¿Heronite encuentra carátulas para los juegos emulados?
     a: Sí. Cada juego añadido desde una carpeta de ROMs recibe arte. Una clave gratuita de SteamGridDB añade carátulas de la comunidad.
   - q: ¿Puedo deshacer una edición en lote?
-    a: Sí. Pulsa `Ctrl+Z` para deshacer el último cambio.
+    a: Sí. Pulsa Ctrl+Z para deshacer el último cambio.
 related:
   - /features/stores/
   - /features/play-time-tracking/
@@ -40,7 +40,7 @@ related:
 - **Steam:** Heronite trae tus bibliotecas de [Steam](/es/features/stores/) sin iniciar sesión.
 - **Epic Games, GOG y Amazon Games:** inicia sesión en la página **Tiendas** y Heronite añade toda la biblioteca, instalada o no.
 - **Battle.net, EA app, Ubisoft Connect y Rockstar Games:** aparecen los juegos que instalas en cada app de la tienda. En Linux, la app de la tienda se ejecuta en su propio prefijo de Wine (una carpeta que funciona como un Windows solo para esa app).
-- **Microsoft Store y PC Game Pass (Windows):** Heronite añade los juegos que instaló la app de Xbox, sin iniciar sesión.
+- **Microsoft Store y PC Game Pass (Windows):** Heronite añade los juegos instalados con la app de Xbox, sin iniciar sesión.
 - **Emuladores:** Heronite [los detecta](/es/features/emulation/) y escanea tus carpetas de ROMs.
 - **Otros launchers:** los juegos de Heroic, Lutris, Bottles y Faugus en Linux, y los de Playnite en Windows, importados y sincronizados.
 
@@ -85,7 +85,7 @@ La **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre cualquier página,
 
 ## ¿Cómo edito muchos juegos a la vez?
 
-1. Selecciona juegos con <kbd>Espacio</kbd>, <kbd>Shift</kbd> + flechas o <kbd>Ctrl</kbd> <kbd>A</kbd>.
+1. Selecciona juegos con <kbd>Espacio</kbd>, <kbd>Shift</kbd> con las flechas, o <kbd>Ctrl</kbd> <kbd>A</kbd>.
 2. Pulsa <kbd>F3</kbd>.
 3. Cambia su estado, géneros, series, compañías y más.
 

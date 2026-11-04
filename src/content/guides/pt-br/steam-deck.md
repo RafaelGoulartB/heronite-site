@@ -40,7 +40,7 @@ O Heronite roda no Steam Deck porque o SteamOS é Linux. Ele não é Verificado 
 ## O que você precisa
 
 - Um Steam Deck com o SteamOS padrão.
-- Um teclado e um mouse para a configuração, ou a tela sensível ao toque do Deck e o teclado na tela dele (<kbd>Steam</kbd> + <kbd>X</kbd>).
+- Um teclado e um mouse para a configuração, ou a tela sensível ao toque do Deck e o teclado na tela dele (<kbd>Steam</kbd> <kbd>X</kbd>).
 - Contas das lojas que você quiser usar.
 
 ## Instale o Heronite no Modo Desktop
@@ -69,7 +69,7 @@ Na primeira vez que você abre o Heronite, ele traz os jogos da Steam que encont
 3. Clique em **Entrar**.
 4. Faça login na página da loja, na janela que abrir. Use um teclado para digitar a senha.
 
-Aí os jogos da loja aparecem na sua biblioteca. Instale um jogo ou dois agora, enquanto está no desktop. Dá para escolher a pasta de instalação, então o cartão SD também serve.
+Os jogos da loja aparecem na sua biblioteca. Instale um jogo ou dois agora, enquanto está no desktop. Dá para escolher a pasta de instalação, então o cartão SD também serve.
 
 Cada loja tem um guia: [Epic Games](/pt-br/guides/epic-games-on-linux/), [GOG](/pt-br/guides/gog-on-linux/) e [Amazon Games](/pt-br/guides/amazon-games-on-linux/).
 

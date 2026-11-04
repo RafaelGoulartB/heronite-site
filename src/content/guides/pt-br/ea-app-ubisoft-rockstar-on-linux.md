@@ -15,7 +15,7 @@ highlights:
   - title: "Um botão para cada"
     text: "O Heronite baixa o Proton se precisar e depois o instalador oficial."
   - title: "Login dentro do app"
-    text: "O Heronite nunca vê a sua senha."
+    text: "O Heronite nunca vê sua senha."
   - title: "Confira antes de instalar"
     text: "A caixa No Linux de cada jogo mostra a nota no ProtonDB e o status do anti-cheat."
   - title: "Os jogos ficam ao remover"
@@ -30,7 +30,7 @@ faq:
   - q: "Isso funciona no Windows?"
     a: "Sim. No Windows, o Heronite roda cada app de loja direto, sem Wine, e usa a instalação que você já tem, se houver. Os jogos aparecem na sua biblioteca e abrem pelo app da loja."
   - q: "Posso usar um app de loja que já configurei no Wine?"
-    a: "Sim. Clique em **Usar uma instalação existente** na página do app da loja e selecione o seu prefixo Wine."
+    a: "Sim. Clique em **Usar uma instalação existente** na página do app da loja e selecione seu prefixo Wine."
 related:
   - /guides/battle-net-on-linux/
   - /guides/install-ge-proton/
@@ -64,7 +64,7 @@ Os passos são os mesmos para os três.
 3. Clique em **Instalar o** seguido do nome dele, como **Instalar o EA app**.
 4. Espere a página mostrar **Pronto**.
 
-O Heronite acha ou baixa um Proton e depois o instalador oficial. Ele cria um prefixo Wine (uma pasta que funciona como um Windows só daquele app) e instala o app da loja nele:
+O Heronite encontra ou baixa um Proton e depois o instalador oficial. Ele cria um prefixo Wine (uma pasta que funciona como um Windows só daquele app) e instala o app da loja nele:
 
 | App da loja | Prefixo Wine |
 |---|---|
@@ -77,11 +77,11 @@ Se você já usa um desses apps de loja num prefixo Wine, clique em **Usar uma i
 ## Faça login, instale e jogue
 
 1. Clique em **Abrir o** seguido do nome dele, como **Abrir o Ubisoft Connect**.
-2. Faça login na janela do app da loja. O Heronite nunca vê a sua senha, e a página dele passa a mostrar **Conectado**.
+2. Faça login na janela do app da loja. O Heronite nunca vê sua senha, e a página do app no Heronite passa a mostrar **Conectado**.
 3. Instale um jogo no app da loja, como faria no Windows.
 4. Aperte <kbd>Enter</kbd> no jogo na sua biblioteca do Heronite para abri-lo.
 
-Antes de instalar um jogo grande, veja a caixa **No Linux** nos detalhes dele, com a nota do [ProtonDB](https://www.protondb.com) e o status do anti-cheat. Gold e Platinum são as mais seguras. Se estiver em dúvida, instale primeiro um jogo pequeno para testar.
+Antes de instalar um jogo grande, veja a linha **No Linux** nos detalhes do jogo, com a nota do [ProtonDB](https://www.protondb.com) e o status do anti-cheat. Gold e Platinum são as mais seguras. Se estiver em dúvida, instale primeiro um jogo pequeno para testar.
 
 Se um jogo instalado não aparecer na sua biblioteca, clique em **Atualizar** em **Instalados** na página do app da loja. Um jogo que você não instalou mostra **Instalar pelo EA app**, **Instalar pelo Ubisoft Connect** ou **Instalar pelo Rockstar Games Launcher**, que abre o app da loja.
 
@@ -97,7 +97,7 @@ Um jogo cujo desenvolvedor não permite o Linux não vai rodar. Os status mudam,
 
 ## Troque a versão do Proton de um app de loja
 
-Abra **Configurações do Wine** na página do app da loja e escolha outra versão em **Versão**, na aba **Compatibilidade**. Até você mudar, o Heronite usa o seu Proton padrão. [GE-Proton e Proton-CachyOS](/pt-br/guides/install-ge-proton/) são os mais comuns para testar.
+Abra **Configurações do Wine** na página do app da loja e escolha outra versão em **Versão**, na aba **Compatibilidade**. Até você mudar, o Heronite usa seu Proton padrão. [GE-Proton e Proton-CachyOS](/pt-br/guides/install-ge-proton/) são os mais comuns para testar.
 
 Para abrir o prefixo, clique em **Abrir pasta** ao lado de **Prefixo Wine**, na mesma página. Para encerrar um app de loja e tudo o que roda no prefixo dele, feche qualquer jogo aberto e clique em **Fechar o** seguido do nome do app.
 
@@ -111,4 +111,4 @@ Clique em **Remover do Heronite** na página dele. O prefixo Wine e os jogos con
 - **O app da loja não faz login, ou trava.** Teste outra versão em **Configurações do Wine**, ou um prefixo novo.
 - **Um jogo fecha ao abrir.** Leia o log de inicialização dele em **Configurações → Logs** e veja o ProtonDB.
 
-Para DLLs faltando, erros do Vulkan e outras correções do Wine, veja [Solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-inicia-linux).
+Para DLLs faltando, erros do Vulkan e outras correções do Wine, veja [Solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-abre-linux).

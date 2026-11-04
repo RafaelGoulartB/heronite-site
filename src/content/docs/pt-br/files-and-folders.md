@@ -67,4 +67,4 @@ Apague o `portable.txt` para a cópia usar as pastas normais do usuário. Uma c�
 
 ## Mudar do Heroic para o Heronite (Linux)
 
-Na primeira vez que você abre o Heronite, se `~/.config/heroic` existir, ele copia os dados do Heroic uma vez para a pasta de dados dele, então seus logins, jogos e configurações vêm junto. Ele só lê os arquivos do Heroic.
+Na primeira abertura, se `~/.config/heroic` existir, o Heronite copia uma vez os logins, as configurações e os jogos adicionados à mão do Heroic para a pasta de dados do Heronite. O Heronite nunca altera os arquivos do Heroic.

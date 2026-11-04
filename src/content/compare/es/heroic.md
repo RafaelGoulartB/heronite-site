@@ -14,15 +14,15 @@ updated: 2026-11-04
 highlights:
   - title: "Las mismas herramientas"
     text: "Los dos inician sesión y descargan con las mismas herramientas de código abierto."
-  - title: "Tu historial de juego"
-    text: "Cada sesión alimenta las estadísticas, un diario y un resumen del año."
+  - title: "Encuentra todo rápido"
+    text: "Ctrl+K abre cualquier juego, página o acción."
   - title: "Importa tu Heroic"
     text: "En Linux pasan tus inicios de sesión y los juegos que añadiste a mano."
-  - title: "Sin navegador incluido"
-    text: "Una app nativa en Rust; Heroic está hecho con Electron."
+  - title: "Arranca en unos 215 ms"
+    text: "Tiempo mediano desde que lo abres hasta ver tu biblioteca en pantalla."
 faq:
   - q: "¿Puedo usar Heronite y Heroic a la vez?"
-    a: "Sí. Heronite solo lee los archivos de Heroic, así que Heroic sigue funcionando."
+    a: "Sí. Heronite solo lee los archivos de Heroic."
   - q: "¿Es seguro iniciar sesión en las tiendas con Heronite?"
     a: "Sí. Tus inicios de sesión se quedan en tu PC y solo van a las tiendas. Escribes tu contraseña en la página de inicio de sesión de la propia tienda."
   - q: "¿Heronite funciona en la Steam Deck?"
@@ -39,19 +39,20 @@ related:
 |---|---|---|
 | Plataformas | Linux y Windows 10/11 | Linux, Windows 10/11, macOS 14 o posterior |
 | Hecho con | Rust, renderizado en la GPU, sin navegador incluido | Electron, TypeScript y React |
+| Memoria en reposo | Unos 190 MB | — |
 | Epic, GOG, Amazon | Sí | Sí |
-| Biblioteca de Steam | Sí, sin iniciar sesión | No aparece |
-| Battle.net, EA app, Ubisoft Connect, Rockstar | Sí, con Wine en Linux | No aparece |
-| Microsoft Store y PC Game Pass | Sí, en Windows | No aparece |
-| Emulación | Sí | No aparece |
+| Biblioteca de Steam | Sí, sin iniciar sesión | — |
+| Battle.net, EA app, Ubisoft Connect, Rockstar | Sí, con Wine en Linux | — |
+| Microsoft Store y PC Game Pass | Sí, en Windows | — |
+| Emulación | Sí | — |
 | Tiempo de juego | Estadísticas, diario, resumen del año | Tiempo jugado en la página de cada juego |
 | Modo consola | Sí, con temas | Sí |
 | Guardados en la nube | Epic y GOG, en beta | Sí |
-| Copias de partidas guardadas | Ludusavi, después de cada sesión | No aparece |
-| La misma biblioteca en varios PC | Sí, con una carpeta o una cuenta en la nube | No aparece |
+| Copias de partidas guardadas | Ludusavi, después de cada sesión | — |
+| La misma biblioteca en varios PC | Sí, con una carpeta o una cuenta en la nube | — |
 | Importar desde el otro lanzador | Sí, en Linux | No aplica |
 
-La columna de Heroic sale de su [README](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher), su [sitio web](https://heroicgameslauncher.com) y sus [notas de versión](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases), actualizadas a noviembre de 2026. "No aparece" significa que el README no lo menciona.
+La columna de Heroic sale de su [README](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher), su [sitio web](https://heroicgameslauncher.com) y sus [notas de versión](https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases), actualizadas a noviembre de 2026. — = no aparece en el README, el sitio web ni las notas de versión de Heroic.
 
 ## ¿Qué tienen en común Heronite y Heroic?
 
@@ -61,7 +62,7 @@ Los dos son GPL-3.0 y usan las mismas herramientas de código abierto no oficial
 
 ### Elige Heroic si…
 
-- **Usas macOS.** Heroic funciona en macOS 14 o posterior, con los juegos de Windows a través de Crossover.
+- **Usas macOS.** Heroic funciona en macOS 14 o posterior, con los juegos de Windows a través de CrossOver.
 - **Quieres extras de las tiendas.** Heroic tiene pantallas de ofertas, logros de GOG en la página del juego y soporte experimental de ZOOM Platform en Linux.
 - **Quieres una configuración de Wine y Steam Deck probada.** El sitio de Heroic destaca los ajustes automáticos de Wine y el soporte de Steam Deck.
 - **Necesitas otro idioma.** Heroic está traducido a casi 40 idiomas; Heronite, a inglés, portugués (Brasil), español y alemán.
@@ -81,7 +82,7 @@ En Linux, Heronite importa tu configuración de Heroic. Solo lee los archivos de
 
 1. **Inicia Heronite.** Si existe `~/.config/heroic`, Heronite copia sus datos una vez: tus inicios de sesión en las tiendas, tus ajustes y los juegos que añadiste a mano con sus ajustes.
 2. **Activa la importación de Heroic.** En **Ajustes → Otros launchers**, activa **Importar sus juegos** en Heroic. Heronite mantiene tus juegos añadidos e instalados sincronizados con la instalación normal de Heroic o con su Flatpak.
-3. **Revisa tus juegos de tiendas instalados.** Heronite lee los registros de Heroic de los juegos de Epic, GOG y Amazon que instaló. Aparecen como instalados, en las mismas carpetas, cuando inicias sesión en la tienda.
+3. **Encuentra tus juegos de tiendas instalados.** La importación también añade los registros de Heroic de los juegos de Epic, GOG y Amazon que Heroic instaló. Aparecen como instalados, en las mismas carpetas.
 
 Heronite se salta los juegos de Steam que lista Heroic y los trae con su importación de Steam, así que nada aparece dos veces.
 

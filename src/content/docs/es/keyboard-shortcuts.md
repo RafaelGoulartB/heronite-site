@@ -31,7 +31,7 @@ Pulsa <kbd>?</kbd> en Heronite para ver todos los atajos de teclado.
 | Flechas, <kbd>Inicio</kbd>, <kbd>Fin</kbd>, <kbd>RePág</kbd>, <kbd>AvPág</kbd> | Moverse |
 | <kbd>Enter</kbd> | Jugar o instalar |
 | <kbd>Espacio</kbd> | Seleccionar |
-| <kbd>Shift</kbd> + flechas | Seleccionar un rango |
+| <kbd>Shift</kbd> con las flechas | Seleccionar un rango |
 | <kbd>Ctrl</kbd> <kbd>A</kbd> | Seleccionar todos los juegos mostrados |
 | <kbd>F3</kbd> | Editar el juego o la selección |
 | <kbd>Ctrl</kbd> <kbd>Z</kbd> | Deshacer el último cambio en los juegos seleccionados |

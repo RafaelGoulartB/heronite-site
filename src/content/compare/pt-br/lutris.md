@@ -16,8 +16,8 @@ highlights:
     text: No Linux, os jogos da biblioteca do Lutris passam para o Heronite e ficam sincronizados.
   - title: Sem cadastro
     text: O Heronite funciona sem nenhuma conta própria.
-  - title: Seu histórico de jogo
-    text: Cada sessão alimenta estatísticas, diário e retrospectiva do ano.
+  - title: Sandbox para jogos suspeitos
+    text: Rode um jogo sem rede e sem acesso à sua pasta pessoal.
   - title: Backup de saves
     text: O Ludusavi faz backup dos saves de um jogo depois de cada sessão.
 faq:
@@ -46,11 +46,11 @@ related:
 | Emulação | Emuladores detectados, ROMs escaneadas, save states | Runners para muitos emuladores e engines |
 | Wine e Proton | Sim, com um Gerenciador do Wine | Sim, GE-Proton pelo umu por padrão |
 | Tempo de jogo | Estatísticas, diário, retrospectiva do ano | Sim, com um editor de tempo de jogo |
-| Saves na nuvem | Epic e GOG, em beta | Não consta |
+| Saves na nuvem | Epic e GOG, em beta | — |
 | Conta online | Não precisa | Conta opcional no lutris.net |
 | Importar do outro launcher | Sim, no Linux | Não se aplica |
 
-A coluna do Lutris vem do [lutris.net](https://lutris.net), do [repositório do Lutris](https://github.com/lutris/lutris) e das [notas de versão](https://github.com/lutris/lutris/releases) dele, atualizados até novembro de 2026. "Não consta" quer dizer que o README do Lutris não lista o recurso.
+A coluna do Lutris vem do [lutris.net](https://lutris.net), do [repositório do Lutris](https://github.com/lutris/lutris) e das [notas de versão](https://github.com/lutris/lutris/releases) dele, atualizados até novembro de 2026. — = não aparece no README, no site nem nas notas de versão do Lutris.
 
 ## O que o Heronite e o Lutris têm em comum?
 
@@ -83,7 +83,7 @@ Os dois são launchers gratuitos e de código aberto (GPL-3.0). Os dois rodam jo
 No Linux, o Heronite importa os jogos da biblioteca do Lutris. Ele só lê os arquivos do Lutris, então o Lutris continua funcionando como antes.
 
 1. **[Instale o Heronite](/pt-br/docs/installation/) e abra.**
-2. **Ligue a importação do Lutris.** Em **Configurações → Outros launchers**, ligue **Trazer os jogos dele** embaixo do Lutris. Os jogos instalados dele aparecem com capas e tempo de jogo, e ficam sincronizados com a instalação normal do Lutris ou com o Flatpak dele.
+2. **Ligue a importação do Lutris.** Em **Configurações → Outros launchers**, marque **Trazer os jogos dele** embaixo do Lutris. Os jogos instalados no Lutris aparecem com capas e tempo de jogo, e ficam sincronizados com a instalação normal do Lutris ou com o Flatpak.
 3. **Faça login nas suas lojas.** Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>) e faça login na Epic Games, GOG e Amazon Games.
 
 Bom saber:
@@ -91,6 +91,6 @@ Bom saber:
 - O Lutris continua abrindo os jogos que o Heronite importou, com as configurações que você deu a eles lá.
 - O Heronite ignora os jogos da Steam que o Lutris lista e usa a própria importação da Steam, então nada aparece duas vezes.
 - O Heronite importa os jogos, não os scripts de instalação que os configuraram.
-- O [Gerenciador do Wine](/pt-br/features/wine-and-proton/) acha os runners do Wine que o Lutris já instalou.
+- O [Gerenciador do Wine](/pt-br/features/wine-and-proton/) encontra os runners do Wine que o Lutris já instalou.
 
 **Próximo:** [baixe o Heronite](/pt-br/download/) e leia [Primeiros passos](/pt-br/docs/getting-started/).

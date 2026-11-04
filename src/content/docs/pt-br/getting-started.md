@@ -11,7 +11,7 @@ O Heronite monta sua biblioteca de jogos com a Steam, seus emuladores e as lojas
 
 ## O que o Heronite encontra na primeira vez que você o abre
 
-Se a sua biblioteca estiver vazia, o Heronite adiciona:
+Se sua biblioteca estiver vazia, o Heronite adiciona:
 
 - **Steam:** seus jogos da Steam instalados, sem precisar de login.
 - **Emuladores e ROMs:** os emuladores que ele detecta e as ROMs em pastas comuns, como `~/ROMs` ou `~/Emulation/roms`. Veja [Emulação](/pt-br/docs/emulation/).
@@ -27,7 +27,7 @@ No Windows, o Heronite encontra os jogos da Microsoft Store e do PC Game Pass in
 3. Clique em **Entrar**.
 4. Faça login na página da loja, na janela que abrir.
 
-Se a janela não abrir, use **Ou entre pelo navegador** na mesma página: faça login no navegador e cole o endereço ou o código que ele mostrar. Veja [Lojas e launchers](/pt-br/docs/stores-and-launchers/).
+Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página e cole o código que o navegador mostrar. Veja [Lojas e launchers](/pt-br/docs/stores-and-launchers/).
 
 No Windows, o Heronite também encontra os jogos instalados pelo Epic Games Launcher, pelo GOG Galaxy ou pelo app Amazon Games, sem baixar tudo de novo.
 
@@ -61,7 +61,7 @@ A **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre qualquer página, e
 - Alterne entre **Foco** (uma lista com painel de detalhes) e uma **grade** de capas.
 - **Agrupe** por status, loja, gênero, série, ano e mais.
 - Salve **presets** com seus filtros e ordenação (Jogando agora, Pendentes, Finalizado, Favoritos).
-- Selecione vários jogos (<kbd>Espaço</kbd>, <kbd>Shift</kbd> + setas, <kbd>Ctrl</kbd> <kbd>A</kbd>) e aperte <kbd>F3</kbd> para editar a série e as tags de todos de uma vez. <kbd>Ctrl</kbd> <kbd>Z</kbd> desfaz.
+- Selecione vários jogos (<kbd>Espaço</kbd>, <kbd>Shift</kbd> com as setas, <kbd>Ctrl</kbd> <kbd>A</kbd>) e aperte <kbd>F3</kbd> para editar a série e as tags de todos de uma vez. <kbd>Ctrl</kbd> <kbd>Z</kbd> desfaz.
 
 ## Jogar e tirar capturas de tela
 

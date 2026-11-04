@@ -17,7 +17,7 @@ highlights:
   - title: "Inicia sesión en la app"
     text: "Heronite nunca ve tu contraseña."
   - title: "Revisa antes de instalar"
-    text: "El recuadro En Linux muestra la valoración de ProtonDB y el estado de anti-cheat."
+    text: "La fila En Linux muestra la valoración de ProtonDB y el estado de anti-cheat."
   - title: "Los juegos se quedan"
     text: "Quitar una app de la tienda deja su prefijo y sus juegos en el disco."
 faq:
@@ -81,7 +81,7 @@ Si ya usas una de estas apps en un prefijo de Wine, haz clic en **Usar una insta
 3. Instala un juego en la app de la tienda, como lo harías en Windows.
 4. Pulsa <kbd>Enter</kbd> sobre el juego en tu biblioteca de Heronite para iniciarlo.
 
-Antes de instalar un juego grande, mira el recuadro **En Linux** en sus detalles: muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat. Gold y Platinum son las más seguras. Si dudas, instala primero un juego pequeño para probar tu configuración.
+Antes de instalar un juego grande, mira la fila **En Linux** en los detalles del juego: muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat. Gold y Platinum son las más seguras. Si dudas, instala primero un juego pequeño para probar tu configuración.
 
 Si falta un juego instalado en tu biblioteca, haz clic en **Actualizar** bajo **Instalados** en la página de la app de la tienda. Un juego que no has instalado muestra **Instalar con EA app**, **Instalar con Ubisoft Connect** o **Instalar con Rockstar Games Launcher**, que abre la app de la tienda.
 

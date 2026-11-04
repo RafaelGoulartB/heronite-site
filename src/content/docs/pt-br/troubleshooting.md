@@ -13,9 +13,7 @@ Escolha **Mais informações** e depois **Executar assim mesmo**. O instalador d
 
 ## O Heronite não abre ou mostra uma janela preta
 
-### A janela não abre ou fica preta (Linux)
-
-Instale o driver Vulkan da sua GPU (`vulkan-radeon` ou `vulkan-intel` do Mesa, ou o driver da NVIDIA) e confira se o `vulkaninfo` lista a GPU. O Heronite usa Vulkan para mostrar a tela.
+No Linux, instale o driver Vulkan da sua GPU e confira se o `vulkaninfo` lista a GPU. O Heronite usa Vulkan para mostrar a tela. Para AMD ou Intel, instale `vulkan-radeon` ou `vulkan-intel` no Arch, ou `mesa-vulkan-drivers` no Debian e no Ubuntu. Para NVIDIA, instale o driver da própria NVIDIA.
 
 ### "O Heronite já está em execução, mas não está respondendo"
 
@@ -35,7 +33,7 @@ Procure atualizações de novo mais tarde. Sua rede fez requisições demais ao 
 
 ### A janela de login não abre
 
-Use **Ou entre pelo navegador** na mesma página da loja: faça login no navegador e cole o endereço ou o código no Heronite.
+Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página e cole o código que o navegador mostrar.
 
 Para consertar a própria janela de login, instale:
 
@@ -46,21 +44,21 @@ Para consertar a própria janela de login, instale:
 
 Instale o `python3`. O gogdl, a ferramenta de download da GOG, precisa dele.
 
-## Um jogo não inicia (Linux)
+## Um jogo não abre (Linux)
 
 Quando um jogo fecha sozinho nos primeiros 30 segundos e o Heronite conhece a causa, a janela **Problema ao abrir** aparece. O primeiro botão dela aplica a correção e abre o jogo de novo. Para qualquer outro travamento, clique com o botão direito no jogo e escolha **Solucionar problemas**.
 
 | O Heronite diz | Correção |
 |---|---|
-| "Falta o Visual C++ 2015-2022" (ou outro runtime) | **Instalar … e jogar**: o Heronite instala com o Winetricks, só no prefixo deste jogo |
-| "Falta o .NET Framework" | **Instalar .NET Framework 4.8 e jogar** (leva alguns minutos) |
-| "O DirectX 12 precisa do VKD3D-Proton" | **Ligar o VKD3D-Proton e jogar**, ou ligue em **Configurações do jogo → Compatibilidade** |
-| "O Direct3D falhou sem o DXVK" | **Ligar o DXVK e jogar**, ou ligue em **Configurações do jogo → Compatibilidade** |
-| "O Vulkan não conseguiu iniciar" | **Copiar o comando** e rode em um terminal. Ele instala o driver Vulkan, que muitas vezes está sem a parte de 32 bits (`lib32-vulkan-radeon`, `mesa-vulkan-drivers:i386`, …) |
-| "O Wine ficou sem arquivos abertos" | **Usar fsync e jogar**, ou escolha Fsync em vez de Esync em **Configurações do jogo → Compatibilidade** |
-| "O limite de mapas de memória está baixo" | **Aumentar e jogar** e digite a senha de administrador (veja abaixo) |
-| "Outro Wine ainda está rodando no prefixo" | **Encerrar e jogar**, ou feche o outro jogo |
-| "O Easy Anti-Cheat precisa do seu runtime" | **Ligar o runtime de anti-cheat e jogar** |
+| "Falta o Visual C++ 2015-2022" (ou outro runtime) | Clique em **Instalar … e jogar**: o Heronite instala com o Winetricks, só no prefixo deste jogo |
+| "Falta o .NET Framework" | Clique em **Instalar .NET Framework 4.8 e jogar** (leva alguns minutos) |
+| "O DirectX 12 precisa do VKD3D-Proton" | Clique em **Ligar o VKD3D-Proton e jogar**, ou ligue o VKD3D-Proton em **Configurações do jogo → Compatibilidade** |
+| "O Direct3D falhou sem o DXVK" | Clique em **Ligar o DXVK e jogar**, ou ligue o DXVK em **Configurações do jogo → Compatibilidade** |
+| "O Vulkan não conseguiu iniciar" | Clique em **Copiar o comando** e rode no terminal. O comando instala o driver Vulkan, que muitas vezes está sem a parte de 32 bits (`lib32-vulkan-radeon`, `mesa-vulkan-drivers:i386`, …) |
+| "O Wine ficou sem arquivos abertos" | Clique em **Usar fsync e jogar**, ou escolha Fsync em vez de Esync em **Configurações do jogo → Compatibilidade** |
+| "O limite de mapas de memória está baixo" | Clique em **Aumentar e jogar** e digite a senha de administrador ([detalhes](#o-limite-de-mapas-de-memória-está-baixo-vmmax_map_count)) |
+| "Outro Wine ainda está rodando no prefixo" | Clique em **Encerrar e jogar**, ou feche o outro jogo |
+| "O Easy Anti-Cheat precisa do seu runtime" | Clique em **Ligar o runtime de anti-cheat e jogar** |
 | "O Easy Anti-Cheat bloqueia jogadores no Linux" | Nenhuma: o desenvolvedor não permite Linux (o [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) lista o jogo como negado) |
 
 ### O limite de mapas de memória está baixo (vm.max_map_count)
@@ -81,7 +79,7 @@ sudo sysctl -w vm.max_map_count=1048576
 ## O overlay dentro do jogo não funciona (Linux)
 
 - O botão Guide abre a Steam: desligue **Guide Button Focuses Steam** em **Steam → Configurações → Controle**.
-- O overlay nunca aparece: ligue **Ligar o overlay** em **Configurações → Overlay** (ele vem desligado). Ele precisa de Wayland com layer-shell (KDE Plasma, Hyprland, Sway), então não funciona no GNOME nem no X11.
+- O overlay nunca aparece: marque **Ligar o overlay** em **Configurações → Overlay** (ele vem desligado). Ele precisa de Wayland com layer-shell (KDE Plasma, Hyprland, Sway), então não funciona no GNOME nem no X11.
 
 ## Onde ficam os logs
 
