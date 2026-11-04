@@ -4,7 +4,7 @@
 /* ---------- hero: drifting wall of covers ---------- */
 .hero{position:relative;background:linear-gradient(#07090c,#07090c 60%,var(--bg))}
 .hero-top{position:relative;isolation:isolate;overflow:hidden;min-height:clamp(540px,68vh,640px);display:flex;align-items:center;padding:104px 0 140px}
-.wall{--H:206px;--g:16px;position:absolute;left:40%;right:-16%;top:46%;transform:translateY(-50%) rotate(-5deg);display:flex;flex-direction:column;gap:var(--g);z-index:-2}
+.wall{--H:206px;--g:16px;position:absolute;left:45%;right:-16%;top:46%;transform:translateY(-50%) rotate(-5deg);display:flex;flex-direction:column;gap:var(--g);z-index:-2}
 .track{display:flex;gap:var(--g);padding-right:var(--g);width:max-content;animation:slide 140s linear infinite;will-change:transform}
 .r1 .track{animation-duration:150s}
 .r2 .track{animation-duration:125s;animation-direction:reverse}
@@ -22,7 +22,7 @@
 .s-yir{background-image:var(--img-yir)}
 .wall.paused .track{animation-play-state:paused}
 .hero-top::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:
-  linear-gradient(90deg,#07090c 0%,#07090c 38%,rgba(7,9,12,.6) 52%,rgba(7,9,12,.1) 70%,rgba(7,9,12,.35) 100%),
+  linear-gradient(90deg,#07090c 0%,#07090c 44%,rgba(7,9,12,.6) 56%,rgba(7,9,12,.1) 72%,rgba(7,9,12,.35) 100%),
   linear-gradient(180deg,rgba(7,9,12,.9) 0%,rgba(7,9,12,0) 18%,rgba(7,9,12,0) 62%,#07090c 92%)}
 .hero-copy{position:relative}
 .h1{max-width:9.5em;font-size:clamp(46px,5.6vw,80px);line-height:.98;font-weight:700;letter-spacing:-.03em}

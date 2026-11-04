@@ -149,7 +149,7 @@ const en = {
       'Save backups with Ludusavi',
     ],
     wallLabel: 'A wall of game covers from a Heronite library, cropped from the app’s own screenshots',
-    headlineHtml: 'Your whole<br> library, open<br> in 215 ms.',
+    headlineHtml: 'Close the other<br> launchers.',
     lead: 'Steam, Epic, GOG, Amazon, Battle.net, emulators and more, in one fast native app for Linux, Steam Deck and Windows. Free and open source, with no account and no telemetry.',
     downloadFree: 'Download free',
     downloadWindows: 'Download for Windows',
