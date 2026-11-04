@@ -1,13 +1,13 @@
 ---
-title: "Emuladores e ROMs no Linux e no Windows com o Heronite"
+title: "Emuladores e ROMs: sistemas compatíveis e pastas"
 navLabel: "Emulação"
-description: "Emuladores compatíveis, cores padrão do RetroArch, como organizar as pastas de ROMs, jogos de vários discos, estados salvos e RetroAchievements no Heronite."
+description: "Emuladores e ROMs no Heronite: emuladores compatíveis, cores padrão do RetroArch, pastas de ROMs, jogos de vários discos e RetroAchievements."
 section: Guides
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-O Heronite detecta os emuladores que você tem instalados, varre suas pastas de ROMs e adiciona cada jogo à Coleção com a arte dele. Instale os emuladores você mesmo (pela sua distribuição, pelo Flathub ou pelos sites deles); o Heronite os encontra no `PATH`, como Flatpaks e como cores do RetroArch.
+O Heronite adiciona suas ROMs à biblioteca com a arte de cada jogo: ele detecta os emuladores instalados e varre suas pastas de ROMs. Instale os emuladores antes, pela sua distribuição, pelo Flathub ou pelos sites deles. O Heronite os encontra no `PATH`, como Flatpaks e como cores do RetroArch.
 
 ## Emuladores compatíveis
 
@@ -57,7 +57,7 @@ O Heronite usa estes cores por padrão quando o RetroArch roda um sistema.
 | Arcade | fbneo |
 | MAME | mame |
 
-Instale os cores pelo Online Updater do próprio RetroArch. O Heronite os procura na pasta de cores do RetroArch (`~/.config/retroarch/cores` ou `%APPDATA%\RetroArch\cores`), no Flatpak e nas pastas libretro do sistema.
+Instale os cores pelo Online Updater do RetroArch. O Heronite os procura na pasta de cores do RetroArch (`~/.config/retroarch/cores` ou `%APPDATA%\RetroArch\cores`), no Flatpak e nas pastas libretro do sistema.
 
 ## Pastas de ROMs
 
@@ -70,17 +70,21 @@ ROMs/
 └── gba/
 ```
 
-Na primeira execução, o Heronite varre estas pastas, se existirem:
+Na primeira vez que você abre o Heronite, ele varre estas pastas, se existirem:
 
 - **Linux** (na sua pasta pessoal): `ROMs`, `Roms`, `roms`, `Emulation/roms`, `Games/ROMs`, `Games/Emulation/roms`, `retrodeck/roms`, `RetroDECK/roms`; e `Emulation/roms`, `roms`, `retrodeck/roms` em outros discos.
 - **Windows:** `ROMs`, `Emulation\roms`, `Games\ROMs`, `Documents\ROMs` na pasta do seu usuário; e `Emulation\roms`, `ROMs`, `Games\ROMs`, `RetroArch-Win64\roms` na raiz de cada unidade.
 
-Adicione mais pastas na página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>). As varreduras ignoram as pastas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` e `manuals`. Jogos de vários discos são lidos a partir de arquivos `.m3u`, `.cue` e `.gdi`, então cada um aparece uma única vez.
+Adicione mais pastas na página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>). As varreduras ignoram as pastas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` e `manuals`. O Heronite lê jogos de vários discos a partir de arquivos `.m3u`, `.cue` e `.gdi`, então cada jogo aparece uma vez só.
 
-## Estados salvos
+## Continuar um jogo de um estado salvo
 
-Pela página de um jogo, você pode continuar a partir de um estado salvo.
+1. Clique em **Jogar** no jogo.
+2. Em **Como você quer jogar?**, escolha um estado salvo.
+3. Escolha **Continuar**.
 
-## Conquistas
+O Heronite só pergunta quando o emulador tem estados salvos do jogo. Para começar normalmente, escolha **Começar do início**; os saves no cartão de memória continuam lá.
 
-Conecte uma conta do [RetroAchievements](https://retroachievements.org) em Configurações para ver as conquistas dos jogos emulados. Veja [Metadados e arte](/pt-br/docs/metadata-and-art/).
+## Ver conquistas do RetroAchievements em jogos emulados
+
+Conecte sua conta do [RetroAchievements](https://retroachievements.org) em **Configurações → Conquistas** para ver suas conquistas dos jogos emulados.

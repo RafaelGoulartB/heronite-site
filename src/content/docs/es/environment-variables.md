@@ -4,20 +4,21 @@ navLabel: "Variables de entorno"
 description: "Las variables de entorno HERONITE_*: usa otra carpeta de datos, indica dónde está Steam y desactiva actualizaciones, bandeja, mando o animaciones."
 section: Reference
 order: 4
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-Los interruptores `HERONITE_*` están activados cuando tienen cualquier valor salvo vacío o `0`.
+Define estas variables de entorno antes de iniciar Heronite. Un interruptor `HERONITE_*` está activado cuando tiene cualquier valor salvo vacío o `0`.
 
-## Carpetas
+## Cambia las carpetas y el detalle del log
 
 | Variable | Qué hace |
 |---|---|
-| `HERONITE_DATA_DIR=<folder>` | Usa otra carpeta de datos. La configuración y la caché pasan a estar junto a ella, en `<folder>.heronite/`. Útil para una segunda Colección independiente. |
-| `HERONITE_LOG_DIR=<folder>` | Escribe los logs en otra carpeta |
-| `HERONITE_STEAM_DIR=<folder>` | Dónde está Steam, cuando Heronite no lo encuentra |
+| `HERONITE_DATA_DIR=<carpeta>` | Usa otra carpeta de datos, para una segunda Colección independiente. La configuración y la caché pasan a estar junto a ella, en `<carpeta>.heronite/`. |
+| `HERONITE_LOG_DIR=<carpeta>` | Escribe los logs en otra carpeta |
+| `HERONITE_STEAM_DIR=<carpeta>` | Dónde está Steam, cuando Heronite no lo encuentra |
+| `RUST_LOG=debug` | Más detalle en el log (`trace` para verlo todo) |
 
-## Desactivar funciones
+## Desactiva funciones
 
 | Variable | Qué hace |
 |---|---|
@@ -31,21 +32,17 @@ Los interruptores `HERONITE_*` están activados cuando tienen cualquier valor sa
 | `HERONITE_DISABLE_TOOLS_UPDATE` | No actualiza DXVK, Winetricks ni umu en segundo plano |
 | `HERONITE_WINE_OFFLINE` | Sin red para el Gestor de Wine (Linux) |
 
-## Herramientas de las tiendas
+## Usa tu propio legendary, gogdl o nile
+
+Heronite descarga estas herramientas de las tiendas. Para usar tu propia copia, define:
 
 | Variable | Qué hace |
 |---|---|
-| `HERONITE_LEGENDARY_BIN=<path>` | Usa este legendary en lugar del descargado |
-| `HERONITE_GOGDL_BIN=<path>` | Usa este gogdl |
-| `HERONITE_NILE_BIN=<path>` | Usa este nile |
+| `HERONITE_LEGENDARY_BIN=<ruta>` | Usa este legendary (la herramienta de Epic) |
+| `HERONITE_GOGDL_BIN=<ruta>` | Usa este gogdl (la herramienta de GOG) |
+| `HERONITE_NILE_BIN=<ruta>` | Usa este nile (la herramienta de Amazon Games) |
 
-## Logs
-
-| Variable | Qué hace |
-|---|---|
-| `RUST_LOG=debug` | Más detalle en el log (`trace` para verlo todo) |
-
-## Variables que define Heronite
+## Variables que Heronite define para los scripts de un juego
 
 Los scripts que se ejecutan antes o después de un juego, y los programas que se ejecutan junto a él, reciben estas:
 
@@ -59,6 +56,4 @@ Los scripts que se ejecutan antes o después de un juego, y los programas que se
 | `HERONITE_GAME_PREFIX` | Su prefijo de Wine (Linux) |
 | `HERONITE_GAME_SCRIPT_TYPE` | Qué script es (antes o después) |
 
-Los mismos valores también se definen como `HEROIC_GAME_*`, así que los scripts escritos para Heroic siguen funcionando.
-
-Dentro del [sandbox](/es/docs/wine-and-proton/), se define `HERONITE_SANDBOX`.
+Heronite define los mismos valores como `HEROIC_GAME_*`, así que los scripts escritos para Heroic siguen funcionando. Dentro del [sandbox](/es/docs/wine-and-proton/#sandbox), también define `HERONITE_SANDBOX`.

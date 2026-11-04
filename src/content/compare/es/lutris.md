@@ -1,137 +1,96 @@
 ---
 title: "Alternativa a Lutris para Linux: Heronite vs Lutris"
-description: "Heronite y Lutris reúnen muchos juegos en una biblioteca de Linux. Compara scripts de instalación, tiendas y emuladores, y cómo importar tus juegos de Lutris."
+description: "Una alternativa a Lutris para Linux y Windows. Compara scripts de instalación, tiendas, emuladores e historial de juego, e importa tus juegos de Lutris."
 eyebrow: Comparativa
-headline: "Heronite vs Lutris: una alternativa a Lutris *que también funciona en Windows*"
-lead: "Lutris es el veterano gestor de juegos de código abierto para Linux, con scripts de instalación y una larga lista de runners. Heronite es un launcher más nuevo y ligero para Linux y Windows. Así se diferencian."
+headline: "Heronite vs Lutris"
+lead: "Heronite es una alternativa a Lutris pensada para las tiendas: instala tus juegos de Epic, GOG y Amazon y también funciona en Windows. Lutris se basa en scripts de instalación de la comunidad y en runners para muchos sistemas."
 navLabel: Heronite vs Lutris
-summary: "Cómo se comparan Heronite y Lutris en scripts de instalación, runners, tiendas, emulación e historial de juego, y cómo importar tus juegos de Lutris."
+summary: "Heronite vs Lutris: scripts de instalación, runners, tiendas, emulación e historial de juego, y cómo importar tus juegos de Lutris."
 order: 3
 hero: ../../../assets/screenshots/wine-manager.webp
 heroAlt: "El Gestor de Wine de Heronite con Proton-CachyOS, GE-Proton, DW-Proton, UMU-Proton, Proton-EM y Proton-Sarek, y una tabla de versiones de Proton-CachyOS con fechas de publicación, tamaños y botones Instalar."
 og: /og/lutris.jpg
-updated: 2026-11-01
+updated: 2026-11-04
 highlights:
-  - title: "Tiendas, no scripts"
-    text: "Inicia sesión en Epic, GOG y Amazon y Heronite instala desde la tienda. Lee Steam sin iniciar sesión."
   - title: "Importa tus juegos de Lutris"
-    text: "En Linux, Heronite importa los juegos de la biblioteca de Lutris y solo lee sus archivos."
-  - title: "Linux y Windows"
-    text: "El mismo launcher nativo en ambos sistemas. Lutris solo funciona en Linux."
-  - title: "Tu historial de juego"
-    text: "Cada sesión queda registrada, con estadísticas, un diario, una meta de backlog y un resumen del año."
+    text: "En Linux, los juegos de la biblioteca de Lutris pasan y se mantienen sincronizados."
+  - title: "Sin registro"
+    text: "Heronite funciona sin una cuenta propia."
+  - title: "Sandbox para juegos dudosos"
+    text: "Ejecuta un juego sin red y sin acceso a tu carpeta personal."
+  - title: "Copias de partidas"
+    text: "Ludusavi hace una copia de las partidas guardadas después de cada sesión."
 faq:
-  - q: "¿Puede Heronite importar mis juegos de Lutris?"
-    a: "Sí, en Linux. Heronite lee los juegos de la biblioteca de Lutris y los mantiene sincronizados. Funciona con la instalación normal de Lutris y con su Flatpak, y nunca escribe en los archivos de Lutris. Lutris sigue funcionando como antes."
-  - q: "¿Cuál es una buena alternativa a Lutris?"
-    a: "Heronite lo es si juegas sobre todo a juegos de tiendas, emuladores y tus propias carpetas. Lutris sigue siendo la mejor opción si dependes de sus scripts de instalación de la comunidad. Heroic es otra opción, y la comparamos en su propia página."
-  - q: "¿Tiene Heronite scripts de instalación como Lutris?"
-    a: "No. Lutris tiene instaladores, escritos como scripts, que descargan y configuran un juego por ti. Heronite instala los juegos de las tiendas en las que inicias sesión, y para los demás juegos añades tú el programa o la carpeta."
+  - q: "¿Heronite tiene scripts de instalación como Lutris?"
+    a: "Sí. Heronite instala un juego desde un script de instalación YAML que tú eliges y luego lo añade a tu biblioteca. Lutris tiene la biblioteca de scripts de la comunidad en lutris.net."
+  - q: "¿Heronite funciona en la Steam Deck?"
+    a: "Sí. Funciona como AppImage en el modo escritorio de SteamOS, y en el Modo Juego como juego que no es de Steam. Mira la [guía de la Steam Deck](/guides/steam-deck/)."
   - q: "Heroic vs Lutris: ¿cuál debería usar?"
-    a: "Heroic se centra en Epic, GOG y Amazon, y Lutris cubre más sistemas, runners y scripts de instalación. Heronite está entre los dos, con Steam, las tres tiendas de Heroic y emuladores en una sola biblioteca. Mira la comparativa con Heroic para saber más."
+    a: "Heroic se centra en Epic, GOG y Amazon. Lutris cubre más sistemas, runners y scripts de instalación. Mira [Heronite vs Heroic](/compare/heroic/)."
 related:
   - /features/wine-and-proton/
   - /features/emulation/
   - /compare/heroic/
 ---
 
-Lutris es uno de los gestores de juegos más veteranos y capaces de Linux. Heronite hace parte del mismo trabajo de otra manera. Lutris se apoya en scripts de instalación de la comunidad y en muchos runners. Heronite se apoya en las tiendas, una sola Colección y una app más ligera.
-
-**En resumen:** elige Lutris si quieres scripts de instalación o un runner para un sistema antiguo o un motor. Elige Heronite si juegas sobre todo desde tiendas, quieres Steam, Epic, GOG y Amazon en una biblioteca, o quieres el mismo launcher también en Windows. Esta página está actualizada a noviembre de 2026.
-
-## Comparación rápida
+## Heronite vs Lutris: comparativa de funciones
 
 | | Heronite | Lutris |
 |---|---|---|
 | Plataformas | Linux y Windows 10/11 | Linux |
-| Licencia | GPL-3.0 | GPL-3.0 |
-| Hecho con | Rust, dibujado en la GPU, sin navegador incluido | Python |
-| Cómo se configuran los juegos | Instalados desde la tienda, o añadidos a mano | Scripts de instalación de la comunidad, más configuración manual |
+| Hecho con | Rust, renderizado en la GPU, sin navegador incluido | Python |
+| Cómo se configuran los juegos | Desde la tienda, a mano o con un script de instalación YAML | Scripts de instalación, o configuración manual |
 | Biblioteca de Steam | Sí, sin iniciar sesión | Sí |
-| Epic, GOG, Amazon | Sí, con legendary, gogdl y nile | Epic y GOG aparecen en su sitio, y Amazon en sus notas de versión |
-| Battle.net, EA app | Sí, la app de cada tienda se ejecuta en un prefijo de Wine | Sí |
-| Emulación | Emuladores detectados, carpetas de ROMs escaneadas, estados guardados | Runners para muchos emuladores y motores |
-| Wine y Proton | Sí, con un Gestor de Wine | Sí, Proton-GE con umu es el predeterminado |
-| Tiempo de juego | Sí, con estadísticas, un diario y un resumen del año | Sí, con un editor de tiempo de juego |
+| Epic, GOG, Amazon | Sí, con legendary, gogdl y nile | Sí |
+| Battle.net, EA app | Sí, con Wine en Linux | Sí |
+| Emulación | Emuladores detectados, escaneo de ROMs, estados guardados | Runners para muchos emuladores y motores |
+| Wine y Proton | Sí, con un gestor de Wine | Sí, GE-Proton con umu por defecto |
+| Tiempo de juego | Estadísticas, diario, resumen del año | Sí, con un editor de tiempo de juego |
+| Guardados en la nube | Epic y GOG, en beta | — |
 | Cuenta en línea | No hace falta | Cuenta opcional de lutris.net |
-| Importar desde el otro launcher | Sí | No aplica |
+| Importar desde el otro lanzador | Sí, en Linux | No aplica |
 
-La columna de Lutris proviene de [lutris.net](https://lutris.net), el [repositorio de Lutris](https://github.com/lutris/lutris) y sus [notas de versión](https://github.com/lutris/lutris/releases).
+La columna de Lutris sale de [lutris.net](https://lutris.net), el [repositorio de Lutris](https://github.com/lutris/lutris) y sus [notas de versión](https://github.com/lutris/lutris/releases), actualizados a noviembre de 2026. — = no aparece en el README, el sitio web ni las notas de versión de Lutris.
 
-## Qué tienen en común
+## ¿Qué tienen en común Heronite y Lutris?
 
-Los dos son gratuitos y de código abierto bajo la GPL-3.0. Los dos ejecutan juegos de Windows con Wine o Proton. Los dos se conectan a varias tiendas, registran el tiempo de juego y ejecutan emuladores, así que un jugador de Linux puede usar cualquiera de los dos como puerta de entrada a toda su biblioteca.
+Los dos son lanzadores gratuitos y de código abierto (GPL-3.0). Los dos ejecutan juegos de Windows con Wine o Proton, se conectan a varias tiendas, registran el tiempo de juego y ejecutan emuladores.
 
-## Scripts de instalación y runners: el gran punto fuerte de Lutris
+## ¿Cuál deberías elegir?
 
-Aquí Lutris es difícil de superar. Un instalador de Lutris es un script, escrito en YAML, que descarga los archivos de un juego, lo configura y guarda una configuración base. Los scripts se publican en lutris.net, y puedes ejecutar uno desde la línea de comandos con un enlace `lutris:`. Para un juego antiguo o uno que no viene de las tiendas, un buen script puede ahorrarte una tarde.
+### Elige Lutris si…
 
-Lutris también se describe como una forma de combinar emuladores, reimplementaciones de motores y capas de compatibilidad. Su sitio nombra Wine, MAME, Dolphin, RetroArch y ScummVM, «y muchos más», y las versiones recientes añadieron runners como DuckStation, Vita3K y Azahar.
+- **Dependes de los scripts de instalación de la comunidad.** Los instaladores de Lutris son scripts YAML en lutris.net, y un enlace `lutris:` ejecuta uno desde la línea de comandos.
+- **Quieres un runner para un sistema antiguo o un motor.** El sitio de Lutris nombra Wine, MAME, Dolphin, RetroArch y ScummVM, «y muchos más».
+- **Te gusta tener un solo front end para muchos runners.** Cada runner tiene sus propios ajustes.
+- **Quieres sincronizar tu biblioteca con una cuenta.** Lutris ofrece una cuenta opcional de lutris.net.
 
-Heronite no tiene scripts de instalación. Admite una lista fija de [emuladores](/es/features/emulation/) (RetroArch con muchos cores, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, shadPS4, Cemu, mGBA, MAME, ScummVM y más, además de una opción personalizada para cualquier otro), y los juegos de Windows se ejecutan con Wine o Proton. Si quieres una cobertura amplia de sistemas y motores poco comunes, Lutris ofrece más.
+### Elige Heronite si…
 
-## En qué se diferencia Heronite
-
-### Primero las tiendas
-
-Heronite parte de las tiendas. Lee tus bibliotecas de Steam sin iniciar sesión. Inicia sesión en Epic Games, GOG y Amazon Games en la página **Tiendas** y las bibliotecas completas se unen a la Colección, estén instaladas o no, con una sola cola de descargas para instalaciones, actualizaciones y reparaciones. En Linux, Battle.net, EA app, Ubisoft Connect y Rockstar Games se ejecutan cada uno en su propio prefijo de Wine, y sus juegos aparecen en la misma lista. Mira [Tiendas y launchers](/es/features/stores/).
-
-### Una Colección, organizada a tu manera
-
-Los juegos de todas las fuentes están en una sola Colección que agrupas por estado, tienda, género, serie o año, y guardas como vistas, por ejemplo Jugando ahora o Backlog. La búsqueda perdona los errores de escritura, y `Ctrl+K` abre una paleta de comandos. Puedes editar muchos juegos a la vez.
+- **Juegas sobre todo desde tiendas.** Inicia sesión una vez en Epic Games, GOG y Amazon Games, y aparecen todos tus juegos de esas tiendas, instalados o no ([tiendas](/es/features/stores/)).
+- **Quieres Wine o Proton configurado por juego.** Elige una versión, un prefijo de Wine (una carpeta que funciona como un Windows solo para ese juego) y opciones como DXVK o gamescope ([Wine y Proton](/es/features/wine-and-proton/)).
+- **Quieres una app nativa en Rust.** Sin navegador incluido, y con unos 190 MB de memoria en reposo ([rendimiento](/es/features/performance/)).
+- **Quieres un historial de juego.** Heronite registra cada sesión para las [estadísticas](/es/features/play-time-tracking/), un diario y un resumen del año.
+- **Juegas en una TV o con un mando.** El [modo consola](/es/features/console-mode/) tiene ocho diseños y siete temas que puedes editar y compartir.
+- **Quieres el mismo lanzador en Windows.** **Ajustes → Nube** mantiene una sola biblioteca en los dos sistemas de un arranque dual ([partidas guardadas y copias](/es/features/saves-and-backups/)).
 
 ![La Colección de Heronite con juegos agrupados en Jugando y En curso, y un juego abierto con sus detalles y la línea de tiempo de juego.](../../../assets/screenshots/collection.webp)
 
-*La Colección: juegos agrupados con su tiempo de juego, y una línea de tiempo de cada sesión.*
+*La Colección: juegos agrupados, tiempo de juego y una línea de tiempo de sesiones.*
 
-### Wine y Proton, gestionados por juego
+## ¿Cómo cambio de Lutris a Heronite?
 
-Heronite define Wine o Proton para cada juego, con una versión y un prefijo que eliges. Las opciones incluyen DXVK, gamescope, un límite de FPS y Winetricks. El [Gestor de Wine](/es/features/wine-and-proton/) descarga Proton-CachyOS, GE-Proton y otras versiones, y también encuentra los runners de Wine que Lutris ya instaló.
+En Linux, Heronite importa los juegos de la biblioteca de Lutris. Solo lee los archivos de Lutris, así que Lutris sigue funcionando como antes.
 
-### Una app nativa y ligera con historial de juego
+1. **[Instala Heronite](/es/docs/installation/) e inícialo.**
+2. **Activa la importación de Lutris.** En **Ajustes → Otros launchers**, activa **Importar sus juegos** en Lutris. Sus juegos instalados aparecen con sus carátulas y su tiempo de juego, y se mantienen sincronizados con la instalación normal de Lutris o con su Flatpak.
+3. **Inicia sesión en tus tiendas.** Abre **Tiendas** (<kbd>Ctrl</kbd> <kbd>4</kbd>) e inicia sesión en Epic Games, GOG y Amazon Games.
 
-Heronite es un único proceso de Rust sin navegador dentro. Usa unos 190 MB de memoria en reposo (unos 95 MB cuando está cerrado en la bandeja), alrededor de un 0,1 % de CPU, y muestra la biblioteca en unos 215 ms. Cada sesión queda registrada, así que obtienes [estadísticas](/es/features/play-time-tracking/), un diario, una meta de backlog y un resumen del año. También hay un [Modo consola](/es/features/console-mode/) para mandos y televisores.
+Conviene saber:
 
-### También en Windows
+- Lutris sigue iniciando los juegos que importó Heronite, con los ajustes que les diste allí.
+- Heronite se salta los juegos de Steam que lista Lutris y usa su propia importación de Steam, así que nada aparece dos veces.
+- Heronite importa los juegos, no los scripts de instalación que los configuraron.
+- El [gestor de Wine](/es/features/wine-and-proton/) encuentra los runners de Wine que Lutris ya instaló.
 
-Lutris solo funciona en Linux. Heronite también funciona en Windows, con Steam, Epic, GOG y Amazon, así que los jugadores con arranque dual pueden usar un solo launcher en ambos.
-
-### Partidas guardadas y copias de seguridad
-
-Heronite puede hacer una copia de las partidas guardadas de un juego después de cada sesión cuando la herramienta opcional Ludusavi está instalada, y las restauras desde la página del juego. También puede hacer una copia de toda tu Colección de forma programada: tus juegos, sesiones, estados, diario y ajustes de cada juego, y opcionalmente tus ajustes, imágenes e inicios de sesión de tiendas. Lee más en [Partidas guardadas y copias de seguridad](/es/features/saves-and-backups/).
-
-## Heronite, Heroic y Lutris
-
-La gente suele preguntar por Heroic vs Lutris. El README de Heroic lista Epic, GOG y Amazon como sus tiendas. Lutris cubre más, con scripts de instalación y muchos runners. Heronite usa las mismas herramientas de tiendas que Heroic y añade Steam y emuladores en una sola biblioteca, y puede importar juegos de ambos. Mira [Heronite vs Heroic](/es/compare/heroic/) para esa comparación.
-
-## Cuándo elegir Lutris
-
-- Dependes de los scripts de instalación de la comunidad para configurar los juegos.
-- Quieres un runner para un sistema antiguo o un motor que Heronite no admite.
-- Te gusta un front end para muchos runners distintos, cada uno con sus propios ajustes.
-- Quieres una cuenta opcional de lutris.net para sincronizar tu biblioteca.
-- Tu configuración de Lutris ya te funciona bien.
-
-## Cuándo elegir Heronite
-
-- Juegas sobre todo desde Steam, Epic, GOG, Amazon u otros clientes de tiendas.
-- Quieres juegos de tiendas, emuladores y tus propias carpetas en una sola Colección.
-- Quieres una app ligera, sin navegador incluido.
-- Quieres estadísticas de juego, un diario y una meta de backlog.
-- Quieres el mismo launcher en Linux y Windows.
-
-## Cambiar de Lutris a Heronite
-
-Puedes probar Heronite sin perder nada. En Linux, Heronite lee los juegos de la biblioteca de Lutris y los trae a la Colección. Funciona con la instalación normal de Lutris y con su Flatpak, y los mantiene sincronizados. Heronite solo lee los archivos de Lutris. Nunca escribe en ellos, así que Lutris sigue funcionando como antes.
-
-Algunas cosas que conviene saber:
-
-- Los juegos de Steam que lista Lutris se dejan a la importación de Steam de Heronite, así que nada aparece dos veces.
-- Heronite usa los metadatos de Lutris para las portadas y los detalles, y encuentra los runners de Wine que instaló Lutris.
-- Los scripts de instalación no pasan. Heronite importa los juegos de la biblioteca de Lutris, no los scripts que los instalaron. Para traer tus bibliotecas de Epic, GOG y Amazon, inicia sesión en la página Tiendas.
-
-> **Nota.** La importación de Lutris de Heronite es solo de la versión para Linux.
-
-## Pruébalo
-
-Heronite es gratuito, sin cuenta, anuncios ni telemetría. [Descárgalo](/es/download/), luego lee [Primeros pasos](/es/docs/getting-started/) y cómo funcionan [Wine y Proton](/es/docs/wine-and-proton/) en Heronite.
+**Siguiente:** [descarga Heronite](/es/download/) y lee [Primeros pasos](/es/docs/getting-started/).

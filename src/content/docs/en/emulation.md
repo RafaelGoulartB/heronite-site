@@ -1,13 +1,13 @@
 ---
-title: "Emulators and ROMs"
+title: "Emulators and ROMs: supported systems, folders"
 navLabel: "Emulation"
-description: "Supported emulators, default RetroArch cores, how to lay out your ROM folders, multi-disc games, save states and RetroAchievements in Heronite."
+description: "Emulators and ROMs in Heronite: supported emulators, default RetroArch cores, ROM folder layout, multi-disc games and RetroAchievements."
 section: Guides
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-Heronite detects the emulators you have installed, scans your ROM folders, and adds each game to the Collection with its art. Install the emulators yourself (from your distribution, Flathub, or their websites); Heronite finds them on `PATH`, as Flatpaks, and as RetroArch cores.
+Heronite adds your ROMs to the library with their art: it detects installed emulators and scans your ROM folders. Install the emulators first, from your distribution, Flathub, or their websites. Heronite finds them on `PATH`, as Flatpaks, and as RetroArch cores.
 
 ## Supported emulators
 
@@ -57,7 +57,7 @@ Heronite uses these cores by default when RetroArch runs a system.
 | Arcade | fbneo |
 | MAME | mame |
 
-Install cores from RetroArch's own Online Updater. Heronite looks for them in RetroArch's cores folder (`~/.config/retroarch/cores` or `%APPDATA%\RetroArch\cores`), the Flatpak, and the system libretro folders.
+Install cores from RetroArch's Online Updater. Heronite looks in RetroArch's cores folder (`~/.config/retroarch/cores` or `%APPDATA%\RetroArch\cores`), the Flatpak, and the system libretro folders.
 
 ## ROM folders
 
@@ -70,17 +70,21 @@ ROMs/
 └── gba/
 ```
 
-On the first run, Heronite scans these folders if they exist:
+On the first start, Heronite scans these folders if they exist:
 
 - **Linux** (in your home folder): `ROMs`, `Roms`, `roms`, `Emulation/roms`, `Games/ROMs`, `Games/Emulation/roms`, `retrodeck/roms`, `RetroDECK/roms`; and `Emulation/roms`, `roms`, `retrodeck/roms` on other disks.
 - **Windows:** `ROMs`, `Emulation\roms`, `Games\ROMs`, `Documents\ROMs` in your user folder; and `Emulation\roms`, `ROMs`, `Games\ROMs`, `RetroArch-Win64\roms` at the top of each drive.
 
-Add more folders on the **Emulators** page (<kbd>Ctrl</kbd> <kbd>5</kbd>). Scans skip `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media`, and `manuals` folders. Multi-disc games are read from `.m3u`, `.cue`, and `.gdi` files, so each one shows up once.
+Add more folders on the **Emulators** page (<kbd>Ctrl</kbd> <kbd>5</kbd>). Scans skip `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media`, and `manuals` folders. Heronite reads multi-disc games from `.m3u`, `.cue`, and `.gdi` files, so each one shows up once.
 
-## Save states
+## Continue a game from a save state
 
-A game's page lets you continue from a save state.
+1. Press **Play** on the game.
+2. In **How do you want to play?**, choose a save state.
+3. Choose **Continue**.
 
-## Achievements
+Heronite asks only when the emulator has save states for the game. To boot normally, choose **Start from the beginning**; in-game saves on memory cards are kept.
 
-Connect a [RetroAchievements](https://retroachievements.org) account in Settings to see your achievements for emulated games. See [Metadata and Art](/docs/metadata-and-art/).
+## Show RetroAchievements for emulated games
+
+Connect your [RetroAchievements](https://retroachievements.org) account in **Settings → Achievements** to see your achievements for emulated games.

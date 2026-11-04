@@ -1,80 +1,108 @@
 ---
-title: "Solución de problemas de Heronite y tus juegos"
+title: "Solución de problemas de Heronite: inicio, tiendas y juegos"
 navLabel: "Solución de problemas"
-description: "Soluciona problemas de Heronite y de tus juegos en Linux: dónde están los logs, cómo reportar un error, fallos de inicio de sesión y errores de Wine y Proton."
+description: "Solución de problemas de Heronite: la app no inicia, el inicio de sesión falla, no se actualiza o un juego no abre en Linux; logs y cómo reportar."
 section: Start
 order: 4
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## Logs
+## "Windows protegió su PC" al iniciar Heronite
 
-Abre **Ajustes → Logs** para leerlos en Heronite, o búscalos en la carpeta de datos (consulta [Archivos y carpetas](/es/docs/files-and-folders/)):
+Elige **Más información** y luego **Ejecutar de todas formas**. Los archivos de Windows aún no tienen firma de código.
+
+## Heronite no inicia o muestra una ventana negra
+
+En Linux, instala el controlador de Vulkan de tu GPU y comprueba que `vulkaninfo` muestra la GPU. Heronite usa Vulkan para mostrar la pantalla. Para AMD o Intel, instala `vulkan-radeon` o `vulkan-intel` en Arch, o `mesa-vulkan-drivers` en Debian y Ubuntu; para NVIDIA, el controlador de NVIDIA.
+
+### "Heronite ya está en ejecución pero no responde"
+
+Cierra el Heronite bloqueado desde el administrador de tareas o con `pkill heronite-rs`, y vuelve a abrirlo.
+
+## Heronite no se actualiza
+
+### El AppImage no se actualiza
+
+Mueve el AppImage a `~/Applications` o a otra carpeta dentro de tu carpeta personal. Se reemplaza a sí mismo, así que su carpeta debe tener permiso de escritura.
+
+### "Límite de solicitudes de GitHub alcanzado"
+
+Vuelve a buscar actualizaciones más tarde. Tu red hizo demasiadas peticiones a GitHub.
+
+## Falla un inicio de sesión o una descarga de una tienda
+
+### La ventana de inicio de sesión no se abre
+
+Usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé.
+
+Para arreglar la propia ventana de inicio de sesión, instala:
+
+- Linux: WebKitGTK 4.1 (`libwebkit2gtk-4.1` o `webkit2gtk-4.1`)
+- Windows: [Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/)
+
+### Las descargas de GOG fallan en Linux
+
+Instala `python3`. gogdl, la herramienta de descarga de GOG, lo necesita.
+
+## Un juego no abre (Linux)
+
+Cuando un juego se cierra en los 30 segundos siguientes a abrirse y Heronite conoce la causa, aparece el diálogo **Problema al abrir**. Su primer botón aplica la solución y vuelve a abrir el juego. Para cualquier otro cierre, haz clic derecho en el juego y elige **Solucionar problemas**.
+
+| Heronite dice | Solución |
+|---|---|
+| "Falta Visual C++ 2015-2022" (u otro runtime) | Haz clic en **Instalar … y jugar**: Heronite lo instala con Winetricks, solo en el prefijo de este juego |
+| "Falta .NET Framework" | Haz clic en **Instalar .NET Framework 4.8 y jugar** (tarda unos minutos) |
+| "DirectX 12 necesita VKD3D-Proton" | Haz clic en **Activar VKD3D-Proton y jugar**, o actívalo en **Ajustes del juego → Compatibilidad** |
+| "Direct3D falló sin DXVK" | Haz clic en **Activar DXVK y jugar**, o actívalo en **Ajustes del juego → Compatibilidad** |
+| "Vulkan no pudo iniciarse" | Haz clic en **Copiar el comando** y ejecútalo en una terminal. Instala el controlador de Vulkan, al que a menudo le falta la parte de 32 bits (`lib32-vulkan-radeon`, `mesa-vulkan-drivers:i386`, …) |
+| "Wine se quedó sin archivos abiertos" | Haz clic en **Usar fsync y jugar**, o elige Fsync en lugar de Esync en **Ajustes del juego → Compatibilidad** |
+| "El límite de mapas de memoria es bajo" | Haz clic en **Subirlo y jugar** y luego escribe la contraseña de administrador ([detalles](#el-límite-de-mapas-de-memoria-es-bajo-vmmax_map_count)) |
+| "Otro Wine sigue en marcha en el prefijo" | Haz clic en **Cerrarlo y jugar**, o cierra el otro juego |
+| "Easy Anti-Cheat necesita su runtime" | Haz clic en **Activar el runtime anti-cheat y jugar** |
+| "Easy Anti-Cheat bloquea a los jugadores de Linux" | Ninguna: el desarrollador no permite Linux ([Are We Anti-Cheat Yet?](https://areweanticheatyet.com) lo marca como denegado) |
+
+### El límite de mapas de memoria es bajo (vm.max_map_count)
+
+Muchos juegos, y Easy Anti-Cheat, necesitan `vm.max_map_count` en 1048576, el valor de SteamOS, Fedora, Ubuntu y Arch. **Subirlo y jugar** lo cambia ahora y lo mantiene tras reiniciar. Para cambiarlo tú:
+
+```bash
+echo 'vm.max_map_count = 1048576' | sudo tee /etc/sysctl.d/80-heronite-max-map-count.conf
+sudo sysctl -w vm.max_map_count=1048576
+```
+
+### El juego sigue cerrándose
+
+- Elige otra **Versión** en **Wine / Proton**, en **Ajustes del juego → Compatibilidad**. GE-Proton o Proton-CachyOS suelen tener las correcciones antes.
+- Dale al juego un prefijo de Wine nuevo (una carpeta que funciona como un Windows solo para ese juego). En **Ajustes del juego → Compatibilidad**, elige **Nuevo prefijo para este juego** en el menú **Prefijo**. El prefijo nuevo empieza vacío, así que haz antes una copia de seguridad de tus partidas.
+- Lee la página del juego en [ProtonDB](https://www.protondb.com), donde los jugadores comparten lo que les funcionó.
+
+## El overlay dentro del juego no funciona (Linux)
+
+- El botón Guide abre Steam: desactiva **Guide Button Focuses Steam** en **Steam → Configuración → Mando**.
+- El overlay nunca aparece: marca **Activar el overlay** en **Ajustes → Overlay** (viene desactivado por defecto). Necesita Wayland con layer-shell (KDE Plasma, Hyprland, Sway), así que no funciona en GNOME ni en X11.
+
+## Busca los logs
+
+Léelos en **Ajustes → Logs**, o abre `logs/` en la [carpeta de datos](/es/docs/files-and-folders/):
 
 | Log | Dónde |
 |---|---|
-| Heronite | `logs/launcher/heronite-rs-<date>.log` (uno por día, se conservan los últimos 7) |
-| Un juego | `logs/games/<game>_<store>/launch.log` (también `install.log` y otros) |
-| Una herramienta de tienda | `logs/runners/<tool>.log` |
+| El propio Heronite | `logs/launcher/heronite-rs-<fecha>.log` (uno por día, se conservan los últimos 7) |
+| Un juego | `logs/games/<juego>_<tienda>/launch.log` (también `install.log` y otros) |
+| Una herramienta de tienda | `logs/runners/<herramienta>.log` |
 
 Para obtener más detalle:
 
-- inicia Heronite con `RUST_LOG=debug`,
-- activa **Logs detallados** en los ajustes de un juego (Avanzado). En Linux, esto también activa más salida de Wine.
+- Inicia Heronite con `RUST_LOG=debug`
+- Activa **Logs detallados** en **Ajustes del juego → Avanzado** (en Linux, también añade la salida de Wine)
 
-Si los logs están desactivados en Ajustes, vuelve a activarlos antes de reportar un problema.
+Si **Desactivar logs** está marcado en **Ajustes → Avanzado**, desmárcalo antes de reportar un problema.
 
-## Reportar un error
+## Reporta un error
 
 [Abre un issue](https://github.com/RafaelGoulartB/Heronite/issues/new/choose) con:
 
-- tu sistema (distribución o versión de Windows, escritorio, GPU y controlador),
-- cómo instalaste Heronite (AppImage, paquete, instalador, portable) y su versión (Ajustes → Acerca de),
-- qué hiciste, qué pasó y qué esperabas,
-- los logs anteriores.
-
-## La aplicación
-
-**Windows muestra "Windows protegió su PC".** Los archivos todavía no están firmados con un certificado de código. Elige **Más información** y luego **Ejecutar de todas formas**.
-
-**Linux: la ventana no se abre o se ve negra.** Heronite dibuja con Vulkan. Comprueba que `vulkaninfo` funciona y muestra tu GPU, y que está instalado el controlador de Vulkan correspondiente (`vulkan-radeon` o `vulkan-intel` de Mesa, o el controlador de NVIDIA).
-
-**"Heronite is already running but is not responding".** Hay un Heronite antiguo bloqueado. Ciérralo desde el administrador de tareas (o con `pkill heronite-rs`) y vuelve a iniciarlo.
-
-**El AppImage no se actualiza.** Se reemplaza a sí mismo, así que su carpeta debe tener permiso de escritura. Muévelo a `~/Applications` o a otra carpeta de tu carpeta personal.
-
-**"GitHub rate limit reached".** Se hicieron demasiadas búsquedas de actualizaciones desde tu red. Inténtalo de nuevo más tarde.
-
-## Inicios de sesión en tiendas
-
-**La ventana de inicio de sesión no se abre.** Usa el **método del navegador** de esa misma página: inicia sesión en tu navegador y pega la dirección o el código.
-
-- Linux: la ventana de inicio de sesión necesita WebKitGTK 4.1 (`libwebkit2gtk-4.1` o `webkit2gtk-4.1`).
-- Windows: necesita Microsoft Edge WebView2 Runtime. [Instálalo desde Microsoft](https://developer.microsoft.com/microsoft-edge/webview2/).
-
-**Las descargas de GOG fallan en Linux.** gogdl necesita `python3`.
-
-## Juegos (Linux)
-
-Cuando un juego no arranca, Heronite lee su log de inicio y muestra qué salió mal, con una solución cuando conoce una. Casos comunes:
-
-| Problema | Solución |
-|---|---|
-| Falta una DLL o .NET | Instálalo con Winetricks (Heronite sugiere cuál) |
-| Juego con DirectX 12 | Activa VKD3D-Proton |
-| Falló Direct3D | Activa DXVK |
-| "Vulkan could not start" | Suele faltar el controlador de Vulkan de 32 bits (`lib32-vulkan-radeon`, `mesa-vulkan-drivers:i386`, …) |
-| Demasiados archivos abiertos | Usa Fsync en lugar de Esync |
-| Cierre al iniciar en algunos juegos recientes | Aumenta `vm.max_map_count` (muchas distribuciones ya lo hacen) |
-| Se está ejecutando otro `wineserver` | Cierra el otro juego o ejecuta `wineserver -k` en ese prefijo |
-| Anticheat | Consulta el estado del juego en [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) |
-
-Cosas que merece la pena probar con un juego que da problemas:
-
-- otra versión de Proton (Proton-GE o Proton-CachyOS suelen tener las correcciones antes),
-- un prefijo nuevo,
-- la página del juego en [ProtonDB](https://www.protondb.com), donde los jugadores comparten lo que les funcionó.
-
-## El overlay dentro del juego (Linux)
-
-Necesita una sesión de Wayland cuyo compositor admita layer-shell (KDE Plasma, Hyprland, Sway y otros). No funciona en GNOME ni en X11. Si el botón Guide abre Steam en su lugar, desactiva "Guide Button Focuses Steam" en los ajustes del mando de Steam.
+- Tu sistema: distribución o versión de Windows, escritorio, GPU y controlador
+- Cómo instalaste Heronite (AppImage, paquete, instalador, portable) y su versión, en **Ajustes → Acerca de**
+- Qué hiciste, qué pasó y qué esperabas
+- Los logs de arriba

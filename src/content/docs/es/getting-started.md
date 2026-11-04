@@ -1,37 +1,48 @@
 ---
-title: "Primeros pasos con Heronite"
+title: "Primeros pasos: configura tu biblioteca en Heronite"
 navLabel: "Primeros pasos"
-description: "Tu primer inicio con Heronite: inicia sesión en tus tiendas, añade otros juegos, aprende a moverte por la Colección y empieza a jugar sin complicaciones."
+description: "Configura tu biblioteca de juegos en Linux o Windows: inicia sesión en Epic, GOG y Amazon, añade otros juegos, aprende los atajos, organiza y juega."
 section: Start
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## El primer inicio
+Heronite crea tu biblioteca de juegos con Steam, tus emuladores y las tiendas en las que inicias sesión. Primero [instala Heronite](/es/docs/installation/), en Linux o Windows.
 
-En el primer inicio, con la Colección vacía, Heronite busca por sí solo:
+## Qué encuentra Heronite en el primer inicio
 
-- **Steam:** entran tus juegos instalados de Steam, sin necesidad de iniciar sesión.
-- **Emuladores y ROMs:** se detectan los emuladores instalados y se escanean las carpetas de ROMs habituales (como `~/ROMs` o `~/Emulation/roms`). Consulta [Emulación](/es/docs/emulation/).
+Si tu biblioteca está vacía, Heronite añade:
 
-## Añade tus tiendas
+- **Steam:** tus juegos instalados de Steam, sin iniciar sesión.
+- **Emuladores y ROMs:** los emuladores que detecta y las ROMs de carpetas habituales como `~/ROMs` o `~/Emulation/roms`. Consulta [Emulación](/es/docs/emulation/).
 
-Abre **Tiendas** (<kbd>Ctrl</kbd> <kbd>4</kbd>) e inicia sesión en Epic Games, GOG o Amazon Games. Se abre una pequeña ventana de inicio de sesión con la página de la propia tienda. Si no se puede abrir, usa el método del navegador de esa misma página: inicia sesión en tu navegador y pega la dirección o el código que te dé.
+En Linux, la biblioteca vacía también muestra **Importar de otro launcher** cuando encuentra juegos en Heroic, Lutris, Bottles o Faugus. Elige ahí un launcher para importar sus juegos y mantenerlos sincronizados.
 
-Más en [Tiendas y launchers](/es/docs/stores-and-launchers/).
+En Windows, Heronite encuentra los juegos de Microsoft Store y PC Game Pass instalados con la app de Xbox, sin iniciar sesión.
 
-## Añade otros juegos
+## Inicia sesión en Epic Games, GOG o Amazon Games
+
+1. Abre **Tiendas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Elige **Epic Games**, **GOG** o **Amazon Games**.
+3. Haz clic en **Iniciar sesión**.
+4. Inicia sesión en la página de la tienda, en la ventana que se abre.
+
+Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé. Consulta [Tiendas y launchers](/es/docs/stores-and-launchers/).
+
+En Windows, Heronite también detecta los juegos instalados con el Epic Games Launcher, GOG Galaxy o la app de Amazon Games, sin volver a descargarlos.
+
+## Añade otros juegos a tu biblioteca
 
 Pulsa <kbd>Ctrl</kbd> <kbd>N</kbd> (o **Añadir un juego**) para añadir:
 
-- un programa de Windows (`.exe`), que en Linux se ejecuta con Wine o Proton,
-- un programa nativo de Linux, un AppImage o un script de inicio,
-- un juego de navegador (una dirección web),
-- una ROM, o una carpeta entera de ROMs.
+- Un programa de Windows (`.exe`), que en Linux se ejecuta con Wine o Proton
+- Un programa nativo de Linux, un AppImage o un script de inicio
+- Un juego de navegador (una dirección web)
+- Una ROM, o una carpeta entera de ROMs
 
-También puedes indicar una carpeta y añadir de una vez todos los juegos que contenga.
+Para añadir de una vez todos los juegos de una carpeta, elige **Añadir desde una carpeta** en el menú ☰.
 
-## Cómo moverte por Heronite
+## Abre cualquier página con un atajo
 
 | Página | Atajo |
 |---|---|
@@ -43,19 +54,21 @@ También puedes indicar una carpeta y añadir de una vez todos los juegos que co
 | Estadísticas | <kbd>Ctrl</kbd> <kbd>6</kbd> |
 | Ajustes | <kbd>Ctrl</kbd> <kbd>,</kbd> |
 
-La **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre cualquier página, ejecuta cualquier acción o inicia un juego si escribes parte de su nombre. Pulsa <kbd>?</kbd> para ver todos los atajos. Consulta [Atajos de teclado](/es/docs/keyboard-shortcuts/).
+La **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre cualquier página, ejecuta cualquier acción o inicia un juego si escribes parte de su nombre. Pulsa <kbd>?</kbd> para ver todos los atajos, o consulta los [atajos de teclado](/es/docs/keyboard-shortcuts/).
 
-## Organiza la Colección
+## Organiza tu biblioteca de juegos
 
-- Cambia entre **Foco** (una lista con un panel de detalles) y una **cuadrícula** de portadas.
-- **Agrupa** por estado, tienda, género, serie, año y más.
+- Cambia entre **Foco** (una lista con un panel de detalles) y una **Cuadrícula** de portadas.
+- Usa **Grupo** para agrupar por estado, tienda, género, serie, año y más.
 - Guarda **vistas** con tus filtros y orden (Jugando ahora, Backlog, Finalizado, Favoritos).
-- Selecciona varios juegos (<kbd>Espacio</kbd>, <kbd>Shift</kbd> + flechas, <kbd>Ctrl</kbd> <kbd>A</kbd>) y pulsa <kbd>F3</kbd> para cambiarlos todos a la vez. <kbd>Ctrl</kbd> <kbd>Z</kbd> lo deshace.
+- Selecciona varios juegos (<kbd>Espacio</kbd>, <kbd>Shift</kbd> con las flechas, <kbd>Ctrl</kbd> <kbd>A</kbd>) y pulsa <kbd>F3</kbd> para editar a la vez su serie y sus etiquetas. <kbd>Ctrl</kbd> <kbd>Z</kbd> lo deshace.
 
-## Juega
+## Juega y haz capturas de pantalla
 
-Pulsa <kbd>Enter</kbd> sobre un juego para jugarlo (o instalarlo). Heronite registra cada sesión, asocia las capturas de pantalla al juego y lo muestra todo en **Estadísticas**. Haz una captura mientras juegas con <kbd>F10</kbd>.
+1. Selecciona un juego y pulsa <kbd>Enter</kbd>. Si no está instalado, Heronite lo instala primero.
+2. Pulsa <kbd>F10</kbd> mientras juegas para hacer una captura.
+3. Abre **Estadísticas** (<kbd>Ctrl</kbd> <kbd>6</kbd>) para ver tus sesiones. Heronite registra cada una y asocia tus capturas al juego.
 
-## En el sofá
+## Usa un mando (modo consola)
 
-Activa el [Modo consola](/es/docs/console-mode/) desde la paleta, el menú ☰ o con `--console`. También puede abrirse solo al iniciar o cuando se conecta un mando.
+Activa el [modo consola](/es/docs/console-mode/) desde la paleta de comandos o el menú ☰, o inicia Heronite con `--console`. Para que se abra al iniciar o cuando se conecte un mando, usa **Ajustes → Modo consola**.

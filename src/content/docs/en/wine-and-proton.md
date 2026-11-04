@@ -1,15 +1,15 @@
 ---
-title: "Wine and Proton on Linux"
+title: "Wine and Proton on Linux: run Windows games"
 navLabel: "Wine and Proton"
-description: "Run Windows games on Linux with Heronite: the Wine Manager, Proton builds, prefixes, per-game options like DXVK and gamescope, the sandbox and anti-cheat."
+description: "Run Windows games on Linux with Heronite: Wine Manager, Proton builds, prefixes, per-game options like DXVK and gamescope, sandbox and anti-cheat."
 section: Guides
 order: 3
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-On Linux, Windows games run through Wine or Proton. Heronite picks sensible defaults; every option below can be changed per game in **Game settings → Compatibility**, or for all games in Settings.
+Heronite runs Windows games on Linux through Wine or Proton. Change any option below per game in **Game settings → Compatibility**, or for all games in Settings. When a game won't start, Heronite suggests a fix: see [Troubleshooting](/docs/troubleshooting/#a-game-wont-start-linux).
 
-## Wine Manager
+## Download Proton builds in the Wine Manager
 
 The Wine Manager (<kbd>Ctrl</kbd> <kbd>3</kbd>) downloads and updates these builds:
 
@@ -20,17 +20,17 @@ The Wine Manager (<kbd>Ctrl</kbd> <kbd>3</kbd>) downloads and updates these buil
 - Proton-EM
 - Proton-Sarek
 
-Builds go to Heronite's data folder (`~/.local/share/heronite/tools/proton` and `tools/wine`), or to Steam's `compatibilitytools.d` if you turn that on, so Steam can use them too. Heronite also finds the Proton builds already in your Steam libraries and the Wine runners of Lutris.
+Builds go to Heronite's data folder (`~/.local/share/heronite/tools/proton` and `tools/wine`), or to Steam's `compatibilitytools.d` if you turn that on, so Steam can use them too. Heronite finds Proton builds already in your Steam libraries and the Wine runners of Lutris.
 
-## Prefixes
+## Where games and Wine prefixes are stored
 
-A prefix is the fake Windows folder a game runs in. By default:
+A Wine prefix is a separate Windows folder for a game, with its settings, saves and what Winetricks installs. By default:
 
-- games install to `~/Games/Heronite`,
-- each game gets its own prefix in `~/Games/Heronite/Prefixes`,
-- or several games can share `~/Games/Heronite/Prefixes/shared`.
+- Games install to `~/Games/Heronite`
+- Each game gets its own prefix in `~/Games/Heronite/Prefixes`
+- Several games can share `~/Games/Heronite/Prefixes/shared` instead, but then they can break each other's dependencies
 
-The Wine Manager lists your prefixes, and a game's settings have buttons for Winecfg and Winetricks in its prefix.
+The Wine Manager lists your prefixes. In **Game settings → Compatibility**, the **Prefix** menu picks the game's prefix or makes a **New prefix for this game**. The **Winecfg** and **Winetricks** buttons there work on that prefix.
 
 ## Per-game options
 
@@ -50,12 +50,8 @@ The Wine Manager lists your prefixes, and a game's settings have buttons for Win
 
 ## Sandbox
 
-Run a game you do not trust through [bubblewrap](https://github.com/containers/bubblewrap): no network and no access to your home folder. Let one thing through (like a folder or the network) when the game needs it. Needs `bwrap` installed.
-
-## When a game does not start
-
-Heronite reads the launch log and suggests a fix when it recognises the problem: a missing DLL or .NET, a DirectX 12 game without VKD3D-Proton, a missing 32-bit Vulkan driver, a low `vm.max_map_count`, another `wineserver` still running, or anti-cheat that is not supported. See [Troubleshooting](/docs/troubleshooting/).
+To run a game you do not trust, turn on **Run in a sandbox** in **Game settings → Sandbox**. The game then runs through [bubblewrap](https://github.com/containers/bubblewrap) (`bwrap`, from the `bubblewrap` package), with no network and no access to your home folder. Allow the network or a folder under **Exceptions** when the game needs it.
 
 ## Anti-cheat
 
-The anti-cheat status of a game comes from [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) and is shown in its details. Heronite can provide the EAC and BattlEye runtimes, but a game whose developer does not allow Linux will not run.
+Heronite shows each game's anti-cheat status in its details, from [Are We Anti-Cheat Yet?](https://areweanticheatyet.com). If the game works on Linux, turn on **BattlEye** or **Easy Anti-Cheat** under **Anti-cheat runtimes** in **Game settings → Compatibility**; Heronite downloads it before the next launch. A game whose developer does not allow Linux will not run, whatever the settings.

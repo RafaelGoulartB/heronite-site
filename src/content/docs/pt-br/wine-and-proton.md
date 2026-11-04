@@ -1,15 +1,15 @@
 ---
-title: "Jogar jogos do Windows no Linux com Wine e Proton"
+title: "Wine e Proton no Linux: rode jogos do Windows"
 navLabel: "Wine e Proton"
-description: "Rode jogos do Windows no Linux com o Heronite: Gerenciador do Wine, versões do Proton, prefixos, opções por jogo como DXVK e gamescope, sandbox e anticheat."
+description: "Wine e Proton no Linux com o Heronite para rodar jogos do Windows: Gerenciador do Wine, versões do Proton, prefixos, DXVK, gamescope, sandbox e anti-cheat."
 section: Guides
 order: 3
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-No Linux, os jogos do Windows rodam pelo Wine ou pelo Proton. O Heronite escolhe padrões sensatos; toda opção abaixo pode ser mudada por jogo em **Configurações do jogo → Compatibilidade**, ou para todos os jogos em Configurações.
+O Heronite roda jogos do Windows no Linux pelo Wine ou pelo Proton. Mude qualquer opção abaixo por jogo em **Configurações do jogo → Compatibilidade**, ou para todos os jogos em Configurações. Quando um jogo não abre, o Heronite sugere uma correção: veja [Solução de problemas](/pt-br/docs/troubleshooting/#um-jogo-não-abre-linux).
 
-## Gerenciador do Wine
+## Baixar versões do Proton no Gerenciador do Wine
 
 O Gerenciador do Wine (<kbd>Ctrl</kbd> <kbd>3</kbd>) baixa e atualiza estas versões:
 
@@ -20,17 +20,17 @@ O Gerenciador do Wine (<kbd>Ctrl</kbd> <kbd>3</kbd>) baixa e atualiza estas vers
 - Proton-EM
 - Proton-Sarek
 
-As versões vão para a pasta de dados do Heronite (`~/.local/share/heronite/tools/proton` e `tools/wine`), ou para o `compatibilitytools.d` da Steam se você ativar isso, para que a Steam também possa usá-las. O Heronite também encontra as versões do Proton que já estão nas suas bibliotecas da Steam e os runners do Wine do Lutris.
+As versões vão para a pasta de dados do Heronite (`~/.local/share/heronite/tools/proton` e `tools/wine`), ou para o `compatibilitytools.d` da Steam se você ligar essa opção, para a Steam também poder usar. O Heronite encontra as versões do Proton que já estão nas suas bibliotecas da Steam e os runners do Wine do Lutris.
 
-## Prefixos
+## Onde ficam os jogos e os prefixos Wine
 
-Um prefixo é a pasta de "Windows de mentira" em que o jogo roda. Por padrão:
+Um prefixo Wine é uma pasta que funciona como um Windows só daquele jogo, com as configurações, os saves e o que o Winetricks instala. Por padrão:
 
-- os jogos são instalados em `~/Games/Heronite`,
-- cada jogo recebe o próprio prefixo em `~/Games/Heronite/Prefixes`,
-- ou vários jogos podem compartilhar `~/Games/Heronite/Prefixes/shared`.
+- Os jogos são instalados em `~/Games/Heronite`
+- Cada jogo ganha o próprio prefixo em `~/Games/Heronite/Prefixes`
+- Vários jogos podem dividir `~/Games/Heronite/Prefixes/shared`, mas aí um pode quebrar as dependências do outro
 
-O Gerenciador do Wine lista seus prefixos, e as configurações de um jogo têm botões para o Winecfg e o Winetricks no prefixo dele.
+O Gerenciador do Wine lista seus prefixos. Em **Configurações do jogo → Compatibilidade**, o menu **Prefixo** escolhe o prefixo do jogo ou cria um **Novo prefixo para este jogo**. Os botões **Winecfg** e **Winetricks** ali funcionam nesse prefixo.
 
 ## Opções por jogo
 
@@ -50,12 +50,8 @@ O Gerenciador do Wine lista seus prefixos, e as configurações de um jogo têm 
 
 ## Sandbox
 
-Rode um jogo em que você não confia pelo [bubblewrap](https://github.com/containers/bubblewrap): sem rede e sem acesso à sua pasta pessoal. Libere só uma coisa (como uma pasta ou a rede) quando o jogo precisar. Precisa do `bwrap` instalado.
+Para rodar um jogo em que você não confia, ligue **Rodar em um sandbox** em **Configurações do jogo → Sandbox**. O jogo passa a rodar pelo [bubblewrap](https://github.com/containers/bubblewrap) (`bwrap`, do pacote `bubblewrap`), sem rede e sem acesso à sua pasta pessoal. Libere a rede ou uma pasta em **Exceções** quando o jogo precisar.
 
-## Quando um jogo não inicia
+## Anti-cheat
 
-O Heronite lê o log de inicialização e sugere uma correção quando reconhece o problema: uma DLL ou o .NET faltando, um jogo com DirectX 12 sem o VKD3D-Proton, um driver Vulkan de 32 bits faltando, um `vm.max_map_count` baixo, outro `wineserver` ainda rodando ou um anticheat sem suporte. Veja [Solução de problemas](/pt-br/docs/troubleshooting/).
-
-## Anticheat
-
-O status do anticheat de um jogo vem do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) e aparece nos detalhes dele. O Heronite pode fornecer os runtimes do EAC e do BattlEye, mas um jogo cuja desenvolvedora não permite o Linux não vai rodar.
+O Heronite mostra nos detalhes de cada jogo o status do anti-cheat, vindo do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com). Se o jogo funciona no Linux, ligue **BattlEye** ou **Easy Anti-Cheat** em **Runtimes de anti-cheat**, em **Configurações do jogo → Compatibilidade**; o Heronite baixa o runtime antes de você abrir o jogo de novo. Um jogo cujo desenvolvedor não permite Linux não abre, com nenhuma configuração.

@@ -1,14 +1,15 @@
 ---
-title: "Keyboard shortcuts"
-description: "Every keyboard shortcut in Heronite: pages, the command palette, the Collection, search, settings and while playing."
+title: "Heronite keyboard shortcuts"
+navLabel: "Keyboard shortcuts"
+description: "Every Heronite keyboard shortcut: switching pages, the command palette, the Collection, search, settings, screenshots and the in-game overlay."
 section: Reference
 order: 1
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-Press <kbd>?</kbd> in Heronite to see this list.
+Press <kbd>?</kbd> in Heronite to see every keyboard shortcut.
 
-## Anywhere
+## Shortcuts that work anywhere
 
 | Keys | Action |
 |---|---|
@@ -21,7 +22,7 @@ Press <kbd>?</kbd> in Heronite to see this list.
 | <kbd>?</kbd> | This list |
 | <kbd>Esc</kbd> | Close or go back |
 
-## Collection
+## Collection shortcuts
 
 | Keys | Action |
 |---|---|
@@ -30,12 +31,12 @@ Press <kbd>?</kbd> in Heronite to see this list.
 | Arrows, <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>PgUp</kbd>, <kbd>PgDn</kbd> | Move |
 | <kbd>Enter</kbd> | Play or install |
 | <kbd>Space</kbd> | Select |
-| <kbd>Shift</kbd> + arrows | Select a range |
+| <kbd>Shift</kbd> with the arrow keys | Select a range |
 | <kbd>Ctrl</kbd> <kbd>A</kbd> | Select every game shown |
 | <kbd>F3</kbd> | Edit the game or the selection |
 | <kbd>Ctrl</kbd> <kbd>Z</kbd> | Undo the last change to selected games |
 
-## Search field
+## Search field shortcuts
 
 | Keys | Action |
 |---|---|
@@ -43,7 +44,7 @@ Press <kbd>?</kbd> in Heronite to see this list.
 | <kbd>Enter</kbd> | Play or install the game |
 | <kbd>Esc</kbd> | Clear the search, then leave it |
 
-## Command palette
+## Command palette shortcuts
 
 | Keys | Action |
 |---|---|
@@ -52,7 +53,7 @@ Press <kbd>?</kbd> in Heronite to see this list.
 | <kbd>→</kbd> | A game's actions |
 | <kbd>Tab</kbd> | Only pages, only actions, or only games |
 
-## Settings
+## Settings shortcuts
 
 | Keys | Action |
 |---|---|
@@ -60,12 +61,12 @@ Press <kbd>?</kbd> in Heronite to see this list.
 | <kbd>↑</kbd> <kbd>↓</kbd>, <kbd>Home</kbd>, <kbd>End</kbd> | Move |
 | <kbd>Enter</kbd> or <kbd>Space</kbd> | Change |
 
-## While playing
+## Shortcuts while playing
 
 | Keys | Action |
 |---|---|
-| <kbd>F10</kbd> | Screenshot (can be changed in Settings → Screenshots) |
+| <kbd>F10</kbd> | Screenshot (change it in **Settings → Screenshots**) |
 | <kbd>Super</kbd> <kbd>G</kbd> | In-game overlay (Linux, beta) |
 | <kbd>Shift</kbd> <kbd>F3</kbd> | Epic's overlay, in games that use it |
 
-For console mode and controller buttons, see [Console Mode](/docs/console-mode/).
+For console mode and controller buttons, see [Console mode](/docs/console-mode/).

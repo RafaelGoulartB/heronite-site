@@ -1,37 +1,48 @@
 ---
-title: "Getting started with Heronite"
+title: "Getting started: set up your game library in Heronite"
 navLabel: "Getting started"
-description: "Your first run with Heronite: log in to your stores, add other games, find your way around the Collection and start playing."
+description: "Set up your game library on Linux or Windows: log in to Epic, GOG and Amazon, add other games, learn the shortcuts, organize and play."
 section: Start
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## The first run
+Heronite builds your game library from Steam, your emulators, and the stores you log in to. [Install Heronite](/docs/installation/) first, on Linux or Windows.
 
-On the first start, with an empty Collection, Heronite looks around by itself:
+## What Heronite finds on first start
 
-- **Steam:** your installed Steam games come in, no login needed.
-- **Emulators and ROMs:** installed emulators are detected, and common ROM folders (like `~/ROMs` or `~/Emulation/roms`) are scanned. See [Emulation](/docs/emulation/).
+If your library is empty, Heronite adds:
 
-## Add your stores
+- **Steam:** your installed Steam games, no login needed.
+- **Emulators and ROMs:** the emulators it detects, and the ROMs in common folders like `~/ROMs` or `~/Emulation/roms`. See [Emulation](/docs/emulation/).
 
-Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>) and log in to Epic Games, GOG, or Amazon Games. A small login window opens with the store's own page. If it cannot open, use the browser method on the same page: log in in your browser and paste the address or code it gives you.
+On Linux, the empty library also shows **Bring in from another launcher** when it finds games in Heroic, Lutris, Bottles or Faugus. Choose a launcher there to import its games and keep them in sync.
 
-More in [Stores and Launchers](/docs/stores-and-launchers/).
+On Windows, Heronite finds Microsoft Store and PC Game Pass games installed by the Xbox app, with no login.
 
-## Add other games
+## Log in to Epic Games, GOG, or Amazon Games
+
+1. Open **Stores** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Choose **Epic Games**, **GOG** or **Amazon Games**.
+3. Press **Log in**.
+4. Log in on the store's page in the window that opens.
+
+If the login window does not open, use **Or log in with your browser** on the same page and paste the code it gives you. See [Stores and launchers](/docs/stores-and-launchers/).
+
+On Windows, Heronite also picks up games installed by the Epic Games Launcher, GOG Galaxy or the Amazon Games app, without downloading them again.
+
+## Add other games to your library
 
 Press <kbd>Ctrl</kbd> <kbd>N</kbd> (or **Add a game**) to add:
 
-- a Windows program (`.exe`), which on Linux runs through Wine or Proton,
-- a native Linux program, AppImage, or start script,
-- a browser game (a web address),
-- a ROM, or a whole ROM folder.
+- A Windows program (`.exe`), which runs through Wine or Proton on Linux
+- A native Linux program, AppImage or start script
+- A browser game (a web address)
+- A ROM, or a whole ROM folder
 
-You can also point at a folder and add every game found in it at once.
+To add every game in a folder at once, choose **Add from folder** in the ☰ menu.
 
-## Find your way around
+## Open any page with a shortcut
 
 | Page | Shortcut |
 |---|---|
@@ -43,19 +54,21 @@ You can also point at a folder and add every game found in it at once.
 | Statistics | <kbd>Ctrl</kbd> <kbd>6</kbd> |
 | Settings | <kbd>Ctrl</kbd> <kbd>,</kbd> |
 
-The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any action, or plays a game by typing part of its name. Press <kbd>?</kbd> to see every shortcut. See [Keyboard Shortcuts](/docs/keyboard-shortcuts/).
+The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any action, or plays a game by typing part of its name. Press <kbd>?</kbd> to see every shortcut, or read [Keyboard shortcuts](/docs/keyboard-shortcuts/).
 
-## Organize the Collection
+## Organize your game library
 
 - Switch between **Focus** (a list with a details panel) and a **grid** of covers.
-- **Group** by status, store, genre, series, year, and more.
+- **Group** by status, store, genre, series, year and more.
 - Save **views** with your filters and sorting (Playing now, Backlog, Finished, Favourites).
-- Select several games (<kbd>Space</kbd>, <kbd>Shift</kbd> + arrows, <kbd>Ctrl</kbd> <kbd>A</kbd>) and press <kbd>F3</kbd> to change them all at once. <kbd>Ctrl</kbd> <kbd>Z</kbd> undoes it.
+- Select several games (<kbd>Space</kbd>, <kbd>Shift</kbd> with the arrow keys, <kbd>Ctrl</kbd> <kbd>A</kbd>) and press <kbd>F3</kbd> to edit their series and tags at once. <kbd>Ctrl</kbd> <kbd>Z</kbd> undoes it.
 
-## Play
+## Play a game and take screenshots
 
-Press <kbd>Enter</kbd> on a game to play it (or install it). Heronite records each session, matches screenshots to the game, and shows it all in **Statistics**. Take a screenshot while playing with <kbd>F10</kbd>.
+1. Select a game and press <kbd>Enter</kbd>. If it isn't installed, Heronite installs it first.
+2. Press <kbd>F10</kbd> while playing to take a screenshot.
+3. Open **Statistics** (<kbd>Ctrl</kbd> <kbd>6</kbd>) to see your sessions. Heronite records each one and matches your screenshots to the game.
 
-## On the couch
+## Use a controller (console mode)
 
-Turn on [Console Mode](/docs/console-mode/) from the palette, the ☰ menu, or with `--console`. It can also open by itself at startup or when a controller connects.
+Turn on [console mode](/docs/console-mode/) from the command palette or the ☰ menu, or start Heronite with `--console`. To open it at startup or when a controller connects, use **Settings → Console mode**.

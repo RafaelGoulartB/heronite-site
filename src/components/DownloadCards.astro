@@ -17,13 +17,40 @@ const size = (name: string) => {
   const asset = release?.assets.find((a) => a.name === name);
   return asset ? ` · ${Math.round(asset.size / 1e6)} MB` : '';
 };
+// The distribution packages have the version in their names, so link each one through its release.
+const pkg = (ending: string) => {
+  const asset = release?.assets.find((a) => a.name.endsWith(ending));
+  return asset && `${site.repo}/releases/download/${release.tag}/${asset.name}`;
+};
+const packages = [
+  { label: '.deb', href: pkg('.deb') },
+  { label: '.rpm', href: pkg('.rpm') },
+  { label: 'Arch', href: pkg('.pkg.tar.zst') },
+].filter((p): p is { label: string; href: string } => Boolean(p.href));
 ---
 
 <div class="dl">
-  <div class="os glass">
+  <div class="os panel" data-os="linux">
+    <div class="os-head">
+      <Icon name="linux" />
+      <H>Linux</H>
+      <span class="os-mine" hidden>{t.yourSystem}</span>
+    </div>
+    <p class="sub">{t.linuxSub}</p>
+    <div class="btns">
+      <a class="btn btn-primary" href={downloads.appImage}>{t.appImage} <small>{size('Heronite-x86_64.AppImage').slice(3)}</small></a>
+      {packages.length === 3
+        ? packages.map((p) => <a class="btn btn-ghost btn-pkg" href={p.href}>{p.label}</a>)
+        : <a class="btn btn-ghost" href={site.releases}>{t.packages}</a>}
+    </div>
+    <p class="fine" set:html={fill(t.linuxFineHtml, { releases: site.releases, install: localize(lang, '/docs/installation/') })} />
+    <p class="deck-line"><Icon name="steam" /><span set:html={fill(t.deckHtml, { guide: localize(lang, '/guides/steam-deck/') })} /></p>
+  </div>
+  <div class="os panel" data-os="windows">
     <div class="os-head">
       <Icon name="windows" />
       <H>Windows</H>
+      <span class="os-mine" hidden>{t.yourSystem}</span>
     </div>
     <p class="sub">{t.windowsSub}</p>
     <div class="btns">
@@ -32,22 +59,11 @@ const size = (name: string) => {
     </div>
     <p class="warn" set:html={t.warnHtml} />
   </div>
-  <div class="os glass">
-    <div class="os-head">
-      <Icon name="linux" />
-      <H>Linux</H>
-    </div>
-    <p class="sub">{t.linuxSub}</p>
-    <div class="btns">
-      <a class="btn btn-primary" href={downloads.appImage}>{t.appImage} <small>{size('Heronite-x86_64.AppImage').slice(3)}</small></a>
-      <a class="btn btn-ghost" href={site.releases}>{t.packages}</a>
-    </div>
-    <p class="fine" set:html={fill(t.linuxFineHtml, { releases: site.releases, install: localize(lang, '/docs/installation/') })} />
-  </div>
 </div>
 {release && (
   <p class="dl-version">
-    {fill(t.version, { version: version(release), date: formatDate(lang, new Date(release.date)) })}
-    · <a href="/changelog/">{useText(lang).nav.changelog}</a>
+    <span>{fill(t.version, { version: version(release), date: formatDate(lang, new Date(release.date)) })}</span>
+    <span>{t.signed}</span>
+    <a href="/changelog/">{useText(lang).nav.changelog}</a>
   </p>
 )}

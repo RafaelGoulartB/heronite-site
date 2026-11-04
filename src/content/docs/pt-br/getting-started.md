@@ -1,37 +1,48 @@
 ---
-title: "Primeiros passos com o Heronite"
+title: "Como usar o Heronite: primeiros passos e biblioteca"
 navLabel: "Primeiros passos"
-description: "Sua primeira execução do Heronite: entre nas suas lojas, adicione outros jogos, conheça as páginas e a Coleção e comece a jogar no Linux ou no Windows."
+description: "Monte sua biblioteca de jogos no Linux ou no Windows: faça login na Epic, GOG e Amazon, adicione outros jogos, aprenda os atalhos, organize e jogue."
 section: Start
 order: 2
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## A primeira execução
+O Heronite monta sua biblioteca de jogos com a Steam, seus emuladores e as lojas em que você faz login. Antes, [instale o Heronite](/pt-br/docs/installation/) no Linux ou no Windows.
 
-Na primeira inicialização, com a Coleção vazia, o Heronite procura por conta própria:
+## O que o Heronite encontra na primeira vez que você o abre
 
-- **Steam:** seus jogos instalados da Steam entram, sem precisar de login.
-- **Emuladores e ROMs:** os emuladores instalados são detectados, e as pastas de ROMs comuns (como `~/ROMs` ou `~/Emulation/roms`) são varridas. Veja [Emuladores e ROMs](/pt-br/docs/emulation/).
+Se sua biblioteca estiver vazia, o Heronite adiciona:
 
-## Adicione suas lojas
+- **Steam:** seus jogos da Steam instalados, sem precisar de login.
+- **Emuladores e ROMs:** os emuladores que ele detecta e as ROMs em pastas comuns, como `~/ROMs` ou `~/Emulation/roms`. Veja [Emulação](/pt-br/docs/emulation/).
 
-Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>) e entre na Epic Games, na GOG ou na Amazon Games. Uma pequena janela de login abre com a página da própria loja. Se ela não abrir, use o login pelo navegador na mesma página: entre no seu navegador e cole o endereço ou o código que ele mostrar.
+No Linux, a biblioteca vazia também mostra **Trazer de outro launcher** quando o Heronite encontra jogos no Heroic, Lutris, Bottles ou Faugus. Escolha um launcher ali para importar os jogos dele e manter tudo sincronizado.
 
-Mais em [Lojas e launchers](/pt-br/docs/stores-and-launchers/).
+No Windows, o Heronite encontra os jogos da Microsoft Store e do PC Game Pass instalados pelo app Xbox, sem login.
 
-## Adicione outros jogos
+## Fazer login na Epic Games, GOG ou Amazon Games
 
-Pressione <kbd>Ctrl</kbd> <kbd>N</kbd> (ou **Adicionar um jogo**) para adicionar:
+1. Abra **Lojas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Escolha **Epic Games**, **GOG** ou **Amazon Games**.
+3. Clique em **Entrar**.
+4. Faça login na página da loja, na janela que abrir.
 
-- um programa do Windows (`.exe`), que no Linux roda pelo Wine ou Proton,
-- um programa nativo do Linux, AppImage ou script de inicialização,
-- um jogo de navegador (um endereço web),
-- uma ROM ou uma pasta inteira de ROMs.
+Se a janela de login não abrir, use **Ou entre pelo navegador** na mesma página e cole o código que o navegador mostrar. Veja [Lojas e launchers](/pt-br/docs/stores-and-launchers/).
 
-Você também pode apontar para uma pasta e adicionar de uma vez todos os jogos encontrados nela.
+No Windows, o Heronite também encontra os jogos instalados pelo Epic Games Launcher, pelo GOG Galaxy ou pelo app Amazon Games, sem baixar tudo de novo.
 
-## Conheça as páginas
+## Adicionar outros jogos à biblioteca
+
+Aperte <kbd>Ctrl</kbd> <kbd>N</kbd> (ou **Adicionar um jogo**) para adicionar:
+
+- Um programa do Windows (`.exe`), que no Linux roda pelo Wine ou Proton
+- Um programa nativo do Linux, AppImage ou script de inicialização
+- Um jogo de navegador (um endereço web)
+- Uma ROM ou uma pasta inteira de ROMs
+
+Para adicionar de uma vez todos os jogos de uma pasta, escolha **Adicionar de uma pasta** no menu ☰.
+
+## Abrir qualquer página com um atalho
 
 | Página | Atalho |
 |---|---|
@@ -43,19 +54,21 @@ Você também pode apontar para uma pasta e adicionar de uma vez todos os jogos 
 | Estatísticas | <kbd>Ctrl</kbd> <kbd>6</kbd> |
 | Configurações | <kbd>Ctrl</kbd> <kbd>,</kbd> |
 
-A **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre qualquer página, executa qualquer ação ou inicia um jogo quando você digita parte do nome. Pressione <kbd>?</kbd> para ver todos os atalhos. Veja [Atalhos de teclado](/pt-br/docs/keyboard-shortcuts/).
+A **paleta de comandos** (<kbd>Ctrl</kbd> <kbd>K</kbd>) abre qualquer página, executa qualquer ação ou abre um jogo quando você digita parte do nome. Aperte <kbd>?</kbd> para ver todos os atalhos ou leia [Atalhos de teclado](/pt-br/docs/keyboard-shortcuts/).
 
-## Organize a Coleção
+## Organizar sua biblioteca de jogos
 
 - Alterne entre **Foco** (uma lista com painel de detalhes) e uma **grade** de capas.
 - **Agrupe** por status, loja, gênero, série, ano e mais.
 - Salve **presets** com seus filtros e ordenação (Jogando agora, Pendentes, Finalizado, Favoritos).
-- Selecione vários jogos (<kbd>Space</kbd>, <kbd>Shift</kbd> + setas, <kbd>Ctrl</kbd> <kbd>A</kbd>) e pressione <kbd>F3</kbd> para alterar todos de uma vez. <kbd>Ctrl</kbd> <kbd>Z</kbd> desfaz.
+- Selecione vários jogos (<kbd>Espaço</kbd>, <kbd>Shift</kbd> com as setas, <kbd>Ctrl</kbd> <kbd>A</kbd>) e aperte <kbd>F3</kbd> para editar a série e as tags de todos de uma vez. <kbd>Ctrl</kbd> <kbd>Z</kbd> desfaz.
 
-## Jogue
+## Jogar e tirar capturas de tela
 
-Pressione <kbd>Enter</kbd> em um jogo para jogá-lo (ou instalá-lo). O Heronite registra cada sessão, associa as capturas de tela ao jogo e mostra tudo em **Estatísticas**. Tire uma captura de tela durante o jogo com <kbd>F10</kbd>.
+1. Selecione um jogo e aperte <kbd>Enter</kbd>. Se ele não estiver instalado, o Heronite instala antes.
+2. Aperte <kbd>F10</kbd> durante o jogo para tirar uma captura de tela.
+3. Abra **Estatísticas** (<kbd>Ctrl</kbd> <kbd>6</kbd>) para ver suas sessões. O Heronite registra cada uma e associa as capturas de tela ao jogo.
 
-## No sofá
+## Usar um controle (modo console)
 
-Ligue o [Modo console](/pt-br/docs/console-mode/) pela paleta, pelo menu ☰ ou com `--console`. Ele também pode abrir sozinho na inicialização ou quando um controle for conectado.
+Ligue o [modo console](/pt-br/docs/console-mode/) pela paleta de comandos ou pelo menu ☰, ou abra o Heronite com `--console`. Para ele abrir na inicialização ou quando um controle conectar, use **Configurações → Modo console**.

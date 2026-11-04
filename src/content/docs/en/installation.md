@@ -1,34 +1,38 @@
 ---
 title: "Install Heronite on Linux and Windows"
 navLabel: "Installation"
-description: "Install Heronite on Windows 10 and 11 or any Linux distribution: the installer, portable zip, AppImage, .deb, .rpm and Arch packages, updates and removal."
+description: "Install Heronite on Windows 10 and 11 or any Linux distribution: installer, portable zip, AppImage, .deb, .rpm and Arch packages, updates, removal."
 section: Start
 order: 1
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
 Every [release](https://github.com/RafaelGoulartB/Heronite/releases/latest) has packages for Linux and Windows. All of them are 64-bit (x86_64).
 
-## Windows
+## Install on Windows
 
 Windows 10 and 11 are supported.
 
 | File | What it is |
 |---|---|
 | `Heronite-Setup-x86_64.exe` (**recommended**) | Installs for your user into `%LOCALAPPDATA%\Programs\Heronite`. No administrator rights needed. |
-| `Heronite-Portable-x86_64.zip` | Extract it anywhere and run `Heronite\heronite.exe`. The library, settings, and screenshots stay in that folder. |
+| `Heronite-Portable-x86_64.zip` | A portable copy: everything stays in one folder. |
 
-The Windows files are not code-signed yet, so SmartScreen may warn about them: choose **More info**, then **Run anyway**.
+If SmartScreen warns about the file, choose **More info**, then **Run anyway**. The Windows files are not code-signed yet.
 
-Logging in to Epic Games, GOG, or Amazon uses the Microsoft Edge WebView2 Runtime. Windows 11 has it; on Windows 10, [install it from Microsoft](https://developer.microsoft.com/microsoft-edge/webview2/) if the login window asks for it.
+The Epic Games, GOG, and Amazon login window needs the Microsoft Edge WebView2 Runtime. Windows 11 has it; on Windows 10, [install it from Microsoft](https://developer.microsoft.com/microsoft-edge/webview2/) if the window asks for it.
 
-### Portable copy
+### Make a portable copy on Windows
 
-A portable copy is a folder that holds everything: the program, your Collection, settings, caches, and screenshots. Move it to another PC or a USB drive and it keeps working. It does not write to the registry and does not register `heronite://` links.
+1. Download `Heronite-Portable-x86_64.zip`.
+2. Extract it to any folder, or to a USB drive.
+3. Run `Heronite\heronite.exe`.
 
-What makes a copy portable is the `portable.txt` file next to `heronite.exe`. Delete that file and the copy uses the normal user folders instead (see [Files and Folders](/docs/files-and-folders/)).
+The folder holds the program, your library, settings, caches, and screenshots. Move it to another PC or a USB drive and it keeps working. A portable copy does not write to the registry or register `heronite://` links.
 
-## Linux
+The `portable.txt` file next to `heronite.exe` makes a copy portable. Delete it to use the normal user folders instead (see [Files and folders](/docs/files-and-folders/)).
+
+## Install on Linux
 
 | System | File | Install |
 |---|---|---|
@@ -37,42 +41,49 @@ What makes a copy portable is the `portable.txt` file next to `heronite.exe`. De
 | Fedora 36+, openSUSE | `heronite-<version>-1.x86_64.rpm` | `sudo dnf install ./heronite-*.x86_64.rpm` |
 | Arch, Manjaro, EndeavourOS, CachyOS | `heronite-<version>-1-x86_64.pkg.tar.zst` | `sudo pacman -U heronite-*-x86_64.pkg.tar.zst` |
 
-Heronite draws its window with Vulkan, so you need a working Vulkan driver (Mesa for AMD and Intel, the proprietary driver for NVIDIA). The packages install the program as `heronite-rs`.
+Install a working Vulkan driver first: Mesa for AMD and Intel, the proprietary driver for NVIDIA. Heronite draws its window with Vulkan. The packages install the program as `heronite-rs`.
 
-### Optional tools
+### Optional tools for extra features
 
-Heronite works without these. Each one turns on a feature:
+Each tool turns on one feature. Heronite works without them.
 
 | Tool | For |
 |---|---|
 | `bubblewrap` (`bwrap`) | The sandbox for games you do not trust |
-| `gamescope` | The gamescope option in a game's settings |
+| `gamescope` | The gamescope option in **Game settings → Compatibility** |
 | `umu-launcher` | Running games through umu (Heronite downloads its own copy if this is missing) |
 | [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/) | Replay (the system package or the Flathub app) |
 | [Ludusavi](https://github.com/mtkennerly/ludusavi) | Save backups after each session |
-| `python3` | GOG downloads (the gogdl tool runs on Python) |
-| WebKitGTK 4.1 | The store login window. Without it, use the browser method on the login page. |
+| `python3` | GOG downloads (gogdl, the GOG download tool, runs on Python) |
+| WebKitGTK 4.1 | The store login window. Without it, log in with your browser instead. |
 
-## Updates
+## Update Heronite
 
-Heronite checks GitHub for a new release shortly after it starts and then every 6 hours. Every download is checked against the release signing key (minisign) before it is used.
+Heronite checks GitHub for a new release shortly after it starts, then every 6 hours. It verifies every download against the release signing key (minisign) before using it.
 
-- **AppImage:** the new version is downloaded next to the old one and replaces it. It runs from the next start. Keep the AppImage in a folder you can write to, like `~/Applications`.
-- **.deb, .rpm, and Arch packages:** Heronite downloads the signed package and installs it through `pkexec`, so it asks for your password. This never happens by itself.
-- **Windows installer:** the new setup runs silently when you quit Heronite.
-- **Windows portable:** the program files are replaced in place; the old ones are kept as `.old` until the next start.
+- **AppImage:** Heronite downloads the new version next to the old one and replaces it; it runs from the next start. Keep the AppImage in a writable folder, like `~/Applications`.
+- **.deb, .rpm, and Arch packages:** Heronite downloads the signed package and installs it through `pkexec`, which asks for your password.
+- **Windows installer:** Heronite runs the new setup silently when you quit.
+- **Windows portable:** Heronite replaces the program files in place and keeps the old ones as `.old` until the next start.
 
-In **Settings → About** you can turn off "Check for updates automatically", or turn on "Install updates automatically" (off by default). Setting the environment variable `HERONITE_NO_UPDATE_CHECK=1` also turns off the checks.
+In **Settings → About**, turn off **Check for updates automatically**, or turn on **Install updates automatically** (off by default). The environment variable `HERONITE_NO_UPDATE_CHECK=1` turns off the checks too.
 
-## Removing Heronite
+## Uninstall Heronite
 
-- **Windows installer:** Settings → Apps → Installed apps → Heronite → Uninstall.
+- **Windows installer:** open Windows **Settings → Apps → Installed apps → Heronite → Uninstall**.
 - **Windows portable:** delete the folder.
 - **Linux packages:** `sudo apt remove heronite`, `sudo dnf remove heronite`, or `sudo pacman -R heronite`.
 - **AppImage:** delete the file.
 
-Removing the program keeps your Collection, settings, and games. To remove those too, delete the folders listed in [Files and Folders](/docs/files-and-folders/). Games installed by Heronite are in `~/Games/Heronite` on Linux unless you chose another folder.
+Uninstalling keeps your library, settings, and games. To remove those too, delete the folders listed in [Files and folders](/docs/files-and-folders/). Games installed by Heronite are in `~/Games/Heronite` on Linux unless you chose another folder.
 
-## Building from source
+## Build Heronite from source
 
-See [Run from source](https://github.com/RafaelGoulartB/Heronite#run-from-source) in the README and [CONTRIBUTING.md](https://github.com/RafaelGoulartB/Heronite/blob/main/CONTRIBUTING.md).
+You need stable Rust. On Linux, also `clang`, `lld`, a Vulkan driver and GTK/WebKitGTK. On Windows, the Visual Studio Build Tools ("Desktop development with C++").
+
+```bash
+# quick build (the login window is its own binary, so build it too)
+cargo build --profile quick -p heronite-epic-login && cargo run --profile quick -p heronite
+```
+
+For release builds and the Windows installer, see [Run from source](https://github.com/RafaelGoulartB/Heronite#run-from-source) in the README and [CONTRIBUTING.md](https://github.com/RafaelGoulartB/Heronite/blob/main/CONTRIBUTING.md).

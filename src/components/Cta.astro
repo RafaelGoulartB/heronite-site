@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { site } from '../data/site';
 import { localeOf, localize, useText } from '../i18n';
 
@@ -6,10 +7,9 @@ const lang = localeOf(Astro.url.pathname);
 const t = useText(lang).cta;
 ---
 
-<aside class="cta glass" aria-label={t.label}>
+<aside class="cta" aria-label={t.label}>
   <div>
-    <p class="eyebrow">{t.eyebrow}</p>
-    <p class="h2" set:html={t.titleHtml} />
+    <p class="h2">{t.title}</p>
     <p class="lead">{t.text}</p>
   </div>
   <div class="actions">
@@ -17,6 +17,6 @@ const t = useText(lang).cta;
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
       {t.button}
     </a>
-    <a class="btn btn-ghost" href={site.repo}>{t.github}</a>
+    <a class="btn btn-ghost" href={site.repo}><Icon name="github" />{t.github}</a>
   </div>
 </aside>

@@ -1,34 +1,38 @@
 ---
 title: "Instalar Heronite en Linux y Windows"
 navLabel: "Instalación"
-description: "Instala Heronite en Windows 10 y 11 o en cualquier distro de Linux: instalador, zip portable, AppImage, paquetes .deb, .rpm y Arch, y cómo actualizar."
+description: "Cómo instalar Heronite en Windows 10 y 11 o cualquier distro de Linux: instalador, zip portable, AppImage, .deb, .rpm y Arch, actualizar y desinstalar."
 section: Start
 order: 1
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
 Cada [versión](https://github.com/RafaelGoulartB/Heronite/releases/latest) incluye paquetes para Linux y Windows. Todos son de 64 bits (x86_64).
 
-## Windows
+## Instalar en Windows
 
 Son compatibles Windows 10 y 11.
 
 | Archivo | Qué es |
 |---|---|
 | `Heronite-Setup-x86_64.exe` (**recomendado**) | Se instala para tu usuario en `%LOCALAPPDATA%\Programs\Heronite`. No necesita permisos de administrador. |
-| `Heronite-Portable-x86_64.zip` | Extráelo donde quieras y ejecuta `Heronite\heronite.exe`. La biblioteca, los ajustes y las capturas se quedan en esa carpeta. |
+| `Heronite-Portable-x86_64.zip` | Una copia portable: todo se queda en una carpeta. |
 
-Los archivos de Windows todavía no están firmados con un certificado de código, así que SmartScreen puede mostrar un aviso: elige **Más información** y luego **Ejecutar de todas formas**.
+Si SmartScreen muestra un aviso sobre el archivo, elige **Más información** y luego **Ejecutar de todas formas**. Los archivos de Windows aún no tienen firma de código.
 
-Iniciar sesión en Epic Games, GOG o Amazon usa Microsoft Edge WebView2 Runtime. Windows 11 ya lo incluye; en Windows 10, [instálalo desde Microsoft](https://developer.microsoft.com/microsoft-edge/webview2/) si la ventana de inicio de sesión te lo pide.
+La ventana de inicio de sesión de Epic Games, GOG y Amazon necesita Microsoft Edge WebView2 Runtime. Windows 11 ya lo incluye; en Windows 10, [instálalo desde Microsoft](https://developer.microsoft.com/microsoft-edge/webview2/) si la ventana te lo pide.
 
-### Copia portable
+### Crear una copia portable en Windows
 
-Una copia portable es una carpeta que contiene todo: el programa, tu Colección, los ajustes, las cachés y las capturas. Muévela a otro PC o a una unidad USB y seguirá funcionando. No escribe en el registro ni registra los enlaces `heronite://`.
+1. Descarga `Heronite-Portable-x86_64.zip`.
+2. Extráelo en cualquier carpeta o en una memoria USB.
+3. Ejecuta `Heronite\heronite.exe`.
 
-Lo que hace portable a una copia es el archivo `portable.txt` junto a `heronite.exe`. Si lo borras, la copia usa las carpetas de usuario normales (consulta [Archivos y carpetas](/es/docs/files-and-folders/)).
+La carpeta guarda el programa, tu biblioteca, los ajustes, las cachés y las capturas. Muévela a otro PC o a una memoria USB y seguirá funcionando. Una copia portable no escribe en el registro ni registra los enlaces `heronite://`.
 
-## Linux
+El archivo `portable.txt` junto a `heronite.exe` hace portable a una copia. Bórralo para usar las carpetas de usuario normales (consulta [Archivos y carpetas](/es/docs/files-and-folders/)).
+
+## Instalar en Linux
 
 | Sistema | Archivo | Instalación |
 |---|---|---|
@@ -37,42 +41,49 @@ Lo que hace portable a una copia es el archivo `portable.txt` junto a `heronite.
 | Fedora 36+, openSUSE | `heronite-<version>-1.x86_64.rpm` | `sudo dnf install ./heronite-*.x86_64.rpm` |
 | Arch, Manjaro, EndeavourOS, CachyOS | `heronite-<version>-1-x86_64.pkg.tar.zst` | `sudo pacman -U heronite-*-x86_64.pkg.tar.zst` |
 
-Heronite dibuja su ventana con Vulkan, así que necesitas un controlador de Vulkan que funcione (Mesa para AMD e Intel, el controlador propietario para NVIDIA). Los paquetes instalan el programa como `heronite-rs`.
+Instala antes un controlador de Vulkan que funcione: Mesa para AMD e Intel, el controlador propietario para NVIDIA. Heronite usa Vulkan para mostrar su ventana. Los paquetes instalan el programa como `heronite-rs`.
 
-### Herramientas opcionales
+### Herramientas opcionales para más funciones
 
-Heronite funciona sin ellas. Cada una activa una función:
+Cada herramienta activa una función. Heronite funciona sin ellas.
 
 | Herramienta | Para qué sirve |
 |---|---|
 | `bubblewrap` (`bwrap`) | El sandbox para juegos en los que no confías |
-| `gamescope` | La opción de gamescope en los ajustes de un juego |
+| `gamescope` | La opción de gamescope en **Ajustes del juego → Compatibilidad** |
 | `umu-launcher` | Ejecutar juegos con umu (Heronite descarga su propia copia si falta) |
 | [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/) | Replay (el paquete del sistema o la app de Flathub) |
 | [Ludusavi](https://github.com/mtkennerly/ludusavi) | Copias de las partidas guardadas después de cada sesión |
-| `python3` | Descargas de GOG (la herramienta gogdl funciona con Python) |
-| WebKitGTK 4.1 | La ventana de inicio de sesión de las tiendas. Sin ella, usa el método del navegador en la página de inicio de sesión. |
+| `python3` | Descargas de GOG (gogdl, la herramienta de descarga de GOG, funciona con Python) |
+| WebKitGTK 4.1 | La ventana de inicio de sesión de las tiendas. Sin ella, inicia sesión con tu navegador. |
 
-## Actualizaciones
+## Actualizar Heronite
 
-Heronite consulta GitHub en busca de una versión nueva poco después de iniciarse y luego cada 6 horas. Cada descarga se comprueba con la clave de firma de la versión (minisign) antes de usarse.
+Heronite consulta GitHub en busca de una versión nueva poco después de iniciarse y luego cada 6 horas. Comprueba cada descarga con la clave de firma de la versión (minisign) antes de usarla.
 
-- **AppImage:** la versión nueva se descarga junto a la antigua y la reemplaza. Se usa a partir del siguiente inicio. Guarda el AppImage en una carpeta con permiso de escritura, como `~/Applications`.
-- **Paquetes .deb, .rpm y de Arch:** Heronite descarga el paquete firmado y lo instala con `pkexec`, así que te pide la contraseña. Esto nunca ocurre por sí solo.
-- **Instalador de Windows:** el nuevo instalador se ejecuta en silencio cuando cierras Heronite.
-- **Windows portable:** los archivos del programa se reemplazan en el sitio; los antiguos se conservan como `.old` hasta el siguiente inicio.
+- **AppImage:** Heronite descarga la versión nueva junto a la antigua y la reemplaza; se usa a partir del siguiente inicio. Guarda el AppImage en una carpeta con permiso de escritura, como `~/Applications`.
+- **Paquetes .deb, .rpm y de Arch:** Heronite descarga el paquete firmado y lo instala con `pkexec`, que te pide la contraseña.
+- **Instalador de Windows:** Heronite ejecuta el nuevo instalador en silencio cuando cierras la app.
+- **Windows portable:** Heronite reemplaza los archivos del programa en el sitio y conserva los antiguos como `.old` hasta el siguiente inicio.
 
-En **Ajustes → Acerca de** puedes desactivar "Buscar actualizaciones automáticamente" o activar "Instalar actualizaciones automáticamente" (desactivado por defecto). Definir la variable de entorno `HERONITE_NO_UPDATE_CHECK=1` también desactiva las búsquedas.
+En **Ajustes → Acerca de**, desactiva **Buscar actualizaciones automáticamente** o activa **Instalar actualizaciones automáticamente** (desactivado por defecto). La variable de entorno `HERONITE_NO_UPDATE_CHECK=1` también desactiva las búsquedas.
 
 ## Desinstalar Heronite
 
-- **Instalador de Windows:** Configuración → Aplicaciones → Aplicaciones instaladas → Heronite → Desinstalar.
+- **Instalador de Windows:** abre en Windows **Configuración → Aplicaciones → Aplicaciones instaladas → Heronite → Desinstalar**.
 - **Windows portable:** borra la carpeta.
 - **Paquetes de Linux:** `sudo apt remove heronite`, `sudo dnf remove heronite` o `sudo pacman -R heronite`.
 - **AppImage:** borra el archivo.
 
-Desinstalar el programa conserva tu Colección, tus ajustes y tus juegos. Para eliminarlos también, borra las carpetas que se indican en [Archivos y carpetas](/es/docs/files-and-folders/). Los juegos instalados por Heronite están en `~/Games/Heronite` en Linux, salvo que hayas elegido otra carpeta.
+Al desinstalar se conservan tu biblioteca, tus ajustes y tus juegos. Para eliminarlos también, borra las carpetas que se indican en [Archivos y carpetas](/es/docs/files-and-folders/). Los juegos instalados por Heronite están en `~/Games/Heronite` en Linux, salvo que hayas elegido otra carpeta.
 
-## Compilar desde el código fuente
+## Compilar Heronite desde el código fuente
 
-Consulta [Run from source](https://github.com/RafaelGoulartB/Heronite#run-from-source) en el README y [CONTRIBUTING.md](https://github.com/RafaelGoulartB/Heronite/blob/main/CONTRIBUTING.md).
+Necesitas Rust estable. En Linux, también `clang`, `lld`, un controlador de Vulkan y GTK/WebKitGTK. En Windows, las Visual Studio Build Tools ("Desktop development with C++").
+
+```bash
+# quick build (the login window is its own binary, so build it too)
+cargo build --profile quick -p heronite-epic-login && cargo run --profile quick -p heronite
+```
+
+Para las compilaciones de release y el instalador de Windows, consulta [Run from source](https://github.com/RafaelGoulartB/Heronite#run-from-source) en el README y [CONTRIBUTING.md](https://github.com/RafaelGoulartB/Heronite/blob/main/CONTRIBUTING.md).

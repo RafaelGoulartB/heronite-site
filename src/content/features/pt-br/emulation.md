@@ -1,47 +1,56 @@
 ---
-title: "Frontend de emuladores para Linux e Windows | Heronite"
-description: "O Heronite é um frontend de emuladores grátis para Linux e Windows. Acha RetroArch, Dolphin, PCSX2, RPCS3 e mais, escaneia suas ROMs e põe capa em cada jogo."
+title: "Frontend de emuladores e launcher de ROMs | Heronite"
+description: "Frontend de emuladores e launcher de ROMs para Linux e Windows: acha RetroArch, Dolphin e PCSX2, escaneia pastas de ROMs e põe capa em cada jogo."
 eyebrow: Emulação
-headline: "Um frontend de emuladores *que acha os seus jogos*"
-lead: "O Heronite detecta seus emuladores, escaneia suas pastas de ROMs e põe todos os jogos retrô e de console na mesma Coleção dos seus jogos de PC, com capa, tempo de jogo e conquistas."
+headline: "Frontend de emuladores e launcher de ROMs para Linux"
+lead: "O Heronite é um frontend de emuladores para Linux e Windows. Ele detecta seus emuladores e escaneia suas pastas de ROMs com jogos retrô e de console."
 navLabel: Emulação
 summary: "Detecta 17 emuladores e cores do RetroArch, escaneia pastas de ROMs, une jogos de vários discos e mostra o RetroAchievements."
 order: 3
 hero: ../../../assets/screenshots/emulators.webp
 heroAlt: "A página Emuladores do Heronite com cartões do PCSX2 e do RPCS3, cada um marcado como Nativo e Pronto, mostrando a pasta de ROMs com os botões Escanear agora e Revisar, e botões para detectar emuladores, escanear uma pasta e adicionar uma pasta de ROMs."
 og: /og/emulation.jpg
-updated: 2026-11-01
+updated: 2026-11-04
 highlights:
-  - title: Detecta os seus emuladores
-    text: Acha no PATH, em Flatpak e como cores do RetroArch. Adicione qualquer outro emulador à mão.
-  - title: Escaneia pastas de ROMs
-    text: As pastas de ROMs mais comuns são escaneadas na primeira execução, e você pode adicionar mais. Cada jogo ganha a sua capa.
+  - title: 17 emuladores detectados
+    text: RetroArch, Dolphin, PCSX2, Ryujinx e outros, achados no PATH ou como Flatpak.
+  - title: Escaneia as ROMs
+    text: Escolha as pastas de ROMs e cada jogo ganha capa.
   - title: Vários discos, um jogo só
-    text: Jogos lidos de arquivos .m3u, .cue e .gdi aparecem uma vez, e não uma por disco.
+    text: Jogos de vários discos aparecem uma vez, e não uma por disco.
   - title: Conquistas
-    text: Conecte uma conta do RetroAchievements para ver o seu progresso nos jogos de emulador.
+    text: Conecte uma conta do RetroAchievements para ver seu progresso nos jogos de emulador.
 faq:
-  - q: Qual é o melhor frontend de emuladores para Linux?
-    a: Depende do que você precisa. O Heronite é uma boa escolha se você quer os jogos de emulador ao lado dos seus jogos da Steam, Epic e GOG em uma biblioteca só, com capa, tempo de jogo e um [modo console](/features/console-mode/) pensado para controle. É grátis e de código aberto.
+  - q: Qual é o melhor launcher de ROMs para Linux?
+    a: Depende do que você precisa. O Heronite serve se você quer os jogos de emulador ao lado dos da Steam, Epic e GOG. É grátis e de código aberto.
   - q: Existe um frontend de RetroArch para Linux e Windows?
-    a: Existe. O Heronite roda cores do RetroArch para vários sistemas e escolhe um core padrão para cada um, como `snes9x` para o SNES e `mgba` para o Game Boy Advance. Instale os cores pelo Online Updater do próprio RetroArch e o Heronite os encontra.
+    a: Sim. O Heronite acha o RetroArch e os cores dele, e escolhe um core padrão para cada sistema.
   - q: O Heronite inclui emuladores ou ROMs?
-    a: Não. Você instala os emuladores por conta própria, pela sua distribuição, pelo Flathub ou pelos sites deles, e traz os seus próprios jogos. O Heronite encontra os emuladores e escaneia as suas pastas de ROMs.
-  - q: Como adiciono uma pasta de ROMs?
-    a: Abra a página **Emuladores** com `Ctrl+5` e adicione a pasta. Mantenha uma subpasta por sistema, como `snes`, `psx` e `gba`. Pastas comuns como `~/ROMs` são escaneadas na primeira execução.
+    a: Não. Você instala os emuladores e traz as suas ROMs.
   - q: Posso usar um emulador que não está na lista?
-    a: Pode. Adicione um emulador personalizado informando ao Heronite o programa e os argumentos dele.
+    a: Sim. Adicione um emulador personalizado informando ao Heronite o programa e os argumentos dele.
 related:
   - /features/game-library/
   - /features/console-mode/
   - /features/stores/
 ---
 
-Emulação costuma significar um monte de programas separados, uma árvore de pastas de ROMs e nenhuma capa. O Heronite funciona como um frontend de emuladores: ele detecta os emuladores que você instalou, escaneia suas pastas de ROMs e adiciona cada jogo à Coleção com a arte dele. Os jogos de emulador ficam na mesma estante do resto da sua [biblioteca de jogos](/pt-br/features/game-library/), com tempo de jogo e linha do tempo próprios.
+Os jogos de emulador entram na mesma biblioteca dos seus jogos de PC, com tempo de jogo e linha do tempo das sessões.
+
+## Como configurar a emulação no Heronite?
+
+1. [Baixe o Heronite](/pt-br/download/) para Linux ou Windows.
+2. Instale os emuladores que quiser.
+3. Coloque suas ROMs em uma subpasta por sistema.
+4. Abra a página **Emuladores** (<kbd>Ctrl</kbd> <kbd>5</kbd>).
+5. Escolha **Detectar emuladores…** para achar os que estão instalados no seu PC.
+6. Clique em **Adicionar pasta de ROMs** e escolha o emulador e a pasta com as ROMs dele.
+
+O Heronite escaneia a pasta e adiciona os jogos dela. **Escanear todas as pastas agora** pega os jogos que você adicionar depois.
 
 ## Quais emuladores o Heronite suporta?
 
-Instale os emuladores por conta própria, pela sua distribuição, pelo Flathub ou pelos sites deles. O Heronite os encontra no `PATH`, em Flatpak e como cores do RetroArch.
+O Heronite suporta os 17 emuladores abaixo e qualquer um personalizado. Instale-os pela sua distribuição, pelo Flathub ou pelos sites deles. O Heronite os encontra no `PATH`, em Flatpak e como cores do RetroArch.
 
 | Emulador | Sistemas |
 |---|---|
@@ -64,9 +73,11 @@ Instale os emuladores por conta própria, pela sua distribuição, pelo Flathub 
 | ScummVM | Jogos de aventura |
 | Personalizado | Qualquer outro emulador: informe o programa e os argumentos dele |
 
-## Como usar o RetroArch com o Heronite?
+Se um jogo não abrir, veja [Solução de problemas](/pt-br/docs/troubleshooting/).
 
-O RetroArch roda vários sistemas por meio de **cores**. Quando o RetroArch roda um sistema, o Heronite usa um core padrão para ele:
+## Qual core do RetroArch o Heronite usa para cada sistema?
+
+O RetroArch roda os sistemas por meio de **cores**. O Heronite usa este core padrão para cada um:
 
 | Sistema | Core padrão |
 |---|---|
@@ -89,9 +100,9 @@ O RetroArch roda vários sistemas por meio de **cores**. Quando o RetroArch roda
 | Arcade | `fbneo` |
 | MAME | `mame` |
 
-Instale os cores pelo Online Updater do próprio RetroArch. O Heronite os procura na pasta de cores do RetroArch (`~/.config/retroarch/cores` no Linux ou `%APPDATA%\RetroArch\cores` no Windows), no Flatpak e nas pastas do libretro do sistema. A documentação traz a mesma tabela em [cores do RetroArch](/pt-br/docs/emulation/).
+Instale os cores pelo **Online Updater** do RetroArch. O Heronite procura na pasta de cores do RetroArch (`~/.config/retroarch/cores` no Linux, `%APPDATA%\RetroArch\cores` no Windows), no Flatpak e nas pastas do libretro do sistema. Veja [cores do RetroArch](/pt-br/docs/emulation/#cores-do-retroarch).
 
-## Como funciona o escaneamento de ROMs?
+## Onde coloco minhas ROMs?
 
 Mantenha uma subpasta por sistema:
 
@@ -102,43 +113,26 @@ ROMs/
 └── gba/
 ```
 
-Na primeira execução, o Heronite escaneia os lugares de costume, se existirem. No Linux isso inclui `ROMs`, `Emulation/roms` e `Games/ROMs` na sua pasta pessoal, além de `retrodeck/roms`. No Windows ele confere pastas como `ROMs`, `Emulation\roms` e `Games\ROMs` na sua pasta de usuário e na raiz de cada unidade. A lista completa está em [pastas de ROMs](/pt-br/docs/emulation/).
+Na primeira vez que você abre o Heronite, ele escaneia as pastas de ROMs mais comuns, se existirem. No Linux elas incluem `ROMs`, `Emulation/roms` e `Games/ROMs` na sua pasta pessoal, além de `retrodeck/roms` para o RetroDECK. No Windows elas incluem `ROMs`, `Emulation\roms` e `Games\ROMs` na sua pasta de usuário e na raiz de cada unidade.
 
-Para adicionar mais, abra a página **Emuladores** com <kbd>Ctrl</kbd> <kbd>5</kbd>. O escaneamento ignora pastas chamadas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` e `manuals`, para que seus arquivos de apoio não virem jogos.
+[Pastas de ROMs](/pt-br/docs/emulation/#pastas-de-roms) tem a lista completa. O escaneamento ignora pastas chamadas `bios`, `firmware`, `saves`, `states`, `cheats`, `system`, `media` e `manuals`.
 
-> **Dica.** Já usa o RetroDECK? A pasta `retrodeck/roms` dele é um dos lugares que o Heronite confere sozinho.
+## Como ficam os jogos de vários discos e os save states?
 
-## E jogos de vários discos e save states?
-
-Jogos de vários discos são lidos de arquivos `.m3u`, `.cue` e `.gdi`, então cada jogo aparece uma vez na sua Coleção, e não uma vez por disco. Isso mantém organizada uma biblioteca longa de PlayStation.
-
-A página do jogo também deixa você continuar de um **save state**, para retomar exatamente de onde parou, em vez de voltar ao último save do próprio jogo.
+Jogos lidos de arquivos `.m3u`, `.cue` e `.gdi` aparecem uma vez na sua biblioteca, e não uma vez por disco. A página do jogo deixa você continuar de um **save state**, para retomar de onde parou.
 
 ## Os jogos de emulador ganham capa e conquistas?
 
-Ganham. Todo jogo adicionado de uma pasta de ROMs recebe arte como qualquer outro. O [SteamGridDB](https://www.steamgriddb.com) é especialmente útil aqui, porque as capas da comunidade combinam bem com jogos de emulador. Adicione a chave gratuita e opcional dele em Configurações, como descrito em [Metadados e imagens](/pt-br/docs/metadata-and-art/).
+Sim. Todo jogo adicionado de uma pasta de ROMs recebe arte como qualquer outro. As capas do [SteamGridDB](https://www.steamgriddb.com) combinam bem com jogos de emulador. Adicione a chave gratuita e opcional dele em **Configurações → Metadados**, como explica [Metadados e imagens](/pt-br/docs/metadata-and-art/).
 
-Para as conquistas, conecte uma conta do [RetroAchievements](https://retroachievements.org) em Configurações. Assim você vê as suas conquistas nos jogos de emulador.
+Para as conquistas, conecte uma conta do [RetroAchievements](https://retroachievements.org) em Configurações.
 
 ![A Coleção do Heronite com jogos agrupados em Jogando e Em andamento, e ELDEN RING aberto com capa, um botão Jogar, capturas de tela, detalhes e uma linha do tempo das sessões de jogo.](../../../assets/screenshots/collection.webp)
 
-*Todo jogo da Coleção ganha uma página assim, com arte, um botão Jogar, detalhes e uma linha do tempo das sessões.*
+*A página de um jogo com arte, um botão Jogar, detalhes e uma linha do tempo das sessões.*
 
 ## Dá para jogar emuladores com controle?
 
-Dá. O [modo console](/pt-br/features/console-mode/) é um layout pensado para controle, para o sofá ou a TV, e mostra a sua Coleção inteira, então os jogos de emulador estão lá com o resto. O seu [tempo de jogo](/pt-br/features/play-time-tracking/) também é registrado para cada um deles.
+Sim. O [modo console](/pt-br/features/console-mode/) mostra toda a sua biblioteca, jogos de emulador incluídos, em um layout para controle, para o sofá ou a TV. O Heronite também registra o [tempo de jogo](/pt-br/features/play-time-tracking/) deles. No Steam Deck, veja o [guia do Steam Deck](/pt-br/guides/steam-deck/).
 
-Se você também joga títulos de PC das lojas, a [página de lojas](/pt-br/features/stores/) mostra como Steam, Epic, GOG e Amazon entram na mesma biblioteca. E se você quer jogos do Windows no Linux, veja [Wine e Proton](/pt-br/features/wine-and-proton/).
-
-## Quais sistemas dá para jogar?
-
-Somando os emuladores dedicados e os cores do RetroArch, as listas acima cobrem a Nintendo do NES ao Switch, o PlayStation do primeiro console ao PS4 e ao Vita, a Sega do Master System ao Dreamcast, Xbox, Atari, máquinas de arcade e jogos de aventura pelo ScummVM. O que faltar pode ser adicionado como emulador **personalizado**.
-
-## Configure em poucos minutos
-
-1. [Baixe o Heronite](/pt-br/download/) para Linux ou Windows.
-2. Instale os emuladores que quiser.
-3. Coloque suas ROMs em uma subpasta por sistema.
-4. Abra a página **Emuladores**, aperte detectar e depois escaneie suas pastas de ROMs.
-
-A página de documentação [Emuladores e ROMs](/pt-br/docs/emulation/) tem as listas completas de pastas, cores e regras. Para ajuda com um jogo que não inicia, veja [Solução de problemas](/pt-br/docs/troubleshooting/).
+Próximo: adicione seus jogos de PC na página [Lojas e launchers](/pt-br/features/stores/).

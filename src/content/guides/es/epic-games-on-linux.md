@@ -1,139 +1,105 @@
 ---
-title: "Cómo jugar juegos de Epic Games en Linux (y los gratis)"
-description: "Juega tu biblioteca de Epic Games Store en Linux con Heronite: inicia sesión, reclama los juegos gratis de la semana, instala con Proton y revisa el anticheat."
+title: "Juegos de Epic en Linux: tu biblioteca y los gratis"
+description: "Juega a tus juegos de Epic en Linux sin el launcher oficial: inicia sesión, reclama los gratis de la semana, instala con Proton y revisa el anti-cheat."
 eyebrow: Guía de Linux
-headline: "Cómo jugar juegos de *Epic Games* en Linux"
-lead: "Epic no tiene app para Linux, pero toda tu biblioteca se puede jugar en Linux. Esta guía explica cómo iniciar sesión, reclamar los juegos gratis semanales, instalarlos y elegir la versión de Proton adecuada."
+headline: "Cómo jugar a juegos de Epic Games en Linux"
+lead: "Epic no tiene launcher para Linux. Heronite inicia sesión en Epic y ejecuta tus juegos con Proton, sin configurar Wine."
 navLabel: Epic Games en Linux
-summary: "Inicia sesión en Epic desde Heronite, instala tus juegos con Proton y revisa la compatibilidad con el anticheat antes de descargar."
+summary: "Inicia sesión en Epic desde Heronite, instala tus juegos con Proton y revisa la compatibilidad con el anti-cheat antes de descargar."
 order: 1
 hero: ../../../assets/screenshots/collection.webp
 heroAlt: "La Colección de Heronite con ELDEN RING abierto: su botón Jugar y, debajo, el recuadro En Linux con la valoración Gold de ProtonDB y el estado del anticheat EAC ok."
 og: /og/epic-games-on-linux.jpg
-updated: 2026-11-01
+updated: 2026-11-04
 highlights:
   - title: "Inicia sesión una vez"
-    text: "Pulsa Ctrl+4, elige Epic Games e inicia sesión. Toda tu biblioteca se une a la Colección, esté instalada o no."
-  - title: "Con los juegos gratis"
-    text: "Reclama el juego gratis de la semana en la web de Epic, actualiza la biblioteca y aparece listo para instalar."
+    text: "Toda tu biblioteca de Epic aparece tras un solo inicio de sesión."
+  - title: "¿Ya está en el disco?"
+    text: "Importa los archivos que ya tienes en lugar de volver a descargar el juego."
   - title: "Proton por defecto"
-    text: "Los juegos de Windows se ejecutan con Proton. Heronite elige una versión por ti y puedes cambiarla en cada juego."
-  - title: "Mira antes de instalar"
-    text: "Cada juego muestra su valoración de ProtonDB y el estado del anticheat, así sabes si va a funcionar."
+    text: "Heronite elige una versión de Proton y puedes cambiarla en cada juego."
+  - title: "Revisa antes de instalar"
+    text: "Cada juego muestra su valoración de ProtonDB y su estado de anti-cheat."
 faq:
   - q: "¿Hay un Epic Games Launcher para Linux?"
-    a: "No. Epic no hace una versión de su launcher para Linux. Heronite usa la herramienta de código abierto [legendary](https://github.com/derrod/legendary), que habla con los servidores de Epic igual que el launcher, así que puedes iniciar sesión, instalar, actualizar y jugar sin la app oficial."
+    a: "No. Heronite usa [legendary](https://github.com/derrod/legendary), una herramienta de código abierto no oficial para Epic, para iniciar sesión, instalar, actualizar y jugar."
   - q: "¿Se puede jugar a Fortnite en Linux?"
-    a: "Ahora mismo no. Los desarrolladores de Fortnite no han activado el soporte de Linux en su anticheat, y [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) lo marca como no compatible. Heronite muestra este estado en los detalles del juego, así que míralo antes de perder tiempo con una descarga."
-  - q: "¿Funcionan en Linux los juegos gratis semanales de Epic?"
-    a: "Sí, una vez que los reclamas. Reclama el juego en la web de Epic con la misma cuenta y actualiza tu biblioteca en Heronite. Los juegos gratis son juegos normales de tu biblioteca, así que se instalan y se ejecutan como cualquier otro."
+    a: "No. Epic no ha activado el soporte de Linux en el anti-cheat de Fortnite."
+  - q: "¿Heronite sincroniza los guardados en la nube de Epic?"
+    a: "Sí, en beta. Abre **Ajustes del juego → Guardados en la nube** y haz clic en **Sincronizar**. Haz una copia de tus partidas guardadas antes de la primera sincronización."
   - q: "¿Necesito instalar Wine o Proton antes?"
-    a: "No. Heronite descarga una versión de Proton cuando la necesita. Solo hace falta un controlador de Vulkan que funcione. Lee [Wine y Proton](/docs/wine-and-proton/) para saber qué puedes cambiar."
+    a: "No. Heronite descarga una versión de Proton cuando la necesita. Solo necesitas un controlador de Vulkan que funcione. Mira [Wine y Proton](/docs/wine-and-proton/)."
   - q: "¿Es seguro iniciar sesión en Epic a través de Heronite?"
-    a: "Tu contraseña solo va a la página de inicio de sesión de Epic, que se abre en una ventana pequeña. Heronite guarda la sesión en tu PC. Consulta las [preguntas frecuentes](/docs/faq/) para más información."
+    a: "Sí. Tu contraseña solo va a la página de inicio de sesión de Epic, y Heronite guarda la sesión en tu PC. Mira las [preguntas frecuentes](/docs/faq/)."
 related:
   - /guides/install-ge-proton/
   - /guides/gog-on-linux/
   - /features/stores/
 ---
 
-Puedes jugar tu biblioteca de Epic Games Store en Linux sin el launcher oficial y sin configurar Wine a mano. Heronite inicia sesión en tu cuenta de Epic, muestra en un solo lugar todos los juegos que tienes y ejecuta los de Windows con Proton.
-
-Al terminar esta guía tendrás tu biblioteca de Epic en tu PC con Linux, el juego gratis de la semana reclamado e instalado, y una forma de saber qué juegos no van a funcionar.
-
 ## Qué necesitas
 
-- Un PC con Linux de 64 bits y un controlador de Vulkan que funcione (Mesa para AMD e Intel, el controlador propietario para NVIDIA).
+- Un PC con Linux de 64 bits y un controlador de Vulkan que funcione. Ejecuta `vulkaninfo --summary` para comprobar que muestra tu GPU. Los juegos antiguos de 32 bits también necesitan el controlador de Vulkan de 32 bits.
 - Una cuenta de Epic Games.
-- Espacio libre en disco para los juegos. Heronite los instala en `~/Games/Heronite` por defecto.
-- Unos diez minutos.
+- Espacio libre en disco. Los juegos se instalan en `~/Games/Heronite` por defecto.
 
-## Paso 1: Instala Heronite
+## Instala Heronite
 
-Abre la [página de descarga](/es/download/) y consigue el AppImage, que funciona en cualquier distribución. Hazlo ejecutable e inícialo:
+Descarga el AppImage desde la [página de descarga](/es/download/):
 
 ```bash
 chmod +x Heronite-x86_64.AppImage
 ./Heronite-x86_64.AppImage
 ```
 
-También hay paquetes `.deb`, `.rpm` y para Arch. La [guía de instalación](/es/docs/installation/) los lista todos. Si prefieres el AppImage, déjalo en una carpeta donde puedas escribir, como `~/Applications`, para que pueda actualizarse solo.
+Los paquetes para otras distribuciones están en la [guía de instalación](/es/docs/installation/). En la Steam Deck, sigue la [guía de Steam Deck](/es/guides/steam-deck/).
 
-## Paso 2: Comprueba tu controlador de Vulkan
+## Inicia sesión en Epic Games
 
-Heronite y la mayoría de los juegos de Windows en Linux necesitan Vulkan. Comprueba que funciona:
+1. Abre **Tiendas** (<kbd>Ctrl</kbd> <kbd>4</kbd>).
+2. Elige **Epic Games**.
+3. Haz clic en **Iniciar sesión**.
+4. Inicia sesión en la página de Epic, en la ventana que se abre.
 
-```bash
-vulkaninfo --summary
-```
+Toda tu biblioteca de Epic aparece entonces en Heronite, esté instalada o no. Si la ventana de inicio de sesión no se abre, usa **O inicia sesión con tu navegador** en esa misma página y pega el código que te dé. Más información en [Solución de problemas](/es/docs/troubleshooting/#falla-un-inicio-de-sesión-o-una-descarga-de-una-tienda).
 
-Si aparece tu GPU, todo está listo. Si no, instala el controlador de Vulkan de tu distribución (por ejemplo `vulkan-radeon` o `vulkan-intel` en Arch, `mesa-vulkan-drivers` en Ubuntu, o el controlador de NVIDIA). Los juegos antiguos de 32 bits también necesitan el controlador de Vulkan de 32 bits, como `lib32-vulkan-radeon` o `mesa-vulkan-drivers:i386`.
+## Reclama los juegos gratis de la semana
 
-## Paso 3: Inicia sesión en Epic Games
+Heronite no reclama los juegos gratis de Epic, así que reclámalos en la web de Epic:
 
-1. Pulsa <kbd>Ctrl</kbd> <kbd>4</kbd> para abrir **Tiendas**.
-2. Elige **Epic Games** y luego **Iniciar sesión con Epic Games**.
-3. Inicia sesión en la ventana pequeña que se abre. La contraseña la escribes en la página de Epic.
+1. Abre la tienda de Epic en tu navegador e inicia sesión con la misma cuenta.
+2. Reclama el juego gratis.
+3. En Heronite, abre **Tiendas → Epic Games** y haz clic en **Actualizar biblioteca**.
 
-Si la ventana no se abre, usa el **método del navegador** en la misma página: abre la página de inicio de sesión en tu navegador de siempre, inicia sesión, copia la dirección o el código al que llegas y pégalo en Heronite. En Linux la ventana necesita WebKitGTK 4.1, y esa es la causa habitual.
+El juego aparece entonces en tu biblioteca. Si falta, comprueba que usaste la misma cuenta de Epic y actualiza otra vez.
 
-Cuando hayas iniciado sesión, toda tu biblioteca de Epic aparece en la Colección, esté instalada o no. Heronite la lee con [legendary](https://github.com/derrod/legendary). Hay más en [Tiendas y launchers](/es/docs/stores-and-launchers/).
+## Instala y juega a un juego de Epic
 
-## Paso 4: Reclama los juegos gratis de cada semana
+1. Mira la fila **En Linux** en los detalles del juego. Muestra la valoración de [ProtonDB](https://www.protondb.com) y el estado de anti-cheat. Un juego Gold o Platinum suele funcionar sin tocar nada.
+2. Selecciona el juego y pulsa <kbd>Enter</kbd>, o elige **Instalar con Epic Games**.
+3. Revisa la carpeta en **Seleccionar ruta de instalación**.
+4. Haz clic en **Instalar**. La descarga aparece en la página Descargas (<kbd>Ctrl</kbd> <kbd>2</kbd>).
+5. Cuando termine, selecciona el juego y pulsa <kbd>Enter</kbd> para jugar.
 
-Epic regala juegos gratis cada semana. Heronite no los reclama por ti, así que esta parte se hace en el lado de Epic:
+Cada juego tiene su propio prefijo de Wine (una carpeta que funciona como un Windows solo para ese juego). Si los archivos del juego ya están en el disco, elige **Importar juego** y selecciona la carpeta.
 
-1. Abre la página de la tienda de Epic en tu navegador e inicia sesión con la misma cuenta.
-2. Reclama el juego gratis para que se añada a tu biblioteca.
-3. Vuelve a Heronite, abre **Tiendas**, **Epic Games** y elige **Actualizar biblioteca** («Buscar juegos nuevos y actualizaciones»).
+## Cambia la versión de Proton
 
-El juego nuevo aparece en la Colección como cualquier otro. Los juegos gratis que reclamaste en semanas anteriores también están ahí.
-
-## Paso 5: Instala un juego
-
-Antes de instalar, mira los detalles del juego en la Colección. El recuadro **En Linux** muestra su valoración de [ProtonDB](https://www.protondb.com) y el estado del anticheat. Un juego con valoración Gold o Platinum suele funcionar sin tocar nada.
-
-1. Selecciona el juego y pulsa <kbd>Enter</kbd>, o elige **Instalar con Epic Games**.
-2. Revisa la **Carpeta de instalación** y la **Versión de Wine**. Si no estás seguro, deja la versión por defecto.
-3. Confirma. La descarga aparece en la página Descargas (<kbd>Ctrl</kbd> <kbd>2</kbd>).
-
-Cada juego tiene su propio prefijo de Wine, una carpeta de Windows privada y simulada. Deja desactivado **Usar el prefijo de Wine compartido** salvo que sepas por qué lo quieres. ¿Ya tienes los archivos de un juego en el disco? Usa **Importar una instalación existente** y apunta Heronite a esa carpeta.
-
-## Paso 6: Juega y cambia de Proton si hace falta
-
-Pulsa <kbd>Enter</kbd> sobre el juego para jugar. Si no arranca o va mal, abre **Ajustes del juego** y ve a **Compatibilidad**. El menú **Versión** te permite elegir otra versión de Proton, y la línea de ProtonDB suele indicar cuál funciona mejor.
+Si un juego no abre o va mal, ve a **Ajustes del juego → Compatibilidad** y elige otra versión en **Versión**. La línea de ProtonDB de esa pestaña suele indicar la mejor. Para elegirla antes de instalar, abre **Mostrar ajustes de Wine** en el diálogo de instalación y cambia la **Versión de Wine**.
 
 ![Los Ajustes del juego de Control, un juego de Epic, en la pestaña Compatibilidad: la versión de Proton GE-Proton-latest, su valoración Platinum de ProtonDB, el prefijo de Wine y los botones Winecfg y Winetricks.](../../../assets/screenshots/game-settings.webp)
 
-*La pestaña Compatibilidad: elige la versión de Proton para cada juego.*
+GE-Proton y Proton-CachyOS suelen traer correcciones antes que otras versiones. La [guía de GE-Proton](/es/guides/install-ge-proton/) explica cómo instalarlos.
 
-Versiones como GE-Proton y Proton-CachyOS suelen traer correcciones antes que las demás. La [guía de GE-Proton](/es/guides/install-ge-proton/) explica cómo instalarlas.
+## ¿Qué juegos de Epic bloquea el anti-cheat?
 
-## Fortnite y otros juegos con anticheat
+El anti-cheat es la razón principal por la que un juego online de Epic no funciona en Linux. Los juegos para un jugador rara vez tienen este problema.
 
-El anticheat es la razón principal por la que un juego de Epic no funciona en Linux.
+- Algunos juegos con Easy Anti-Cheat o BattlEye funcionan. Activa el runtime correspondiente en **Runtimes de anti-cheat**, dentro de **Ajustes del juego → Compatibilidad**, y Heronite lo descarga antes del siguiente inicio.
+- Los juegos cuyo desarrollador no permite Linux, como Fortnite, no funcionan.
 
-- Algunos juegos usan Easy Anti-Cheat o BattlEye y funcionan. Heronite puede aportar los componentes necesarios.
-- Algunos desarrolladores no permiten Linux, así que el juego no se ejecutará, hagas lo que hagas.
-- Fortnite es uno de ellos. El Easy Anti-Cheat de Epic puede dar soporte a Linux, pero el desarrollador del juego tiene que activarlo, y Fortnite no lo hace. [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) sigue el estado actual de cada juego.
+[Are We Anti-Cheat Yet?](https://areweanticheatyet.com) sigue el estado de cada juego. La documentación explica el [anti-cheat](/es/docs/wine-and-proton/#anticheat) con más detalle.
 
-Heronite muestra ese estado en los detalles del juego, así que míralo antes de instalar un juego multijugador grande. Los juegos para un jugador rara vez tienen este problema.
+## Un juego de Epic no abre en Linux
 
-## Solución de problemas
-
-- **La ventana de inicio de sesión no se abre.** Usa el método del navegador en la misma página, o instala WebKitGTK 4.1 (`libwebkit2gtk-4.1` o `webkit2gtk-4.1`).
-- **Falta un juego gratis.** Asegúrate de haberlo reclamado con la misma cuenta de Epic y actualiza la biblioteca.
-- **Falta una DLL o .NET.** Instálalo con Winetricks. Heronite indica cuál en el log de inicio.
-- **Un juego de DirectX 12 falla.** Activa VKD3D-Proton en los ajustes del juego. Si el error es de Direct3D, activa DXVK.
-- **«Vulkan no pudo iniciarse».** Suele faltar el controlador de Vulkan de 32 bits. Instálalo para tu GPU.
-- **Hay otro `wineserver` en ejecución.** Cierra el otro juego o ejecuta `wineserver -k` en ese prefijo.
-- **Se cierra al arrancar un juego reciente.** Sube `vm.max_map_count`. Muchas distribuciones ya lo hacen.
-
-Hay más soluciones en [Solución de problemas](/es/docs/troubleshooting/). Los logs están en **Ajustes → Logs**.
-
-## Qué leer a continuación
-
-- [Cómo instalar GE-Proton y Proton-CachyOS](/es/guides/install-ge-proton/), las versiones que arreglan más juegos.
-- [GOG en Linux](/es/guides/gog-on-linux/) y [Amazon Games en Linux](/es/guides/amazon-games-on-linux/) para traer tus otras tiendas a la misma Colección.
-- [Cómo funcionan las tiendas en Heronite](/es/features/stores/).
-- [Primeros pasos](/es/docs/getting-started/) para conocer el resto de la app.
+Lee su log de inicio en **Ajustes → Logs**. [Solución de problemas](/es/docs/troubleshooting/#un-juego-no-abre-linux) cubre las DLL que faltan, DirectX 12 y los errores de Vulkan.

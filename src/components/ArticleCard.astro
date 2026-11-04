@@ -10,15 +10,14 @@ interface Props {
   image?: ImageMetadata;
   /** Which part of the screenshot to keep in the thumbnail, as CSS object-position. */
   focus?: string;
-  cta?: string;
   level?: 'h2' | 'h3';
 }
 
-const { href, title, summary, label, image, focus, cta = 'Read more', level: H = 'h3' } = Astro.props;
+const { href, title, summary, label, image, focus, level: H = 'h3' } = Astro.props;
 ---
 
 <li>
-  <article class="card glass">
+  <article class="card panel">
     {image && (
       <div class="thumb" style={focus ? `--op:${focus}` : undefined}>
         <Image src={image} alt="" width={640} widths={[400, 640, 960]} sizes="(max-width: 760px) 100vw, 400px" quality={70} loading="lazy" />
@@ -28,7 +27,7 @@ const { href, title, summary, label, image, focus, cta = 'Read more', level: H =
       {label && <span class="lbl">{label}</span>}
       <H><a href={href}>{title}</a></H>
       <p>{summary}</p>
-      <span class="go" aria-hidden="true">{cta} &rarr;</span>
+      <span class="go" aria-hidden="true">&rarr;</span>
     </div>
   </article>
 </li>

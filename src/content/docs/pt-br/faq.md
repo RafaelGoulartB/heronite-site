@@ -1,56 +1,62 @@
 ---
-title: "Perguntas frequentes sobre o Heronite"
+title: "FAQ do Heronite: preço, Steam Deck, anti-cheat, segurança"
 navLabel: "FAQ"
-description: "Respostas sobre o Heronite: preço, Steam Deck, anticheat, diferenças para Heroic, Lutris e Playnite, segurança do login nas lojas e uso portátil."
+description: "O Heronite é grátis? Respostas curtas sobre Steam Deck, anti-cheat, diferenças para Heroic, Lutris e Playnite, segurança do login e uso portátil."
 section: Start
 order: 3
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-## O Heronite é gratuito?
+Respostas curtas sobre o Heronite, um launcher de jogos para Linux e Windows.
 
-Sim. Ele é gratuito e de código aberto, sob a [licença GPL-3.0](https://github.com/RafaelGoulartB/Heronite/blob/main/LICENSE). Não há contas, anúncios nem telemetria.
+## O Heronite é grátis?
 
-## Em quais sistemas ele funciona?
+Sim. Ele é open source, sob a [licença GPL-3.0](https://github.com/RafaelGoulartB/Heronite/blob/main/LICENSE), sem contas, anúncios nem telemetria.
+
+## Em quais sistemas ele roda?
 
 Linux (qualquer distribuição, x86_64) e Windows 10 e 11 (x86_64). Veja [Instalação](/pt-br/docs/installation/).
 
 ## Funciona no Steam Deck?
 
-O Heronite roda no Linux como AppImage, que é como os apps costumam ser instalados no modo desktop do SteamOS, e o [Modo console](/pt-br/docs/console-mode/) foi feito para controles. Para usá-lo no Modo de Jogo, adicione o AppImage à Steam como um jogo que não é da Steam, com a opção `--console`.
+Sim. O Heronite roda como AppImage no modo desktop do SteamOS. Para o Modo de Jogo, adicione o AppImage à Steam como jogo que não é da Steam, com a opção `--console`. O [modo console](/pt-br/docs/console-mode/) foi feito para controles; veja o [guia do Steam Deck](/pt-br/guides/steam-deck/).
 
 ## Qual a diferença para Heroic, Lutris ou Playnite?
 
-- **Tudo em um só lugar:** Steam, Epic, GOG, Amazon, os clientes das lojas, emuladores e seus próprios jogos, no Linux e no Windows.
-- **Leve:** um app nativo em Rust desenhado na GPU, sem navegador embutido. Cerca de 190 MB de memória em repouso, e a biblioteca na tela em cerca de 0,2 s.
-- **Seu histórico de jogo:** cada sessão registrada, estatísticas, um diário, uma meta de backlog e um resumo do ano.
+- **Tudo em um lugar só:** Steam, Epic, GOG, Amazon, apps de loja, emuladores e seus próprios jogos.
+- **Leve:** um app nativo em Rust que usa a GPU para mostrar a tela, sem navegador embutido. Ele usa cerca de 190 MB de RAM parado e mostra a biblioteca em cerca de 215 ms.
+- **Seu histórico de jogo:** cada sessão, estatísticas, um diário, uma meta de backlog e uma retrospectiva do ano.
 - **Modo console** com temas que você pode mudar e compartilhar.
 
-No Linux, ele pode importar seus jogos do Heroic, Lutris, Bottles e Faugus, então você pode testá-lo sem perder nada.
+Ele importa seus jogos do Heroic, Lutris, Bottles e Faugus no Linux, e do Playnite no Windows. Veja [Heronite vs Heroic](/pt-br/compare/heroic/), [vs Lutris](/pt-br/compare/lutris/) e [vs Playnite](/pt-br/compare/playnite/).
+
+## Dá para usar a mesma biblioteca em dois PCs?
+
+Sim. **Configurações → Nuvem** deixa seus status, favoritos, notas, tempo de jogo e sessões iguais em todos os PCs, como o Linux e o Windows de um dual boot. A sincronização usa uma pasta compartilhada ou uma conta na nuvem; veja [Backups e saves](/pt-br/docs/backups-and-saves/).
 
 ## Vou perder minha configuração do Heroic?
 
-Não. Na primeira inicialização, o Heronite copia os dados do Heroic uma única vez e só os lê. O Heroic continua funcionando como antes.
+Não. O Heronite nunca altera os arquivos do Heroic. Na primeira abertura, ele copia uma vez os logins, as configurações e os jogos adicionados à mão do Heroic, e o Heroic continua funcionando.
 
-## Jogos com anticheat funcionam?
+## Jogos com anti-cheat funcionam?
 
-No Windows, sim, como em qualquer launcher. No Linux, depende do jogo: o status do anticheat do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) aparece nos detalhes do jogo.
+No Windows, sim, como em qualquer launcher. No Linux, depende do jogo. O Heronite mostra nos detalhes de cada jogo o status do [Are We Anti-Cheat Yet?](https://areweanticheatyet.com); veja [Anti-cheat](/pt-br/docs/wine-and-proton/#anti-cheat).
 
 ## O login nas minhas lojas é seguro?
 
-O Heronite usa as mesmas ferramentas de código aberto do Heroic (legendary, gogdl, nile). Seus logins ficam no seu PC e são enviados só para as lojas. Você digita a senha na página de login da própria loja.
+Sim. O Heronite usa as mesmas ferramentas open source do Heroic: legendary para a Epic, gogdl para a GOG e nile para a Amazon. Seus logins ficam no seu PC e só vão para as lojas, e você digita a senha na página de login da própria loja.
 
 ## Por que o Windows mostra um aviso do SmartScreen?
 
-Os arquivos do Windows ainda não têm assinatura de código. Mesmo assim, toda versão é assinada com minisign, e o Heronite confere essa assinatura antes de instalar uma atualização.
+Os arquivos do Windows ainda não são assinados. Escolha **Mais informações** e depois **Executar assim mesmo**. Mesmo assim, toda versão é assinada com minisign, e o Heronite confere essa assinatura antes de instalar uma atualização.
 
 ## Posso levar tudo em um pendrive?
 
-Sim, com a cópia portátil do Windows. Veja [Arquivos e pastas](/pt-br/docs/files-and-folders/).
+Sim, com a cópia portátil do Windows. Veja [Arquivos e pastas](/pt-br/docs/files-and-folders/#a-cópia-portátil-windows).
 
-## Em quais idiomas ele está disponível?
+## Em quais idiomas o Heronite está?
 
-Inglês, português (Brasil), espanhol e alemão. Ajude a traduzir: veja [Tradução](/pt-br/docs/translating/).
+Inglês, português (Brasil), espanhol e alemão. Para ajudar a traduzir, veja [Tradução](/pt-br/docs/translating/).
 
 ## Onde peço ajuda ou sugiro um recurso?
 

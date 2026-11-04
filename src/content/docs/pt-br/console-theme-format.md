@@ -1,22 +1,23 @@
 ---
 title: "Formato de tema do modo console (.heronite-theme.json)"
-description: "O formato do arquivo .heronite-theme.json dos temas do modo console: regras, um exemplo completo e todos os campos que você pode definir à mão."
+navLabel: "Formato de tema do console"
+description: "O formato do arquivo .heronite-theme.json dos temas do modo console: as regras, um exemplo completo e todos os campos que você pode definir à mão."
 section: Reference
 order: 5
-updated: 2026-11-01
+updated: 2026-11-04
 ---
 
-Um tema do modo console é um único arquivo JSON, `<id>.heronite-theme.json`. O jeito mais fácil de criar um é no próprio Heronite (**Configurações → Modo console**) e depois **Exportar**; esta página serve para ler ou editar o arquivo à mão.
+Um tema do modo console é um único arquivo JSON, `<id>.heronite-theme.json`. O jeito mais fácil de criar um é em **Configurações → Modo console** e depois **Exportar…**. Publique o seu nas [Discussões](https://github.com/RafaelGoulartB/Heronite/discussions) para outras pessoas importarem.
 
-## Regras
+## Regras do arquivo
 
 - As chaves usam camelCase.
-- **Todos os campos são opcionais.** Um campo ausente assume o valor do tema Clássico.
-- Um valor desconhecido volta ao padrão daquele campo, e chaves desconhecidas são mantidas, então um tema criado por um Heronite mais novo ainda abre.
-- `format` é a versão do formato do arquivo, atualmente `1`. Um tema com `format` maior é recusado na importação.
-- A imagem de fundo vai embutida no arquivo (PNG, JPEG ou WebP, no máximo 16 MiB), então um único arquivo é tudo o que você compartilha.
+- **Todos os campos são opcionais.** Um campo que falta assume o valor do tema Clássico.
+- Um valor desconhecido volta ao padrão daquele campo, e chaves desconhecidas são mantidas, então um tema feito por um Heronite mais novo ainda abre.
+- `format` é a versão do formato do arquivo, hoje `1`. Um tema com `format` maior é recusado na importação.
+- A imagem de fundo vai dentro do arquivo (PNG, JPEG ou WebP, no máximo 16 MiB), então você compartilha um arquivo só.
 
-## Exemplo
+## Exemplo de arquivo de tema
 
 ```json
 {
@@ -40,7 +41,7 @@ Um tema do modo console é um único arquivo JSON, `<id>.heronite-theme.json`. O
 }
 ```
 
-## Campos
+## Campos que você pode definir
 
 ### Sobre o tema
 
@@ -56,17 +57,17 @@ Até quatro abas, trocadas com LB / RB. Cada uma é `{ "name", "layout", "source
 
 - **`layout`:** `shelves`, `spotlight`, `cinema`, `dashboard`, `grid`, `wheel`, `carousel` ou `xbox` (o layout Series X).
 - **`source`** (quais jogos a aba mostra):
-  - `all`, `installed`, `not-installed`, `favourites`, `pc`, `emulated`,
-  - `status:<id>`, `category:<name>`, `store:<name>`, `platform:<name>`.
+  - `all`, `installed`, `not-installed`, `favourites`, `pc`, `emulated`
+  - `status:<id>`, `category:<nome>`, `store:<nome>`, `platform:<nome>`
 
 ### `shelves`
 
 As linhas do layout Prateleiras. Cada uma é `{ "kind", "on", "title" }`.
 
 - **`kind`:**
-  - `recent`, `favourites`, `installed`, `added`, `backlog-short`, `random`, `forgotten`, `statuses`,
-  - ou um grupo: `status:<id>`, `store:<name>`, `platform:<name>`, `genre:<name>`, `category:<name>`.
-- **`on`:** `true` ou `false`.
+  - `recent`, `favourites`, `installed`, `added`, `backlog-short`, `random`, `forgotten`, `statuses`
+  - Um grupo: `status:<id>`, `store:<nome>`, `platform:<nome>`, `genre:<nome>`, `category:<nome>`
+- **`on`:** `true` ou `false`
 
 `shelfLimit` define quantos jogos uma prateleira mostra.
 
@@ -108,7 +109,7 @@ As linhas do layout Prateleiras. Cada uma é `{ "kind", "on", "title" }`.
 | `dim` | `0` a `90` |
 | `blur` | `0` a `40` |
 | `motion` | `still`, `drift` |
-| `image` | A imagem, como uma URL `data:` (escrita pela exportação) |
+| `image` | A imagem, como uma URL `data:` (escrita pelo Exportar) |
 
 ### `interface`
 
@@ -150,17 +151,14 @@ As linhas do layout Prateleiras. Cada uma é `{ "kind", "on", "title" }`.
 
 ### `layouts`
 
-Opções de cada layout:
+Opções de layouts específicos:
 
-- `gridPanel`: `title` ou `right`,
-- `wheelItems`: `name` ou `logo`,
-- `spotlightActions`: `full` ou `play`,
-- e também `jumpLetters`, `spotlightCards`, `carouselReflect`, `xboxGroups` e `dashboard` (`week`, `downloads`, `random`, `journal`, `shortcuts`).
+- `gridPanel`: `title` ou `right`
+- `wheelItems`: `name` ou `logo`
+- `spotlightActions`: `full` ou `play`
+- `jumpLetters`, `spotlightCards`, `carouselReflect`, `xboxGroups`
+- `dashboard`: `week`, `downloads`, `random`, `journal`, `shortcuts`
 
-## O que não faz parte de um tema
+## O que um tema não inclui
 
-O que acontece quando um controle é conectado, como o Heronite abre e o que ele faz quando está ocioso são configurações do seu PC, não do tema, por isso não estão no arquivo.
-
-## Compartilhe o seu
-
-Publique seu tema nas [Discussões](https://github.com/RafaelGoulartB/Heronite/discussions) para que outras pessoas possam importá-lo.
+O arquivo deixa de fora o que acontece quando um controle conecta, como o Heronite abre e o que ele faz quando fica parado. Essas são configurações do seu PC, não do tema.
