@@ -56,7 +56,7 @@ body{width:1200px;height:630px;overflow:hidden;background:#0a0d11;color:#eef2f6;
 .shot img{display:block;width:100%}
 .copy{position:absolute;left:72px;top:64px;bottom:60px;width:560px;display:flex;flex-direction:column}
 .brand{display:flex;align-items:center;gap:14px;font:600 20px/1 Rubik;letter-spacing:.24em;color:#dfe6ec}
-.brand img{width:44px;height:44px;border-radius:11px}
+.brand img{width:44px;height:44px;border-radius:22%;outline:1px solid rgba(255,255,255,.1);outline-offset:-1px}
 .eyebrow{margin-top:auto;display:flex;align-items:center;gap:14px;font:600 19px/1 Rubik;letter-spacing:.12em;text-transform:uppercase;color:#c6cfd8}
 .eyebrow::before{content:"";width:34px;height:2px;background:currentColor;opacity:.7}
 h1{margin-top:22px;font:700 ${headline.length > 55 ? 54 : 66}px/1.04 Rubik;letter-spacing:-.025em;text-wrap:balance}
@@ -67,7 +67,7 @@ h1 em{font-style:normal;color:#8fd3ea}
 <div class="bg"></div><div class="shade"></div>
 <div class="shot"><img src="file://${shots}/${shot}"></div>
 <div class="copy">
-  <div class="brand"><img src="file://${root}public/icon.png">HERONITE</div>
+  <div class="brand"><img src="file://${root}public/icon-small.png">HERONITE</div>
   <p class="eyebrow">${escape(eyebrow)}</p>
   <h1>${escape(headline).replace(/\*(.+?)\*/g, '<em>$1</em>')}</h1>
   <p class="foot"><b>heronite.app</b> · ${footers[lang]}</p>

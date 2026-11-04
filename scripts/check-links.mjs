@@ -31,7 +31,8 @@ for (const page of pages) {
   const from = '/' + relative(dist, page).replace(/index\.html$/, '');
   for (const [, href] of html.matchAll(/\shref="([^"]+)"/g)) {
     if (/^(https?:|mailto:|data:)/.test(href) || href.startsWith('//')) continue;
-    const [path, hash] = href.split('#');
+    const [withQuery, hash] = href.split('#');
+    const path = withQuery.split('?')[0];
     const target = path ? fileFor(path.startsWith('/') ? path : new URL(path, `https://x${from}`).pathname) : page;
     if (path && !path.startsWith('/_astro/') && /\/[^/.]+$/.test(path)) {
       console.log(`${from}: ${href} has no trailing slash`);
