@@ -62,6 +62,7 @@ const en = {
     packages: '.deb, .rpm and Arch',
     linuxFineHtml: 'Packages for Debian, Ubuntu, Fedora, openSUSE and Arch are on the <a href="{releases}">releases page</a>. See <a href="{install}">how to install</a>.',
     deckHtml: 'On a Steam Deck? Follow the <a href="{guide}">Steam Deck guide</a>.',
+    yourSystem: 'For your system',
     version: 'Version {version} · {date}',
     signed: 'Signed with minisign',
   },
@@ -166,6 +167,7 @@ const en = {
     playMotion: 'Play motion',
     sources: 'Plays games from',
     sourcesMore: 'and emulators, and your own games',
+    sourcesHow: 'Steam is read with no login. Epic, GOG and Amazon install from Heronite once you log in. On Linux, Battle.net, EA, Ubisoft and Rockstar each run in their own Wine prefix.',
     collection: {
       alt: 'Heronite’s Collection: game covers grouped into Playing and On Going, with play time under each, and ELDEN RING open with its cover, Play button, score, Linux rating and a timeline of play sessions.',
       callouts: ['Group by status', 'Play time per game', 'Linux rating and anti-cheat', 'Your timeline', 'List or grid of covers'],
@@ -219,10 +221,12 @@ const en = {
       headline: 'From desk to couch.',
       lead: 'A controller-first layout for the TV and the Steam Deck, with the same library behind it.',
       link: 'Explore console mode',
+      padTitle: 'Controller first',
       pad: 'D-pad, A and B. No mouse needed.',
       count: '8 layouts · 7 themes',
-      themes: 'or make your own and share it',
-      deckHtml: 'Add it to Steam with <code>--console</code> and play from Gaming Mode',
+      themes: 'Or make your own and share it.',
+      deckTitle: 'Steam Gaming Mode',
+      deckHtml: 'Add it to Steam with <code>--console</code>.',
       homeAlt: 'Console mode home: SP Football Life 2026 in focus above a Continue playing shelf of covers, controller hints along the bottom',
     },
     light: {
@@ -231,7 +235,7 @@ const en = {
       link: 'Why it is fast',
       memory: 'memory while idle, typically',
       cpu: 'CPU while idle, typically',
-      install: 'to install',
+      install: 'on disk after install',
       browsers: 'bundled browsers, so no Electron',
     },
     switch: {
@@ -246,6 +250,7 @@ const en = {
     download: {
       headline: 'Download',
       lead: 'Free and open source under GPL-3.0. No account, no ads, no telemetry.',
+      files: 'Download files for Windows and Linux',
     },
     maker: {
       textHtml: 'Heronite is made by one developer, {author}, in the open. <strong>A star on GitHub is how other players find it.</strong>',

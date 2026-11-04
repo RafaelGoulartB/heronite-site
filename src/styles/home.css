@@ -35,6 +35,7 @@
 .g-a{color:#7fe0a3}.g-b{color:#ff8f8f}.g-y{color:#f2c45a}.g-x{color:#7fb8ff}
 .btn-primary .glyph{background:#0b2530;box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
 .btn .glyph{margin-left:-6px}
+.star-ico{width:16px;height:16px;color:var(--star)}
 .send-btn[hidden]{display:none}
 .hero-meta{display:flex;flex-wrap:wrap;gap:4px 0;margin-top:22px;font:500 13.5px/1.6 var(--mono);color:#b8c0ca}
 .hero-meta > *{white-space:nowrap}
@@ -73,6 +74,7 @@
 .src-logos svg{width:28px;height:28px}
 .src-more{font:500 15px/1.2 var(--head);color:var(--soft);text-decoration:none}
 .src-more:hover{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+.src-how{flex-basis:100%;max-width:74ch;margin:0 auto;text-align:center;color:var(--muted);font-size:14.5px;line-height:1.55}
 
 /* ---------- sections ---------- */
 .sec{position:relative;padding:120px 0 0}
@@ -117,11 +119,12 @@
 .t-yir .crop{flex:1 1 auto}
 
 /* ---------- console mode, on a handheld, at full width ---------- */
-.sec-console{margin-top:120px;padding:72px 0 40px;background:linear-gradient(180deg,var(--bg),#0d1117 16%,#0d1117 84%,var(--bg))}
+.sec-console{margin-top:40px;padding:80px 0 40px;background:linear-gradient(180deg,var(--bg),#0d1117 16%,#0d1117 84%,var(--bg))}
 .cons-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 64px;align-items:start;margin-top:56px}
 .cons-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;padding:0;list-style:none}
-.cons-facts li{display:flex;flex-direction:column;gap:12px;padding:4px 22px;border-left:1px solid var(--line);color:var(--soft);font-size:15.5px;line-height:1.45}
-.cons-facts b{display:flex;align-items:center;height:30px;white-space:nowrap;font:700 20px/1 var(--head);color:var(--text);letter-spacing:-.01em}
+.cons-facts li{display:flex;flex-direction:column;gap:6px;padding:4px 22px;border-left:1px solid var(--line);color:var(--soft);font-size:15.5px;line-height:1.45}
+.cons-facts .cf-key{margin-bottom:8px}
+.cons-facts b{font:600 17px/1.3 var(--head);color:var(--text)}
 .cf-key{display:flex;gap:6px;height:30px;align-items:center}
 .cf-key .glyph{width:28px;height:28px;font-size:13px}
 .cf-key svg{width:28px;height:28px;color:var(--text)}
@@ -175,6 +178,15 @@
 
 /* ---------- download and the maker ---------- */
 .sec-dl .send-btn{margin-top:22px}
+.dl-files > summary{display:none}
+.os.is-mine{border-color:rgba(95,203,241,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 0 0 1px rgba(95,203,241,.25),0 24px 60px -30px rgba(95,203,241,.35)}
+.os-mine{margin-left:auto;padding:4px 10px;border-radius:999px;background:rgba(95,203,241,.12);color:var(--accent);font:600 12.5px/1.2 var(--head)}
+.os-mine[hidden]{display:none}
+.phone .dl-files > summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-radius:14px;border:1px solid var(--line-2);background:var(--surface);color:var(--soft);font:600 15px/1.3 var(--head);cursor:pointer;list-style:none}
+.phone .dl-files > summary::-webkit-details-marker{display:none}
+.phone .dl-files > summary::after{content:"+";color:var(--accent);font-size:22px;font-weight:400}
+.phone .dl-files[open] > summary{margin-bottom:14px}
+.phone .dl-files[open] > summary::after{content:"×"}
 .maker{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:22px;margin-top:16px;padding:22px 24px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
 .maker img{width:52px;height:52px;border-radius:13px}
 .maker p{color:var(--soft);font-size:16px;line-height:1.5}
@@ -236,9 +248,9 @@
 
 /* ---------- phones get the star first, and a way to send the page to a PC ---------- */
 .phone .dl-btn{display:none}
-.phone .hero .star-btn{background:var(--accent);color:var(--accent-ink);border-color:transparent}
-.phone .hero .star-btn > svg,.phone .closing .star-btn > svg{color:var(--accent-ink)}
-.phone .closing .star-btn{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.phone .hero .star-btn,.phone .closing .star-btn{background:var(--star);color:#2b1f05;border-color:transparent}
+.phone .hero .star-ico,.phone .closing .star-ico{color:#2b1f05}
+
 .phone .nav .btn-primary{display:none}
 
 /* ---------- responsive ---------- */
@@ -278,9 +290,11 @@
   .motion{display:none !important}
   /* the whole window is too small to read on a phone: show the shelf and the game page, big */
   .anno{margin-top:40px}
-  .frame{aspect-ratio:300 / 440}
-  .frame picture{width:426.7%;margin-top:calc(-30 / 300 * 100%)}
-  .legend li:nth-child(n+3){display:none}
+  /* the game page: Play, the Linux rating and anti-cheat, the timeline */
+  .frame{aspect-ratio:330 / 350;-webkit-mask:linear-gradient(90deg,#000 82%,transparent);mask:linear-gradient(90deg,#000 82%,transparent)}
+  .frame picture{width:387.9%;margin:calc(-250 / 330 * 100%) 0 0 calc(-296 / 330 * 100%)}
+  .legend li:not(:nth-child(3)):not(:nth-child(4)){display:none}
+  .x-linux{display:none}
   .callout{display:none}
   .legend{grid-template-columns:1fr;gap:8px}
   .legend li::before{content:"";width:14px;height:14px;border-radius:0;background:var(--accent);
@@ -289,7 +303,7 @@
   .sources{justify-content:flex-start;padding-top:32px}
   .src-logos{justify-content:flex-start;gap:14px 22px}
   .src-logos svg{width:24px;height:24px}
-  .sec{padding-top:80px}
+  .sec{padding-top:72px}
   .sec-head{margin-bottom:28px}
   .sec .lead{font-size:16.5px}
   .extras{grid-template-columns:1fr}
@@ -309,15 +323,15 @@
   .hh-body{display:block;padding:0;background:none;box-shadow:none;border-radius:0}
   .hh-screen{border-radius:12px;box-shadow:0 0 0 6px #16181c,0 0 0 7px rgba(255,255,255,.08),0 30px 60px -20px rgba(0,0,0,.8)}
   .cons-facts{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
-  .cons-facts li{flex-direction:row;align-items:center;gap:14px;padding:14px 0;border-left:0;border-bottom:1px solid var(--line)}
-  .cons-facts li{flex-wrap:wrap;column-gap:12px;row-gap:2px}
-  .cons-facts b{font-size:18px;min-width:56px}
+  .cons-facts li{display:grid;grid-template-columns:64px minmax(0,1fr);align-items:center;gap:2px 12px;padding:14px 0;border-left:0;border-bottom:1px solid var(--line)}
+  .cons-facts .cf-key{grid-row:span 2;margin:0}
+  .cons-facts b{font-size:16px}
   .cf-key{min-width:56px}
   /* home.css loads before base.css, so this needs the extra class to win */
   .wrap .crop{--X:var(--mx,var(--x));--Y:var(--my,var(--y));--W:var(--mw,var(--w));--CH:var(--mh,var(--h))}
   .tile .crop{min-height:0}
   .t-yir .crop{aspect-ratio:var(--W) / var(--CH);height:auto;max-height:440px}
-  .sec-console{margin-top:80px;padding:64px 0}
+  .sec-console{margin-top:24px;padding:48px 0 16px}
   .hh-body{border-radius:26px}
   .perf-big{font-size:96px}
   .perf-list b{font-size:34px}

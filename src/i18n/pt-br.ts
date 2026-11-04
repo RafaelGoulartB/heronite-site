@@ -60,6 +60,7 @@ const ptBr: Dict = {
     packages: '.deb, .rpm e Arch',
     linuxFineHtml: 'Pacotes para Debian, Ubuntu, Fedora, openSUSE e Arch estão na <a href="{releases}">página de versões</a>. Veja <a href="{install}">como instalar</a>.',
     deckHtml: 'Em um Steam Deck? Siga o <a href="{guide}">guia do Steam Deck</a>.',
+    yourSystem: 'Para o seu sistema',
     version: 'Versão {version} · {date}',
     signed: 'Assinado com minisign',
   },
@@ -164,6 +165,7 @@ const ptBr: Dict = {
     playMotion: 'Retomar animação',
     sources: 'Roda jogos de',
     sourcesMore: 'e emuladores, e seus próprios jogos',
+    sourcesHow: 'A Steam é lida sem login. Epic, GOG e Amazon instalam pelo Heronite depois que você entra. No Linux, Battle.net, EA, Ubisoft e Rockstar rodam cada um no seu próprio prefixo do Wine.',
     collection: {
       alt: 'A Coleção do Heronite: capas de jogos agrupadas em Jogando e Em andamento, com o tempo de jogo embaixo de cada uma, e ELDEN RING aberto com a capa, o botão Jogar, a nota, a avaliação no Linux e uma linha do tempo das sessões.',
       callouts: ['Agrupar por status', 'Tempo de jogo por jogo', 'Avaliação no Linux e anti-cheat', 'Sua linha do tempo', 'Lista ou grade de capas'],
@@ -217,10 +219,12 @@ const ptBr: Dict = {
       headline: 'Da mesa para o sofá.',
       lead: 'Um layout para controle, pensado para a TV e o Steam Deck, com a mesma biblioteca por trás.',
       link: 'Conheça o modo console',
+      padTitle: 'Feito para controle',
       pad: 'Direcional, A e B. Sem mouse.',
       count: '8 layouts · 7 temas',
-      themes: 'ou crie o seu e compartilhe',
-      deckHtml: 'Adicione à Steam com <code>--console</code> e jogue pelo Modo Jogo',
+      themes: 'Ou crie o seu e compartilhe.',
+      deckTitle: 'Modo Jogo da Steam',
+      deckHtml: 'Adicione à Steam com <code>--console</code>.',
       homeAlt: 'Início do modo console: SP Football Life 2026 em destaque acima de uma prateleira Continuar jogando com capas, e dicas do controle na parte de baixo',
     },
     light: {
@@ -229,7 +233,7 @@ const ptBr: Dict = {
       link: 'Por que é rápido',
       memory: 'de memória em repouso, em geral',
       cpu: 'de CPU em repouso, em geral',
-      install: 'para instalar',
+      install: 'em disco após instalar',
       browsers: 'navegadores embutidos, ou seja, sem Electron',
     },
     switch: {
@@ -244,6 +248,7 @@ const ptBr: Dict = {
     download: {
       headline: 'Baixar',
       lead: 'Grátis e open source sob a GPL-3.0. Sem conta, sem anúncios, sem telemetria.',
+      files: 'Arquivos para Windows e Linux',
     },
     maker: {
       textHtml: 'O Heronite é feito por um desenvolvedor, {author}, de forma aberta. <strong>Uma estrela no GitHub é como outros jogadores o encontram.</strong>',

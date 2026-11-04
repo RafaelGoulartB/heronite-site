@@ -131,6 +131,7 @@ const softwareApplication = {
           <a class="btn btn-ghost star-btn" href={site.repo}>
             <i class="glyph g-y" aria-hidden="true">Y</i>
             <span>{t.star}</span>
+            <Icon name="star" class="star-ico" />
           </a>
           <button class="btn btn-ghost send-btn" type="button" hidden data-copied={t.copied}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -171,6 +172,7 @@ const softwareApplication = {
           {stores.map((s) => <li title={s.name}><Icon name={s.icon} /><span class="sr">{s.name}</span></li>)}
         </ul>
         <a class="src-more" href={to('/features/stores/')}>{t.sourcesMore} &rarr;</a>
+        <p class="src-how">{t.sourcesHow}</p>
       </div>
     </div>
   </header>
@@ -234,9 +236,9 @@ const softwareApplication = {
           <a class="more-link" href={to('/features/console-mode/')}>{t.console.link} &rarr;</a>
         </div>
         <ul class="cons-facts">
-          <li><span class="cf-key" aria-hidden="true"><i class="glyph g-a">A</i><i class="glyph g-b">B</i></span><span>{t.console.pad}</span></li>
-          <li><b>{t.console.count}</b><span>{t.console.themes}</span></li>
-          <li><span class="cf-key" aria-hidden="true"><Icon name="steam" /></span><span set:html={t.console.deckHtml} /></li>
+          <li><span class="cf-key" aria-hidden="true"><i class="glyph g-a">A</i><i class="glyph g-b">B</i></span><b>{t.console.padTitle}</b><span>{t.console.pad}</span></li>
+          <li><span class="cf-key" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="4" width="8" height="7" rx="1.5"/><rect x="13" y="4" width="8" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/></svg></span><b>{t.console.count}</b><span>{t.console.themes}</span></li>
+          <li><span class="cf-key" aria-hidden="true"><Icon name="steam" /></span><b>{t.console.deckTitle}</b><span set:html={t.console.deckHtml} /></li>
         </ul>
       </div>
     </div>
@@ -300,7 +302,10 @@ const softwareApplication = {
           <span>{t.sendToPc}</span>
         </button>
       </div>
-      <DownloadCards />
+      <details class="dl-files" id="dl-files" open>
+        <summary>{t.download.files}</summary>
+        <DownloadCards />
+      </details>
       <div class="maker">
         <img src="/icon.png" alt="" width="52" height="52" loading="lazy" />
         <div class="maker-text">
@@ -365,6 +370,7 @@ const softwareApplication = {
         <a class="btn btn-ghost star-btn" href={site.repo}>
           <i class="glyph g-y" aria-hidden="true">Y</i>
           <span>{t.star}</span>
+          <Icon name="star" class="star-ico" />
         </a>
         <button class="btn btn-ghost send-btn" type="button" hidden data-copied={t.copied}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -426,8 +432,18 @@ const softwareApplication = {
       });
       io.observe(document.getElementById('top'));
       io.observe(document.getElementById('close'));
-    } else if (/win/i.test(ua)) set(installer, labelWindows, fmt.dataset.windows);
-    else if (/linux|x11/i.test(ua)) set(appImage, labelLinux, fmt.dataset.linux);
+      document.getElementById('dl-files').open = false;
+    } else {
+      var os = /win/i.test(ua) ? 'windows' : /linux|x11/i.test(ua) ? 'linux' : '';
+      if (os === 'windows') set(installer, labelWindows, fmt.dataset.windows);
+      if (os === 'linux') set(appImage, labelLinux, fmt.dataset.linux);
+      var card = os && document.querySelector('.os[data-os="' + os + '"]');
+      if (card) {
+        card.classList.add('is-mine');
+        card.querySelector('.os-mine').hidden = false;
+        card.parentNode.prepend(card);
+      }
+    }
     // Once a download starts, suggest a star while it finishes.
     var after = document.getElementById('after-dl');
     document.addEventListener('click', function (e) {

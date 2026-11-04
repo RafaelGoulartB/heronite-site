@@ -60,6 +60,7 @@ const es: Dict = {
     packages: '.deb, .rpm y Arch',
     linuxFineHtml: 'Los paquetes para Debian, Ubuntu, Fedora, openSUSE y Arch están en la <a href="{releases}">página de versiones</a>. Mira <a href="{install}">cómo instalar</a>.',
     deckHtml: '¿En una Steam Deck? Sigue la <a href="{guide}">guía de la Steam Deck</a>.',
+    yourSystem: 'Para tu sistema',
     version: 'Versión {version} · {date}',
     signed: 'Firmado con minisign',
   },
@@ -164,6 +165,7 @@ const es: Dict = {
     playMotion: 'Reanudar animación',
     sources: 'Ejecuta juegos de',
     sourcesMore: 'y emuladores, y tus propios juegos',
+    sourcesHow: 'Steam se lee sin iniciar sesión. Epic, GOG y Amazon se instalan desde Heronite al iniciar sesión. En Linux, Battle.net, EA, Ubisoft y Rockstar se ejecutan cada uno en su propio prefijo de Wine.',
     collection: {
       alt: 'La Colección de Heronite: portadas de juegos agrupadas en Jugando y En curso, con el tiempo de juego bajo cada una, y ELDEN RING abierto con su portada, el botón Jugar, la nota, la valoración en Linux y una línea de tiempo de sesiones.',
       callouts: ['Agrupar por estado', 'Tiempo de juego por juego', 'Valoración en Linux y anti-cheat', 'Tu línea de tiempo', 'Lista o cuadrícula de portadas'],
@@ -217,10 +219,12 @@ const es: Dict = {
       headline: 'Del escritorio al sofá.',
       lead: 'Un diseño pensado para mando, para la tele y la Steam Deck, con la misma biblioteca detrás.',
       link: 'Descubre el modo consola',
+      padTitle: 'Pensado para mando',
       pad: 'Cruceta, A y B. Sin ratón.',
       count: '8 diseños · 7 temas',
-      themes: 'o crea el tuyo y compártelo',
-      deckHtml: 'Añádelo a Steam con <code>--console</code> y juega desde el Modo Juego',
+      themes: 'O crea el tuyo y compártelo.',
+      deckTitle: 'Modo Juego de Steam',
+      deckHtml: 'Añádelo a Steam con <code>--console</code>.',
       homeAlt: 'Inicio del modo consola: SP Football Life 2026 destacado sobre una estantería Seguir jugando con portadas, y pistas del mando en la parte inferior',
     },
     light: {
@@ -229,7 +233,7 @@ const es: Dict = {
       link: 'Por qué es rápido',
       memory: 'de memoria en reposo, normalmente',
       cpu: 'de CPU en reposo, normalmente',
-      install: 'para instalar',
+      install: 'en disco tras instalar',
       browsers: 'navegadores incluidos, así que sin Electron',
     },
     switch: {
@@ -244,6 +248,7 @@ const es: Dict = {
     download: {
       headline: 'Descargar',
       lead: 'Gratis y de código abierto bajo la GPL-3.0. Sin cuenta, sin anuncios, sin telemetría.',
+      files: 'Archivos para Windows y Linux',
     },
     maker: {
       textHtml: 'Heronite lo hace un solo desarrollador, {author}, en abierto. <strong>Una estrella en GitHub es como otros jugadores lo encuentran.</strong>',
