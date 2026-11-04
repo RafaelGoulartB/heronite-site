@@ -9,7 +9,6 @@ import Faq from '../components/Faq.astro';
 import { medium } from '../lib/shots';
 import { articles, articleUrl, slugOf } from '../lib/content';
 import { latest, releases, totalDownloads, version } from '../lib/releases';
-import { formatStars, stars } from '../lib/stars';
 import { downloads, site, stores } from '../data/site';
 import type { IconName } from '../data/icons';
 import { fill, formatDate, localeInfo, localize, useText, type Locale } from '../i18n';
@@ -42,11 +41,10 @@ const wallRows = [
   }),
 );
 
-const [guides, compare, release, starCount, downloadCount, allReleases] = await Promise.all([
+const [guides, compare, release, downloadCount, allReleases] = await Promise.all([
   articles('guides', lang),
   articles('compare', lang),
   latest(),
-  stars(),
   totalDownloads(),
   releases(),
 ]);
@@ -56,9 +54,6 @@ const activity = release && fill(t.maker.activity, {
   date: formatDate(lang, new Date(release.date)),
 });
 const numberFormat = localeInfo[lang].htmlLang;
-const starText = formatStars(starCount, numberFormat);
-// The next round number of stars, for the progress bar under the maker's note.
-const goal = Math.max(100, Math.ceil((starCount + 1) / 50) * 50);
 const size = (name: string) => {
   const asset = release?.assets.find((a) => a.name === name);
   return asset ? `${Math.round(asset.size / 1e6)} MB` : '';
@@ -124,15 +119,11 @@ const softwareApplication = {
         <p class="lead">{t.lead}</p>
         <div class="actions">
           <a class="btn btn-primary dl-btn" id="dl-main" href={to('/download/')}>
-            <i class="glyph g-a" aria-hidden="true">A</i>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
             <span class="dl-label">{t.downloadFree}</span>
           </a>
-          <a class="btn btn-ghost star-btn" href={site.repo}>
-            <i class="glyph g-y" aria-hidden="true">Y</i>
-            <span>{t.star}</span>
-            <Icon name="star" class="star-ico" />
-          </a>
-          <button class="btn btn-ghost send-btn" type="button" hidden data-copied={t.copied}>
+          <a class="btn btn-ghost" href={to('/features/')}>{t.seeFeatures}</a>
+          <button class="btn btn-primary send-btn" type="button" hidden data-copied={t.copied}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
             <span>{t.sendToPc}</span>
           </button>
@@ -256,7 +247,7 @@ const softwareApplication = {
           <a class="more-link" href={to('/features/console-mode/')}>{t.console.link} &rarr;</a>
         </div>
         <ul class="cons-facts">
-          <li><span class="cf-key" aria-hidden="true"><i class="glyph g-a">A</i><i class="glyph g-b">B</i></span><b>{t.console.padTitle}</b><span>{t.console.pad}</span></li>
+          <li><span class="cf-key" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h4M8 9v4M15 12h.01M18 10h.01"/><path d="M17.3 5H6.7a4 4 0 0 0-4 3.6C2.6 9.4 2 14.5 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.4-1.4A2 2 0 0 1 9.8 16h4.4a2 2 0 0 1 1.4.6L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.5-.6-6.6-.7-7.3A4 4 0 0 0 17.3 5Z"/></svg></span><b>{t.console.padTitle}</b><span>{t.console.pad}</span></li>
           <li><span class="cf-key" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="4" width="8" height="7" rx="1.5"/><rect x="13" y="4" width="8" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/></svg></span><b>{t.console.count}</b><span>{t.console.themes}</span></li>
           <li><span class="cf-key" aria-hidden="true"><Icon name="steam" /></span><b>{t.console.deckTitle}</b><span set:html={t.console.deckHtml} /></li>
         </ul>
@@ -280,7 +271,7 @@ const softwareApplication = {
         <p class="lead">{t.light.lead}</p>
         <div class="perf-actions">
           <a class="btn btn-primary dl-btn" id="dl-perf" href={to('/download/')}>
-            <i class="glyph g-a" aria-hidden="true">A</i>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
             <span class="dl-label">{t.downloadFree}</span>
           </a>
           <a class="more-link" href={to('/features/performance/')}>{t.light.link} &rarr;</a>
@@ -314,14 +305,9 @@ const softwareApplication = {
         <img src="/icon.png" alt="" width="52" height="52" loading="lazy" />
         <div class="maker-text">
           <p set:html={fill(t.maker.textHtml, { author: site.author })} />
-          <div class="goal" aria-hidden="true"><span style={`width:${Math.min(100, (starCount / goal) * 100).toFixed(1)}%`}></span></div>
-          <p class="goal-text"><span>{fill(t.maker.goal, { count: starText, goal })}</span>{activity && <span>{activity}</span>}</p>
+          {activity && <p class="maker-meta"><a href="/changelog/">{activity}</a></p>}
           <p class="maker-links"><a href={site.discussions}>{t.maker.discussions}</a><a href={to('/docs/translating/')}>{t.maker.translate}</a></p>
         </div>
-        <a class="btn btn-star" href={site.repo}>
-          <Icon name="star" />
-          <span>{t.star}</span>
-        </a>
       </div>
     </div>
   </section>
@@ -369,41 +355,28 @@ const softwareApplication = {
       <h2 class="h2" id="h-close">{t.closing.headline}</h2>
       <div class="actions">
         <a class="btn btn-primary dl-btn" id="dl-close" href={to('/download/')}>
-          <i class="glyph g-a" aria-hidden="true">A</i>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
           <span class="dl-label">{t.downloadFree}</span>
         </a>
-        <a class="btn btn-ghost star-btn" href={site.repo}>
-          <i class="glyph g-y" aria-hidden="true">Y</i>
-          <span>{t.star}</span>
-          <Icon name="star" class="star-ico" />
+        <a class="btn btn-ghost" href={site.repo}>
+          <Icon name="github" />
+          <span>{t.source}</span>
         </a>
-        <button class="btn btn-ghost send-btn" type="button" hidden data-copied={t.copied}>
+        <button class="btn btn-primary send-btn" type="button" hidden data-copied={t.copied}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           <span>{t.sendToPc}</span>
         </button>
-        <a class="back-top" href="#top"><i class="glyph g-b" aria-hidden="true">B</i>{t.backToTop}</a>
       </div>
     </div>
   </section>
   </main>
 
   <div class="phone-bar" id="phone-bar" hidden>
-    <a class="btn btn-primary" href={site.repo}><Icon name="star" /><span>{t.star}</span></a>
-    <button class="btn btn-ghost send-btn" type="button" hidden data-copied={t.copied} aria-label={t.sendToPc}>
+    <button class="btn btn-primary send-btn" type="button" hidden data-copied={t.copied}>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-      <span>{t.sendShort}</span>
+      <span>{t.sendToPc}</span>
     </button>
   </div>
-
-  <aside class="after-dl" id="after-dl" hidden aria-live="polite">
-    <button class="after-close" type="button" aria-label={t.afterDownload.close}>&times;</button>
-    <p class="after-title">{t.afterDownload.title}</p>
-    <p>{t.afterDownload.text}</p>
-    <div class="actions">
-      <a class="btn btn-star" href={site.repo}><Icon name="star" /><span>{t.star}</span></a>
-      <a class="link" href={to('/docs/installation/')}>{t.afterDownload.install} &rarr;</a>
-    </div>
-  </aside>
 
   <script is:inline define:vars={{ installer: downloads.windowsInstaller, appImage: downloads.appImage, labelWindows: t.downloadWindows, labelLinux: t.downloadLinux }}>
     var root = document.documentElement;
@@ -429,7 +402,7 @@ const softwareApplication = {
           else if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { send.querySelector('span').textContent = send.dataset.copied; });
         });
       });
-      // Between the hero and the closing band, keep the two phone actions in reach.
+      // Between the hero and the closing band, keep the send button in reach.
       var bar = document.getElementById('phone-bar'), seen = {};
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) { seen[e.target.id] = e.isIntersecting; });
@@ -449,13 +422,6 @@ const softwareApplication = {
         card.parentNode.prepend(card);
       }
     }
-    // Once a download starts, suggest a star while it finishes.
-    var after = document.getElementById('after-dl');
-    document.addEventListener('click', function (e) {
-      var a = e.target.closest && e.target.closest('a[href*="/releases/"]');
-      if (a && /\/download\//.test(a.href)) after.hidden = false;
-    });
-    after.querySelector('.after-close').addEventListener('click', function () { after.hidden = true; });
     var b = document.getElementById('motion'), w = document.getElementById('wall');
     b.addEventListener('click', function () {
       var p = w.classList.toggle('paused');

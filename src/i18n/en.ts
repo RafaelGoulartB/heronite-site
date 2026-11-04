@@ -154,11 +154,10 @@ const en = {
     downloadFree: 'Download free',
     downloadWindows: 'Download for Windows',
     downloadLinux: 'Download for Linux',
-    star: 'Star on GitHub',
+    seeFeatures: 'See all features',
+    source: 'Source code',
     sendToPc: 'Send the link to my PC',
     copied: 'Link copied',
-    sendShort: 'Send to PC',
-    backToTop: 'Back to top',
     installer: 'Installer',
     platforms: 'Windows and Linux',
     otherDownloads: 'All downloads',
@@ -250,8 +249,7 @@ const en = {
       files: 'Download files for Windows and Linux',
     },
     maker: {
-      textHtml: 'Heronite is made by one developer, {author}, in the open. <strong>A star on GitHub is how other players find it.</strong>',
-      goal: '{count} stars · next goal: {goal}',
+      textHtml: 'Heronite is made by one developer, {author}, in the open. Ideas, bug reports and translations are welcome.',
       activity: '{count} releases · latest on {date}',
       discussions: 'Join the Discussions',
       translate: 'Help translate it',
@@ -266,12 +264,6 @@ const en = {
     },
     stuckHtml: 'Something else? Ask in <a href="{discussions}">Discussions</a> or write to <a href="mailto:{email}">{email}</a>.',
     faqOpen: 3,
-    afterDownload: {
-      title: 'Your download has started',
-      text: 'While it finishes: Heronite is made by one developer, and a star on GitHub is how other players find it.',
-      install: 'How to install',
-      close: 'Close',
-    },
     faqTitle: 'Common questions',
     faq: [
       {

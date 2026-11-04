@@ -152,11 +152,10 @@ const es: Dict = {
     downloadFree: 'Descargar gratis',
     downloadWindows: 'Descargar para Windows',
     downloadLinux: 'Descargar para Linux',
-    star: 'Dar estrella en GitHub',
+    seeFeatures: 'Ver todas las funciones',
+    source: 'Código fuente',
     sendToPc: 'Enviar el enlace a mi PC',
     copied: 'Enlace copiado',
-    sendShort: 'Enviar al PC',
-    backToTop: 'Volver arriba',
     installer: 'Instalador',
     platforms: 'Windows y Linux',
     otherDownloads: 'Todas las descargas',
@@ -248,8 +247,7 @@ const es: Dict = {
       files: 'Archivos para Windows y Linux',
     },
     maker: {
-      textHtml: 'Heronite lo hace un solo desarrollador, {author}, en abierto. <strong>Una estrella en GitHub es como otros jugadores lo encuentran.</strong>',
-      goal: '{count} estrellas · próxima meta: {goal}',
+      textHtml: 'Heronite lo hace un solo desarrollador, {author}, en abierto. Las ideas, los informes de errores y las traducciones son bienvenidos.',
       activity: '{count} versiones · la última el {date}',
       discussions: 'Únete a las Discusiones',
       translate: 'Ayuda a traducirlo',
@@ -264,12 +262,6 @@ const es: Dict = {
     },
     stuckHtml: '¿Otra duda? Pregunta en <a href="{discussions}">Discusiones</a> o escribe a <a href="mailto:{email}">{email}</a>.',
     faqOpen: 3,
-    afterDownload: {
-      title: 'Tu descarga ha empezado',
-      text: 'Mientras termina: Heronite lo hace un solo desarrollador, y una estrella en GitHub es como otros jugadores lo encuentran.',
-      install: 'Cómo instalar',
-      close: 'Cerrar',
-    },
     faqTitle: 'Preguntas frecuentes',
     faq: [
       {
