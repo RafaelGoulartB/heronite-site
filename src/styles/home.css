@@ -29,6 +29,12 @@
 .hero .lead{max-width:27em;margin:24px 0 32px;font-size:19px;line-height:1.5;color:var(--soft)}
 .actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 .star-btn > svg{color:var(--text)}
+/* the face buttons of a controller, as the app's console mode shows them */
+.glyph{display:inline-grid;place-items:center;width:24px;height:24px;flex:none;border-radius:50%;font:700 12.5px/1 var(--head);font-style:normal;letter-spacing:0;
+  background:#22262d;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 1px 2px rgba(0,0,0,.5)}
+.g-a{color:#7fe0a3}.g-b{color:#ff8f8f}.g-y{color:#f2c45a}.g-x{color:#7fb8ff}
+.btn-primary .glyph{background:#0b2530;box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
+.btn .glyph{margin-left:-6px}
 .send-btn[hidden]{display:none}
 .hero-meta{display:flex;flex-wrap:wrap;gap:4px 0;margin-top:22px;font:500 13.5px/1.6 var(--mono);color:#b8c0ca}
 .hero-meta > *{white-space:nowrap}
@@ -91,14 +97,11 @@
 .extra h3 a{text-decoration:none}
 .extra h3 a::after{content:"";position:absolute;inset:0;z-index:1}
 .extra p{color:var(--soft);font-size:15.5px;line-height:1.5;max-width:52ch}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin:auto 0 0;padding:10px 0 0;list-style:none}
-.tags li{padding:3px 9px;border-radius:6px;border:1px solid rgba(255,255,255,.12);font:500 12.5px/1.5 var(--mono);color:#b8c0ca;white-space:nowrap}
 /* the last one lies on its side: the screen on the left, the words on the right */
 .x-saves-and-backups{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
 .x-saves-and-backups .stage{--SH:320px;height:100%;min-height:var(--SH)}
 .x-saves-and-backups .extra-text{justify-content:center;padding:32px 40px;border-top:0;border-left:1px solid var(--line)}
 .x-saves-and-backups h3{font-size:26px}
-.x-saves-and-backups .tags{margin-top:8px}
 
 /* ---------- history: the year in review leads, the heading sits beside it ---------- */
 .hist{display:grid;gap:16px;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto 250px 270px;
@@ -110,19 +113,17 @@
 .hist-head{grid-area:head;align-self:end;padding:0 0 20px 24px}
 .sec .tile{border-radius:16px;background:var(--surface);border:1px solid var(--line)}
 .sec .tile figcaption{background:var(--surface);color:var(--soft);font-size:15px}
-.t-yir{box-shadow:0 40px 120px -50px rgba(232,140,48,.45)}
+.t-yir{box-shadow:0 30px 80px -50px rgba(232,140,48,.5)}
 .t-yir .crop{flex:1 1 auto}
 
 /* ---------- console mode, on a handheld, at full width ---------- */
-.sec-console{margin-top:120px;padding:96px 0 88px;background:linear-gradient(180deg,var(--bg),#0d1117 16%,#0d1117 84%,var(--bg))}
-.cons-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 64px;align-items:end;margin-bottom:48px}
+.sec-console{margin-top:120px;padding:72px 0 40px;background:linear-gradient(180deg,var(--bg),#0d1117 16%,#0d1117 84%,var(--bg))}
+.cons-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 64px;align-items:start;margin-top:56px}
 .cons-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0;padding:0;list-style:none}
 .cons-facts li{display:flex;flex-direction:column;gap:12px;padding:4px 22px;border-left:1px solid var(--line);color:var(--soft);font-size:15.5px;line-height:1.45}
-.cons-facts b{font:700 30px/1 var(--head);color:var(--text);letter-spacing:-.01em}
+.cons-facts b{display:flex;align-items:center;height:30px;white-space:nowrap;font:700 20px/1 var(--head);color:var(--text);letter-spacing:-.01em}
 .cf-key{display:flex;gap:6px;height:30px;align-items:center}
-.cf-key i{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#2a2e35;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 2px 4px rgba(0,0,0,.5);font:700 13px/1 var(--head);font-style:normal;color:var(--text)}
-.cf-key i:last-child{color:#ff8f8f}
-.cf-key i:first-child{color:#7fe0a3}
+.cf-key .glyph{width:28px;height:28px;font-size:13px}
 .cf-key svg{width:28px;height:28px;color:var(--text)}
 .cons-facts code{white-space:nowrap;font:500 .9em var(--mono);padding:.1em .4em;border-radius:5px;background:rgba(255,255,255,.07);color:var(--text)}
 .handheld{max-width:1120px;margin:0 auto}
@@ -154,6 +155,8 @@
 .perf-big small{font-size:.32em;font-weight:600;margin-left:12px;color:#8b95a1;letter-spacing:0}
 .perf-line{display:block;margin-top:16px;font-size:clamp(24px,2.4vw,34px);line-height:1.15}
 .perf-side .lead{margin-top:0}
+.perf-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:24px}
+.perf-actions .more-link{margin:0}
 .perf-list{grid-column:1 / -1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:24px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
 .perf-list li{display:flex;flex-direction:column;gap:8px;padding:24px 24px 0;border-left:1px solid var(--line);color:var(--soft);font-size:15.5px;line-height:1.4}
 .perf-list li:first-child{border-left:0;padding-left:0}
@@ -212,6 +215,14 @@
 .closing-copy{position:relative;margin-top:56px}
 .closing .h2{font-size:clamp(34px,4.4vw,60px);letter-spacing:-.03em}
 .closing .actions{justify-content:center;margin-top:30px}
+.back-top{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 10px;color:var(--soft);font:600 15px/1 var(--head);text-decoration:none}
+.back-top:hover{color:var(--text)}
+
+/* ---------- phones: the two actions stay in reach between the hero and the end ---------- */
+.phone-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:55;display:flex;gap:8px;padding:8px;border-radius:999px;background:rgba(14,18,24,.92);border:1px solid var(--line-2);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 16px 40px rgba(0,0,0,.6)}
+.phone-bar[hidden]{display:none}
+.phone-bar .btn{flex:1 1 auto;height:44px;padding:0 16px;font-size:15px}
+.phone-bar .btn[hidden]{display:none}
 
 /* ---------- after a download starts ---------- */
 .after-dl{position:fixed;right:24px;bottom:24px;z-index:60;width:min(380px,calc(100vw - 32px));padding:20px 22px 22px;border-radius:16px;background:#121720;border:1px solid var(--line-2);box-shadow:0 30px 80px rgba(0,0,0,.6)}
@@ -224,7 +235,7 @@
 .after-close:hover{color:var(--text);background:rgba(255,255,255,.07)}
 
 /* ---------- phones get the star first, and a way to send the page to a PC ---------- */
-.phone #dl-main,.phone #dl-close{display:none}
+.phone .dl-btn{display:none}
 .phone .hero .star-btn{background:var(--accent);color:var(--accent-ink);border-color:transparent}
 .phone .hero .star-btn > svg,.phone .closing .star-btn > svg{color:var(--accent-ink)}
 .phone .closing .star-btn{background:var(--accent);color:var(--accent-ink);border-color:transparent}
@@ -267,8 +278,8 @@
   .motion{display:none !important}
   /* the whole window is too small to read on a phone: show the shelf and the game page, big */
   .anno{margin-top:40px}
-  .frame{aspect-ratio:360 / 470}
-  .frame picture{width:355.6%;margin-top:calc(-30 / 360 * 100%)}
+  .frame{aspect-ratio:300 / 440}
+  .frame picture{width:426.7%;margin-top:calc(-30 / 300 * 100%)}
   .legend li:nth-child(n+3){display:none}
   .callout{display:none}
   .legend{grid-template-columns:1fr;gap:8px}
@@ -283,18 +294,24 @@
   .sec .lead{font-size:16.5px}
   .extras{grid-template-columns:1fr}
   .extra,.x-stores,.x-emulation,.x-saves-and-backups{grid-column:auto;display:flex;align-items:stretch}
-  .stage,.x-saves-and-backups .stage{--SH:250px;--pad:22px;height:var(--SH);min-height:0}
-  .wrap .crop.panel{-webkit-mask:linear-gradient(90deg,#000 88%,transparent),linear-gradient(#000 85%,transparent);-webkit-mask-composite:source-in;mask:linear-gradient(90deg,#000 88%,transparent),linear-gradient(#000 85%,transparent);mask-composite:intersect}
-  .x-linux .crop.panel{-webkit-mask:none;mask:none}
+  /* on a phone each panel is shown whole, as wide as the card */
+  .stage,.x-saves-and-backups .stage{height:auto;min-height:0;padding:20px 16px}
+  .wrap .crop.panel{width:100%}
+  .x-linux .crop.panel{width:min(100%,280px)}
   .extra-text,.x-saves-and-backups .extra-text{padding:18px 20px 22px;border-left:0;border-top:1px solid var(--line)}
   .x-saves-and-backups h3{font-size:21px}
   .hist{grid-template-columns:1fr;grid-template-areas:none}
   .hist > *{grid-area:auto}
   .hist .t-chart{display:none}
-  .cons-head{margin-bottom:32px}
+  .hist-head{order:-1}
+  .cons-head{margin-top:32px}
+  .hh-side{display:none}
+  .hh-body{display:block;padding:0;background:none;box-shadow:none;border-radius:0}
+  .hh-screen{border-radius:12px;box-shadow:0 0 0 6px #16181c,0 0 0 7px rgba(255,255,255,.08),0 30px 60px -20px rgba(0,0,0,.8)}
   .cons-facts{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
   .cons-facts li{flex-direction:row;align-items:center;gap:14px;padding:14px 0;border-left:0;border-bottom:1px solid var(--line)}
-  .cons-facts b{font-size:22px;min-width:56px}
+  .cons-facts li{flex-wrap:wrap;column-gap:12px;row-gap:2px}
+  .cons-facts b{font-size:18px;min-width:56px}
   .cf-key{min-width:56px}
   /* home.css loads before base.css, so this needs the extra class to win */
   .wrap .crop{--X:var(--mx,var(--x));--Y:var(--my,var(--y));--W:var(--mw,var(--w));--CH:var(--mh,var(--h))}

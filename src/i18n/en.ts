@@ -156,6 +156,8 @@ const en = {
     star: 'Star on GitHub',
     sendToPc: 'Send the link to my PC',
     copied: 'Link copied',
+    sendShort: 'Send to PC',
+    backToTop: 'Back to top',
     installer: 'Installer',
     platforms: 'Windows and Linux',
     otherDownloads: 'All downloads',
@@ -178,34 +180,29 @@ const en = {
         linux: {
           title: 'Know how it runs before you install',
           text: 'Each game shows its ProtonDB rating and anti-cheat status on Linux, next to your play time and last save backup.',
-          tags: 'ProtonDB · Are We Anti-Cheat Yet · EAC · BattlEye',
           alt: 'ELDEN RING’s game page: Play button, rating, IGDB score 97, Steam library, save backup 9 days ago, and On Linux: Gold, EAC ok',
         },
         stores: {
           title: 'Epic, Steam and GOG in one search',
           text: 'Log in once and Epic, GOG and Amazon join your Steam games. Ctrl+K finds any of them.',
-          tags: 'Steam · Epic · GOG · Amazon · Battle.net · EA · Ubisoft · Rockstar',
           alt: 'The Ctrl+K palette searching “contr”: Control from Epic and CONTROL Ultimate Edition from Steam in the same list, with play time',
         },
         emulation: {
           title: 'ROM folders become games',
           text: 'Heronite finds your emulators and turns ROM folders into games with covers.',
-          tags: 'RetroArch · PCSX2 · Dolphin · RPCS3 · 13 more',
           alt: 'The Emulators page: PCSX2 ready, with its ROM folder scanned on refresh and 9 games using it',
         },
         'wine-and-proton': {
           title: 'Pick the Proton build per game',
           text: 'Choose GE-Proton, Proton-CachyOS or another build for each game, with its ProtonDB rating and the recommended build right there.',
-          tags: 'GE-Proton · Proton-CachyOS · DXVK · gamescope',
           alt: 'Game settings for Control: Wine / Proton version GE-Proton-latest, ProtonDB: Platinum, runs well on Proton, recommended GE-Proton-latest, in use',
         },
         'saves-and-backups': {
           title: 'Saves backed up after you play',
           text: 'Game saves go to a backup after each session, and the library on a schedule.',
-          tags: 'Ludusavi · Scheduled backups · Restore',
           alt: 'Backup settings: what goes in a backup, with Collection, app settings, artwork and store sign-ins',
         },
-      } as Record<string, { title: string; text: string; tags: string; alt: string }>,
+      } as Record<string, { title: string; text: string; alt: string }>,
     },
     history: {
       headline: 'What you played, and for how long.',
@@ -223,7 +220,8 @@ const en = {
       lead: 'A controller-first layout for the TV and the Steam Deck, with the same library behind it.',
       link: 'Explore console mode',
       pad: 'D-pad, A and B. No mouse needed.',
-      themes: 'layouts and themes, or make your own',
+      count: '8 layouts · 7 themes',
+      themes: 'or make your own and share it',
       deckHtml: 'Add it to Steam with <code>--console</code> and play from Gaming Mode',
       homeAlt: 'Console mode home: SP Football Life 2026 in focus above a Continue playing shelf of covers, controller hints along the bottom',
     },
@@ -252,7 +250,7 @@ const en = {
     maker: {
       textHtml: 'Heronite is made by one developer, {author}, in the open. <strong>A star on GitHub is how other players find it.</strong>',
       goal: '{count} stars · next goal: {goal}',
-      activity: '{count} releases since {date}',
+      activity: '{count} releases · latest on {date}',
     },
     guides: {
       headline: 'Guides for Linux and the Steam Deck',
