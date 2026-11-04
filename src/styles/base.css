@@ -180,6 +180,9 @@ footer .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px
   .scene{padding:52px 0}
   .dl{grid-template-columns:1fr}
   .nav .brand span{display:none}
+  .dl-version{flex-direction:column;align-items:center}
+  .dl-version > * + *::before{display:none}
+  .nav .btn-primary{background:transparent;color:var(--text);box-shadow:inset 0 0 0 1px var(--line-2)}
   .os{padding:24px 20px}
   .btn{height:46px;padding:0 20px}
   .cta{grid-template-columns:1fr;padding:28px 22px}
@@ -204,5 +207,7 @@ footer .legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px
   html{scroll-behavior:auto}
   .btn,.card{transition:none}
 }
-.dl-version{margin-top:16px;text-align:center;font-size:14.5px;color:var(--muted)}
+.dl-version{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 0;margin-top:16px;font-size:14.5px;color:var(--muted)}
+.dl-version > * + *::before{content:"·";display:inline-block;margin:0 9px;opacity:.6}
 .dl-version a{color:var(--soft)}
+.btn-pkg{padding:0 18px}

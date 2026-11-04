@@ -62,6 +62,7 @@ const en = {
     packages: '.deb, .rpm and Arch',
     linuxFineHtml: 'Packages for Debian, Ubuntu, Fedora, openSUSE and Arch are on the <a href="{releases}">releases page</a>. See <a href="{install}">how to install</a>.',
     version: 'Version {version} · {date}',
+    signed: 'Signed with minisign',
   },
   article: {
     sections: { features: 'Features', guides: 'Guides', compare: 'Compare' },
@@ -147,18 +148,17 @@ const en = {
     ],
     wallLabel: 'A wall of game covers from a Heronite library, cropped from the app’s own screenshots',
     headlineHtml: 'Every game<br> you own.<br> <em>One launcher.</em>',
-    lead: 'Steam, Epic, GOG, Amazon, Battle.net, emulators and more, in one fast native app. Free and open source.',
+    lead: 'Steam, Epic, GOG, Amazon, Battle.net, emulators and more, in one fast native app for Linux, Steam Deck and Windows. Free and open source, with no account and no telemetry.',
     downloadFree: 'Download free',
     downloadWindows: 'Download for Windows',
     downloadLinux: 'Download for Linux',
     star: 'Star on GitHub',
-    sendToPc: 'Send to my PC',
+    sendToPc: 'Send the link to my PC',
     copied: 'Link copied',
     installer: 'Installer',
     platforms: 'Windows and Linux',
     otherDownloads: 'All downloads',
-    whatsNew: 'What’s new',
-    facts: ['Free and open source', 'No account', 'No telemetry', 'Steam Deck ready'],
+    downloads: '{count} downloads',
     pauseMotion: 'Pause motion',
     playMotion: 'Play motion',
     sources: 'Plays games from',
@@ -170,12 +170,18 @@ const en = {
       legendLabel: 'What the numbers point at',
     },
     extras: {
-      headline: 'Everything around the games, built in.',
+      headline: 'The rest of your setup, built in.',
       lead: 'Store logins, emulators, Proton builds and save backups, without five other apps open.',
       link: 'All eight features',
       tiles: {
+        linux: {
+          title: 'Know how it runs before you install',
+          text: 'Each game shows its ProtonDB rating and anti-cheat status on Linux, next to your play time and last save backup.',
+          tags: 'ProtonDB · Are We Anti-Cheat Yet · EAC · BattlEye',
+          alt: 'ELDEN RING’s game page: Play button, rating, IGDB score 97, Steam library, save backup 9 days ago, and On Linux: Gold, EAC ok',
+        },
         stores: {
-          title: 'Every store, one search',
+          title: 'Epic, Steam and GOG in one search',
           text: 'Log in once and Epic, GOG and Amazon join your Steam games. Ctrl+K finds any of them.',
           tags: 'Steam · Epic · GOG · Amazon · Battle.net · EA · Ubisoft · Rockstar',
           alt: 'The Ctrl+K palette searching “contr”: Control from Epic and CONTROL Ultimate Edition from Steam in the same list, with play time',
@@ -201,7 +207,7 @@ const en = {
       } as Record<string, { title: string; text: string; tags: string; alt: string }>,
     },
     history: {
-      headline: 'Every session, remembered.',
+      headline: 'What you played, and for how long.',
       lead: 'Each time you play is recorded, with stats, a backlog goal and a year in review.',
       link: 'Play time tracking',
       tiles: {
@@ -217,18 +223,18 @@ const en = {
       link: 'Explore console mode',
       layouts: 'layouts',
       themes: 'themes, or make your own',
-      deck: 'Gaming Mode on Steam Deck',
+      deckHtml: 'Add it to Steam with <code>--console</code> and play from Gaming Mode',
+      caption: 'Console mode on a handheld: the same Collection, built for a controller.',
       homeAlt: 'Console mode home: SP Football Life 2026 in focus above a Continue playing shelf of covers, controller hints along the bottom',
-      gameAlt: 'Console game page for Elden Ring with a large Play button',
-      gameCaption: 'Game pages built for a controller.',
     },
     light: {
-      headline: 'from launch to your library.',
+      headline: 'median, from start to your library.',
       lead: 'A native Rust app drawn on the GPU, with no bundled browser. It stays out of the way while you play.',
       link: 'Why it is fast',
-      memory: 'memory while idle',
-      cpu: 'CPU while idle',
+      memory: 'memory while idle, typically',
+      cpu: 'CPU while idle, typically',
       install: 'to install',
+      browsers: 'bundled browsers, so no Electron',
     },
     switch: {
       headline: 'Coming from Heroic, Lutris or Playnite?',
@@ -236,7 +242,7 @@ const en = {
       lines: {
         playnite: 'Playnite runs on Windows only. Heronite runs on Linux and Windows.',
         heroic: 'The same legendary, gogdl and nile underneath, plus Steam and emulators.',
-        lutris: 'Log in to your stores instead of running install scripts.',
+        lutris: 'Play time, a console mode and save backups, on the same Wine and Proton builds.',
       } as Record<string, string>,
     },
     download: {
@@ -245,6 +251,7 @@ const en = {
     },
     maker: {
       textHtml: 'Heronite is made by one developer, {author}, in the open. <strong>A star on GitHub is how other players find it.</strong>',
+      goal: '{count} stars · next goal: {goal}',
     },
     guides: {
       headline: 'Guides for Linux and the Steam Deck',
@@ -252,7 +259,7 @@ const en = {
       link: 'All guides',
     },
     closing: {
-      headlineHtml: 'Every game you own. <em>One launcher.</em>',
+      headline: 'Your whole library, open in 215 ms.',
     },
     stuckHtml: 'Something else? Ask in <a href="{discussions}">Discussions</a> or write to <a href="mailto:{email}">{email}</a>.',
     faqTitle: 'Common questions',

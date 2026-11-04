@@ -60,6 +60,7 @@ const ptBr: Dict = {
     packages: '.deb, .rpm e Arch',
     linuxFineHtml: 'Pacotes para Debian, Ubuntu, Fedora, openSUSE e Arch estão na <a href="{releases}">página de versões</a>. Veja <a href="{install}">como instalar</a>.',
     version: 'Versão {version} · {date}',
+    signed: 'Assinado com minisign',
   },
   article: {
     sections: { features: 'Recursos', guides: 'Guias', compare: 'Comparar' },
@@ -145,18 +146,17 @@ const ptBr: Dict = {
     ],
     wallLabel: 'Um mural de capas de jogos de uma biblioteca do Heronite, recortado das capturas de tela do próprio app',
     headlineHtml: 'Todos os<br> seus jogos.<br> <em>Um só launcher.</em>',
-    lead: 'Steam, Epic, GOG, Amazon, Battle.net, emuladores e mais, em um app nativo e rápido. Grátis e open source.',
+    lead: 'Steam, Epic, GOG, Amazon, Battle.net, emuladores e mais, em um app nativo e rápido para Linux, Steam Deck e Windows. Grátis e open source, sem conta e sem telemetria.',
     downloadFree: 'Baixar grátis',
     downloadWindows: 'Baixar para Windows',
     downloadLinux: 'Baixar para Linux',
     star: 'Dar estrela no GitHub',
-    sendToPc: 'Enviar para o meu PC',
+    sendToPc: 'Enviar o link para o meu PC',
     copied: 'Link copiado',
     installer: 'Instalador',
     platforms: 'Windows e Linux',
     otherDownloads: 'Todos os downloads',
-    whatsNew: 'Novidades',
-    facts: ['Grátis e open source', 'Sem conta', 'Sem telemetria', 'Pronto para Steam Deck'],
+    downloads: '{count} downloads',
     pauseMotion: 'Pausar animação',
     playMotion: 'Retomar animação',
     sources: 'Roda jogos de',
@@ -168,12 +168,18 @@ const ptBr: Dict = {
       legendLabel: 'O que os números indicam',
     },
     extras: {
-      headline: 'Tudo em volta dos jogos, já incluído.',
+      headline: 'O resto da sua configuração, já incluído.',
       lead: 'Login nas lojas, emuladores, versões do Proton e backup de saves, sem outros cinco apps abertos.',
       link: 'Todos os oito recursos',
       tiles: {
+        linux: {
+          title: 'Saiba como roda antes de instalar',
+          text: 'Cada jogo mostra a nota no ProtonDB e o status do anti-cheat no Linux, ao lado do seu tempo de jogo e do último backup do save.',
+          tags: 'ProtonDB · Are We Anti-Cheat Yet · EAC · BattlEye',
+          alt: 'Página de ELDEN RING: botão Jogar, avaliação, nota 97 no IGDB, biblioteca Steam, backup do save há 9 dias, e No Linux: Gold, EAC ok',
+        },
         stores: {
-          title: 'Todas as lojas, uma busca',
+          title: 'Epic, Steam e GOG em uma só busca',
           text: 'Entre uma vez e seus jogos da Epic, GOG e Amazon se juntam aos da Steam. O Ctrl+K encontra qualquer um.',
           tags: 'Steam · Epic · GOG · Amazon · Battle.net · EA · Ubisoft · Rockstar',
           alt: 'A paleta Ctrl+K buscando “contr”: Control da Epic e CONTROL Ultimate Edition da Steam na mesma lista, com o tempo de jogo',
@@ -199,7 +205,7 @@ const ptBr: Dict = {
       },
     },
     history: {
-      headline: 'Cada sessão, lembrada.',
+      headline: 'O que você jogou, e por quanto tempo.',
       lead: 'Cada vez que você joga fica registrada, com estatísticas, uma meta de pendentes e a retrospectiva do ano.',
       link: 'Registro de tempo de jogo',
       tiles: {
@@ -215,18 +221,18 @@ const ptBr: Dict = {
       link: 'Conheça o modo console',
       layouts: 'layouts',
       themes: 'temas, ou crie o seu',
-      deck: 'Modo Jogo no Steam Deck',
+      deckHtml: 'Adicione à Steam com <code>--console</code> e jogue pelo Modo Jogo',
+      caption: 'O modo console em um portátil: a mesma Coleção, feita para controle.',
       homeAlt: 'Início do modo console: SP Football Life 2026 em destaque acima de uma prateleira Continuar jogando com capas, e dicas do controle na parte de baixo',
-      gameAlt: 'Página de jogo do modo console para Elden Ring, com um botão Jogar grande',
-      gameCaption: 'Páginas de jogo feitas para controle.',
     },
     light: {
-      headline: 'da abertura até a sua biblioteca.',
+      headline: 'mediana, da abertura até a sua biblioteca.',
       lead: 'Um app nativo em Rust, desenhado na GPU, sem navegador embutido. Ele não atrapalha enquanto você joga.',
       link: 'Por que é rápido',
-      memory: 'de memória em repouso',
-      cpu: 'de CPU em repouso',
+      memory: 'de memória em repouso, em geral',
+      cpu: 'de CPU em repouso, em geral',
       install: 'para instalar',
+      browsers: 'navegadores embutidos, ou seja, sem Electron',
     },
     switch: {
       headline: 'Vindo do Heroic, Lutris ou Playnite?',
@@ -234,7 +240,7 @@ const ptBr: Dict = {
       lines: {
         playnite: 'O Playnite só roda no Windows. O Heronite roda no Linux e no Windows.',
         heroic: 'O mesmo legendary, gogdl e nile por baixo, mais Steam e emuladores.',
-        lutris: 'Entre nas suas lojas em vez de rodar scripts de instalação.',
+        lutris: 'Tempo de jogo, modo console e backup de saves, sobre as mesmas versões de Wine e Proton.',
       },
     },
     download: {
@@ -243,6 +249,7 @@ const ptBr: Dict = {
     },
     maker: {
       textHtml: 'O Heronite é feito por um desenvolvedor, {author}, de forma aberta. <strong>Uma estrela no GitHub é como outros jogadores o encontram.</strong>',
+      goal: '{count} estrelas · próxima meta: {goal}',
     },
     guides: {
       headline: 'Guias para Linux e Steam Deck',
@@ -250,7 +257,7 @@ const ptBr: Dict = {
       link: 'Todos os guias',
     },
     closing: {
-      headlineHtml: 'Todos os seus jogos. <em>Um só launcher.</em>',
+      headline: 'Sua biblioteca inteira, aberta em 215 ms.',
     },
     stuckHtml: 'Outra dúvida? Pergunte nas <a href="{discussions}">Discussões</a> ou escreva para <a href="mailto:{email}">{email}</a>.',
     faqTitle: 'Perguntas frequentes',
