@@ -82,18 +82,27 @@
 /* ---------- the rest of the setup: one panel of the app per feature, on its own stage ---------- */
 .extras{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;margin:0 0 4px;padding:0;list-style:none}
 .extra{position:relative;grid-column:span 6;display:flex;flex-direction:column;overflow:hidden;border-radius:16px;background:var(--surface);border:1px solid var(--line);transition:border-color .15s}
+/* a criss-cross: wide then narrow, narrow then wide */
+.x-stores,.x-saves-and-backups{grid-column:span 7}
+.x-emulation,.x-wine-and-proton{grid-column:span 5}
 .extra:hover{border-color:rgba(95,203,241,.4)}
-.stage{--SH:290px;--pad:28px;flex:none;display:grid;place-items:start center;height:var(--SH);padding:var(--pad) var(--pad) 0;overflow:hidden;
-  background:radial-gradient(70% 90% at 50% 0%,rgba(95,203,241,.07),transparent 70%),linear-gradient(180deg,#121720,var(--surface))}
-.wrap .crop.panel{flex:none;width:min(100%,calc(var(--W) * 1.55px));aspect-ratio:var(--W) / var(--CH);height:auto;min-height:0;
-  -webkit-mask:linear-gradient(#000 calc(100% - 24px),transparent);mask:linear-gradient(#000 calc(100% - 24px),transparent);
-  border-radius:12px;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 30px 60px -24px rgba(0,0,0,.9)}
-.crop.fade{-webkit-mask:linear-gradient(#000 70%,transparent);mask:linear-gradient(#000 70%,transparent);border-radius:12px 12px 0 0}
+/* each picture is made at its card's size in the 1440px layout (380px tall); one height per row keeps
+   the two cards of a row level, and the cut keeps the picture's top left, where its content starts */
+.extra-pic{position:relative;flex:none;height:clamp(240px,26.4vw,380px);background:#0b0e13;overflow:hidden}
+.pic-wide,.extra-pic picture{display:block;height:100%}
+.pic-phone{display:none}
+.extra-pic img{display:block;width:100%;height:100%;object-fit:cover;object-position:0 0}
+/* the stores card names the stores it covers, Amazon included, in the site's own type */
+.pic-stores{position:absolute;top:clamp(12px,1.4vw,20px);left:clamp(16px,2vw,24px);display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.pic-stores li{display:flex;align-items:center;gap:7px;height:30px;padding:0 12px 0 10px;border-radius:999px;font:600 13px/1 var(--head);color:var(--text);
+  background:rgba(10,13,17,.62);border:1px solid rgba(255,255,255,.12);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.pic-stores svg{width:16px;height:16px}
+.extras-more{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 .extra-text{display:flex;flex-direction:column;gap:8px;padding:22px 26px 26px;flex:1;border-top:1px solid var(--line)}
 .extra h3{font-size:21px;font-weight:600;line-height:1.2}
 .extra h3 a{text-decoration:none}
 .extra h3 a::after{content:"";position:absolute;inset:0;z-index:1}
-.extra p{color:var(--soft);font-size:15.5px;line-height:1.5;max-width:52ch;text-wrap:pretty}
+.extra p{color:var(--soft);font-size:15.5px;line-height:1.5;max-width:56ch;text-wrap:balance}
 /* the last one lies on its side: the screen on the left, the words on the right */
 
 /* ---------- history: the year in review leads, the heading sits beside it ---------- */
@@ -250,10 +259,8 @@
   .perf-list{grid-template-columns:repeat(2,minmax(0,1fr))}
   .perf-list li:nth-child(3){border-left:0;padding-left:0}
   .perf-list li:nth-child(n+3){padding-top:24px}
-  .extra,.x-stores,.x-emulation{grid-column:span 6}
   .faq-grid{grid-template-columns:1fr;grid-template-areas:"title" "list" "side"}
   .faq-stuck{margin-top:22px}
-  .x-saves-and-backups{grid-column:1 / -1}
 }
 @media (max-width:760px){
   .hero-top{display:block;min-height:0;padding:72px 0 0}
@@ -290,13 +297,16 @@
   .sec-head{margin-bottom:28px}
   .sec .lead{font-size:16.5px}
   .extras{grid-template-columns:1fr}
-  .extra,.x-stores,.x-emulation,.x-saves-and-backups{grid-column:auto;display:flex;align-items:stretch}
-  /* on a phone each panel is shown whole, as wide as the card */
-  .stage,.x-saves-and-backups .stage{height:auto;min-height:0;padding:20px 16px}
-  .wrap .crop.panel{width:100%}
-  .x-stores .crop.panel,.x-emulation .crop.panel,.x-saves-and-backups .crop.panel{-webkit-mask:linear-gradient(90deg,#000 85%,transparent);mask:linear-gradient(90deg,#000 85%,transparent);border-radius:12px 0 0 12px}
-  .extra-text,.x-saves-and-backups .extra-text{padding:18px 20px 22px;border-left:0;border-top:1px solid var(--line)}
-  .x-saves-and-backups h3{font-size:21px}
+  .extra,.x-stores,.x-emulation,.x-wine-and-proton,.x-saves-and-backups{grid-column:auto}
+  /* on a phone the picture keeps its height and shows the part that matters, so the app's text reads */
+  .extra-pic{height:auto;aspect-ratio:358 / 250}
+  .pic-wide{display:none}
+  .pic-stores{top:10px;left:10px;right:10px;gap:5px;flex-wrap:nowrap}
+  .pic-stores li{height:24px;padding:0 7px 0 6px;gap:5px;font-size:10.5px;white-space:nowrap}
+  .pic-stores svg{width:13px;height:13px}
+  .pic-phone{display:block;height:100%}
+  .extra-text{padding:18px 20px 22px}
+  .extras-more .btn{flex:1 1 100%}
   .hist{grid-template-columns:1fr;grid-template-areas:none}
   .hist > *{grid-area:auto}
   .hist .t-chart{display:none}

@@ -180,24 +180,24 @@ const ptBr: Dict = {
       link: 'Todos os oito recursos',
       tiles: {
         stores: {
-          title: 'Epic, Steam e GOG em uma só busca',
-          text: 'Entre uma vez e seus jogos da Epic, GOG e Amazon se juntam aos da Steam. O Ctrl+K encontra qualquer um.',
-          alt: 'A paleta Ctrl+K buscando “contr”: Control da Epic e CONTROL Ultimate Edition da Steam na mesma lista, com o tempo de jogo',
+          title: 'Epic, GOG e Amazon, junto com a Steam',
+          text: 'Faça login uma vez e os jogos de todas as lojas ficam numa biblioteca só. Tem um jogo em duas lojas? O Ctrl+K acha os dois.',
+          alt: 'A Coleção agrupada por loja: Control e Civilization VI na Epic Games, POSTAL 2 na GOG, Battlefield 6 e Beat Saber na Steam, e uma busca por “control” encontrando o Control na Epic e o CONTROL Ultimate Edition na Steam',
         },
         emulation: {
           title: 'Pastas de ROMs viram jogos',
           text: 'O Heronite encontra seus emuladores e transforma pastas de ROMs em jogos com capa.',
-          alt: 'A página Emuladores: PCSX2 pronto, com a pasta de ROMs verificada a cada atualização e 9 jogos usando ele',
+          alt: 'O PCSX2 com 10 jogos de 1 pasta de ROMs, e os jogos emulados na Coleção: Burnout 3, Castlevania, God of War II, Gran Turismo 4, Shadow of the Colossus e outros, com God of War II aberto como jogo de PlayStation 2',
         },
         'wine-and-proton': {
-          title: 'Escolha a versão do Proton por jogo',
-          text: 'Escolha o GE-Proton, o Proton-CachyOS ou outra versão para cada jogo, com a nota no ProtonDB e a versão recomendada ali mesmo.',
-          alt: 'Configurações do jogo Control: versão de Wine / Proton GE-Proton-latest, ProtonDB: Platinum, roda bem no Proton, recomendado GE-Proton-latest, em uso',
+          title: 'Saiba se roda e escolha o Proton',
+          text: 'Veja a nota no ProtonDB e o status do anti-cheat, e escolha o GE-Proton ou o Proton-CachyOS, instalados e atualizados pelo app.',
+          alt: 'Elden Ring no Heronite: no Linux Gold, EAC ok, suas versões do Proton com o GE-Proton-latest, e o GE-Proton-latest recomendado e instalado, que se atualiza sozinho',
         },
         'saves-and-backups': {
           title: 'Saves com backup depois que você joga',
-          text: 'Os saves vão para um backup depois de cada sessão, e a biblioteca em uma agenda.',
-          alt: 'Configurações de backup: o que entra em um backup, com Coleção, configurações do app, artes e logins das lojas',
+          text: 'O Ludusavi faz backup dos saves de cada jogo depois de cada sessão, e o Restaurar traz qualquer backup de volta.',
+          alt: 'A linha do tempo do Elden Ring, jogado 1 h 49 min em 11 de outubro, acima do backup de saves feito no Linux nesse mesmo dia, com Restaurar e Fazer backup agora',
         },
       },
     },

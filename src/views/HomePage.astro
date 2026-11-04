@@ -73,13 +73,14 @@ const guideIcons: Record<string, IconName> = {
   'steam-deck': 'steam',
 };
 
-// The features without a section of their own. Each shows one panel of the app, cut on its own
-// edges and sized to read; `crop` is the panel in the 1280px frame, `--m*` a closer cut for phones.
+// The features without a section of their own. Each picture is real cuts of the app's screens over
+// the game's art, made at the card's size so the app's text reads (`extras-*.webp`); `w` is the
+// card's width in the 1440px layout, for `sizes`.
 const extras = [
-  { key: 'stores', slug: 'stores', shot: 'command-palette', crop: '--x:432;--y:58;--w:416;--h:166;--mx:432;--my:58;--mw:300;--mh:166', fade: true },
-  { key: 'emulation', slug: 'emulation', shot: 'emulators', crop: '--x:92;--y:125;--w:545;--h:177;--mx:92;--my:125;--mw:330;--mh:118', fade: false },
-  { key: 'wine-and-proton', slug: 'wine-and-proton', shot: 'game-settings', crop: '--x:898;--y:152;--w:362;--h:160', fade: false },
-  { key: 'saves-and-backups', slug: 'saves-and-backups', shot: 'backups', crop: '--x:421;--y:305;--w:591;--h:227;--mx:421;--my:305;--mw:320;--mh:227', fade: false },
+  { key: 'stores', slug: 'stores', w: 760 },
+  { key: 'emulation', slug: 'emulation', w: 540 },
+  { key: 'wine-and-proton', slug: 'wine-and-proton', shot: 'proton', w: 540 },
+  { key: 'saves-and-backups', slug: 'saves-and-backups', shot: 'saves', w: 760 },
 ] as const;
 
 const softwareApplication = {
@@ -197,9 +198,16 @@ const softwareApplication = {
       <ul class="extras">
         {extras.map((e) => {
           const tile = t.extras.tiles[e.key];
+          const pic = `extras-${'shot' in e ? e.shot : e.key}`;
           return (
             <li class={`extra x-${e.key}`}>
-              <div class="stage"><div class={e.fade ? 'crop panel fade' : 'crop panel'} style={e.crop}><ShotImg name={e.shot} alt={tile.alt} /></div></div>
+              <div class="extra-pic">
+                <div class="pic-wide"><ShotImg name={pic} alt={tile.alt} sizes={`(min-width: 1100px) ${e.w}px, 50vw`} /></div>
+                <div class="pic-phone"><ShotImg name={`${pic}-m`} alt={tile.alt} sizes="100vw" /></div>
+                {e.key === 'stores' && (
+                  <ul class="pic-stores" aria-hidden="true">{stores.slice(0, 4).map((s) => <li><Icon name={s.icon} />{s.name}</li>)}</ul>
+                )}
+              </div>
               <div class="extra-text">
                 <h3><a href={articleUrl('features', e.slug, lang)}>{tile.title}</a></h3>
                 <p>{tile.text}</p>
@@ -208,7 +216,13 @@ const softwareApplication = {
           );
         })}
       </ul>
-      <a class="more-link" href={to('/features/')}>{t.extras.link} &rarr;</a>
+      <div class="extras-more">
+        <a class="btn btn-primary dl-btn" id="dl-extras" href={to('/download/')}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          <span class="dl-label">{t.downloadFree}</span>
+        </a>
+        <a class="btn btn-ghost" href={to('/features/')}>{t.extras.link} &rarr;</a>
+      </div>
     </div>
   </section>
 
