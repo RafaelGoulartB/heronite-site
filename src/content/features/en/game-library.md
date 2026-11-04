@@ -3,7 +3,7 @@ title: "Linux Game Launcher and Library Manager | Heronite"
 description: "Manage every PC game in one library on Linux and Windows. Group, filter, search and bulk edit Steam, Epic, GOG, Amazon and emulated games together."
 eyebrow: Game library
 headline: "One game library manager for Linux and Windows"
-lead: "A Linux game launcher and library manager for Steam, Epic Games, GOG, Amazon, Battle.net, emulators and the games you add yourself."
+lead: "Heronite is a Linux and Windows game launcher and library manager. Its Collection holds every store, emulator and loose game in one place."
 navLabel: Game library
 summary: "One Collection for every store, emulator and loose game, with views, groups, bulk edits and a command palette."
 order: 1
@@ -12,21 +12,21 @@ heroAlt: "Heronite's Collection: game covers grouped into Playing and On Going w
 og: /og/game-library.jpg
 updated: 2026-11-04
 highlights:
-  - title: Every store together
-    text: Steam, Epic, GOG, Amazon, Battle.net, EA app, Ubisoft Connect, Rockstar and emulators side by side.
+  - title: One list, every source
+    text: Stores, emulators and loose games sit side by side.
   - title: Grouped your way
-    text: By status, store, genre, series, year and more, as a detailed list or a grid of covers.
+    text: Group by status, store, genre or series, as a list or a grid.
   - title: Saved views
     text: Keep filters and sorting as presets like Playing now, Backlog or Finished.
   - title: Find anything fast
     text: Search forgives typos, and Ctrl+K opens any game, page or action.
 faq:
   - q: Is there a Linux library manager for Steam, Epic and GOG together?
-    a: Yes. Steam games come in without a login. Log in to Epic Games, GOG or Amazon Games on the Stores page and their libraries join the same Collection.
+    a: Yes. Steam needs no login. Log in to Epic Games, GOG or Amazon Games on the **Stores** page and their libraries join the Collection. See [the list](#how-do-i-get-all-my-games-into-one-collection).
   - q: Does importing from Heroic or Lutris change their files?
     a: No. Heronite imports and syncs games from Heroic, Lutris, Bottles and Faugus, and never writes to their files.
   - q: Does Heronite find cover art for emulated games?
-    a: Yes. Covers come from the stores and from Steam and Lutris metadata. SteamGridDB and IGDB are optional.
+    a: Yes. Every game added from a ROM folder gets art. See [where covers come from](#where-do-covers-and-game-details-come-from).
   - q: Can I undo a bulk edit?
     a: Yes. Press `Ctrl+Z` to undo the last change.
 related:
@@ -35,15 +35,13 @@ related:
   - /docs/getting-started/
 ---
 
-Heronite's game library, the **Collection**, lists every store, emulator and loose game together. You organize it the way you think about your games, not the way each store does.
-
 ## How do I get all my games into one Collection?
 
 - **Steam:** Heronite reads your [Steam](/features/stores/) libraries with no login.
 - **Epic Games, GOG and Amazon Games:** log in on the **Stores** page and the whole library comes in, installed or not.
-- **Battle.net, EA app, Ubisoft Connect and Rockstar Games (Linux):** each client runs in its own Wine prefix, and the games you install show up.
+- **Battle.net, EA app, Ubisoft Connect and Rockstar Games (Linux):** each store app runs in its own Wine prefix, and the games you install show up.
 - **Emulators:** Heronite [detects them](/features/emulation/) and scans your ROM folders.
-- **Other launchers (Linux):** Heroic, Lutris, Bottles and Faugus games are imported and kept in sync.
+- **Other launchers (Linux):** Heroic, Lutris, Bottles and Faugus games come in and stay in sync.
 
 ## How do I add a game that is not from a store?
 
@@ -58,11 +56,11 @@ To add many games at once, point Heronite at a folder.
 
 ![The Add game dialog with fields for the title, square art and background, the platform, the Wine prefix and Proton version, and the program to run.](../../../assets/screenshots/add-game.webp)
 
-*Adding a Windows game on Linux: art, platform, Wine prefix and Proton build in one dialog.*
+*Adding a Windows game on Linux.*
 
 ## How do I group, filter and sort my games?
 
-**Focus** is a list with a details panel: cover, screenshots, description, How Long To Beat times, achievements and a timeline of play sessions. The **grid** shows covers only.
+**Focus** is a list with a details panel: cover, screenshots, description and a timeline of play sessions. The **grid** shows covers only.
 
 On either layout, group games by:
 
@@ -82,7 +80,7 @@ The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any 
 
 ![The command palette searching for "contr", listing Control and other matching games, with actions to play Control, open its settings or its folder.](../../../assets/screenshots/command-palette.webp)
 
-*The command palette finds games, pages and actions from the keyboard.*
+*Searching "contr" in the command palette.*
 
 ## How do I edit many games at once?
 
@@ -90,16 +88,16 @@ The **command palette** (<kbd>Ctrl</kbd> <kbd>K</kbd>) opens any page, runs any 
 2. Press <kbd>F3</kbd>.
 3. Change their status, genres, series, companies and more.
 
-<kbd>Ctrl</kbd> <kbd>Z</kbd> undoes the change. You can also rename and merge genres, companies and series, so *RPG* and *Role-playing (RPG)* become one.
+<kbd>Ctrl</kbd> <kbd>Z</kbd> undoes the change. You can rename and merge genres, companies and series, so *RPG* and *Role-playing (RPG)* become one.
 
 ## Where do covers and game details come from?
 
-Covers, backgrounds, logos, descriptions and release dates come from the stores and from Steam and Lutris metadata. Two optional free keys add more:
+Covers, backgrounds and logos come from the stores and from Steam and Lutris metadata. So do descriptions and release dates. Two optional free keys add more:
 
 - [SteamGridDB](https://www.steamgriddb.com) for community covers, good for emulated and DRM-free games,
 - [IGDB](https://www.igdb.com) for descriptions, genres and series.
 
-Each game also shows **How Long To Beat** times, **ProtonDB** ratings on Linux, **anti-cheat status** from Are We Anti-Cheat Yet? and **achievements** from Steam and RetroAchievements. Set up the keys in [Metadata and art](/docs/metadata-and-art/).
+Each game shows **How Long To Beat** times, **ProtonDB** ratings on Linux, **anti-cheat status** from Are We Anti-Cheat Yet? and **achievements** from Steam and RetroAchievements. Set up the keys in [Metadata and art](/docs/metadata-and-art/).
 
 ## Can I keep notes on a game?
 

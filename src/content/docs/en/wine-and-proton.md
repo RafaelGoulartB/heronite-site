@@ -7,7 +7,7 @@ order: 3
 updated: 2026-11-04
 ---
 
-On Linux, Windows games run through Wine or Proton. Heronite picks sensible defaults; every option below can be changed per game in **Game settings → Compatibility**, or for all games in Settings.
+Heronite runs Windows games on Linux through Wine or Proton. Change any option below per game in **Game settings → Compatibility**, or for all games in Settings.
 
 ## Download Proton builds in the Wine Manager
 
@@ -20,7 +20,7 @@ The Wine Manager (<kbd>Ctrl</kbd> <kbd>3</kbd>) downloads and updates these buil
 - Proton-EM
 - Proton-Sarek
 
-Builds go to Heronite's data folder (`~/.local/share/heronite/tools/proton` and `tools/wine`), or to Steam's `compatibilitytools.d` if you turn that on, so Steam can use them too. Heronite also finds the Proton builds already in your Steam libraries and the Wine runners of Lutris.
+Builds go to Heronite's data folder (`~/.local/share/heronite/tools/proton` and `tools/wine`), or to Steam's `compatibilitytools.d` if you turn that on, so Steam can use them too. Heronite finds Proton builds already in your Steam libraries and the Wine runners of Lutris.
 
 ## Where games and Wine prefixes are stored
 
@@ -30,7 +30,7 @@ A prefix is the fake Windows folder a game runs in. By default:
 - each game gets its own prefix in `~/Games/Heronite/Prefixes`,
 - or several games can share `~/Games/Heronite/Prefixes/shared`.
 
-The Wine Manager lists your prefixes, and a game's settings have buttons for Winecfg and Winetricks in its prefix.
+The Wine Manager lists your prefixes. **Game settings → Compatibility** has Winecfg and Winetricks buttons for the game's prefix.
 
 ## Per-game options
 
@@ -50,12 +50,12 @@ The Wine Manager lists your prefixes, and a game's settings have buttons for Win
 
 ## Sandbox
 
-Run a game you do not trust through [bubblewrap](https://github.com/containers/bubblewrap): no network and no access to your home folder. Let one thing through (like a folder or the network) when the game needs it. Needs `bwrap` installed.
+Run a game you do not trust through [bubblewrap](https://github.com/containers/bubblewrap), with no network and no access to your home folder. Allow a folder or the network when the game needs it. Needs `bwrap` installed.
 
 ## A Windows game won't start
 
-Heronite reads the launch log and suggests a fix when it recognises the problem. The causes and fixes are listed in [Troubleshooting](/docs/troubleshooting/).
+Heronite reads the launch log and suggests a fix when it recognises the problem. See the [causes and fixes in Troubleshooting](/docs/troubleshooting/#a-game-wont-start-linux).
 
 ## Anti-cheat
 
-The anti-cheat status of a game comes from [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) and is shown in its details. Heronite can provide the EAC and BattlEye runtimes, but a game whose developer does not allow Linux will not run.
+Heronite shows each game's anti-cheat status, from [Are We Anti-Cheat Yet?](https://areweanticheatyet.com), in its details. Heronite can provide the EAC and BattlEye runtimes, but a game whose developer does not allow Linux will not run.

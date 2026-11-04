@@ -1,9 +1,9 @@
 ---
 title: "Playnite Alternative for Linux: Heronite vs Playnite"
-description: "Looking for Playnite on Linux? Heronite is a free, open source launcher for Linux and Windows. See how they compare, and when Playnite is the better pick."
+description: "Playnite alternative for Linux: Heronite is a free, open source launcher for Linux and Windows. See how they compare and when Playnite is better."
 eyebrow: Compare
 headline: "Heronite vs Playnite: a Playnite alternative for Linux"
-lead: "There is no Playnite for Linux yet. Heronite is a similar launcher that already runs on Linux and Windows."
+lead: "Playnite has no Linux version yet; Heronite is a similar launcher that already runs on Linux and Windows."
 navLabel: Heronite vs Playnite
 summary: "Heronite vs Playnite: which fits Linux players, Windows players and anyone who wants a Playnite alternative."
 order: 1
@@ -13,22 +13,20 @@ og: /og/playnite.jpg
 updated: 2026-11-04
 highlights:
   - title: Runs on Linux
-    text: Heronite is a native app on Linux and Windows. Playnite runs on Windows only today.
-  - title: Windows games through Wine and Proton
-    text: On Linux, Heronite runs Windows games with a Wine or Proton build you pick per game.
+    text: Native on Linux and Windows. Playnite is Windows only.
+  - title: Wine and Proton built in
+    text: On Linux, pick a Wine or Proton build per game.
   - title: Light and native
-    text: Written in Rust and drawn on the GPU, with about 190 MB of memory when idle and no bundled browser.
+    text: Written in Rust, about 190 MB of memory when idle.
   - title: Play history built in
-    text: Every session is recorded, with statistics, a journal, a backlog goal and a year in review.
+    text: Every session feeds statistics, a journal and a year in review.
 faq:
-  - q: Is there a Playnite for Linux?
-    a: Not yet. As of November 2026, Playnite needs Windows 10 or 11, and we found no released Linux version. Heronite already runs on Linux and Windows.
-  - q: What is the best Playnite alternative for Linux?
-    a: It depends on what you need. Heronite brings Steam, Epic, GOG, Amazon, emulators and your own games into one Collection. Heroic and Lutris are other good options.
+  - q: Which launcher can I use instead of Playnite on Linux?
+    a: Heronite brings Steam, Epic, GOG, Amazon, emulators and your own games into one library. Heroic and Lutris are other good options.
   - q: Can Heronite import my Playnite library?
-    a: No, Heronite has no Playnite importer. It reads Steam and, once you log in, brings in your Epic, GOG and Amazon libraries, so most of the library comes back.
+    a: "No, there is no Playnite importer. Heronite reads Steam and, after you log in, Epic, GOG and Amazon, so most of your library comes back. [See the steps](#how-do-i-switch-from-playnite-to-heronite)."
   - q: Does Heronite have add-ons and themes like Playnite?
-    a: Heronite has no add-on system. Its console mode has themes you can change and share as files. Playnite has plugins, PowerShell scripts and themes, a real strength if you want to extend your launcher.
+    a: No add-on system, but console mode themes can be changed and shared as files. Playnite has plugins, PowerShell scripts and themes, a real strength if you want to extend your launcher.
 related:
   - /features/stores/
   - /features/emulation/
@@ -60,11 +58,11 @@ The Playnite column comes from [playnite.link](https://playnite.link) and the [P
 
 Not yet. Playnite's README lists Windows 10 or 11 as its requirement, and it is built on WPF, a Windows framework. The README also says Playnite is being rewritten from scratch for version 11.
 
-In [a GitHub discussion](https://github.com/JosefNemec/Playnite/issues/59) in November 2025, the developer wrote that he planned to move to Linux in 2026, after Playnite 11 is done, and try to build a Linux version. He expects it to be less complete than the Windows one, but usable every day with Wine and Proton integration. We found no released Linux version as of November 2026.
+In [a GitHub discussion](https://github.com/JosefNemec/Playnite/issues/59) in November 2025, the developer wrote that he planned to move to Linux in 2026, after Playnite 11 is done. He would try to build a Linux version, less complete than the Windows one but usable every day with Wine and Proton integration. We found no released Linux version as of November 2026.
 
 ## What do Heronite and Playnite share?
 
-Both are free and open source. Both pull your games from several stores into one library, record play time, support emulators and have a controller-friendly full-screen mode.
+Both are free and open source. Both pull games from several stores into one library, record play time, support emulators and have a controller-friendly full-screen mode.
 
 ## Which one should you choose?
 
@@ -72,18 +70,18 @@ Both are free and open source. Both pull your games from several stores into one
 
 - **You play on Windows only and are happy with it.** Nothing in Heronite is a reason to give up a setup you like.
 - **You rely on plugins, scripts or a community theme.** Playnite is extensible through plugins, scripts and themes, with far more room than Heronite.
-- **You want Battle.net, Ubisoft Connect or EA app games imported straight in on Windows.** Playnite's site lists Steam, Epic, GOG, Battle.net, Ubisoft Connect and others as libraries it connects, and its repository also mentions the EA app. On Windows, Heronite handles Steam, Epic, GOG and Amazon.
+- **You want Battle.net, Ubisoft Connect or EA app games imported straight in on Windows.** Playnite's site lists Battle.net and Ubisoft Connect among its libraries, and its repository mentions the EA app. On Windows, Heronite handles Steam, Epic, GOG and Amazon.
 - **You have a library or emulator setup you have already tuned.** Playnite's site describes a range of console emulators, so compare before you move yours.
 - **You want a long track record.** Playnite's developer was already discussing Linux in 2017. Heronite is younger.
 
 ### Choose Heronite if…
 
-- **You use Linux, or dual boot.** Heronite is one native app for both systems, and your Collection and views look the same on each. On Windows it runs games directly.
+- **You use Linux, or dual boot.** Heronite is one native app for both systems, with the same library and views on each. On Windows it runs games directly.
 - **You want Windows games to run through Wine or Proton from the app that lists them.** Set a version and prefix per game. The [Wine Manager](/features/wine-and-proton/) downloads builds such as Proton-CachyOS and GE-Proton.
 - **You want a light app.** Heronite is one Rust process with no browser engine inside, using about 190 MB of memory when idle. See [performance](/features/performance/).
 - **You want a play history.** Heronite records every session: [statistics](/features/play-time-tracking/) by week, month and year, a yearly backlog goal, a journal next to your screenshots, and a year in review.
 - **You want console mode with themes.** [Console mode](/features/console-mode/) is a controller-first layout for the couch or a TV, with eight layouts and seven themes. Export a theme as a file to share.
-- **You play emulated games.** Heronite [detects the emulators](/features/emulation/) you have installed, including RetroArch with its cores, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, Cemu and mGBA, and scans your ROM folders on Linux and Windows. Each ROM becomes a game with its own cover and play time, and you can continue from a save state. You can also connect a RetroAchievements account.
+- **You play emulated games.** Heronite [detects the emulators](/features/emulation/) you have installed, including RetroArch with its cores, Dolphin, PCSX2 and DuckStation, and scans your ROM folders on Linux and Windows. Each ROM becomes a game with its own cover and play time, and you can continue from a save state or connect a RetroAchievements account.
 - **You want more stores on Linux.** Heronite installs the Battle.net, EA app, Ubisoft Connect and Rockstar Games clients in their own Wine prefixes, and their games show up in the same Collection.
 - **You want to import games from Heroic, Lutris, Bottles or Faugus** on Linux.
 
@@ -93,16 +91,16 @@ Both are free and open source. Both pull your games from several stores into one
 
 ## How do I switch from Playnite to Heronite?
 
-Heronite has no Playnite importer, so there is no one-click move. Here is what to do:
+Heronite has no Playnite importer, so there is no one-click move. Rebuild your library in three steps:
 
-1. **Log in to Epic Games, GOG and Amazon Games** on the **Stores** page. Those whole libraries join the Collection. Steam needs no login.
-2. **Add the games you added by hand again.** Press <kbd>Ctrl</kbd> <kbd>N</kbd> to add a program, or point at a folder and add every game found in it at once.
-3. **Let Heronite [detect your emulators](/features/emulation/) and scan your ROM folders.** Your emulated games return.
+1. **Log in to Epic Games, GOG and Amazon Games** on the **Stores** page. Your whole libraries join the Collection. Steam needs no login.
+2. **Add your hand-added games again.** Press <kbd>Ctrl</kbd> <kbd>N</kbd> to add a program, or point at a folder to add every game found in it at once.
+3. **Detect your emulators and scan your ROM folders.** On the **Emulators** page (<kbd>Ctrl</kbd> <kbd>5</kbd>), press detect, then scan, and your [emulated games](/features/emulation/) return.
 
-On Windows, games already installed by the Epic Games Launcher, GOG Galaxy or the Amazon Games app come in without downloading again. For Epic games you never played in Heronite, it can also take in the play time Epic recorded.
+On Windows, Heronite picks up games installed by the Epic Games Launcher, GOG Galaxy or the Amazon Games app without downloading them again. For Epic games you never played in Heronite, it can take in the play time Epic recorded.
 
-Playnite's own data does not move over. Tags, completion status, notes and Playnite's play time stay in Playnite, which keeps working as before. Heronite does not touch its files.
+Tags, completion status, notes and Playnite's play time stay in Playnite, which keeps working as before. Heronite never touches its files.
 
-> **Note.** You can run both side by side on Windows while you decide. Neither one changes the other's data.
+> **Note.** You can run both side by side on Windows while you decide.
 
-**Next:** Heronite is free, with no account, ads or telemetry. [Download it](/download/) for Linux or Windows, then read [Getting started](/docs/getting-started/).
+**Next:** [Download Heronite](/download/) for Linux or Windows, then read [Getting started](/docs/getting-started/).

@@ -6,7 +6,7 @@ order: 1
 updated: 2026-11-04
 ---
 
-Heronite puts your Steam, Epic Games, GOG, Amazon Games and other launcher games into one Collection.
+Heronite puts your Steam, Epic Games, GOG, Amazon Games and other launcher games into one library.
 
 ## Add your Steam games
 
@@ -15,13 +15,13 @@ No login needed. Heronite reads your Steam libraries and keeps them in sync.
 - **Linux:** it finds Steam in `~/.steam/steam`, `~/.local/share/Steam`, the Flatpak (`~/.var/app/com.valvesoftware.Steam/.local/share/Steam`), and the Snap (`~/snap/steam/common/.local/share/Steam`).
 - **Windows:** it finds Steam from the registry, or in `C:\Program Files (x86)\Steam`.
 
-Steam still starts its own games. On Windows, Heronite can run your scripts and programs (like trainers) around a Steam game too.
+Steam starts its games. On Windows, Heronite can run scripts and programs, like trainers, around a Steam game.
 
 ## Log in to Epic Games, GOG, and Amazon Games
 
-Log in from the **Stores** page. Heronite then handles the whole library. One download queue installs, updates, and repairs games, and also moves, imports, and uninstalls them. Downloads pause when you are offline and failed ones are retried.
+Log in from the **Stores** page (<kbd>Ctrl</kbd> <kbd>4</kbd>). One download queue installs, updates, and repairs games, and moves, imports, or uninstalls them. Downloads pause when you are offline, and Heronite retries failed ones.
 
-Heronite uses the same open source tools as Heroic and downloads them itself:
+Heronite downloads the same open source tools as Heroic:
 
 | Store | Tool |
 |---|---|
@@ -29,21 +29,21 @@ Heronite uses the same open source tools as Heroic and downloads them itself:
 | GOG | [gogdl](https://github.com/Heroic-Games-Launcher/heroic-gogdl) |
 | Amazon Games | [nile](https://github.com/imLinguin/nile) |
 
-**Login window.** Logging in opens a small window with the store's own page (WebKitGTK on Linux, WebView2 on Windows). If it does not open, the login page has a **browser method**: log in in your normal browser and paste the address or code shown at the end.
+**Login window.** Logging in opens a small window with the store's own page (WebKitGTK on Linux, WebView2 on Windows). If it does not open, use the **browser method** on the login page: log in in your browser and paste the address or code shown at the end.
 
-**Games you already installed (Windows).** Games installed by the Epic Games Launcher, GOG Galaxy, or the Amazon Games app come into Heronite without downloading them again.
+**Games you already installed (Windows).** Heronite imports games installed by the Epic Games Launcher, GOG Galaxy, or the Amazon Games app, without downloading them again.
 
-Game updates are checked every 3 hours.
+Heronite checks for game updates every 3 hours.
 
 ## Use Battle.net, EA app, Ubisoft Connect, and Rockstar Games (Linux)
 
-Heronite installs each store's own app in a Wine prefix of its own (in `~/Games/Heronite/Prefixes/<store>`). Log in and install games in that app; they show up in your Collection and start from it.
+Heronite installs each store app in its own Wine prefix, `~/Games/Heronite/Prefixes/<store>`. Log in and install games in that app. They appear in your library and start from there.
 
-On Windows, use the stores' own apps for now.
+On Windows, use each store's app for now.
 
 ## Import games from Heroic, Lutris, Bottles, and Faugus (Linux)
 
-Heronite can bring in the games of other launchers and keep them in sync. Each source can be the normal install or the Flatpak:
+Heronite imports games from these launchers and keeps them in sync. Each can be a normal install or a Flatpak:
 
 | Launcher | What comes in |
 |---|---|
@@ -52,8 +52,8 @@ Heronite can bring in the games of other launchers and keep them in sync. Each s
 | Bottles | Programs of each bottle |
 | Faugus | Games from its list |
 
-Steam games those launchers list are left to the Steam import, so nothing shows up twice. Heronite only reads the other launchers' files.
+Heronite skips their Steam games, which come in through the Steam import, so nothing shows up twice. It only reads the other launchers' files.
 
 ## Add games you already have
 
-Add a program by hand (<kbd>Ctrl</kbd> <kbd>N</kbd>), or point at a folder and add every game found in it at once: Windows programs, and on Linux also AppImages, start scripts, and Linux programs.
+Press <kbd>Ctrl</kbd> <kbd>N</kbd> to add a program, or point at a folder to add every game in it: Windows programs and, on Linux, AppImages, start scripts, and Linux programs.

@@ -10,11 +10,11 @@ Console mode is a controller-first layout for the couch or a TV, with an on-scre
 
 ## Turn on console mode
 
-- From the command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>) or the ☰ menu.
+- Use the command palette (<kbd>Ctrl</kbd> <kbd>K</kbd>) or the ☰ menu.
 - Start Heronite with `--console` (for example in a Steam shortcut or a gaming session).
 - In **Settings → Console mode**, make it open at startup or when a controller connects (off, ask, or on).
 
-Console mode loads nothing while it is off.
+Console mode loads nothing while it is off. On the Steam Deck, see the [Steam Deck guide](/guides/steam-deck/).
 
 ## Controller buttons
 
@@ -57,7 +57,7 @@ Seven themes come built in: Minimal, Classic, Cinema, Pulse, Arcade, Hub, and Li
 
 Export a theme to a `.heronite-theme.json` file and import it on any PC. The background picture goes inside the file. Share yours in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions).
 
-The file format is described in [Console theme format](/docs/console-theme-format/).
+To edit the file by hand, see [Console theme format](/docs/console-theme-format/).
 
 ## Open the in-game overlay (beta, Linux)
 
@@ -71,6 +71,6 @@ With the overlay turned on, the controller's Guide button opens a panel over the
 | Guide + Y | Mark a moment |
 | Guide + X | Save the replay |
 
-The overlay needs a Wayland session whose compositor supports layer-shell (KDE Plasma, Hyprland, Sway, and others). It does not work on GNOME or X11. If Steam takes the Guide button, turn off "Guide Button Focuses Steam" in Steam's controller settings.
+If the overlay does not work or Steam takes the Guide button, see [Troubleshooting](/docs/troubleshooting/#the-in-game-overlay-does-not-work-linux). It needs a Wayland session whose compositor supports layer-shell, so it does not work on GNOME or X11.
 
 **Replay** (off by default) keeps the last seconds of play, recorded on the GPU by [gpu-screen-recorder](https://git.dec05eba.com/gpu-screen-recorder/about/).

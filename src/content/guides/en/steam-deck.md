@@ -13,31 +13,31 @@ og: /og/steam-deck.jpg
 updated: 2026-11-04
 highlights:
   - title: "Install in Desktop Mode"
-    text: "Download the AppImage, make it executable and log in to your stores once with a keyboard."
+    text: "Download the AppImage, make it executable and log in once with a keyboard."
   - title: "Add it to Steam"
-    text: "Add the AppImage as a non-Steam game and set the launch option to --console."
+    text: "Add the AppImage as a non-Steam game with the launch option --console."
   - title: "Play from Gaming Mode"
-    text: "Open Heronite from your Steam library and use the Deck's buttons to install and play."
-  - title: "Epic, GOG and Amazon"
-    text: "Your other libraries sit next to your Steam games in one controller-friendly Collection."
+    text: "Open Heronite from your Steam library and use the Deck's buttons."
+  - title: "One controller-friendly library"
+    text: "Your other stores sit next to your Steam games."
 faq:
   - q: "Does Heronite work on the Steam Deck?"
-    a: "Yes. Heronite runs on SteamOS as an AppImage, and its console mode is built for controllers. It is not Steam Deck Verified, so you set it up yourself."
+    a: "Yes. It runs on SteamOS as an AppImage, and its console mode is built for controllers."
   - q: "What launch option do I use on the Steam Deck?"
-    a: "Use `--console`. It opens Heronite in console mode, the layout for controllers and TVs. Add `--fullscreen` to start fullscreen."
+    a: "Use `--console`, which opens the layout for controllers and TVs. Add `--fullscreen` to start fullscreen."
   - q: "Can I play Epic Games, GOG and Amazon games on the Deck?"
-    a: "Yes. Log in on the **Stores** page and the games join your Collection. Windows games run through Proton, as on any Linux PC."
+    a: "Yes. Log in on the **Stores** page and the games join your Collection. Windows games run through Proton. See [Log in to Epic, GOG and Amazon Games](#log-in-to-epic-gog-and-amazon-games)."
   - q: "Do I have to use Desktop Mode every time?"
-    a: "No. You need it to install Heronite, add it to Steam and log in to your stores. After that, stay in Gaming Mode and go back only for settings that are easier with a keyboard and mouse."
+    a: "No. You need it to install Heronite, add it to Steam and log in to your stores. After that, stay in Gaming Mode."
   - q: "Can I add one game to Steam instead of the whole launcher?"
-    a: "Yes. For an installed game, choose **Add to Steam** in its actions. Steam gets a non-Steam shortcut that starts that game directly, without showing Heronite's window."
+    a: "Yes. Choose **Add to Steam** in an installed game's actions. Steam gets a non-Steam shortcut that starts that game directly, without showing Heronite's window."
 related:
   - /guides/epic-games-on-linux/
   - /features/console-mode/
   - /docs/console-mode/
 ---
 
-Heronite runs on Steam Deck because SteamOS is Linux. It is not a Steam Deck Verified app, so you set it up by hand.
+Heronite runs on Steam Deck because SteamOS is Linux. It is not Steam Deck Verified, so you set it up by hand.
 
 ## What you need
 
@@ -66,9 +66,9 @@ On the first start Heronite adds the Steam games it finds, with no login. It als
 
 ## Log in to Epic, GOG and Amazon Games
 
-Press <kbd>Ctrl</kbd> <kbd>4</kbd> to open **Stores** and log in to Epic Games, GOG or Amazon Games. A small login window opens with the store's own page. Use a keyboard to type your password. Your whole library then appears in the Collection.
+Press <kbd>Ctrl</kbd> <kbd>4</kbd> to open **Stores** and log in to Epic Games, GOG or Amazon Games. Log in on the store's page in the window that opens, and use a keyboard to type your password. Your whole library then appears in the Collection.
 
-Each store has its own guide: [Epic Games](/guides/epic-games-on-linux/), [GOG](/guides/gog-on-linux/) and [Amazon Games](/guides/amazon-games-on-linux/). Install a game or two now, while you have the desktop. You can pick the install folder, so the SD card works too.
+Install a game or two now, while you have the desktop. You can pick the install folder, so the SD card works too. Each store has a guide: [Epic Games](/guides/epic-games-on-linux/), [GOG](/guides/gog-on-linux/) and [Amazon Games](/guides/amazon-games-on-linux/).
 
 ## Add Heronite to Steam
 
@@ -82,9 +82,9 @@ Each store has its own guide: [Epic Games](/guides/epic-games-on-linux/), [GOG](
 --console
 ```
 
-`--console` opens Heronite in console mode, the controller-first layout. Add `--fullscreen` too for a fullscreen window. Steam's menu names can change between updates, but the idea stays the same. See [Command line and links](/docs/command-line-and-links/) for all the options.
+`--console` opens Heronite in console mode, the controller-first layout. Add `--fullscreen` too for a fullscreen window. Steam's menu names can change between updates. See [Command line and links](/docs/command-line-and-links/) for all the options.
 
-## Use console mode from Gaming Mode
+## Start Heronite in Gaming Mode
 
 Double-click the **Return to Gaming Mode** icon on the desktop. Heronite is in your library under non-Steam games. Start it to land on the console home screen, with a **Continue playing** shelf of your recent games. The **Library** tab holds every game.
 

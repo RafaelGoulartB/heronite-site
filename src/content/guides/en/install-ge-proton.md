@@ -3,7 +3,7 @@ title: "How to Install GE-Proton and Proton-CachyOS on Linux"
 description: "Install GE-Proton, Proton-CachyOS and other Proton builds on Linux with Heronite's Wine Manager. Pick one per game or share them with Steam."
 eyebrow: Linux guide
 headline: "How to install GE-Proton and Proton-CachyOS"
-lead: "Install GE-Proton on Linux from the Wine Manager in one click, then pick the build per game or share it with Steam."
+lead: "Install GE-Proton on Linux from the Wine Manager in one click, then pick it per game or share it with Steam."
 navLabel: Install GE-Proton
 summary: "Open the Wine Manager, install GE-Proton or Proton-CachyOS, and choose the build for each game in Game settings."
 order: 7
@@ -15,20 +15,18 @@ highlights:
   - title: "Open the Wine Manager"
     text: "Press Ctrl+3, choose a source such as GE-Proton, and click Install on a build."
   - title: "Six sources"
-    text: "Proton-CachyOS, GE-Proton, DW-Proton, UMU-Proton, Proton-EM and Proton-Sarek in one list."
+    text: "Pick from six Proton sources in one list."
   - title: "Share with Steam"
-    text: "Turn on Install Proton into Steam and new builds go to compatibilitytools.d, where Steam can pick them too."
+    text: "Turn on Install Proton into Steam and Steam can use new builds too."
   - title: "Choose it per game"
-    text: "In Game settings, Compatibility, pick the version for each game."
+    text: "Pick the version for each game in Game settings → Compatibility."
 faq:
-  - q: "How do I install GE-Proton on Linux?"
-    a: "Press `Ctrl+3` to open the Wine Manager, choose **GE-Proton** in the list on the left, and click **Install** on the build you want. Heronite downloads and unpacks it."
   - q: "What is the difference between GE-Proton and Proton-CachyOS?"
-    a: "GE-Proton is made by Glorious Eggroll. Proton-CachyOS comes from the CachyOS team and adds tools like DXVK-Sarek and D7VK. Both often get fixes before Valve's Proton. Install both and switch per game."
+    a: "They come from different teams: Glorious Eggroll makes GE-Proton, the CachyOS team makes Proton-CachyOS. Both often get fixes before Valve's Proton. See [the sources table](#what-are-the-other-proton-builds-for)."
   - q: "Can Steam use the builds I install in Heronite?"
-    a: "Yes. Turn on **Install Proton into Steam** in the Wine Manager. Builds then go to Steam's `compatibilitytools.d` folder, and Steam sees them after it restarts."
-  - q: "How do I choose which Proton a game uses?"
-    a: "Open the game's **Game settings → Compatibility** and pick a build in the **Version** menu. You can also set a default for all games in Settings. See [Wine and Proton](/docs/wine-and-proton/)."
+    a: "Yes. Turn on **Install Proton into Steam** in the Wine Manager and restart Steam. See [Share the builds with Steam](#share-the-builds-with-steam-optional)."
+  - q: "Where does Heronite install Proton builds?"
+    a: "In `~/.local/share/heronite/tools/proton`. With **Install Proton into Steam** on, new builds go to Steam's `compatibilitytools.d` folder."
   - q: "Does the Wine Manager work on Windows?"
     a: "No. The Wine Manager is Linux only. On Windows, games run natively."
 related:
@@ -37,11 +35,11 @@ related:
   - /guides/steam-deck/
 ---
 
-To install GE-Proton on Linux, open Heronite's Wine Manager, choose **GE-Proton** and click **Install**. GE-Proton and Proton-CachyOS often get fixes for new releases first, so try them when a game crashes.
+GE-Proton and Proton-CachyOS often get fixes for new releases first, so try them when a game crashes.
 
 ## What you need
 
-- Heronite on Linux ([installation guide](/docs/installation/)). The Wine Manager is not on Windows.
+- Heronite on Linux ([installation guide](/docs/installation/)). The Wine Manager is not on Windows. On Steam Deck, set Heronite up with the [Steam Deck guide](/guides/steam-deck/) first.
 - An internet connection. Builds download from GitHub.
 - Disk space. A Proton build takes from a few hundred megabytes to over a gigabyte.
 
@@ -51,15 +49,13 @@ Press <kbd>Ctrl</kbd> <kbd>3</kbd>, or open it from the command palette (<kbd>Ct
 
 ![Heronite's Wine Manager with Proton-CachyOS selected: a list of builds with release dates, sizes and Install buttons.](../../../assets/screenshots/wine-manager.webp)
 
-*The Wine Manager: choose a source on the left, install a build on the right.*
-
 ## Install GE-Proton in the Wine Manager
 
 1. Choose **GE-Proton** in the list on the left.
 2. Find the build you want. **GE-Proton-latest** follows the newest release. A numbered build stays fixed, which helps when a game works on one release only.
 3. Click **Install**.
 
-The row changes to **Installed**. Builds go to `~/.local/share/heronite/tools/proton`. Use the search box to find a version quickly, or click the refresh icon if the list is empty.
+The row changes to **Installed**. Builds go to `~/.local/share/heronite/tools/proton`. Use the search box to find a version quickly.
 
 > **Tip.** Turn on **Keep the -latest builds up to date**. Heronite then updates the **-latest** entries in the background, never while a game runs.
 
@@ -78,7 +74,7 @@ Choose **Proton-CachyOS** in the list and click **Install** on a build. Builds i
 | Proton-EM | Proton with patches that are still being tested, such as FSR 4 and HDR. Some releases are pre-releases |
 | Proton-Sarek | Proton with DXVK-Sarek, for older graphics cards without Vulkan 1.3 support |
 
-If a game fails on one build, try another. [ProtonDB](https://www.protondb.com) often names the build that works.
+[ProtonDB](https://www.protondb.com) often names the build that works for a game.
 
 ## Pick a build in Game settings
 
@@ -88,9 +84,7 @@ If a game fails on one build, try another. [ProtonDB](https://www.protondb.com) 
 
 ![Heronite's Game settings on the Compatibility tab: the Version menu set to GE-Proton-latest, with its ProtonDB rating and the Wine prefix below.](../../../assets/screenshots/game-settings.webp)
 
-*Game settings → Compatibility: the Version menu picks the build for this game.*
-
-The same tab shows the game's ProtonDB rating and a **Recommended** build. Your choice applies to that game only. Set a default for new games in Settings.
+The same tab shows the game's ProtonDB rating and a **Recommended** build. Your choice applies to that game only. Set a default for new games in Settings. See [Wine and Proton](/docs/wine-and-proton/).
 
 ## Share the builds with Steam (optional)
 
