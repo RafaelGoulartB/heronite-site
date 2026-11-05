@@ -92,7 +92,7 @@ O Heronite antes faz backup do que você tem agora, para você poder voltar atr�
 
 Sim. **Configurações → Nuvem** mantém status, favoritos, anotações, tempo de jogo e sessões iguais em todos os PCs, como o Linux e o Windows de um dual boot. A sincronização passa por uma pasta compartilhada ou por uma conta na nuvem, como Google Drive, Dropbox ou OneDrive.
 
-O mesmo lugar pode guardar seus backups do Heronite, os backups de saves do Ludusavi e as capturas de tela. Configure em [Backups e saves](/pt-br/docs/backups-and-saves/#sincronizar-a-biblioteca-entre-pcs).
+O mesmo lugar pode guardar seus backups do Heronite, os backups de saves do Ludusavi e as capturas de tela. Configure em [Sincronizar entre PCs](/pt-br/docs/sync-between-pcs/).
 
 ## Para onde foi meu espaço em disco?
 
