@@ -7,8 +7,6 @@ order: 7
 updated: 2026-11-05
 ---
 
-Jogue em um PC e os outros ficam sabendo: os mesmos status, notas e tempo de jogo em todos. Funciona também entre o Linux e o Windows de um mesmo PC com dual boot.
-
 ![Configurações → Nuvem com Biblioteca entre PCs em Automático, sincronizada com outro PC](../../../assets/screenshots/cloud-sync.webp)
 
 *Configurações → Nuvem, sincronizada com outro PC.*
@@ -17,8 +15,8 @@ Jogue em um PC e os outros ficam sabendo: os mesmos status, notas e tempo de jog
 
 | Sincroniza | Fica em cada PC |
 |---|---|
-| Status, favoritos e notas de avaliação | Jogos instalados |
-| Anotações e jogos ocultos | Prefixos Wine |
+| Status, favoritos e avaliações | Jogos instalados |
+| Notas e jogos ocultos | Prefixos Wine |
 | Tempo de jogo e sessões | Configurações dos jogos e logins das lojas |
 
 Seus dados vão só para a pasta ou conta que você escolher.
@@ -45,7 +43,7 @@ Contas e servidores passam pelo [rclone](https://rclone.org/). O Heronite baixa 
 
 ## Em um dual boot Linux e Windows
 
-1. Escolha um disco que os dois sistemas montam, em **NTFS** ou **exFAT**, e use uma pasta nele como **Pasta de sincronização** nos dois sistemas.
+1. Escolha um disco que os dois sistemas montam ao iniciar, em **NTFS** ou **exFAT**, e use uma pasta nele como **Pasta de sincronização** nos dois sistemas.
 2. No Windows, desligue a **Inicialização Rápida**. Senão o Linux monta o disco só para leitura.
 3. Em **Seus PCs**, dê um nome para cada lado, como *Linux* e *Windows*.
 
@@ -53,13 +51,13 @@ Contas e servidores passam pelo [rclone](https://rclone.org/). O Heronite baixa 
 
 Cada PC grava só o próprio arquivo, então o serviço de sincronização nunca fica com duas cópias para escolher. O Heronite junta os dados:
 
-- **Status, favoritos, notas de avaliação e anotações:** vale a mudança mais recente, campo por campo.
-- **Sessões:** as sessões de todos os PCs se somam.
+- **Status, favoritos, avaliações e notas:** vale a mudança mais recente, campo por campo.
+- **Sessões:** as sessões de todos os PCs ficam, sem repetir.
 - **Tempo de jogo:** vale o maior total, a não ser que você tenha diminuído ele à mão.
 - **Um jogo que só um PC tem:** os dados dele esperam, e chegam quando você adicionar esse jogo no outro PC.
 
 ## Mais opções
 
-- **Este PC envia só tempo de jogo e sessões:** para um PC que você não mantém organizado. O que você joga nele conta em todos, e os status e anotações dos outros PCs prevalecem.
+- **Este PC envia só tempo de jogo e sessões:** para um PC que você não mantém organizado. O tempo de jogo e as sessões contam em todos os PCs; status, favoritos, avaliações, jogos ocultos e notas vêm dos outros PCs.
 - **Backups, saves dos jogos e capturas de tela** podem ir para a mesma conta. Veja [Backups e saves](/pt-br/docs/backups-and-saves/).
-- **PC novo:** conecte na mesma conta e clique em **Restaurar tudo** em **Restaurar da nuvem**.
+- **PC novo:** configure como acima e sua biblioteca chega. Para trazer também o backup, os saves e as capturas que outro PC enviou, clique em **Restaurar tudo** em **Restaurar da nuvem**.

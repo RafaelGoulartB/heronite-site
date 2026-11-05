@@ -7,8 +7,6 @@ order: 7
 updated: 2026-11-05
 ---
 
-Juega en un PC y los demás se enteran: los mismos estados, notas y tiempo de juego en todos. También funciona entre el Linux y el Windows de un mismo PC con dual boot.
-
 ![Ajustes → Nube con Biblioteca entre PC en Automático, sincronizada con otro PC](../../../assets/screenshots/cloud-sync.webp)
 
 *Ajustes → Nube, sincronizada con otro PC.*
@@ -45,7 +43,7 @@ Las cuentas y los servidores pasan por [rclone](https://rclone.org/). Heronite l
 
 ## En un dual boot Linux y Windows
 
-1. Elige un disco que monten los dos sistemas, en **NTFS** o **exFAT**, y usa una carpeta en él como **Carpeta de sincronización** en ambos.
+1. Elige un disco que monten los dos sistemas al iniciar, en **NTFS** o **exFAT**, y usa una carpeta en él como **Carpeta de sincronización** en ambos.
 2. En Windows, desactiva el **Inicio rápido**. Si no, Linux monta el disco solo para lectura.
 3. En **Tus PC**, ponle un nombre a cada lado, como *Linux* y *Windows*.
 
@@ -54,12 +52,12 @@ Las cuentas y los servidores pasan por [rclone](https://rclone.org/). Heronite l
 Cada PC escribe solo su propio archivo, así que el servicio de sincronización nunca tiene dos copias entre las que elegir. Heronite las combina:
 
 - **Estados, favoritos, valoraciones y notas:** gana el cambio más reciente, campo por campo.
-- **Sesiones:** se suman las de todos los PC.
+- **Sesiones:** se guardan las de todos los PC, sin repetir.
 - **Tiempo de juego:** gana el total más alto, salvo que lo hayas bajado a mano.
-- **Un juego que solo tiene un PC:** sus datos esperan, y llegan cuando añadas ese juego en el otro PC.
+- **Un juego que solo está en un PC:** sus datos esperan, y llegan cuando añadas ese juego en el otro PC.
 
 ## Más opciones
 
-- **Este PC solo envía tiempo de juego y sesiones:** para un PC que no mantienes organizado. Lo que juegas en él cuenta en todos, y los estados y notas de los otros PC tienen prioridad.
+- **Este PC solo envía tiempo de juego y sesiones:** para un PC que no mantienes organizado. El tiempo de juego y las sesiones cuentan en todos los PC; los estados, favoritos, valoraciones, juegos ocultos y notas vienen de los demás PC.
 - **Copias de Heronite, guardados de los juegos y capturas** pueden ir a la misma cuenta. Consulta [Copias de seguridad](/es/docs/backups-and-saves/).
-- **PC nuevo:** conéctate a la misma cuenta y pulsa **Restaurar todo** en **Restaurar desde la nube**.
+- **PC nuevo:** configúralo como arriba y tu biblioteca llega. Para traer también la copia, los guardados y las capturas que envió otro PC, pulsa **Restaurar todo** en **Restaurar desde la nube**.

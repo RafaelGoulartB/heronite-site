@@ -7,8 +7,6 @@ order: 7
 updated: 2026-11-05
 ---
 
-Play on one PC, and your other PCs know it: the same statuses, notes and play time everywhere. It also works between the Linux and Windows of one dual-boot PC.
-
 ![Settings → Cloud with Library between PCs on Automatic, synced with one other PC](../../../assets/screenshots/cloud-sync.webp)
 
 *Settings → Cloud, synced with one other PC.*
@@ -45,7 +43,7 @@ Accounts and servers go through [rclone](https://rclone.org/). Heronite download
 
 ## On a Linux and Windows dual boot
 
-1. Pick a drive both systems mount, formatted **NTFS** or **exFAT**, and choose a folder on it as the **Sync folder** in both systems.
+1. Pick a drive both systems mount at startup, formatted **NTFS** or **exFAT**, and choose a folder on it as the **Sync folder** in both systems.
 2. In Windows, turn off **Fast Startup**. Otherwise Linux mounts the drive read-only.
 3. Under **Your PCs**, give each side a name, like *Linux* and *Windows*.
 
@@ -54,12 +52,12 @@ Accounts and servers go through [rclone](https://rclone.org/). Heronite download
 Each PC writes only its own file, so a sync service never has two copies to choose between. Heronite merges them:
 
 - **Statuses, favourites, ratings and notes:** the newest change wins, field by field.
-- **Sessions:** every PC's sessions add up.
+- **Sessions:** every PC's sessions are kept, none twice.
 - **Play time:** the largest total wins, unless you lowered it by hand.
 - **A game only one PC has:** its data waits, and comes in once you add that game on the other PC.
 
 ## More options
 
-- **This PC only sends play time and sessions:** for a PC you don't keep organised. Its play counts everywhere, and the other PCs' statuses and notes win.
+- **This PC only sends play time and sessions:** for a PC you don't keep organised. Its play time and sessions count everywhere; statuses, favourites, ratings, hidden games and notes come from the other PCs.
 - **Backups, game saves and screenshots** can go to the same account. See [Backups and saves](/docs/backups-and-saves/).
-- **New PC:** connect to the same account, then press **Restore everything** under **Restore from the cloud**.
+- **New PC:** set it up as above, and your library comes in. To also bring back the backup, game saves and screenshots another PC sent, press **Restore everything** under **Restore from the cloud**.
