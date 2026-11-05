@@ -60,4 +60,4 @@ Each PC writes only its own file, so a sync service never has two copies to choo
 
 - **This PC only sends play time and sessions:** for a PC you don't keep organised. Its play time and sessions count everywhere; statuses, favourites, ratings, hidden games and notes come from the other PCs.
 - **Backups, game saves and screenshots** can go to the same account. See [Backups and saves](/docs/backups-and-saves/).
-- **New PC:** set it up as above, then press **Restore everything** under **Restore from the cloud**. It brings back the Heronite backup, game saves and screenshots another PC sent, then restarts Heronite. Sync keeps it up to date after that.
+- **New PC:** sync fills in games a PC already has. To bring the whole library from a backup another PC sent, see [Set up a new PC from the cloud](/docs/backups-and-saves/#set-up-a-new-pc-from-the-cloud).

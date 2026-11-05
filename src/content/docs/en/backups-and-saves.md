@@ -51,6 +51,11 @@ Cloud saves are in beta: back up your saves before syncing. They work on Linux a
 
 **Settings → Cloud** can send **Heronite backups**, **Game saves (Ludusavi)** and **Screenshots** to a cloud account, a server or a shared folder, each **Automatic**, **Manual** or **Off**. Automatic never sends during a game.
 
-On a new PC, connect to the same account, then press **Restore everything** under **Restore from the cloud**.
-
 The same place keeps your library the same on every PC: see [Sync between PCs](/docs/sync-between-pcs/).
+
+## Set up a new PC from the cloud
+
+1. In **Settings → Cloud**, connect to the same account or folder.
+2. In **Settings → Backups**, choose a backup folder. For game saves, install Ludusavi too.
+3. Under **Restore from the cloud**, press **See what is in the cloud**, then **Restore everything**.
+4. Confirm the restore. Heronite restarts with your library, then [Sync between PCs](/docs/sync-between-pcs/) keeps it up to date.

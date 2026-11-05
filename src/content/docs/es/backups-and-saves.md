@@ -51,6 +51,11 @@ Los guardados en la nube están en beta: haz una copia de tus partidas antes de 
 
 **Ajustes → Nube** puede enviar **Copias de Heronite**, **Guardados de los juegos (Ludusavi)** y **Capturas**, cada una en **Automático**, **Manual** o **Desactivado**. En automático, nunca envía nada durante un juego. Los juegos instalados, los prefijos de Wine, los ajustes de los juegos y los inicios de sesión en las tiendas se quedan siempre en cada PC.
 
-En un PC nuevo, inicia sesión en la misma cuenta y haz clic en **Restaurar todo** en **Restaurar desde la nube**.
-
 El mismo sitio mantiene tu biblioteca igual en todos tus PC: consulta [Sincronizar entre PC](/es/docs/sync-between-pcs/).
+
+## Configura un PC nuevo desde la nube
+
+1. En **Ajustes → Nube**, conéctate a la misma cuenta o carpeta.
+2. En **Ajustes → Copias**, elige una carpeta de copias. Para los guardados de los juegos, instala también Ludusavi.
+3. En **Restaurar desde la nube**, pulsa **Ver qué hay en la nube** y después **Restaurar todo**.
+4. Confirma la restauración. Heronite se reinicia con tu biblioteca, y después [Sincronizar entre PC](/es/docs/sync-between-pcs/) lo mantiene al día.

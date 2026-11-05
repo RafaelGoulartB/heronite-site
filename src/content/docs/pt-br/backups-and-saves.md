@@ -51,6 +51,11 @@ Os saves na nuvem estão em beta: faça backup dos seus saves antes de sincroniz
 
 **Configurações → Nuvem** pode enviar **Backups do Heronite**, **Saves dos jogos (Ludusavi)** e **Capturas de tela** para uma conta na nuvem, um servidor ou uma pasta compartilhada, cada um em **Automático**, **Manual** ou **Desligado**. O modo automático nunca envia nada durante um jogo.
 
-Em um PC novo, conecte na mesma conta e clique em **Restaurar tudo** em **Restaurar da nuvem**.
-
 O mesmo lugar deixa sua biblioteca igual em todos os PCs: veja [Sincronizar entre PCs](/pt-br/docs/sync-between-pcs/).
+
+## Configurar um PC novo pela nuvem
+
+1. Em **Configurações → Nuvem**, conecte na mesma conta ou pasta.
+2. Em **Configurações → Backups**, escolha uma pasta de backup. Para os saves dos jogos, instale também o Ludusavi.
+3. Em **Restaurar da nuvem**, clique em **Ver o que está na nuvem** e depois em **Restaurar tudo**.
+4. Confirme a restauração. O Heronite reinicia com sua biblioteca, e depois [Sincronizar entre PCs](/pt-br/docs/sync-between-pcs/) mantém tudo em dia.
