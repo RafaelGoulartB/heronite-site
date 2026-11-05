@@ -56,6 +56,8 @@ The same place keeps your library the same on every PC: see [Sync between PCs](/
 ## Set up a new PC from the cloud
 
 1. In **Settings → Cloud**, connect to the same account or folder.
-2. In **Settings → Backups**, choose a backup folder. For game saves, install Ludusavi too.
+2. In **Settings → Backups**, choose a backup folder. For game saves, install Ludusavi and set its backup folder in **Settings → Saves**.
 3. Under **Restore from the cloud**, press **See what is in the cloud**, then **Restore everything**.
 4. Confirm the restore. Heronite restarts with your library, then [Sync between PCs](/docs/sync-between-pcs/) keeps it up to date.
+
+Game saves go into Ludusavi's backup folder. Restore each game from its **Saves** tab.

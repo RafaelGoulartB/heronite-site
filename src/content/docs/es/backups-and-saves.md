@@ -56,6 +56,8 @@ El mismo sitio mantiene tu biblioteca igual en todos tus PC: consulta [Sincroniz
 ## Configura un PC nuevo desde la nube
 
 1. En **Ajustes → Nube**, conéctate a la misma cuenta o carpeta.
-2. En **Ajustes → Copias**, elige una carpeta de copias. Para los guardados de los juegos, instala también Ludusavi.
+2. En **Ajustes → Copias**, elige una carpeta de copias. Para los guardados de los juegos, instala Ludusavi y elige su carpeta de copias en **Ajustes → Guardados**.
 3. En **Restaurar desde la nube**, pulsa **Ver qué hay en la nube** y después **Restaurar todo**.
 4. Confirma la restauración. Heronite se reinicia con tu biblioteca, y después [Sincronizar entre PC](/es/docs/sync-between-pcs/) lo mantiene al día.
+
+Los guardados van a la carpeta de copias de Ludusavi. Restaura cada juego desde su pestaña **Guardados**.
