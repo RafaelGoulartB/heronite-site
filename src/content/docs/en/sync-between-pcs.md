@@ -52,7 +52,7 @@ Accounts and servers go through [rclone](https://rclone.org/). Heronite download
 Each PC writes only its own file, so a sync service never has two copies to choose between. Heronite merges them:
 
 - **Statuses, favourites, ratings and notes:** the newest change wins, field by field.
-- **Sessions:** every PC's sessions are kept, none twice.
+- **Sessions:** every PC's sessions are kept, with no duplicates.
 - **Play time:** the largest total wins, unless you lowered it by hand.
 - **A game only one PC has:** its data waits, and comes in once you add that game on the other PC.
 
@@ -60,4 +60,4 @@ Each PC writes only its own file, so a sync service never has two copies to choo
 
 - **This PC only sends play time and sessions:** for a PC you don't keep organised. Its play time and sessions count everywhere; statuses, favourites, ratings, hidden games and notes come from the other PCs.
 - **Backups, game saves and screenshots** can go to the same account. See [Backups and saves](/docs/backups-and-saves/).
-- **New PC:** set it up as above, and your library comes in. To also bring back the backup, game saves and screenshots another PC sent, press **Restore everything** under **Restore from the cloud**.
+- **New PC:** set it up as above, then press **Restore everything** under **Restore from the cloud**. It brings back the Heronite backup, game saves and screenshots another PC sent, then restarts Heronite. Sync keeps it up to date after that.

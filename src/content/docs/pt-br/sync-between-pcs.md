@@ -60,4 +60,4 @@ Cada PC grava só o próprio arquivo, então o serviço de sincronização nunca
 
 - **Este PC envia só tempo de jogo e sessões:** para um PC que você não mantém organizado. O tempo de jogo e as sessões contam em todos os PCs; status, favoritos, avaliações, jogos ocultos e notas vêm dos outros PCs.
 - **Backups, saves dos jogos e capturas de tela** podem ir para a mesma conta. Veja [Backups e saves](/pt-br/docs/backups-and-saves/).
-- **PC novo:** configure como acima e sua biblioteca chega. Para trazer também o backup, os saves e as capturas que outro PC enviou, clique em **Restaurar tudo** em **Restaurar da nuvem**.
+- **PC novo:** configure como acima e clique em **Restaurar tudo** em **Restaurar da nuvem**. Ele traz o backup do Heronite, os saves e as capturas que outro PC enviou e reinicia o Heronite. Depois, a sincronização mantém tudo em dia.
