@@ -92,7 +92,7 @@ Heronite primero copia lo que tienes ahora, para que puedas volver atrás. Mira 
 
 Sí. **Ajustes → Nube** mantiene iguales los estados, favoritos, notas, tiempo de juego y sesiones en cada PC, como el Linux y el Windows de un arranque dual. Sincroniza con una carpeta compartida o con una cuenta en la nube como Google Drive, Dropbox o OneDrive.
 
-El mismo sitio puede guardar tus copias de Heronite, las copias de partidas de Ludusavi y las capturas. Configúralo en [Copias y guardados](/es/docs/backups-and-saves/#sincroniza-tu-biblioteca-entre-varios-pc).
+El mismo sitio puede guardar tus copias de Heronite, las copias de partidas de Ludusavi y las capturas. Configúralo en [Sincronizar entre PC](/es/docs/sync-between-pcs/).
 
 ## ¿A dónde se fue el espacio de mi disco?
 

@@ -92,7 +92,7 @@ Heronite backs up what you have now first, so you can go back. See [Files and fo
 
 Yes. **Settings → Cloud** keeps statuses, favourites, notes, play time and sessions the same on every PC, such as a dual boot's Linux and Windows. It syncs through a shared folder, or a cloud account such as Google Drive, Dropbox or OneDrive.
 
-The same place can hold your Heronite backups, Ludusavi save backups and screenshots. Set it up in [Backups and saves](/docs/backups-and-saves/#sync-your-library-between-pcs).
+The same place can hold your Heronite backups, Ludusavi save backups and screenshots. Set it up in [Sync between PCs](/docs/sync-between-pcs/).
 
 ## Where did my disk space go?
 

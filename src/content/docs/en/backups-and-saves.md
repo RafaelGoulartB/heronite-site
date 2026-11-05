@@ -47,17 +47,10 @@ Install Ludusavi from [its releases](https://github.com/mtkennerly/ludusavi/rele
 
 Cloud saves are in beta: back up your saves before syncing. They work on Linux and Windows.
 
-## Sync your library between PCs
+## Send backups to the cloud
 
-**Settings → Cloud** keeps statuses, favourites, notes, play time and sessions the same on every PC, such as a dual boot's Linux and Windows. Each PC writes only its own files, so nothing is overwritten.
-
-1. Open **Settings → Cloud**.
-2. Under **Service**, choose a cloud account (Google Drive, Dropbox, OneDrive or Box), a server (FTP, SMB or WebDAV) or **A shared folder**.
-3. For an account or a server, press **Connect**. Heronite downloads rclone first if it is not installed, and your browser opens to sign in to an account.
-4. For a shared folder, choose the **Sync folder**. On a dual boot, use an NTFS or exFAT drive and turn off Fast Startup in Windows.
-5. Under **Choose what goes, and when**, set **Library between PCs** to **Automatic** or **Manual**.
-6. Set up Heronite on your other PCs with the same account or folder.
-
-The same section can send **Heronite backups**, **Game saves (Ludusavi)** and **Screenshots**, each **Automatic**, **Manual** or **Off**. Automatic never sends during a game. Installed games, Wine prefixes, game settings and store sign-ins always stay on each PC.
+**Settings → Cloud** can send **Heronite backups**, **Game saves (Ludusavi)** and **Screenshots** to a cloud account, a server or a shared folder, each **Automatic**, **Manual** or **Off**. Automatic never sends during a game.
 
 On a new PC, connect to the same account, then press **Restore everything** under **Restore from the cloud**.
+
+The same place keeps your library the same on every PC: see [Sync between PCs](/docs/sync-between-pcs/).

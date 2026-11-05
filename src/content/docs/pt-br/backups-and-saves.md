@@ -47,17 +47,10 @@ Instale o Ludusavi pelas [versões do projeto](https://github.com/mtkennerly/lud
 
 Os saves na nuvem estão em beta: faça backup dos seus saves antes de sincronizar. Eles funcionam no Linux e no Windows.
 
-## Sincronizar a biblioteca entre PCs
+## Enviar backups para a nuvem
 
-**Configurações → Nuvem** deixa status, favoritos, notas, tempo de jogo e sessões iguais em todos os PCs, como o Linux e o Windows de um dual boot. Cada PC grava só os próprios arquivos, então nada é sobrescrito.
-
-1. Abra **Configurações → Nuvem**.
-2. Em **Serviço**, escolha uma conta na nuvem (Google Drive, Dropbox, OneDrive ou Box), um servidor (FTP, SMB ou WebDAV) ou **Uma pasta compartilhada**.
-3. Para uma conta ou um servidor, clique em **Conectar**. O Heronite baixa o rclone antes se ele não estiver instalado, e o navegador abre para você fazer login na conta.
-4. Para uma pasta compartilhada, escolha a **Pasta de sincronização**. Em dual boot, use um disco NTFS ou exFAT e desligue a Inicialização Rápida do Windows.
-5. Em **Escolha o que vai, e quando**, coloque **Biblioteca entre PCs** em **Automático** ou **Manual**.
-6. Configure o Heronite nos outros PCs com a mesma conta ou pasta.
-
-A mesma seção pode enviar **Backups do Heronite**, **Saves dos jogos (Ludusavi)** e **Capturas de tela**, cada um em **Automático**, **Manual** ou **Desligado**. O modo automático nunca envia nada durante um jogo. Jogos instalados, prefixos Wine, configurações dos jogos e logins das lojas ficam sempre em cada PC.
+**Configurações → Nuvem** pode enviar **Backups do Heronite**, **Saves dos jogos (Ludusavi)** e **Capturas de tela** para uma conta na nuvem, um servidor ou uma pasta compartilhada, cada um em **Automático**, **Manual** ou **Desligado**. O modo automático nunca envia nada durante um jogo.
 
 Em um PC novo, conecte na mesma conta e clique em **Restaurar tudo** em **Restaurar da nuvem**.
+
+O mesmo lugar deixa sua biblioteca igual em todos os PCs: veja [Sincronizar entre PCs](/pt-br/docs/sync-between-pcs/).
