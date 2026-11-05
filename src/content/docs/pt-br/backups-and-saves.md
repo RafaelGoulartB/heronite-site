@@ -60,4 +60,4 @@ O mesmo lugar deixa sua biblioteca igual em todos os PCs: veja [Sincronizar entr
 3. Em **Restaurar da nuvem**, clique em **Ver o que está na nuvem** e depois em **Restaurar tudo**.
 4. Confirme a restauração. O Heronite reinicia com sua biblioteca, e depois [Sincronizar entre PCs](/pt-br/docs/sync-between-pcs/) mantém tudo em dia.
 
-Os saves vão para a pasta de backup do Ludusavi. Restaure cada jogo pela aba **Saves** dele.
+Os saves vão para a pasta de backup do Ludusavi. Restaure cada jogo pela aba **Saves** do jogo.
