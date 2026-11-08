@@ -9,13 +9,14 @@ export interface Release {
   date: string;
   url: string;
   body: string;
-  /** Downloads of the packages, not counting the .minisig and .zsync files the updaters fetch. */
+  /** Downloads of the packages, not counting the .minisig, .zsync and SHA256SUMS files the updaters fetch. */
   downloads: number;
   assets: { name: string; size: number }[];
 }
 
 const api = 'https://api.github.com/repos/RafaelGoulartB/Heronite/releases?per_page=100';
-const updaterFiles = /\.(minisig|zsync|sig|sha256)$/;
+// SHA256SUMS has no extension, so it needs its own match; its .minisig is caught by the extension.
+const updaterFiles = /(\.(minisig|zsync|sig|sha256)|SHA256SUMS)$/;
 
 type ApiRelease = {
   tag_name: string;
