@@ -1,5 +1,91 @@
 [
  {
+  "tag_name": "v1.4.0",
+  "name": "Heronite v1.4.0",
+  "published_at": "2026-11-08T03:22:27Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v1.4.0",
+  "body": "**Linux:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS).\r\n\r\n**Windows 10 and 11:** `Heronite-Setup-x86_64.exe` installs Heronite for your user, no administrator rights needed (recommended). `Heronite-Portable-x86_64.zip` runs from any folder you extract it to and keeps its library and settings in that folder. They are not code-signed yet, so Windows SmartScreen may say \"Windows protected your PC\": choose **More info**, then **Run anyway**.\r\n\r\n## ✨ Highlights\r\n\r\n- **Xbox account (Windows):** sign in with Microsoft to bring in play time and achievements from Xbox and PC Game Pass games. Games you have played but not installed are added too, and open in the Store\r\n- **One game, several stores:** copies of a game you own in more than one store show as one card. Choose which copy Play starts, and see each copy's playtime\r\n- **Live achievement notices:** new unlocks show over the game while it runs. Heronite can also read achievements that DRM-free and offline copies keep in their own files\r\n- **Zoom:** make the whole interface bigger or smaller, up to 300%, in Settings → Appearance or with Ctrl + / Ctrl −\r\n- **Age ratings:** ESRB, PEGI and other ratings appear above Play, and the View menu has a new \"Ages up to\" filter\r\n- **ReShade for Steam games:** on Linux (Proton) and on Windows\r\n\r\n## 🛠 Improvements\r\n\r\n- Replays show as posters in the Timeline and the Journal, with their length and your notes, plus Watch and Open folder\r\n- Categories on covers: an optional badge shows each game's categories on its cover, in the Collection and in console mode, in six styles\r\n- Saves can be backed up with Ludusavi at a set interval while a game runs\r\n- Xbox and PC Game Pass games show their install size, so sorting by size and the Storage page include them\r\n- Copies of one game show what tells them apart: edition, ROM region or file, and the emulator's name\r\n- ReShade finds the game's program in more games, such as Unreal Engine games, and you can always pick the program yourself\r\n- The Steam page shows how many games are not installed, and the Collection offers to restart Steam when only installed games were loaded\r\n- Age rating rows can be hidden\r\n- Performance, stability and compatibility improvements\r\n\r\n## 🐛 Fixes\r\n\r\n- The main window fits on the screen on TVs and high-scaling displays\r\n- Select menus near the bottom of the window open upward, so every option can be reached\r\n- Clicking Change in ReShade's setup no longer turns ReShade off\r\n- Achievement notifications on Linux show Heronite's icon\r\n\r\n## 📥 Download\r\n\r\n| Platform | Package | Download |\r\n|:---|:---|:---|\r\n| 🪟 Windows | Installer | [Heronite-Setup-x86_64.exe](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.4.0/Heronite-Setup-x86_64.exe) |\r\n| 🪟 Windows | Portable | [Heronite-Portable-x86_64.zip](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.4.0/Heronite-Portable-x86_64.zip) |\r\n| 🐧 Linux | AppImage (any distro) | [Heronite-x86_64.AppImage](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.4.0/Heronite-x86_64.AppImage) |\r\n| 🐧 Arch / CachyOS | .pkg.tar.zst | [heronite-1.4.0-1-x86_64.pkg.tar.zst](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.4.0/heronite-1.4.0-1-x86_64.pkg.tar.zst) |\r\n| 🐧 Debian / Ubuntu | .deb | [heronite_1.4.0-1_amd64.deb](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.4.0/heronite_1.4.0-1_amd64.deb) |\r\n| 🐧 Fedora / openSUSE | .rpm | [heronite-1.4.0-1.x86_64.rpm](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.4.0/heronite-1.4.0-1.x86_64.rpm) |\r\n\r\n## 💜 Thanks\r\n\r\nThanks to @lurebat, @AsafMah and @Ripariav for their contributions!\r\n\r\n**Enjoying Heronite?** [Star it on GitHub](https://github.com/RafaelGoulartB/Heronite) and share your feedback and ideas in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions).\r\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-1.4.0-1-x86_64.pkg.tar.zst",
+    "size": 31158059,
+    "download_count": 30
+   },
+   {
+    "name": "heronite-1.4.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 3
+   },
+   {
+    "name": "heronite-1.4.0-1.x86_64.rpm",
+    "size": 28948667,
+    "download_count": 11
+   },
+   {
+    "name": "heronite-1.4.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-Portable-x86_64.zip",
+    "size": 25724880,
+    "download_count": 16
+   },
+   {
+    "name": "Heronite-Portable-x86_64.zip.minisig",
+    "size": 309,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-Setup-x86_64.exe",
+    "size": 18644690,
+    "download_count": 85
+   },
+   {
+    "name": "Heronite-Setup-x86_64.exe.minisig",
+    "size": 306,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 30390776,
+    "download_count": 94
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 104099,
+    "download_count": 21
+   },
+   {
+    "name": "heronite_1.4.0-1_amd64.deb",
+    "size": 28941580,
+    "download_count": 22
+   },
+   {
+    "name": "heronite_1.4.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 2
+   },
+   {
+    "name": "SHA256SUMS",
+    "size": 567,
+    "download_count": 88
+   },
+   {
+    "name": "SHA256SUMS.minisig",
+    "size": 291,
+    "download_count": 103
+   }
+  ]
+ },
+ {
   "tag_name": "v1.3.0",
   "name": "Heronite v1.3.0",
   "published_at": "2026-11-07T16:22:58Z",
@@ -11,17 +97,17 @@
    {
     "name": "heronite-1.3.0-1-x86_64.pkg.tar.zst",
     "size": 30699105,
-    "download_count": 72
+    "download_count": 117
    },
    {
     "name": "heronite-1.3.0-1-x86_64.pkg.tar.zst.minisig",
     "size": 316,
-    "download_count": 4
+    "download_count": 5
    },
    {
     "name": "heronite-1.3.0-1.x86_64.rpm",
     "size": 28556210,
-    "download_count": 25
+    "download_count": 36
    },
    {
     "name": "heronite-1.3.0-1.x86_64.rpm.minisig",
@@ -31,7 +117,7 @@
    {
     "name": "Heronite-Portable-x86_64.zip",
     "size": 25250645,
-    "download_count": 22
+    "download_count": 27
    },
    {
     "name": "Heronite-Portable-x86_64.zip.minisig",
@@ -41,7 +127,7 @@
    {
     "name": "Heronite-Setup-x86_64.exe",
     "size": 18332470,
-    "download_count": 156
+    "download_count": 219
    },
    {
     "name": "Heronite-Setup-x86_64.exe.minisig",
@@ -51,37 +137,37 @@
    {
     "name": "Heronite-x86_64.AppImage",
     "size": 29960696,
-    "download_count": 181
+    "download_count": 280
    },
    {
     "name": "Heronite-x86_64.AppImage.minisig",
     "size": 305,
-    "download_count": 6
+    "download_count": 8
    },
    {
     "name": "Heronite-x86_64.AppImage.zsync",
     "size": 102629,
-    "download_count": 57
+    "download_count": 90
    },
    {
     "name": "heronite_1.3.0-1_amd64.deb",
     "size": 28556250,
-    "download_count": 38
+    "download_count": 64
    },
    {
     "name": "heronite_1.3.0-1_amd64.deb.minisig",
     "size": 307,
-    "download_count": 3
+    "download_count": 4
    },
    {
     "name": "SHA256SUMS",
     "size": 567,
-    "download_count": 128
+    "download_count": 178
    },
    {
     "name": "SHA256SUMS.minisig",
     "size": 291,
-    "download_count": 124
+    "download_count": 171
    }
   ]
  },
@@ -137,7 +223,7 @@
    {
     "name": "Heronite-x86_64.AppImage",
     "size": 29673976,
-    "download_count": 196
+    "download_count": 197
    },
    {
     "name": "Heronite-x86_64.AppImage.minisig",
@@ -162,12 +248,12 @@
    {
     "name": "SHA256SUMS",
     "size": 567,
-    "download_count": 95
+    "download_count": 96
    },
    {
     "name": "SHA256SUMS.minisig",
     "size": 291,
-    "download_count": 91
+    "download_count": 92
    }
   ]
  },
@@ -355,12 +441,12 @@
    {
     "name": "heronite-1.0.0-1-x86_64.pkg.tar.zst",
     "size": 28962478,
-    "download_count": 83
+    "download_count": 85
    },
    {
     "name": "heronite-1.0.0-1-x86_64.pkg.tar.zst.minisig",
     "size": 316,
-    "download_count": 31
+    "download_count": 32
    },
    {
     "name": "heronite-1.0.0-1.x86_64.rpm",
@@ -1327,7 +1413,7 @@
    {
     "name": "heronite-0.3.2-1-x86_64.pkg.tar.zst",
     "size": 20223107,
-    "download_count": 3
+    "download_count": 4
    },
    {
     "name": "heronite-0.3.2-1-x86_64.pkg.tar.zst.minisig",
@@ -1337,7 +1423,7 @@
    {
     "name": "heronite-0.3.2-1.x86_64.rpm",
     "size": 18724055,
-    "download_count": 4
+    "download_count": 5
    },
    {
     "name": "heronite-0.3.2-1.x86_64.rpm.minisig",
@@ -1347,7 +1433,7 @@
    {
     "name": "Heronite-x86_64.AppImage",
     "size": 19773944,
-    "download_count": 7
+    "download_count": 8
    },
    {
     "name": "Heronite-x86_64.AppImage.minisig",
@@ -1362,7 +1448,7 @@
    {
     "name": "heronite_0.3.2-1_amd64.deb",
     "size": 18722282,
-    "download_count": 1
+    "download_count": 3
    },
    {
     "name": "heronite_0.3.2-1_amd64.deb.minisig",
@@ -1586,7 +1672,7 @@
    {
     "name": "Heronite-0.1.3-x86_64.AppImage",
     "size": 19446264,
-    "download_count": 2
+    "download_count": 3
    },
    {
     "name": "Heronite-0.1.3-x86_64.AppImage.sha256",
