@@ -1,5 +1,91 @@
 [
  {
+  "tag_name": "v1.5.0",
+  "name": "Heronite v1.5.0",
+  "published_at": "2026-11-09T04:02:54Z",
+  "html_url": "https://github.com/RafaelGoulartB/Heronite/releases/tag/v1.5.0",
+  "body": "**Linux:** `Heronite-x86_64.AppImage` runs on any distribution (recommended). Or the package for your system: `.deb` (Debian, Ubuntu, Mint), `.rpm` (Fedora, openSUSE), `.pkg.tar.zst` (Arch, CachyOS).\n\n**Windows 10 and 11:** `Heronite-Setup-x86_64.exe` installs Heronite for your user, no administrator rights needed (recommended). `Heronite-Portable-x86_64.zip` runs from any folder you extract it to and keeps its library and settings in that folder. They are not code-signed yet, so Windows SmartScreen may say \"Windows protected your PC\": choose **More info**, then **Run anyway**.\n\n## ✨ Highlights\n\n- **Smart groups:** groups of games built from rules (installed, store, time played, last played, rating, HowLongToBeat and more) that keep themselves up to date. Pin them to the header, and use them in console mode too\n- **Steam Family:** games other members of your Steam Family share with you show in the Collection, marked \"Family\", with who owns them and whether someone else is playing\n- **Sunshine and Moonlight:** keep your installed games (or only your favourites) in Sunshine, with their covers, so Moonlight can start them from a phone, a TV or another computer. Settings → Integrations\n- **Mouse in console mode and the overlay:** click covers, menus and rows in console mode and the in-game overlay. The cursor hides while you use a controller\n- **Steam account with a QR code:** optionally sign in by scanning a code with the Steam app, so your whole library comes in even when Steam is closed or stuck. Heronite never sees your password, and signing out also ends the sign-in on Steam\n- **Steam tags:** filter the Collection by the tags Steam players gave a game, and see them in its Details\n\n## 🛠 Improvements\n\n- HowLongToBeat times for every game you select, with safer matches and a \"Change match\" option\n- Achievement notices over the game can show the description, rarity, points or XP, type and achievement set, each with its own switch\n- Store icons on covers: an optional logo of each game's store, or a ROM's emulator, at the corner of its cover\n- Smart groups and custom categories sync between your PCs\n- A shorter View menu, organized in Filter and Organize blocks\n- Console mode goes fullscreen, which you can turn off in Settings → Console mode\n- The main window reopens where you left it, on the same screen, maximized or not\n- The in-game overlay on Windows switches the audio output and microphone, and the game no longer reacts to the overlay's navigation\n- Search images shows SteamGridDB covers and backgrounds when a SteamGridDB key is set\n- Games show Steam's Metacritic score\n- Desktop and application menu shortcuts for Battle.net, EA app, Ubisoft Connect and Rockstar Games Launcher on Linux\n- The Steam and Xbox pages show both ways to bring in your library side by side: from the app on this PC, or from your account\n- Choose which rows Details shows with Edit rows…, and HowLongToBeat's actions move to a menu on its title\n- Getting started: mark the steps you don't use as \"Not used\", and the bulb leaves once you close it\n- Performance, stability and compatibility improvements\n\n## 🐛 Fixes\n\n- Installing a copy of a game that is not its default copy works, and Stop, Uninstall and Settings act on the right copy\n- Steam's library comes in on Windows even when another program uses Steam's port, and the Steam page names that program\n- On GNOME, the Grid view's last column is no longer cut off under the game drawer\n- Controllers SDL doesn't know, such as the GameSir G7 SE, no longer swap X and Y on Linux\n- The Collection's scrollbar covers the whole library, so long libraries scroll all the way to the end\n- The list in console mode opens at its top\n- A game you haven't played yet has a Journal, so you can write notes for it\n- The Steam Web API key's help makes clear it is only for achievements\n\n## 📥 Download\n\n| Platform | Package | Download |\n|:---|:---|:---|\n| 🪟 Windows | Installer | [Heronite-Setup-x86_64.exe](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.5.0/Heronite-Setup-x86_64.exe) |\n| 🪟 Windows | Portable | [Heronite-Portable-x86_64.zip](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.5.0/Heronite-Portable-x86_64.zip) |\n| 🐧 Linux | AppImage (any distro) | [Heronite-x86_64.AppImage](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.5.0/Heronite-x86_64.AppImage) |\n| 🐧 Arch / CachyOS | .pkg.tar.zst | [heronite-1.5.0-1-x86_64.pkg.tar.zst](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.5.0/heronite-1.5.0-1-x86_64.pkg.tar.zst) |\n| 🐧 Debian / Ubuntu | .deb | [heronite_1.5.0-1_amd64.deb](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.5.0/heronite_1.5.0-1_amd64.deb) |\n| 🐧 Fedora / openSUSE | .rpm | [heronite-1.5.0-1.x86_64.rpm](https://github.com/RafaelGoulartB/Heronite/releases/download/v1.5.0/heronite-1.5.0-1.x86_64.rpm) |\n\n## 💜 Thanks\n\nThanks to @lurebat and @AsafMah for their contributions!\n\n**Enjoying Heronite?** [Star it on GitHub](https://github.com/RafaelGoulartB/Heronite) and share your feedback and ideas in [Discussions](https://github.com/RafaelGoulartB/Heronite/discussions).\n",
+  "draft": false,
+  "prerelease": false,
+  "assets": [
+   {
+    "name": "heronite-1.5.0-1-x86_64.pkg.tar.zst",
+    "size": 31822041,
+    "download_count": 62
+   },
+   {
+    "name": "heronite-1.5.0-1-x86_64.pkg.tar.zst.minisig",
+    "size": 316,
+    "download_count": 4
+   },
+   {
+    "name": "heronite-1.5.0-1.x86_64.rpm",
+    "size": 29617462,
+    "download_count": 17
+   },
+   {
+    "name": "heronite-1.5.0-1.x86_64.rpm.minisig",
+    "size": 308,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-Portable-x86_64.zip",
+    "size": 26398535,
+    "download_count": 24
+   },
+   {
+    "name": "Heronite-Portable-x86_64.zip.minisig",
+    "size": 309,
+    "download_count": 2
+   },
+   {
+    "name": "Heronite-Setup-x86_64.exe",
+    "size": 19091642,
+    "download_count": 112
+   },
+   {
+    "name": "Heronite-Setup-x86_64.exe.minisig",
+    "size": 306,
+    "download_count": 3
+   },
+   {
+    "name": "Heronite-x86_64.AppImage",
+    "size": 31017464,
+    "download_count": 146
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.minisig",
+    "size": 305,
+    "download_count": 5
+   },
+   {
+    "name": "Heronite-x86_64.AppImage.zsync",
+    "size": 106241,
+    "download_count": 54
+   },
+   {
+    "name": "heronite_1.5.0-1_amd64.deb",
+    "size": 29603430,
+    "download_count": 23
+   },
+   {
+    "name": "heronite_1.5.0-1_amd64.deb.minisig",
+    "size": 307,
+    "download_count": 3
+   },
+   {
+    "name": "SHA256SUMS",
+    "size": 567,
+    "download_count": 152
+   },
+   {
+    "name": "SHA256SUMS.minisig",
+    "size": 291,
+    "download_count": 166
+   }
+  ]
+ },
+ {
   "tag_name": "v1.4.0",
   "name": "Heronite v1.4.0",
   "published_at": "2026-11-08T03:22:27Z",
@@ -11,27 +97,27 @@
    {
     "name": "heronite-1.4.0-1-x86_64.pkg.tar.zst",
     "size": 31158059,
-    "download_count": 30
+    "download_count": 182
    },
    {
     "name": "heronite-1.4.0-1-x86_64.pkg.tar.zst.minisig",
     "size": 316,
-    "download_count": 3
+    "download_count": 8
    },
    {
     "name": "heronite-1.4.0-1.x86_64.rpm",
     "size": 28948667,
-    "download_count": 11
+    "download_count": 41
    },
    {
     "name": "heronite-1.4.0-1.x86_64.rpm.minisig",
     "size": 308,
-    "download_count": 2
+    "download_count": 3
    },
    {
     "name": "Heronite-Portable-x86_64.zip",
     "size": 25724880,
-    "download_count": 16
+    "download_count": 35
    },
    {
     "name": "Heronite-Portable-x86_64.zip.minisig",
@@ -41,47 +127,47 @@
    {
     "name": "Heronite-Setup-x86_64.exe",
     "size": 18644690,
-    "download_count": 85
+    "download_count": 265
    },
    {
     "name": "Heronite-Setup-x86_64.exe.minisig",
     "size": 306,
-    "download_count": 2
+    "download_count": 3
    },
    {
     "name": "Heronite-x86_64.AppImage",
     "size": 30390776,
-    "download_count": 94
+    "download_count": 325
    },
    {
     "name": "Heronite-x86_64.AppImage.minisig",
     "size": 305,
-    "download_count": 2
+    "download_count": 9
    },
    {
     "name": "Heronite-x86_64.AppImage.zsync",
     "size": 104099,
-    "download_count": 21
+    "download_count": 137
    },
    {
     "name": "heronite_1.4.0-1_amd64.deb",
     "size": 28941580,
-    "download_count": 22
+    "download_count": 86
    },
    {
     "name": "heronite_1.4.0-1_amd64.deb.minisig",
     "size": 307,
-    "download_count": 2
+    "download_count": 4
    },
    {
     "name": "SHA256SUMS",
     "size": 567,
-    "download_count": 88
+    "download_count": 252
    },
    {
     "name": "SHA256SUMS.minisig",
     "size": 291,
-    "download_count": 103
+    "download_count": 264
    }
   ]
  },
@@ -193,7 +279,7 @@
    {
     "name": "heronite-1.2.0-1.x86_64.rpm",
     "size": 28281657,
-    "download_count": 27
+    "download_count": 28
    },
    {
     "name": "heronite-1.2.0-1.x86_64.rpm.minisig",
@@ -776,7 +862,7 @@
    {
     "name": "heronite_0.14.0-1_amd64.deb",
     "size": 24145934,
-    "download_count": 43
+    "download_count": 44
    },
    {
     "name": "heronite_0.14.0-1_amd64.deb.minisig",
@@ -873,7 +959,7 @@
    {
     "name": "Heronite-x86_64.AppImage",
     "size": 23210488,
-    "download_count": 19
+    "download_count": 28
    },
    {
     "name": "Heronite-x86_64.AppImage.minisig",
@@ -929,7 +1015,7 @@
    {
     "name": "Heronite-x86_64.AppImage",
     "size": 21953016,
-    "download_count": 23
+    "download_count": 24
    },
    {
     "name": "Heronite-x86_64.AppImage.minisig",
@@ -1097,7 +1183,7 @@
    {
     "name": "Heronite-x86_64.AppImage",
     "size": 21072376,
-    "download_count": 18
+    "download_count": 19
    },
    {
     "name": "Heronite-x86_64.AppImage.minisig",
