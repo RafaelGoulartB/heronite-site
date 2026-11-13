@@ -165,7 +165,7 @@ const es: Dict = {
     playMotion: 'Reanudar animación',
     sources: 'Ejecuta juegos de',
     sourcesMore: 'Todas las tiendas y lanzadores',
-    emulators: { title: 'Emuladores', note: 'RetroArch, PCSX2, Dolphin, RPCS3 y 13 más, además de cualquier juego que añadas.' },
+    emulators: { title: 'Emuladores', note: 'RetroArch, PCSX2, Dolphin, RPCS3 y 18 más, además de cualquier juego que añadas.' },
     sourceGroups: [{ label: 'Sin iniciar sesión.', note: 'Las bibliotecas de Steam se leen por ti.' }, { label: 'Inicia sesión una vez.', note: 'Instala, actualiza y juega desde Heronite.' }, { label: 'Prefijo de Wine propio.', note: 'Cada lanzador se ejecuta en su propio prefijo en Linux.' }],
     sourcesFoot: 'Tus datos de acceso se quedan en tu PC.',
     collection: {

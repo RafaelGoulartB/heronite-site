@@ -4,7 +4,7 @@ navLabel: "Emulation"
 description: "Emulators and ROMs in Heronite: supported emulators, default RetroArch cores, ROM folder layout, multi-disc games and RetroAchievements."
 section: Guides
 order: 2
-updated: 2026-11-04
+updated: 2026-11-13
 ---
 
 Heronite adds your ROMs to the library with their art: it detects installed emulators and scans your ROM folders. Install the emulators first, from your distribution, Flathub, or their websites. Heronite finds them on `PATH`, as Flatpaks, and as RetroArch cores.
@@ -17,14 +17,19 @@ Heronite adds your ROMs to the library with their art: it detects installed emul
 | Dolphin | GameCube, Wii |
 | PCSX2 | PlayStation 2 |
 | DuckStation | PlayStation |
+| ePSXe | PlayStation |
 | PPSSPP | PSP |
 | RPCS3 | PlayStation 3 |
 | shadPS4 | PlayStation 4 |
 | Vita3K | PlayStation Vita |
 | Cemu | Wii U |
 | Ryujinx | Switch |
+| Mupen64Plus | Nintendo 64 |
+| M64Py | Nintendo 64 |
+| gopher64 | Nintendo 64 |
 | Azahar (or Citra) | 3DS |
 | melonDS | Nintendo DS |
+| DeSmuME | Nintendo DS |
 | mGBA | Game Boy, Game Boy Advance |
 | Xemu | Xbox |
 | Flycast | Dreamcast |

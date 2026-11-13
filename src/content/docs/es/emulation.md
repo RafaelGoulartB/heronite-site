@@ -4,7 +4,7 @@ navLabel: "Emulación"
 description: "Emuladores y ROMs en Heronite: emuladores compatibles, núcleos de RetroArch por defecto, carpetas de ROMs, juegos de varios discos y RetroAchievements."
 section: Guides
 order: 2
-updated: 2026-11-04
+updated: 2026-11-13
 ---
 
 Heronite añade tus ROMs a la biblioteca con su arte: detecta los emuladores instalados y escanea tus carpetas de ROMs. Instala antes los emuladores, desde tu distribución, Flathub o sus webs. Heronite los encuentra en `PATH`, como Flatpaks y como núcleos de RetroArch.
@@ -17,14 +17,19 @@ Heronite añade tus ROMs a la biblioteca con su arte: detecta los emuladores ins
 | Dolphin | GameCube, Wii |
 | PCSX2 | PlayStation 2 |
 | DuckStation | PlayStation |
+| ePSXe | PlayStation |
 | PPSSPP | PSP |
 | RPCS3 | PlayStation 3 |
 | shadPS4 | PlayStation 4 |
 | Vita3K | PlayStation Vita |
 | Cemu | Wii U |
 | Ryujinx | Switch |
+| Mupen64Plus | Nintendo 64 |
+| M64Py | Nintendo 64 |
+| gopher64 | Nintendo 64 |
 | Azahar (o Citra) | 3DS |
 | melonDS | Nintendo DS |
+| DeSmuME | Nintendo DS |
 | mGBA | Game Boy, Game Boy Advance |
 | Xemu | Xbox |
 | Flycast | Dreamcast |

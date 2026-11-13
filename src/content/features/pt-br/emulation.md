@@ -5,14 +5,14 @@ eyebrow: Emulação
 headline: "Frontend de emuladores e launcher de ROMs para Linux"
 lead: "O Heronite é um frontend de emuladores para Linux e Windows. Ele detecta seus emuladores e escaneia suas pastas de ROMs com jogos retrô e de console."
 navLabel: Emulação
-summary: "Detecta 17 emuladores e cores do RetroArch, escaneia pastas de ROMs, une jogos de vários discos e mostra o RetroAchievements."
+summary: "Detecta 22 emuladores e cores do RetroArch, escaneia pastas de ROMs, une jogos de vários discos e mostra o RetroAchievements."
 order: 3
 hero: ../../../assets/screenshots/emulators.webp
 heroAlt: "A página Emuladores do Heronite com cartões do PCSX2 e do RPCS3, cada um marcado como Nativo e Pronto, mostrando a pasta de ROMs com os botões Escanear agora e Revisar, e botões para detectar emuladores, escanear uma pasta e adicionar uma pasta de ROMs."
 og: /og/emulation.jpg
-updated: 2026-11-04
+updated: 2026-11-13
 highlights:
-  - title: 17 emuladores detectados
+  - title: 22 emuladores detectados
     text: RetroArch, Dolphin, PCSX2, Ryujinx e outros, achados no PATH ou como Flatpak.
   - title: Escaneia as ROMs
     text: Escolha as pastas de ROMs e cada jogo ganha capa.
@@ -50,7 +50,7 @@ O Heronite escaneia a pasta e adiciona os jogos dela. **Escanear todas as pastas
 
 ## Quais emuladores o Heronite suporta?
 
-O Heronite suporta os 17 emuladores abaixo e qualquer um personalizado. Instale-os pela sua distribuição, pelo Flathub ou pelos sites deles. O Heronite os encontra no `PATH`, em Flatpak e como cores do RetroArch.
+O Heronite suporta os 22 emuladores abaixo e qualquer um personalizado. Instale-os pela sua distribuição, pelo Flathub ou pelos sites deles. O Heronite os encontra no `PATH`, em Flatpak e como cores do RetroArch.
 
 | Emulador | Sistemas |
 |---|---|
@@ -58,14 +58,19 @@ O Heronite suporta os 17 emuladores abaixo e qualquer um personalizado. Instale-
 | Dolphin | GameCube, Wii |
 | PCSX2 | PlayStation 2 |
 | DuckStation | PlayStation |
+| ePSXe | PlayStation |
 | PPSSPP | PSP |
 | RPCS3 | PlayStation 3 |
 | shadPS4 | PlayStation 4 |
 | Vita3K | PlayStation Vita |
 | Cemu | Wii U |
 | Ryujinx | Switch |
+| Mupen64Plus | Nintendo 64 |
+| M64Py | Nintendo 64 |
+| gopher64 | Nintendo 64 |
 | Azahar (ou Citra) | 3DS |
 | melonDS | Nintendo DS |
+| DeSmuME | Nintendo DS |
 | mGBA | Game Boy, Game Boy Advance |
 | Xemu | Xbox |
 | Flycast | Dreamcast |
