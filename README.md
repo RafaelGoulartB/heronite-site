@@ -23,7 +23,7 @@ npm run preview      # serve dist/
 | `src/content/guides/<lang>/` | How-to guides, `/guides/<file>/` |
 | `src/content/compare/<lang>/` | Comparisons with other launchers, `/compare/<file>/` |
 | `src/content/docs/<lang>/` | The documentation, `/docs/<file>/` |
-| `src/i18n/` | The languages and every piece of interface text (`en.ts`, `pt-br.ts`, `es.ts`) |
+| `src/i18n/` | The languages and every piece of interface text (`en.ts`, `pt-br.ts`, `es.ts`, `fr.ts`) |
 | `src/data/releases.json` | A saved copy of the GitHub releases, used when the build cannot reach GitHub |
 | `src/content.config.ts` | The frontmatter each of those needs |
 | `src/layouts/` | `Base` (the `<head>`, SEO and structured data), `ArticleLayout`, `DocLayout` |
@@ -43,14 +43,15 @@ New docs need `section` and `order` to take their place in the sidebar.
 
 ### Languages
 
-The site is in English (at the root), Brazilian Portuguese (`/pt-br/`) and Spanish (`/es/`). Every page lists its other
+The site is in English (at the root), Brazilian Portuguese (`/pt-br/`), Spanish (`/es/`) and French (`/fr/`). Every page lists its other
 language versions with `hreflang` links, and the sitemap does too, so Google shows each visitor the right one.
 
 - A page in another language is the same file name in that language's folder, like `src/content/guides/es/steam-deck.md`.
-  Keep `related` as English paths; links in the body point to the same language (`/es/docs/faq/`).
-- Interface text lives in `src/i18n/`. `pt-br.ts` and `es.ts` must have the same keys as `en.ts` (their `Dict` type checks it in the editor).
+  Keep `related` and FAQ links as English paths (they are localized when rendered); links in the body point to the same language (`/es/docs/faq/`).
+- Interface text lives in `src/i18n/`. `pt-br.ts`, `es.ts` and `fr.ts` must have the same keys as `en.ts` (their `Dict` type checks it in the editor).
 - Name app buttons and settings the way the app does in that language
   (Heronite's `crates/i18n/locales/<lang>/*.json`).
+  If the app does not support that language yet, keep its English button and setting names so readers can find them.
 
 ### Releases and search
 

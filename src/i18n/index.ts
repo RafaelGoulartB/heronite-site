@@ -1,12 +1,13 @@
 import en, { type Dict } from './en';
 import ptBr from './pt-br';
 import es from './es';
+import fr from './fr';
 import type { Locale } from './locales';
 
 export * from './locales';
 export type { Dict };
 
-const dicts: Record<Locale, Dict> = { en, 'pt-br': ptBr, es };
+const dicts: Record<Locale, Dict> = { en, 'pt-br': ptBr, es, fr };
 
 /** The interface text for a language. */
 export const useText = (lang: Locale) => dicts[lang];
