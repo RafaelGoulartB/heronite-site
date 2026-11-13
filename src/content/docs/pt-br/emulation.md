@@ -4,7 +4,7 @@ navLabel: "Emulação"
 description: "Emuladores e ROMs no Heronite: emuladores compatíveis, cores padrão do RetroArch, pastas de ROMs, jogos de vários discos e RetroAchievements."
 section: Guides
 order: 2
-updated: 2026-11-04
+updated: 2026-11-13
 ---
 
 O Heronite adiciona suas ROMs à biblioteca com a arte de cada jogo: ele detecta os emuladores instalados e varre suas pastas de ROMs. Instale os emuladores antes, pela sua distribuição, pelo Flathub ou pelos sites deles. O Heronite os encontra no `PATH`, como Flatpaks e como cores do RetroArch.
@@ -17,14 +17,19 @@ O Heronite adiciona suas ROMs à biblioteca com a arte de cada jogo: ele detecta
 | Dolphin | GameCube, Wii |
 | PCSX2 | PlayStation 2 |
 | DuckStation | PlayStation |
+| ePSXe | PlayStation |
 | PPSSPP | PSP |
 | RPCS3 | PlayStation 3 |
 | shadPS4 | PlayStation 4 |
 | Vita3K | PlayStation Vita |
 | Cemu | Wii U |
 | Ryujinx | Switch |
+| Mupen64Plus | Nintendo 64 |
+| M64Py | Nintendo 64 |
+| gopher64 | Nintendo 64 |
 | Azahar (ou Citra) | 3DS |
 | melonDS | Nintendo DS |
+| DeSmuME | Nintendo DS |
 | mGBA | Game Boy, Game Boy Advance |
 | Xemu | Xbox |
 | Flycast | Dreamcast |

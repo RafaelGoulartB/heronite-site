@@ -5,14 +5,14 @@ eyebrow: Emulation
 headline: "Emulator frontend and ROM launcher for Linux"
 lead: "Heronite is an emulator frontend for Linux and Windows. It detects your emulators and scans your ROM folders for retro and console games."
 navLabel: Emulation
-summary: "Detects 17 emulators and RetroArch cores, scans ROM folders, merges multi-disc games and shows RetroAchievements."
+summary: "Detects 22 emulators and RetroArch cores, scans ROM folders, merges multi-disc games and shows RetroAchievements."
 order: 3
 hero: ../../../assets/screenshots/emulators.webp
 heroAlt: "Heronite's Emulators page with cards for PCSX2 and RPCS3, each marked Native and Ready, listing its ROM folder with Scan now and Review buttons, and buttons to detect emulators, scan a folder and add a ROM folder."
 og: /og/emulation.jpg
-updated: 2026-11-04
+updated: 2026-11-13
 highlights:
-  - title: 17 emulators detected
+  - title: 22 emulators detected
     text: RetroArch, Dolphin, PCSX2, Ryujinx and more, found on PATH or as Flatpaks.
   - title: Scans for ROMs
     text: Point it at your ROM folders and every game gets art.
@@ -50,7 +50,7 @@ Heronite scans the folder and adds its games. **Scan all folders now** picks up 
 
 ## Which emulators does Heronite support?
 
-Heronite supports the 17 emulators below and any custom one. Install them from your distribution, Flathub or their websites. Heronite finds them on `PATH`, as Flatpaks and as RetroArch cores.
+Heronite supports the 22 emulators below and any custom one. Install them from your distribution, Flathub or their websites. Heronite finds them on `PATH`, as Flatpaks and as RetroArch cores.
 
 | Emulator | Systems |
 |---|---|
@@ -58,14 +58,19 @@ Heronite supports the 17 emulators below and any custom one. Install them from y
 | Dolphin | GameCube, Wii |
 | PCSX2 | PlayStation 2 |
 | DuckStation | PlayStation |
+| ePSXe | PlayStation |
 | PPSSPP | PSP |
 | RPCS3 | PlayStation 3 |
 | shadPS4 | PlayStation 4 |
 | Vita3K | PlayStation Vita |
 | Cemu | Wii U |
 | Ryujinx | Switch |
+| Mupen64Plus | Nintendo 64 |
+| M64Py | Nintendo 64 |
+| gopher64 | Nintendo 64 |
 | Azahar (or Citra) | 3DS |
 | melonDS | Nintendo DS |
+| DeSmuME | Nintendo DS |
 | mGBA | Game Boy, Game Boy Advance |
 | Xemu | Xbox |
 | Flycast | Dreamcast |
