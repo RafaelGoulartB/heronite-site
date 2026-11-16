@@ -1,4 +1,4 @@
-// Every piece of interface text on the site, in English. pt-br.ts and es.ts have the same shape.
+// Every piece of interface text on the site, in English. Other dictionaries have the same shape.
 // Keys ending in `Html` hold markup and are rendered as HTML; the rest are plain text.
 // Strings may hold {placeholders} that the page fills in. Links inside FAQ answers use
 // Markdown with root paths like /guides/steam-deck/; they are moved to the page's language.

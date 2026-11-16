@@ -14,11 +14,12 @@ const chromium = process.env.CHROMIUM ?? 'chromium';
 const field = (text, name) => text.match(new RegExp(`^${name}:\\s*"?(.*?)"?\\s*$`, 'm'))?.[1];
 
 // One card per feature page, guide and comparison, and per index page, in every language.
-const langs = { en: '', 'pt-br': 'pt-br/', es: 'es/' };
+const langs = { en: '', 'pt-br': 'pt-br/', es: 'es/', fr: 'fr/' };
 const footers = {
   en: 'Free game launcher for Linux and Windows',
   'pt-br': 'Launcher de jogos grátis para Linux e Windows',
   es: 'Lanzador de juegos gratis para Linux y Windows',
+  fr: 'Lanceur de jeux gratuit pour Linux et Windows',
 };
 const unHtml = (html) => html.replace(/<em>(.*?)<\/em>/g, '*$1*').replace(/<[^>]+>/g, '');
 const cards = [];

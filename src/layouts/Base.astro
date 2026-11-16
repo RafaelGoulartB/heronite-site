@@ -14,7 +14,7 @@ import '../styles/base.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { analyticsToken, site } from '../data/site';
-import { alternatesFor, basePath, localeInfo, localeOf, useText, type Locale } from '../i18n';
+import { alternatesFor, basePath, localeInfo, localeOf, locales, useText, type Locale } from '../i18n';
 
 interface Props {
   title: string;
@@ -60,7 +60,7 @@ const graph = [
     '@id': `${site.url}/#website`,
     name: 'Heronite',
     url: `${site.url}/`,
-    inLanguage: ['en', 'pt-BR', 'es'],
+    inLanguage: locales.map((locale) => localeInfo[locale].htmlLang),
     publisher: { '@id': `${site.url}/#org` },
   },
   {

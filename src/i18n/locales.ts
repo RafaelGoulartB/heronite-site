@@ -1,5 +1,5 @@
-// The site's languages. English lives at the root, the others under /pt-br/ and /es/.
-export const locales = ['en', 'pt-br', 'es'] as const;
+// The site's languages. English lives at the root, the others under their language code.
+export const locales = ['en', 'pt-br', 'es', 'fr'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 export const otherLocales = locales.filter((l) => l !== defaultLocale) as Exclude<Locale, 'en'>[];
@@ -8,6 +8,7 @@ export const localeInfo: Record<Locale, { name: string; short: string; htmlLang:
   en: { name: 'English', short: 'EN', htmlLang: 'en', og: 'en_US', date: 'en-US' },
   'pt-br': { name: 'Português (Brasil)', short: 'PT', htmlLang: 'pt-BR', og: 'pt_BR', date: 'pt-BR' },
   es: { name: 'Español', short: 'ES', htmlLang: 'es', og: 'es_ES', date: 'es' },
+  fr: { name: 'Français', short: 'FR', htmlLang: 'fr', og: 'fr_FR', date: 'fr' },
 };
 
 const isLocale = (value: string): value is Locale => (locales as readonly string[]).includes(value);
