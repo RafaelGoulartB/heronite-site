@@ -289,7 +289,7 @@ const en = {
       },
       {
         q: 'How is Heronite different from Playnite, Heroic or Lutris?',
-        a: 'Heronite runs on both Linux and Windows, covers every major store plus emulators in one library, records every session for statistics, and is a native Rust app that idles at about 190 MB of memory. Read the comparisons with [Playnite](/compare/playnite/), [Heroic](/compare/heroic/) and [Lutris](/compare/lutris/).',
+        a: 'Heronite runs on both Linux and Windows, covers every major store plus emulators in one library, records every session for statistics, and is a native Rust app that idles at about 150 MB of memory. Read the comparisons with [Playnite](/compare/playnite/), [Heroic](/compare/heroic/) and [Lutris](/compare/lutris/).',
       },
       {
         q: 'Will I lose my Heroic or Lutris setup?',

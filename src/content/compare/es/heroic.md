@@ -39,7 +39,7 @@ related:
 |---|---|---|
 | Plataformas | Linux y Windows 10/11 | Linux, Windows 10/11, macOS 14 o posterior |
 | Hecho con | Rust, renderizado en la GPU, sin navegador incluido | Electron, TypeScript y React |
-| Memoria en reposo | Unos 190 MB | — |
+| Memoria en reposo | Unos 150 MB | — |
 | Epic, GOG, Amazon | Sí | Sí |
 | Biblioteca de Steam | Sí, sin iniciar sesión | — |
 | Battle.net, EA app, Ubisoft Connect, Rockstar | Sí, con Wine en Linux | — |
@@ -71,7 +71,7 @@ Los dos son GPL-3.0 y usan las mismas herramientas de código abierto no oficial
 ### Elige Heronite si…
 
 - **Quieres todas las fuentes en una biblioteca.** Steam sin iniciar sesión, emuladores, apps de tienda y, en Windows, juegos de Microsoft Store, agrupados por estado, tienda o género ([tiendas](/es/features/stores/)).
-- **Quieres una app nativa en Rust.** Sin navegador incluido, y con unos 190 MB de memoria en reposo ([rendimiento](/es/features/performance/)).
+- **Quieres una app nativa en Rust.** Sin navegador incluido, y con unos 150 MB de memoria en reposo ([rendimiento](/es/features/performance/)).
 - **Quieres un historial de juego más completo.** Heronite registra cada sesión para las [estadísticas](/es/features/play-time-tracking/), una meta anual de backlog, un diario y un resumen del año.
 - **Quieres un modo consola que puedas personalizar.** El [modo consola](/es/features/console-mode/) tiene ocho diseños y siete temas que puedes editar y compartir como archivo.
 - **Juegas en varios PC.** **Ajustes → Nube** mantiene una sola biblioteca en cada uno, por ejemplo en los dos sistemas de un arranque dual ([partidas guardadas y copias](/es/features/saves-and-backups/)).

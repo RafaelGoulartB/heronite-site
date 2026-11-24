@@ -75,7 +75,7 @@ Los dos son gratuitos y de código abierto. Los dos reúnen juegos de varias tie
 
 - **Usas Linux, o tienes arranque dual.** Una sola app nativa funciona en los dos sistemas, y **Ajustes → Nube** mantiene la misma biblioteca en cada uno.
 - **Quieres ejecutar juegos de Windows con Wine o Proton.** Elige una versión y un prefijo de Wine (una carpeta que funciona como un Windows solo para ese juego) para cada juego, con versiones del [gestor de Wine](/es/features/wine-and-proton/).
-- **Quieres una app nativa en Rust.** Sin navegador incluido, y con unos 190 MB de memoria en reposo ([rendimiento](/es/features/performance/)).
+- **Quieres una app nativa en Rust.** Sin navegador incluido, y con unos 150 MB de memoria en reposo ([rendimiento](/es/features/performance/)).
 - **Quieres un historial de juego.** Heronite registra cada sesión para las [estadísticas](/es/features/play-time-tracking/), una meta anual de backlog, un diario y un resumen del año.
 - **Juegas a juegos emulados.** Heronite [detecta tus emuladores](/es/features/emulation/), como RetroArch, Dolphin, PCSX2 y DuckStation, y escanea tus carpetas de ROMs.
 - **Quieres más fuentes en Linux.** Heronite ejecuta las apps de Battle.net, EA, Ubisoft y Rockstar, e importa juegos de Heroic, Lutris, Bottles y Faugus.

@@ -1,11 +1,11 @@
 ---
 title: "Lanzador de juegos ligero, sin Electron | Heronite"
-description: "Lanzador de juegos ligero para Linux y Windows. Abre tu biblioteca en unos 215 ms, usa unos 190 MB en reposo y se instala en 64 MB, sin Electron."
+description: "Lanzador de juegos ligero para Linux y Windows. Abre tu biblioteca en unos 215 ms, usa unos 150 MB en reposo y se instala en 64 MB, sin Electron."
 eyebrow: Rendimiento
 headline: "Un lanzador de juegos ligero, sin Electron"
 lead: "Heronite es un lanzador de juegos ligero: un solo proceso nativo en Rust, renderizado en la GPU, sin navegador integrado."
 navLabel: Rendimiento
-summary: "Rust nativo, renderizado en la GPU y sin Electron: unos 215 ms hasta la biblioteca, 190 MB en reposo y 64 MB de instalación."
+summary: "Rust nativo, renderizado en la GPU y sin Electron: unos 215 ms hasta la biblioteca, 150 MB en reposo y 64 MB de instalación."
 order: 8
 hero: ../../../assets/screenshots/command-palette.webp
 heroAlt: "La paleta de comandos de Heronite abierta sobre la Colección, buscando \"contr\" y mostrando Control y otros juegos que coinciden, con acciones para jugar Control, abrir sus ajustes o su carpeta."
@@ -22,7 +22,7 @@ highlights:
     text: Variables de entorno desactivan la bandeja, las animaciones y la búsqueda de actualizaciones.
 faq:
   - q: ¿Cuál es el lanzador de juegos más ligero para Linux y Windows?
-    a: Heronite está hecho para ser ligero. Usa unos 190 MB en reposo, en un solo proceso, y se instala en 64 MB.
+    a: Heronite está hecho para ser ligero. Usa unos 150 MB en reposo, en un solo proceso, y se instala en 64 MB.
   - q: ¿Heronite funciona en la Steam Deck?
     a: Sí. Heronite funciona en SteamOS como AppImage. La [guía de la Steam Deck](/guides/steam-deck/) explica cómo configurarlo.
   - q: ¿Heronite recoge telemetría?
@@ -38,7 +38,7 @@ related:
 | Medida | Heronite |
 |---|---|
 | Del inicio a la biblioteca en pantalla | unos 215 ms (mediana) |
-| Memoria en reposo | unos 190 MB en un solo proceso |
+| Memoria en reposo | unos 150 MB en un solo proceso |
 | Memoria cerrado a la bandeja | unos 95 MB |
 | CPU en reposo | alrededor del 0,1 % (0,05 s de tiempo de CPU en 60 s) |
 | Tamaño de la instalación | 64 MB |

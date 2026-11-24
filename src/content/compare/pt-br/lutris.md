@@ -69,7 +69,7 @@ Os dois são launchers gratuitos e de código aberto (GPL-3.0). Os dois rodam jo
 
 - **Você joga principalmente por lojas.** Faça login na Epic Games, GOG e Amazon Games uma vez, e todos os jogos que você tem lá aparecem, instalados ou não ([lojas](/pt-br/features/stores/)).
 - **Você quer Wine ou Proton definido por jogo.** Escolha uma versão, um prefixo Wine (uma pasta que funciona como um Windows só daquele jogo) e opções como DXVK ou gamescope ([Wine e Proton](/pt-br/features/wine-and-proton/)).
-- **Você quer um app nativo em Rust.** Sem navegador embutido, e cerca de 190 MB de RAM parado ([desempenho](/pt-br/features/performance/)).
+- **Você quer um app nativo em Rust.** Sem navegador embutido, e cerca de 150 MB de RAM parado ([desempenho](/pt-br/features/performance/)).
 - **Você quer um histórico de jogo.** O Heronite registra cada sessão e mostra [estatísticas](/pt-br/features/play-time-tracking/), um diário e uma retrospectiva do ano.
 - **Você joga na TV ou com controle.** O [modo console](/pt-br/features/console-mode/) tem oito layouts e sete temas que você pode editar e compartilhar.
 - **Você quer o mesmo launcher no Windows.** **Configurações → Nuvem** mantém uma biblioteca só nos dois sistemas de um dual boot ([saves e backups](/pt-br/features/saves-and-backups/)).

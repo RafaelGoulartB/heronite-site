@@ -75,7 +75,7 @@ Both are free and open source. Both pull games from several stores into one libr
 
 - **You use Linux, or dual boot.** One native app runs on both systems, and **Settings → Cloud** keeps the same library on each.
 - **You want Windows games to run through Wine or Proton.** Set a version and a Wine prefix (a separate Windows folder for that game) per game, with builds from the [Wine Manager](/features/wine-and-proton/).
-- **You want a native Rust app.** No bundled browser, and about 190 MB of memory when idle ([performance](/features/performance/)).
+- **You want a native Rust app.** No bundled browser, and about 150 MB of memory when idle ([performance](/features/performance/)).
 - **You want a play history.** Heronite records every session for [statistics](/features/play-time-tracking/), a yearly backlog goal, a journal and a year in review.
 - **You play emulated games.** Heronite [detects your emulators](/features/emulation/), such as RetroArch, Dolphin, PCSX2 and DuckStation, and scans your ROM folders.
 - **You want more sources on Linux.** Heronite runs the Battle.net, EA, Ubisoft and Rockstar store apps, and imports games from Heroic, Lutris, Bottles and Faugus.

@@ -24,7 +24,7 @@ Yes. Heronite runs as an AppImage in SteamOS desktop mode. For Gaming Mode, add 
 ## How is it different from Heroic, Lutris, or Playnite?
 
 - **Everything in one place:** Steam, Epic, GOG, Amazon, store apps, emulators, and your own games.
-- **Light:** a native Rust app drawn on the GPU, with no bundled browser engine. It uses about 190 MB of memory when idle and shows the library in about 215 ms.
+- **Light:** a native Rust app drawn on the GPU, with no bundled browser engine. It uses about 150 MB of memory when idle and shows the library in about 215 ms.
 - **Your play history:** every session, statistics, a journal, a backlog goal, and a year in review.
 - **Console mode** with themes you can change and share.
 

@@ -1,11 +1,11 @@
 ---
 title: "Lightweight Game Launcher, Not Electron | Heronite"
-description: "Lightweight game launcher for Linux and Windows. Opens your library in about 215 ms, idles at about 190 MB and installs in 64 MB, with no Electron."
+description: "Lightweight game launcher for Linux and Windows. Opens your library in about 215 ms, idles at about 150 MB and installs in 64 MB, with no Electron."
 eyebrow: Performance
 headline: "A lightweight game launcher, not Electron"
 lead: "Heronite is a lightweight game launcher: one native Rust process drawn on the GPU, with no bundled browser."
 navLabel: Performance
-summary: "Native Rust, GPU-rendered and Electron-free: about 215 ms to the library, 190 MB idle and a 64 MB install."
+summary: "Native Rust, GPU-rendered and Electron-free: about 215 ms to the library, 150 MB idle and a 64 MB install."
 order: 8
 hero: ../../../assets/screenshots/command-palette.webp
 heroAlt: "Heronite's command palette open over the Collection, searching for \"contr\" and listing Control and other matching games with actions to play Control, open its settings or its folder."
@@ -22,7 +22,7 @@ highlights:
     text: Environment variables turn off the tray, animations and update checks.
 faq:
   - q: What is the lightest game launcher for Linux and Windows?
-    a: Heronite is built to be light. It idles at about 190 MB in one process and installs in 64 MB.
+    a: Heronite is built to be light. It idles at about 150 MB in one process and installs in 64 MB.
   - q: Does Heronite run on the Steam Deck?
     a: Yes. Heronite runs on SteamOS as an AppImage. The [Steam Deck guide](/guides/steam-deck/) has the setup.
   - q: Does Heronite collect telemetry?
@@ -38,7 +38,7 @@ related:
 | Measure | Heronite |
 |---|---|
 | Start to library on screen | about 215 ms (median) |
-| Memory while idle | about 190 MB in a single process |
+| Memory while idle | about 150 MB in a single process |
 | Memory closed to the tray | about 95 MB |
 | CPU while idle | about 0.1% (0.05 s of CPU time over 60 s) |
 | Install size | 64 MB |
