@@ -69,7 +69,7 @@ Both are free, open source (GPL-3.0) launchers. Both run Windows games through W
 
 - **You mostly play from stores.** Log in to Epic Games, GOG and Amazon Games once, and every game you own there appears, installed or not ([stores](/features/stores/)).
 - **You want Wine or Proton set per game.** Choose a version, a Wine prefix (a separate Windows folder for that game) and options like DXVK or gamescope ([Wine and Proton](/features/wine-and-proton/)).
-- **You want a native Rust app.** No bundled browser, and about 190 MB of memory when idle ([performance](/features/performance/)).
+- **You want a native Rust app.** No bundled browser, and about 150 MB of memory when idle ([performance](/features/performance/)).
 - **You want a play history.** Heronite records every session for [statistics](/features/play-time-tracking/), a journal and a year in review.
 - **You play on a TV or with a controller.** [Console mode](/features/console-mode/) has eight layouts and seven themes you can edit and share.
 - **You want the same launcher on Windows.** **Settings → Cloud** keeps one library on both systems of a dual boot ([saves and backups](/features/saves-and-backups/)).

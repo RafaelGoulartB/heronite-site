@@ -24,7 +24,7 @@ Sí. Heronite funciona como AppImage en el modo escritorio de SteamOS. Para el M
 ## ¿En qué se diferencia de Heroic, Lutris o Playnite?
 
 - **Todo en un solo sitio:** Steam, Epic, GOG, Amazon, las apps de las tiendas, emuladores y tus propios juegos.
-- **Ligero:** una app nativa en Rust renderizada en la GPU, sin motor de navegador incluido. Usa unos 190 MB de memoria en reposo y muestra la biblioteca en unos 215 ms.
+- **Ligero:** una app nativa en Rust renderizada en la GPU, sin motor de navegador incluido. Usa unos 150 MB de memoria en reposo y muestra la biblioteca en unos 215 ms.
 - **Tu historial de juego:** cada sesión, estadísticas, un diario, una meta de backlog y un resumen del año.
 - **Modo consola** con temas que puedes cambiar y compartir.
 

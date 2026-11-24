@@ -24,7 +24,7 @@ Sim. O Heronite roda como AppImage no modo desktop do SteamOS. Para o Modo de Jo
 ## Qual a diferença para Heroic, Lutris ou Playnite?
 
 - **Tudo em um lugar só:** Steam, Epic, GOG, Amazon, apps de loja, emuladores e seus próprios jogos.
-- **Leve:** um app nativo em Rust que usa a GPU para mostrar a tela, sem navegador embutido. Ele usa cerca de 190 MB de RAM parado e mostra a biblioteca em cerca de 215 ms.
+- **Leve:** um app nativo em Rust que usa a GPU para mostrar a tela, sem navegador embutido. Ele usa cerca de 150 MB de RAM parado e mostra a biblioteca em cerca de 215 ms.
 - **Seu histórico de jogo:** cada sessão, estatísticas, um diário, uma meta de backlog e uma retrospectiva do ano.
 - **Modo console** com temas que você pode mudar e compartilhar.
 

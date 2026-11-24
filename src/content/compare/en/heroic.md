@@ -39,7 +39,7 @@ related:
 |---|---|---|
 | Platforms | Linux and Windows 10/11 | Linux, Windows 10/11, macOS 14 or newer |
 | Built with | Rust, GPU-rendered, no bundled browser | Electron, TypeScript and React |
-| Memory when idle | About 190 MB | — |
+| Memory when idle | About 150 MB | — |
 | Epic, GOG, Amazon | Yes | Yes |
 | Steam library | Yes, no login needed | — |
 | Battle.net, EA app, Ubisoft Connect, Rockstar | Yes, through Wine on Linux | — |
@@ -71,7 +71,7 @@ Both are GPL-3.0 and use the same open source store tools: legendary for Epic Ga
 ### Choose Heronite if…
 
 - **You want every source in one library.** Steam with no login, emulators, store apps and, on Windows, Microsoft Store games, grouped by status, store or genre ([stores](/features/stores/)).
-- **You want a native Rust app.** No bundled browser, and about 190 MB of memory when idle ([performance](/features/performance/)).
+- **You want a native Rust app.** No bundled browser, and about 150 MB of memory when idle ([performance](/features/performance/)).
 - **You want a deeper play history.** Heronite records every session for [statistics](/features/play-time-tracking/), a yearly backlog goal, a journal and a year in review.
 - **You want console mode you can restyle.** [Console mode](/features/console-mode/) has eight layouts and seven themes you can edit and share as a file.
 - **You play on several PCs.** **Settings → Cloud** keeps one library on each, such as both systems of a dual boot ([saves and backups](/features/saves-and-backups/)).

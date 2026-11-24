@@ -1,11 +1,11 @@
 ---
 title: "Launcher de jogos leve, sem Electron | Heronite"
-description: "Launcher de jogos leve para Linux e Windows. Abre a biblioteca em cerca de 215 ms, usa cerca de 190 MB de RAM parado e ocupa 64 MB, sem Electron."
+description: "Launcher de jogos leve para Linux e Windows. Abre a biblioteca em cerca de 215 ms, usa cerca de 150 MB de RAM parado e ocupa 64 MB, sem Electron."
 eyebrow: Desempenho
 headline: "Um launcher de jogos leve, sem Electron"
 lead: "O Heronite é um launcher de jogos leve: um único processo nativo em Rust, desenhado na GPU e sem navegador embutido."
 navLabel: Desempenho
-summary: "Rust nativo, renderizado na GPU e sem Electron: cerca de 215 ms até a biblioteca, 190 MB de RAM parado e 64 MB de instalação."
+summary: "Rust nativo, renderizado na GPU e sem Electron: cerca de 215 ms até a biblioteca, 150 MB de RAM parado e 64 MB de instalação."
 order: 8
 hero: ../../../assets/screenshots/command-palette.webp
 heroAlt: "A paleta de comandos do Heronite aberta sobre a Coleção, buscando \"contr\" e listando Control e outros jogos parecidos, com ações para jogar Control, abrir as configurações ou a pasta dele."
@@ -22,7 +22,7 @@ highlights:
     text: Variáveis de ambiente desligam a bandeja, as animações e a busca por atualizações.
 faq:
   - q: Qual é o launcher de jogos mais leve para Linux e Windows?
-    a: O Heronite foi feito para ser leve. Parado, ele usa cerca de 190 MB de RAM em um processo, e a instalação tem 64 MB.
+    a: O Heronite foi feito para ser leve. Parado, ele usa cerca de 150 MB de RAM em um processo, e a instalação tem 64 MB.
   - q: O Heronite roda no Steam Deck?
     a: Sim. O Heronite roda no SteamOS como AppImage. O [guia do Steam Deck](/guides/steam-deck/) mostra a configuração.
   - q: O Heronite coleta telemetria?
@@ -38,7 +38,7 @@ related:
 | Medida | Heronite |
 |---|---|
 | Da abertura até a biblioteca na tela | cerca de 215 ms (mediana) |
-| RAM parado | cerca de 190 MB em um único processo |
+| RAM parado | cerca de 150 MB em um único processo |
 | RAM fechado na bandeja | cerca de 95 MB |
 | CPU parado | cerca de 0,1% (0,05 s de tempo de CPU em 60 s) |
 | Tamanho da instalação | 64 MB |

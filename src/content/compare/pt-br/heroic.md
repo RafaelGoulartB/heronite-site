@@ -39,7 +39,7 @@ related:
 |---|---|---|
 | Plataformas | Linux e Windows 10/11 | Linux, Windows 10/11, macOS 14 ou mais novo |
 | Feito com | Rust, renderizado pela GPU, sem navegador embutido | Electron, TypeScript e React |
-| RAM parado | Cerca de 190 MB | — |
+| RAM parado | Cerca de 150 MB | — |
 | Epic, GOG, Amazon | Sim | Sim |
 | Biblioteca da Steam | Sim, sem login | — |
 | Battle.net, EA app, Ubisoft Connect, Rockstar | Sim, pelo Wine no Linux | — |
@@ -71,7 +71,7 @@ Os dois são GPL-3.0 e usam as mesmas ferramentas de código aberto, não oficia
 ### Escolha o Heronite se…
 
 - **Você quer todas as lojas e emuladores numa biblioteca só.** Steam sem login, emuladores, apps das lojas e, no Windows, jogos da Microsoft Store, agrupados por status, loja ou gênero ([lojas](/pt-br/features/stores/)).
-- **Você quer um app nativo em Rust.** Sem navegador embutido, e cerca de 190 MB de RAM parado ([desempenho](/pt-br/features/performance/)).
+- **Você quer um app nativo em Rust.** Sem navegador embutido, e cerca de 150 MB de RAM parado ([desempenho](/pt-br/features/performance/)).
 - **Você quer um histórico de jogo mais completo.** O Heronite registra cada sessão e mostra [estatísticas](/pt-br/features/play-time-tracking/), uma meta anual de backlog, um diário e uma retrospectiva do ano.
 - **Você quer um modo console que dá para personalizar.** O [modo console](/pt-br/features/console-mode/) tem oito layouts e sete temas que você pode editar e compartilhar como arquivo.
 - **Você joga em vários PCs.** **Configurações → Nuvem** mantém uma biblioteca em cada um, como os dois sistemas de um dual boot ([saves e backups](/pt-br/features/saves-and-backups/)).

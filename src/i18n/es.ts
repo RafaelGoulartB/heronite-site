@@ -287,7 +287,7 @@ const es: Dict = {
       },
       {
         q: '¿En qué se diferencia Heronite de Playnite, Heroic o Lutris?',
-        a: 'Heronite funciona en Linux y Windows, cubre todas las tiendas principales y los emuladores en una sola biblioteca, registra cada sesión para las estadísticas y es una app nativa en Rust que en reposo usa unos 190 MB de memoria. Lee las comparativas con [Playnite](/compare/playnite/), [Heroic](/compare/heroic/) y [Lutris](/compare/lutris/).',
+        a: 'Heronite funciona en Linux y Windows, cubre todas las tiendas principales y los emuladores en una sola biblioteca, registra cada sesión para las estadísticas y es una app nativa en Rust que en reposo usa unos 150 MB de memoria. Lee las comparativas con [Playnite](/compare/playnite/), [Heroic](/compare/heroic/) y [Lutris](/compare/lutris/).',
       },
       {
         q: '¿Perderé mi configuración de Heroic o Lutris?',
